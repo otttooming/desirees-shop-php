@@ -9,7 +9,7 @@ foreach($categories as $category) {
 
 $columns = etheme_get_option('portfolio_columns');
 
-if($_GET['col']) {
+if(isset($_GET['col'])) {
 	$columns = $_GET['col'];
 }
 

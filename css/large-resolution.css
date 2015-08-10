@@ -424,6 +424,15 @@
 	
   }
 .rows-count3 .product-grid .img-wrapper{width: 270px;}
+.with-sidebar-right .rows-count4.shortcode-products .product-grid, .with-sidebar-left .rows-count4.shortcode-products .product-grid,
+.with-sidebar-right .rows-count5.shortcode-products .product-grid,
+.with-sidebar-left .rows-count5.shortcode-products .product-grid,
+.with-sidebar-right .rows-count6.shortcode-products .product-grid,
+.with-sidebar-left .rows-count6.shortcode-products .product-grid{
+  width: 195px !important;
+}
+.with-sidebar-right .rows-count5.shortcode-products .product-grid:nth-child(4n+1),
+.with-sidebar-left .rows-count5.shortcode-products .product-grid
   .span9.blog-post, .span9.blog-post_image, .span9.blog-post_title, .span9.blog-post_text {
 	margin-left: 0;
 	width: 100%;
@@ -448,6 +457,9 @@
 .category-block {float: left;margin-right: 30px;margin-top: 20px;max-width: 260px;}
 .rows-count5.shortcode-products .product-grid{width: 210px !important;}
 .no-sidebar .rows-count4 .product-grid{width: 270px;}
+.rows-count3.shortcode-products .product-grid{width: 270px;}
+.with-sidebar- .rows-count3.shortcode-products .product-grid:nth-child(3n+1){clear: none !important;}
+.with-sidebar- .rows-count3.shortcode-products .product-grid:nth-child(4n+1){clear: both !important;}
 .rows-count5  .product-grid{
 	width: 170px !important;
 }
@@ -472,6 +484,7 @@ width: 890px !important;
 .rows-count6 .product-grid:nth-child(6n+1){clear: both;}
 .no-sidebar .rows-count5 .product-grid:nth-child(4n+1), .no-sidebar .rows-count3 .product-grid:nth-child(3n+1){clear: none !important;}
 .no-sidebar .rows-count3 .product-grid:nth-child(4n+1){clear: both;}
+.no-sidebar .rows-count3 .product-grid{width: 270px;}
 .products_grid.rows-count3 .product-grid:nth-child(3n+1){clear: both;}
 .with-sidebar .rows-count4 .product-grid:nth-child(4n+1){clear: both;}
 
@@ -585,7 +598,7 @@ width: auto;
 
 .cart-collaterals .cart_totals{max-width: 286px;}
 .starwrapper{bottom:148px;}
-.product-grid .starwrapper{bottom:0;top:-30px;}
+.product-grid .starwrapper{top:-30px;}
 .typography-block .nav-tabs{margin-left: 30px !important;}
 .typography-block .span10{width: 960px;}
 .typography-block .span5{width: 465px;}
@@ -658,3 +671,4 @@ form.track-order-box .login-head .login-span-big{width: auto;}
 .products-list .product-grid .product-information{width: 585px;}
 .products-list .product-grid{width: 870px !important;}
 .products-list .product-grid .product-information .product-descr{width: 410px;float: left;}
+ul.product_list_widget .widget-text{width: 125px;}

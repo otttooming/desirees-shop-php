@@ -33,8 +33,8 @@ if ( ! function_exists( 'ot_after_theme_options_save' ) ) {
       $options = get_option( 'option_tree' );
       
       if(isset($options['new_options']) && $options['new_options'] != '') {
-	      $new_options = json_decode(base64_decode($options['new_options']),true);
-	      update_option( 'option_tree', $new_options );
+        $new_options = json_decode(base64_decode($options['new_options']),true);
+        update_option( 'option_tree', $new_options );
       }
       
       /* execute the action hook and pass the theme options to it */
@@ -565,7 +565,7 @@ if ( ! function_exists( 'ot_import' ) ) {
       }
       
       /* redirect */
-      wp_redirect( add_query_arg( array( 'action' => 'import-xml', 'message' => $message ), $_POST['_wp_http_referer'] ) );
+      wp_redirect( esc_url_raw( add_query_arg( array( 'action' => 'import-xml', 'message' => $message ), $_POST['_wp_http_referer'] ) ) );
       exit;
       
     }
@@ -586,7 +586,7 @@ if ( ! function_exists( 'ot_import' ) ) {
       }
       
       /* redirect */
-      wp_redirect( add_query_arg( array( 'action' => 'import-settings', 'message' => $message ), $_POST['_wp_http_referer'] ) );
+      wp_redirect( esc_url_raw( add_query_arg( array( 'action' => 'import-settings', 'message' => $message ), $_POST['_wp_http_referer'] ) ));
       exit;
       
     }
@@ -634,7 +634,7 @@ if ( ! function_exists( 'ot_import' ) ) {
       }
       
       /* redirect accordingly */
-      wp_redirect( add_query_arg( array( 'action' => 'import-data', 'message' => $message ), $_POST['_wp_http_referer'] ) );
+      wp_redirect( esc_url_raw(add_query_arg( array( 'action' => 'import-data', 'message' => $message ), $_POST['_wp_http_referer'] ) ) );
       exit;
       
     }
@@ -702,7 +702,7 @@ if ( ! function_exists( 'ot_import' ) ) {
       }
         
       /* redirect accordingly */
-      wp_redirect( add_query_arg( array( 'action' => 'import-layouts', 'message' => $message ), $_POST['_wp_http_referer'] ) );
+      wp_redirect( esc_url_raw(add_query_arg( array( 'action' => 'import-layouts', 'message' => $message ), $_POST['_wp_http_referer'] ) ));
       exit;
       
     }
@@ -1238,7 +1238,7 @@ if ( ! function_exists( 'ot_save_settings' ) ) {
       }
       
       /* redirect */
-      wp_redirect( add_query_arg( array( 'action' => 'save-settings', 'message' => $message ), $_POST['_wp_http_referer'] ) );
+      wp_redirect( esc_url_raw(add_query_arg( array( 'action' => 'save-settings', 'message' => $message ), $_POST['_wp_http_referer'] )) );
       exit;
       
     }
@@ -1464,9 +1464,9 @@ if ( ! function_exists( 'ot_modify_layouts' ) ) {
       
       /* redirect */
       if ( isset( $_REQUEST['page'] ) && $_REQUEST['page'] == 'ot-theme-options' ) {
-        $query_args = add_query_arg( array( 'settings-updated' => 'layout' ), remove_query_arg( array( 'action', 'message' ), $_POST['_wp_http_referer'] ) );
+        $query_args = esc_url_raw( add_query_arg( array( 'settings-updated' => 'layout' ), remove_query_arg( array( 'action', 'message' ), $_POST['_wp_http_referer'] ) ) );
       } else {
-        $query_args = add_query_arg( array( 'action' => 'save-layouts', 'message' => $message ), $_POST['_wp_http_referer'] );
+        $query_args = esc_url_raw( add_query_arg( array( 'action' => 'save-layouts', 'message' => $message ), $_POST['_wp_http_referer'] ) );
       }
       wp_redirect( $query_args );
       exit;
@@ -1657,12 +1657,12 @@ if ( ! function_exists( 'ot_map_old_option_types' ) ) {
       return 'text';
       
     $types = array(
-      'background'	      => 'background',
+      'background'        => 'background',
       'category'          => 'category-select',
       'categories'        => 'category-checkbox',
       'checkbox'          => 'checkbox',
       'colorpicker'       => 'colorpicker',
-      'css'	              => 'css',
+      'css'               => 'css',
       'custom_post'       => 'custom-post-type-select',
       'custom_posts'      => 'custom-post-type-checkbox',                     
       'input'             => 'text',
@@ -1679,7 +1679,7 @@ if ( ! function_exists( 'ot_map_old_option_types' ) ) {
       'tags'              => 'tag-checkbox',
       'textarea'          => 'textarea',
       'textblock'         => 'textblock',
-      'typography'	      => 'typography',
+      'typography'        => 'typography',
       'upload'            => 'upload'
     );
     
@@ -2005,9 +2005,9 @@ if ( ! function_exists( 'ot_recognized_background_repeat' ) ) {
   
     return apply_filters( 'ot_recognized_background_repeat', array(
       'no-repeat' => 'No Repeat',
-      'repeat' 		=> 'Repeat All',
+      'repeat'    => 'Repeat All',
       'repeat-x'  => 'Repeat Horizontally',
-      'repeat-y' 	=> 'Repeat Vertically',
+      'repeat-y'  => 'Repeat Vertically',
       'inherit'   => 'Inherit'
     ), $field_id );
     
@@ -2455,13 +2455,13 @@ if ( ! function_exists( 'ot_insert_css_with_markers' ) ) {
         }
         
         // Filter the CSS
-       	$value = apply_filters( 'ot_insert_css_with_markers_value', $value, $option_id );
-       	
+        $value = apply_filters( 'ot_insert_css_with_markers_value', $value, $option_id );
+        
         /* insert CSS, even if the value is empty */
-       	$insertion = stripslashes( str_replace( $option, $value, $insertion ) );
-       	
+        $insertion = stripslashes( str_replace( $option, $value, $insertion ) );
+        
       }
-  	
+    
       /* create array from the lines of code */
       $markerdata = explode( "\n", implode( '', file( $filepath ) ) );
       
@@ -3244,9 +3244,9 @@ if ( ! function_exists( 'ot_theme_options_layouts_form' ) ) {
             
             echo '<option' . selected( $key, $active_layout, false ) . ' value="' . esc_attr( $key ) . '">' . esc_attr( $key ) . '</option>';
           }
-     		
+        
         echo '</select>';
-     		
+        
         foreach( $layouts as $key => $data ) {
           
           if ( $key == 'active_layout' )
@@ -3255,7 +3255,7 @@ if ( ! function_exists( 'ot_theme_options_layouts_form' ) ) {
           echo '<input type="hidden" name="option_tree_layouts[' . $key . ']" value="' . ( isset( $data ) ? $data : '' ) . '" />';
           
         }
-   		
+      
       }
       
     echo '</form>';
@@ -3485,8 +3485,8 @@ if ( ! function_exists( 'ot_reverse_wpautop' ) ) {
     
     /* return if string is empty */
     if ( trim( $string ) === '' )
-  		return '';
-  		
+      return '';
+      
     /* remove all new lines & <p> tags */
     $string = str_replace( array( "\n", "<p>" ), "", $string );
   

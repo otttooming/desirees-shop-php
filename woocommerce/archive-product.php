@@ -43,20 +43,23 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
         <?php
             global $wp_query;
             $cat = $wp_query->get_queried_object();
-            if(!@$cat->term_id && !is_search()){
+            $image = '';
+            if(empty($cat->term_id) && !is_search()){
                 $image = etheme_get_option('product_bage_banner');
             }else{
                 $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
                 $image = wp_get_attachment_url( $thumbnail_id );
             }
+            
             if($image && $image !=''){
                 ?> 
                     <div class="grid_slider">
                         <img class="cat-banner" src="<?php echo $image ?>" /> 
                     </div>
                 <?php
-            }
-            if(isset($cat->description) && $cat->description !='' && !is_shop()) {
+            } ?>
+
+            <?php if(isset($cat->description) && $cat->description !='' && !is_shop()) {
 	            ?>
 	            	<div class="product-category-description">
 		            	<?php echo do_shortcode($cat->description); ?>

@@ -17,6 +17,7 @@ $mainHeight = 600;
 $mainWidth = 440;
 
 $imgId = get_post_thumbnail_id();
+$attachment_meta = wp_get_attachment_metadata($imgId);
 $crop = false;
 
 if($zoom != 'disable'){
@@ -37,7 +38,7 @@ if($zoom != 'disable'){
                 <img class="attachment-shop_single wp-post-image" src="<?php echo etheme_get_image( $imgId, $mainWidth, $mainHeight, $crop ) ?>"  alt="<?php the_title(); ?>" />
             </a>
 		<?php if(etheme_get_option('gallery_lightbox')): ?>
-			<a href="<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>" class="lightbox-btn" rel="lightbox[gal]" data-original-title="" data-placement="left">&nbsp;</a>
+			<a href="<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>" class="lightbox-btn" rel="lightbox[gal]" title="<?php esc_attr_e( $attachment_meta['image_meta']['title'] ); ?>" data-original-title="" data-placement="left">&nbsp;</a>
 		<?php endif; ?>
         </div>
 	<?php else : ?>

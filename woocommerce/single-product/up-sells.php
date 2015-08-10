@@ -14,6 +14,8 @@ global $product, $woocommerce_loop;
 $upsells = $product->get_upsells();
 $product_per_row = etheme_get_option('prodcuts_per_row');
 
+$rand = rand(1000,9999);
+
 if ( sizeof( $upsells ) == 0 ) return;
 
 $args = array(

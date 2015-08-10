@@ -10,6 +10,8 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 global $product;
+$ajax_addtocart = etheme_get_option('ajax_addtocart');
+
 ?>
 <div class="btn-cont">
 	<?php
@@ -18,7 +20,7 @@ global $product;
 			esc_url( $product->add_to_cart_url() ),
 			esc_attr( $product->id ),
 			esc_attr( $product->get_sku() ),
-			$product->is_purchasable() ? ' etheme_add_to_cart_button' : '',
+			($product->is_purchasable() && $ajax_addtocart) ? ' etheme_add_to_cart_button' : '',
 			esc_attr( $product->product_type ),
 			esc_html( $product->add_to_cart_text() )
 		),

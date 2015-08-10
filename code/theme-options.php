@@ -1055,7 +1055,7 @@ looking at its layout.</p>
                     'label'   => ''
                 )
             )
-        ),
+        ),        
         array(
             'id'          => 'thumbs_count',
             'label'       => 'Number of thumbnails in slider below main image',
@@ -1166,6 +1166,22 @@ looking at its layout.
             'section'     => 'single_product'
         ),
         array(
+            'id'          => 'related_products',
+            'label'       => 'Show related products',
+            'default'     => array(
+            	0 => 1
+            ),
+            'type'        => 'checkbox',
+            'section'     => 'single_product',
+            'class'       => '',
+            'choices'     => array(
+                array(
+                    'value'   => 1,
+                    'label'   => ''
+                )
+            )
+        ),
+        array(
             'id'          => 'size_guide_img',
             'label'       => 'Size Guide img',
             'default'     => 'wp-content/themes/idstore/images/assets/size-guide.jpg',
@@ -1200,6 +1216,14 @@ looking at its layout.
             ',
             'type'        => 'textarea',
             'section'     => 'single_product'
+        ),
+        array(
+            'id'          => 'demo_data',
+            'label'       => 'Import and install demo data',
+            'default'     => '',
+            'desc'        => '',
+            'type'        => 'demo_data',
+            'section'     => 'backup'
         ),
         array(
             'id'          => 'import_export',

@@ -109,7 +109,25 @@ textarea{
 #cart-quantity .input-text:focus, #product-quantity .input-text:focus{
 	border:1px solid #fc5a5a !important;
 }
+#product-quantity .input-text{
+	top:0 !important;
+}
 
+.quantity.buttons_added{
+	background-color: #333;
+	padding-right: 23px;
+}
+.quantity.buttons_added .plus{
+	width: 23px !important;
+	border-top: 1px solid #000 !important;
+	border-right: 1px solid #000 !important;
+	border-bottom: 1px solid #000 !important;
+}
+.quantity.buttons_added .minus{
+	width: 23px !important;
+	border-bottom: 1px solid #000 !important;
+	border-right: 1px solid #000 !important;
+}
 del{
 	color: #fc5a5a;
 }
@@ -604,7 +622,13 @@ hr{
 div.product_meta span{
 	color: #eee;
 }
-
+.product_description_mainblock .product_meta .sku{
+	color: #aaa;
+}
+#product-quantity .quantity.buttons_added .plus:focus, #product-quantity .quantity.buttons_added .minus:focus{
+	border-color: #000 !important;
+	border-left: none !important;
+}
 div.product_meta a{
 	color: #aaa;
 }
@@ -722,8 +746,7 @@ table th{
 	background: #333 !important;
 	border:1px solid #111 !important;
 	float: left;
-	width: 100%;
-	padding: 5px 10px;
+
 	margin-bottom: 10px;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
@@ -968,9 +991,10 @@ form.login .login-head, form.register .register-head{
 	border-bottom:1px solid #111;
 }
 
-.form-row .button{
+.login .form-row .button,
+.register .form-row .button{
 	border:none !important;
-	background: #222;
+	background-color: #222 !important;
 }
 
 .form-row .button:hover{
@@ -1189,4 +1213,22 @@ blockquote{
 
 div.pp_overlay{
 	background-color: #111 !important;
+}
+
+.chosen-container-single .chosen-single {background: #333; color:#eee;box-shadow: 0 1px 0 #111 inset !important;}
+.woocommerce-checkout .form-row .chosen-container .chosen-drop {background: #333;border: 1px solid #111;}
+.chosen-container-active.chosen-with-drop .chosen-single{box-shadow: 0 1px 0 #111 inset !important;background: #333;border: 1px solid #111;color: #eee;}
+.chosen-container-single .chosen-search input[type=text] {background: url(../images/chosen-sprite.png) no-repeat 100% -20px,#333;}
+.chosen-container .chosen-results li.no-results {background: #333;}
+
+.order-total{
+	border-bottom: 1px solid #111;
+}
+
+.tab-content.tab-login, .tab-content.register-tab-content{
+	border-bottom: 1px solid #111;
+}
+
+.tab-content.tap-order{
+	border-top: 1px solid #111;
 }

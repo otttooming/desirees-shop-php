@@ -60,7 +60,7 @@ class WP_Import extends WP_Importer {
 	var $url_remap = array();
 	var $featured_images = array();
 
-	function WP_Import() {  /* nothing */ }
+	function WP_Import() { /* nothing */ }
 
 	/**
 	 * Registered callback function for the WordPress Importer
@@ -171,10 +171,9 @@ class WP_Import extends WP_Importer {
 
 		wp_defer_term_counting( false );
 		wp_defer_comment_counting( false );
-		
-		echo '<br>';
+
 		echo '<p>' . __( 'All done.', 'wordpress-importer' ) . ' <a href="' . admin_url() . '">' . __( 'Have fun!', 'wordpress-importer' ) . '</a>' . '</p>';
-		//echo '<p>' . __( 'Remember to update the passwords and roles of imported users.', 'wordpress-importer' ) . '</p>';
+		echo '<p>' . __( 'Remember to update the passwords and roles of imported users.', 'wordpress-importer' ) . '</p>';
 
 		do_action( 'import_end' );
 	}
@@ -554,8 +553,8 @@ class WP_Import extends WP_Importer {
 
 			$post_exists = post_exists( $post['post_title'], '', $post['post_date'] );
 			if ( $post_exists && get_post_type( $post_exists ) == $post['post_type'] ) {
-				//printf( __('%s &#8220;%s&#8221; already exists.', 'wordpress-importer'), $post_type_object->labels->singular_name, esc_html($post['post_title']) );
-				//echo '<br />';
+				printf( __('%s &#8220;%s&#8221; already exists.', 'wordpress-importer'), $post_type_object->labels->singular_name, esc_html($post['post_title']) );
+				echo '<br />';
 				$comment_post_ID = $post_id = $post_exists;
 			} else {
 				$post_parent = (int) $post['post_parent'];
@@ -938,7 +937,7 @@ class WP_Import extends WP_Importer {
 		// keep track of the destination if the remote url is redirected somewhere else
 		if ( isset($headers['x-final-location']) && $headers['x-final-location'] != $url )
 			$this->url_remap[$headers['x-final-location']] = $upload['url'];
-			
+
 		return $upload;
 	}
 
@@ -1116,6 +1115,7 @@ class WP_Import extends WP_Importer {
 }
 
 } // class_exists( 'WP_Importer' )
+
 if(!function_exists('wordpress_importer_init')){
 	function wordpress_importer_init() {
 		load_plugin_textdomain( 'wordpress-importer', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );

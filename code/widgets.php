@@ -108,7 +108,8 @@ class Etheme_Recent_Posts_Widget extends WP_Widget {
         extract($args);
 
         $title = apply_filters('widget_title', empty($instance['title']) ? __('Recent Posts', ETHEME_DOMAIN) : $instance['title']);
-        if ( !$number = (int) $instance['number'] )
+        $number = 10;
+        if ( isset($instance['number']) && !$number = (int) $instance['number'] )
                 $number = 10;
         else if ( $number < 1 )
                 $number = 1;
@@ -283,102 +284,80 @@ class Etheme_Recent_Comments_Widget extends WP_Widget {
 }
 
 
+// **********************************************************************// 
+// ! Flickr Photos
+// **********************************************************************// 
 class Etheme_Flickr_Widget extends WP_Widget {
-	
-	function __construct()
-	{
-		$widget_ops = array('classname' => 'flickr', 'description' => 'Photos from flickr.');
-		$control_ops = array('id_base' => 'etheme_flickr-widget');
-		$this->WP_Widget('etheme_flickr-widget', '8theme Flickr Photos', $widget_ops, $control_ops);
-	}
-	
-	function widget($args, $instance)
-	{
-		extract($args);
+    
+    function __construct()
+    {
+        $widget_ops = array('classname' => 'flickr', 'description' => 'Photos from flickr.');
+        $control_ops = array('id_base' => 'etheme_flickr-widget');
+        $this->WP_Widget('etheme_flickr-widget', '8theme Flickr Photos', $widget_ops, $control_ops);
+    }
+    
+    function widget($args, $instance)
+    {
+        extract($args);
 
-		$title = apply_filters('widget_title', empty( $instance['title'] ) ? __('Flickr', ETHEME_DOMAIN) : $instance['title'], $instance, $this->id_base);
-		$screen_name = @$instance['screen_name'];
-		$number = @$instance['number'];
+        $title = apply_filters('widget_title', empty( $instance['title'] ) ? __('Flickr', ETHEME_DOMAIN) : $instance['title'], $instance, $this->id_base);
+        $screen_name = @$instance['screen_name'];
+        $number = @$instance['number'];
+        $show_button = @$instance['show_button'];
         
         if(!$screen_name || $screen_name == '') {
-            $screen_name = 'envato';
+            $screen_name = '95572727@N00';
         }
-		
-		echo $before_widget;
-		if($title) {
-			echo $before_title.'<span class="footer_title">'.$title.'</span>'.$after_title;
-		}
-		
-		if($screen_name && $number) {
-			$api_key = 'de1d12b6db410a797a445142e00e2178';
-			
-			@$person = wp_remote_get('http://api.flickr.com/services/rest/?method=flickr.people.findByUsername&api_key='.$api_key.'&username='.urlencode($screen_name).'&format=json');
-			@$person = trim($person['body'], 'jsonFlickrApi()');
-			@$person = json_decode($person);
-			
-			if($person->user->id) {
-				$photos_url = wp_remote_get('http://api.flickr.com/services/rest/?method=flickr.urls.getUserPhotos&api_key='.$api_key.'&user_id='.$person->user->id.'&format=json');
-				$photos_url = trim($photos_url['body'], 'jsonFlickrApi()');
-				$photos_url = json_decode($photos_url);
-				
-				$photos = wp_remote_get('http://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key='.$api_key.'&user_id='.$person->user->id.'&per_page='.$number.'&format=json');
-				$photos = trim($photos['body'], 'jsonFlickrApi()');
-				$photos = json_decode($photos);
-				?>                    
-                        
-                <div class="footer_thumbs">
-    				<ul class='img-list'>
-    					<?php $i=0; foreach($photos->photos->photo as $photo): $photo = (array) $photo; $i++; ?>
-    					<li class='flickr-photo <?php if($i%3==0) echo 'footer_thumbs_last-child' ?>'>
-    						<a href='<?php echo $photos_url->user->url; ?><?php echo $photo['id']; ?>' target='_blank'>
-    							<img src='<?php $url = "http://farm" . $photo['farm'] . ".static.flickr.com/" . $photo['server'] . "/" . $photo['id'] . "_" . $photo['secret'] . '_s' . ".jpg"; echo $url; ?>' alt='<?php echo $photo['title']; ?>' width="60" height="60" />
-    						</a>
-    					</li>
-    					<?php endforeach; ?>
-                    </ul>
-                </div>
-				<?php
-			} else {
-				echo '<p>Invalid flickr username.</p>';
-			}
-		}
-		echo $after_widget;
-	}
-	
-	function update($new_instance, $old_instance)
-	{
-		$instance = $old_instance;
+        
+        echo $before_widget;
+        if($title) {
+            echo $before_title.'<span class="footer_title">'.$title.'</span>'.$after_title;
+        }
+        
+        if($screen_name && $number) {
+			echo '<script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count='.$number.'&display=latest&size=s&layout=x&source=user&user='.$screen_name.'"></script>';
+        }
+        
+        echo $after_widget;
+    }
+    
+    function update($new_instance, $old_instance)
+    {
+        $instance = $old_instance;
 
-		$instance['title'] = strip_tags($new_instance['title']);
-		$instance['screen_name'] = $new_instance['screen_name'];
-		$instance['number'] = $new_instance['number'];
-		
-		return $instance;
-	}
+        $instance['title'] = strip_tags($new_instance['title']);
+        $instance['screen_name'] = $new_instance['screen_name'];
+        $instance['number'] = $new_instance['number'];
+        
+        return $instance;
+    }
 
-	function form($instance)
-	{
-		$defaults = array('title' => 'Photos from Flickr', 'screen_name' => '', 'number' => 6);
-		$instance = wp_parse_args((array) $instance, $defaults); ?>
-		
-		<p>
-			<label for="<?php echo $this->get_field_id('title'); ?>">Title:</label>
-			<input class="widefat" style="width: 216px;" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $instance['title']; ?>" />
-		</p>
-		
-		<p>
-			<label for="<?php echo $this->get_field_id('screen_name'); ?>">Screen name:</label>
-			<input class="widefat" style="width: 216px;" id="<?php echo $this->get_field_id('screen_name'); ?>" name="<?php echo $this->get_field_name('screen_name'); ?>" value="<?php echo $instance['screen_name']; ?>" />
-		</p>
+    function form($instance)
+    {
+        $defaults = array('title' => 'Photos from Flickr', 'screen_name' => '', 'number' => 6, 'show_button' => 1);
+        $instance = wp_parse_args((array) $instance, $defaults); ?>
+        
+        <p>
+            <label for="<?php echo $this->get_field_id('title'); ?>">Title:</label>
+            <input class="widefat" style="width: 216px;" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $instance['title']; ?>" />
+        </p>
+        
+        <p>
+            <label for="<?php echo $this->get_field_id('screen_name'); ?>">Flickr ID</label>
+            <input class="widefat" style="width: 216px;" id="<?php echo $this->get_field_id('screen_name'); ?>" name="<?php echo $this->get_field_name('screen_name'); ?>" value="<?php echo $instance['screen_name']; ?>" />
+            <br/>
+            <p class="help">To find your flickID visit <a href="http://idgettr.com/" target="_blank">idGettr</a>.</p>
+        </p>
 
 
-		<p>
-			<label for="<?php echo $this->get_field_id('number'); ?>">Number of photos to show:</label>
-			<input class="widefat" style="width: 30px;" id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" value="<?php echo $instance['number']; ?>" />
-		</p>
-		
-	<?php
-	}
+        <p>
+            <label for="<?php echo $this->get_field_id('number'); ?>">Number of photos to show:</label>
+            <input class="widefat" style="width: 30px;" id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" value="<?php echo $instance['number']; ?>" />
+        </p>
+        
+        
+    <?php
+    }
 }
 
 /* Forms

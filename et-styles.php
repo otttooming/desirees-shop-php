@@ -51,7 +51,8 @@ $selectors['active_color'] = '
     .blog2_icon_webdesign:hover, 
     .blog2_post_title a:hover, 
     .footer_menu a:hover, 
-    .tweets1 a:hover, 
+    .tweets1 a:hover,
+    .form-row .button:hover,
     .footer_copyright_menu a:hover, 
     #back-to-top a:hover,
 	.member-details i:hover,
@@ -156,6 +157,7 @@ if($etheme_color_version=='dark') {
 
 $selectors['active_bg'] = '
     #searchform .button:hover,
+    #searchsubmit:hover,
     .header-type-variant2 #searchform:hover .button:hover,
     #submit:hover, 
     .button:hover,

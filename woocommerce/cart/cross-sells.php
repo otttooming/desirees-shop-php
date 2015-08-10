@@ -24,6 +24,8 @@ $args = array(
 	'post__in' 				=> $crosssells
 );
 
+$rand = rand(100,400);
+
 $products = new WP_Query( $args );
 
 $woocommerce_loop['columns'] 	= 2;

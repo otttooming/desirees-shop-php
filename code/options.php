@@ -2,7 +2,7 @@
 
 function etheme_get_option($key, $setting = null,$doshortcode = true) {
     if ( function_exists( 'ot_get_option' ) ) {
-    	if($doshortcode){
+    	if($doshortcode && is_string(ot_get_option( $key,$setting ))){
         	return do_shortcode(ot_get_option( $key,$setting ));
     	}else{
         	return ot_get_option( $key,$setting );
@@ -43,18 +43,18 @@ function etheme_get_color($key) {
 /**
  * undocumented
  */
- function is_blog () {
+function et_is_blog () {
 	global  $post;
 	$posttype = get_post_type($post );
-	return ( ((is_archive()) || (is_author()) || (is_category()) || (is_home()) || (is_single()) || (is_tag())) && ( $posttype == 'post')  ) ? true : false ;
+	return ( ((is_archive()) || (is_author()) || (is_category()) || (is_home()) || (is_tag())) && ( $posttype == 'post')  ) ? true : false ;
 }
  
  
-function etheme_get_custom_field($field) {
+function etheme_get_custom_field($field, $get_from_blog = false) {
 	global $post;
 	if ( null === $post ) return FALSE;
 	$page_for_posts = get_option( 'page_for_posts' );
-	if(is_blog () && $page_for_posts) {
+	if($get_from_blog) {
 		$custom_field = get_post_meta($page_for_posts, $field, true);
 	} else {
 		$custom_field = get_post_meta($post->ID, $field, true);

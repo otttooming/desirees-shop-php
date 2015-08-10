@@ -4,7 +4,6 @@ jQuery(document).ready(function(){
     -------------------------------------------------------------- */
     
     jQuery('#searchform .field').click(function(){
-    	console.log('click');
 	    jQuery('#searchform').addClass('opened-input');
         jQuery(document).click(function(e) {
             var target = e.target;
@@ -33,7 +32,7 @@ jQuery(document).ready(function(){
 			wmode: 'opaque', /* Set the flash wmode attribute */
 			autoplay: true, /* Automatically start videos: True/False */
 			modal: false, /* If set to true, only the close button will close the window */
-			deeplinking: true, /* Allow prettyPhoto to update the url to enable deeplinking. */
+			deeplinking: false, /* Allow prettyPhoto to update the url to enable deeplinking. */
 			overlay_gallery: true, /* If set to true, a gallery will overlay the fullscreen image on mouse over */
 			keyboard_shortcuts: true, /* Set to false if you open forms inside prettyPhoto */
 			changepicturecallback: function(){}, /* Called everytime an item is shown/changed */
@@ -140,6 +139,9 @@ jQuery(document).ready(function(){
 	                jQuery(this).removeClass('opened');
 		            jQuery('#content_'+tabId).hide();
 	            });
+                jQuery('html, body').animate({
+                    scrollTop: jQuery(this).offset().top - 100
+                }, 800);
 	            jQuery('#content_'+tabId).show();
 	            jQuery(this).addClass('opened');
 	        }
@@ -176,6 +178,9 @@ jQuery(document).ready(function(){
             jQuery(this).parent().hide().prev().removeClass('opened')
             .next().next().addClass('opened').next().show();
         }
+        jQuery('html, body').animate({
+            scrollTop: chtAccord.offset().top - 100
+        }, 800);
     });
     
     jQuery('input[name="method"]').change(function(){
@@ -438,7 +443,6 @@ jQuery(document).ready(function(){
         var variation_link = variation.image_link;
         var variation_title = variation.image_title;
         
-        
         if(variation_image != '' && variation_link != '') {
 	                    
 	        if (jQuery('.product_image').hasClass('zoom-enabled')) {
@@ -486,6 +490,10 @@ jQuery(document).ready(function(){
 
     } );
 
+    setTimeout(function() {
+        jQuery('form.variations_form').find('select').change();
+    }, 150);
+
 
 	// Ajax add to cart
 	jQuery('.etheme-simple-product').live('click', function() {
@@ -509,9 +517,6 @@ jQuery(document).ready(function(){
                 'add-to-cart': jQuery('input[name=add-to-cart]').val()
 			};
             
-			// Trigger event
-			jQuery('body').trigger('adding_to_cart');
-			
 			// Ajax action
             jQuery.ajax({
                 url: formAction,
@@ -520,7 +525,7 @@ jQuery(document).ready(function(){
                 timeout: 10000,
                 dataType: 'text',
                 success: function(data) {                 
-                    jQuery('#top-cart').html(jQuery(data).find('#top-cart').html());                    
+                    jQuery('.widget_shopping_cart').html(jQuery(data).find('.widget_shopping_cart').html());                     
                     productImageSrc = jQuery('.main-image img').attr('src');                    
                     productImage = '<img width="72" src="'+productImageSrc+'" />';                    
                     productName = jQuery('.product_description_mainblock > h1').text();                    
@@ -547,6 +552,8 @@ jQuery(document).ready(function(){
 	
 	// Ajax add to cart (on list page)
 	jQuery('.etheme_add_to_cart_button').live('click', function() {
+
+        if(jQuery('body').hasClass('woocommerce-wishlist')) return true;
 		
 		// AJAX add to cart request
 		var $thisbutton = jQuery(this);
@@ -564,9 +571,6 @@ jQuery(document).ready(function(){
 				product_id: 	$thisbutton.attr('data-product_id'),
 				quantity:       $thisbutton.attr('data-quantity'),
 			};
-
-			// Trigger event
-			jQuery('body').trigger( 'adding_to_cart', [ $thisbutton, data ] );
 
 			// Ajax action
 			jQuery.post( woocommerce_params.ajax_url, data, function( response ) {
@@ -715,14 +719,9 @@ jQuery(document).ready(function(){
     /* Isotope */
     
     $portfolio = jQuery('.masonry');
-    
 
-	
-	jQuery(window).smartresize(function(){
-		$portfolio.isotope({ 
-			itemSelector: '.portfolio-item'
-		});
-	});
+
+    
 	
 	jQuery('.portfolio-filters a').click(function(){
 		var selector = jQuery(this).attr('data-filter');
@@ -736,9 +735,16 @@ jQuery(document).ready(function(){
 	
 	
 	setTimeout(function(){
+        $portfolio.isotope({
+            itemSelector: '.portfolio-item ',
+        });
+		jQuery(window).resize();
+	},500);
+    
+	setTimeout(function(){
 		jQuery('.portfolio').addClass('with-transition');
 		jQuery('.portfolio-item').addClass('with-transition');
-	},500);
+	}, 1000);
     
 	
     /* Load in view */

@@ -4,7 +4,7 @@
  *
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     2.0.3
+ * @version     2.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -30,9 +30,9 @@ if($attachment_ids){
     <div class="views-gallery thumbs-count-<?php echo $thums_count ?>">
         <ul class="slider <?php if(count($attachment_ids) > 3 && $product_layout == 'variant3'){ ?>jcarousel-horizontal<?php } ?>">
             <li class="slide thumbnail-active">
-            <a href="<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>" class="image" <?php  if($zoom=='disable'):?> rel="lightbox"<?php endif; ?> data-easyzoom-source="<?php echo etheme_get_image( $attachment->ID, $mainWidth, $mainHeight, $crop ) ?>">
-                <img src="<?php echo etheme_get_image(false, $thumbImageWidth, $thumbImageHeight, $thumbImageCrop); ?>">
-            </a> 
+                <a href="<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>" class="image" <?php  if($zoom=='disable'):?> rel="lightbox"<?php endif; ?> data-easyzoom-source="<?php echo etheme_get_image( get_post_thumbnail_id(), $mainWidth, $mainHeight, $crop ) ?>">
+                    <img src="<?php echo etheme_get_image(false, $thumbImageWidth, $thumbImageHeight, $thumbImageCrop); ?>">
+                </a> 
             </li>            
             <?php       
                 $loop = 0;

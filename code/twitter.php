@@ -69,7 +69,7 @@ function etheme_print_tweets($consumer_key,$consumer_secret,$user_token,$user_se
 	        $tweets = etheme_capture_tweets($consumer_key,$consumer_secret,$user_token,$user_secret,$user, $count);
 	        $tweets_decoded = json_decode($tweets, true);
 	        //if get error while loading fresh tweets - load outdated file
-	        if($tweets_decoded['error']) {
+	        if(!empty($tweets_decoded['error'])) {
 	            $tweets = etheme_pick_tweets($cachefile);
 	        }
 	        //else store fresh tweets to cache

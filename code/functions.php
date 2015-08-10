@@ -45,7 +45,7 @@ function etheme_enqueue_styles() {
     $custom_css = etheme_get_option('custom_css');
     if ( !is_admin() ) {
         wp_enqueue_style("bootstrap",get_template_directory_uri().'/css/bootstrap.css');
-        wp_enqueue_style("style",get_template_directory_uri().'/style.css');
+        wp_enqueue_style("style",get_stylesheet_directory_uri().'/style.css');
         if($etheme_responsive){
             wp_enqueue_style("bootstrap-responsive",get_template_directory_uri().'/css/bootstrap-responsive.css');
             wp_enqueue_style("responsive",get_template_directory_uri().'/css/responsive.css');
@@ -81,7 +81,7 @@ function etheme_enqueue_styles() {
         wp_enqueue_script('modals', get_template_directory_uri().'/js/modals.js',array(),false,true);
         wp_enqueue_script('tooltip', get_template_directory_uri().'/js/tooltip.js');
         wp_enqueue_script('prettyPhoto', get_template_directory_uri().'/js/jquery.prettyPhoto.js');
-        wp_enqueue_script('masonry', get_template_directory_uri().'/js/jquery.masonry.min.js',array(),false,true);
+        wp_enqueue_script('et_masonry', get_template_directory_uri().'/js/jquery.masonry.min.js',array(),false,true);
         wp_enqueue_script('flexslider', get_template_directory_uri().'/js/jquery.flexslider-min.js',array(),false,true);
         wp_enqueue_script('etheme', get_template_directory_uri().'/js/script.js',$script_depends);
     }
@@ -163,10 +163,7 @@ function etheme_get_the_category_list($separator = '', $parents='', $post_id = f
 
 
 function etheme_get_contents( $url ) {
-	if ( function_exists('curl_init') ) {
-		$output = file_get_contents( $url ); //$output = file_get_contents_curl( $url );
-	}
-	elseif ( function_exists('file_get_contents') ) {
+	if ( function_exists('file_get_contents') ) {
 		$output = file_get_contents( $url );
 	}
 	else {
@@ -196,14 +193,14 @@ function etheme_header_menu(){
 	?>
     <div class="row">
         <div id="main-nav" class="span12">
-            <?php wp_nav_menu(array('theme_location' => 'top', 'name' => 'top', 'container' => 'div', 'container_class' => $menuClass, 'menu_id' => 'top')); ?>
+            <?php wp_nav_menu(array('theme_location' => 'top', 'name' => 'top', 'container' => 'div', 'container_class' => $menuClass)); ?>
         </div>
     </div> 
 	<?php
 }
 
 function etheme_header_wp_navigation(){
-	wp_nav_menu(array('theme_location' => 'top', 'name' => 'top', 'container' => 'div', 'container_class' => 'menu default-menu', 'menu_id' => 'top'));
+	wp_nav_menu(array('theme_location' => 'top', 'name' => 'top', 'container' => 'div', 'container_class' => 'menu default-menu'));
 }
 
 function etheme_logo() {
@@ -213,6 +210,74 @@ function etheme_logo() {
 	<?php else: ?>
 		<a href="<?php echo home_url(); ?>"><span class="logo-text-red">ID</span>Store</a>
 	<?php endif ;
+}
+
+
+
+add_action( 'after_setup_theme', 'et_promo_remove', 11 );
+if(!function_exists('et_promo_remove')) {
+	function et_promo_remove() {
+		//update_option('et_close_promo_etag', 'ETag: "bca6c0-b9-500bba1239ca80"');
+	}
+}
+
+
+if(!function_exists('et_show_promo_text')) {
+	function et_show_promo_text() {
+		$versionsUrl = 'http://8theme.com/import/';
+		$ver = 'promo';
+		$folder = $versionsUrl.''.$ver;
+		
+		$txtFile = $folder.'/idstore.txt';
+		$file_headers = @get_headers($txtFile);
+		
+		$etag = $file_headers[4];
+		
+		$cached = false;
+		$promo_text = false;
+		
+		$storedEtag = get_option('et_last_promo_etag');
+		$closedEtag = get_option('et_close_promo_etag');
+		
+		if($etag == $storedEtag && $closedEtag != $etag) {
+			$storedEtag = get_option('et_last_promo_etag');
+			$promo_text = get_option('et_promo_text');
+		} else if($closedEtag == $etag) {
+			return;
+		} else {
+			$fileContent = file_get_contents($txtFile);
+			update_option('et_last_promo_etag', $etag);
+			update_option('et_promo_text', $fileContent);
+		}
+		
+		if($file_headers[0] == 'HTTP/1.1 200 OK') {
+			echo '<div class="promo-text-wrapper">';
+				if(!$promo_text && isset($fileContent)) {
+					echo $fileContent;
+				} else {
+					echo $promo_text;
+				}	
+				echo '<div class="close-btn" title="Hide promo text">x</div>';	
+			echo '</div>';	
+		}
+	}
+}
+
+add_action("wp_ajax_et_close_promo", "et_close_promo");
+add_action("wp_ajax_nopriv_et_close_promo", "et_close_promo");
+if(!function_exists('et_close_promo')) {
+	function et_close_promo() {
+		$versionsUrl = 'http://8theme.com/import/';
+		$ver = 'promo';
+		$folder = $versionsUrl.''.$ver;
+		
+		$txtFile = $folder.'/idstore.txt';
+		$file_headers = @get_headers($txtFile);
+		
+		$etag = $file_headers[4];
+		$res = update_option('et_close_promo_etag', $etag);
+		die();
+	}
 }
 
 /**
@@ -467,6 +532,107 @@ function etheme_get_image( $attachment_id = 0, $width = null, $height = null, $c
 	return apply_filters( 'blanco_product_image', $image_url );
 }
 
+
+// **********************************************************************// 
+// ! Registration 
+// **********************************************************************// 
+add_action( 'wp_ajax_et_register_action', 'et_register_action' );
+add_action( 'wp_ajax_nopriv_et_register_action', 'et_register_action' );
+if(!function_exists('et_register_action')) {
+	function et_register_action() {
+		global $wpdb, $user_ID;
+		$captcha_instance = new ReallySimpleCaptcha();
+		if(!$captcha_instance->check( $_REQUEST['captcha-prefix'], $_REQUEST['captcha-word'] )) {
+			$return['status'] = 'error';
+			$return['msg'] = __('The security code you entered did not match. Please try again.', ETHEME_DOMAIN);
+			echo json_encode($return);
+			die();
+		}
+	    if(!empty($_REQUEST)){
+	        //We shall SQL escape all inputs
+	        $username = esc_sql($_REQUEST['username']);
+	        if(empty($username)) {
+				$return['status'] = 'error';
+				$return['msg'] = __( "User name should not be empty.", ETHEME_DOMAIN );
+				echo json_encode($return);
+	            die();
+	        }
+	        $email = esc_sql($_REQUEST['email']);
+	        if(!preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/", $email)) {
+				$return['status'] = 'error';
+				$return['msg'] = __( "Please enter a valid email.", ETHEME_DOMAIN );
+				echo json_encode($return);
+	            die();
+	        }
+	        $pass = esc_sql($_REQUEST['pass']);
+	        $pass2 = esc_sql($_REQUEST['pass2']);
+	        if(empty($pass) || strlen($pass) < 5) {
+				$return['status'] = 'error';
+				$return['msg'] = __( "Password should have more than 5 symbols", ETHEME_DOMAIN );
+				echo json_encode($return);
+	            die();
+	        }
+	        if($pass != $pass2) {
+				$return['status'] = 'error';
+				$return['msg'] = __( "The passwords do not match", ETHEME_DOMAIN );
+				echo json_encode($return);
+	            die();
+	        }
+	        
+	        $status = wp_create_user( $username, $pass, $email );
+	        if ( is_wp_error($status) ) {
+				$return['status'] = 'error';
+				$return['msg'] = __( "Username already exists. Please try another one.", ETHEME_DOMAIN );
+				echo json_encode($return);
+	        }
+	        else {
+	            $from = get_bloginfo('name');
+	            $from_email = get_bloginfo('admin_email');
+	            $headers = 'From: '.$from . " <". $from_email .">\r\n";
+				$headers .= "MIME-Version: 1.0\r\n";
+				$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+	            $subject = __("Registration successful", ETHEME_DOMAIN);
+	            $message = et_registration_email($username);
+	            wp_mail( $email, $subject, $message, $headers );
+				$return['status'] = 'success';
+				$return['msg'] = __( "Please check your email for login details.", ETHEME_DOMAIN );
+				echo json_encode($return);
+	        }
+	        die();
+	    } 
+	}
+}
+
+if(!function_exists('et_registration_email')) {
+	function et_registration_email($username = '') {
+        global $woocommerce;
+        $logoimg = etheme_get_option('logo');
+        $logoimg = apply_filters('etheme_logo_src',$logoimg);
+		ob_start(); ?>
+			<div style="background-color: #f5f5f5;width: 100%;-webkit-text-size-adjust: none;margin: 0;padding: 70px 0 70px 0;">
+				<div style="-webkit-box-shadow: 0 0 0 3px rgba(0,0,0,0.025) ;box-shadow: 0 0 0 3px rgba(0,0,0,0.025);-webkit-border-radius: 6px;border-radius: 6px ;background-color: #fdfdfd;border: 1px solid #dcdcdc; padding:20px; margin:0 auto; width:500px; max-width:100%; color: #737373; font-family:Arial; font-size:14px; line-height:150%; text-align:left;">
+			        <?php if($logoimg): ?>
+			            <a href="<?php echo home_url(); ?>" style="display:block; text-align:center;"><img style="max-width:100%;" src="<?php echo $logoimg ?>" alt="<?php bloginfo( 'description' ); ?>" /></a>
+			        <?php else: ?>
+			            <a href="<?php echo home_url(); ?>" style="display:block; text-align:center;"><img style="max-width:100%;" src="<?php echo PARENT_URL.'/images/logo.png'; ?>" alt="<?php bloginfo('name'); ?>"></a>
+			        <?php endif ; ?>
+					<p><?php printf(__('Thanks for creating an account on %s. Your username is %s.', ETHEME_DOMAIN), get_bloginfo( 'name' ), $username);?></p>
+					<?php if (class_exists('Woocommerce')): ?>
+					
+						<p><?php printf(__('You can access your account area to view your orders and change your password here: <a href="%s">%s</a>.', ETHEME_DOMAIN), get_permalink( get_option('woocommerce_myaccount_page_id') ), get_permalink( get_option('woocommerce_myaccount_page_id') ));?></p>
+					
+					<?php endif; ?>
+					
+				</div>
+			</div>
+		<?php 
+	    $output = ob_get_contents();
+	    ob_end_clean();
+	    return $output;
+	}
+}
+
+
 function etheme_get_images($width = null, $height = null, $crop = true, $post_id = null ) {
 	global $post;
 	
@@ -493,8 +659,9 @@ function etheme_get_images($width = null, $height = null, $crop = true, $post_id
 		return;
 		
 	$image_urls = array();
-		
-	$image_urls[] = etheme_get_resized_url($attachment_id,$width, $height, $crop);
+
+	if(!empty($attachment_id))
+		$image_urls[] = etheme_get_resized_url($attachment_id,$width, $height, $crop);
 		
 	foreach($attachments as $one) {
 		$image_urls[] = etheme_get_resized_url($one->ID,$width, $height, $crop);

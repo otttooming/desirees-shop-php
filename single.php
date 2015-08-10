@@ -4,7 +4,7 @@
  *
  */
 
-extract(etheme_get_page_sidebar());
+extract(etheme_get_page_sidebar(true));
 
 get_header(); ?>
         <div class="container">

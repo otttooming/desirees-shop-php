@@ -25,16 +25,6 @@ function etheme_register_required_plugins() {
 			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
 		),	
 		array(
-			'name'     				=> 'Envato Toolkit', // The plugin name
-			'slug'     				=> 'envato-wordpress-toolkit-master', // The plugin slug (typically the folder name)
-			'source'   				=> get_template_directory_uri() . '/code/plugins/envato-wordpress-toolkit-master.zip', // The plugin source
-			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-			'force_activation' 		=> true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-			'force_deactivation' 	=> true, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
-		),
-		array(
 			'name'     				=> 'Vector Icons', // The plugin name
 			'slug'     				=> 'mnky-vector-icons', // The plugin slug (typically the folder name)
 			'source'   				=> get_template_directory_uri() . '/code/plugins/v-icons.zip', // The plugin source
