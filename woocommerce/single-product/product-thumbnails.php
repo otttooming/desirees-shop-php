@@ -30,7 +30,7 @@ if($attachment_ids){
     <div class="views-gallery thumbs-count-<?php echo $thums_count ?>">
         <ul class="slider <?php if(count($attachment_ids) > 3 && $product_layout == 'variant3'){ ?>jcarousel-horizontal<?php } ?>">
             <li class="slide thumbnail-active">
-            <a href="<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>" class="image" <?php  if($zoom=='disable'):?> rel="lightbox"<?php endif; ?> data-easyzoom-source="<?php echo etheme_get_image( $attachment->ID, $mainWidth, $mainHeight, $crop ) ?>">
+            <a href="<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>" class="image" <?php  if($zoom=='disable'):?> rel="thumbnails"<?php endif; ?> data-easyzoom-source="<?php echo etheme_get_image( $attachment->ID, $mainWidth, $mainHeight, $crop ) ?>">
                 <img src="<?php echo etheme_get_image(false, $thumbImageWidth, $thumbImageHeight, $thumbImageCrop); ?>">
             </a> 
             </li>            
@@ -43,11 +43,11 @@ if($attachment_ids){
                     continue;
                     ?>
                     <li class="slide">
-                        <a href="<?php echo wp_get_attachment_url( $id ) ?>" class="image" <?php  if($zoom=='disable'):?> rel="lightbox[gal]"<?php endif; ?> data-easyzoom-source="<?php echo etheme_get_image( $id, $mainWidth, $mainHeight, $crop ) ?>">
+                        <a href="<?php echo wp_get_attachment_url( $id ) ?>" class="image" <?php  if($zoom=='disable'):?> rel="thumbnails"<?php endif; ?> data-easyzoom-source="<?php echo etheme_get_image( $id, $mainWidth, $mainHeight, $crop ) ?>">
                             <img src="<?php echo etheme_get_image($id, $thumbImageWidth, $thumbImageHeight, $thumbImageCrop); ?>" >
                         </a>   
 						<?php if(etheme_get_option('gallery_lightbox') && $zoom!='disable'): ?>
-							<a href="<?php echo wp_get_attachment_url( $id ); ?>" rel="lightbox[gal]" style="display:none;" data-original-title="" data-placement="left">&nbsp;</a>
+							<a href="<?php echo wp_get_attachment_url( $id ); ?>" rel="thumbnails" style="display:none;" data-original-title="" data-placement="left">&nbsp;</a>
 						<?php endif; ?>
                     </li>               
                         

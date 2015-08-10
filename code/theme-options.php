@@ -1055,7 +1055,7 @@ looking at its layout.</p>
                     'label'   => ''
                 )
             )
-        ),
+        ),        
         array(
             'id'          => 'thumbs_count',
             'label'       => 'Number of thumbnails in slider below main image',
@@ -1164,6 +1164,22 @@ looking at its layout.
             ',
             'type'        => 'textarea',
             'section'     => 'single_product'
+        ),
+        array(
+            'id'          => 'related_products',
+            'label'       => 'Show related products',
+            'default'     => array(
+            	0 => 1
+            ),
+            'type'        => 'checkbox',
+            'section'     => 'single_product',
+            'class'       => '',
+            'choices'     => array(
+                array(
+                    'value'   => 1,
+                    'label'   => ''
+                )
+            )
         ),
         array(
             'id'          => 'size_guide_img',

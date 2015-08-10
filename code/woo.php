@@ -20,6 +20,12 @@ remove_action( 'woocommerce_product_tabs', 'woocommerce_product_reviews_tab', 30
 remove_action( 'woocommerce_product_tab_panels', 'woocommerce_product_description_panel', 10 );
 remove_action( 'woocommerce_product_tab_panels', 'woocommerce_product_attributes_panel', 20 );
 remove_action( 'woocommerce_product_tab_panels', 'woocommerce_product_reviews_panel', 30 );
+
+if(!etheme_get_option('related_products')) {
+	remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+}
+
+
 class Etheme_WooCommerce_Widget_Cart extends WP_Widget {
 
 	/** Variables to setup the widget. */
@@ -55,7 +61,7 @@ class Etheme_WooCommerce_Widget_Cart extends WP_Widget {
 
 
 ?>
-    <a href="<?php echo $woocommerce->cart->get_cart_url(); ?>"><?php if ( $title ) echo $title ; ?><?php echo '<span> - </span>' ?><span><?php echo $woocommerce->cart->get_cart_subtotal(); ?></span></a>
+    <a href="<?php echo $woocommerce->cart->get_cart_url(); ?>"><i class="icon-shopping-cart"></i><?php if ( $title ) echo $title ; ?><?php echo '<span> - </span>' ?><span><?php echo $woocommerce->cart->get_cart_subtotal(); ?></span></a>
     <div class="cart-popup-container">
     <div class="cart-popup" style="display: none; ">
         <?php

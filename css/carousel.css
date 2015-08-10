@@ -29,7 +29,7 @@
     width: 78px;
     height: 30px;
     cursor: pointer;
-    background: url(../images/product-big-arrow-sprite_vertical.jpg) no-repeat 0 -121px;
+    background: url(../images/product-big-arrow-sprite_vertical.png) no-repeat 0 -121px;
 }
 
 .views-gallery .jcarousel-next-vertical:hover,
@@ -56,7 +56,7 @@
     width: 78px;
     height: 30px;
     cursor: pointer;
-    background: url(../images/product-big-arrow-sprite_vertical.jpg) no-repeat 0 -88px;
+    background: url(../images/product-big-arrow-sprite_vertical.png) no-repeat 0 -88px;
 }
 
 .views-gallery .jcarousel-prev-vertical:hover,

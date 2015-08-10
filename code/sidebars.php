@@ -300,7 +300,7 @@ function etheme_widgets_init() {
 
 /* Get page sidebar position */
 
-function etheme_get_page_sidebar() {
+function etheme_get_page_sidebar($blog = false) {
 
 	$result = array(
 		'position' => '',
@@ -311,8 +311,8 @@ function etheme_get_page_sidebar() {
 
 	$result['responsive'] = etheme_get_option('blog_sidebar_responsive');
 	$result['position'] = etheme_get_option('blog_sidebar');
-	$page_sidebar_state = etheme_get_custom_field('sidebar_state');
-	$widgetarea = etheme_get_custom_field('widget_area');
+	$page_sidebar_state = etheme_get_custom_field('sidebar_state', $blog);
+	$widgetarea = etheme_get_custom_field('widget_area', $blog);
 	
 	if($widgetarea != '') {
 		$result['sidebarname'] = 'custom';

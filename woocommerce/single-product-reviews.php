@@ -64,7 +64,6 @@ global $woocommerce; ?>
 			</div>
 		<?php endif;
 		
-		echo '<p class="add_review"><a href="#review_form" class="show_review_form button"><span>'.__('Add Review', ETHEME_DOMAIN).'</span></a></p>';
 		
 		$title_reply = __('Add a review', ETHEME_DOMAIN);
 		

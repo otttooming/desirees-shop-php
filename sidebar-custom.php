@@ -5,7 +5,8 @@
  */
 ?>
 <?php 
-	$page_sidebar = etheme_get_custom_field('widget_area');
+	$blog = et_is_blog();
+	$page_sidebar = etheme_get_custom_field('widget_area', $blog);
 ?>
 
 <div id="primary" class="widget-area" role="complementary">

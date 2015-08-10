@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
                 extract(etheme_get_shop_sidebar());
 
 	        ?>      	
-	        <a class="back-to" href="javascript: history.go(-1)"><span>&lsaquo;</span> <?php _e('Return to Previous Page', ETHEME_DOMAIN); ?></a>
+	        <a class="back-to777 button active small arrow-left" href="javascript: history.go(-1)"> <?php _e('Return to Previous Page', ETHEME_DOMAIN); ?></a>
          
         </div>
     </div>

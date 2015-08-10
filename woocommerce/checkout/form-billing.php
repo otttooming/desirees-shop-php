@@ -34,9 +34,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 		<?php if ( $checkout->enable_guest_checkout  && !etheme_get_option('checkout_accordion') ) : ?>
 
-			<p class="form-row form-row-wide create-account">
+			<!--p class="form-row form-row-wide create-account">
 				<input class="input-checkbox" id="createaccount" <?php checked( ( true === $checkout->get_value( 'createaccount' ) || ( true === apply_filters( 'woocommerce_create_account_default_checked', false ) ) ), true) ?> type="checkbox" name="createaccount" value="1" /> <label for="createaccount" class="checkbox"><?php _e( 'Create an account?', 'woocommerce' ); ?></label>
-			</p>
+			</p-->
 
 		<?php endif; ?>
 
@@ -44,7 +44,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 		<?php if ( ! empty( $checkout->checkout_fields['account'] ) && !etheme_get_option('checkout_accordion') ) : ?>
 
-			<div class="create-account">
+			<!--div class="create-account">
 
 				<p><?php _e( 'Create an account by entering the information below. If you are a returning customer please login at the top of the page.', 'woocommerce' ); ?></p>
 
@@ -56,7 +56,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 				<div class="clear"></div>
 
-			</div>
+			</div-->
 
 		<?php endif; ?>
 

@@ -11,9 +11,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 global $post;
 
-if ( ! $post->post_excerpt ) return;
+
 ?>
-	<?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ) ?>
+	<?php echo content(40); ?>
+	<a href="#content_tab_1" id="read_more_content"><span>Rohkem informatsiooni</span></a>
     <?php if ( etheme_get_custom_field('_etheme_size_guide') ) : ?>
         <div class="size_guide">
     	 <a rel="lightbox" href="<?php etheme_option('size_guide_img'); ?>"><?php _e('SIZING GUIDE', ETHEME_DOMAIN); ?></a>

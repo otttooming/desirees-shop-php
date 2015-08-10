@@ -736,9 +736,13 @@ jQuery(document).ready(function(){
 	
 	
 	setTimeout(function(){
+		jQuery(window).resize();
+	},500);
+    
+	setTimeout(function(){
 		jQuery('.portfolio').addClass('with-transition');
 		jQuery('.portfolio-item').addClass('with-transition');
-	},500);
+	}, 1000);
     
 	
     /* Load in view */

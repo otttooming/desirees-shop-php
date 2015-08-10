@@ -23,7 +23,7 @@ global $post, $product;
     
        <?php etheme_print_stars(true); ?>
     
-    	<?php if ( $product->is_type( array( 'simple', 'variable' ) ) && get_option('woocommerce_enable_sku') == 'yes' && $product->get_sku() ) : ?>
+    	<?php if ( $product->is_type( array( 'simple', 'variable' ) ) && $product->get_sku() ) : ?>
     		<span class="product-code"><?php _e('SKU:', ETHEME_DOMAIN); ?> <span class="sku"><?php echo $product->get_sku(); ?></span></span>
     	<?php endif; ?>
         

@@ -1,7 +1,7 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+/*@import url(http://fonts.googleapis.com/css?family=Open+Sans);*/
 
 body{
-	color: #eee;
+	color: white;
 }
 .container, 
 .header-type-variant4 .header-area, 
@@ -25,7 +25,7 @@ body{
 .header-top-variant5 .container{
 	background: #fc5a5a;
 }
-
+/* PA777
 .header-top-variant5 .header-variant2 #searchform .field{
 	background-color: transparent !important;
 }
@@ -33,27 +33,29 @@ body{
 .header-top-variant5 .header-variant2 #searchform .field:focus{
 	background: #333 !important;
 }
+*/
 
 .logo a, 
 .logo a:hover{
-	color: #eee;
+	color: white;
 }
 
 p, a, h1, h2, h3, h4, h5, h6{
-	color: #eee;
+	color: white;
 }
 
 select,
 select:hover,
 input{
-	background-color: #333 !important;
-	border:1px solid #111 !important;
-	color: #eee !important;
+	background-color: #333;
+/*PA777	border:1px solid #111 !important;*/
+border:1px solid transparent !important;
+color: white !important;
 }
 
 textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input{
 	background-color: #333;
-	color: #eee;
+	color: white;
 }
 
 input[type="hidden"] {
@@ -69,7 +71,7 @@ code,
 pre{
 	background: #333;
 	border:1px solid #111;
-	color: #eee;
+	color: white;
 }
 
 blockquote{
@@ -82,7 +84,7 @@ mark{
 }
 
 label{
-	color: #eee !important;
+	color: white !important;
 }
 
 select,
@@ -93,7 +95,7 @@ select:hover{
 textarea{
 	background-color: #333 !important;
 	border:1px solid #111 !important;
-	color: #eee !important;
+	color: white !important;
 }
 
 .login-fields .form-row input:focus{
@@ -119,11 +121,11 @@ del{
 }
 
 .modal-header h3{
-	color: #eee;
+	color: white;
 }
 
 .span3.icon6 i, .span3.icon5 i, .span2.icon4 i, .span2.icon3 i, .span1.icon2 i, .span1.icon1 i{
-	color: #eee;
+	color: white;
 }
 
 .minus, 
@@ -165,7 +167,7 @@ del{
 
 .menu > ul > li > a{
 	text-shadow: 0 1px 0 #111;
-	color: #eee;
+	color: white;
 }
 
 .mega-menu > ul > li > ul{
@@ -174,7 +176,7 @@ del{
 
 .mega-menu > ul > li > ul > li > a, 
 .mega-menu > ul > li > ul > li ul li a{
-	color: #eee;
+	color: white;
 }
 
 .default-menu > ul > li ul,
@@ -216,7 +218,7 @@ del{
 
 .product-grid .product-name a, 
 .product-slider .slider-title{
-	color: #eee;
+	color: white;
 }
 
 .product-grid .price del .amount{
@@ -231,7 +233,7 @@ del{
 #submit, 
 .button{
 	background: #333;
-	color: #eee;
+	color: white;
 }
 
 .btn-cont .button{
@@ -267,7 +269,7 @@ del{
 }
 
 .footer-black-bg .container{
-	background: #111 !important;
+	background: #2f2f2f !important;
 }
 
 .container_footer_bg{
@@ -295,11 +297,13 @@ del{
 	background-color: #333 !important;
 }
 
+/* PA777
 #searchform .field,
 .header-variant2 #searchform .field{
 	background-color: #222 !important;
 	border: 1px solid #111!important;
 }
+*/
 
 #searchform .button{
 	background-color: #111;
@@ -313,16 +317,17 @@ del{
 }
 
 #searchform .field:focus{
-	border:1px solid #111 !important;
+/* PA777	border:1px solid #111 !important;*/
 	background-color: #333 !important;
+/* PA777 */	color: white !important;
 }
 
 .search_text{
-	color:#eee;
+	color:white;
 }
 
 #top-cart > a{
-	color: #eee;
+	color: white;
 }
 
 
@@ -334,12 +339,12 @@ del{
 
 .products-small .product-item{
 	background: #333;
-	color: #eee;
+	color: white;
 	border-bottom:1px solid #111;
 }
 
 #top-cart .cart-popup a{
-	color: #eee;
+	color: white;
 }
 
 #top-cart .cart-popup a.emptycart{
@@ -355,12 +360,12 @@ del{
 }
 
 .products-small .product-item .qty{
-	color: #eee;
+	color: white;
 }
 
 #top-cart .cart-popup .totals .amount, 
 #top-cart .cart-popup .totals{
-	color: #eee;
+	color: white;
 }
 
 .footer-hr{
@@ -368,7 +373,7 @@ del{
 }
 
 .block-with-icon i{
-	color: #eee;
+	color: white;
 }
 
 #top-cart a > span .amount{
@@ -376,7 +381,7 @@ del{
 }
 
 .header-links > li > a{
-	color: #eee;
+	color: white;
 }
 
 .header-links > li > a:hover{
@@ -390,7 +395,7 @@ del{
 
 .cta-block h4{
 	font-weight: 300;
-	color:#eee;
+	color:white;
 }
 
 .cta-block:hover{
@@ -411,7 +416,7 @@ del{
 	border-top: 1px solid #111;
 	border-right: 1px solid #111;
 	border-left: 1px solid #111;
-	color: #eee;
+	color: white;
 
 }
 
@@ -452,17 +457,17 @@ del{
 
 .block-head{
 	background: #333;
-	color: #eee;
+	color: white;
 }
 
 .cats.acc_enabled .block-content .wpsc_category_title a, 
 .widget-title{
-	color: #eee;
+	color: white;
 }
 
 .cats .block-content .wpsc_categories > li > a,
 .grid_pagination_block{
-	color: #eee;
+	color: white;
 }
 
 .grid_pagination_block{
@@ -496,7 +501,7 @@ del{
 }
 
 .widget_layered_nav ul small.count{
-	color: #eee !important;
+	color: white !important;
 	border:1px solid #111 !important;
 }
 
@@ -509,7 +514,7 @@ del{
 }
 
 .widget_price_filter .price_slider_wrapper .button span{
-	color: #eee !important;
+	color: white !important;
 }
 
 .widget_layered_nav ul li.chosen a{
@@ -521,7 +526,7 @@ del{
 .grid_pagination a, 
 .grid_bottom_pagination a{
 	background: #333;
-	color: #eee;
+	color: white;
 	
 }
 
@@ -546,7 +551,7 @@ del{
 .grid_pagination span.current, 
 .grid_bottom_pagination span.current{
 	background: #fc5a5a;
-	color: #eee;
+	color: white;
 }
 
 .grid_pagination_bottom_block{
@@ -554,7 +559,7 @@ del{
 }
 
 #categories-2 > ul > li a{
-	color: #eee;
+	color: white;
 }
 
 .widget-placeholder{
@@ -564,20 +569,20 @@ del{
 .widget-placeholder .side-icon,
 .widget-placeholder .side-text{
 	background: #333;
-	color: #eee;
+	color: white;
 }
 
 .widget-placeholder .side-icon i,
 .widget-placeholder .side-text h3,
 .widget_price_filter .price_label{
-	color: #eee !important;
+	color: white !important;
 }
 
 
 /* Single Product */
 
 .product_description_mainblock p{
-	color: #eee;
+	color: white;
 }
 
 hr{
@@ -586,7 +591,7 @@ hr{
 }
 
 .product-stock{
-	color: #eee;
+	color: white;
 }
 
 .product-code > span{
@@ -598,11 +603,11 @@ hr{
 }
 
 .label label{
-	color: #eee;
+	color: white;
 }
 
 div.product_meta span{
-	color: #eee;
+	color: white;
 }
 
 div.product_meta a{
@@ -611,11 +616,11 @@ div.product_meta a{
 
 .tab-content h3, 
 .tab-content h2{
-	color: #eee !important;
+	color: white !important;
 }
 
 table.shop_attributes th{
-	color: #eee !important;
+	color: white !important;
 }
 
 div.pp_woocommerce .pp_content_container,
@@ -629,7 +634,7 @@ div.pp_woocommerce .pp_content_container,
 
 .pp_content_container #reply-title{
 	padding-right: 35px;
-	color: #eee;
+	color: white;
 }
 
 div.pp_woocommerce .pp_close{
@@ -650,7 +655,7 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 
 .custom-tabs1,
 .custom-tabs2{
-	color: #eee;
+	color: white;
 }
 
 #product-quantity .input-text{
@@ -659,7 +664,7 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 }
 
 .etheme-popup-content em{
-	color: #eee;
+	color: white;
 }
 
 .etheme-popup-content .button.cont-shop{
@@ -669,7 +674,7 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 .page-template-contacts2-php .contact-form h1, 
 .page-title{
 	border-bottom:1px solid #111;
-	color:#eee;
+	color:white;
 }
 
 .woocommerce-cart .page-title{
@@ -678,30 +683,30 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 
 .widget_categories .widget-title{
 	background: #333;
-	color: #eee;
+	color: white;
 }
 
 .widget-container a,
 .widget-container ul li{
-	color: #eee;
+	color: white;
 }
 
 .table th, 
 .table td{
 	border-top:1px solid #111;
-	color: #eee;
+	color: white;
 }
 
 table th{
 	border-bottom:1px solid #111;
-	color: #eee;
+	color: white;
 }
 
 .cart_table_item .product-name a, 
 .checkout_table_item .product-name a,
 .cart_table_item .product-name .variation dt, 
 .checkout_table_item .product-name .variation dt{
-	color: #eee;
+	color: white;
 }
 
 #cart-quantity .quantity{
@@ -714,7 +719,7 @@ table th{
 }
 
 .checkout_cart td.product-price .amount{
-	color: #eee;
+	color: white;
 }
 
 .cart-collaterals .shipping_calculator .button,
@@ -722,8 +727,7 @@ table th{
 	background: #333 !important;
 	border:1px solid #111 !important;
 	float: left;
-	width: 100%;
-	padding: 5px 10px;
+
 	margin-bottom: 10px;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
@@ -737,12 +741,12 @@ table th{
 .cart-collaterals .shipping_calculator a,
 .cart_totals h2, 
 .shipping_calculator h2{
-	color: #eee !important;
+	color: white !important;
 }
 
 .cart_table_item .product-name, 
 .checkout_table_item .product-name{
-	color: #eee !important;
+	color: white !important;
 }
 
 .table.order_details td{
@@ -750,7 +754,7 @@ table th{
 }
 
 .myaccount_user, .myaccount_address, .col-1 h3, .col-2 h3, .col-2 address{
-	color: #eee !important;
+	color: white !important;
 }
 
 #recentcomments li{
@@ -760,7 +764,7 @@ table th{
 /* Blog */
 .post-title,
 .blog-post.post-portrait .post-title{
-	color: #eee;
+	color: white;
 }
 
 .post-title:hover{
@@ -792,7 +796,7 @@ table th{
 .post-information a, 
 .post-information a,
 .post-information i{
-	color: #eee;
+	color: white;
 }
 
 .comment-body{
@@ -805,7 +809,7 @@ table th{
 
 .entry-title{
 	border-bottom:1px solid #111;
-	color: #eee;
+	color: white;
 }
 
 .portfolio-filters{
@@ -815,7 +819,7 @@ table th{
 .portfolio-content h3,
 .blog_icon_date,
 .blog2_icon_author{
-	color: #eee;
+	color: white;
 }
 
 .portfolio-content .post-information{
@@ -837,7 +841,7 @@ table th{
 
 .portfolio-content h2,
 .review_title{
-	color: #eee;
+	color: white;
 }
 
 .product-add-to-cart{
@@ -866,7 +870,7 @@ table th{
 }
 
 .typography-block > .nav-tabs li a{
-	color:#eee;
+	color:white;
 }
 
 .typography-block > .nav-tabs li.active{
@@ -883,7 +887,7 @@ table th{
 }
 
 .typography-block .list-square li strong{
-	color: #eee;
+	color: white;
 }
 
 .menu .current-menu-item > a,
@@ -892,9 +896,14 @@ table th{
 }
 
 .progress-bar{
-	background: #333;
+/*PA777*/
+/*	background: #333;
 	border-top:1px solid #111;
+	*/
+	background: #555;
+	border-top:transparent;
 }
+
 
 .member-details{
 	background: #333;
@@ -902,24 +911,24 @@ table th{
 }
 
 .member-details i{
-	color: #eee;
+	color: white;
 }
 
 .p-table, .p-table-2, .p-table-3{
 	background: #333;
 	border:1px solid #111;
 	border-bottom:2px solid #fc5a5a;
-	color: #eee;
+	color: white;
 }
 
 .p-table-head{
 	background: #333;
-	color: #eee !important;
+	color: white !important;
 }
 
 .p-table li, .p-table-2 li{
 	border-bottom:1px solid #111 !important;
-	color: #eee;
+	color: white;
 }
 
 .p-table li:hover, .p-table-2 li:hover{
@@ -928,11 +937,11 @@ table th{
 }
 
 .p-table li i{
-	color: #eee;
+	color: white;
 }
 
 .the-icons li i{
-	color: #eee;
+	color: white;
 }
 
 .table-striped tbody tr:nth-child(odd) td, .table-striped tbody tr:nth-child(odd) th{
@@ -941,7 +950,7 @@ table th{
 
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th{
 	background-color: #333;
-	color: #eee;
+	color: white;
 }
 
 .page-template-contacts2-php .contact-form{
@@ -953,7 +962,7 @@ table th{
 .contact_info span, 
 #contact_container h2, 
 .contact_info h5{
-	color: #eee;
+	color: white;
 }
 
 .contact_input{
@@ -968,9 +977,10 @@ form.login .login-head, form.register .register-head{
 	border-bottom:1px solid #111;
 }
 
-.form-row .button{
+.login .form-row .button,
+.register .form-row .button{
 	border:none !important;
-	background: #222;
+	background-color: #222 !important;
 }
 
 .form-row .button:hover{
@@ -978,22 +988,22 @@ form.login .login-head, form.register .register-head{
 }
 
 form.login .login-head i, form.register .register-head i{
-	color: #eee;
+	color: white;
 }
 
 .lost_password{
-	color: #eee;
+	color: white;
 }
 
 .product-title2{
 	background: #333;
-	color: #eee;
+	color: white;
 }
 
 .et-mobile-menu li > a{
 	background: #333;
 	border-top:1px solid #222;
-	color: #eee;
+	color: white;
 }
 
 .et-mobile-menu li > a:hover{
@@ -1066,6 +1076,8 @@ div.light_rounded .pp_content{
 .woocommerce-error, .error, .woocommerce-message, .woocommerce_error, .success, .info, .notice{
 	background-color: #333;
 	border:1px solid #111;
+	display: block;
+	overflow: hidden;
 }
 
 .tabs.checkout-accordion .tab-content{
@@ -1085,7 +1097,7 @@ div.light_rounded .pp_content{
 }
 
 .tabs.checkout-accordion .tab-title.opened span{
-	color: #eee;
+	color: white;
 }
 
 .tabs.checkout-accordion .tab-title.opened:hover{
@@ -1120,7 +1132,7 @@ div.light_rounded .pp_content{
 }
 
 #payment #place_order{
-	background-color: #333 !important;
+	background-color: #a30000 !important;
 }
 #payment #place_order:hover{
 	background-color: #fc5a5a !important;
@@ -1137,7 +1149,7 @@ div.light_rounded .pp_content{
 /* Demo panel */
 .etheme_cp{
 	background: #333 !important;
-	color: #eee;
+	color: white;
 }
 
 
@@ -1160,7 +1172,7 @@ blockquote{
 
 .banner-transform .mask p,
 .banner-transform:hover .mask h2{
-	color: #eee;
+	color: white;
 }
 
 .back-to{
@@ -1189,4 +1201,41 @@ blockquote{
 
 div.pp_overlay{
 	background-color: #111 !important;
+}
+
+.chosen-container-single .chosen-single {background: #333; color:white;box-shadow: 0 1px 0 #111 inset !important;}
+.woocommerce-checkout .form-row .chosen-container .chosen-drop {background: #333;border: 1px solid #111;}
+.chosen-container-active.chosen-with-drop .chosen-single{box-shadow: 0 1px 0 #111 inset !important;background: #333;border: 1px solid #111;color: white;}
+.chosen-container-single .chosen-search input[type=text] {background: url(../images/chosen-sprite.png) no-repeat 100% -20px,#333;}
+.chosen-container .chosen-results li.no-results {background: #333;}
+
+/*PA777 background color*/
+.header-variant2 .search_form { float: right; width:auto; margin: -8px 0 0 20px; background: inherit !important;}
+
+/*PA777 cart product name*/
+ul.cart_list li a {
+color: white !important;
+}
+
+table.compare-list td {color:#747373;}
+
+.addtocont .button {
+background: #222;
+}
+
+.input-text {
+	color:white;
+}
+
+.cart-tab p,.cart-tab a,.cart-tab h1,.cart-tab h2,.cart-tab h3,.cart-tab h4,.cart-tab h5,.cart-tab h6 {
+color: black!important;
+}
+
+.cart-tab ul.cart_list li a {
+color: black !important;
+}
+
+/*PA777 misc*/
+.page-numbers .dots {
+	color:white;
 }

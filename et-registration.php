@@ -2,51 +2,18 @@
 /**
  * Template Name: Custom Registration Page
  */
-require_once(ABSPATH . WPINC . '/registration.php');
-global $wpdb, $user_ID;
 //Check whether the user is already logged in
 if (!$user_ID) {
-    if($_POST){
-        //We shall SQL escape all inputs
-        $username = $wpdb->escape($_REQUEST['username']);
-        if(empty($username)) {
-            echo "<span class='error'>".__( "User name should not be empty.", ETHEME_DOMAIN )."</span>";
-            exit();
-        }
-        $email = $wpdb->escape($_REQUEST['email']);
-        if(!preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/", $email)) {
-            echo "<span class='error'>".__( "Please enter a valid email.", ETHEME_DOMAIN )."</span>";
-            exit();
-        }
-        $pass = $wpdb->escape($_REQUEST['pass']);
-        $pass2 = $wpdb->escape($_REQUEST['pass2']);
-        if(empty($pass) || strlen($pass) < 5) {
-            echo "<span class='error'>".__( "Password should have more than 5 symbols", ETHEME_DOMAIN )."</span>";
-            exit();
-        }
-        if($pass != $pass2) {
-            echo "<span class='error'>".__( "The passwords do not match", ETHEME_DOMAIN )."</span>";
-            exit();
-        }
-        
-        $status = wp_create_user( $username, $pass, $email );
-        if ( is_wp_error($status) )
-            echo "<span class='error'>".__( "Username already exists. Please try another one.", ETHEME_DOMAIN )."</span>";
-        else {
-            $from = get_bloginfo('name');
-            $from_email = get_bloginfo('admin_email');
-            $headers = 'From: '.$from . " <". $from_email .">\r\n";
-            $subject = "Registration successful";
-            $msg = "\nYour login details:\nUsername: $username\nPassword: Your chosen password";
-            wp_mail( $email, $subject, $msg, $headers );
-            echo "<span class='success'>".__( "Please check your email for login details.", ETHEME_DOMAIN )."</span>";
-        }
-        exit();
-    } else {
         $blog_layout = etheme_get_option('blog_layout');
         $blog_sidebar = etheme_get_option('blog_sidebar');
         $blog_sidebar_responsive = etheme_get_option('blog_sidebar_responsive');
         get_header();
+        $captcha_instance = new ReallySimpleCaptcha();
+		$captcha_instance->bg = array( 244, 80, 80 );
+		$word = $captcha_instance->generate_random_word();
+		$prefix = mt_rand();
+		$img_name = $captcha_instance->generate_image( $prefix, $word );
+		$captcha_img = ETHEME_CODE_URL.'/inc/really-simple-captcha/tmp/'.$img_name;
         ?>
         <div class="container">
             <div class="row">
@@ -66,7 +33,7 @@ if (!$user_ID) {
                                     <span class="register-span-small"><?php _e('Please, register your account to continue.', ETHEME_DOMAIN); ?></span>
                                 </p>
                     			<p class="form-row form-row-first">
-                                    <label><?php _e( "Enter your full name", ETHEME_DOMAIN ) ?> <span class="required">*</span></label>
+                                    <label><?php _e( "Enter your username", ETHEME_DOMAIN ) ?> <span class="required">*</span></label>
                     				<input type="text" name="username" class="text" value="" />
                     			</p>
                     			<p class="form-row">
@@ -83,7 +50,12 @@ if (!$user_ID) {
                     			</p>
                     			<div class="clear"></div>
                 			</div>
-                			<p class="form-row">
+							<div class="captcha-block">
+								<img src="<?php echo $captcha_img; ?>">
+								<input type="text" name="captcha-word" class="captcha-input">
+								<input type="hidden" name="captcha-prefix" value="<?php echo $prefix; ?>">
+							</div>
+                			<p class="form-row right">
                 				<button class="button fl-r submitbtn" type="submit"><span><?php _e( "Register", ETHEME_DOMAIN ) ?></span></button>
                                 <div class="clear"></div>
                 			</p>
@@ -92,14 +64,23 @@ if (!$user_ID) {
                             jQuery(".submitbtn").click(function() {
                                 jQuery('#result').html('<img src="<?php echo get_template_directory_uri(); ?>/images/loading.gif" class="loader" />').fadeIn();
                                 var input_data = jQuery('#wp_signup_form').serialize();
+                                input_data += '&action=et_register_action';
                                 jQuery.ajax({
-                                    type: "POST",
-                                    url: "<?php echo "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>",
+                                    type: "GET",
+                                    dataType: "JSON",
+                                    url: "<?php echo admin_url( 'admin-ajax.php' ); ?>",
                                     data: input_data,
-                                    success: function(msg){
+                                    success: function(response){
                                         jQuery('.loader').remove();
-                                        jQuery('<div>').html(msg).appendTo('div#result').hide().fadeIn('slow');
-                                        jQuery('#wp_signup_form').find("input[type=text], input[type=password], textarea").val("");
+                                        if(response.status == 'error') {
+                                        	var msgHtml = '<span class="error">' + response.msg + '</span>';
+                                            jQuery('<div>').html(msgHtml).appendTo('div#result').hide().fadeIn('slow');
+                                            
+                                        } else {
+                                        	var msgHtml = '<span class="success">' + response.msg + '</span>';
+                                            jQuery('<div>').html(msgHtml).appendTo('div#result').hide().fadeIn('slow');
+                                            jQuery('#wp_signup_form').find("input[type=text], input[type=password], textarea").val("");
+                                        }
                                     }
                                 });
                                 return false;
@@ -115,7 +96,6 @@ if (!$user_ID) {
 		</div><!-- .container -->
         <?php
         get_footer();
-    } //end of if($_post)
 }
 else {
     echo "<script type='text/javascript'>window.location='". home_url() ."'</script>";
