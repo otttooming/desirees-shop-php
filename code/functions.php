@@ -45,7 +45,7 @@ function etheme_enqueue_styles() {
     $custom_css = etheme_get_option('custom_css');
     if ( !is_admin() ) {
         wp_enqueue_style("bootstrap",get_template_directory_uri().'/css/bootstrap.css');
-        wp_enqueue_style("style",get_template_directory_uri().'/style.css');
+        wp_enqueue_style("style",get_stylesheet_directory_uri().'/style.css');
         if($etheme_responsive){
             wp_enqueue_style("bootstrap-responsive",get_template_directory_uri().'/css/bootstrap-responsive.css');
             wp_enqueue_style("responsive",get_template_directory_uri().'/css/responsive.css');
@@ -163,10 +163,7 @@ function etheme_get_the_category_list($separator = '', $parents='', $post_id = f
 
 
 function etheme_get_contents( $url ) {
-	if ( function_exists('curl_init') ) {
-		$output = file_get_contents( $url ); //$output = file_get_contents_curl( $url );
-	}
-	elseif ( function_exists('file_get_contents') ) {
+	if ( function_exists('file_get_contents') ) {
 		$output = file_get_contents( $url );
 	}
 	else {
@@ -196,14 +193,14 @@ function etheme_header_menu(){
 	?>
     <div class="row">
         <div id="main-nav" class="span12">
-            <?php wp_nav_menu(array('theme_location' => 'top', 'name' => 'top', 'container' => 'div', 'container_class' => $menuClass, 'menu_id' => 'top')); ?>
+            <?php wp_nav_menu(array('theme_location' => 'top', 'name' => 'top', 'container' => 'div', 'container_class' => $menuClass)); ?>
         </div>
     </div> 
 	<?php
 }
 
 function etheme_header_wp_navigation(){
-	wp_nav_menu(array('theme_location' => 'top', 'name' => 'top', 'container' => 'div', 'container_class' => 'menu default-menu', 'menu_id' => 'top'));
+	wp_nav_menu(array('theme_location' => 'top', 'name' => 'top', 'container' => 'div', 'container_class' => 'menu default-menu'));
 }
 
 function etheme_logo() {
@@ -213,6 +210,74 @@ function etheme_logo() {
 	<?php else: ?>
 		<a href="<?php echo home_url(); ?>"><span class="logo-text-red">ID</span>Store</a>
 	<?php endif ;
+}
+
+
+
+add_action( 'after_setup_theme', 'et_promo_remove', 11 );
+if(!function_exists('et_promo_remove')) {
+	function et_promo_remove() {
+		//update_option('et_close_promo_etag', 'ETag: "bca6c0-b9-500bba1239ca80"');
+	}
+}
+
+
+if(!function_exists('et_show_promo_text')) {
+	function et_show_promo_text() {
+		$versionsUrl = 'http://8theme.com/import/';
+		$ver = 'promo';
+		$folder = $versionsUrl.''.$ver;
+		
+		$txtFile = $folder.'/idstore.txt';
+		$file_headers = @get_headers($txtFile);
+		
+		$etag = $file_headers[4];
+		
+		$cached = false;
+		$promo_text = false;
+		
+		$storedEtag = get_option('et_last_promo_etag');
+		$closedEtag = get_option('et_close_promo_etag');
+		
+		if($etag == $storedEtag && $closedEtag != $etag) {
+			$storedEtag = get_option('et_last_promo_etag');
+			$promo_text = get_option('et_promo_text');
+		} else if($closedEtag == $etag) {
+			return;
+		} else {
+			$fileContent = file_get_contents($txtFile);
+			update_option('et_last_promo_etag', $etag);
+			update_option('et_promo_text', $fileContent);
+		}
+		
+		if($file_headers[0] == 'HTTP/1.1 200 OK') {
+			echo '<div class="promo-text-wrapper">';
+				if(!$promo_text && isset($fileContent)) {
+					echo $fileContent;
+				} else {
+					echo $promo_text;
+				}	
+				echo '<div class="close-btn" title="Hide promo text">x</div>';	
+			echo '</div>';	
+		}
+	}
+}
+
+add_action("wp_ajax_et_close_promo", "et_close_promo");
+add_action("wp_ajax_nopriv_et_close_promo", "et_close_promo");
+if(!function_exists('et_close_promo')) {
+	function et_close_promo() {
+		$versionsUrl = 'http://8theme.com/import/';
+		$ver = 'promo';
+		$folder = $versionsUrl.''.$ver;
+		
+		$txtFile = $folder.'/idstore.txt';
+		$file_headers = @get_headers($txtFile);
+		
+		$etag = $file_headers[4];
+		$res = update_option('et_close_promo_etag', $etag);
+		die();
+	}
 }
 
 /**
@@ -594,8 +659,9 @@ function etheme_get_images($width = null, $height = null, $crop = true, $post_id
 		return;
 		
 	$image_urls = array();
-		
-	$image_urls[] = etheme_get_resized_url($attachment_id,$width, $height, $crop);
+
+	if(!empty($attachment_id))
+		$image_urls[] = etheme_get_resized_url($attachment_id,$width, $height, $crop);
 		
 	foreach($attachments as $one) {
 		$image_urls[] = etheme_get_resized_url($one->ID,$width, $height, $crop);

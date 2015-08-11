@@ -119,6 +119,8 @@ font-family: 'Open Sans', Arial, sans-serif;
 .rows-count5.shortcode-products .product-grid:nth-child(5n+1){clear: none;}
 .with-sidebar .rows-count3 .product-grid:nth-child(3n+1),.no-sidebar .products_grid.rows-count5 .product-grid:nth-child(4n+1),.rows-count6 .product-grid:nth-child(5n+1),.no-sidebar .products_grid.rows-count3 .product-grid:nth-child(2n+1){clear:none;}
 .no-sidebar .rows-count4 .product-grid:nth-child(4n+1),.products_grid.rows-count3 .product-grid:nth-child(2n+1),.products_grid.rows-count5 .product-grid:nth-child(4n+1),.with-sidebar .rows-count4 .product-grid:nth-child(2n+1){clear:both;}
+.no-sidebar .rows-count3 .product-grid{width: 234px;}
+.no-sidebar .rows-count3 .product-grid:nth-child(3n+1){clear: both !important;}
 .product-slider.columns3 .product-slide,.product-slider.columns4 .product-slide{margin-right:20px;}
 .product-grid .product-name{margin-top:12px;}
 .products-list .product-grid .product-name{margin-top: 0;}
@@ -391,7 +393,7 @@ header {}
 .cart-collaterals .cart_totals table{width:100%!important;}
 .cart-collaterals .cart_totals tr td,.cart-collaterals .cart_totals tr th{padding-left:0!important;}
 .fl-r.checkout-button.button.big.active{width:200px;}
-.shipping-calculator-form select{width:256px;}
+.shipping-calculator-form select{width: 172px;}
 .shipping-calculator-form input{width:242px;}
 .cart-collaterals .shipping_calculator .button{margin-left:65px !important;float: right !important;}
 .notice{padding-left:75px;}
@@ -502,6 +504,9 @@ header{padding-top:0!important;}
 .addto-container .qty-block{margin-bottom: 20px !important;}
 .tabs .tab-content{padding:10px 20px 20px 10px;}
 .product_meta{margin-bottom:20px;}
+#cart-quantity .quantity.buttons_added .input-text{
+  border-right:1px solid #bbb3b9 !important;
+}
 .blog-content{float: left;}
 .blog-post.post-horizontal .entry-summary{margin-top: 0;}
 .blog-post.post-horizontal{margin-bottom: 40px;}
@@ -559,6 +564,8 @@ header{padding-top:0!important;}
 .cart_totals,.cart-collaterals .shipping_calculator{float: left !important;width: 280px; position: relative;left:50%;-webkit-transform: translateX(-50%);-moz-transform: translateX(-50%);-ms-transform: translateX(-50%);-o-transform: translateX(-50%);transform: translateX(-50%);}
 .checkout_cart #coupon_code{width: 120px !important;float: left;}
 .checkout_cart .coupon .button{float: left;margin-left: 10px;}
+.shortcode-products .product-grid{width: 192px !important;}
+.shortcode-products .product-grid:nth-child(2n+1){clear: both;}
 }
 
 
@@ -702,12 +709,12 @@ td.actions .button{margin-right:12px;}
 .apply-coupon{margin-right:0!important;}
 .cart-collaterals .cart_totals tr th{padding:5px 0!important;text-align:left!important;width: 200px;}
 .cart-collaterals .cart_totals tr td{padding:5px 0!important;text-align:right!important;}
-.cart_totals .checkout-button{margin-top:15px;padding:10px 24px;}
+.cart_totals .checkout-button{margin-top:15px;padding:10px 24px;margin-bottom: 15px;}
 .shipping_calculator h2{margin-top:30px;padding-right: 30px;text-align: center;}
 .cart-collaterals{margin-bottom: -40px !important;}
 .checkout_cart td.actions{padding: 0 !important;}
 .checkout_cart td.actions .coupon{margin-left: 0;width: 100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
-.checkout_cart td.actions .coupon .input-text{width: 268px !important;margin-right: 0 !important;}
+.checkout_cart td.actions .coupon .input-text{width: 268px !important;margin-right: 0 !important;margin-top: 7px;}
 .checkout_cart td.actions .button{margin-top: 7px;}
 .checkout_cart td.actions .button.update-button{margin-top: 20px;margin-right: 0;}
 th.product-price, td.product-price, th.order-shipto, td.order-shipto{display: none;}
@@ -821,7 +828,10 @@ div.pp_woocommerce div.ppt{width: 240px !important;}
 .empty-cart-block{width: 100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;margin-left: 0;left:0;padding: 0 10px;}
 .with-sidebar-left #coupon_code, .with-sidebar-right #coupon_code{width: 130px !important;}
 .checkout_cart td.actions .button{float: right;}
-
+.select2-container .select2-choice{width: 270px;}
+.tab-shipping .shipping_address input{
+    width: 265px;
+}
 }
 
 
@@ -839,7 +849,7 @@ div.pp_woocommerce div.ppt{width: 240px !important;}
 .header-type-default .header-area, .header-type-variant3 .header-area, .header-type-variant5 .header-area{position: relative;}
 .header-type-variant5 #main-nav, .header-type-variant2 #main-nav, .fixed-header-area #main-nav, .header-type-variant6 #main-nav{position: static;}
 .header-type-default .et-menu-title, .header-type-variant3 .et-menu-title, .header-type-variant4 .et-menu-title, .header-type-variant5 .et-menu-title, .header-type-variant2 .et-menu-title, .header-type-variant6 .et-menu-title {position: absolute;right: 0;top:50%;margin-top:-27px; background: transparent;font-size: 40px;}
-.header-type-variant4 #main-nav, .header-type-variant5 #main-nav{border:none !important;background: #FFF!important;width: auto;}
+.header-type-variant4 #main-nav, .header-type-variant5 #main-nav{border:none !important;background: none !important;width: auto;}
 .header-type-default .logo, .header-type-variant3 .logo, .header-type-variant5 .logo{max-width: 85%;text-align: left;float: left !important;font-size: 38px;line-height: 44px;}
 .et-menu-title i.icon-reorder{color: #ccc;font-size: 36px;-webkit-transition: all 0.2s ease-in-out;-moz-transition: all 0.2s ease-in-out;-ms-transition: all 0.2s ease-in-out;-o-transition: all 0.2s ease-in-out;transition: all 0.2s ease-in-out;}
 .et-menu-title i.icon-reorder:hover{color: #fc5a5a;}
@@ -898,6 +908,14 @@ td.actions .coupon .input-text{width:160px;}
 @media only screen and (max-width:1400px){
 	#back-to-top.btn-style-modern > a{
 		width: 30px;
-		background: rgba(68, 68, 68, 0.15) url(../images/arrow_up-white.png) 50% 55% no-repeat;
+		background: rgba(68, 68, 68, 0.15) ;
 	}
+  #back-to-top.btn-style-modern > a span{
+    right: 0;
+    font-size: 0;
+    padding-right: 12px;
+  }
+  #back-to-top.btn-style-modern > a span:after{
+    font-size: 24px;
+  }
 }

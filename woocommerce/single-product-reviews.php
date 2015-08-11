@@ -4,7 +4,7 @@
  *
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     2.1.0
+ * @version     2.3.2
  */
 
 global $woocommerce; ?>
@@ -107,7 +107,7 @@ global $woocommerce; ?>
 			
 	}
 	
-	$comment_form['comment_field'] .= '<p class="comment-form-comment"><label for="comment">' . __( 'Your Review', ETHEME_DOMAIN ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>' . $woocommerce->nonce_field('comment_rating', true, false);
+	$comment_form['comment_field'] .= '<p class="comment-form-comment"><label for="comment">' . __( 'Your Review', ETHEME_DOMAIN ) . '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>';
 	
 	comment_form( $comment_form ); 
 

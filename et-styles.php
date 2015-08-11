@@ -157,6 +157,7 @@ if($etheme_color_version=='dark') {
 
 $selectors['active_bg'] = '
     #searchform .button:hover,
+    #searchsubmit:hover,
     .header-type-variant2 #searchform:hover .button:hover,
     #submit:hover, 
     .button:hover,

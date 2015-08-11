@@ -1876,6 +1876,19 @@ if ( ! function_exists( 'ot_type_sidebar_select' ) ) {
   }
   
 }
+if ( ! function_exists( 'ot_type_demo_data' ) ) {
+  
+  function ot_type_demo_data( $args = array() ) {
+	global $wp_registered_sidebars;
+	if(class_exists('WP_Import')){
+	    echo '<a href="'.home_url() .'/wp-admin/admin.php?page=ot-theme-options&etheme_install='.ETHEME_DOMAIN.'" class="option-tree-ui-button blue" id="install_demo_pages" onclick="return confirm(\'Are you sure you want to install demo data?\')" >Install Demo Data</a>';
+	    echo '<div class="clear"></div>';
+	} else {
+		echo '<div id="message" class="warning"><p>If you want to upload demo content you need to install <a href="https://wordpress.org/plugins/wordpress-importer/" target="_blank">WordPress Importer</a> plugin.</p></div>';
+	}
+  }
+  
+}
 
 /* End of file ot-functions-option-types.php */
 /* Location: ./includes/ot-functions-option-types.php */

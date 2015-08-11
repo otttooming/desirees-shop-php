@@ -17,6 +17,7 @@ $mainHeight = 600;
 $mainWidth = 440;
 
 $imgId = get_post_thumbnail_id();
+$attachment_meta = wp_get_attachment_metadata($imgId);
 $crop = false;
 
 if($zoom != 'disable'){
@@ -29,7 +30,7 @@ if($zoom != 'disable'){
 ?>
 <div class="span5 product_image <?php if($zoom != 'disable') echo 'zoom-enabled'; ?>" data-img="<?php echo etheme_get_image( $imgId, $mainWidth, $mainHeight, $crop ) ?>" data-original="<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>">
     <h1 class="product-title2"><?php the_title(); ?></h1>
-    
+
 	<?php if ( has_post_thumbnail() ) : ?>
         <div class="main-image" style="position:relative;">
         	<?php etheme_wc_product_labels(); ?>
@@ -37,13 +38,13 @@ if($zoom != 'disable'){
                 <img class="attachment-shop_single wp-post-image" src="<?php echo etheme_get_image( $imgId, $mainWidth, $mainHeight, $crop ) ?>"  alt="<?php the_title(); ?>" />
             </a>
 		<?php if(etheme_get_option('gallery_lightbox')): ?>
-			<a href="<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>" class="lightbox-btn" rel="noshow" data-original-title="" data-placement="left">&nbsp;</a>
+			<a href="<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>" class="lightbox-btn" rel="noshow" title="<?php esc_attr_e( $attachment_meta['image_meta']['title'] ); ?>" data-original-title="" data-placement="left">&nbsp;</a>
 		<?php endif; ?>
         </div>
 	<?php else : ?>
-	
+
 		<img width="<?php echo $mainWidth ?>" height="<?php echo $mainHeight ?>" src="<?php echo woocommerce_placeholder_img_src(); ?>" alt="Placeholder" />
-	
+
 	<?php endif; ?>
 	<?php do_action('woocommerce_product_thumbnails'); ?>
     <div class="clear"></div>

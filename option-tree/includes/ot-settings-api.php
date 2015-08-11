@@ -220,7 +220,7 @@ if ( ! class_exists( 'OT_Settings' ) ) {
       $screen = get_current_screen();
       $get_settings = get_option( 'option_tree_settings' );
       
-      $theme_data = get_theme_data(PARENT_DIR . '/style.css');
+      $theme_data = wp_get_theme('idstore');
       
       /* loop through settings */
       foreach( (array) $this->options as $option ) {
@@ -246,7 +246,7 @@ if ( ! class_exists( 'OT_Settings' ) ) {
               }
               
             }
-            
+            et_show_promo_text();
             echo '<div class="wrap settings-wrap" id ="page-' . $page['id'] . '">';
   
               //screen_icon( ( isset( $page['screen_icon'] ) ? $page['screen_icon'] : 'options-general' ) );
@@ -286,7 +286,7 @@ if ( ! class_exists( 'OT_Settings' ) ) {
                   
                 if ( $show_buttons )
                   echo '<button class="option-tree-ui-button grey right">' . $page['button_text'] . '</button>';
-                  echo '<a href="'.home_url() .'/wp-admin/admin.php?page=ot-theme-options&etheme_install='.ETHEME_DOMAIN.'" class="option-tree-ui-button blue right" id="install_demo_pages" onclick="return confirm(\'Are you sure you want to install demo data?\')" >Install Demo Data</a>';
+                  
                   
                   echo '<div class="clear"></div>';
                 echo '</div>';

@@ -67,11 +67,11 @@
     'author' => '<label class="input_title" for="author">' . __( 'Your Name', ETHEME_DOMAIN ) . 
                 ( $req ? '<span class="required">*</span>' : '' ) .'</label> ' .
                 '<input id="author" class="review_input" name="author" type="text" value="' .
-                esc_attr( $commenter['comment_author'] ) . '" class="required-field" size="30"' . @$aria_req . ' />',
+                esc_attr( $commenter['comment_author'] ) . '" class="required-field" size="30" />',
                 
     'email'  => '<label class="input_title" for="email">' . __( 'Your Email', ETHEME_DOMAIN ) . 
                 ( $req ? '<span class="required">*</span>' : '' ) .'</label> ' .
-                '<input id="email" name="email" type="text" class="required-field review_input" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . @$aria_req . ' />',
+                '<input id="email" name="email" type="text" class="required-field review_input" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30" />',
         
     'url'    => '' ) ),
     'comment_field' => 

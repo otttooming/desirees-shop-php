@@ -1218,6 +1218,14 @@ looking at its layout.
             'section'     => 'single_product'
         ),
         array(
+            'id'          => 'demo_data',
+            'label'       => 'Import and install demo data',
+            'default'     => '',
+            'desc'        => '',
+            'type'        => 'demo_data',
+            'section'     => 'backup'
+        ),
+        array(
             'id'          => 'import_export',
             'label'       => 'Import or Export your theme configuration',
             'default'     => '',

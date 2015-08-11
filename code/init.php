@@ -11,6 +11,9 @@ define('ETHEME_CODE_JS_URL', trailingslashit(ETHEME_CODE_URL).'js');
 define('ETHEME_CODE_CSS_URL', trailingslashit(ETHEME_CODE_URL).'css');
 define('CHILD_URL', get_stylesheet_directory_uri());
 
+if(!defined('WP_LOAD_IMPORTERS') )
+    define( 'WP_LOAD_IMPORTERS', true );	
+
 // add_editor_style();
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'automatic-feed-links' );

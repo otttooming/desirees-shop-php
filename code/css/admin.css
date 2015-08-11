@@ -1,3 +1,20 @@
+.promo-text-wrapper {
+	position: relative;
+	margin: 10px 20px 0 2px;
+	clear:both;
+}
+.promo-text-wrapper .close-btn {
+	position: absolute;
+	top:5px;
+	right:5px;
+	cursor: pointer;
+	color:#C0C0C0;
+	font-size:16px;
+}
+.promo-text-wrapper .close-btn:hover {
+	color:#090909;
+}
+
 .delete-sidebar {
 	width:20px;
 	height:20px;
@@ -187,8 +204,7 @@
 }
 
 .loading {
-	float: right;
-	margin: 5px 150px 0 -250px;
+	float: left;
 }
 
 #floatingCirclesG{

@@ -4,7 +4,7 @@
  *
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     2.1.0
+ * @version     2.3.8
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -81,7 +81,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 								$data_max = ( $_product->backorders_allowed() ) ? '' : $_product->get_stock_quantity();
 								$data_max = apply_filters( 'woocommerce_cart_item_data_max', $data_max, $_product ); 
 
-								$product_quantity = sprintf( '<div class="qty-block quantity"><input name="cart[%s][qty]" data-min="%s" data-max="%s" value="%s" size="4" title="Qty" class="input-text qty text" maxlength="12" /></div>', $cart_item_key, $data_min, $data_max, esc_attr( $values['quantity'] ) );
+								$product_quantity = sprintf( '<div class="qty-block quantity"><input name="cart[%s][qty]" type="number" data-min="%s" data-max="%s" value="%s" size="4" title="Qty" class="input-text qty text" maxlength="12" /></div>', $cart_item_key, $data_min, $data_max, esc_attr( $values['quantity'] ) );
 							}
 							
 							echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key ); 					
@@ -125,7 +125,7 @@ do_action( 'woocommerce_before_cart' ); ?>
             
 			<?php do_action('woocommerce_proceed_to_checkout'); ?>
 			
-			<?php $woocommerce->nonce_field('cart') ?>
+			<?php wp_nonce_field('woocommerce-cart') ?>
 		</td>
 	</tr>
 	
@@ -134,11 +134,6 @@ do_action( 'woocommerce_before_cart' ); ?>
 <?php do_action( 'woocommerce_after_cart_table' ); ?>
 </form>
 <div class="cart-collaterals">
-	
-	
-	<?php woocommerce_cart_totals(); ?>
-    
-	<?php woocommerce_shipping_calculator(); ?>
+	<?php do_action('woocommerce_cart_collaterals'); ?>
     <div class="clear"></div>	
 </div>
-<?php do_action('woocommerce_cart_collaterals'); ?>

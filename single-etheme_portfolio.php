@@ -10,7 +10,7 @@ get_header(); ?>
             <div class="row">
 	            <?php blog_breadcrumbs(); ?>
 	            
-                <div class="span12 grid_content with-sidebar-<?php echo $blog_sidebar ?>">
+                <div class="span12 grid_content">
 				
 				
 				<?php /* If there are no posts to display, such as an empty archive page */ ?>
@@ -54,7 +54,7 @@ get_header(); ?>
 											<?php $full_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full'); ?>
 											<?php $attachment_data = wp_get_attachment_metadata(get_post_thumbnail_id()); ?>
 											<li>
-												<a <?php if(etheme_get_option('port_use_lightbox')): ?> href="<?php echo $full_image[0]; ?>" rel="lightbox['gallery']"<?php endif; ?>><img src="<?php echo $attachment_image[0]; ?>" alt="<?php echo $attachment->post_title; ?>" /></a>
+												<a <?php if(etheme_get_option('port_use_lightbox')): ?> href="<?php echo $full_image[0]; ?>" rel="lightbox['gallery']"<?php endif; ?>><img src="<?php echo $attachment_image[0]; ?>" /></a>
 											</li>
 										<?php endif; ?>
 										<?php foreach($attachments as $attachment): ?>

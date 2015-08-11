@@ -6,7 +6,7 @@
  *
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     2.0.0
+ * @version     2.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -14,6 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 global $woocommerce; $woocommerce_checkout = $woocommerce->checkout(); 
 $isAccordion = etheme_get_option('checkout_accordion');
+$get_checkout_url = apply_filters( 'woocommerce_get_checkout_url', WC()->cart->get_checkout_url() );
 
 wc_print_notices(); 
 
@@ -37,11 +38,13 @@ woocommerce_checkout_coupon_form(); ?>
 	                            <div class="clear"></div>
 	                        </div>
 						<?php endif ?>
-                        <div class="method-radio">
-                            <input type="radio" id="method2" name="method" value="2" <?php if (!$checkout->enable_guest_checkout): ?> checked <?php endif; ?> />
-                            <label for="method2"><?php _e('Create an Account', ETHEME_DOMAIN); ?></label>
-                            <div class="clear"></div>
-                        </div>
+						<?php if (get_option('woocommerce_enable_signup_and_login_from_checkout') != 'no'): ?>
+	                        <div class="method-radio">
+	                            <input type="radio" id="method2" name="method" value="2" <?php if (!$checkout->enable_guest_checkout): ?> checked <?php endif; ?> />
+	                            <label for="method2"><?php _e('Create an Account', ETHEME_DOMAIN); ?></label>
+	                            <div class="clear"></div>
+	                        </div>
+                        <?php endif; ?>
                         <div class="clear"></div>
                     </div>
                     <?php if($isAccordion): ?><a class="button checkout-cont checkout-cont1"><span><?php _e('Continue', ETHEME_DOMAIN) ?></span></a><?php endif; ?>
@@ -52,7 +55,6 @@ woocommerce_checkout_coupon_form(); ?>
                         // If checkout registration is disabled and not logged in, the user cannot checkout
                         if (get_option('woocommerce_enable_signup_and_login_from_checkout')=="no" && get_option('woocommerce_enable_guest_checkout')=="no" && !is_user_logged_in()) :
                         	echo apply_filters('woocommerce_checkout_must_be_logged_in_message', __('You must be logged in to checkout.', ETHEME_DOMAIN));
-                        	return;
                         endif;
                     ?>
                     
@@ -137,7 +139,13 @@ woocommerce_checkout_coupon_form(); ?>
         <?php if($isAccordion): ?><a class="tab-title checkout-accordion-title" id="tab_5"><span><?php _e('Your order', ETHEME_DOMAIN) ?></span></a><?php endif; ?>
         <div class="tab-content tap-order" id="content_tab_5">   
             <h3 id="order_review_heading"><?php _e('Your order', ETHEME_DOMAIN); ?></h3>
-            <?php do_action('woocommerce_checkout_order_review'); ?>
+            <?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
+
+            <div id="order_review" class="woocommerce-checkout-review-order">
+                <?php do_action( 'woocommerce_checkout_order_review' ); ?>
+            </div>
+
+            <?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
         </div>
 </form>
 </div>

@@ -5,6 +5,15 @@
 
 add_filter( 'woocommerce_enqueue_styles', '__return_false' );
 
+add_action('after_setup_theme', 'et_template_hooks'); 
+if(!function_exists('et_template_hooks')) {
+	function et_template_hooks() {
+		remove_action( 'woocommerce_cart_totals_after_shipping', 'woocommerce_shipping_calculator', 15 );
+		remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display' );
+		add_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display', 150 );
+	}
+}
+
 add_theme_support(ETHEME_DOMAIN);
 
 if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 18000)) {
@@ -89,7 +98,7 @@ class Etheme_WooCommerce_Widget_Cart extends WP_Widget {
 				?>
                     <div class="product-item">       
                         <a href="<?php echo get_permalink( $cart_item['product_id'] ); ?>" class="product-image">
-                            <?php echo get_the_post_thumbnail( $cart_item['product_id'], apply_filters( 'single_product_small_thumbnail_size', 'shop_thumbnail'  ) ) ?>
+                             <?php echo apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key ); ?>
                         </a>
                         <?php 
 							echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf('<a href="%s" class="delete-btn" title="%s">&times;</a>', esc_url( $woocommerce->cart->get_remove_url( $cart_item_key ) ), __('Remove this item', ETHEME_DOMAIN) ), $cart_item_key ); 
@@ -342,7 +351,7 @@ class Etheme_Widget_Price_Filter extends WP_Widget {
 		else
 			$form_action = preg_replace( '%\/page/[0-9]+%', '', home_url( $wp->request ) );
 		
-		echo '<form method="get" action="' . $form_action . '">
+		echo '<form method="get" action="' . esc_url($form_action) . '">
 			<div class="price_slider_wrapper">
 				<div class="price_slider" style="display:none;"></div>
 				<div class="price_slider_amount">
@@ -413,27 +422,29 @@ function etheme_get_wc_categories_menu($title = 'Categories'){
                 <?php echo ($title != '') ? $title : 'Categories'; ?>
             </div>
             <div class="block-content">
-            	<?php $instance_categories = get_terms( 'product_cat', 'hide_empty=0&parent=0');
+            	<?php 
+                    $instance_categories = get_terms( 'product_cat', 'hide_empty=0&parent=0');
                     $cat = $wp_query->get_queried_object();
-                    if(@$cat->term_id){ $current_cat = $cat->term_id; }
-                foreach($instance_categories as $categories){ 
-                    $term_id = $categories->term_id;
-                    $term_name = $categories->name;
-                    ?>
-                    <div class='categories-group <?php if($term_id == $current_cat) echo 'current-parent opened' ; ?>' id='sidebar_categorisation_group_<?php echo $term_id; ?>'>
-                        <h5 class='wpsc_category_title'><a href="<?php echo get_term_link( $categories, 'product_cat' ); ?>"><?php echo $term_name; ?></a><span class="btn-show"></span></h5>
-                            <?php $subcat_args = array( 'taxonomy' => 'product_cat', 
-                            'title_li' => '', 'show_count' => 0, 'hide_empty' => 0, 'echo' => false,
-                            'show_option_none' => '', 'child_of' => $term_id ); ?>
-                            <?php if(get_option('show_category_count') == 1) $subcat_args['show_count'] = 1; ?>
-                            <?php $subcategories = wp_list_categories( $subcat_args ); ?>
-                            <?php if ( $subcategories ) { ?>
-                            <ul class='wpsc_categories wpsc_top_level_categories'><?php echo $subcategories ?></ul>
-                            <?php } ?>
-                        <div class='clear_category_group'></div>
-                    </div>
-                    <?php
-                } 
+                    $current_cat = '';
+                    if(!empty($cat->term_id)){ $current_cat = $cat->term_id; }
+                    foreach($instance_categories as $categories){ 
+                        $term_id = $categories->term_id;
+                        $term_name = $categories->name;
+                        ?>
+                        <div class='categories-group <?php if($term_id == $current_cat) echo 'current-parent opened' ; ?>' id='sidebar_categorisation_group_<?php echo $term_id; ?>'>
+                            <h5 class='wpsc_category_title'><a href="<?php echo get_term_link( $categories, 'product_cat' ); ?>"><?php echo $term_name; ?></a><span class="btn-show"></span></h5>
+                                <?php $subcat_args = array( 'taxonomy' => 'product_cat', 
+                                'title_li' => '', 'show_count' => 0, 'hide_empty' => 0, 'echo' => false,
+                                'show_option_none' => '', 'child_of' => $term_id ); ?>
+                                <?php if(get_option('show_category_count') == 1) $subcat_args['show_count'] = 1; ?>
+                                <?php $subcategories = wp_list_categories( $subcat_args ); ?>
+                                <?php if ( $subcategories ) { ?>
+                                <ul class='wpsc_categories wpsc_top_level_categories'><?php echo $subcategories ?></ul>
+                                <?php } ?>
+                            <div class='clear_category_group'></div>
+                        </div>
+                        <?php
+                    } 
                 ?>
             </div>
             <script type="text/javascript"> 
@@ -473,19 +484,18 @@ function etheme_wc_get_product_labels( $product_id = '' ) {
 function etheme_woocommerce_subcategory_thumbnail( $category ) {
 	global $woocommerce;
 
-	$small_thumbnail_size  	= array(300,300);
-	$dimensions    			= $woocommerce->get_image_size( $small_thumbnail_size );
+	$small_thumbnail_size  	= apply_filters( 'single_product_small_thumbnail_size', 'shop_catalog' );
+	$dimensions    			= wc_get_image_size( $small_thumbnail_size );
 	$thumbnail_id  			= get_woocommerce_term_meta( $category->term_id, 'thumbnail_id', true  );
 
 	if ( $thumbnail_id ) {
-		$image = wp_get_attachment_image_src( $thumbnail_id, $small_thumbnail_size  );
-		$image = $image[0];
+		$image = etheme_get_image( $thumbnail_id, 215,215,false  );
 	} else {
-		$image = woocommerce_placeholder_img_src();
+		$image = wc_placeholder_img_src();
 	}
 
 	if ( $image )
-		echo '<img src="' . $image . '" alt="' . $category->name . '"/>';
+		echo '<img src="' . $image . '" alt="' . $category->name . '" width="' . $dimensions['width'] . '" height="' . $dimensions['height'] . '" />';
 }
 
 

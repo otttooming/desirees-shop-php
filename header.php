@@ -55,11 +55,10 @@
 
 	wp_head();
 ?>
-<?php $header_type = apply_filters('custom_header_filter',@$header_type); ?>
+<?php $header_type = ''; $header_type = apply_filters('custom_header_filter', $header_type); ?>
 </head>
 <body <?php $fixed = ''; if(etheme_get_option('fixed_nav')) $fixed .= ' fixNav-enabled '; if($header_type == 'variant6' && is_front_page()) $fixed .= ' header-overlapped '; body_class('no-svg '.etheme_get_option('main_layout').' banner-mask-'.etheme_get_option('banner_mask').$fixed); ?>>
 
-	
 	
 	<div class="wrapper">
 	
