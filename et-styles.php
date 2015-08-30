@@ -192,7 +192,8 @@ $selectors['active_bg'] = '
     .header-top-variant5 .container,
     #back-to-top.btn-style-standart a:hover,
     .grid_pagination span.current, 
-    .grid_bottom_pagination span.current
+    .grid_bottom_pagination span.current,
+    .variations_form .variations_button .button
 ';
 
 
