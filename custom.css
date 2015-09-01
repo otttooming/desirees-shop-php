@@ -129,12 +129,13 @@ hr {
   font-size: 11px; }
 
 .breadcrumbs {
-  margin: 5px 10px !important;
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important;
-  line-height: 30px;
+  margin: 10px 0;
   text-transform: uppercase; }
   .breadcrumbs a {
     color: #ff9500; }
+  @media screen and (min-width: 1200px) {
+    .breadcrumbs {
+      margin: 10px 10px !important; } }
 
 table.shop_attributes {
   text-align: left; }
@@ -309,6 +310,7 @@ table.shop_attributes td p {
 
 /*line height behavior linked to .product-name a*/
 .product-grid .product-information {
+  position: static;
   padding: 0 5px 0 5px;
   line-height: 15px !important; }
 
@@ -407,11 +409,6 @@ form .form-row.terms label a {
 
 .view-switcher label {
   font-size: 12px; }
-
-.product_description_mainblock h1, .product-title2, .page-title, .widget-title {
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important;
-  font-weight: 100;
-  font-style: normal; }
 
 .product_description_mainblock h1 {
   font-size: 40px;
@@ -1023,26 +1020,36 @@ h4 {
   box-shadow: 2px 2px 0 #111;
   text-shadow: 2px 2px 0 #111; }
 
-/* Checkbox */
 /* Hover description */
 .products-grid .product-descr {
-  display: none; }
-
-.products-grid .product-grid.span2:hover .product-descr {
-  display: block;
+  -webkit-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  transform: scale(0, 0);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: absolute;
   bottom: 90px;
+  top: 0;
   bottom: 0;
   left: -230px;
   width: 190px;
-  /* border: 1px solid #111; */
   padding: 20px;
-  /* height: 200px; */
-  transition: visibility .5s linear .5s,opacity .5s linear;
   background-color: #a30000;
   text-shadow: 1px 1px #111;
-  font: 13px "Open Sans", sans-serif;
-  z-index: 9999; }
+  font: 13px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  z-index: 9999;
+  transition: 250ms; }
+
+.products-grid .product-grid.span2:hover .product-descr {
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1); }
 
 .products-grid .product-grid.span2:hover .product-descr:after {
   position: absolute;
