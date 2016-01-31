@@ -6,10 +6,14 @@ $site-color-red-light: #e00;
 $site-color-red-std: #a30000;
 
 $site-color-dark-light: #151515;
+$site-color-white: #fff;
+
+$site-shadow-std: 2px 2px #111;
 
 body {
   font-family: $site-font-main !important;
 	background-attachment: fixed;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .wrapper {
@@ -19,7 +23,6 @@ body {
 select {
   text-indent: .01px;
   text-overflow: "";
-
   -moz-appearance: none;
 }
 
@@ -31,12 +34,11 @@ hr {
   margin-top:0;
 }
 
-
 .product-image {
-  background: white;
+  background: $site-color-white;
 }
 .main-image {
-  background-color: white;
+  background-color: $site-color-white;
 }
 
 .product_image .main-image img {
@@ -58,9 +60,9 @@ hr {
   padding: 5px 10px;
   border-radius: 3px;
   background-color: $site-color-red-std;
-  box-shadow: 2px 2px #111;
-  text-shadow: 2px 2px #111;
-  color: white!important;
+  box-shadow: $site-shadow-std;
+  text-shadow: $site-shadow-std;
+  color: $site-color-white!important;
   font-size: 13px !important;
   line-height: normal;
 }
@@ -97,7 +99,7 @@ hr {
 }
 
 .attachment-shop_single {
-  background: white !important;
+  background: $site-color-white !important;
 }
 
 .container_footer_bg {
@@ -126,16 +128,12 @@ hr {
   font-family: $site-font-main !important;
   font-weight: 100;
   font-style: normal;
-
-
 }
 
 .logo .logo-text-red {
   font-family: $site-font-main !important;
   font-weight: 100;
   font-style: normal;
-
-
 }
 
 .fixed-header-area .logo {
@@ -153,17 +151,18 @@ hr {
 }
 
 #swipebox-overlay img {
-  background:white;
+  background:$site-color-white;
 }
 
 .btn-cont {
 	position: absolute;
-	right: -10px;
+	right: 4px;
+  bottom: 5px;
 	.button {
 	  float:right;
 	  min-width: 60px;
 	  padding: 1px 5px 0;
-	  box-shadow: 2px 2px #111;
+	  box-shadow: $site-shadow-std;
 	  line-height:30px;
 	}
 }
@@ -243,7 +242,7 @@ table.shop_attributes {
 
 #back-to-top.btn-style-standart a {
   background: $site-color-red-std url(images/arrow_up_2.png) no-repeat 12px center !important;
-  color: #fff !important;
+  color: $site-color-white !important;
   font-family: $site-font-main !important;
 }
 
@@ -279,7 +278,7 @@ table.shop_attributes {
 }
 
 .delimeter {
-  color: white;
+  color: $site-color-white;
 }
 
 .back-to:before {
@@ -403,7 +402,7 @@ table.shop_attributes td p {
   line-height:15px !important;
 }
 .product-grid .product-information p {
-  font-family: "Open Sans",sans-serif !important;
+  font-family: $site-font-secondary !important;
   font-size: 14px;
 }
 
@@ -419,30 +418,6 @@ table.shop_attributes td p {
 .widget_text .widget-title {
   display:inherit !important;
 }
-
-.yith-woocompare-widget .widget-title {
-  display:inherit !important;
-}
-.widget_price_filter .widget-title {
-  display:inherit !important;
-}
-
-.widget_search .widget-title {
-  display:inherit !important;
-}
-
-.widget_wp_user_stylesheet_switcher_widgets .widget-title {
-  display:inherit !important;
-}
-
-.widget_shopping_cart .widget-title {
-  display:inherit !important;
-}
-
-.widget_tag_cloud .widget-title {
-  display:inherit !important;
-}
-
 .widget_price_filter .to, .widget_price_filter .from {
   color:$site-color-red-std!important;
 }
@@ -539,7 +514,7 @@ form .form-row.terms label a {
 
 .header #searchform {
   margin-top:15px;
-  box-shadow: 2px 2px #111;
+  box-shadow: $site-shadow-std;
 }
 
 .header {
@@ -589,7 +564,7 @@ form .form-row.terms label a {
   height: 30px;
   overflow: hidden;
   background: $site-color-red-std;
-  box-shadow: 2px 2px #111;
+  box-shadow: $site-shadow-std;
   text-align: center;
 }
 
@@ -706,8 +681,6 @@ h2, h3, .product-slider h4, .contact_info h5{
   font-weight: 100;
   font-style: normal;
   text-transform:none !important;
-
-
 }
 
 .tabs h2 {
@@ -728,12 +701,9 @@ h2, h3, .product-slider h4, .contact_info h5{
   display: inline-block;
   padding: 1px 12px 0;
   cursor: pointer;
-  -webkit-transition-timing-function: ease;
-  -webkit-transition-duration: .2s;
-  -webkit-transition-property: background, border-color;
   border: none;
   background: $site-color-red-std;
-  color: #fff;
+  color: $site-color-white;
   font-size: 12px;
   line-height: 28px;
   text-transform: uppercase;
@@ -772,7 +742,7 @@ h2, h3, .product-slider h4, .contact_info h5{
   display: initial;
   float: left;
   margin-right: 5px;
-  color: white;
+  color: $site-color-white;
   font-size: 10px;
   text-transform: uppercase;
 }
@@ -791,7 +761,7 @@ h2, h3, .product-slider h4, .contact_info h5{
 }
 
 .transparentbutton .button:hover span {
-  color:white!important;
+  color:$site-color-white!important;
 }
 
 .h2mod h5 {
@@ -815,7 +785,7 @@ h2, h3, .product-slider h4, .contact_info h5{
   height: auto;
   padding: 50px;
   border: 1px solid #111;
-  background-color: white;
+  background-color: $site-color-white;
   text-align: center;
 }
 
@@ -848,10 +818,6 @@ table.shop_attributes td {
   margin-top: 0;
 }
 
-.sku_wrapper {
-  display:none;
-}
-
 .archstock {
   position: absolute;
   width: 100%;
@@ -873,8 +839,6 @@ table.shop_attributes td {
   font-weight: 400;
   font-style: normal;
   text-transform: none !important;
-
-
 }
 
 th.product-total, td.product-total {
@@ -886,7 +850,7 @@ th.product-total, td.product-total {
 }
 
 .woocommerce-message {
-  color: white !important;
+  color: $site-color-white !important;
   font-family: $site-font-main !important;
 }
 
@@ -966,9 +930,9 @@ th.product-total, td.product-total {
   padding: 5px 10px;
   border-radius: 5px;
   background-color: $site-color-red-std;
-  box-shadow: 2px 2px #111;
-  text-shadow: 2px 2px #111;
-  color: white!important;
+  box-shadow: $site-shadow-std;
+  text-shadow: $site-shadow-std;
+  color: $site-color-white!important;
   line-height: normal;
 }
 
@@ -1064,7 +1028,6 @@ th.product-total, td.product-total {
 
 .header-type-default #searchform {
   display: inline-block;
-  /* IF no phone contact number then margin: 17px 0 0 0;*/
   height: 40px;
   margin: 0 0 0 0;
   border: transparent;
@@ -1240,16 +1203,16 @@ h4 {
   padding: 8px 16px 8px 16px;
 }
 .archive .veebipoodmenu a, .archive .veebipoodmenu a:hover {
-  background-color: $site-color-red-std!important;
-  color:white!important;
+  background-color: $site-color-red-light !important;
+  color:$site-color-white!important;
 }
 .header-type-default .menu .current-menu-item > a, .header-type-default .menu .current-menu-item > a:hover {
   background-color: $site-color-red-light !important;
-  color:white;
+  color:$site-color-white;
 }
 .single-product .veebipoodmenu a, .single-product .veebipoodmenu a:hover {
-  background-color: $site-color-red-std!important;
-  color:white!important;
+  background-color: $site-color-red-light !important;
+  color:$site-color-white!important;
 }
 
 
@@ -1262,19 +1225,19 @@ h4 {
 }
 
 .product-grid .product-name a, .sidebar_left, .product-grid .price .amount {
-  text-shadow: 2px 2px #111;
+  text-shadow: $site-shadow-std;
 }
 
 .variations_form table.variations tr select {
   border: 0!important;
   background-color: #333!important;
-  box-shadow: 2px 2px #111;
+  box-shadow: $site-shadow-std;
   letter-spacing: 1px;
 }
 
 .button75 .button {
-  box-shadow: 2px 2px #111;
-  text-shadow: 2px 2px #111;
+  box-shadow: $site-shadow-std;
+  text-shadow: $site-shadow-std;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -1303,8 +1266,8 @@ h4 {
   top: 0;
   bottom: 0;
   left: -230px;
-  width: 190px;
-  padding: 20px;
+  width: 200px;
+  padding: 15px;
   background-color: $site-color-red-std;
   border-radius: 5px;
   text-shadow: 1px 1px #111;
@@ -1353,7 +1316,7 @@ h4 {
   margin-top: 5px;
   padding: 10px 0;
   background-color:#333;
-  box-shadow: 2px 2px #111;
+  box-shadow: $site-shadow-std;
   text-align: center;
 }
 
@@ -1367,7 +1330,7 @@ h4 {
 }
 
 #read_more_content:hover span {
-  color: white;
+  color: $site-color-white;
 }
 
 /* Jcarousel infinite loop bug */
@@ -1377,7 +1340,7 @@ h4 {
 
 .product_image .views-gallery .slide {
   overflow: hidden;
-  background-color: white;
+  background-color: $site-color-white;
 }
 
 .entry-title {
@@ -1437,7 +1400,7 @@ hr {
 }
 
 #top-cart small {
-  color:white;
+  color:$site-color-white;
   font-size: 50%;
 }
 
@@ -1452,15 +1415,17 @@ hr {
 
 /* Tavapood */
 
-.tavapood_kontakt p {
-  float: none!important;
-  width: auto!important;
-  margin: 0;
-  color: $site-color-alt!important;
-  font-size: 16px;
-}
-.tavapood_kontakt h1, .tavapood_kontakt i {
-  color: $site-color-alt!important;
+.tavapood_kontakt {
+  p {
+    float: none!important;
+    width: auto!important;
+    margin: 0;
+    color: $site-color-alt!important;
+    font-size: 16px;
+  }
+  h1, i {
+    color: $site-color-alt!important;
+  }
 }
 
 .tavapood h2 {
@@ -1517,8 +1482,6 @@ hr {
   }
 }
 
-
-
 /* Display companies in the footer */
 .footer_container .span3:nth-child(n+3) {
   display: none;
@@ -1568,7 +1531,7 @@ hr {
 span.copyright {
   width: auto;
   margin-left: 0;
-  color: white;
+  color: $site-color-white;
   font-size: 17px;
   line-height: 55px;
 }
@@ -1611,13 +1574,13 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
   min-height: 170px;
   padding: 10px 20px;
   background-color: #333;
-  box-shadow: 2px 2px #111;
+  box-shadow: $site-shadow-std;
 }
 .tavpood_infoblock h2{
   margin: 0;
 }
 .tavpood_infoblock li, .tavpood_infoblock p, .company_list2 li {
-  font-family: "Open Sans",sans-serif !important;
+  font-family: $site-font-secondary !important;
   font-size: 14px;
 }
 
@@ -1634,7 +1597,7 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 /*Small fixes august 1014*/
 
 .woocommerce-error {
-  color:white;
+  color:$site-color-white;
 }
 
 .opensoon, .opensoon2{
@@ -1691,7 +1654,7 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 
 .page-id-11573 .infotabblock a, .page-id-6788 .infotabblock a {
   background-color: $site-color-red-std!important;
-  color:white!important;
+  color:$site-color-white!important;
 }
 
 .empty-category-block {
@@ -1868,19 +1831,21 @@ td.product-quantity {
   background-color: #333;
 }
 
-#payment #place_order {
-  float: none;
-  height: 100%;
-  padding: 20px;
-  font-size: 16px;
-  line-height: 35px;
+#payment {
+  #place_order {
+    float: none;
+    height: 100%;
+    padding: 20px;
+    font-size: 16px;
+    line-height: 35px;
+  }
 }
 
 .product-category-description {
   padding: 20px;
   background-color: $site-color-dark-light;
   box-shadow: 0 0 3px #111;
-  font-family: "Open Sans",sans-serif !important;
+  font-family: $site-font-secondary !important;
   font-size: 14px;
 }
 
@@ -1896,23 +1861,25 @@ td.product-quantity {
   float: none;
 }
 
-.product_description_mainblock .product-stock {
-  display: inline-block;
-  float: none;
-  width: auto;
-  margin-top: 0;
-  padding: 10px;
-}
+.product_description_mainblock {
+  .product-stock {
+    display: inline-block;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    padding: 10px;
+  }
+  .product_meta {
+    text-align: center;
+  	span {
+  	 display: block;
+  	 text-transform: uppercase;
+    	&.product-code {
+    		 display: none;
+    	}
+    }
+  }
 
-.product_description_mainblock .product_meta {
-  text-align: center;
-	span {
-	 display: block;
-	 text-transform: uppercase;
-	 &.product-code {
-		 display: none;
-	 }
- }
 }
 
 .footer-black-bg {
@@ -1929,8 +1896,8 @@ del .amount, .old-price {
   background-color: #333!important;
 }
 .button {
-  box-shadow: 2px 2px #111!important;
-  text-shadow: 2px 2px #111!important;
+  box-shadow: $site-shadow-std!important;
+  text-shadow: $site-shadow-std!important;
 }
 
 /* Mobile opt */
@@ -1991,13 +1958,13 @@ del .amount, .old-price {
 }
 
 .company_list3 p {
-  text-shadow: 2px 2px #111;
-  font-family: "Open Sans",sans-serif !important;
+  text-shadow: $site-shadow-std;
+  font-family: $site-font-secondary !important;
   font-size: 125%;
 }
 
 .company_list3 h3 {
-  text-shadow: 2px 2px #111;
+  text-shadow: $site-shadow-std;
 }
 
 .company_list3_contacts p {
@@ -2043,6 +2010,75 @@ table th {
 .lightbox-btn,
 .widget_shopping_cart_content .checkout,
 .pp_pic_holder.pp_woocommerce,
-.pp_overlay {
+.pp_overlay,
+.sku_wrapper {
   display: none!important;
+}
+
+/* Rem spacing between products */
+
+.with-sidebar .rows-count4.products-grid .product-grid {
+  @media only screen and (min-width: 480px) {
+    margin-left: 1px;
+    width: 174px!important;
+    &:nth-child(4n+1) {
+      margin-left: 20px;
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    width: 216px!important;
+    &:nth-child(4n+1) {
+      margin-left: 30px;
+    }
+  }
+  @media only screen and (max-width: 979px) and (min-width: 768px) {
+    width: 237px !important;
+    &:nth-child(2n+1) {
+      margin-left: 20px;
+    }
+  }
+  @media only screen and (max-width: 767px) and (min-width: 480px) {
+    width: 213px!important;
+    margin-right: 0px!important;
+    &:nth-child(2n+1) {
+      margin-left: -14px;
+    }
+  }
+
+}
+
+#shipping_method {
+  li {
+    white-space: nowrap;
+    text-align: left;
+  }
+}
+.cart-subtotal .amount {
+  text-align: left;
+}
+.woocommerce .cart_totals td {
+  text-align: left;
+}
+.cart-collaterals .cart_totals table th, table td {
+  border: none!important;
+}
+
+.wc-proceed-to-checkout a {
+  background-color: $site-color-red-light;
+}
+abbr[title] {
+  border: none!important;
+}
+.pickup_location,
+.order-total {
+  td {
+    text-align: left!important;
+  }
+}
+.grid_pagination_block {
+
+}
+
+.fl-l {
+  float: none!important;
 }

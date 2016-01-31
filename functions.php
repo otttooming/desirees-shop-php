@@ -15,9 +15,9 @@ function content($limit) {
     $content = implode(" ",$content).'...';
   } else {
     $content = implode(" ",$content);
-  }	
+  }
   $content = preg_replace('/\[.+\]/','', $content);
-  $content = apply_filters('the_content', $content); 
+  $content = apply_filters('the_content', $content);
   $content = str_replace(']]>', ']]&gt;', $content);
   $content = strip_tags($content, '<p>');
 
@@ -54,10 +54,10 @@ function woocommerce_catalog_page_ordering() {
 	}
 	?>
     <script type="text/javascript">
-         jQuery('select.sortby>option[value="<?php echo $currentProductsPerPage; ?>"]').attr('selected', true); 
+         jQuery('select.sortby>option[value="<?php echo $currentProductsPerPage; ?>"]').attr('selected', true);
     </script>
-<?php 
-} 
+<?php
+}
 
 // now we set our cookie if we need to
 function dl_sort_by_page($count) {
@@ -103,34 +103,34 @@ add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_e
 
 add_action( 'woocommerce_checkout_process', 'wc_minimum_order_amount' );
 add_action( 'woocommerce_before_cart' , 'wc_minimum_order_amount' );
- 
+
 function wc_minimum_order_amount() {
 	// Set this variable to specify a minimum order value
-	$minimum = 12;
- 
+	$minimum = 15;
+
 	if ( WC()->cart->total < $minimum ) {
- 
+
 		if( is_cart() ) {
- 
-			wc_print_notice( 
-				sprintf( 'Miinimum tellimuse suurus on %s , teie praegune ostu summa on %s.' , 
-					woocommerce_price( $minimum ), 
+
+			wc_print_notice(
+				sprintf( 'Miinimum tellimuse suurus on %s , teie praegune ostu summa on %s.' ,
+					woocommerce_price( $minimum ),
 					woocommerce_price( WC()->cart->total )
-				), 'error' 
+				), 'error'
 			);
- 
+
 		} else {
- 
-			wc_add_notice( 
-				sprintf( 'Miinimum tellimuse suurus on %s , teie praegune ostu summa on %s.' , 
-					woocommerce_price( $minimum ), 
+
+			wc_add_notice(
+				sprintf( 'Miinimum tellimuse suurus on %s , teie praegune ostu summa on %s.' ,
+					woocommerce_price( $minimum ),
 					woocommerce_price( WC()->cart->total )
-				), 'error' 
+				), 'error'
 			);
- 
+
 		}
 	}
- 
+
 }
 
 
@@ -139,4 +139,3 @@ add_action('admin_menu','wphidenag');
 function wphidenag() {
 remove_action( 'admin_notices', 'update_nag', 3 );
 }
-
