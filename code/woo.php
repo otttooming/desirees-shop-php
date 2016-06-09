@@ -1,11 +1,11 @@
 <?php
-// **********************************************************************// 
+// **********************************************************************//
 // ! Remove Default STYLES
 // **********************************************************************//
 
 add_filter( 'woocommerce_enqueue_styles', '__return_false' );
 
-add_action('after_setup_theme', 'et_template_hooks'); 
+add_action('after_setup_theme', 'et_template_hooks');
 if(!function_exists('et_template_hooks')) {
 	function et_template_hooks() {
 		remove_action( 'woocommerce_cart_totals_after_shipping', 'woocommerce_shipping_calculator', 15 );
@@ -18,7 +18,7 @@ add_theme_support(ETHEME_DOMAIN);
 
 if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 18000)) {
     // last request was more than 30 minutes ago
-    session_unset();     // unset $_SESSION variable for the run-time 
+    session_unset();     // unset $_SESSION variable for the run-time
     session_destroy();   // destroy session data in storage
 }
 $_SESSION['LAST_ACTIVITY'] = time(); // update last activity time stamp
@@ -56,13 +56,13 @@ class Etheme_WooCommerce_Widget_Cart extends WP_Widget {
 		$widget_ops = array( 'classname' => $this->woo_widget_cssclass, 'description' => $this->woo_widget_description );
 
 		/* Create the widget. */
-		$this->WP_Widget( 'shopping_cart', $this->woo_widget_name, $widget_ops );
+		parent::__construct( 'shopping_cart', $this->woo_widget_name, $widget_ops );
 	}
 
 	/** @see WP_Widget */
 	function widget( $args = array(), $instance = array() ) {
 		global $woocommerce;
-		
+
 		extract( $args );
 
 		$title = apply_filters('widget_title', empty( $instance['title'] ) ? __('Shopping Cart', ETHEME_DOMAIN) : $instance['title'], $instance, $this->id_base );
@@ -74,7 +74,7 @@ class Etheme_WooCommerce_Widget_Cart extends WP_Widget {
     <div class="cart-popup-container">
     <div class="cart-popup" style="display: none; ">
         <?php
-		
+
 		if ( sizeof( $woocommerce->cart->get_cart() ) > 0 ) {
 		  ?>
             <p class="recently-added"><?php echo __('Recently added item(s)', ETHEME_DOMAIN); ?></p>
@@ -86,44 +86,44 @@ class Etheme_WooCommerce_Widget_Cart extends WP_Widget {
                 if($counter > 3) continue;
 				$_product = $cart_item['data'];
 
-				if ( ! apply_filters('woocommerce_widget_cart_item_visible', true, $cart_item, $cart_item_key ) ) 
+				if ( ! apply_filters('woocommerce_widget_cart_item_visible', true, $cart_item, $cart_item_key ) )
 					continue;
-				
+
 				if ( $_product->exists() && $cart_item['quantity'] > 0 ) {
-			
+
 	   				$product_price = get_option( 'woocommerce_display_cart_prices_excluding_tax' ) == 'yes' || $woocommerce->customer->is_vat_exempt() ? $_product->get_price_excluding_tax() : $_product->get_price();
-							
-					$product_price = apply_filters( 'woocommerce_cart_item_price_html', woocommerce_price( $product_price ), $cart_item, $cart_item_key ); 	
-								
+
+					$product_price = apply_filters( 'woocommerce_cart_item_price_html', woocommerce_price( $product_price ), $cart_item, $cart_item_key );
+
 				?>
-                    <div class="product-item">       
+                    <div class="product-item">
                         <a href="<?php echo get_permalink( $cart_item['product_id'] ); ?>" class="product-image">
                              <?php echo apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key ); ?>
                         </a>
-                        <?php 
-							echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf('<a href="%s" class="delete-btn" title="%s">&times;</a>', esc_url( $woocommerce->cart->get_remove_url( $cart_item_key ) ), __('Remove this item', ETHEME_DOMAIN) ), $cart_item_key ); 
+                        <?php
+							echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf('<a href="%s" class="delete-btn" title="%s">&times;</a>', esc_url( $woocommerce->cart->get_remove_url( $cart_item_key ) ), __('Remove this item', ETHEME_DOMAIN) ), $cart_item_key );
 						?>
                         <h5><a href="<?php echo get_permalink( $cart_item['product_id'] ); ?>"><?php echo apply_filters('woocommerce_widget_cart_product_title', $_product->get_title(), $_product ) ?></a></h5>
-                        
+
                         <div class="qty">
-                            <span class="price"><span class="pricedisplay"><?php echo $product_price; ?></span></span><br /> 
+                            <span class="price"><span class="pricedisplay"><?php echo $product_price; ?></span></span><br />
                             <span class="quanity-span"><?php echo __('Qty', ETHEME_DOMAIN); ?>:</span> <?php echo $cart_item['quantity']; ?>
                         </div>
                         <?php echo $woocommerce->cart->get_item_data( $cart_item ); ?>
-						
+
                         <div class="clear"></div>
-                    </div> 
+                    </div>
                 <?php
                 }
 			}
     	?>
         </div>
 
-        <?php	
+        <?php
 		} else {
 			echo '<p class="empty">' . __('No products in the cart.', ETHEME_DOMAIN) . '</p>';
 		}
-		
+
 
 		if ( sizeof( $woocommerce->cart->get_cart() ) > 0 ) {
 		  ?>
@@ -135,15 +135,15 @@ class Etheme_WooCommerce_Widget_Cart extends WP_Widget {
 			do_action( 'woocommerce_widget_shopping_cart_before_buttons' );
             ?>
                 <a href="<?php echo $woocommerce->cart->get_cart_url(); ?>" class="button emptycart"><span><?php echo __('View Cart', ETHEME_DOMAIN); ?></span></a>
-                
-                <a href="<?php echo $woocommerce->cart->get_checkout_url(); ?>" class="button active fl-r"><span><?php echo __('Checkout', ETHEME_DOMAIN); ?></span></a>   
-            
+
+                <a href="<?php echo $woocommerce->cart->get_checkout_url(); ?>" class="button active fl-r"><span><?php echo __('Checkout', ETHEME_DOMAIN); ?></span></a>
+
             <?php
 
 		}
 		?>
     </div>
-    </div> 
+    </div>
         <?php
 
 	}
@@ -190,22 +190,22 @@ class Etheme_WooCommerce_Widget_Special extends WP_Widget {
 		$widget_ops = array( 'classname' => $this->woo_widget_cssclass, 'description' => $this->woo_widget_description );
 
 		/* Create the widget. */
-		$this->WP_Widget( 'etheme_special', $this->woo_widget_name, $widget_ops );
+		parent::__construct( 'etheme_special', $this->woo_widget_name, $widget_ops );
 	}
 
 	/** @see WP_Widget */
 	function widget( $args = array(), $instance = array() ) {
 		global $woocommerce,$wpdb;
-		
+
 		extract( $args );
 
 		$title = apply_filters('widget_title', empty( $instance['title'] ) ? __('Special Offers', ETHEME_DOMAIN) : $instance['title'], $instance, $this->id_base );
 		$hide_if_empty = empty( $instance['hide_if_empty'] )  ? 0 : 1;
-        
 
-        
+
+
         $key = '_etheme_special';
-        
+
         $args = apply_filters('woocommerce_related_products_args', array(
         	'post_type'				=> 'product',
             'meta_key'              => $key,
@@ -214,7 +214,7 @@ class Etheme_WooCommerce_Widget_Special extends WP_Widget {
         	'no_found_rows' 		=> 1,
         	'posts_per_page' 		=> ($instance['number'])
         ) );
-        
+
         ob_start();
         etheme_create_slider($args,$title, $image_width, $image_height,false,1,0);
         $output = ob_get_contents();
@@ -224,7 +224,7 @@ class Etheme_WooCommerce_Widget_Special extends WP_Widget {
     <div class="widget-container widget_special_offers">
         <?php echo $output ?>
     </div>
-    
+
         <?php
 	}
 
@@ -242,7 +242,7 @@ class Etheme_WooCommerce_Widget_Special extends WP_Widget {
 		?>
 		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', ETHEME_DOMAIN) ?></label>
 		<input type="text" class="widefat" id="<?php echo esc_attr( $this->get_field_id('title') ); ?>" name="<?php echo esc_attr( $this->get_field_name('title') ); ?>" value="<?php if (isset ( $instance['title'])) {echo esc_attr( $instance['title'] );} ?>" /></p>
-        
+
         <p><label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Number of products to show:', ETHEME_DOMAIN); ?></label>
         <input id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo $number; ?>" size="3" /><br />
         </p>
@@ -257,19 +257,19 @@ class Etheme_Widget_Price_Filter extends WP_Widget {
 	var $woo_widget_description;
 	var $woo_widget_idbase;
 	var $woo_widget_name;
-	
+
 	/** constructor */
 	function Etheme_Widget_Price_Filter() {
-		
+
 		/* Widget variable settings. */
 		$this->woo_widget_cssclass = 'widget_price_filter';
 		$this->woo_widget_description = __( 'Shows a price filter slider in a widget which lets you narrow down the list of shown products when viewing product categories.', ETHEME_DOMAIN );
 		$this->woo_widget_idbase = 'etheme_woocommerce_price_filter';
 		$this->woo_widget_name = __('8theme Price Filter', ETHEME_DOMAIN );
-		
+
 		/* Widget settings. */
 		$widget_ops = array( 'classname' => $this->woo_widget_cssclass, 'description' => $this->woo_widget_description );
-		
+
 		/* Create the widget. */
 		$this->WP_Widget('price_filter', $this->woo_widget_name, $widget_ops);
 	}
@@ -277,20 +277,20 @@ class Etheme_Widget_Price_Filter extends WP_Widget {
 	/** @see WP_Widget */
 	function widget( $args, $instance ) {
 		extract($args);
-		
+
 		global $_chosen_attributes, $wpdb, $woocommerce, $wp_query, $wp;
-		
+
 		if (!is_tax( 'product_cat' ) && !is_post_type_archive('product') && !is_tax( 'product_tag' )) return; // Not on product page - return
-		
+
 		if ( sizeof( $woocommerce->query->unfiltered_product_ids ) == 0 ) return; // None shown - return
-		
+
 		if ( get_option( 'woocommerce_enable_jquery_ui' ) != 'no' ) {
-			
+
 			wp_enqueue_script( 'wc-price-slider' );
-			
+
 			wp_localize_script( 'wc-price-slider', 'woocommerce_price_slider_params', array(
 				'currency_symbol' 	=> get_woocommerce_currency_symbol(),
-				'currency_pos'      => get_option( 'woocommerce_currency_pos' ), 
+				'currency_pos'      => get_option( 'woocommerce_currency_pos' ),
 				'min_price'			=> isset( $_GET['min_price'] ) ? $_GET['min_price'] : '',
 				'max_price'			=> isset( $_GET['max_price'] ) ? $_GET['max_price'] : ''
 			) );
@@ -298,59 +298,59 @@ class Etheme_Widget_Price_Filter extends WP_Widget {
 
 		$title = $instance['title'];
 		$title = apply_filters('widget_title', $title, $instance, $this->id_base);
-				
+
 		// Remember current filters/search
 		$fields = '';
-		
+
 		if (get_search_query()) $fields = '<input type="hidden" name="s" value="'.get_search_query().'" />';
 		if (isset($_GET['post_type'])) $fields .= '<input type="hidden" name="post_type" value="'.esc_attr( $_GET['post_type'] ).'" />';
 		if (isset($_GET['product_cat'])) $fields .= '<input type="hidden" name="product_cat" value="'.esc_attr( $_GET['product_cat'] ).'" />';
 		if (isset($_GET['product_tag'])) $fields .= '<input type="hidden" name="product_tag" value="'.esc_attr( $_GET['product_tag'] ).'" />';
-		
+
 		if ($_chosen_attributes) foreach ($_chosen_attributes as $attribute => $data) :
-		
+
 			$fields .= '<input type="hidden" name="'.esc_attr( str_replace('pa_', 'filter_', $attribute) ).'" value="'.esc_attr( implode(',', $data['terms']) ).'" />';
 			if ($data['query_type']=='or') $fields .= '<input type="hidden" name="'.esc_attr( str_replace('pa_', 'query_type_', $attribute) ).'" value="or" />';
-		
+
 		endforeach;
-		
+
 		$min = $max = 0;
 		$post_min = $post_max = '';
-		
+
 		if ( sizeof( $woocommerce->query->layered_nav_product_ids ) == 0 ) :
 
-			$max = ceil($wpdb->get_var("SELECT max(meta_value + 0) 
+			$max = ceil($wpdb->get_var("SELECT max(meta_value + 0)
 			FROM $wpdb->posts
 			LEFT JOIN $wpdb->postmeta ON $wpdb->posts.ID = $wpdb->postmeta.post_id
 			WHERE meta_key = '_price'"));
 
 		else :
-		
-			$max = ceil($wpdb->get_var("SELECT max(meta_value + 0) 
+
+			$max = ceil($wpdb->get_var("SELECT max(meta_value + 0)
 			FROM $wpdb->posts
 			LEFT JOIN $wpdb->postmeta ON $wpdb->posts.ID = $wpdb->postmeta.post_id
 			WHERE meta_key = '_price' AND (
-				$wpdb->posts.ID IN (".implode(',', $woocommerce->query->layered_nav_product_ids).") 
+				$wpdb->posts.ID IN (".implode(',', $woocommerce->query->layered_nav_product_ids).")
 				OR (
 					$wpdb->posts.post_parent IN (".implode(',', $woocommerce->query->layered_nav_product_ids).")
 					AND $wpdb->posts.post_parent != 0
 				)
 			)"));
-		
+
 		endif;
-		
+
 		if ( $min == $max ) return;
-		
+
 		if (isset($_SESSION['min_price'])) $post_min = $_SESSION['min_price'];
 		if (isset($_SESSION['max_price'])) $post_max = $_SESSION['max_price'];
 
 		echo $before_widget . $before_title . $title . $after_title;
-		
-		if ( get_option( 'permalink_structure' ) == '' ) 
+
+		if ( get_option( 'permalink_structure' ) == '' )
 			$form_action = remove_query_arg( array( 'page', 'paged' ), add_query_arg( $wp->query_string, '', home_url( $wp->request ) ) );
 		else
 			$form_action = preg_replace( '%\/page/[0-9]+%', '', home_url( $wp->request ) );
-		
+
 		echo '<form method="get" action="' . esc_url($form_action) . '">
 			<div class="price_slider_wrapper">
 				<div class="price_slider" style="display:none;"></div>
@@ -366,7 +366,7 @@ class Etheme_Widget_Price_Filter extends WP_Widget {
 				</div>
 			</div>
 		</form>';
-		
+
 		echo $after_widget;
 	}
 
@@ -405,7 +405,7 @@ function etheme_custom_checkout_fields( $fields ) {
 
 	$fields['billing']['billing_address_2']['label'] = __('Address 2', ETHEME_DOMAIN);
 	$fields['shipping']['shipping_address_2']['label'] = __('Address 2', ETHEME_DOMAIN);
-	
+
 	return $fields;
 
 }
@@ -422,18 +422,18 @@ function etheme_get_wc_categories_menu($title = 'Categories'){
                 <?php echo ($title != '') ? $title : 'Categories'; ?>
             </div>
             <div class="block-content">
-            	<?php 
+            	<?php
                     $instance_categories = get_terms( 'product_cat', 'hide_empty=0&parent=0');
                     $cat = $wp_query->get_queried_object();
                     $current_cat = '';
                     if(!empty($cat->term_id)){ $current_cat = $cat->term_id; }
-                    foreach($instance_categories as $categories){ 
+                    foreach($instance_categories as $categories){
                         $term_id = $categories->term_id;
                         $term_name = $categories->name;
                         ?>
                         <div class='categories-group <?php if($term_id == $current_cat) echo 'current-parent opened' ; ?>' id='sidebar_categorisation_group_<?php echo $term_id; ?>'>
                             <h5 class='wpsc_category_title'><a href="<?php echo get_term_link( $categories, 'product_cat' ); ?>"><?php echo $term_name; ?></a><span class="btn-show"></span></h5>
-                                <?php $subcat_args = array( 'taxonomy' => 'product_cat', 
+                                <?php $subcat_args = array( 'taxonomy' => 'product_cat',
                                 'title_li' => '', 'show_count' => 0, 'hide_empty' => 0, 'echo' => false,
                                 'show_option_none' => '', 'child_of' => $term_id ); ?>
                                 <?php if(get_option('show_category_count') == 1) $subcat_args['show_count'] = 1; ?>
@@ -444,10 +444,10 @@ function etheme_get_wc_categories_menu($title = 'Categories'){
                             <div class='clear_category_group'></div>
                         </div>
                         <?php
-                    } 
+                    }
                 ?>
             </div>
-            <script type="text/javascript"> 
+            <script type="text/javascript">
                 <?php if(!etheme_get_option('cats_accordion')): ?>
                     var nav_accordion = false;
                 <?php else: ?>
@@ -458,26 +458,26 @@ function etheme_get_wc_categories_menu($title = 'Categories'){
     <?php
 }
 
-function etheme_wc_product_labels( $product_id = '' ) { 
+function etheme_wc_product_labels( $product_id = '' ) {
     echo etheme_wc_get_product_labels($product_id);
 }
 function etheme_wc_get_product_labels( $product_id = '' ) {
 	global $post, $wpdb,$product;
-    $count_labels = 0; 
+    $count_labels = 0;
     $output = '';
 
-    if ( etheme_get_option('sale_icon') ) : 
-        if ($product->is_on_sale()) {$count_labels++; 
+    if ( etheme_get_option('sale_icon') ) :
+        if ($product->is_on_sale()) {$count_labels++;
             $output .= '<span class="label-icon sale-label">'.__( 'Sale!', ETHEME_DOMAIN ).'</span>';
         }
-    endif; 
-    
-    if ( etheme_get_option('new_icon') ) : $count_labels++; 
+    endif;
+
+    if ( etheme_get_option('new_icon') ) : $count_labels++;
         if(etheme_product_is_new($product_id)) :
             $second_label = ($count_labels > 1) ? 'second_label' : '';
             $output .= '<span class="label-icon new-label '.$second_label.'">'.__( 'New!', ETHEME_DOMAIN ).'</span>';
         endif;
-    endif; 
+    endif;
     return $output;
 }
 
@@ -500,11 +500,11 @@ function etheme_woocommerce_subcategory_thumbnail( $category ) {
 
 
 remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
-remove_action( 'woocommerce_before_subcategory_title', 'woocommerce_subcategory_thumbnail', 10 ); 
-add_action( 'woocommerce_before_subcategory_title', 'etheme_woocommerce_subcategory_thumbnail', 10 ); 
+remove_action( 'woocommerce_before_subcategory_title', 'woocommerce_subcategory_thumbnail', 10 );
+add_action( 'woocommerce_before_subcategory_title', 'etheme_woocommerce_subcategory_thumbnail', 10 );
 remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
-remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end'); 
-remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper'); 
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end');
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper');
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
 
 
@@ -534,7 +534,7 @@ if ( $count > 0 ) {
     $average = number_format($rating / $count, 2);
 
     echo '<div class="starwrapper">';
-    
+
     if($showCount){
         ?>
         <span class="reviews-count"><?php echo comments_number('', __('One Review', ETHEME_DOMAIN),  __('% Reviews', ETHEME_DOMAIN)); ?></span>
@@ -559,14 +559,14 @@ function etheme_grid_list_switcher() {
 			<div class="switchToGrid">grid</div>
 			<div class="switchToList">list</div>
 		</div>
-	<?php elseif($view_mode == 'list_grid'): ?> 
+	<?php elseif($view_mode == 'list_grid'): ?>
 		<div class="view-switcher">
 			<label><?php _e('View as:', ETHEME_DOMAIN); ?></label>
 			<div class="switchToList">list</div>
 			<div class="switchToGrid">grid</div>
 		</div>
-	<?php endif ;?> 
-	
+	<?php endif ;?>
+
 
 	<?php
 }
@@ -577,7 +577,7 @@ function etheme_grid_list_switcher() {
  **/
 function etheme_woocommerce_product($atts){
   	if (empty($atts)) return;
-  
+
   	$args = array(
     	'post_type' => 'product',
     	'posts_per_page' => 1,
@@ -591,7 +591,7 @@ function etheme_woocommerce_product($atts){
 			)
 		)
   	);
-  
+
   	if(isset($atts['sku'])){
     	$args['meta_query'][] = array(
       		'key' => '_sku',
@@ -599,33 +599,33 @@ function etheme_woocommerce_product($atts){
       		'compare' => '='
     	);
   	}
-  
+
   	if(isset($atts['id'])){
     	$args['p'] = $atts['id'];
   	}
-  
+
   	ob_start();
 
 	$products = new WP_Query( $args );
 
 	if ( $products->have_posts() ) : ?>
 
-		
+
         <div id="products-grid" class="products_grid shortcode-products row rows-count4">
     		<?php while ( $products->have_posts() ) : $products->the_post(); ?>
-    	
+
     			<?php woocommerce_get_template_part( 'content', 'product' ); ?>
-    
+
     		<?php endwhile; // end of the loop. ?>
 		</div>
 		<div class="clear"></div>
         <script type="text/javascript">imageTooltip(jQuery('.imageTooltip'))</script>
-		
-	<?php endif; 
+
+	<?php endif;
 
 	wp_reset_query();
 
-	return ob_get_clean();  
+	return ob_get_clean();
 }
 
 
@@ -634,15 +634,15 @@ function etheme_woocommerce_product($atts){
  **/
 function etheme_woocommerce_products($atts){
 	global $woocommerce_loop;
-	
+
   	if (empty($atts)) return;
-  
+
 	extract(shortcode_atts(array(
 		'columns' 	=> '4',
 	  	'orderby'   => 'title',
 	  	'order'     => 'asc'
 		), $atts));
-	
+
   	$args = array(
 		'post_type'	=> 'product',
 		'post_status' => 'publish',
@@ -658,7 +658,7 @@ function etheme_woocommerce_products($atts){
 			)
 		)
 	);
-	
+
 	if(isset($atts['skus'])){
 		$skus = explode(',', $atts['skus']);
 	  	$skus = array_map('trim', $skus);
@@ -668,33 +668,33 @@ function etheme_woocommerce_products($atts){
       		'compare' 	=> 'IN'
     	);
   	}
-	
+
 	if(isset($atts['ids'])){
 		$ids = explode(',', $atts['ids']);
 	  	$ids = array_map('trim', $ids);
     	$args['post__in'] = $ids;
 	}
-	
+
   	ob_start();
 
 	$products = new WP_Query( $args );
-	
+
 	$woocommerce_loop['columns'] = $columns;
 
 	if ( $products->have_posts() ) : ?>
 
-		
+
         <div id="products-grid" class="products_grid shortcode-products row rows-count<?php echo $columns ?>">
     		<?php while ( $products->have_posts() ) : $products->the_post(); ?>
-    	
+
     			<?php woocommerce_get_template_part( 'content', 'product' ); ?>
-    
+
     		<?php endwhile; // end of the loop. ?>
 		</div>
 		<div class="clear"></div>
         <script type="text/javascript">imageTooltip(jQuery('.imageTooltip'))</script>
-				
-	<?php endif; 
+
+	<?php endif;
 
 	wp_reset_query();
 
@@ -707,12 +707,12 @@ function etheme_woocommerce_products($atts){
  **/
 function etheme_woocommerce_product_page_shortcode( $atts ) {
   	if (empty($atts)) return;
-	
+
     if (!$atts['id'] && !$atts['sku']) return;
-    
+
 	wp_enqueue_script( 'wc-single-product', home_url() . '/wp-content/plugins/woocommerce/assets/js/frontend/single-product.min.js', array( 'jquery' ), '1.6', true );
     wp_enqueue_script( 'wc-add-to-cart-variation', home_url() . '/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart-variation.min.js', array( 'jquery' ), '1.6', true );
-	
+
   	$args = array(
     	'posts_per_page' 	=> 1,
     	'post_type'	=> 'product',
@@ -732,9 +732,9 @@ function etheme_woocommerce_product_page_shortcode( $atts ) {
   	if(isset($atts['id'])){
     	$args['p'] = $atts['id'];
   	}
-  	
+
   	$single_product = new WP_Query( $args );
-    
+
   	ob_start();
 
 	while ( $single_product->have_posts() ) : $single_product->the_post(); ?>
@@ -744,9 +744,9 @@ function etheme_woocommerce_product_page_shortcode( $atts ) {
 	<?php endwhile; // end of the loop.
 
 	wp_reset_query();
-	
+
 	return ob_get_clean();
-}	
+}
 
 
 /**
@@ -754,9 +754,9 @@ function etheme_woocommerce_product_page_shortcode( $atts ) {
  **/
 function etheme_woocommerce_product_category($atts){
 	global $woocommerce_loop;
-	
+
   	if (empty($atts)) return;
-  
+
 	extract(shortcode_atts(array(
 		'limit' 		=> '12',
 		'columns' 		=> '4',
@@ -764,9 +764,9 @@ function etheme_woocommerce_product_category($atts){
 	  	'order'     	=> 'asc',
 	  	'category'		=> ''
 		), $atts));
-		
+
 	if ( ! $category ) return;
-		
+
   	$args = array(
 		'post_type'	=> 'product',
 		'post_status' => 'publish',
@@ -790,29 +790,29 @@ function etheme_woocommerce_product_category($atts){
 			)
 	    )
 	);
-	
+
   	ob_start();
-	
+
 	$products = new WP_Query( $args );
-	
+
 	$woocommerce_loop['columns'] = $columns;
 
 	if ( $products->have_posts() ) : ?>
-		
+
         <div id="products-grid" class="products_grid shortcode-products row rows-count<?php echo $columns ?>">
     		<?php while ( $products->have_posts() ) : $products->the_post(); ?>
-    	
+
     			<?php woocommerce_get_template_part( 'content', 'product' ); ?>
-    
+
     		<?php endwhile; // end of the loop. ?>
 		</div>
 		<div class="clear"></div>
         <script type="text/javascript">imageTooltip(jQuery('.imageTooltip'))</script>
-		
-	<?php endif; 
+
+	<?php endif;
 
 	wp_reset_query();
-	
+
 	return ob_get_clean();
 }
 
@@ -923,21 +923,21 @@ function etheme_woocommerce_sale_products( $atts ){
 	$woocommerce_loop['columns'] = $columns;
 
 	if ( $products->have_posts() ) : ?>
-	
+
         <div id="products-grid" class="products_grid shortcode-products row rows-count<?php echo $columns ?>">
     		<?php while ( $products->have_posts() ) : $products->the_post(); ?>
-    	
+
     			<?php woocommerce_get_template_part( 'content', 'product' ); ?>
-    
+
     		<?php endwhile; // end of the loop. ?>
 		</div>
 		<div class="clear"></div>
         <script type="text/javascript">imageTooltip(jQuery('.imageTooltip'))</script>
-		
-	<?php endif; 
+
+	<?php endif;
 
 	wp_reset_query();
-	
+
 	return ob_get_clean();
 }
 
@@ -973,41 +973,41 @@ function etheme_woocommerce_best_selling_products( $atts ){
 	$woocommerce_loop['columns'] = $columns;
 
 	if ( $products->have_posts() ) : ?>
-	
+
         <div id="products-grid" class="products_grid shortcode-products row rows-count<?php echo $columns ?>">
     		<?php while ( $products->have_posts() ) : $products->the_post(); ?>
-    	
+
     			<?php woocommerce_get_template_part( 'content', 'product' ); ?>
-    
+
     		<?php endwhile; // end of the loop. ?>
 		</div>
 		<div class="clear"></div>
         <script type="text/javascript">imageTooltip(jQuery('.imageTooltip'))</script>
-		
-	<?php endif; 
+
+	<?php endif;
 
 	wp_reset_query();
-	
+
 	return ob_get_clean();
 }
 
- 
+
 
 
 /**
  * Output featured products
  **/
 function etheme_woocommerce_featured_products( $atts ) {
-	
+
 	global $woocommerce_loop;
-	
+
 	extract(shortcode_atts(array(
 		'limit' 	=> '12',
 		'columns' 	=> '4',
 		'orderby' => 'date',
 		'order' => 'desc'
 	), $atts));
-	
+
 	$args = array(
 		'post_type'	=> 'product',
 		'post_status' => 'publish',
@@ -1031,25 +1031,25 @@ function etheme_woocommerce_featured_products( $atts ) {
 	ob_start();
 
 	$products = new WP_Query( $args );
-	
+
 	$woocommerce_loop['columns'] = $columns;
 
 	if ( $products->have_posts() ) : ?>
-	
+
         <div id="products-grid" style="padding: 0;" class="products_grid shortcode-products row rows-count<?php echo $columns ?>">
     		<?php while ( $products->have_posts() ) : $products->the_post(); ?>
-    	
+
     			<?php woocommerce_get_template_part( 'content', 'product' ); ?>
-    
+
     		<?php endwhile; // end of the loop. ?>
 		</div>
 		<div class="clear"></div>
         <script type="text/javascript">imageTooltip(jQuery('.imageTooltip'))</script>
-			
-	<?php endif; 
+
+	<?php endif;
 
 	wp_reset_query();
-	
+
 	return ob_get_clean();
 }
 
@@ -1058,16 +1058,16 @@ function etheme_woocommerce_featured_products( $atts ) {
  * Recent Products shortcode
  **/
 function etheme_woocommerce_recent_products( $atts ) {
-	
+
 	global $woocommerce_loop;
-	
+
 	extract(shortcode_atts(array(
 		'limit' 	=> '12',
 		'columns' 	=> '4',
 		'orderby' => 'date',
 		'order' => 'desc'
 	), $atts));
-	
+
 	$args = array(
 		'post_type'	=> 'product',
 		'post_status' => 'publish',
@@ -1083,27 +1083,27 @@ function etheme_woocommerce_recent_products( $atts ) {
 			)
 		)
 	);
-	
+
 	ob_start();
 
 	$products = new WP_Query( $args );
 
 	if ( $products->have_posts() ) : ?>
-            
+
         <div id="products-grid" style="padding: 0;" class="products_grid shortcode-products row rows-count<?php echo $columns ?>">
     		<?php while ( $products->have_posts() ) : $products->the_post(); ?>
-    	
+
     			<?php woocommerce_get_template_part( 'content', 'product' ); ?>
-    
+
     		<?php endwhile; // end of the loop. ?>
 		</div>
 		<div class="clear"></div>
         <script type="text/javascript">imageTooltip(jQuery('.imageTooltip'))</script>
-				
-	<?php endif; 
+
+	<?php endif;
 
 	wp_reset_query();
-	
+
 	return ob_get_clean();
 }
 
