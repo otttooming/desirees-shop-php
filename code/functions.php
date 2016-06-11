@@ -1,8 +1,8 @@
 <?php
-/** 
+/**
  * Load option tree plugin
  */
-    
+
 add_filter( 'ot_show_pages', '__return_false' );
 add_filter( 'ot_show_new_layout', '__return_false' );
 add_filter( 'ot_theme_mode', '__return_true' );
@@ -42,53 +42,42 @@ if (!isset( $content_width )) $content_width = 920;
 function etheme_enqueue_styles() {
 	global $etheme_responsive, $etheme_color_version;
 
-    $custom_css = etheme_get_option('custom_css');
     if ( !is_admin() ) {
         wp_enqueue_style("bootstrap",get_template_directory_uri().'/css/bootstrap.css');
         wp_enqueue_style("style",get_stylesheet_directory_uri().'/style.css');
-        if($etheme_responsive){
-            wp_enqueue_style("bootstrap-responsive",get_template_directory_uri().'/css/bootstrap-responsive.css');
-            wp_enqueue_style("responsive",get_template_directory_uri().'/css/responsive.css');
-        }
+        wp_enqueue_style("bootstrap-responsive",get_template_directory_uri().'/css/bootstrap-responsive.css');
+        wp_enqueue_style("responsive",get_template_directory_uri().'/css/responsive.css');
         wp_enqueue_style("slider",get_template_directory_uri().'/css/slider.css');
         wp_enqueue_style("font-awesome",get_template_directory_uri().'/css/font-awesome.min.css');
-        wp_enqueue_style("cbpQTRotator",get_template_directory_uri().'/code/testimonials/assets/css/component.css');
-        if($custom_css) {
-            wp_enqueue_style("custom",get_template_directory_uri().'/custom.css');  
-        }
-        if($etheme_color_version=='dark') {
-            wp_enqueue_style("dark",get_template_directory_uri().'/css/dark.css');  
-        }
-        
-        //wp_enqueue_style("open-sans","http://fonts.googleapis.com/css?family=Open+Sans");
-        //wp_enqueue_style("lato","http://fonts.googleapis.com/css?family=Lato:100,400");
-    
+        // wp_enqueue_style("cbpQTRotator",get_template_directory_uri().'/code/testimonials/assets/css/component.css');
+        wp_enqueue_style("custom",get_template_directory_uri().'/custom.css');
+        wp_enqueue_style("dark",get_template_directory_uri().'/css/dark.css');
+
         $script_depends = array();
 
         if(class_exists('WooCommerce')) {
             $script_depends = array('wc-add-to-cart-variation');
         }
-            
+
         wp_enqueue_script("jquery");
-        wp_enqueue_script('jquery.easing', get_template_directory_uri().'/js/jquery.easing.1.3.min.js',array(),false,true);
+        // wp_enqueue_script('jquery.easing', get_template_directory_uri().'/js/jquery.easing.1.3.min.js',array(),false,true);
         wp_enqueue_script('cookie', get_template_directory_uri().'/js/cookie.js',array());
-        //wp_enqueue_script('jquery.nicescroll', get_template_directory_uri().'/js/jquery.nicescroll.min.js',array(),false,true);
-        wp_enqueue_script('hoverIntent', get_template_directory_uri().'/js/hoverIntent.js',array(),false,true);
+        // wp_enqueue_script('hoverIntent', get_template_directory_uri().'/js/hoverIntent.js',array(),false,true);
         wp_enqueue_script('jquery.slider', get_template_directory_uri().'/js/jquery.slider.js',array(),false,true);
         wp_enqueue_script('modernizr.custom', get_template_directory_uri().'/js/modernizr.custom.js');
-        wp_enqueue_script('cbpQTRotator', get_template_directory_uri().'/js/jquery.cbpQTRotator.min.js',array(),false,true);
-        wp_enqueue_script('jquery.inview', get_template_directory_uri().'/js/jquery.inview.js',array(),false,true);
-        wp_enqueue_script('modals', get_template_directory_uri().'/js/modals.js',array(),false,true);
-        wp_enqueue_script('tooltip', get_template_directory_uri().'/js/tooltip.js');
-        wp_enqueue_script('prettyPhoto', get_template_directory_uri().'/js/jquery.prettyPhoto.js');
+        // wp_enqueue_script('cbpQTRotator', get_template_directory_uri().'/js/jquery.cbpQTRotator.min.js',array(),false,true);
+        // wp_enqueue_script('jquery.inview', get_template_directory_uri().'/js/jquery.inview.js',array(),false,true);
+        // wp_enqueue_script('modals', get_template_directory_uri().'/js/modals.js',array(),false,true);
+        // wp_enqueue_script('tooltip', get_template_directory_uri().'/js/tooltip.js');
+        // wp_enqueue_script('prettyPhoto', get_template_directory_uri().'/js/jquery.prettyPhoto.js');
         wp_enqueue_script('et_masonry', get_template_directory_uri().'/js/jquery.masonry.min.js',array(),false,true);
         wp_enqueue_script('flexslider', get_template_directory_uri().'/js/jquery.flexslider-min.js',array(),false,true);
         wp_enqueue_script('etheme', get_template_directory_uri().'/js/script.js',$script_depends);
     }
-    
+
 	wp_dequeue_style('woocommerce_prettyPhoto_css');
 	wp_enqueue_style( 'woocommerce_prettyPhoto_css', get_template_directory_uri().'/css/prettyPhoto.css');
- 
+
 }
 /** Remove white space around shrtcodes */
 
@@ -96,9 +85,9 @@ function etheme_enqueue_styles() {
 //add_filter( 'the_content', 'wpautop' , 12);
 
 add_action( 'wp_enqueue_scripts', 'etheme_enqueue_styles' );
-function jsString($str='') { 
-    return trim(preg_replace("/('|\"|\r?\n)/", '', $str)); 
-} 
+function jsString($str='') {
+    return trim(preg_replace("/('|\"|\r?\n)/", '', $str));
+}
 
 function etheme_get_the_category_list($separator = '', $parents='', $post_id = false){
 	global $wp_rewrite;
@@ -185,7 +174,7 @@ add_filter('custom_header_filter', 'get_header_type',10);
 /* Header Template Parts */
 
 function etheme_header_menu(){
-	    	
+
 	$menuClass = 'menu '.etheme_get_option('menu_type').'-menu';
 	if(!etheme_get_option('menu_type')){
 		$menuClass = 'menu default-menu';
@@ -195,7 +184,7 @@ function etheme_header_menu(){
         <div id="main-nav" class="span12">
             <?php wp_nav_menu(array('theme_location' => 'top', 'name' => 'top', 'container' => 'div', 'container_class' => $menuClass)); ?>
         </div>
-    </div> 
+    </div>
 	<?php
 }
 
@@ -227,18 +216,18 @@ if(!function_exists('et_show_promo_text')) {
 		$versionsUrl = 'http://8theme.com/import/';
 		$ver = 'promo';
 		$folder = $versionsUrl.''.$ver;
-		
+
 		$txtFile = $folder.'/idstore.txt';
 		$file_headers = @get_headers($txtFile);
-		
+
 		$etag = $file_headers[4];
-		
+
 		$cached = false;
 		$promo_text = false;
-		
+
 		$storedEtag = get_option('et_last_promo_etag');
 		$closedEtag = get_option('et_close_promo_etag');
-		
+
 		if($etag == $storedEtag && $closedEtag != $etag) {
 			$storedEtag = get_option('et_last_promo_etag');
 			$promo_text = get_option('et_promo_text');
@@ -249,16 +238,16 @@ if(!function_exists('et_show_promo_text')) {
 			update_option('et_last_promo_etag', $etag);
 			update_option('et_promo_text', $fileContent);
 		}
-		
+
 		if($file_headers[0] == 'HTTP/1.1 200 OK') {
 			echo '<div class="promo-text-wrapper">';
 				if(!$promo_text && isset($fileContent)) {
 					echo $fileContent;
 				} else {
 					echo $promo_text;
-				}	
-				echo '<div class="close-btn" title="Hide promo text">x</div>';	
-			echo '</div>';	
+				}
+				echo '<div class="close-btn" title="Hide promo text">x</div>';
+			echo '</div>';
 		}
 	}
 }
@@ -270,10 +259,10 @@ if(!function_exists('et_close_promo')) {
 		$versionsUrl = 'http://8theme.com/import/';
 		$ver = 'promo';
 		$folder = $versionsUrl.''.$ver;
-		
+
 		$txtFile = $folder.'/idstore.txt';
 		$file_headers = @get_headers($txtFile);
-		
+
 		$etag = $file_headers[4];
 		$res = update_option('et_close_promo_etag', $etag);
 		die();
@@ -398,9 +387,9 @@ function etheme_comment( $comment, $args, $depth ) {
 		<div id="comment-<?php comment_ID(); ?>">
             <?php echo get_avatar( $comment, 55 ); ?>
             <div class="comment-meta">
-                <h5 class="author"><?php echo get_comment_author_link() ?> / <?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?></h5>	
+                <h5 class="author"><?php echo get_comment_author_link() ?> / <?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?></h5>
                 <?php if ( $comment->comment_approved == '0' ) : ?>
-        			<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', ETHEME_DOMAIN ); ?></em>	
+        			<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', ETHEME_DOMAIN ); ?></em>
         		<?php endif; ?>
                 <p class="date">
         			<?php
@@ -509,7 +498,7 @@ function etheme_get_image( $attachment_id = 0, $width = null, $height = null, $c
 		}
 		if ( has_post_thumbnail( $post_id ) ) {
 			$attachment_id = get_post_thumbnail_id( $post_id );
-		} 
+		}
 		else {
 			$attached_images = (array)get_posts( array(
 				'post_type'   => 'attachment',
@@ -523,19 +512,19 @@ function etheme_get_image( $attachment_id = 0, $width = null, $height = null, $c
 				$attachment_id = $attached_images[0]->ID;
 		}
 	}
-	
+
 	if (!$attachment_id)
 		return;
-		
+
 	$image_url = etheme_get_resized_url($attachment_id,$width, $height, $crop);
-	
+
 	return apply_filters( 'blanco_product_image', $image_url );
 }
 
 
-// **********************************************************************// 
-// ! Registration 
-// **********************************************************************// 
+// **********************************************************************//
+// ! Registration
+// **********************************************************************//
 add_action( 'wp_ajax_et_register_action', 'et_register_action' );
 add_action( 'wp_ajax_nopriv_et_register_action', 'et_register_action' );
 if(!function_exists('et_register_action')) {
@@ -578,7 +567,7 @@ if(!function_exists('et_register_action')) {
 				echo json_encode($return);
 	            die();
 	        }
-	        
+
 	        $status = wp_create_user( $username, $pass, $email );
 	        if ( is_wp_error($status) ) {
 				$return['status'] = 'error';
@@ -599,7 +588,7 @@ if(!function_exists('et_register_action')) {
 				echo json_encode($return);
 	        }
 	        die();
-	    } 
+	    }
 	}
 }
 
@@ -618,14 +607,14 @@ if(!function_exists('et_registration_email')) {
 			        <?php endif ; ?>
 					<p><?php printf(__('Thanks for creating an account on %s. Your username is %s.', ETHEME_DOMAIN), get_bloginfo( 'name' ), $username);?></p>
 					<?php if (class_exists('Woocommerce')): ?>
-					
+
 						<p><?php printf(__('You can access your account area to view your orders and change your password here: <a href="%s">%s</a>.', ETHEME_DOMAIN), get_permalink( get_option('woocommerce_myaccount_page_id') ), get_permalink( get_option('woocommerce_myaccount_page_id') ));?></p>
-					
+
 					<?php endif; ?>
-					
+
 				</div>
 			</div>
-		<?php 
+		<?php
 	    $output = ob_get_contents();
 	    ob_end_clean();
 	    return $output;
@@ -635,15 +624,15 @@ if(!function_exists('et_registration_email')) {
 
 function etheme_get_images($width = null, $height = null, $crop = true, $post_id = null ) {
 	global $post;
-	
+
 	if (!$post_id) {
 		$post_id = $post->ID;
-	}	
-	
+	}
+
 	if ( has_post_thumbnail( $post_id ) ) {
 		$attachment_id = get_post_thumbnail_id( $post_id );
-	} 
-	
+	}
+
 	$args = array(
 	    'post_type' => 'attachment',
 	    'post_status' => null,
@@ -652,17 +641,17 @@ function etheme_get_images($width = null, $height = null, $crop = true, $post_id
 		'order' => 'ASC',
 		'exclude' => get_post_thumbnail_id( $post_id )
 	);
-	
+
 	$attachments = get_posts($args);
-	
+
 	if (empty( $attachments) && empty($attachment_id))
 		return;
-		
+
 	$image_urls = array();
 
 	if(!empty($attachment_id))
 		$image_urls[] = etheme_get_resized_url($attachment_id,$width, $height, $crop);
-		
+
 	foreach($attachments as $one) {
 		$image_urls[] = etheme_get_resized_url($one->ID,$width, $height, $crop);
 	}
@@ -673,7 +662,7 @@ function etheme_get_images($width = null, $height = null, $crop = true, $post_id
 function etheme_get_resized_url($id,$width, $height, $crop) {
 	if ( function_exists("gd_info") && (($width >= 10) && ($height >= 10)) && (($width <= 1024) && ($height <= 1024)) ) {
 		$vt_image = vt_resize( $id, '', $width, $height, $crop );
-		if ($vt_image) 
+		if ($vt_image)
 			$image_url = $vt_image['url'];
 		else
 			$image_url = false;
@@ -685,214 +674,214 @@ function etheme_get_resized_url($id,$width, $height, $crop) {
 		else
 			$image_url = false;
 	}
-	
+
     if( is_ssl() && !strstr(  $image_url, 'https' ) ) str_replace('http', 'https', $image_url);
-    
+
     return $image_url;
 }
 
 if ( !function_exists('vt_resize') ) {
 	function vt_resize( $attach_id = null, $img_url = null, $width, $height, $crop = false ) {
-	
+
 		// this is an attachment, so we have the ID
 		if ( $attach_id ) {
-		
+
 			$image_src = wp_get_attachment_image_src( $attach_id, 'full' );
 			$file_path = get_attached_file( $attach_id );
-		
+
 		// this is not an attachment, let's use the image url
 		} else if ( $img_url ) {
-			
+
 			$file_path = parse_url( $img_url );
 			$file_path = $_SERVER['DOCUMENT_ROOT'] . $file_path['path'];
-			
+
 			//$file_path = ltrim( $file_path['path'], '/' );
 			//$file_path = rtrim( ABSPATH, '/' ).$file_path['path'];
-			
+
 			$orig_size = getimagesize( $file_path );
-			
+
 			$image_src[0] = $img_url;
 			$image_src[1] = $orig_size[0];
 			$image_src[2] = $orig_size[1];
 		}
-		
+
 		$file_info = pathinfo( $file_path );
-	
+
 		// check if file exists
 		$base_file = $file_info['dirname'].'/'.$file_info['filename'].'.'.$file_info['extension'];
 		if ( !file_exists($base_file) )
 			return;
-		 
+
 		$extension = '.'. $file_info['extension'];
-	
+
 		// the image path without the extension
 		$no_ext_path = $file_info['dirname'].'/'.$file_info['filename'];
-		
+
 		// checking if the file size is larger than the target size
 		// if it is smaller or the same size, stop right here and return
 		if ( $image_src[1] > $width || $image_src[2] > $height ) {
-	
+
 			if ( $crop == true ) {
-			
+
 				$cropped_img_path = $no_ext_path.'-'.$width.'x'.$height.$extension;
-				
+
 				// the file is larger, check if the resized version already exists (for $crop = true but will also work for $crop = false if the sizes match)
 				if ( file_exists( $cropped_img_path ) ) {
-		
+
 					$cropped_img_url = str_replace( basename( $image_src[0] ), basename( $cropped_img_path ), $image_src[0] );
-					
+
 					$vt_image = array (
 						'url' => $cropped_img_url,
 						'width' => $width,
 						'height' => $height
 					);
-					
+
 					return $vt_image;
 				}
 			}
 			elseif ( $crop == false ) {
-			
+
 				// calculate the size proportionaly
 				$proportional_size = wp_constrain_dimensions( $image_src[1], $image_src[2], $width, $height );
-				$resized_img_path = $no_ext_path.'-'.$proportional_size[0].'x'.$proportional_size[1].$extension;			
-	
+				$resized_img_path = $no_ext_path.'-'.$proportional_size[0].'x'.$proportional_size[1].$extension;
+
 				// checking if the file already exists
 				if ( file_exists( $resized_img_path ) ) {
-				
+
 					$resized_img_url = str_replace( basename( $image_src[0] ), basename( $resized_img_path ), $image_src[0] );
-	
+
 					$vt_image = array (
 						'url' => $resized_img_url,
 						'width' => $proportional_size[0],
 						'height' => $proportional_size[1]
 					);
-					
+
 					return $vt_image;
 				}
 			}
-	
+
 			// check if image width is smaller than set width
 			$img_size = getimagesize( $file_path );
-			if ( $img_size[0] <= $width ) $width = $img_size[0];		
-	
+			if ( $img_size[0] <= $width ) $width = $img_size[0];
+
 			// no cache files - let's finally resize it
 			$new_img_path = image_resize( $file_path, $width, $height, $crop );
 			$new_img_size = getimagesize( $new_img_path );
 			$new_img = str_replace( basename( $image_src[0] ), basename( $new_img_path ), $image_src[0] );
-	
+
 			// resized output
 			$vt_image = array (
 				'url' => $new_img,
 				'width' => $new_img_size[0],
 				'height' => $new_img_size[1]
 			);
-			
+
 			return $vt_image;
 		}
-	
+
 		// default output - without resizing
 		$vt_image = array (
 			'url' => $image_src[0],
 			'width' => $image_src[1],
 			'height' => $image_src[2]
 		);
-		
+
 		return $vt_image;
 	}
 }
 
 if ( !function_exists('vt_resize2') ) {
 	function vt_resize2( $img_name, $dir_url, $dir_path, $width, $height, $crop = false ) {
-		
+
 		$file_path = trailingslashit($dir_path).$img_name;
-		
+
 		$orig_size = getimagesize( $file_path );
-		
+
 		$image_src[0] = trailingslashit($dir_url).$img_name;
 		$image_src[1] = $orig_size[0];
 		$image_src[2] = $orig_size[1];
-		
+
 		$file_info = pathinfo( $file_path );
-	
+
 		// check if file exists
 		$base_file = $file_info['dirname'].'/'.$file_info['filename'].'.'.$file_info['extension'];
 		if ( !file_exists($base_file) )
 			return;
-		 
+
 		$extension = '.'. $file_info['extension'];
-	
+
 		// the image path without the extension
 		$no_ext_path = $file_info['dirname'].'/'.$file_info['filename'];
-		
+
 		// checking if the file size is larger than the target size
 		// if it is smaller or the same size, stop right here and return
 		if ( $image_src[1] > $width || $image_src[2] > $height ) {
-	
+
 			if ( $crop == true ) {
-			
+
 				$cropped_img_path = $no_ext_path.'-'.$width.'x'.$height.$extension;
-				
+
 				// the file is larger, check if the resized version already exists (for $crop = true but will also work for $crop = false if the sizes match)
 				if ( file_exists( $cropped_img_path ) ) {
-		
+
 					$cropped_img_url = str_replace( basename( $image_src[0] ), basename( $cropped_img_path ), $image_src[0] );
-					
+
 					$vt_image = array (
 						'url' => $cropped_img_url,
 						'width' => $width,
 						'height' => $height
 					);
-					
+
 					return $vt_image;
 				}
 			}
 			elseif ( $crop == false ) {
-			
+
 				// calculate the size proportionaly
 				$proportional_size = wp_constrain_dimensions( $image_src[1], $image_src[2], $width, $height );
-				$resized_img_path = $no_ext_path.'-'.$proportional_size[0].'x'.$proportional_size[1].$extension;			
-	
+				$resized_img_path = $no_ext_path.'-'.$proportional_size[0].'x'.$proportional_size[1].$extension;
+
 				// checking if the file already exists
 				if ( file_exists( $resized_img_path ) ) {
-				
+
 					$resized_img_url = str_replace( basename( $image_src[0] ), basename( $resized_img_path ), $image_src[0] );
-	
+
 					$vt_image = array (
 						'url' => $resized_img_url,
 						'width' => $proportional_size[0],
 						'height' => $proportional_size[1]
 					);
-					
+
 					return $vt_image;
 				}
 			}
-	
+
 			// check if image width is smaller than set width
 			$img_size = getimagesize( $file_path );
-			if ( $img_size[0] <= $width ) $width = $img_size[0];		
-	
+			if ( $img_size[0] <= $width ) $width = $img_size[0];
+
 			// no cache files - let's finally resize it
 			$new_img_path = image_resize( $file_path, $width, $height, $crop );
 			$new_img_size = getimagesize( $new_img_path );
 			$new_img = str_replace( basename( $image_src[0] ), basename( $new_img_path ), $image_src[0] );
-	
+
 			// resized output
 			$vt_image = array (
 				'url' => $new_img,
 				'width' => $new_img_size[0],
 				'height' => $new_img_size[1]
 			);
-			
+
 			return $vt_image;
 		}
-	
+
 		// default output - without resizing
 		$vt_image = array (
 			'url' => $image_src[0],
 			'width' => $image_src[1],
 			'height' => $image_src[2]
 		);
-		
+
 		return $vt_image;
 	}
 }
@@ -903,7 +892,7 @@ function etheme_product_page_banner(){
     if($post->ID == $etheme_productspage_id && etheme_get_option('product_bage_banner') && etheme_get_option('product_bage_banner') != ''):
     ?>
         <div class="wpsc_category_details">
-            <img src="<?php etheme_option('product_bage_banner') ?>"/>              
+            <img src="<?php etheme_option('product_bage_banner') ?>"/>
         </div>
     <?php endif;
 }
@@ -917,43 +906,43 @@ function blog_breadcrumbs() {
   $showCurrent = 1; // 1 - show current post/page title in breadcrumbs, 0 - don't show
   $before = '<span class="current">'; // tag before the current crumb
   $after = '</span>'; // tag after the current crumb
-  
+
   global $post;
   $homeLink = home_url();
-  
+
   if (is_front_page()) {
-  
+
     if ($showOnHome == 1) echo '<div id="crumbs"><a href="' . $homeLink . '">' . $home . '</a></div>';
-  
+
   } else {
-  
+
     echo '<div class="span12 breadcrumbs">';
     echo '<div id="breadcrumb">';
     echo '<a href="' . $homeLink . '">' . $home . '</a> ' . $delimiter . ' ';
-  
+
     if ( is_category() ) {
       $thisCat = get_category(get_query_var('cat'), false);
       if ($thisCat->parent != 0) echo get_category_parents($thisCat->parent, TRUE, ' ' . $delimiter . ' ');
       echo $before . __('Archive by category', ETHEME_DOMAIN) .' "' . single_cat_title('', false) . '"' . $after;
-  
+
     } elseif ( is_search() ) {
       echo $before . __('Search results for', ETHEME_DOMAIN) .' "' . get_search_query() . '"' . $after;
-  
+
     } elseif ( is_day() ) {
       echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a> ' . $delimiter . ' ';
       echo '<a href="' . get_month_link(get_the_time('Y'),get_the_time('m')) . '">' . get_the_time('F') . '</a> ' . $delimiter . ' ';
       echo $before . get_the_time('d') . $after;
-  
+
     } elseif ( is_month() ) {
       echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a> ' . $delimiter . ' ';
       echo $before . get_the_time('F') . $after;
-  
+
     } elseif ( is_year() ) {
       echo $before . get_the_time('Y') . $after;
-  
+
     } elseif ( is_single() && !is_attachment() ) {
       if ( get_post_type() == 'etheme_portfolio' ) {
-        $portfolioId = etheme_tpl2id('portfolio.php'); 
+        $portfolioId = etheme_tpl2id('portfolio.php');
         $portfolioLink = get_permalink($portfolioId);
         $post_type = get_post_type_object(get_post_type());
         $slug = $post_type->rewrite;
@@ -971,21 +960,21 @@ function blog_breadcrumbs() {
         echo $cats;
         if ($showCurrent == 1) echo $before . get_the_title() . $after;
       }
-  
+
     } elseif ( !is_single() && !is_page() && get_post_type() != 'post' && !is_404() ) {
       $post_type = get_post_type_object(get_post_type());
       echo $before . $post_type->labels->singular_name . $after;
-  
+
     } elseif ( is_attachment() ) {
       $parent = get_post($post->post_parent);
       $cat = get_the_category($parent->ID); $cat = $cat[0];
       echo get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
       echo '<a href="' . get_permalink($parent) . '">' . $parent->post_title . '</a>';
       if ($showCurrent == 1) echo ' ' . $delimiter . ' ' . $before . get_the_title() . $after;
-  
+
     } elseif ( is_page() && !$post->post_parent ) {
       if ($showCurrent == 1) echo $before . get_the_title() . $after;
-  
+
     } elseif ( is_page() && $post->post_parent ) {
       $parent_id  = $post->post_parent;
       $breadcrumbs = array();
@@ -1000,28 +989,28 @@ function blog_breadcrumbs() {
         if ($i != count($breadcrumbs)-1) echo ' ' . $delimiter . ' ';
       }
       if ($showCurrent == 1) echo ' ' . $delimiter . ' ' . $before . get_the_title() . $after;
-  
+
     } elseif ( is_tag() ) {
       echo $before . 'Posts tagged "' . single_tag_title('', false) . '"' . $after;
-  
+
     } elseif ( is_author() ) {
        global $author;
       $userdata = get_userdata($author);
       echo $before . 'Articles posted by ' . $userdata->display_name . $after;
-  
+
     } elseif ( is_404() ) {
       echo $before . 'Error 404' . $after;
     }else{
-        
+
         echo $blogPage;
     }
-  
+
     if ( get_query_var('paged') ) {
       if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ' (';
       echo ' ('.__('Page') . ' ' . get_query_var('paged').')';
       if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) echo ')';
     }
-  
+
     echo '</div>';
     // PA777 "back to" button change
     echo '<a class="back-to777 button active small arrow-left" href="javascript: history.go(-1)">'.__('Return to Previous Page',ETHEME_DOMAIN).'</a></div>';
@@ -1040,29 +1029,29 @@ function etheme_recognized_google_font_families( $array, $field_id = false ) {
 		'Yanone+Kaffeesatz'   => '"Yanone Kaffeesatz"',
 		'Muli'                => '"Muli"'
 	);
-	
+
 	return $array;
-	
+
 }
 
 function etheme_get_chosen_google_font() {
 	$chosenFonts = array();
 	$fontOptions = array();
-    $fontOptions[] = etheme_get_option('h1'); 
-    $fontOptions[] = etheme_get_option('h2'); 
-    $fontOptions[] = etheme_get_option('h3');  
-    $fontOptions[] = etheme_get_option('h4');  
-    $fontOptions[] = etheme_get_option('h5'); 
-    $fontOptions[] = etheme_get_option('h6');  
-    $fontOptions[] = etheme_get_option('sfont'); 
-    
+    $fontOptions[] = etheme_get_option('h1');
+    $fontOptions[] = etheme_get_option('h2');
+    $fontOptions[] = etheme_get_option('h3');
+    $fontOptions[] = etheme_get_option('h4');
+    $fontOptions[] = etheme_get_option('h5');
+    $fontOptions[] = etheme_get_option('h6');
+    $fontOptions[] = etheme_get_option('sfont');
+
     foreach($fontOptions as $value){
     	if($value['google-font'] != '')
 		    $chosenFonts[] = $value['google-font'];
     }
-    
+
     return $chosenFonts;
-    
+
 }
 
 // Footer Demo Blocks
@@ -1089,20 +1078,20 @@ function etheme_footer_demo($block){
 		            <br>
 		            megashop@holding.com
 		        </p>
-			<?php 
+			<?php
 		break;
 		case 2:
-			?>	                        
+			?>
 				<span class="footer_title">About Our Shop</span>
 	            <p>
-	            Lorem Ipsum is simply dummy text of the printing and typesetting 
-	            industry. Lorem Ipsum has been the industry's standard dummy text 
-	            ever since the 1500s, when an unknown printer took a galley of type 
-	            and scrambled it to make a type specimen book. It has survived not 
-	            only five centuries, but also the leap into electronic typesetting, 
+	            Lorem Ipsum is simply dummy text of the printing and typesetting
+	            industry. Lorem Ipsum has been the industry's standard dummy text
+	            ever since the 1500s, when an unknown printer took a galley of type
+	            and scrambled it to make a type specimen book. It has survived not
+	            only five centuries, but also the leap into electronic typesetting,
 	            remaining.
 	            </p>
-			<?php 
+			<?php
 		break;
 		case 3:
 			?>
@@ -1141,7 +1130,7 @@ function etheme_footer_demo($block){
 						</li>
 					</ul>
 				</div>
-			<?php 
+			<?php
 		break;
 		case 4:
 			?>
@@ -1155,7 +1144,7 @@ function etheme_footer_demo($block){
 		        <li><a href="#">Milan</a></li>
 		        <li><a href="#">Hong Kong</a></li>
 		        </ul>
-			<?php 
+			<?php
 		break;
 		case 5:
 			?>
@@ -1169,7 +1158,7 @@ function etheme_footer_demo($block){
 	            <li><a href="#">Specials</a></li>
 	            <li><a href="#">Customer Service</a></li>
 	            </ul>
-			<?php 
+			<?php
 		break;
 		case 6:
 			?>
@@ -1183,16 +1172,16 @@ function etheme_footer_demo($block){
 		        <li><a href="#">Personalised Cards</a></li>
 		        <li><a href="#">Delivery information</a></li>
 		        </ul>
-			<?php 
+			<?php
 		break;
 		case 7:
 			?>
 	            <span class="footer_title">Our Offers</span>
 	            <img src="<?php echo get_template_directory_uri();?>/images/label_2-1.png" class="footer-logo"alt=""/>
 	            <br>
-	            <img src="<?php echo get_template_directory_uri();?>/images/label_3-1.png"class="footer-logo2" alt=""/> 
-	            <img src="<?php echo get_template_directory_uri();?>/images/label_1-1.png"class="footer-logo3" alt=""/>        
-			<?php 
+	            <img src="<?php echo get_template_directory_uri();?>/images/label_3-1.png"class="footer-logo2" alt=""/>
+	            <img src="<?php echo get_template_directory_uri();?>/images/label_1-1.png"class="footer-logo3" alt=""/>
+			<?php
 		break;
 		case 8:
 			?>
@@ -1201,8 +1190,8 @@ function etheme_footer_demo($block){
 	                <li><a href="#">Advanced Search</a> / </li>
 	                <li><a href="#">Orders and Returns</a> / </li>
 	                <li><a href="#">Contact Us</a></li>
-	            </ul>    
-			<?php 
+	            </ul>
+			<?php
 		break;
 		case 9:
 			?>
@@ -1214,24 +1203,24 @@ function etheme_footer_demo($block){
 		            <li><a href="#"><img src="<?php echo get_template_directory_uri();?>/images/1363982770_maestro.png" alt=""/></a></li>
 		            <li><a href="#"><img src="<?php echo get_template_directory_uri();?>/images/1363982772_google_checkout.png" alt=""/></a></li>
 		            <li><a href="#"><img src="<?php echo get_template_directory_uri();?>/images/1363982777_cirrus.png" alt=""/></a></li>
-		        </ul>     
-			<?php 
+		        </ul>
+			<?php
 		break;
 		case 7:
 			?>
 	            <span class="footer_title">Our Offers</span>
 	            <img src="<?php echo get_template_directory_uri();?>/images/mcafee_antivirus_logo_images-1.png" class="footer-logo"alt=""/>
 	            <br>
-	            <img src="<?php echo get_template_directory_uri();?>/images/ab-seal-horizontal-large.png"class="footer-logo2" alt=""/>         
-			<?php 
+	            <img src="<?php echo get_template_directory_uri();?>/images/ab-seal-horizontal-large.png"class="footer-logo2" alt=""/>
+			<?php
 		break;
 		case 7:
 			?>
 	            <span class="footer_title">Our Offers</span>
 	            <img src="<?php echo get_template_directory_uri();?>/images/mcafee_antivirus_logo_images-1.png" class="footer-logo"alt=""/>
 	            <br>
-	            <img src="<?php echo get_template_directory_uri();?>/images/ab-seal-horizontal-large.png"class="footer-logo2" alt=""/>         
-			<?php 
+	            <img src="<?php echo get_template_directory_uri();?>/images/ab-seal-horizontal-large.png"class="footer-logo2" alt=""/>
+			<?php
 		break;
 	}
 }
