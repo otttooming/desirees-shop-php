@@ -100,30 +100,3 @@ if($attachment_ids){
     <?php
 }
 ?>
-
-<?php if($zoom != 'disable'): ?>
-    <script type="text/javascript">
-    	jQuery(document).ready(function(){
-			jQuery('a#zoom1').swinxyzoom({mode:'<?php echo $zoom ?>', controls: false, size: '100%', dock: { position: 'right' } }); // dock window slippy lens
-
-			jQuery('.views-gallery a').click(function(e) {
-				e.preventDefault();
-
-
-				var
-				  $this = jQuery(this),
-				  largeImage  = $this.attr('href');
-				  smallImage  = $this.data('easyzoom-source');
-
-                if (!$this.parent().hasClass('thumbnail-active')) {
-					jQuery('a#zoom1').swinxyzoom('load', smallImage,  largeImage);
-					jQuery('.lightbox-btn').attr('href', largeImage);
-
-					jQuery('.views-gallery .slide.thumbnail-active').removeClass('thumbnail-active');
-					$this.parent().toggleClass('thumbnail-active');
-				}
-
-			});
-    	});
-    </script>
-<?php endif; ?>

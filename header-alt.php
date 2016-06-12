@@ -37,7 +37,7 @@
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <script type="text/javascript">
-        var etheme_wp_url = '<?php echo home_url(); ?>'; 
+        var etheme_wp_url = '<?php echo home_url(); ?>';
         var succmsg = '<?php _e('All is well, your e&ndash;mail has been sent!', ETHEME_DOMAIN); ?>';
         var menuTitle = '<?php _e('Menu', ETHEME_DOMAIN); ?>';
         var nav_accordion = false;
@@ -48,20 +48,17 @@
     </script>
 	<!--[if IE]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    
-<?php
-	if ( is_singular() && get_option( 'thread_comments' ) )
-		wp_enqueue_script( 'comment-reply' );
 
+<?php
 	wp_head();
 ?>
 </head>
 <body <?php $fixed = ''; if(etheme_get_option('fixed_nav')) $fixed = ' fixNav-enabled '; body_class('no-svg '.etheme_get_option('main_layout').' banner-mask-'.etheme_get_option('banner_mask').$fixed); ?>>
-	
+
 	<?php $header_type = apply_filters('custom_header_filter',@$header_type); ?>
-	
+
 	<div class="wrapper">
-	
+
     <?php if(etheme_get_option('loader')): ?>
     <div id="loader">
         <div id="loader-status">
@@ -72,43 +69,40 @@
         </div>
     </div>
     <?php endif; ?>
-    
+
 	<?php if((etheme_get_option('search_form') || (class_exists('Woocommerce') && !etheme_get_option('just_catalog') && etheme_get_option('cart_widget')) || etheme_get_option('top_links') || etheme_get_option('header_phone') != '')): ?>
 		<div class="header-top header-top-<?php echo $header_type; ?> <?php if($header_type == "default") echo 'hidden-desktop'; ?>">
 			<div class="container">
 				<div class="row header-variant2">
 		    		<div class="span4 header-phone"><?php etheme_option('header_phone') ?></div>
 		            <div class="span8">
-		            	
+
 	                </div>
-		    		
+
 				</div>
 			</div>
 		</div>
 	<?php endif; ?>
 
-    
-    
+
+
     <div class="header-bg header-type-variant3">
-    <div class="container header-area"> 
-	    
+    <div class="container header-area">
+
         <header class="row header ">
             <div class="span5 logo">
                 <?php etheme_logo(); ?>
             </div>
-	           
-	     
-	    	
-		    
-        </header> 
-	  
+
+
+
+
+        </header>
+
     </div>
     <?php if($header_type == 'variant4') etheme_header_menu(); ?>
-    
-    <?php 
-        get_template_part( 'et-styles' ); 
-        if($etheme_responsive){
-            get_template_part('large-resolution');
-        }
+
+    <?php
+        get_template_part( 'et-styles' );
     ?>
 </div>

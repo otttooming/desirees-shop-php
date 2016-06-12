@@ -14,7 +14,6 @@ define('CHILD_URL', get_stylesheet_directory_uri());
 if(!defined('WP_LOAD_IMPORTERS') )
     define( 'WP_LOAD_IMPORTERS', true );
 
-// add_editor_style();
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'automatic-feed-links' );
 add_action('after_setup_theme', 'etheme_theme_setup');

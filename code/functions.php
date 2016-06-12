@@ -51,6 +51,7 @@ function etheme_enqueue_styles() {
         wp_enqueue_style("font-awesome",get_template_directory_uri().'/css/font-awesome.min.css');
         wp_enqueue_style("custom",get_template_directory_uri().'/custom.css');
         wp_enqueue_style("dark",get_template_directory_uri().'/css/dark.css');
+				wp_enqueue_style("large",get_template_directory_uri().'/css/large-resolution.css');
 
         $script_depends = array();
 
