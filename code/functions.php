@@ -76,7 +76,6 @@ function etheme_enqueue_styles() {
     }
 
 	wp_dequeue_style('woocommerce_prettyPhoto_css');
-	wp_enqueue_style( 'woocommerce_prettyPhoto_css', get_template_directory_uri().'/css/prettyPhoto.css');
 
 }
 /** Remove white space around shrtcodes */

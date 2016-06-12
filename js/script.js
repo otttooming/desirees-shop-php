@@ -13,33 +13,6 @@ jQuery(document).ready(function(){
         });
     });
 
-    /* prettyPhoto
-    -------------------------------------------------------------- */
-
-    	jQuery("a[rel^='prettyPhoto'], a[rel^='lightbox']").prettyPhoto({
-			animation_speed: 'normal', /* fast/slow/normal */
-			slideshow: 5000, /* false OR interval time in ms */
-			autoplay_slideshow: false, /* true/false */
-			opacity: 0.80, /* Value between 0 and 1 */
-			show_title: true, /* true/false */
-			allow_resize: true, /* Resize the photos bigger than viewport. true/false */
-			default_width: 500,
-			default_height: 344,
-			counter_separator_label: '/', /* The separator for the gallery counter 1 "of" 2 */
-			theme: 'pp_default', /* light_rounded / dark_rounded / light_square / dark_square / facebook */
-			horizontal_padding: 20, /* The padding on each side of the picture */
-			hideflash: false, /* Hides all the flash object on a page, set to TRUE if flash appears over prettyPhoto */
-			wmode: 'opaque', /* Set the flash wmode attribute */
-			autoplay: true, /* Automatically start videos: True/False */
-			modal: false, /* If set to true, only the close button will close the window */
-			deeplinking: false, /* Allow prettyPhoto to update the url to enable deeplinking. */
-			overlay_gallery: true, /* If set to true, a gallery will overlay the fullscreen image on mouse over */
-			keyboard_shortcuts: true, /* Set to false if you open forms inside prettyPhoto */
-			changepicturecallback: function(){}, /* Called everytime an item is shown/changed */
-			social_tools: false,
-			gallery_markup: ''
-		});
-
     /* Mobile navigation
     -------------------------------------------------------------- */
 
@@ -84,17 +57,6 @@ jQuery(document).ready(function(){
     		}
     	}
     });
-
-    /* Hover intent
-    -------------------------------------------------------------- */
-    jQuery('.shopping-cart-wrapper').hoverIntent(
-        function () {
-            jQuery(".cart-popup").stop().slideDown(100);
-        },
-        function () {
-            jQuery(".cart-popup").stop().slideUp(100);
-        }
-    );
 
     /* Alerts
     -------------------------------------------------------------- */
@@ -413,26 +375,6 @@ jQuery(document).ready(function(){
         jQuery(this).has('ul').find('>a').addClass('sf-with-ul');
     });
 
-
-    /* Icons Preview
-    ----------------------------------------------------------------*/
-
-    var modalDiv = jQuery('#iconModal');
-
-    jQuery('.the-icons li').click(function(){
-        var name = jQuery(this).find('i').attr('class');
-
-        modalDiv.find('i').each(function(){
-            jQuery(this).attr('class',name);
-        });
-
-        modalDiv.find('#myModalLabel').text(name);
-
-        modalDiv.modal();
-    });
-
-    jQuery('[rel="tooltip"]').tooltip();
-
     /* Woo
     -------------------------------------------------------------- */
 
@@ -669,7 +611,6 @@ jQuery(document).ready(function(){
 		jQuery('*').css({'cursor':'auto'});
 		jQuery('.product-grid').removeClass('loading').find('#floatingCirclesG').remove();
 
-        productHover();
         check_view_mod();
         listSwitcher();
 
@@ -697,10 +638,6 @@ jQuery(document).ready(function(){
 			return false;
 		});
 	}
-
-	/* Testimonials Gallery */
-
-	jQuery('.testimonials-slider').cbpQTRotator();
 
 	/* Loader */
 
@@ -773,8 +710,6 @@ jQuery(document).ready(function(){
 	  }
 	});
 
-	productHover();
-
 
 }); // End Ready
 /* Product Hover
@@ -796,23 +731,6 @@ function hidePopup(popupOverlay,popupWindow){
 
 function closeParent(el) {
     jQuery(el).parent().slideUp(100);
-}
-
-function productHover(){
-    jQuery('.img-hided').hover(function(){
-	    if (window.innerWidth > 979) {
-		    jQuery(this).animate({
-			    'opacity' : 1
-		    },200);
-	    }
-    }, function(){
-	    if (window.innerWidth > 979) {
-		    jQuery(this).animate({
-			    'opacity' : 0
-		    },200);
-	    }
-    });
-    imageTooltip(jQuery('.imageTooltip'));
 }
 
 function check_view_mod(){
