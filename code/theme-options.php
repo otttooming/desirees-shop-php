@@ -1,6 +1,6 @@
 <?php
 /**
- * Initialize the options before anything else. 
+ * Initialize the options before anything else.
  */
 add_action( 'admin_init', 'custom_theme_options', 1 );
 
@@ -9,21 +9,21 @@ add_action( 'admin_init', 'custom_theme_options', 1 );
  */
 function custom_theme_options() {
   /**
-   * Get a copy of the saved settings array. 
+   * Get a copy of the saved settings array.
    */
   $saved_settings = get_option( 'option_tree_settings', array() );
-	  
-	  
+
+
 	function etheme_theme_settings_defaults() {
 		$defaults = array();
 		return apply_filters('etheme_theme_settings_defaults', $defaults);
 	}
-	
+
   /**
-   * Custom settings array that will eventually be 
+   * Custom settings array that will eventually be
    * passes to the OptionTree Settings API Class.
    */
-   
+
    $sections = array(
         array(
             'id'       => 'general',
@@ -66,11 +66,6 @@ function custom_theme_options() {
             'icon'     => 'icon-indent-right'
         ),
         array(
-            'id'       => 'portfolio',
-            'title'    => 'Portfolio',
-            'icon'     => 'icon-briefcase'
-        ),
-        array(
             'id'       => 'contact_form',
             'title'    => 'Contact Form',
             'icon'     => 'icon-envelope'
@@ -91,7 +86,7 @@ function custom_theme_options() {
             'icon'     => 'icon-cog'
         )
    );
-   
+
    $settings = array(
         array(
             'id'          => 'main_layout',
@@ -100,13 +95,13 @@ function custom_theme_options() {
             'type'        => 'select',
             'section'     => 'general',
             'choices'     => array(
-              array( 
+              array(
                 'value' => 'wide',
-                'label' => 'Wide' 
+                'label' => 'Wide'
               ),
-              array( 
+              array(
                 'value' => 'boxed',
-                'label' => 'Boxed' 
+                'label' => 'Boxed'
               )
             )
         ),
@@ -117,17 +112,17 @@ function custom_theme_options() {
             'type'        => 'select',
             'section'     => 'general',
             'choices'     => array(
-              array( 
+              array(
                 'value' => 'disable',
-                'label' => 'Disable' 
+                'label' => 'Disable'
               ),
-              array( 
+              array(
                 'value' => 'modern',
-                'label' => 'Modern' 
+                'label' => 'Modern'
               ),
-              array( 
+              array(
                 'value' => 'standart',
-                'label' => 'Standard' 
+                'label' => 'Standard'
               ),
             )
         ),
@@ -140,9 +135,9 @@ function custom_theme_options() {
             'type'        => 'checkbox',
             'section'     => 'general',
             'choices'     => array(
-              array( 
+              array(
                 'value' => 1,
-                'label' => '' 
+                'label' => ''
               )
             )
         ),
@@ -155,9 +150,9 @@ function custom_theme_options() {
             'type'        => 'checkbox',
             'section'     => 'general',
             'choices'     => array(
-              array( 
+              array(
                 'value' => 1,
-                'label' => '' 
+                'label' => ''
               )
             )
         ),
@@ -168,7 +163,7 @@ function custom_theme_options() {
             'type'        => 'text',
             'section'     => 'general'
         ),
-        // COLOR SCHEME 
+        // COLOR SCHEME
         array(
             'id'          => 'main_color_scheme',
             'label'       => 'Main color scheme',
@@ -176,13 +171,13 @@ function custom_theme_options() {
             'type'        => 'select',
             'section'     => 'color_scheme',
             'choices'     => array(
-              array( 
+              array(
                 'value' => 'light',
-                'label' => 'Light' 
+                'label' => 'Light'
               ),
-              array( 
+              array(
                 'value' => 'dark',
-                'label' => 'Dark' 
+                'label' => 'Dark'
               )
             )
         ),
@@ -222,13 +217,13 @@ function custom_theme_options() {
             'type'        => 'select',
             'section'     => 'color_scheme',
             'choices'     => array(
-              array( 
+              array(
                 'value' => 'enable',
-                'label' => 'enable' 
+                'label' => 'enable'
               ),
-              array( 
+              array(
                 'value' => 'disable',
-                'label' => 'disable' 
+                'label' => 'disable'
               )
             )
         ),
@@ -337,13 +332,13 @@ function custom_theme_options() {
             'desc'        => 'Works only with expanded header variant',
             'section'     => 'general',
             'choices'     => array(
-              array( 
+              array(
                 'value' => 'default',
-                'label' => 'Default Menu' 
+                'label' => 'Default Menu'
               ),
-              array( 
+              array(
                 'value' => 'mega',
-                'label' => 'Mega Menu' 
+                'label' => 'Mega Menu'
               )
             )
         ),
@@ -372,9 +367,9 @@ function custom_theme_options() {
             'type'        => 'checkbox',
             'section'     => 'header',
             'choices'     => array(
-              array( 
+              array(
                 'value' => 1,
-                'label' => '' 
+                'label' => ''
               )
             )
         ),
@@ -387,9 +382,9 @@ function custom_theme_options() {
             'type'        => 'checkbox',
             'section'     => 'header',
             'choices'     => array(
-              array( 
+              array(
                 'value' => 1,
-                'label' => '' 
+                'label' => ''
               )
             )
         ),
@@ -402,9 +397,9 @@ function custom_theme_options() {
             'type'        => 'checkbox',
             'section'     => 'header',
             'choices'     => array(
-              array( 
+              array(
                 'value' => 1,
-                'label' => '' 
+                'label' => ''
               )
             )
         ),
@@ -447,7 +442,7 @@ function custom_theme_options() {
 <h5>Contact Info</h5>
 <p style="font-size:11px;">30 South Park Avenue<br/>
 San Francisco, CA 94108<br/>
-USA</p> 
+USA</p>
 <p style="font-size:11px;">Phone: (123) 456-7890<br/>
 Fax: +08 (123) 456-7890<br/>
 Email: contact@companyname.com<br/>
@@ -460,10 +455,10 @@ Web: companyname.com</p>
 </p>
 <hr style="margin-bottom:15px;">
 <h5>Dummy Text</h5>
-<p style="font-size:11px;">It is a long established fact that a reader will be 
-distracted by the readable content of a page when 
+<p style="font-size:11px;">It is a long established fact that a reader will be
+distracted by the readable content of a page when
 looking at its layout.</p>
-            
+
             ',
             'type'        => 'textarea',
             'section'     => 'contact_form'
@@ -477,9 +472,9 @@ looking at its layout.</p>
             'type'        => 'checkbox',
             'section'     => 'shop',
             'choices'     => array(
-              array( 
+              array(
                 'value' => 1,
-                'label' => '' 
+                'label' => ''
               )
             )
         ),
@@ -492,9 +487,9 @@ looking at its layout.</p>
             	0 => 1
             ),
             'choices'     => array(
-              array( 
+              array(
                 'value' => 1,
-                'label' => '' 
+                'label' => ''
               ),
             )
         ),
@@ -507,9 +502,9 @@ looking at its layout.</p>
             	0 => 1
             ),
             'choices'     => array(
-              array( 
+              array(
                 'value' => 1,
-                'label' => '' 
+                'label' => ''
               ),
             )
         ),
@@ -522,9 +517,9 @@ looking at its layout.</p>
             	0 => 1
             ),
             'choices'     => array(
-              array( 
+              array(
                 'value' => 1,
-                'label' => '' 
+                'label' => ''
               ),
             )
         ),
@@ -537,9 +532,9 @@ looking at its layout.</p>
             'type'        => 'checkbox',
             'section'     => 'shop',
             'choices'     => array(
-              array( 
+              array(
                 'value' => 1,
-                'label' => '' 
+                'label' => ''
               )
             )
         ),
@@ -552,9 +547,9 @@ looking at its layout.</p>
             	0 => 1
             ),
             'choices'     => array(
-              array( 
+              array(
                 'value' => 1,
-                'label' => '' 
+                'label' => ''
               ),
             )
         ),
@@ -591,9 +586,9 @@ looking at its layout.</p>
             	0 => 1
             ),
             'choices'     => array(
-              array( 
+              array(
                 'value' => 1,
-                'label' => '' 
+                'label' => ''
               ),
             )
         ),
@@ -659,21 +654,21 @@ looking at its layout.</p>
             'default'     => 'grid_list',
             'class'       => 'prodcuts_per_row',
             'choices'     => array(
-              array( 
+              array(
                 'value' => 'grid_list',
-                'label' => 'Grid/List' 
+                'label' => 'Grid/List'
               ),
-              array( 
+              array(
                 'value' => 'list_grid',
-                'label' => 'List/Grid' 
+                'label' => 'List/Grid'
               ),
-              array( 
+              array(
                 'value' => 'grid',
-                'label' => 'Only Grid' 
+                'label' => 'Only Grid'
               ),
-              array( 
+              array(
                 'value' => 'list',
-                'label' => 'Only List' 
+                'label' => 'Only List'
               )
             )
         ),
@@ -685,21 +680,21 @@ looking at its layout.</p>
             'default'     => 3,
             'class'       => 'prodcuts_per_row',
             'choices'     => array(
-              array( 
+              array(
                 'value' => 3,
-                'label' => '3' 
+                'label' => '3'
               ),
-              array( 
+              array(
                 'value' => 4,
-                'label' => '4' 
+                'label' => '4'
               ),
-              array( 
+              array(
                 'value' => 5,
-                'label' => '5' 
+                'label' => '5'
               ),
-              array( 
+              array(
                 'value' => 6,
-                'label' => '6' 
+                'label' => '6'
               ),
             )
         ),
@@ -712,9 +707,9 @@ looking at its layout.</p>
             ),
             'section'     => 'product_grid',
             'choices'     => array(
-              array( 
+              array(
                 'value' => 1,
-                'label' => '' 
+                'label' => ''
               ),
             )
         ),
@@ -746,17 +741,17 @@ looking at its layout.</p>
             'section'     => 'product_grid',
             'default'     => 'swap',
             'choices'     => array(
-              array( 
+              array(
                 'value' => 'disable',
-                'label' => 'Disable' 
+                'label' => 'Disable'
               ),
-              array( 
+              array(
                 'value' => 'tooltip',
-                'label' => 'Tooltip' 
+                'label' => 'Tooltip'
               ),
-              array( 
+              array(
                 'value' => 'swap',
-                'label' => 'Swap' 
+                'label' => 'Swap'
               ),
             )
         ),
@@ -783,9 +778,9 @@ looking at its layout.</p>
             ),
             'section'     => 'product_grid',
             'choices'     => array(
-              array( 
+              array(
                 'value' => 1,
-                'label' => '' 
+                'label' => ''
               ),
             )
         ),
@@ -798,9 +793,9 @@ looking at its layout.</p>
             	0 => 1
             ),
             'choices'     => array(
-              array( 
+              array(
                 'value' => 1,
-                'label' => '' 
+                'label' => ''
               ),
             )
         ),
@@ -813,9 +808,9 @@ looking at its layout.</p>
             	0 => 1
             ),
             'choices'     => array(
-              array( 
+              array(
                 'value' => 1,
-                'label' => '' 
+                'label' => ''
               ),
             )
         ),
@@ -828,13 +823,13 @@ looking at its layout.</p>
             	0 => 1
             ),
             'choices'     => array(
-              array( 
+              array(
                 'value' => 1,
-                'label' => '' 
+                'label' => ''
               ),
             )
         ),
-        // BLOG 
+        // BLOG
         array(
             'id'          => 'post_img_slider',
             'label'       => 'Create a slider from post photos',
@@ -842,9 +837,9 @@ looking at its layout.</p>
             'section'     => 'blog_page',
             'default'     => 0,
             'choices'     => array(
-              array( 
+              array(
                 'value' => 1,
-                'label' => '' 
+                'label' => ''
               ),
             )
         ),
@@ -855,9 +850,9 @@ looking at its layout.</p>
             'section'     => 'blog_page',
             'default'     => 0,
             'choices'     => array(
-              array( 
+              array(
                 'value' => 1,
-                'label' => '' 
+                'label' => ''
               ),
             )
         ),
@@ -924,40 +919,6 @@ looking at its layout.</p>
                 )
             )
         ),
-        // Portfolio
-        array(
-            'id'          => 'portfolio_count',
-            'label'       => 'Items per page',
-            'default'     => -1,
-            'desc'        => 'Use -1 to show all items',
-            'type'        => 'text',
-            'section'     => 'portfolio'
-        ),
-        array(
-            'id'          => 'portfolio_columns',
-            'label'       => 'Columns',
-            'type'        => 'select',
-            'section'     => 'portfolio',
-            'default'     => 3,
-            'choices'     => array(
-              array( 
-                'value' => 1,
-                'label' => 1
-              ),
-              array( 
-                'value' => 2,
-                'label' => 2
-              ),
-              array( 
-                'value' => 3,
-                'label' => 3 
-              ),
-              array( 
-                'value' => 4,
-                'label' => 4 
-              ),
-            )
-        ),
         array(
             'id'          => 'port_use_lightbox',
             'label'       => 'Use lightbox',
@@ -965,9 +926,9 @@ looking at its layout.</p>
             'section'     => 'portfolio',
             'default'     => 1,
             'choices'     => array(
-              array( 
+              array(
                 'value' => 1,
-                'label' => '' 
+                'label' => ''
               ),
             )
         ),
@@ -978,11 +939,11 @@ looking at its layout.</p>
             'section'     => 'portfolio',
             'default'     => 'large',
             'choices'     => array(
-              array( 
+              array(
                 'value' => 'large',
                 'label' => 'Large'
               ),
-              array( 
+              array(
                 'value' => 'small',
                 'label' => 'Small'
               )
@@ -995,9 +956,9 @@ looking at its layout.</p>
             'section'     => 'portfolio',
             'default'     => 1,
             'choices'     => array(
-              array( 
+              array(
                 'value' => 1,
-                'label' => '' 
+                'label' => ''
               ),
             )
         ),
@@ -1008,9 +969,9 @@ looking at its layout.</p>
             'section'     => 'portfolio',
             'default'     => 1,
             'choices'     => array(
-              array( 
+              array(
                 'value' => 1,
-                'label' => '' 
+                'label' => ''
               ),
             )
         ),
@@ -1055,7 +1016,7 @@ looking at its layout.</p>
                     'label'   => ''
                 )
             )
-        ),        
+        ),
         array(
             'id'          => 'thumbs_count',
             'label'       => 'Number of thumbnails in slider below main image',
@@ -1243,9 +1204,9 @@ looking at its layout.
             'type'        => 'checkbox',
             'section'     => 'responsive',
             'choices'     => array(
-              array( 
+              array(
                 'value' => 1,
-                'label' => '' 
+                'label' => ''
               )
             )
         ),
@@ -1266,9 +1227,9 @@ looking at its layout.
             'type'        => 'checkbox',
             'section'     => 'responsive',
             'choices'     => array(
-              array( 
+              array(
                 'value' => 1,
-                'label' => '' 
+                'label' => ''
               )
             )
         ),
@@ -1279,13 +1240,13 @@ looking at its layout.
             'type'        => 'select',
             'section'     => 'responsive',
             'choices'     => array(
-              array( 
+              array(
                 'value' => 'enable',
-                'label' => 'Enable' 
+                'label' => 'Enable'
               ),
-              array( 
+              array(
                 'value' => 'disable',
-                'label' => 'Disable' 
+                'label' => 'Disable'
               ),
             )
         ),
@@ -1298,20 +1259,20 @@ looking at its layout.
             'type'        => 'checkbox',
             'section'     => 'custom_css',
             'choices'     => array(
-              array( 
+              array(
                 'value' => 1,
-                'label' => '' 
+                'label' => ''
               )
             )
         ),
-        
-        
-        
+
+
+
    );
 
   $custom_settings = array(
     'contextual_help' => array(
-      'content'       => array( 
+      'content'       => array(
         array(
           'id'        => 'general_help',
           'title'     => 'General',
@@ -1323,25 +1284,25 @@ looking at its layout.
     'sections'        => $sections,
     'settings'        => $settings
   );
-  
+
   if(is_array($settings)){
-	  foreach($settings as $key => $value){	
+	  foreach($settings as $key => $value){
 		  $defaults[$value['id']] = $value['default'];
 	  }
   }
-  
+
   add_option( 'option_tree', $defaults ); // update_option  add_option
-	
-  
+
+
   /* settings are not the same update the DB */
   if ( $saved_settings !== $custom_settings ) {
-    update_option( 'option_tree_settings', $custom_settings ); 
+    update_option( 'option_tree_settings', $custom_settings );
   }
-  
-} 
+
+}
 
 /**
- * Initialize the meta boxes for pages. 
+ * Initialize the meta boxes for pages.
  */
 add_action( 'admin_init', 'page_meta_boxes' );
 
@@ -1353,21 +1314,21 @@ function page_meta_boxes() {
 			'label'       => 'Sidebar Position',
 			'type'        => 'select',
 			'choices'     => array(
-	              array( 
+	              array(
 	                'value' => '',
-	                'label' => 'Default' 
+	                'label' => 'Default'
 	              ),
-	              array( 
+	              array(
 	                'value' => 'no_sidebar',
-	                'label' => 'Without Sidebar' 
+	                'label' => 'Without Sidebar'
 	              ),
-	              array( 
+	              array(
 	                'value' => 'left',
-	                'label' => 'Left Sidebar' 
+	                'label' => 'Left Sidebar'
 	              ),
-	              array( 
+	              array(
 	                'value' => 'right',
-	                'label' => 'Right Sidebar' 
+	                'label' => 'Right Sidebar'
 	              )
 	            )
 		),
@@ -1387,8 +1348,8 @@ function page_meta_boxes() {
     'priority'  => 'low',
     'fields'    => $page_options
   );
-  
-  ot_register_meta_box( $my_meta_box );	
+
+  ot_register_meta_box( $my_meta_box );
 
 }
 

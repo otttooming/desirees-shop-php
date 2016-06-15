@@ -507,46 +507,6 @@ remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wra
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper');
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
 
-
-function etheme_print_stars($showCount = false){
-	if ( get_option('woocommerce_enable_review_rating') != 'yes' ) return false;
-    global $wpdb;
-    global $post;
-    $count = $wpdb->get_var("
-	    SELECT COUNT(meta_value) FROM $wpdb->commentmeta
-	    LEFT JOIN $wpdb->comments ON $wpdb->commentmeta.comment_id = $wpdb->comments.comment_ID
-	    WHERE meta_key = 'rating'
-	    AND comment_post_ID = $post->ID
-	    AND comment_approved = '1'
-	    AND meta_value > 0
-    ");
-
-$rating = $wpdb->get_var("
-	    SELECT SUM(meta_value) FROM $wpdb->commentmeta
-	    LEFT JOIN $wpdb->comments ON $wpdb->commentmeta.comment_id = $wpdb->comments.comment_ID
-	    WHERE meta_key = 'rating'
-	    AND comment_post_ID = $post->ID
-	    AND comment_approved = '1'
-    ");
-
-if ( $count > 0 ) {
-
-    $average = number_format($rating / $count, 2);
-
-    echo '<div class="starwrapper">';
-
-    if($showCount){
-        ?>
-        <span class="reviews-count"><?php echo comments_number('', __('One Review', ETHEME_DOMAIN),  __('% Reviews', ETHEME_DOMAIN)); ?></span>
-        <?php
-    }
-    echo '<span class="star-rating" title="'.sprintf(__('Rated %s out of 5', ETHEME_DOMAIN), $average).'"><span style="width:'.($average*15).'px"><span class="rating">'.$average.'</span> </span></span>';
-
-    echo '</div>';
-    }
-
-}
-
 /* Grid/List switcher */
 add_action('woocommerce_before_shop_loop', 'etheme_grid_list_switcher',115);
 

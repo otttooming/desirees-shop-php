@@ -23,7 +23,7 @@ get_header(); ?>
         						<?php _e( 'Blog Archives', ETHEME_DOMAIN ); ?>
         					<?php endif; ?>
         				</h3>
-        				
+
         				<?php
         					/* Include the Post-Format-specific template for the content.
         					 * If you want to overload this in a child theme then include a file
@@ -31,8 +31,8 @@ get_header(); ?>
         					 */
         					get_template_part( 'loop', 'archive' );
         				?>
-        
-        				
+
+
         			<?php else : ?>
                         <h3 class="page-title"><?php _e( 'Nothing Found', ETHEME_DOMAIN ); ?></h3>
         			<?php endif; ?>

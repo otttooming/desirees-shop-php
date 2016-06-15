@@ -653,37 +653,6 @@ jQuery(document).ready(function(){
 	    e.preventDefault();
     });
 
-    /* Isotope */
-
-    $portfolio = jQuery('.masonry');
-
-
-
-
-	jQuery('.portfolio-filters a').click(function(){
-		var selector = jQuery(this).attr('data-filter');
-		jQuery('.portfolio-filters a').removeClass('selected');
-		if(!jQuery(this).hasClass('selected')) {
-			jQuery(this).addClass('selected');
-		}
-		$portfolio.isotope({ filter: selector });
-		return false;
-	});
-
-
-	setTimeout(function(){
-        $portfolio.isotope({
-            itemSelector: '.portfolio-item ',
-        });
-		jQuery(window).resize();
-	},500);
-
-	setTimeout(function(){
-		jQuery('.portfolio').addClass('with-transition');
-		jQuery('.portfolio-item').addClass('with-transition');
-	}, 1000);
-
-
     /* Load in view */
 
     var progressBars = jQuery('.progress-bar');

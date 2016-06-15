@@ -4,15 +4,12 @@
  *
  */
 ?>
-<?php global $etheme_responsive; ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<?php if($etheme_responsive): ?>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<?php endif; ?>
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
-<title><?php
+    <meta charset="<?php bloginfo( 'charset' ); ?>" />
+    <title><?php
 	/*
 	 * Print the <title> tag based on what is being viewed.7
 	 */

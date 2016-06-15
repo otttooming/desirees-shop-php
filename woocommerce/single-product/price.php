@@ -21,8 +21,6 @@ global $post, $product;
 
     <div class="product-stock">
 
-       <?php etheme_print_stars(true); ?>
-
         <?php
         	// Availability
         	$availability = $product->get_availability();

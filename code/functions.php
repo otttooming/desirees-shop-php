@@ -8,21 +8,9 @@ add_filter( 'ot_show_new_layout', '__return_false' );
 add_filter( 'ot_theme_mode', '__return_true' );
 load_template( trailingslashit( get_template_directory() ) . 'option-tree/ot-loader.php' );
 
-
-global $etheme_responsive;
-
 add_theme_support('woocommerce');
 
 register_nav_menu('top', 'Top Navigation');
-
-$just_catalog = etheme_get_option('just_catalog');
-$etheme_responsive   = etheme_get_option('responsive');
-
-$etheme_color_version = etheme_get_option('main_color_scheme');
-
-if(isset($_COOKIE['responsive'])) {
-	$etheme_responsive = false;
-}
 
 function remove_loop_button(){
     remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
@@ -33,14 +21,9 @@ function remove_loop_button(){
 	remove_action( 'woocommerce_external_add_to_cart', 'woocommerce_external_add_to_cart', 30 );
 }
 
-if($just_catalog) {
-    add_action('init','remove_loop_button');
-}
-
 if (!isset( $content_width )) $content_width = 920;
 
 function etheme_enqueue_styles() {
-	global $etheme_responsive, $etheme_color_version;
 
     if ( !is_admin() ) {
         wp_enqueue_style("bootstrap",get_template_directory_uri().'/css/bootstrap.css');
@@ -256,32 +239,6 @@ if(!function_exists('et_close_promo')) {
 		die();
 	}
 }
-
-/**
-* Function for disabling Responsive layout
-*
-*/
-
-function etheme_set_responsive() {
-	if(isset($_GET['responsive']) && $_GET['responsive'] == 'off') {
-		if (!isset($_COOKIE['responsive'])) {
-			setcookie('responsive', 1, time()+1209600, COOKIEPATH, COOKIE_DOMAIN, false);
-		}
-	    $redirect_to = $_SERVER['HTTP_REFERER'];
-		wp_redirect($redirect_to); exit();
-	}elseif(isset($_GET['responsive']) && $_GET['responsive'] == 'on') {
-		if (isset($_COOKIE['responsive'])) {
-			setcookie('responsive', 1, time()-1209600, COOKIEPATH, COOKIE_DOMAIN, false);
-		}
-	    $redirect_to = $_SERVER['HTTP_REFERER'];
-		wp_redirect($redirect_to); exit();
-	}
-}
-if(etheme_get_option('responsive'))
-	add_action( 'init', 'etheme_set_responsive');
-
-
-
 
 function etheme_page_menu_args( $args ) {
 	$args['show_home'] = true;
@@ -929,14 +886,7 @@ function blog_breadcrumbs() {
       echo $before . get_the_time('Y') . $after;
 
     } elseif ( is_single() && !is_attachment() ) {
-      if ( get_post_type() == 'etheme_portfolio' ) {
-        $portfolioId = etheme_tpl2id('portfolio.php');
-        $portfolioLink = get_permalink($portfolioId);
-        $post_type = get_post_type_object(get_post_type());
-        $slug = $post_type->rewrite;
-        echo '<a href="' . $portfolioLink . '/">' . $post_type->labels->name . '</a>';
-        if ($showCurrent == 1) echo ' ' . $delimiter . ' ' . $before . get_the_title() . $after;
-      } elseif ( get_post_type() != 'post' ) {
+			if ( get_post_type() != 'post' ) {
         $post_type = get_post_type_object(get_post_type());
         $slug = $post_type->rewrite;
         echo '<a href="' . $homeLink . '/' . $slug['slug'] . '/">' . $post_type->labels->singular_name . '</a>';
@@ -1040,177 +990,6 @@ function etheme_get_chosen_google_font() {
 
     return $chosenFonts;
 
-}
-
-// Footer Demo Blocks
-function etheme_footer_demo($block){
-	switch ($block) {
-		case 1:
-			?>
-		        <span class="footer_title">Our Contacts</span>
-		        <p class="footer-home">
-		        	<i class="icon-home"></i>
-		            United Kingdom, London
-		            <br>
-		            Simple Street 15A
-		        </p>
-		        <p class="footer-phone">
-		        	<i class="icon-phone"></i>
-		            (123) 123.456.7890
-		            <br>
-		            (123) 123.456.7890
-		        </p>
-		        <p class="footer-mail">
-		        	<i class="icon-envelope-alt"></i>
-		            megashop@info.com
-		            <br>
-		            megashop@holding.com
-		        </p>
-			<?php
-		break;
-		case 2:
-			?>
-				<span class="footer_title">About Our Shop</span>
-	            <p>
-	            Lorem Ipsum is simply dummy text of the printing and typesetting
-	            industry. Lorem Ipsum has been the industry's standard dummy text
-	            ever since the 1500s, when an unknown printer took a galley of type
-	            and scrambled it to make a type specimen book. It has survived not
-	            only five centuries, but also the leap into electronic typesetting,
-	            remaining.
-	            </p>
-			<?php
-		break;
-		case 3:
-			?>
-				<span class="footer_title">Flickr</span>
-				<div class="footer_thumbs">
-					<ul class="img-list">
-						<li class="flickr-photo ">
-							<a href="http://www.flickr.com/photos/we-are-envato/8954733698" target="_blank">
-								<img src="http://farm4.static.flickr.com/3820/8954733698_a2646a7642_s.jpg" alt="Author Guilherme Salum (DD Studios) at work in his studio" width="60" height="60">
-							</a>
-						</li>
-						<li class="flickr-photo ">
-							<a href="http://www.flickr.com/photos/we-are-envato/8953389435" target="_blank">
-								<img src="http://farm4.static.flickr.com/3685/8953389435_e5caf8d988_s.jpg" alt="Checking out the outdoor space" width="60" height="60">
-							</a>
-						</li>
-						<li class="flickr-photo footer_thumbs_last-child">
-							<a href="http://www.flickr.com/photos/we-are-envato/8954585074" target="_blank">
-								<img src="http://farm4.static.flickr.com/3795/8954585074_a38ff86602_s.jpg" alt="The team listening to what the next few months holds for the company" width="60" height="60">
-							</a>
-						</li>
-						<li class="flickr-photo ">
-							<a href="http://www.flickr.com/photos/we-are-envato/8954585316" target="_blank">
-								<img src="http://farm3.static.flickr.com/2879/8954585316_60966c9a23_s.jpg" alt="Selina and Collis" width="60" height="60">
-							</a>
-						</li>
-						<li class="flickr-photo ">
-							<a href="http://www.flickr.com/photos/we-are-envato/8954584978" target="_blank">
-								<img src="http://farm8.static.flickr.com/7346/8954584978_00d1041821_s.jpg" alt="Collis speaking to the team" width="60" height="60">
-							</a>
-						</li>
-						<li class="flickr-photo footer_thumbs_last-child">
-							<a href="http://www.flickr.com/photos/we-are-envato/8953388295" target="_blank">
-								<img src="http://farm8.static.flickr.com/7301/8953388295_b5ef30267f_s.jpg" alt="Cyan finds Collis" presentation="" pretty="" width="60" height="60">
-							</a>
-						</li>
-					</ul>
-				</div>
-			<?php
-		break;
-		case 4:
-			?>
-		        <span class="footer_title">STORES</span>
-		        <ul class="footer_menu">
-		        <li><a href="#">New York</a></li>
-		        <li><a href="#">Paris</a></li>
-		        <li><a href="#">London</a></li>
-		        <li><a href="#">Madrid</a></li>
-		        <li><a href="#">Tokio</a></li>
-		        <li><a href="#">Milan</a></li>
-		        <li><a href="#">Hong Kong</a></li>
-		        </ul>
-			<?php
-		break;
-		case 5:
-			?>
-	            <span class="footer_title">Our Offers</span>
-	            <ul class="footer_menu">
-	            <li><a href="#">New products</a></li>
-	            <li><a href="#">Top sellers</a></li>
-	            <li><a href="#">Specials</a></li>
-	            <li><a href="#">Manufacturers</a></li>
-	            <li><a href="#">Suppliers</a></li>
-	            <li><a href="#">Specials</a></li>
-	            <li><a href="#">Customer Service</a></li>
-	            </ul>
-			<?php
-		break;
-		case 6:
-			?>
-		        <span class="footer_title">Our Services</span>
-		        <ul class="footer_menu">
-		        <li><a href="#">Order tracking</a></li>
-		        <li><a href="#">Privacy Policy</a></li>
-		        <li><a href="#">Gift Cards</a></li>
-		        <li><a href="#">Shipping Information</a></li>
-		        <li><a href="#">Returns & refunds</a></li>
-		        <li><a href="#">Personalised Cards</a></li>
-		        <li><a href="#">Delivery information</a></li>
-		        </ul>
-			<?php
-		break;
-		case 7:
-			?>
-	            <span class="footer_title">Our Offers</span>
-	            <img src="<?php echo get_template_directory_uri();?>/images/label_2-1.png" class="footer-logo"alt=""/>
-	            <br>
-	            <img src="<?php echo get_template_directory_uri();?>/images/label_3-1.png"class="footer-logo2" alt=""/>
-	            <img src="<?php echo get_template_directory_uri();?>/images/label_1-1.png"class="footer-logo3" alt=""/>
-			<?php
-		break;
-		case 8:
-			?>
-	            <ul class="footer_copyright_menu">
-	                <li><a href="#">Site Map</a> / </li>
-	                <li><a href="#">Advanced Search</a> / </li>
-	                <li><a href="#">Orders and Returns</a> / </li>
-	                <li><a href="#">Contact Us</a></li>
-	            </ul>
-			<?php
-		break;
-		case 9:
-			?>
-		        <ul class="footer_copyright_payments hidden-phone">
-		            <li><a href="#"><img src="<?php echo get_template_directory_uri();?>/images/1363982755_paypal.png" alt=""/></a></li>
-		            <li><a href="#"><img src="<?php echo get_template_directory_uri();?>/images/1363982759_mastercard.png" alt=""/></a></li>
-		            <li><a href="#"><img src="<?php echo get_template_directory_uri();?>/images/1363984018_visa.png" alt=""/></a></li>
-		            <li><a href="#"><img src="<?php echo get_template_directory_uri();?>/images/1363982767_discover.png" alt=""/></a></li>
-		            <li><a href="#"><img src="<?php echo get_template_directory_uri();?>/images/1363982770_maestro.png" alt=""/></a></li>
-		            <li><a href="#"><img src="<?php echo get_template_directory_uri();?>/images/1363982772_google_checkout.png" alt=""/></a></li>
-		            <li><a href="#"><img src="<?php echo get_template_directory_uri();?>/images/1363982777_cirrus.png" alt=""/></a></li>
-		        </ul>
-			<?php
-		break;
-		case 7:
-			?>
-	            <span class="footer_title">Our Offers</span>
-	            <img src="<?php echo get_template_directory_uri();?>/images/mcafee_antivirus_logo_images-1.png" class="footer-logo"alt=""/>
-	            <br>
-	            <img src="<?php echo get_template_directory_uri();?>/images/ab-seal-horizontal-large.png"class="footer-logo2" alt=""/>
-			<?php
-		break;
-		case 7:
-			?>
-	            <span class="footer_title">Our Offers</span>
-	            <img src="<?php echo get_template_directory_uri();?>/images/mcafee_antivirus_logo_images-1.png" class="footer-logo"alt=""/>
-	            <br>
-	            <img src="<?php echo get_template_directory_uri();?>/images/ab-seal-horizontal-large.png"class="footer-logo2" alt=""/>
-			<?php
-		break;
-	}
 }
 
 function prar($arr){

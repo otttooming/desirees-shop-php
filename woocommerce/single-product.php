@@ -15,15 +15,15 @@ get_header('shop'); ?>
 <div class="container">
     <div class="row">
         <div class="span12 breadcrumbs">
-            <?php 
-                do_action('woocommerce_before_main_content'); 
-                $product_per_row = etheme_get_option('prodcuts_per_row'); 
+            <?php
+                do_action('woocommerce_before_main_content');
+                $product_per_row = etheme_get_option('prodcuts_per_row');
                 $product_sidebar = etheme_get_option('product_page_sidebar');
                 if($product_per_row == 5){
                     $product_sidebar = false;
                 }
-            ?>  <a class="back-to777 button active small arrow-left" href="javascript: history.go(-1)"> <?php _e('Return to Previous Page', ETHEME_DOMAIN); ?></a>    
-         
+            ?>  <a class="back-to777 button active small arrow-left" href="javascript: history.go(-1)"> <?php _e('Return to Previous Page', ETHEME_DOMAIN); ?></a>
+
         </div>
     </div>
 </div>
