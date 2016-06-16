@@ -48,9 +48,9 @@ function woocommerce_catalog_page_ordering() {
 </form>
 <?php   // Adrian's code
 	if (isset($_POST['woocommerce-sort-by-columns']) && (($_COOKIE['shop_pageResults'] <> $_POST['woocommerce-sort-by-columns']))) {
-	$currentProductsPerPage = $_POST['woocommerce-sort-by-columns'];
+	  $currentProductsPerPage = $_POST['woocommerce-sort-by-columns'];
 	} else {
-	$currentProductsPerPage = $_COOKIE['shop_pageResults'];
+	  $currentProductsPerPage = $_COOKIE['shop_pageResults'];
 	}
 	?>
     <script type="text/javascript">
@@ -65,7 +65,7 @@ function dl_sort_by_page($count) {
      $count = $_COOKIE['shop_pageResults'];
   }
   if (isset($_POST['woocommerce-sort-by-columns'])) { //if form submitted
-    setcookie('shop_pageResults', $_POST['woocommerce-sort-by-columns'], time()+1209600, '/', 'www.desirees.ee', false); //this will fail if any part of page has been output- hope this works!
+    setcookie('shop_pageResults', $_POST['woocommerce-sort-by-columns'], time()+1209600, '/', $_SERVER['HTTP_HOST'], false); //this will fail if any part of page has been output- hope this works!
     $count = $_POST['woocommerce-sort-by-columns'];
   }
   // else normal page load and no cookie
