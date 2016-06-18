@@ -10,7 +10,7 @@
 .logo{margin-right:50px;}
 .header-type-default .header { padding-top: 0!important; padding-bottom: 0!important;}
 .header-type-default .logo,
-.header-type-variant2 .logo, 
+.header-type-variant2 .logo,
 .header-type-variant6 .logo{font-size: 38px;line-height: 44px;margin-bottom: 20px;margin-top: 20px;max-width: 300px;}
 .header-type-default .logo{margin-right: 30px;}
 .header-type-variant2 .header, .header-type-variant6 .header{padding-top: 0 !important;padding-bottom: 0 !important;}
@@ -156,7 +156,6 @@ ul.product_list_widget .widget-text{width: 90px;}
 .pda_qty,.product_description_addtocart_button{margin-left:50px;}
 .product_small_slider_img_last,.cart_table_arrows_left,.cart_table_arrows_right{display:none;}
 .product_short_description_price{padding-left:2px;}
-.iosSlider{height:316px!important;}
 .widget_special_offers .product-grid .price{float:none;margin-top:5px;text-align:center;}
 .newproducts .item{margin-right:20px!important;}
 .product-carousel .product_short_description{padding:15px 10px 10px 0 !important;}
@@ -384,7 +383,6 @@ header {}
 #etheme-recent-comments-2 .widget-title,#price_filter-2 .widget-title{margin-top:20px;}
 .grid_content{float:left;}
 .sidebar_grid_price{float:left;margin:20px 20px 0 0;width:42%;}
-.iosSlider{height:200px!important;}
 .follow_us_facebook,.follow_us_twitter,.follow_us_rss{margin-right:6%;}
 .span3.footer_block.tweets-block{margin-bottom:20px;}
 .sidebar_grid_menu,.blog_sidebar_menu{float:left;margin-right:20px;width:42%;}
@@ -735,7 +733,6 @@ th.product-price, td.product-price, th.order-shipto, td.order-shipto{display: no
 .page-template-contacts2-php .contact-form{width:320px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
 .page-template-contacts2-php .contact-form #contact_container{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0 auto;width:275px;}
 .contact_textarea{width:260px;}
-.iosSlider{height:130px!important;}
 .copyright{margin-left:20px;width:250px;margin-bottom: 12px;}
 .table,.product_small_slider,.blog_button,.blog2_post{margin-bottom:40px;}
 .shopping_cart_wrap,.shopping_cart_wrap ul,.back_to_previous_page,.footer_block2{float:none;}

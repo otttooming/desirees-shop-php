@@ -60,43 +60,8 @@ if($attachment_ids){
         <div class="more-views-arrow prev arrow<?php echo $rand ?> disabled" style="cursor: pointer; ">&nbsp;</div>
         <div class="more-views-arrow next arrow<?php echo $rand ?>" style="cursor: pointer; ">&nbsp;</div>
     <?php } ?>
-    <?php if(count($attachment_ids) > 1 && $product_layout != 'variant3'){ ?>
-        <script type="text/javascript">
-            jQuery(document).ready(function(){
-	            jQuery('.views-gallery').iosSlider({
-	                desktopClickDrag: true,
-	                snapToChildren: true,
-	                infiniteSlider: false,
-	                navNextSelector: '.arrow<?php echo $rand ?>.next',
-	                navPrevSelector: '.arrow<?php echo $rand ?>.prev',
-	                lastSlideOffset: <?php  echo ($thums_count - 1); ?>,
-	                onFirstSlideComplete: function(){
-	                    jQuery('.arrow<?php echo $rand ?>.prev').addClass('disabled');
-	                },
-	                onLastSlideComplete: function(){
-	                    jQuery('.arrow<?php echo $rand ?>.next').addClass('disabled');
-	                },
-	                onSlideChange: function(){
-	                    jQuery('.arrow<?php echo $rand ?>.prev').removeClass('disabled');
-	                    jQuery('.arrow<?php echo $rand ?>.next').removeClass('disabled');
-	                }
-	            });
-            });
-        </script>
-    <?php } ?>
-    <?php if(count($attachment_ids) > 1 && $product_layout == 'variant3'){
-        wp_enqueue_script('jcarousel', get_template_directory_uri().'/js/jcarousel.js');
-        wp_enqueue_style("carousel",get_template_directory_uri().'/css/carousel.css');
-    ?>
-        <script type="text/javascript">
-            jQuery(document).ready(function(){
-                jQuery('.jcarousel-horizontal').jcarousel({
-                    scroll: 1,
-                    vertical:true
-                });
-            });
-        </script>
-    <?php } ?>
+
+
     <?php
 }
 ?>

@@ -36,11 +36,6 @@ function custom_theme_options() {
             'icon'     => 'icon-picture'
         ),
         array(
-            'id'       => 'typography',
-            'title'    => 'Typography',
-            'icon'     => 'icon-text-height'
-        ),
-        array(
             'id'       => 'header',
             'title'    => 'Header',
             'icon'     => 'icon-cogs'
@@ -69,21 +64,6 @@ function custom_theme_options() {
             'id'       => 'contact_form',
             'title'    => 'Contact Form',
             'icon'     => 'icon-envelope'
-        ),
-        array(
-            'id'       => 'responsive',
-            'title'    => 'Responsive',
-            'icon'     => 'icon-mobile-phone'
-        ),
-        array(
-            'id'       => 'custom_css',
-            'title'    => 'Custom CSS',
-            'icon'     => 'icon-paper-clip'
-        ),
-        array(
-            'id'       => 'backup',
-            'title'    => 'Import/Export',
-            'icon'     => 'icon-cog'
         )
    );
 

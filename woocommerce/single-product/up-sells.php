@@ -39,7 +39,7 @@ if ( $products->have_posts() ) : ?>
 			<?php while ( $products->have_posts() ) : $products->the_post(); $upsells_count++; ?>
 		      <div class="slide product-slide">
 				<?php woocommerce_get_template_part( 'content', 'product' ); ?>
-	           </div> 
+	           </div>
 			<?php endwhile; // end of the loop. ?>
             </div>
         </div>
@@ -50,40 +50,13 @@ if ( $products->have_posts() ) : ?>
 	        		$arrowClass = 'hidden-desktop';
         		}
         	?>
-        	
+
             <div class="prev <?php echo $arrowClass; ?> related-arrow arrow<?php echo $rand ?>" style="cursor: pointer; ">&nbsp;</div>
             <div class="next <?php echo $arrowClass; ?> related-arrow arrow<?php echo $rand ?>" style="cursor: pointer; ">&nbsp;</div>
         <?php endif; ?>
-			
-                           
-    </div><!-- product-slider -->     
 
-    <?php if($upsells_count > 1): ?>
-	    <script type="text/javascript">
-            jQuery(document).ready(function(){
-    	        jQuery('.arrow<?php echo $rand ?>.prev').addClass('disabled');
-    	        jQuery('.slider-<?php echo $rand ?>').iosSlider({
-    	            desktopClickDrag: true,
-    	            snapToChildren: true,
-    	            infiniteSlider: false,
-    	            navNextSelector: '.arrow<?php echo $rand ?>.next',
-    	            navPrevSelector: '.arrow<?php echo $rand ?>.prev',
-    	            lastSlideOffset: 3,
-    	            onFirstSlideComplete: function(){
-    	                jQuery('.arrow<?php echo $rand ?>.prev').addClass('disabled');
-    	            },
-    	            onLastSlideComplete: function(){
-    	                jQuery('.arrow<?php echo $rand ?>.next').addClass('disabled');
-    	            },
-    	            onSlideChange: function(){
-    	                jQuery('.arrow<?php echo $rand ?>.prev').removeClass('disabled');
-    	                jQuery('.arrow<?php echo $rand ?>.next').removeClass('disabled');
-    	            }
-    	        });  
-	        });               
-	    </script>
-    <?php endif; ?>
-    
-<?php endif; 
+    </div><!-- product-slider -->
+
+<?php endif;
 
 wp_reset_query();
