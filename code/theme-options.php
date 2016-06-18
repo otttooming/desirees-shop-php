@@ -1149,12 +1149,7 @@ looking at its layout.
             'id'          => 'custom_tab',
             'label'       => 'Custom Tab',
             'desc'        => 'Enter custom content you would like to output to the product custom tab (for all products)',
-            'default'     => '
-<div class="global-custom-tab">
-<img class="img-left" src="[template_url]/images/assets/customtab.png" alt="" />
-<h3>Custom TEXT/HTML</h3>Ultricies sociis ut vel parturient! Tempor! Nec quis turpis placerat ac hac tincidunt, velit, vel sit mauris a, dolor, natoque enim! Etiam risus? Elit, adipiscing dignissim ut et risus sit placerat, penatibus tincidunt, diam sed dignissim rhoncus mus lectus, penatibus arcu sit in mattis porta placerat. Ultricies velit odio. Vel? Aliquam nunc dolor! Nisi, cras, nunc, et auctor? Augue facilisis! Augue eu dis platea sed, placerat hac pid, lectus dapibus turpis in tincidunt arcu rhoncus auctor. Sit duis nascetur vut! Pulvinar egestas, aenean, sagittis odio enim magna, etiam platea nec lundium, nisi, mauris porttitor elementum a, tempor turpis. Aliquam nunc dolor! Nisi, cras, nunc, et auctor? Augue facilisis! Augue eu dis platea sed, placerat hac pid, lectus dapibus turpis in tincidunt arcu rhoncus auctor. Sit duis nascetur vut! Pulvinar egestas, aenean, sagittis odio enim magna, etiam platea nec lundium, nisi, mauris porttitor elementum a, tempor turpis. Aliquam nunc dolor! Nisi, cras, nunc, et auctor? Augue facilisis! Augue eu dis platea sed, placerat hac pid, lectus dapibus turpis in tincidunt arcu rhoncus auctor. Sit duis nascetur vut! Pulvinar egestas, aenean, sagittis odio enim magna, etiam platea nec lundium, nisi, mauris porttitor elementum a, tempor turpis.
-</div>
-            ',
+            'default'     => '',
             'type'        => 'textarea',
             'section'     => 'single_product'
         ),
