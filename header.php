@@ -50,9 +50,8 @@
 <?php
 	wp_head();
 ?>
-<?php $header_type = ''; $header_type = apply_filters('custom_header_filter', $header_type); ?>
 </head>
-<body <?php $fixed = ''; if(etheme_get_option('fixed_nav')) $fixed .= ' fixNav-enabled '; if($header_type == 'variant6' && is_front_page()) $fixed .= ' header-overlapped '; body_class('no-svg '.etheme_get_option('main_layout').' banner-mask-'.etheme_get_option('banner_mask').$fixed); ?>>
+<body <?php $fixed = ''; if(etheme_get_option('fixed_nav')) $fixed .= ' fixNav-enabled '; body_class('no-svg '.etheme_get_option('main_layout').' banner-mask-'.etheme_get_option('banner_mask').$fixed); ?>>
 
 
 	<div class="wrapper">
@@ -70,7 +69,7 @@
 
 
 	<?php if((etheme_get_option('search_form') || (class_exists('Woocommerce') && !etheme_get_option('just_catalog') && etheme_get_option('cart_widget')) || etheme_get_option('top_links') || etheme_get_option('header_phone') != '')): ?>
-		<div class="header-top header-top-<?php echo $header_type; ?> <?php if($header_type == "default") echo 'hidden-desktop'; ?>">
+		<div class="header-top header-top-default hidden-desktop">
 			<div class="container">
 				<div class="row header-variant2">
 		    		<div class="span4 header-phone"><?php etheme_option('header_phone') ?></div>
@@ -114,7 +113,7 @@
 	    </div>
     <?php endif; ?>
 
-    <div class="header-bg header-type-<?php echo $header_type; ?>">
+    <div class="header-bg header-type-default">
     <div class="container header-area">
 
         <header class="row header ">
@@ -122,43 +121,34 @@
                 <?php etheme_logo(); ?>
             </div>
 
-	        <?php if($header_type == 'default'): ?>
-	            <div class="span3 visible-desktop">
-	                <?php if(etheme_get_option('header_phone') && etheme_get_option('header_phone') != ''): ?>
-	                    <span class="search_text">
-	                        <?php etheme_option('header_phone') ?>
-	                    </span>
-	                <?php endif; ?>
-		            <?php if(etheme_get_option('search_form')): ?>
-		                <div class="search_form">
-		                    <?php get_search_form(); ?>
-		                </div>
-	                <?php endif; ?>
-	            </div>
+            <div class="span3 visible-desktop">
+                <?php if(etheme_get_option('header_phone') && etheme_get_option('header_phone') != ''): ?>
+                    <span class="search_text">
+                        <?php etheme_option('header_phone') ?>
+                    </span>
+                <?php endif; ?>
+	            <?php if(etheme_get_option('search_form')): ?>
+	                <div class="search_form">
+	                    <?php get_search_form(); ?>
+	                </div>
+                <?php endif; ?>
+            </div>
 
-	            <div class="span3 shopping_cart_wrap visible-desktop">
+            <div class="span3 shopping_cart_wrap visible-desktop">
 
-	                <?php if(class_exists('Woocommerce') && !etheme_get_option('just_catalog') && etheme_get_option('cart_widget')): ?>
-	                    <div id="top-cart" class="shopping-cart-wrapper widget_shopping_cart">
-	                        <?php $cart_widget = new Etheme_WooCommerce_Widget_Cart(); $cart_widget->widget(); ?>
-	                    </div>
-	                <?php endif ;?>
-	                <div class="clear"></div>
-	                <?php if(etheme_get_option('top_links')): ?>
-	                    <?php  get_template_part( 'et-links' ); ?>
-	                <?php endif; ?>
-	            </div>
-	    	<?php endif; ?>
-
-		    <?php if($header_type == 'variant2' || $header_type == 'variant5' || $header_type == 'variant6'): ?>
-	            <div id="main-nav">
-	                <?php etheme_header_wp_navigation(); ?>
-	            </div>
-		    <?php endif; ?>
+                <?php if(class_exists('Woocommerce') && !etheme_get_option('just_catalog') && etheme_get_option('cart_widget')): ?>
+                    <div id="top-cart" class="shopping-cart-wrapper widget_shopping_cart">
+                        <?php $cart_widget = new Etheme_WooCommerce_Widget_Cart(); $cart_widget->widget(); ?>
+                    </div>
+                <?php endif ;?>
+                <div class="clear"></div>
+                <?php if(etheme_get_option('top_links')): ?>
+                    <?php  get_template_part( 'et-links' ); ?>
+                <?php endif; ?>
+            </div>
         </header>
-	    <?php if($header_type == 'default' || $header_type == 'variant3') etheme_header_menu(); ?>
+	    <?php etheme_header_menu(); ?>
     </div>
-    <?php if($header_type == 'variant4') etheme_header_menu(); ?>
 
     <?php
         get_template_part( 'et-styles' );

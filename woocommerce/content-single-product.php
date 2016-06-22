@@ -12,14 +12,11 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 ?>
 
-<?php
-    do_action( 'woocommerce_before_single_product' );
-    $product_layout = etheme_get_option('single_product_layout');
-?>
+<?php do_action( 'woocommerce_before_single_product' ); ?>
 
 <div class="clear"></div>
 <div itemscope="" itemtype="http://schema.org/Product">
-    <div id="product-page" class="product_layout_<?php echo $product_layout; ?> row product">
+    <div id="product-page" class="product_layout_variant3 row product">
 
     	<?php do_action( 'woocommerce_before_single_product_summary' ); ?>
         <div class="span4 product_description_mainblock productcol summary">

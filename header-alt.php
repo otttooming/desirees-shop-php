@@ -52,8 +52,6 @@
 </head>
 <body <?php $fixed = ''; if(etheme_get_option('fixed_nav')) $fixed = ' fixNav-enabled '; body_class('no-svg '.etheme_get_option('main_layout').' banner-mask-'.etheme_get_option('banner_mask').$fixed); ?>>
 
-	<?php $header_type = apply_filters('custom_header_filter',@$header_type); ?>
-
 	<div class="wrapper">
 
     <?php if(etheme_get_option('loader')): ?>
@@ -68,7 +66,7 @@
     <?php endif; ?>
 
 	<?php if((etheme_get_option('search_form') || (class_exists('Woocommerce') && !etheme_get_option('just_catalog') && etheme_get_option('cart_widget')) || etheme_get_option('top_links') || etheme_get_option('header_phone') != '')): ?>
-		<div class="header-top header-top-<?php echo $header_type; ?> <?php if($header_type == "default") echo 'hidden-desktop'; ?>">
+		<div class="header-top header-top-default hidden-desktop">
 			<div class="container">
 				<div class="row header-variant2">
 		    		<div class="span4 header-phone"><?php etheme_option('header_phone') ?></div>
@@ -97,7 +95,6 @@
         </header>
 
     </div>
-    <?php if($header_type == 'variant4') etheme_header_menu(); ?>
 
     <?php
         get_template_part( 'et-styles' );

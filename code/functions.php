@@ -136,24 +136,13 @@ function etheme_demo_alerts(){
     do_action('etheme_demo_alerts');
 }
 
-function get_header_type() {
-	return etheme_get_option('header_type');
-}
-
-add_filter('custom_header_filter', 'get_header_type',10);
-
 /* Header Template Parts */
 
 function etheme_header_menu(){
-
-	$menuClass = 'menu '.etheme_get_option('menu_type').'-menu';
-	if(!etheme_get_option('menu_type')){
-		$menuClass = 'menu default-menu';
-	}
 	?>
     <div class="row">
         <div id="main-nav" class="span12">
-            <?php wp_nav_menu(array('theme_location' => 'top', 'name' => 'top', 'container' => 'div', 'container_class' => $menuClass)); ?>
+            <?php wp_nav_menu(array('theme_location' => 'top', 'name' => 'top', 'container' => 'div', 'container_class' => 'menu default-menu')); ?>
         </div>
     </div>
 	<?php
@@ -172,54 +161,10 @@ function etheme_logo() {
 	<?php endif ;
 }
 
-
-
 add_action( 'after_setup_theme', 'et_promo_remove', 11 );
 if(!function_exists('et_promo_remove')) {
 	function et_promo_remove() {
 		//update_option('et_close_promo_etag', 'ETag: "bca6c0-b9-500bba1239ca80"');
-	}
-}
-
-
-if(!function_exists('et_show_promo_text')) {
-	function et_show_promo_text() {
-		$versionsUrl = 'http://8theme.com/import/';
-		$ver = 'promo';
-		$folder = $versionsUrl.''.$ver;
-
-		$txtFile = $folder.'/idstore.txt';
-		$file_headers = @get_headers($txtFile);
-
-		$etag = $file_headers[4];
-
-		$cached = false;
-		$promo_text = false;
-
-		$storedEtag = get_option('et_last_promo_etag');
-		$closedEtag = get_option('et_close_promo_etag');
-
-		if($etag == $storedEtag && $closedEtag != $etag) {
-			$storedEtag = get_option('et_last_promo_etag');
-			$promo_text = get_option('et_promo_text');
-		} else if($closedEtag == $etag) {
-			return;
-		} else {
-			$fileContent = file_get_contents($txtFile);
-			update_option('et_last_promo_etag', $etag);
-			update_option('et_promo_text', $fileContent);
-		}
-
-		if($file_headers[0] == 'HTTP/1.1 200 OK') {
-			echo '<div class="promo-text-wrapper">';
-				if(!$promo_text && isset($fileContent)) {
-					echo $fileContent;
-				} else {
-					echo $promo_text;
-				}
-				echo '<div class="close-btn" title="Hide promo text">x</div>';
-			echo '</div>';
-		}
 	}
 }
 

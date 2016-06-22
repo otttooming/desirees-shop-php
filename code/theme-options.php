@@ -122,21 +122,6 @@ function custom_theme_options() {
             )
         ),
         array(
-            'id'          => 'nice_scroll',
-            'label'       => 'Nice Scroll',
-            'default'     => array(
-            	0 => 1
-            ),
-            'type'        => 'checkbox',
-            'section'     => 'general',
-            'choices'     => array(
-              array(
-                'value' => 1,
-                'label' => ''
-              )
-            )
-        ),
-        array(
             'id'          => 'copyright',
             'label'       => 'Copyright Text',
             'default'     => 'Wordpress DEMO Store. All Rights Reserved.',
@@ -144,23 +129,6 @@ function custom_theme_options() {
             'section'     => 'general'
         ),
         // COLOR SCHEME
-        array(
-            'id'          => 'main_color_scheme',
-            'label'       => 'Main color scheme',
-            'default'     => 'light',
-            'type'        => 'select',
-            'section'     => 'color_scheme',
-            'choices'     => array(
-              array(
-                'value' => 'light',
-                'label' => 'Light'
-              ),
-              array(
-                'value' => 'dark',
-                'label' => 'Dark'
-              )
-            )
-        ),
         array(
             'id'          => 'activecol',
             'label'       => 'Main Color',
@@ -258,70 +226,6 @@ function custom_theme_options() {
             'section'     => 'typography',
         ),
         // HEADER
-        array(
-            'id'          => 'header_type',
-            'label'       => 'Header Type',
-            'default'     => 'variant2',
-            'type'        => 'radio-image',
-            'section'     => 'header',
-            'class'       => '',
-            'choices'     => array(
-                array(
-                    'value'   => 'default',
-                    'label'   => 'Expanded',
-                    'src'     => OT_URL . '/assets/images/header_v1.jpg'
-                ),
-                array(
-                    'value'   => 'variant2',
-                    'label'   => 'Compressed',
-                    'src'     => OT_URL . '/assets/images/header_v2.jpg'
-                ),
-                array(
-                    'value'   => 'variant3',
-                    'label'   => 'Variant 3',
-                    'src'     => OT_URL . '/assets/images/header_v3.jpg'
-                ),
-                array(
-                    'value'   => 'variant4',
-                    'label'   => 'Variant 4',
-                    'src'     => OT_URL . '/assets/images/header_v4.jpg'
-                ),
-                array(
-                    'value'   => 'variant5',
-                    'label'   => 'Variant 5',
-                    'src'     => OT_URL . '/assets/images/header_v5.jpg'
-                ),
-                array(
-                    'value'   => 'variant6',
-                    'label'   => 'Variant 6',
-                    'src'     => OT_URL . '/assets/images/header_v6.jpg'
-                ),
-                /*
-                array(
-                    'value'   => 'variant7',
-                    'label'   => 'Variant 7',
-                    'src'     => OT_URL . '/assets/images/header_v7.jpg'
-                )*/
-            )
-        ),
-        array(
-            'id'          => 'menu_type',
-            'label'       => 'Menu Type',
-            'default'     => 'default',
-            'type'        => 'select',
-            'desc'        => 'Works only with expanded header variant',
-            'section'     => 'general',
-            'choices'     => array(
-              array(
-                'value' => 'default',
-                'label' => 'Default Menu'
-              ),
-              array(
-                'value' => 'mega',
-                'label' => 'Mega Menu'
-              )
-            )
-        ),
         array(
             'id'          => 'logo',
             'label'       => 'Logo image',
@@ -601,7 +505,7 @@ looking at its layout.</p>
         array(
             'id'          => 'product_bage_banner',
             'label'       => 'Product Page Banner',
-            'default'     => 'wp-content/themes/idstore/images/assets/shop-banner.jpg',
+            'default'     => '',
             'desc'        => 'Upload image: png, jpg or gif file',
             'type'        => 'upload',
             'section'     => 'shop'
@@ -650,32 +554,6 @@ looking at its layout.</p>
                 'value' => 'list',
                 'label' => 'Only List'
               )
-            )
-        ),
-        array(
-            'id'          => 'prodcuts_per_row',
-            'label'       => 'Products per row',
-            'type'        => 'select',
-            'section'     => 'product_grid',
-            'default'     => 3,
-            'class'       => 'prodcuts_per_row',
-            'choices'     => array(
-              array(
-                'value' => 3,
-                'label' => '3'
-              ),
-              array(
-                'value' => 4,
-                'label' => '4'
-              ),
-              array(
-                'value' => 5,
-                'label' => '5'
-              ),
-              array(
-                'value' => 6,
-                'label' => '6'
-              ),
             )
         ),
         array(
@@ -956,31 +834,6 @@ looking at its layout.</p>
             )
         ),
         // Single Product Page
-        array(
-            'id'          => 'single_product_layout',
-            'label'       => 'Single Product page layout',
-            'default'     => 'default',
-            'type'        => 'radio-image',
-            'section'     => 'single_product',
-            'class'       => '',
-            'choices'     => array(
-                array(
-                    'value'   => 'default',
-                    'label'   => 'Default',
-                    'src'     => get_template_directory_uri().'/option-tree/assets/images/product_1.jpg'
-                ),
-                array(
-                    'value'   => 'variant2',
-                    'label'   => 'Portrait Images',
-                    'src'     => get_template_directory_uri().'/option-tree/assets/images/product_2.jpg'
-                ),
-                array(
-                    'value'   => 'variant3',
-                    'label'   => 'Portrait Images 2',
-                    'src'     => get_template_directory_uri().'/option-tree/assets/images/product_3.jpg'
-                )
-            )
-        ),
         array(
             'id'          => 'ajax_addtocart',
             'label'       => 'Ajax "Add To Cart"',

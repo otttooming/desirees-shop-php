@@ -246,7 +246,7 @@ if ( ! class_exists( 'OT_Settings' ) ) {
               }
               
             }
-            et_show_promo_text();
+
             echo '<div class="wrap settings-wrap" id ="page-' . $page['id'] . '">';
   
               //screen_icon( ( isset( $page['screen_icon'] ) ? $page['screen_icon'] : 'options-general' ) );

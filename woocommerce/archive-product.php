@@ -90,7 +90,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 			        ?>
 
-                    <div id="products-grid" class="products_grid <?php echo $view_class;  ?> row rows-count<?php echo $product_per_row ?>">
+                    <div id="products-grid" class="products_grid <?php echo $view_class;  ?> row rows-count4">
         				<?php while ( have_posts() ) : the_post(); ?>
 
         					<?php woocommerce_get_template_part( 'content', 'product' ); ?>

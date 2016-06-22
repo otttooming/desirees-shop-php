@@ -28,5 +28,4 @@
 					</div><!-- .entry-content -->
 				</div><!-- #post-## -->
 
-
 <?php endwhile; // end of the loop. ?>

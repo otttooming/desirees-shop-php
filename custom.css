@@ -803,7 +803,7 @@ th.product-total, td.product-total {
   height: 40px;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
-  border-bottom: none !important;
+  border-bottom: 1px solid transparent !important;
   background-color: #333 !important;
   font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important;
   font-style: italic; }
@@ -1101,7 +1101,8 @@ hr {
 #top-cart > a {
   font-size: 20px;
   font-style: italic;
-  text-transform: uppercase !important; }
+  text-transform: uppercase !important;
+  white-space: nowrap; }
 
 #top-cart > a:hover {
   color: #a30000; }
@@ -1651,3 +1652,24 @@ abbr[title] {
 
 .fl-l {
   float: none !important; }
+
+.product-grid .product-name a, .product-slider .slider-title {
+  white-space: normal; }
+
+.product-slider .carousel {
+  white-space: nowrap;
+  overflow-x: scroll; }
+
+.product-slider .product-slide {
+  float: none !important;
+  display: inline-block; }
+
+.product_image .views-gallery {
+  overflow-y: scroll; }
+
+.product_image .views-gallery .slide {
+  float: none !important;
+  display: inline-block; }
+
+.product_layout_variant3 .product_image .views-gallery {
+  padding: 0; }
