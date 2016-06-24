@@ -939,9 +939,7 @@ font-family: 'Open Sans', Arial, sans-serif;
 .main-info{ }
 #product-page .main-image {text-align: center;}
 #product-page #wrap {vertical-align: middle;z-index:9998 !important;}
-div.product_meta span{
-	display: block;
-}
+
 /* Product images
 -------------------------------------------------------------- */
 .product_image{}

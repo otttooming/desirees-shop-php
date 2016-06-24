@@ -1871,16 +1871,21 @@ td.product-quantity {
     padding: 10px;
   }
   .product_meta {
-    text-align: center;
-  	span {
-  	 display: block;
-  	 text-transform: uppercase;
+
+    @at-root .posted-in__header,
+    .tagged-as__header {
+      margin: 0 5px 0 0;
+    }
+
+  	@at-root .separator__tag {
+      margin: 0 5px;
+  	  text-transform: uppercase;
     	&.product-code {
     		 display: none;
     	}
     }
-  }
 
+  }
 }
 
 .footer-black-bg {
@@ -2115,7 +2120,7 @@ abbr[title] {
 
 .products-list .product-grid {
   display: flex;
-  
+
   .img-wrapper {
     display: flex;
     align-items: center;
