@@ -14,27 +14,21 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 <?php do_action( 'woocommerce_before_single_product' ); ?>
 
-<div class="clear"></div>
 <div itemscope="" itemtype="http://schema.org/Product">
     <div id="product-page" class="product_layout_variant3 row product">
 
-    	<?php do_action( 'woocommerce_before_single_product_summary' ); ?>
+      	<?php do_action( 'woocommerce_before_single_product_summary' ); ?>
+
         <div class="span4 product_description_mainblock productcol summary">
-    		<?php do_action( 'woocommerce_single_product_summary' ); ?>
+    		    <?php do_action( 'woocommerce_single_product_summary' ); ?>
+    	  </div>
 
-    	</div><!-- .summary -->
-        <div class="span3 product_description_banner">
-    		<?php if (etheme_get_option('right_banners') && etheme_get_option('right_banners') != '' ) : ?>
-    			<?php etheme_option('right_banners',true); ?>
-            <?php else: ?>
-                <?php dynamic_sidebar( 'product-single-widget-area' ); ?>
-            <?php wp_reset_query(); ?>
-    		<?php endif; ?>
+        <div class="span3 product_description_banner cfx">
+            <?php dynamic_sidebar( 'product-single-widget-area' ); ?>
         </div>
-        <div class="clear"></div>
 
-    </div><!-- #product-<?php the_ID(); ?> -->
-<?php do_action( 'woocommerce_after_single_product_summary' ); ?>
+    </div>
+    <?php do_action( 'woocommerce_after_single_product_summary' ); ?>
 
-<?php do_action( 'woocommerce_after_single_product' ); ?>
+    <?php do_action( 'woocommerce_after_single_product' ); ?>
 </div>

@@ -9,8 +9,11 @@
  * @version     2.0.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-    get_header('shop');
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
+
+get_header('shop');
 ?>
 
 <div class="container">
@@ -20,24 +23,19 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
                 do_action('woocommerce_before_main_content');
 
                 extract(etheme_get_shop_sidebar());
-
-	        ?>
-	        <a class="back-to777 button active small arrow-left" href="javascript: history.go(-1)"> <?php _e('Return to Previous Page', ETHEME_DOMAIN); ?></a>
-
+	          ?>
         </div>
     </div>
 </div>
+
 <div class="container">
-    <div class="row">
-        	<div id="products-sidebar" class="span3 sidebar_grid leftnav acc_enabled sidebar_<?php echo $grid_sidebar ?>">
-        		<?php if ( is_active_sidebar( 'product-widget-area' ) ) : ?>
-        			<?php dynamic_sidebar( 'product-widget-area' ); ?>
-                <?php else: ?>
-                    <?php etheme_get_wc_categories_menu() ?>
-        		<?php endif; ?>
-                <div class="clear"></div>
-            </div>
-    	<div id="default_products_page_container" class="grid_content with-sidebar-<?php echo $grid_sidebar ?> <?php if(!$product_sidebar) echo 'span12 no-sidebar'; else echo 'span9 with-sidebar'?>">
+    <div class="row cfx">
+
+    	<div id="products-sidebar" class="span3 sidebar_grid leftnav acc_enabled sidebar_left cfx">
+          <?php dynamic_sidebar( 'product-widget-area' ); ?>
+      </div>
+
+    	<div id="default_products_page_container" class="grid_content with-sidebar-left span9 with-sidebar">
         <?php
             global $wp_query;
             $cat = $wp_query->get_queried_object();
@@ -48,97 +46,66 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
                 $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
                 $image = wp_get_attachment_url( $thumbnail_id );
             }
+        ?>
 
-            if($image && $image !=''){
-                ?>
-                    <div class="grid_slider">
-                        <img class="cat-banner" src="<?php echo $image ?>" />
-                    </div>
-                <?php
-            } ?>
+        <?php if($image && $image !=''){ ?>
+          <div class="grid_slider">
+              <img class="cat-banner" src="<?php echo $image ?>" />
+          </div>
+        <?php } ?>
 
-            <?php if(isset($cat->description) && $cat->description !='' && !is_shop()) {
-	            ?>
-	            	<div class="product-category-description">
-		            	<?php echo do_shortcode($cat->description); ?>
-	            	</div>
-	            <?php
-            }
+        <?php if(isset($cat->description) && $cat->description !='' && !is_shop()) { ?>
+          	<div class="product-category-description">
+            	<?php echo do_shortcode($cat->description); ?>
+          	</div>
+        <?php } ?>
 
-
-         ?>
-
-                <?php etheme_demo_alerts(); ?>
+        <?php etheme_demo_alerts(); ?>
 
     		<?php if ( have_posts() ) : ?>
 
-                <div class="grid_pagination_block">
-                	<?php do_action('woocommerce_before_shop_loop'); ?>
-                    <div class="clear"></div>
-                </div>
+          <div class="grid_pagination_block cfx">
+          	<?php do_action('woocommerce_before_shop_loop'); ?>
+          </div>
 
-    				<?php woocommerce_product_subcategories(array('before'=>'<div class="product_categories_grid">', 'after' => '</div>')); ?>
+    			<?php woocommerce_product_subcategories(array('before'=>'<div class="product_categories_grid">', 'after' => '</div>')); ?>
 
+          <div id="products-grid" class="products_grid products-grid row rows-count4 cfx">
+              <?php while ( have_posts() ) : the_post(); ?>
 
-					<?php $view_mode = etheme_get_option('view_mode'); ?>
-			        <?php
-			            if($view_mode == 'grid' || $view_mode == 'grid_list') {
-				            $view_class = 'products-grid';
-			            }else{
-				            $view_class = 'products-list';
-			            }
+      					<?php woocommerce_get_template_part( 'content', 'product' ); ?>
 
-			        ?>
+      				<?php endwhile; // end of the loop. ?>
+  				</div>
 
-                    <div id="products-grid" class="products_grid <?php echo $view_class;  ?> row rows-count4">
-        				<?php while ( have_posts() ) : the_post(); ?>
+  				<script type="text/javascript">listSwitcher(); check_view_mod();</script>
 
-        					<?php woocommerce_get_template_part( 'content', 'product' ); ?>
-
-        				<?php endwhile; // end of the loop. ?>
-                        <div style="clear: both;"></div>
-    				</div>
-    				<script type="text/javascript">listSwitcher(); check_view_mod();</script>
-
-
-        		<div class="clear"></div>
-
-                <div class="grid_pagination_bottom_block">
-                	<?php do_action('woocommerce_after_shop_loop'); ?>
-                    <div class="clear"></div>
-                </div>
+          <div class="grid_pagination_bottom_block cfx">
+          	<?php do_action('woocommerce_after_shop_loop'); ?>
+          </div>
 
     		<?php else : ?>
 
     			<?php if ( ! woocommerce_product_subcategories( array( 'before' => '<ul class="products">', 'after' => '</ul>' ) ) ) : ?>
 
-					<div class="empty-category-block">
+  					<div class="empty-category-block">
 
-						<?php etheme_option('empty_category_content'); ?>
-						<p><a class="button active arrow-left" href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>"><span><?php _e('Return To Shop', ETHEME_DOMAIN) ?></span></a></p>
+  						<?php etheme_option('empty_category_content'); ?>
+  						<p><a class="button active arrow-left" href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>"><span><?php _e('Return To Shop', ETHEME_DOMAIN) ?></span></a></p>
 
-					</div>
+  					</div>
 
     			<?php endif; ?>
 
     		<?php endif; ?>
 
-            <?php dynamic_sidebar( 'under-product-widget-area' ); ?>
+        <?php dynamic_sidebar( 'under-product-widget-area' ); ?>
 
+    	  <?php do_action('woocommerce_after_main_content'); ?>
 
-    	   <?php do_action('woocommerce_after_main_content'); ?>
-            </div>
-        <?php if($product_sidebar && $responsive == 'bottom') : ?>
-        	<div id="products-sidebar" class="span3 sidebar_grid leftnav acc_enabled sidebar_<?php echo $grid_sidebar ?>">
-        		<?php if ( is_active_sidebar( 'product-widget-area' ) ) : ?>
-        			<?php dynamic_sidebar( 'product-widget-area' ); ?>
-                <?php else: ?>
-                    <?php etheme_get_wc_categories_menu() ?>
-        		<?php endif; ?>
-                <div class="clear"></div>
-            </div>
-    	<?php endif; ?>
-        <div class="clear"></div>
+      </div><?php // <!-- /end default_products_page_container  --> ?>
+
     </div>
-</div><!-- .container -->
+</div>
+
 <?php get_footer('shop'); ?>
