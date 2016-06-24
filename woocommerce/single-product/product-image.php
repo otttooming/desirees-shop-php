@@ -7,38 +7,25 @@
  * @version     2.0.14
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 
 global $post, $woocommerce;
 
-$product_layout = etheme_get_option('single_product_layout');
-$zoom = etheme_get_option('zoom_efect');
-$mainHeight = 600;
-$mainWidth = 440;
-
-$imgId = get_post_thumbnail_id();
-$attachment_meta = wp_get_attachment_metadata($imgId);
-$crop = false;
-
 ?>
-<div class="span5 product_image <?php if($zoom != 'disable') echo 'zoom-enabled'; ?>" data-img="<?php echo etheme_get_image( $imgId, $mainWidth, $mainHeight, $crop ) ?>" data-original="<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>">
-    <h1 class="product-title2"><?php the_title(); ?></h1>
 
-	<?php if ( has_post_thumbnail() ) : ?>
-        <div class="main-image" style="position:relative;">
-        	<?php etheme_wc_product_labels(); ?>
-            <a itemprop="image" href="<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>" id="zoom1" class="zoom" rel="thumbnails" title="<?php echo get_the_title( get_post_thumbnail_id() ); ?>" <?php if($zoom == 'disable'): ?>onclick="hideLightbox()"<?php endif; ?>>
-                <img class="attachment-shop_single wp-post-image" src="<?php echo etheme_get_image( $imgId, $mainWidth, $mainHeight, $crop ) ?>"  alt="<?php the_title(); ?>" />
-            </a>
-		<?php if(etheme_get_option('gallery_lightbox')): ?>
-			<a href="<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>" class="lightbox-btn" rel="noshow" title="<?php esc_attr_e( $attachment_meta['image_meta']['title'] ); ?>" data-original-title="" data-placement="left">&nbsp;</a>
-		<?php endif; ?>
-        </div>
-	<?php else : ?>
+<div class="span5 product_image cfx">
+    <h1 class="product-title2">
+      <?php the_title(); ?>
+    </h1>
 
-		<img width="<?php echo $mainWidth ?>" height="<?php echo $mainHeight ?>" src="<?php echo woocommerce_placeholder_img_src(); ?>" alt="Placeholder" />
+    <div class="main-image">
+        <?php etheme_wc_product_labels(); ?>
+        <a itemprop="image" href="<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>" rel="thumbnails" title="<?php echo get_the_title( get_post_thumbnail_id() ); ?>">
+            <img class="attachment-shop_single" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>"  alt="<?php the_title(); ?>">
+        </a>
+    </div>
 
-	<?php endif; ?>
-	<?php do_action('woocommerce_product_thumbnails'); ?>
-    <div class="clear"></div>
+	  <?php do_action('woocommerce_product_thumbnails'); ?>
 </div>

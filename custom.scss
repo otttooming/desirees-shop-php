@@ -2112,3 +2112,19 @@ abbr[title] {
 .product_layout_variant3 .product_image .views-gallery {
   padding: 0;
 }
+
+.products-list .product-grid {
+  display: flex;
+  
+  .img-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+.cfx:after {
+  content:"";
+  display:block;
+  clear:both;
+}

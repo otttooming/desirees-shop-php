@@ -628,21 +628,6 @@ looking at its layout.</p>
             'section'     => 'product_grid'
         ),
         array(
-            'id'          => 'product_page_image_cropping',
-            'label'       => 'Image Cropping',
-            'type'        => 'checkbox',
-            'default'     => array(
-                0 => 0
-            ),
-            'section'     => 'product_grid',
-            'choices'     => array(
-              array(
-                'value' => 1,
-                'label' => ''
-              ),
-            )
-        ),
-        array(
             'id'          => 'product_page_productname',
             'label'       => 'Show product name',
             'type'        => 'checkbox',
