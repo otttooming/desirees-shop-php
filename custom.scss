@@ -854,12 +854,17 @@ th.product-total, td.product-total {
   font-family: $site-font-main !important;
 }
 
-.stock {
+.product-stock {
   font-family: $site-font-main !important;
   text-transform:uppercase;
+
+  &__header {
+    color: $site-color-white;
+  }
 }
 
-.stock span, .single_variation .stock {
+.product-stock .stock__number,
+.single_variation .stock {
   color: #adff2f !important;
 }
 
@@ -1311,7 +1316,7 @@ h4 {
   font-size: 14px;
 }
 
-#read_more_content {
+.more-info {
   display:block;
   margin-top: 5px;
   padding: 10px 0;
@@ -1320,16 +1325,16 @@ h4 {
   text-align: center;
 }
 
-#read_more_content:hover {
+.more-info:hover {
   background-color: $site-color-red-std;
 }
 
-#read_more_content span {
+.more-info {
   color:$site-color-alt;
   text-transform: uppercase;
 }
 
-#read_more_content:hover span {
+.more-info:hover {
   color: $site-color-white;
 }
 

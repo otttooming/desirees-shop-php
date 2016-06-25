@@ -4,33 +4,34 @@
  *
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     1.6.4
+ * @version   2.4.9
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly
+}
 
 global $post, $product;
 ?>
-<div class="main-info product_meta" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+
+<div class="main-info product_meta cfx" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+
     <div itemprop="price" class="price-block">
         <?php echo $product->get_price_html(); ?>
     </div>
-	<meta itemprop="price" content="<?php echo $product->get_price(); ?>" />
-	<meta itemprop="priceCurrency" content="<?php echo get_woocommerce_currency(); ?>" />
-	<link itemprop="availability" href="http://schema.org/<?php echo $product->is_in_stock() ? 'InStock' : 'OutOfStock'; ?>" />
 
-    <div class="product-stock">
+  	<meta itemprop="price" content="<?php echo esc_attr( $product->get_display_price() ); ?>" />
+  	<meta itemprop="priceCurrency" content="<?php echo esc_attr( get_woocommerce_currency() ); ?>" />
+  	<link itemprop="availability" href="http://schema.org/<?php echo $product->is_in_stock() ? 'InStock' : 'OutOfStock'; ?>" />
 
-        <?php
-        	// Availability
-        	$availability = $product->get_availability();
+    <?php
+    	// Availability
+    	$availability = $product->get_availability();
 
-        	if ($availability['availability']) :
-        		echo apply_filters( 'woocommerce_stock_html', '<span class="stock '.$availability['class'].'">'.__('Availability:', ETHEME_DOMAIN).' <span>'.$availability['availability'].'</span></span>', $availability['availability'] );
-            endif;
-        ?>
-
-    </div>
-    <div class="clear"></div>
+    	if ($availability['availability']) :
+    		echo apply_filters( 'woocommerce_stock_html', '<div class="product-stock ' . $availability['class'].'">' . '<span class="stock__header">' . __('Availability:', ETHEME_DOMAIN) . '</span>' . ' <span class="stock__number">'.$availability['availability'].'</span></div>', $availability['availability'] );
+      endif;
+    ?>
 </div>
+
 <hr />

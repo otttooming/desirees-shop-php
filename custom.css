@@ -677,11 +677,14 @@ th.product-total, td.product-total {
   color: #fff !important;
   font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important; }
 
-.stock {
+.product-stock {
   font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important;
   text-transform: uppercase; }
+  .product-stock__header {
+    color: #fff; }
 
-.stock span, .single_variation .stock {
+.product-stock .stock__number,
+.single_variation .stock {
   color: #adff2f !important; }
 
 .entry-title {
@@ -1042,7 +1045,7 @@ h4 {
   font-family: "Open Sans", sans-serif !important;
   font-size: 14px; }
 
-#read_more_content {
+.more-info {
   display: block;
   margin-top: 5px;
   padding: 10px 0;
@@ -1050,14 +1053,14 @@ h4 {
   box-shadow: 2px 2px #111;
   text-align: center; }
 
-#read_more_content:hover {
+.more-info:hover {
   background-color: #a30000; }
 
-#read_more_content span {
+.more-info {
   color: #ff9500;
   text-transform: uppercase; }
 
-#read_more_content:hover span {
+.more-info:hover {
   color: #fff; }
 
 /* Jcarousel infinite loop bug */

@@ -961,22 +961,6 @@ looking at its layout.
             )
         ),
         array(
-            'id'          => 'size_guide_img',
-            'label'       => 'Size Guide img',
-            'default'     => 'wp-content/themes/idstore/images/assets/size-guide.jpg',
-            'desc'        => 'Upload image: png, jpg or gif file',
-            'type'        => 'upload',
-            'section'     => 'single_product'
-        ),
-        array(
-            'id'          => 'size_guide_img_mobile',
-            'label'       => 'Size Guide img (mobile)',
-            'default'     => 'wp-content/themes/idstore/images/assets/size-guide-mobile.jpg',
-            'desc'        => 'Upload image: png, jpg or gif file',
-            'type'        => 'upload',
-            'section'     => 'single_product'
-        ),
-        array(
             'id'          => 'custom_tab_title',
             'label'       => 'Custom Tab Title',
             'default'     => 'Custom Tab For All Products',
