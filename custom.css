@@ -842,7 +842,7 @@ th.product-total, td.product-total {
   .logo {
     margin-right: 0; } }
 #product-quantity .input-text, #cart-quantity .input-text {
-  border: 0 !important;
+  border: 1px solid transparent !important;
   background-color: #333 !important; }
 
 /*Checkout process */
@@ -1689,3 +1689,14 @@ abbr[title] {
   content: "";
   display: block;
   clear: both; }
+
+.qty-block__title {
+  background-color: #333;
+  margin: 0 !important;
+  padding: 9px;
+  box-shadow: 2px 2px #111;
+  border-right: 1px solid #111; }
+.qty-block__input {
+  width: 75px;
+  height: 36px !important;
+  border: 1px solid transparent !important; }

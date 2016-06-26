@@ -1066,7 +1066,7 @@ th.product-total, td.product-total {
 }
 
 #product-quantity .input-text, #cart-quantity .input-text {
-  border: 0!important;
+  border: 1px solid transparent!important;
   background-color: #333!important;
 }
 
@@ -2137,4 +2137,21 @@ abbr[title] {
   content:"";
   display:block;
   clear:both;
+}
+
+.qty-block {
+
+  &__title {
+    background-color: #333;
+    margin: 0!important;
+    padding: 9px;
+    box-shadow: 2px 2px #111;
+    border-right: 1px solid #111;
+  }
+
+  &__input {
+    width: 75px;
+    height: 36px!important;
+    border: 1px solid transparent !important;
+  }
 }
