@@ -231,10 +231,6 @@ table.shop_attributes {
   padding-top: 15px;
 }
 
-.category-block img {
-  display:none;
-}
-
 #back-to-top.btn-style-standart {
   right: 15px;
   bottom: 15px!important;
@@ -2153,5 +2149,33 @@ abbr[title] {
     width: 75px;
     height: 36px!important;
     border: 1px solid transparent !important;
+  }
+}
+
+.subcat {
+
+  &__grid {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__block {
+    display: inline-block;
+    padding: 10px;
+  }
+
+  &__item {
+    display: block;
+  }
+
+  &__header {
+    font-size: 12px !important;
+    text-align: center;
+    margin: 0;
+  }
+
+  &__img {
+    width: 100px;
   }
 }

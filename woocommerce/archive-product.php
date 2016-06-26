@@ -68,7 +68,7 @@ get_header('shop');
           	<?php do_action('woocommerce_before_shop_loop'); ?>
           </div>
 
-    			<?php woocommerce_product_subcategories(array('before'=>'<div class="product_categories_grid">', 'after' => '</div>')); ?>
+    			<?php woocommerce_product_subcategories(array('before'=>'<ul class="subcat__grid cfx">', 'after' => '</ul>')); ?>
 
           <div id="products-grid" class="products_grid products-grid row rows-count4 cfx">
               <?php while ( have_posts() ) : the_post(); ?>

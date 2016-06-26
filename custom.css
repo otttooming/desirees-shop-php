@@ -181,9 +181,6 @@ table.shop_attributes {
 .header-type-default .header {
   padding-top: 15px; }
 
-.category-block img {
-  display: none; }
-
 #back-to-top.btn-style-standart {
   right: 15px;
   bottom: 15px !important; }
@@ -1700,3 +1697,19 @@ abbr[title] {
   width: 75px;
   height: 36px !important;
   border: 1px solid transparent !important; }
+
+.subcat__grid {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+.subcat__block {
+  display: inline-block;
+  padding: 10px; }
+.subcat__item {
+  display: block; }
+.subcat__header {
+  font-size: 12px !important;
+  text-align: center;
+  margin: 0; }
+.subcat__img {
+  width: 100px; }

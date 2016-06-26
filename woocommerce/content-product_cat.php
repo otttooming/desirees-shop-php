@@ -6,53 +6,32 @@
  *
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     2.4.0
+ * @version 	2.6.1
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
-global $woocommerce_loop;
-
-// Store loop count we're currently on
-if ( empty( $woocommerce_loop['loop'] ) ) 
-	$woocommerce_loop['loop'] = 0;
-
-// Store column count for displaying the grid
-if ( empty( $woocommerce_loop['columns'] ) ) 
-	$woocommerce_loop['columns'] = apply_filters( 'loop_shop_columns', 4 );
-
+$small_thumbnail_size = apply_filters( 'single_product_small_thumbnail_size', 'shop_catalog' );
+$thumbnail_id = get_woocommerce_term_meta( $category->term_id, 'thumbnail_id', true );
+$dimensions = wc_get_image_size( $small_thumbnail_size );
+$image = wp_get_attachment_url( $thumbnail_id );
 ?>
-<div class="category-block">
 
-	<?php do_action( 'woocommerce_before_subcategory', $category ); ?>
-		
-	<a href="<?php echo get_term_link( $category->slug, 'product_cat' ); ?>">
-				
-		<?php
-			/** 
-			 * woocommerce_before_subcategory_title hook
-			 *
-			 * @hooked woocommerce_subcategory_thumbnail - 10
-			 */	  
-			do_action( 'woocommerce_before_subcategory_title', $category ); 
-		?>
-		
-		<h3>
-			<?php echo $category->name; ?> 
+<li class="subcat__block">
+	<a class="subcat__item" href="<?php echo get_term_link( $category->slug, 'product_cat' ); ?>">
+
+		<?php if ( $image ) : ?>
+			<img class="subcat__img" src="<?php echo $image; ?>" alt="<?php echo $category->name; ?>" width="<?php echo $dimensions['width'];  ?>" height="<?php echo $dimensions['height'];  ?>">
+		<?php endif; ?>
+
+		<h3 class="subcat__header">
+			<?php echo $category->name; ?>
 			<?php if ( $category->count > 0 ) : ?>
-				<mark class="count">(<?php echo $category->count; ?>)</mark>
+				<mark class="subcat__count">(<?php echo $category->count; ?>)</mark>
 			<?php endif; ?>
 		</h3>
 
-		<?php
-			/** 
-			 * woocommerce_after_subcategory_title hook
-			 */	  
-			do_action( 'woocommerce_after_subcategory_title', $category ); 
-		?>
-	
 	</a>
-	
-	<?php do_action( 'woocommerce_after_subcategory', $category ); ?>
-			
-</div>
+</li>
