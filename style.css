@@ -523,7 +523,7 @@ div.menu{text-align:left;margin:0;padding:0 0 8px;}
 .default-menu > ul > li > ul{top:37px;left:0;}
 /* level 1 +
 -------------------------------------------------------------- */
-.default-menu > ul > li ul{position:absolute;width:168px;margin-top:0px;background:#fafafa;display:none;z-index:999;padding:0;margin-top:-3px;}
+.default-menu > ul > li ul{position:absolute;width:168px;margin-top:0px;background:#fafafa;display:none;z-index:999;padding:0;margin-top:-8px;}
 .default-menu > ul > li ul{border-top-width:1px;border-top-style: solid;}
 .default-menu > ul > li > ul li{display:block;position:relative; padding: 0 15px; border-top: 1px solid #efefef;border-left: 1px solid #efefef;border-right: 1px solid #efefef;}
 .default-menu > ul > li > ul li:hover{background: #f5f5f5;}
