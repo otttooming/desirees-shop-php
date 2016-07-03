@@ -28,52 +28,66 @@ function content($limit) {
 // User selects how many products to view per page
 // via http://designloud.com/how-to-add-products-per-page-dropdown-to-woocommerce/
 function woocommerce_catalog_page_ordering() {
-?>
-<form class="woocommerce-ordering" action="" method="POST" name="results">
-<select name="woocommerce-sort-by-columns" id="woocommerce-sort-by-columns" class="sortby" onchange="this.form.submit()">
-<?php
+  /**
+   * User selectable products per page
+   */
+  ?>
+    <form class="woocommerce-ordering" action="" method="POST" name="results">
+    <select name="woocommerce-sortby-columns" id="woocommerce-sortby-columns" class="woocommerce-sortby" onchange="this.form.submit()">
+  <?php
+    $shopCatalog_orderby = apply_filters('woocommerce_sortby_page', array(
+      '24' 	=> __('24', 'woocommerce'),
+      '64' 	=> __('64', 'woocommerce'),
+      '128' => __('128', 'woocommerce'),
+    ));
 
-		//  This is where you can change the amounts per page that the user will use  feel free to change the numbers and text as you want, in my case we had 4 products per row so I chose to have multiples of four for the user to select.
-			$shopCatalog_orderby = apply_filters('woocommerce_sortby_page', array(
-				'24' 	=> __('24', 'woocommerce'),
-				'64' 		=> __('64', 'woocommerce'),
-				'128' 		=> __('128', 'woocommerce'),
-			));
+    foreach ( $shopCatalog_orderby as $sort_id => $sort_name )
+      echo '<option value="' . $sort_id . '" ' . selected( $_SESSION['woocommerce-sortby'], $sort_id, false ) . ' >' . $sort_name . '</option>';
+  ?>
+    </select>
+    </form>
 
-			foreach ( $shopCatalog_orderby as $sort_id => $sort_name )
-				echo '<option value="' . $sort_id . '" ' . selected( $_SESSION['sortby'], $sort_id, false ) . ' >' . $sort_name . '</option>';
-		?>
-</select>
+  <?php
+    if (isset($_POST['woocommerce-sortby-columns']) && (isset($_COOKIE['wc_sortbyValue']) || isset($_POST['woocommerce-sortby-columns']))) {
+      $currentProductsPerPage = $_POST['woocommerce-sortby-columns'];
+    } else if (isset($_COOKIE['wc_sortbyValue'])) {
+      $currentProductsPerPage = $_COOKIE['wc_sortbyValue'];
+    } else {
+      $currentProductsPerPage = '24';
+    }
+  ?>
 
-</form>
-<?php   // Adrian's code
-	if (isset($_POST['woocommerce-sort-by-columns']) && (($_COOKIE['shop_pageResults'] <> $_POST['woocommerce-sort-by-columns']))) {
-	  $currentProductsPerPage = $_POST['woocommerce-sort-by-columns'];
-	} else {
-	  $currentProductsPerPage = $_COOKIE['shop_pageResults'];
-	}
-	?>
-    <script type="text/javascript">
-         jQuery('select.sortby>option[value="<?php echo $currentProductsPerPage; ?>"]').attr('selected', true);
-    </script>
-<?php
+  <?php
+      if ($currentProductsPerPage != '') {
+        echo '
+        <script type="text/javascript">
+            document.querySelector("select.woocommerce-sortby>option[value=\''. $currentProductsPerPage . '\']").setAttribute("selected", true);
+        </script>
+        ';
+      }
+      ?>
+  <?php
 }
-
-// now we set our cookie if we need to
-function dl_sort_by_page($count) {
-  if (isset($_COOKIE['shop_pageResults'])) { // if normal page load with cookie
-     $count = $_COOKIE['shop_pageResults'];
-  }
-  if (isset($_POST['woocommerce-sort-by-columns'])) { //if form submitted
-    setcookie('shop_pageResults', $_POST['woocommerce-sort-by-columns'], time()+1209600, '/', $_SERVER['HTTP_HOST'], false); //this will fail if any part of page has been output- hope this works!
-    $count = $_POST['woocommerce-sort-by-columns'];
-  }
-  // else normal page load and no cookie
-  return $count;
-}
-
 add_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_page_ordering', 20 );
-add_filter('loop_shop_per_page','dl_sort_by_page');
+
+/**
+ * Return selected sortby value from cookie to loop
+ */
+function woocommerce_sortby_value_save( $count ) {
+	$main_site_url = home_url( '', 'relative' );
+	$cookie_retention_time = ( 14 * 24 * 60 * 60 );
+
+	if (isset($_COOKIE['wc_sortbyValue'])) {
+		$count = $_COOKIE['wc_sortbyValue'];
+	}
+	if (isset($_POST['woocommerce-sortby-columns'])) {
+		setcookie('wc_sortbyValue', $_POST['woocommerce-sortby-columns'], time() + $cookie_retention_time, '/', $main_site_url, false);
+		$count = $_POST['woocommerce-sortby-columns'];
+	}
+	return $count;
+}
+add_filter( 'loop_shop_per_page', 'woocommerce_sortby_value_save' );
+
 
 
 // Remove Reviews tab
