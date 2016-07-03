@@ -1277,6 +1277,11 @@ h4 {
   transition: 250ms;
 }
 
+.product-descr-info {
+  max-height: 100%;
+  overflow: hidden;
+}
+
 .products-grid .product-grid.span2:hover .product-descr {
   -webkit-transform: scale(1,1);
   -ms-transform: scale(1,1);

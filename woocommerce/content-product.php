@@ -62,7 +62,9 @@ $woocommerce_loop['loop']++;
 					
 					<?php if ( get_the_content() ) { ?>
 						<div class="product-descr">
-							<?php echo content(30); ?>
+							<div class="product-descr-info">
+								<?php echo content(30); ?>
+							</div>
 						</div>
 					<?php } ?>
 					
