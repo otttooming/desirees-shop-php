@@ -1263,7 +1263,6 @@ display: block;
 .product-stock .star-rating{}
 .product-stock .stock span{color: #444; margin-left: 5px;}
 .product-code > span{margin-left:4px;color:#444;font-weight:400;}
-.product_description_mainblock p{color:gray;font-size:12px;}
 .size_guide a{padding-bottom:10px;background:url(images/sizing_guide_img.png) no-repeat;background-position:10px bottom;font:12px 'Open Sans', sans-serif;-webkit-transition: all 0.2s ease-in-out;
    -moz-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
@@ -1402,7 +1401,6 @@ del .amount,.old-price{padding-right:10px;color:gray;font-size:16px !important;}
 .plus:hover{background-image:url(images/qty-arrow-sprite.png);background-position:-18px -37px;background-repeat:no-repeat;}
 
 .reset_variations{float:right;margin-top: 0;}
-.addto-container{float: none;width: 315px; margin: 5px auto 0;text-align: center;}
 .product_layout_variant2 .addto-container{width: 400px;}
 .addto-container .button.big.active.single_add_to_cart_button{margin-left: auto !important;float: none;margin-top: -1px !important;margin-bottom: 20px;font-size: 16px;}
 .product_layout_variant3 .addto-container .button.big.active.single_add_to_cart_button{margin-top: 0;}
@@ -1434,7 +1432,6 @@ del .amount,.old-price{padding-right:10px;color:gray;font-size:16px !important;}
 .single_variation{float: left;margin-bottom:20px;}
 .single_variation_wrap .single_variation .woocommerce-price-suffix{clear: both;margin-top: 10px;float: left;}
 .single_variation_wrap .single_variation .woocommerce-price-suffix .amount{font-size: 14px;margin-right: 5px;}
-.product_description_mainblock .product_meta{float: left;width: 100%;}
 .product_description_mainblock .product_meta .sku{color:#444;display: inline;}
 .product_description_mainblock .product_meta .woocommerce-price-suffix{float: left;width: 100%;}
 .product_description_mainblock .product_meta .woocommerce-price-suffix .amount{font-size: 18px;}

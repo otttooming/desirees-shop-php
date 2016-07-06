@@ -599,10 +599,6 @@ del{
 
 /* Single Product */
 
-.product_description_mainblock p{
-	color: white;
-}
-
 hr{
 	border-bottom: 0px solid #111;
 	border-top: 1px solid #111;

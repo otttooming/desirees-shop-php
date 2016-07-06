@@ -340,7 +340,6 @@ header {}
 .product-grid .price{margin-top:7px!important;}
 .views-gallery.thumbs-count-4 .jcarousel-clip-vertical{height: 330px !important;}
 .back-to{display: none;}
-.product_description_mainblock p{text-align: left;}
 .contact_textarea{width: 415px;}
 .page-template-contacts2-php .contact_textarea{width: 260px;}
 #cart-quantity .quantity{width: 45px;}
@@ -495,7 +494,6 @@ header{padding-top:0!important;}
 .addto-container .price-block{float:none;margin-bottom:-10px;text-align:center;}
 .addto-container .qty-block{text-align:center;}
 .addto-container .qty-block label,.addto-container .quantity{}
-.product_layout_variant3 .addto-container{width: 335px;}
 .button.big.active.etheme-simple-product{float:none;margin-left:0;}
 .product_layout_variant3 .button.big.active.etheme-simple-product{margin-top: 0;}
 .addto-container form.cart .button{float: none !important;}
