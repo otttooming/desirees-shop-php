@@ -1447,9 +1447,22 @@ hr {
   border-bottom: transparent!important;
 }
 
+.woocommerce-error a,
 .woocommerce-message a {
   margin-right: 10px;
   background-color: $site-color-red-std !important;
+}
+
+.woocommerce-error {
+  li {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.woocommerce-message {
+  display: flex;
+  align-items: center;
 }
 
 .product-image img {

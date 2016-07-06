@@ -48,6 +48,12 @@ get_header('shop');
             }
         ?>
 
+				<?php
+					// Prints messages and errors which are stored in the session, then clears them.
+					// e.g. "Product" has been added to your cart.
+					echo wc_print_notices();
+				?>
+
         <?php if($image && $image !=''){ ?>
           <div class="grid_slider">
               <img class="cat-banner" src="<?php echo $image ?>" />
