@@ -27,7 +27,6 @@ function etheme_theme_setup(){
 }
 
 
-require_once( trailingslashit(ETHEME_CODE_DIR). 'inc/really-simple-captcha/really-simple-captcha.php' );
 require_once( trailingslashit(ETHEME_CODE_DIR). 'options.php' );
 require_once( trailingslashit(ETHEME_CODE_DIR). 'functions.php' );
 require_once( trailingslashit(ETHEME_CODE_DIR). 'products.php' );

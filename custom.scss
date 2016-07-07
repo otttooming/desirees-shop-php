@@ -2197,3 +2197,26 @@ abbr[title] {
     width: 100px;
   }
 }
+
+.woocommerce-account {
+
+  .login {
+    padding: 30px;
+    box-shadow: 2px 2px #111;
+  }
+
+  .woocommerce-MyAccount-navigation {
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      display: inline-block;
+      margin: 0 5px 30px;
+      padding: 10px;
+    }
+  }
+}
