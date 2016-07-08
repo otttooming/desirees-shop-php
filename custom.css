@@ -1726,8 +1726,13 @@ abbr[title] {
 .subcat__img {
   width: 100px; }
 
-.woocommerce-account .login {
-  padding: 30px;
+.woocommerce-account #customer_login .col-1,
+.woocommerce-account #customer_login .col-2 {
+  display: flex;
+  flex-direction: column; }
+.woocommerce-account .login,
+.woocommerce-account .register {
+  padding: 30px 15px;
   box-shadow: 2px 2px #111; }
 .woocommerce-account .woocommerce-MyAccount-navigation ul {
   list-style: none;

@@ -1041,14 +1041,14 @@ div.pp_woocommerce .pp_close{
 		    height: 31px !important;
 }
 
-.col2-set .col-1 {
+/*.col2-set .col-1 {
   float: left;
   width: 48%;
 }
 .col2-set .col-2 {
   float: right;
   width: 48%;
-}
+}*/
 div.pp_woocommerce #respond #commentform textarea{margin-bottom: 20px !important;}
 div.pp_woocommerce .pp_close:hover{background-position: bottom center !important;}
 div.pp_woocommerce .pp_close:before{content:""!important;}
@@ -1866,26 +1866,7 @@ ul.product_list_widget li img{margin-right:10px;border:none!important;}
 .required{color: #fc5a5a; margin-left:3px;}
 .woocommerce-account form{float: left;}
 .woocommerce-account form .button{float: right;}
-.captcha-block {
-  float:left;
-  padding-left: 30px;
-}
 
-.captcha-block img {
-  float:left;
-  border:1px solid #d8d5d5;
-  padding: 3px;
-  margin-right: 5px;
-}
-#contact-form .captcha-block input,
-.captcha-block input {
-  float:left;
-  width:70px;
-  height:32px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
 /* -------------------------------------------------- */
 /* Checkout page
 /* -------------------------------------------------- */

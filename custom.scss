@@ -2200,8 +2200,17 @@ abbr[title] {
 
 .woocommerce-account {
 
-  .login {
-    padding: 30px;
+  #customer_login {
+    .col-1,
+    .col-2 {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .login,
+  .register {
+    padding: 30px 15px;
     box-shadow: 2px 2px #111;
   }
 
