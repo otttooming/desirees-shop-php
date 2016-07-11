@@ -220,7 +220,7 @@ if ( ! class_exists( 'OT_Settings' ) ) {
       $screen = get_current_screen();
       $get_settings = get_option( 'option_tree_settings' );
       
-      $theme_data = wp_get_theme('idstore');
+      $theme_data = wp_get_theme('desirees');
       
       /* loop through settings */
       foreach( (array) $this->options as $option ) {

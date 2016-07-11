@@ -1,7 +1,7 @@
 <?php
 define('PARENT_DIR', get_template_directory());
-define('ETHEME_THEME_NAME', 'IDStore');
-define('THEME_LOGO', '<span>ID</span>Store');
+define('ETHEME_THEME_NAME', 'Desirees');
+define('THEME_LOGO', '<span>DE</span>SIREES');
 define('ETHEME_CODE_DIR', trailingslashit(PARENT_DIR).'code');
 
 define('PARENT_URL', get_template_directory_uri());
