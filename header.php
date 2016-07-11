@@ -80,7 +80,7 @@
 			                </div>
 			            <?php endif; ?>
 			            <?php if(class_exists('Woocommerce') && !etheme_get_option('just_catalog') && etheme_get_option('cart_widget')): ?>
-			                <div id="top-cart" class="shopping-cart-wrapper widget_shopping_cart">
+			                <div id="top-cart" class="shopping-cart-wrapper widget_shopping_cart cfx">
 			                    <?php $cart_widget = new Etheme_WooCommerce_Widget_Cart(); $cart_widget->widget(); ?>
 			                </div>
 			            <?php endif ;?>

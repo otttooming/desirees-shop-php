@@ -1342,14 +1342,11 @@ form.cart .button{margin-left: 0 !important;}
 form.cart .button:hover{text-decoration: underline;}
 .price,.currentprice{color:#555;font-size:14px;}
 ins{text-decoration:none;}
-ins span{color:#fc5a5a!important;}
 .pricedisplay{margin:0;font-size:16px;}
-del .amount,.old-price{padding-right:10px;color:gray;font-size:16px !important;}
 .product_description_mainblock del .amount{position: relative;top: -2px;}
 .oldprice .pricedisplay,.old-price .price,.oldprice{color:#818181;text-decoration:line-through;font-weight:400;font-size:11px;}
 .onsale-price{color:#818181;font-size:16px;}
 .amount,.onsale-price .price,.currentprice{ color: #fc5a5a;font-weight:300;font-size:16px;}
-.product_description_mainblock.productcol.summary .amount,.old-price{font-weight:300;font-size: 22px;display: inline-block;}
 .cart-subtotal .amount,.total .amount{font-weight: 300;font-size: 20px;}
 .price-normal .amount,.price-normal .currentprice,.price-normal del .amount{font-weight:400;font-size:14px;}
 .ppp_price .pp_price .pricedisplay{font-size:11px;}

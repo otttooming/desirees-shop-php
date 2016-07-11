@@ -16,7 +16,7 @@ global $post, $product;
 
 <div class="main-info product_meta cfx" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 
-    <div itemprop="price" class="price-block">
+    <div itemprop="price" class="product__price-block">
         <?php echo $product->get_price_html(); ?>
     </div>
 

@@ -53,13 +53,14 @@ $woocommerce_loop['loop']++;
 					</div>
       </a>
 
-      <div class="product-information">
-            <div class="product-name cfx">
-							<a href="<?php the_permalink(); ?>">
+      <div class="product-information product__info-block">
+
+					<a href="<?php the_permalink(); ?>">
+							<h3 class="product__title">
 								<?php the_title(); ?>
-							</a>
-						</div>
-					
+							</h3>
+					</a>
+						
 					<?php if ( get_the_content() ) { ?>
 						<div class="product-descr">
 							<div class="product-descr-info">
@@ -68,7 +69,7 @@ $woocommerce_loop['loop']++;
 						</div>
 					<?php } ?>
 					
-          <div class="addtocont cfx">
+          <div class="product__purchase">
             <?php if($product_page_price): ?>
                 <?php do_action( 'woocommerce_after_shop_loop_item_title' ); ?>
             <?php endif; ?>

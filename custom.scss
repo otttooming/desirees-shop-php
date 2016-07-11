@@ -673,10 +673,10 @@ div.product_meta a {
 
 h2, h3, .product-slider h4, .contact_info h5{
   font-family: $site-font-main !important;
-  font-size: 27px !important;
+  font-size: 27px;
   font-weight: 100;
   font-style: normal;
-  text-transform:none !important;
+  text-transform:none;
 }
 
 .tabs h2 {
@@ -926,16 +926,6 @@ th.product-total, td.product-total {
 }
 
 /*Rounded border for pricetag in single product*/
-
-.main-info .amount, .product_description_mainblock.productcol.summary .amount, .old-price, #top-cart .amount {
-  padding: 5px 10px;
-  border-radius: 5px;
-  background-color: $site-color-red-std;
-  box-shadow: $site-shadow-std;
-  text-shadow: $site-shadow-std;
-  color: $site-color-white!important;
-  line-height: normal;
-}
 
 .main-info span:nth-child(odd) {
   margin-right: 10px;
@@ -1917,9 +1907,6 @@ td.product-quantity {
   text-align: right;
 }
 
-del .amount, .old-price {
-  background-color: #333!important;
-}
 .button {
   box-shadow: $site-shadow-std!important;
   text-shadow: $site-shadow-std!important;
@@ -2227,5 +2214,63 @@ abbr[title] {
       margin: 0 5px 30px;
       padding: 10px;
     }
+  }
+}
+
+.product {
+  
+  &__title {
+    font-size: 13px;
+    line-height: 1.35;
+    text-transform: uppercase;
+    font-style: italic;
+    text-align: center;
+    display: block;
+    margin: 5px 0;
+    font-weight: 100;
+    overflow: hidden;
+    height: 35px;
+  }
+  
+  &__info-block {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__price-block {
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color: #a30000;
+    box-shadow: 2px 2px #111;
+    text-shadow: 2px 2px #111;
+    color: #fff !important;
+    font-size: 13px !important;
+    line-height: normal;
+    margin: 0 5px 0 0;
+    flex: 1;
+    text-align: center;
+    
+    del, ins {
+      display: block;
+    }
+    
+    .amount {
+      color: $site-color-white !important;
+      font-size: 12px;
+    }
+  }
+  
+  &__buy-btn {
+    max-width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+  }
+  
+  &__purchase {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 5px 0;
   }
 }
