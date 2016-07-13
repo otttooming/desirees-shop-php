@@ -26,29 +26,15 @@ if (!isset( $content_width )) $content_width = 920;
 function etheme_enqueue_styles() {
 
     if ( !is_admin() ) {
-        wp_enqueue_style("bootstrap",get_template_directory_uri().'/css/bootstrap.css');
-        wp_enqueue_style("style",get_stylesheet_directory_uri().'/style.css');
-        wp_enqueue_style("bootstrap-responsive",get_template_directory_uri().'/css/bootstrap-responsive.css');
-        wp_enqueue_style("responsive",get_template_directory_uri().'/css/responsive.css');
-        wp_enqueue_style("slider",get_template_directory_uri().'/css/slider.css');
-        wp_enqueue_style("font-awesome",get_template_directory_uri().'/css/font-awesome.min.css');
-        wp_enqueue_style("custom",get_template_directory_uri().'/custom.css');
-        wp_enqueue_style("dark",get_template_directory_uri().'/css/dark.css');
-				wp_enqueue_style("large",get_template_directory_uri().'/css/large-resolution.css');
-
-        $script_depends = array();
-
-        if(class_exists('WooCommerce')) {
-            $script_depends = array('wc-add-to-cart-variation');
-        }
-
-        wp_enqueue_script("jquery");
-        wp_enqueue_script('cookie', get_template_directory_uri().'/js/cookie.js',array());
-        wp_enqueue_script('jquery.slider', get_template_directory_uri().'/js/jquery.slider.js',array(),false,true);
-        wp_enqueue_script('modernizr.custom', get_template_directory_uri().'/js/modernizr.custom.js');
-        wp_enqueue_script('et_masonry', get_template_directory_uri().'/js/jquery.masonry.min.js',array(),false,true);
-        wp_enqueue_script('flexslider', get_template_directory_uri().'/js/jquery.flexslider-min.js',array(),false,true);
-        wp_enqueue_script('etheme', get_template_directory_uri().'/js/script.js',$script_depends);
+        // wp_enqueue_style("bootstrap",get_template_directory_uri().'/css/bootstrap.css');
+        // wp_enqueue_style("style",get_stylesheet_directory_uri().'/style.css');
+        // wp_enqueue_style("bootstrap-responsive",get_template_directory_uri().'/css/bootstrap-responsive.css');
+        // wp_enqueue_style("responsive",get_template_directory_uri().'/css/responsive.css');
+        // wp_enqueue_style("slider",get_template_directory_uri().'/css/slider.css');
+        // wp_enqueue_style("font-awesome",get_template_directory_uri().'/css/font-awesome.min.css');
+        // wp_enqueue_style("custom",get_template_directory_uri().'/custom.css');
+        // wp_enqueue_style("dark",get_template_directory_uri().'/css/dark.css');
+				// wp_enqueue_style("large",get_template_directory_uri().'/css/large-resolution.css');
     }
 
 	wp_dequeue_style('woocommerce_prettyPhoto_css');

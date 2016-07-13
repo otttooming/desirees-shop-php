@@ -33,7 +33,7 @@
 	?></title>
 	<link rel="shortcut icon" href="<?php etheme_option('favicon',true) ?>" />
     <link rel="profile" href="http://gmpg.org/xfn/11" />
-    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+
     <script type="text/javascript">
         var etheme_wp_url = '<?php echo home_url(); ?>';
         var succmsg = '<?php _e('All is well, your e&ndash;mail has been sent!', ETHEME_DOMAIN); ?>';
@@ -42,6 +42,7 @@
         var ajaxFilterEnabled = <?php echo (etheme_get_option('ajax_filter')) ? 1 : 0 ; ?>;
         var isRequired = ' <?php _e('Please, fill in the required fields!', ETHEME_DOMAIN); ?>';
         var someerrmsg = '<?php _e('Something went wrong', ETHEME_DOMAIN); ?>';
+        var view_mode_default = 'grid_list';
 		var successfullyAdded = '<?php _e('Successfully added to your shopping cart', ETHEME_DOMAIN); ?>';
     </script>
 	<!--[if IE]>

@@ -84,7 +84,7 @@ get_header('shop');
       				<?php endwhile; // end of the loop. ?>
   				</div>
 
-  				<script type="text/javascript">listSwitcher(); check_view_mod();</script>
+  				<!-- <script type="text/javascript">listSwitcher(); check_view_mod();</script> -->
 
           <div class="grid_pagination_bottom_block cfx">
           	<?php do_action('woocommerce_after_shop_loop'); ?>

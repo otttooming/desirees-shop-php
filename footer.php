@@ -61,7 +61,7 @@
 
 					<div class="span3 footer_block1">
 						<?php if ( !is_active_sidebar( 'seventh-footer-widget-area' ) ) : ?>
-							<?php etheme_footer_demo(6); ?>
+
 						<?php else: ?>
 							<?php dynamic_sidebar( 'seventh-footer-widget-area' ); ?>
 						<?php endif; ?>

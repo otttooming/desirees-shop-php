@@ -1,5 +1,3 @@
-/*@import url(http://fonts.googleapis.com/css?family=Open+Sans);*/
-
 body{
 	color: white;
 }
@@ -330,7 +328,7 @@ del{
 
 .header-type-default #searchform .button,
 .header-variant2 #searchform .field{
-	background-image: url(../images/search_button_white_bg.png);
+	background-image: url(../images/legacy/search_button_white_bg.png);
 	border: none !important;
 }
 
@@ -498,12 +496,12 @@ del{
 }
 
 .star-rating{
-	background: url(../images/star-dark.png) repeat-x 0 0 !important;
+	background: url(../images/legacy/star-dark.png) repeat-x 0 0 !important;
 	width: 74px !important;
 }
 
 .star-rating span{
-	background: url(../images/star-dark.png) repeat-x left bottom !important;
+	background: url(../images/legacy/star-dark.png) repeat-x left bottom !important;
 }
 
 .widget_price_filter .price_slider_wrapper .ui-widget-content,
@@ -524,7 +522,7 @@ del{
 }
 
 .widget_layered_nav ul li.chosen a{
-	background: #fc5a5a url(images/check.png) no-repeat 12px center ;
+	background: #fc5a5a url(../images/legacy/check.png) no-repeat 12px center ;
 }
 
 .widget_price_filter .price_slider_wrapper .button{
@@ -1226,7 +1224,7 @@ div.pp_overlay{
 .chosen-container-single .chosen-single {background: #333; color:#eee;box-shadow: 0 1px 0 #111 inset !important;}
 .woocommerce-checkout .form-row .chosen-container .chosen-drop {background: #333;border: 1px solid #111;}
 .chosen-container-active.chosen-with-drop .chosen-single{box-shadow: 0 1px 0 #111 inset !important;background: #333;border: 1px solid #111;color: #eee;}
-.chosen-container-single .chosen-search input[type=text] {background: url(../images/chosen-sprite.png) no-repeat 100% -20px,#333;}
+.chosen-container-single .chosen-search input[type=text] {background: url(../images/legacy/chosen-sprite.png) no-repeat 100% -20px,#333;}
 .chosen-container .chosen-results li.no-results {background: #333;}
 
 .order-total{

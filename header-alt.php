@@ -32,7 +32,7 @@
 	?></title>
 	<link rel="shortcut icon" href="<?php etheme_option('favicon',true) ?>" />
     <link rel="profile" href="http://gmpg.org/xfn/11" />
-    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+
     <script type="text/javascript">
         var etheme_wp_url = '<?php echo home_url(); ?>';
         var succmsg = '<?php _e('All is well, your e&ndash;mail has been sent!', ETHEME_DOMAIN); ?>';
