@@ -55,9 +55,11 @@ function woocommerce_catalog_page_ordering() {
       '64' 	=> __('64', 'woocommerce'),
       '128' => __('128', 'woocommerce'),
     ));
+    
+    $is_selected = isset($_SESSION['woocommerce-sortby']) ? $_SESSION['woocommerce-sortby'] : '';
 
     foreach ( $shopCatalog_orderby as $sort_id => $sort_name )
-      echo '<option value="' . $sort_id . '" ' . selected( $_SESSION['woocommerce-sortby'], $sort_id, false ) . ' >' . $sort_name . '</option>';
+      echo '<option value="' . $sort_id . '" ' . selected( $is_selected, $sort_id, false ) . ' >' . $sort_name . '</option>';
   ?>
     </select>
     </form>
