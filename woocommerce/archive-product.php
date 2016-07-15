@@ -70,7 +70,7 @@ get_header('shop');
 
     		<?php if ( have_posts() ) : ?>
 
-          <div class="grid_pagination_block cfx">
+          <div class="grid__options">
           	<?php do_action('woocommerce_before_shop_loop'); ?>
           </div>
 

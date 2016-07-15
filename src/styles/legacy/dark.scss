@@ -46,9 +46,8 @@ select,
 select:hover,
 input{
 	background-color: #333;
-/*PA777	border:1px solid #111 !important;*/
 border:1px solid transparent !important;
-color: white !important;
+color: white;
 }
 
 textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input{
@@ -484,10 +483,6 @@ del{
 .cats .block-content .wpsc_categories > li > a,
 .grid_pagination_block{
 	color: white;
-}
-
-.grid_pagination_block{
-	border-bottom:1px solid #111;
 }
 
 .cats.acc_enabled .block-content .categories-group.has-subnav.opened .btn-show,

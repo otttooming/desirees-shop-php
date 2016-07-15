@@ -1,0 +1,64 @@
+.grid {
+
+  &__options {
+    white-space: nowrap;
+    line-height: 45px;
+    display: flex;
+    background-color: #151515;
+    box-shadow: 0 0 3px #111;
+    padding: 0 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+
+.woocommerce-ordering {
+  margin: 0;
+  // border-right: 1px solid #222;
+  // border-left: 1px solid #222222;
+
+  select {
+    margin: 0;
+    padding: 0;
+    border: 0!important;
+    padding: 0 30px;
+    background: url(../images/legacy/select_arrow.png) no-repeat 95% center;
+    color: $site-color-alt;
+  }
+}
+
+.view-switcher {
+  display: flex;
+  align-items: center;
+
+  label {
+    font-size: 12px;
+    line-height: 45px;
+    margin: 0 20px;
+  }
+
+  .switchToGrid,
+  .switchToList {
+    font-size:0;
+    display: block;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    background-position: center bottom;
+
+    &:hover,
+    &.switcher-active {
+      background-position: top center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .switchToGrid {
+    background-image: url(../images/legacy/grid.png);
+    margin-right: 10px;
+  }
+
+  .switchToList {
+    background-image: url(../images/legacy/list.png);
+  }
+}

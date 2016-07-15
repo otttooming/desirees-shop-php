@@ -496,13 +496,13 @@ function etheme_grid_list_switcher() {
 	<?php $view_mode = etheme_get_option('view_mode'); ?>
 	<?php if($view_mode == 'grid_list'): ?>
 		<div class="view-switcher">
-			<label><?php _e('View as:', ETHEME_DOMAIN); ?></label>
+			<label><?php _e('View as', ETHEME_DOMAIN); ?></label>
 			<div class="switchToGrid">grid</div>
 			<div class="switchToList">list</div>
 		</div>
 	<?php elseif($view_mode == 'list_grid'): ?>
 		<div class="view-switcher">
-			<label><?php _e('View as:', ETHEME_DOMAIN); ?></label>
+			<label><?php _e('View as', ETHEME_DOMAIN); ?></label>
 			<div class="switchToList">list</div>
 			<div class="switchToGrid">grid</div>
 		</div>
