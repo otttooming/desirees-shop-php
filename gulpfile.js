@@ -64,16 +64,13 @@ gulp.task('deploy', function () {
   });
 
   var globs = [
-    'inc/*.php',
-    'dist/styles/*.css',
-    'dist/scripts/*.js',
-    'languages/*.mo',
-    'dist/images/*.jpeg',
-    'dist/images/*.jpg',
-    'dist/images/*.png',
-    'template-parts/*.php',
-    '*.php',
-    '*.css'
+    '**/*',
+    '*',
+    '!images/**',
+    '!js/**',
+    '!src/**',
+    '!bower_components/**',
+    '!node_modules/**'
   ];
 
   // using base = '.' will transfer everything to /public_html correctly
@@ -96,16 +93,13 @@ gulp.task('push', function () {
   });
 
   var globs = [
-    'inc/*.php',
-    'dist/styles/*.css',
-    'dist/scripts/*.js',
-    'languages/*.mo',
-    'dist/images/*.jpeg',
-    'dist/images/*.jpg',
-    'dist/images/*.png',
-    'template-parts/*.php',
-    '*.php',
-    '*.css'
+    '**/*',
+    '*',
+    '!images/**',
+    '!js/**',
+    '!src/**',
+    '!bower_components/**',
+    '!node_modules/**'
   ];
 
   // using base = '.' will transfer everything to /public_html correctly
@@ -131,8 +125,8 @@ gulp.task('watch', function() {
     gulp.run('scripts');
   });
 
-  // Watch files in dist and reload on change
-  // gulp.watch('*.php', ['push']);
-  // gulp.watch('dist/styles/**/*.css', ['push']);
-  // gulp.watch('dist/scripts/**/*.js', ['push']);
+  // Push files when given an argument e.g. gulp watch --push
+  if (gutil.env.push) {
+    gulp.watch(['*', '**/*'], ['push']);
+  }
 });
