@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product;
 
-$class .= ' product__buy-btn';
+$class .= ' button product__buy-btn';
 
 echo apply_filters( 'woocommerce_loop_add_to_cart_link',
 	sprintf( '<a rel="nofollow" href="%s" data-quantity="%s" data-product_id="%s" data-product_sku="%s" class="%s">%s</a>',

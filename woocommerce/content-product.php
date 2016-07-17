@@ -41,14 +41,14 @@ $woocommerce_loop['loop']++;
 	<div class="product-grid span2 cfx">
 	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
 
-      <a href="<?php echo the_permalink(); ?>" class="product-image">
+      <a href="<?php echo the_permalink(); ?>" class="product-loop__images-wrap">
 
 					<?php woocommerce_get_template( 'loop/sale-flash.php' );  ?>
-        	<div class="img-wrapper">
+        	<div class="product-loop__images">
 							<?php if( has_post_thumbnail() ) { ?>
-									<img class="product_image" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>" alt="<?php the_title(); ?>">
+									<img class="product-loop__img" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>" alt="<?php the_title(); ?>">
 							<?php  } else { ?>
-								<img class="product_image" src="<?php echo woocommerce_placeholder_img_src(); ?>" alt="<?php the_title(); ?>">
+								<img class="product-loop__img" src="<?php echo woocommerce_placeholder_img_src(); ?>" alt="<?php the_title(); ?>">
 							<?php } ?>
 					</div>
       </a>
@@ -60,7 +60,7 @@ $woocommerce_loop['loop']++;
 								<?php the_title(); ?>
 							</h3>
 					</a>
-						
+
 					<?php if ( get_the_content() ) { ?>
 						<div class="product-descr">
 							<div class="product-descr-info">
@@ -68,7 +68,7 @@ $woocommerce_loop['loop']++;
 							</div>
 						</div>
 					<?php } ?>
-					
+
           <div class="product__purchase">
             <?php if($product_page_price): ?>
                 <?php do_action( 'woocommerce_after_shop_loop_item_title' ); ?>
@@ -78,6 +78,6 @@ $woocommerce_loop['loop']++;
             <?php endif; ?>
           </div>
 
-      </div>			
+      </div>
 	</div>
 <?php

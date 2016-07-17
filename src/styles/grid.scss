@@ -62,3 +62,26 @@
     background-image: url(../images/legacy/list.png);
   }
 }
+
+.product-loop {
+
+  &__images-wrap {
+    background: $site-color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__images {
+    width: 174px;
+    height: 174px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.product-information {
+  display: flex;
+  justify-content: space-between;
+}

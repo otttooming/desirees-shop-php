@@ -1,3 +1,5 @@
+// scss-lint: disable all
+
 /*!
  * Bootstrap Responsive v2.2.1
  *
@@ -7,10 +9,6 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
-
-.clearfix {
-  *zoom: 1;
-}
 
 .clearfix:before,
 .clearfix:after {
@@ -89,8 +87,8 @@
   .visible-phone {
     display: inherit !important;
   }
-  
-  
+
+
 
 }
 
@@ -435,7 +433,7 @@
   }
   /*----*/
 
-  
+
 }
 
 @media (max-width: 767px) {
@@ -534,7 +532,7 @@
   .modal.fade.in {
     top: 20px;
   }
-  
+
 }
 @media (max-width: 479px) {
   .nav-collapse {
@@ -564,12 +562,12 @@
     padding-top: 0;
     text-align: left;
   }
-  
+
   .table {
   margin-bottom: 20px;
 }
-  
- 
+
+
 }
 
 @media (max-width: 979px) {
@@ -719,14 +717,14 @@
     padding-right: 10px;
     padding-left: 10px;
   }
-  
+
   .navbar-inner{
     background: #eeeeee;
     border: 1px solid #dddddd;
     padding: 0 0 0 0px;
     margin-top: 20px;
   }
-  
+
   .navbar .brand{
     display: block;
     text-transform: uppercase;
@@ -738,7 +736,7 @@
 
   #cloud-zoom-big, .mousetrap{
     display: none !important;
-  }  
+  }
 }
 
 @media (min-width: 980px) {

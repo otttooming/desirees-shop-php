@@ -9181,9 +9181,6 @@ form.login .lost_password {
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
-.clearfix {
-  *zoom: 1; }
-
 .clearfix:before,
 .clearfix:after {
   display: table;
@@ -11495,8 +11492,6 @@ form.login .lost_password {
     margin-bottom: 20px; }
   .banners_top_row .banner {
     margin-bottom: 0; }
-  .product-slider .product-slide .span3 {
-    margin-right: 20px; }
   .views-gallery.thumbs-count-3 {
     width: 245px; }
   .product-slider .product-slide .span3, .product-slider .product-slide .span3, .product-slide .product-grid .product-image .img-wrapper {
@@ -13261,9 +13256,6 @@ hr {
 .grid_content, .sidebar_grid {
   margin-top: 0; }
 
-.product-image {
-  background: #fff; }
-
 .main-image {
   background-color: #fff; }
 
@@ -14374,10 +14366,6 @@ hr {
   display: flex;
   -ms-flex-align: center;
       align-items: center; }
-
-.product-image img {
-  width: initial !important;
-  height: 150px !important; }
 
 .cart-popup-container .product-image img {
   width: auto !important;
@@ -16681,6 +16669,30 @@ div.pp_overlay {
     width: 125px; } }
 
 /* END media query (min-width:1200px) */
+a {
+  cursor: pointer;
+  text-decoration: none; }
+
+h5 {
+  margin: 0 0 5px; }
+
+img {
+  max-width: 100%;
+  max-height: 100%; }
+
+ul {
+  padding: 0;
+  margin: 0; }
+
+#top-cart .amount {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #a30000;
+  box-shadow: 2px 2px #111;
+  text-shadow: 2px 2px #111;
+  color: #fff !important;
+  line-height: normal; }
+
 .grid__options {
   white-space: nowrap;
   line-height: 45px;
@@ -16731,3 +16743,28 @@ div.pp_overlay {
     margin-right: 10px; }
   .view-switcher .switchToList {
     background-image: url(../images/legacy/list.png); }
+
+.product-loop__images-wrap {
+  background: #fff;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center; }
+
+.product-loop__images {
+  width: 174px;
+  height: 174px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center; }
+
+.product-information {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
