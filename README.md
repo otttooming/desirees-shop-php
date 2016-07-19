@@ -23,6 +23,7 @@ Modern e-commerce solution based on WordPress.
   * ```npm install gulp gulp-util gulp-sass vinyl-ftp gulp-autoprefixer gulp-minify-css gulp-uglify gulp-notify gulp-rename gulp-concat del --save-dev```
 * Install Bower:
   * ```bower install```
+  * ```bower install photoswipe```
 * Run Gulp tasks:
   * ```gulp```
 * Watch for modified source files:

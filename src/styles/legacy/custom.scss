@@ -2193,6 +2193,11 @@ abbr[title] {
     flex-direction: column;
   }
 
+  &__image-object {
+    width: 75px;
+    margin: 0 0 10px;
+  }
+
   &__price-block {
     padding: 5px 10px;
     border-radius: 3px;

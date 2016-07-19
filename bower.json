@@ -6,6 +6,7 @@
   "dependencies": {
     "jquery": "~1.12.2",
     "modernizr": "~2.8.3",
-    "jquery-migrate": "http://code.jquery.com/jquery-migrate-1.4.0.js"
+    "jquery-migrate": "http://code.jquery.com/jquery-migrate-1.4.0.js",
+    "photoswipe": "~4.1.1"
   }
 }
