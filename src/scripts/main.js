@@ -33,3 +33,12 @@ var productRelatedSlider = new Swiper ('.product__related-slider', {
             }
         }
 });
+
+var productGallerySlider = new Swiper ('.product__gallery-slider', {
+    direction: 'vertical',
+    slidesPerView: 'auto',
+
+    // Navigation arrows
+    nextButton: '.product__gallery-control .control__down',
+    prevButton: '.product__gallery-control .control__up'
+});

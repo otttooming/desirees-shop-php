@@ -1,4 +1,7 @@
 .control {
+
+  &__up,
+  &__down,
   &__prev,
   &__next {
     padding: 5px;
@@ -6,5 +9,10 @@
     cursor: pointer;
 
     background: $site-color-dark-light;
+  }
+
+  &__up,
+  &__down {
+    transform: rotate(90deg);
   }
 }
