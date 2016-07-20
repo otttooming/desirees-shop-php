@@ -17810,6 +17810,12 @@ ul {
   top: 0;
   right: 0; }
 
+.control__items {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+
 .control__up, .control__down, .control__prev, .control__next {
   padding: 5px;
   cursor: pointer;

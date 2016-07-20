@@ -1,5 +1,9 @@
 .control {
 
+  &__items {
+    user-select: none;
+  }
+
   &__up,
   &__down,
   &__prev,
