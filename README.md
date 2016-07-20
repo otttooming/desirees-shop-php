@@ -39,6 +39,10 @@ Modern e-commerce solution based on WordPress.
 * [gulp.js - the streaming build system](http://gulpjs.com/)
 * [SCSS-lint](https://github.com/brigade/scss-lint)
 
+#### Components
+
+* [Swiper: modern mobile touch slider with hardware accelerated transitions](https://github.com/nolimits4web/swiper/)
+
 ## Credits
 * Based on Underscores [http://underscores.me/](http://underscores.me/), (C) 2012-2015 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css [http://necolas.github.io/normalize.css/](http://necolas.github.io/normalize.css/), (C) 2012-2015 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)

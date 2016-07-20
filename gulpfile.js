@@ -19,6 +19,7 @@ var gulp          = require( 'gulp' ),
 gulp.task('styles', function() {
   return gulp.src(['bower_components/photoswipe/dist/photoswipe.css',
                    'bower_components/photoswipe/dist/default-skin/default-skin.css',
+                   'bower_components/swiper/dist/css/swiper.min.css',
                    'src/styles/style.scss'])
     .pipe(sass({ style: 'expanded', }))
     .pipe(autoprefixer('last 2 version'))
@@ -36,6 +37,7 @@ gulp.task('scripts', function() {
                    'bower_components/jquery-migrate/index.js',
                    'bower_components/photoswipe/dist/photoswipe.min.js',
                    'bower_components/photoswipe/dist/photoswipe-ui-default.min.js',
+                   'bower_components/swiper/dist/js/swiper.min.js',
                    'src/scripts/legacy/*.js',
                    'src/scripts/*.js' ],
                    {base: './'})

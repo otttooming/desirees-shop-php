@@ -1,0 +1,10 @@
+.control {
+  &__prev,
+  &__next {
+    padding: 5px;
+
+    cursor: pointer;
+
+    background: $site-color-dark-light;
+  }
+}

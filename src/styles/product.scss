@@ -1,0 +1,15 @@
+.product {
+  &__related {
+    position: relative;
+  }
+
+  &__related-header {
+    margin-right: 100px;
+  }
+
+  &__control-items {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

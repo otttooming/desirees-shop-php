@@ -147,7 +147,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
             //     var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
             //         pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
             //         rect = thumbnail.getBoundingClientRect();
-            // 
+            //
             //     return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
             // }
 
@@ -207,11 +207,12 @@ initPhotoSwipeFromDOM('.product__gallery');
 function openPswp(event) {
   event.stopPropagation();
   event.preventDefault();
-  
+
   if (document.getElementsByClassName('product__image-object')[0]) {
     document.getElementsByClassName('product__image-object')[0].click();
   }
 };
 
-
-document.getElementsByClassName('product__main-image')[0].addEventListener('click', openPswp);
+if (document.getElementsByClassName('product__main-image')[0]) {
+  document.getElementsByClassName('product__main-image')[0].addEventListener('click', openPswp);
+}
