@@ -121,15 +121,15 @@ gulp.task('push', function () {
 gulp.task('watch', function() {
 
   // Watch .scss files
-  gulp.watch('src/styles/**/*.scss', function(event) {
+  var watcherStyles = gulp.watch('src/styles/**/*.scss', ['styles']);
+    watcherStyles.on('change', function(event) {
     console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-    gulp.run('styles');
   });
 
   // Watch .js files
-  gulp.watch('src/scripts/**/*.js', function(event) {
+  var watcherScripts = gulp.watch('src/scripts/**/*.js', ['scripts']);
+    watcherStyles.on('change', function(event) {
     console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-    gulp.run('scripts');
   });
 
   // Push files when given an argument e.g. gulp watch --push
