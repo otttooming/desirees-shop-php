@@ -7,13 +7,19 @@ var gulp          = require( 'gulp' ),
     sass          = require( 'gulp-sass' ),
     ftp           = require( 'vinyl-ftp' ),
     autoprefixer  = require( 'gulp-autoprefixer' ),
-    minifycss     = require( 'gulp-minify-css' ),
+    cleanCSS      = require( 'gulp-clean-css' ),
     uglify        = require( 'gulp-uglify' ),
     notify        = require( 'gulp-notify' ),
     rename        = require( 'gulp-rename' ),
     concat        = require( 'gulp-concat' ),
     del           = require( 'del' );
     secrets       = require( './secrets.json' );
+
+var supportedBrowsers = [
+    'last 2 versions',
+    'ie >= 11',
+    'android 4.4'
+];
 
 // Styles
 gulp.task('styles', function() {
@@ -22,11 +28,11 @@ gulp.task('styles', function() {
                    'bower_components/swiper/dist/css/swiper.min.css',
                    'src/styles/style.scss'])
     .pipe(sass({ style: 'expanded', }))
-    .pipe(autoprefixer('last 2 version'))
+    .pipe(autoprefixer(supportedBrowsers))
     .pipe(concat('style.css'))
     .pipe(gulp.dest('dist/styles/'))
     .pipe(rename({ suffix: '.min' }))
-    .pipe(minifycss())
+    .pipe(cleanCSS({compatibility: supportedBrowsers, keepSpecialComments: 0}))
     .pipe(gulp.dest('dist/styles/'))
     .pipe(notify({ message: 'Styles task complete' }));
 });
