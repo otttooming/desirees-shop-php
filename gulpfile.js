@@ -23,8 +23,8 @@ var supportedBrowsers = [
 
 // Styles
 gulp.task('styles', function() {
-  return gulp.src(['src/styles/style.scss',
-                   'bower_components/swiper/dist/css/swiper.min.css'])
+  return gulp.src(['bower_components/swiper/dist/css/swiper.min.css',
+                   'src/styles/style.scss'])
     .pipe(sass({ style: 'expanded', }))
     .pipe(autoprefixer(supportedBrowsers))
     .pipe(concat('style.css'))
