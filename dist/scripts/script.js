@@ -12616,6 +12616,9 @@ var productRelatedSlider = new Swiper ('.product__related-slider', {
             1024: {
                 slidesPerView: 4
             },
+            992: {
+                slidesPerView: 4
+            },
             768: {
                 slidesPerView: 2
             },
@@ -12780,6 +12783,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 
             // define gallery index (for URL)
             galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+            shareEl: false,
 
             // getThumbBoundsFn: function(index) {
             //     // See Options -> getThumbBoundsFn section of documentation for more info

@@ -22,6 +22,9 @@ var productRelatedSlider = new Swiper ('.product__related-slider', {
             1024: {
                 slidesPerView: 4
             },
+            992: {
+                slidesPerView: 4
+            },
             768: {
                 slidesPerView: 2
             },

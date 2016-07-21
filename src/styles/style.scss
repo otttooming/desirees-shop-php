@@ -22,3 +22,8 @@
 @import 'product';
 
 @import 'components';
+
+// PhotoSwipe
+@import 'pswp_settings';
+@import '../../bower_components/photoswipe/src/css/main';
+@import '../../bower_components/photoswipe/src/css/default-skin/default-skin';
