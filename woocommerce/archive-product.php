@@ -55,8 +55,8 @@ get_header('shop');
 				?>
 
         <?php if($image && $image !=''){ ?>
-          <div class="grid_slider">
-              <img class="cat-banner" src="<?php echo $image ?>" />
+          <div class="grid__slider">
+              <img class="grid__cat-banner" src="<?php echo $image ?>" />
           </div>
         <?php } ?>
 

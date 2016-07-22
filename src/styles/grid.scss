@@ -1,5 +1,13 @@
 .grid {
 
+  &__slider {
+    text-align: center;
+  }
+
+  &__cat-banner {
+    max-height: 290px;
+  }
+
   &__options {
     white-space: nowrap;
     line-height: 45px;

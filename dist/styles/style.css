@@ -17069,8 +17069,7 @@ h5 {
   margin: 0 0 5px; }
 
 img {
-  max-width: 100%;
-  max-height: 100%; }
+  max-width: 100%; }
 
 ul {
   margin: 0;
@@ -17087,6 +17086,12 @@ ul {
   text-shadow: 2px 2px #111;
   color: #fff !important;
   line-height: normal; }
+
+.grid__slider {
+  text-align: center; }
+
+.grid__cat-banner {
+  max-height: 290px; }
 
 .grid__options {
   white-space: nowrap;
