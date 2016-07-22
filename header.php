@@ -3,155 +3,106 @@
  * The Header for our theme.
  *
  */
+
+  require get_template_directory() . '/inc/components/head.php';
+  global $template_header;
 ?>
-
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    <meta charset="<?php bloginfo( 'charset' ); ?>" />
-    <title><?php
-	/*
-	 * Print the <title> tag based on what is being viewed.
-	 */
-	global $page, $paged;
-
-	wp_title( '|', true, 'right' );
-
-	// Add the blog name.
-	bloginfo( 'name' );
-
-	// Add the blog description for the home/front page.
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) )
-		echo " | $site_description";
-
-	// Add a page number if necessary:
-	if ( $paged >= 2 || $page >= 2 )
-		echo ' | ' . sprintf( __( 'Page %s', ETHEME_DOMAIN ), max( $paged, $page ) );
-
-	?></title>
-	<link rel="shortcut icon" href="<?php etheme_option('favicon',true) ?>" />
-    <link rel="profile" href="http://gmpg.org/xfn/11" />
-
-    <script type="text/javascript">
-        var etheme_wp_url = '<?php echo home_url(); ?>';
-        var succmsg = '<?php _e('All is well, your e&ndash;mail has been sent!', ETHEME_DOMAIN); ?>';
-        var menuTitle = '<?php _e('Menu', ETHEME_DOMAIN); ?>';
-        var nav_accordion = false;
-        var ajaxFilterEnabled = <?php echo (etheme_get_option('ajax_filter')) ? 1 : 0 ; ?>;
-        var isRequired = ' <?php _e('Please, fill in the required fields!', ETHEME_DOMAIN); ?>';
-        var someerrmsg = '<?php _e('Something went wrong', ETHEME_DOMAIN); ?>';
-        var view_mode_default = 'grid_list';
-		var successfullyAdded = '<?php _e('Successfully added to your shopping cart', ETHEME_DOMAIN); ?>';
-    </script>
-	<!--[if IE]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-
-<?php
-	wp_head();
-?>
-</head>
-<body <?php $fixed = ''; if(etheme_get_option('fixed_nav')) $fixed .= ' fixNav-enabled '; body_class('no-svg '.etheme_get_option('main_layout').' banner-mask-'.etheme_get_option('banner_mask').$fixed); ?>>
-
 
 	<div class="wrapper">
 
-    <?php if(etheme_get_option('loader')): ?>
-    <div id="loader">
-        <div id="loader-status">
-            <p class="center-text">
-                <em><?php _e('Loading the content...', ETHEME_DOMAIN); ?></em>
-                <em><?php _e('Loading depends on your connection speed!', ETHEME_DOMAIN); ?></em>
-            </p>
-        </div>
-    </div>
-    <?php endif; ?>
-
-
-	<?php if((etheme_get_option('search_form') || (class_exists('Woocommerce') && !etheme_get_option('just_catalog') && etheme_get_option('cart_widget')) || etheme_get_option('top_links') || etheme_get_option('header_phone') != '')): ?>
+		<?php if((etheme_get_option('search_form') || (class_exists('Woocommerce') && !etheme_get_option('just_catalog') && etheme_get_option('cart_widget')) || etheme_get_option('top_links') || etheme_get_option('header_phone') != '')): ?>
 		<div class="header-top header-top-default hidden-desktop">
 			<div class="container">
 				<div class="row header-variant2">
-		    		<div class="span4 header-phone"><?php etheme_option('header_phone') ?></div>
-		            <div class="span8">
-		            	<?php if(etheme_get_option('search_form')): ?>
-			                <div class="search_form">
-			                    <?php get_search_form(); ?>
-			                </div>
-			            <?php endif; ?>
-			            <?php if(class_exists('Woocommerce') && !etheme_get_option('just_catalog') && etheme_get_option('cart_widget')): ?>
-			                <div id="top-cart" class="shopping-cart-wrapper widget_shopping_cart cfx">
-			                    <?php $cart_widget = new Etheme_WooCommerce_Widget_Cart(); $cart_widget->widget(); ?>
-			                </div>
-			            <?php endif ;?>
-			    		<?php if(etheme_get_option('top_links')): ?>
-			    			<?php  get_template_part( 'et-links' ); ?>
-			            <?php endif; ?>
-	                </div>
+					<div class="span4 header-phone">
+						<?php etheme_option('header_phone') ?>
+					</div>
+
+          <?php if ($template_header != 'min') : ?><?php // Load full header ?>
+
+  					<div class="span8">
+  						<?php if(etheme_get_option('search_form')): ?>
+  						<div class="search_form">
+  							<?php get_search_form(); ?>
+  						</div>
+  						<?php endif; ?>
+  						<?php if(class_exists('Woocommerce') && !etheme_get_option('just_catalog') && etheme_get_option('cart_widget')): ?>
+  						<div id="top-cart" class="shopping-cart-wrapper widget_shopping_cart cfx">
+  							<?php $cart_widget = new Etheme_WooCommerce_Widget_Cart(); $cart_widget->widget(); ?>
+  						</div>
+  						<?php endif ;?>
+  						<?php if(etheme_get_option('top_links')): ?>
+  						<?php  get_template_part( 'et-links' ); ?>
+  						<?php endif; ?>
+  					</div>
+
+          <?php endif; ?><?php // END Load full header ?>
 
 				</div>
 			</div>
 		</div>
-	<?php endif; ?>
+		<?php endif; ?>
 
+		<?php if(etheme_get_option('fixed_nav')): ?>
+		<div class="fixed-header-area visible-desktop">
+			<div class="fixed-header container">
+				<div class="row">
+					<div class="span3 logo">
+						<?php etheme_logo(); ?>
+					</div>
+					<div id="main-nav" class="span9">
+						<?php etheme_header_wp_navigation(); ?>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<?php endif; ?>
 
+		<div class="header-bg <?php echo ($template_header != 'min' ? 'header-type-default' : 'header-type-variant3' ) ?>">
+			<div class="container header-area">
 
+				<header class="row header ">
+					<div class="span5 logo">
+						<?php etheme_logo(); ?>
+					</div>
 
-   <?php if(etheme_get_option('fixed_nav')): ?>
-	    <div class="fixed-header-area visible-desktop">
-		    <div class="fixed-header container">
-			    <div class="row">
-		            <div class="span3 logo">
-	                    <?php etheme_logo(); ?>
-		            </div>
-		            <div id="main-nav" class="span9">
-		                <?php etheme_header_wp_navigation(); ?>
-		            </div>
-			        <div class="clear"></div>
-			    </div>
-		    </div>
-	    </div>
-    <?php endif; ?>
+          <?php if ($template_header != 'min') : ?><?php // Load full header ?>
+  					<div class="span3 visible-desktop">
+  						<?php if(etheme_get_option('header_phone') && etheme_get_option('header_phone') != ''): ?>
+  						<span class="search_text">
+                  <?php etheme_option('header_phone') ?>
+              </span>
+  						<?php endif; ?>
+  						<?php if(etheme_get_option('search_form')): ?>
+  						<div class="search_form">
+  							<?php get_search_form(); ?>
+  						</div>
+  						<?php endif; ?>
+  					</div>
 
-    <div class="header-bg header-type-default">
-    <div class="container header-area">
+  					<div class="span3 shopping_cart_wrap visible-desktop">
 
-        <header class="row header ">
-            <div class="span5 logo">
-                <?php etheme_logo(); ?>
-            </div>
+  						<?php if(class_exists('Woocommerce') && !etheme_get_option('just_catalog') && etheme_get_option('cart_widget')): ?>
+  						<div id="top-cart" class="shopping-cart-wrapper widget_shopping_cart">
+  							<?php $cart_widget = new Etheme_WooCommerce_Widget_Cart(); $cart_widget->widget(); ?>
+  						</div>
+  						<?php endif ;?>
+  						<div class="clear"></div>
+  						<?php if(etheme_get_option('top_links')): ?>
+  						<?php  get_template_part( 'et-links' ); ?>
+  						<?php endif; ?>
+  					</div>
 
-            <div class="span3 visible-desktop">
-                <?php if(etheme_get_option('header_phone') && etheme_get_option('header_phone') != ''): ?>
-                    <span class="search_text">
-                        <?php etheme_option('header_phone') ?>
-                    </span>
-                <?php endif; ?>
-	            <?php if(etheme_get_option('search_form')): ?>
-	                <div class="search_form">
-	                    <?php get_search_form(); ?>
-	                </div>
-                <?php endif; ?>
-            </div>
+          <?php endif; ?><?php // END Load full header ?>
 
-            <div class="span3 shopping_cart_wrap visible-desktop">
+				</header>
 
-                <?php if(class_exists('Woocommerce') && !etheme_get_option('just_catalog') && etheme_get_option('cart_widget')): ?>
-                    <div id="top-cart" class="shopping-cart-wrapper widget_shopping_cart">
-                        <?php $cart_widget = new Etheme_WooCommerce_Widget_Cart(); $cart_widget->widget(); ?>
-                    </div>
-                <?php endif ;?>
-                <div class="clear"></div>
-                <?php if(etheme_get_option('top_links')): ?>
-                    <?php  get_template_part( 'et-links' ); ?>
-                <?php endif; ?>
-            </div>
-        </header>
-	    <?php etheme_header_menu(); ?>
-    </div>
+        <?php if ($template_header != 'min') : ?><?php // Load full header ?>
+  				<?php etheme_header_menu(); ?>
+        <?php endif; ?><?php // END Load full header ?>
 
-    <?php
-        get_template_part( 'et-styles' );
-    ?>
-</div>
+			</div>
+
+			<?php get_template_part( 'et-styles' ); ?>
+		</div>
