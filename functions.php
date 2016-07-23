@@ -16,7 +16,11 @@ require get_template_directory() . '/inc/func/dequeue.php';
 */
 require get_template_directory() . '/inc/func/enqueue.php';
 
- 
+/**
+* Theme options
+*/
+require get_template_directory() . '/inc/func/options.php';
+
 global $etheme_theme_data;
 $etheme_theme_data = wp_get_theme( 'idstore' );
 define('ETHEME_DOMAIN', 'idstore');
@@ -55,7 +59,7 @@ function woocommerce_catalog_page_ordering() {
       '64' 	=> __('64', 'woocommerce'),
       '128' => __('128', 'woocommerce'),
     ));
-    
+
     $is_selected = isset($_SESSION['woocommerce-sortby']) ? $_SESSION['woocommerce-sortby'] : '';
 
     foreach ( $shopCatalog_orderby as $sort_id => $sort_name )

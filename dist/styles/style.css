@@ -17163,6 +17163,10 @@ ul {
   -ms-flex-pack: center;
       justify-content: center; }
 
+.product-loop__img {
+  max-height: 100%;
+  max-width: 100%; }
+
 .product-information {
   display: -ms-flexbox;
   display: flex;

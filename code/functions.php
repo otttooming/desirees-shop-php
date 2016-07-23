@@ -124,29 +124,6 @@ function etheme_demo_alerts(){
 
 /* Header Template Parts */
 
-function etheme_header_menu(){
-	?>
-    <div class="row">
-        <div id="main-nav" class="span12">
-            <?php wp_nav_menu(array('theme_location' => 'top', 'name' => 'top', 'container' => 'div', 'container_class' => 'menu default-menu')); ?>
-        </div>
-    </div>
-	<?php
-}
-
-function etheme_header_wp_navigation(){
-	wp_nav_menu(array('theme_location' => 'top', 'name' => 'top', 'container' => 'div', 'container_class' => 'menu default-menu'));
-}
-
-function etheme_logo() {
-	$logoimg = etheme_get_option('logo'); ?>
-	<?php if($logoimg): ?>
-		<a href="<?php echo home_url(); ?>"><img src="<?php echo $logoimg ?>" alt="<?php bloginfo( 'description' ); ?>" /></a>
-	<?php else: ?>
-		<a href="<?php echo home_url(); ?>"><span class="logo-text-red">ID</span>Store</a>
-	<?php endif ;
-}
-
 add_action( 'after_setup_theme', 'et_promo_remove', 11 );
 if(!function_exists('et_promo_remove')) {
 	function et_promo_remove() {
