@@ -15,7 +15,7 @@ if(!defined('WP_LOAD_IMPORTERS') )
     define( 'WP_LOAD_IMPORTERS', true );
 
 add_theme_support( 'post-thumbnails' );
-add_theme_support( 'automatic-feed-links' );
+
 add_action('after_setup_theme', 'etheme_theme_setup');
 function etheme_theme_setup(){
 	load_theme_textdomain( ETHEME_DOMAIN, get_template_directory() . '/languages' );
@@ -33,7 +33,6 @@ require_once( trailingslashit(ETHEME_CODE_DIR). 'products.php' );
 require_once( trailingslashit(ETHEME_CODE_DIR). 'shortcodes.php' );
 require_once( trailingslashit(ETHEME_CODE_DIR). 'widgets.php' );
 require_once( trailingslashit(ETHEME_CODE_DIR). 'woo.php' );
-require_once( trailingslashit(ETHEME_CODE_DIR). 'sidebars.php' );
 
 if ( is_admin() ) {
 	require_once( trailingslashit(ETHEME_CODE_DIR) . 'admin_functions.php');
