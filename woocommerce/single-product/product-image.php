@@ -15,10 +15,11 @@ global $post, $woocommerce;
 
 ?>
 
-<div class="span5 product_image cfx">
-    <h1 class="product-title2">
-      <?php the_title(); ?>
-    </h1>
+<h1 class="product-title2">
+		<?php the_title(); ?>
+</h1>
+
+<div class="span5 product_image product__left cfx">
 
     <div class="main-image product__main-image-wrap">
         <?php etheme_wc_product_labels(); ?>

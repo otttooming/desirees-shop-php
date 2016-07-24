@@ -1,4 +1,10 @@
 .product {
+
+  &__left {
+    display: flex!important;
+    flex-direction: row-reverse;
+  }
+
   &__title {
     display: block;
     overflow: hidden;
@@ -18,6 +24,18 @@
   &__info-block {
     display: flex;
     flex-direction: column;
+  }
+
+  &__main-image-wrap {
+    width: 100%!important;
+  }
+
+  &__main-image {
+    width: 100%!important;
+  }
+
+  &__gallery {
+    margin-right: 5px;
   }
 
   &__gallery-slider {

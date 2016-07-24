@@ -17184,6 +17184,12 @@ ul {
   width: 100%;
   margin: 0; }
 
+.product__left {
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse; }
+
 .product__title {
   display: block;
   overflow: hidden;
@@ -17201,6 +17207,15 @@ ul {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column; }
+
+.product__main-image-wrap {
+  width: 100% !important; }
+
+.product__main-image {
+  width: 100% !important; }
+
+.product__gallery {
+  margin-right: 5px; }
 
 .product__gallery-slider {
   max-height: 520px;

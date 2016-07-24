@@ -95,7 +95,9 @@ get_header('shop');
 							<?php dynamic_sidebar( 'empty-category-area' ); ?>
 
   						<p>
-								<a class="button big active" href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>"><span><?php _e('Return To Shop', ETHEME_DOMAIN) ?></span></a>
+								<a class="button big active" href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>">
+									<span><?php _e( 'Return To Shop', 'woocommerce' ) ?></span>
+								</a>
 							</p>
 
   					</div>
