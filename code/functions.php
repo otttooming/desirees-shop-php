@@ -118,10 +118,6 @@ function etheme_get_contents( $url ) {
 	return $output;
 }
 
-function etheme_demo_alerts(){
-    do_action('etheme_demo_alerts');
-}
-
 /* Header Template Parts */
 
 add_action( 'after_setup_theme', 'et_promo_remove', 11 );

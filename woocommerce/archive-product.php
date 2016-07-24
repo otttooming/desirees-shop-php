@@ -19,11 +19,7 @@ get_header('shop');
 <div class="container">
     <div class="row">
         <div class="span12 breadcrumbs">
-            <?php
-                do_action('woocommerce_before_main_content');
-
-                extract(etheme_get_shop_sidebar());
-	          ?>
+            <?php do_action('woocommerce_before_main_content'); ?>
         </div>
     </div>
 </div>
@@ -41,7 +37,7 @@ get_header('shop');
             $cat = $wp_query->get_queried_object();
             $image = '';
             if(empty($cat->term_id) && !is_search()){
-                $image = etheme_get_option('product_bage_banner');
+                $image = '';
             }else{
                 $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
                 $image = wp_get_attachment_url( $thumbnail_id );
@@ -54,19 +50,21 @@ get_header('shop');
 					echo wc_print_notices();
 				?>
 
-        <?php if($image && $image !=''){ ?>
+        <?php if($image && $image !='') : ?>
           <div class="grid__slider">
               <img class="grid__cat-banner" src="<?php echo $image ?>" />
           </div>
-        <?php } ?>
+				<?php elseif (empty($cat->term_id) && !is_search() && is_active_sidebar( 'product_bage_banner' ) ) : ?>
+					<div class="grid__slider">
+							<?php dynamic_sidebar( 'product_bage_banner' ); ?>
+					</div>
+        <?php endif; ?>
 
-        <?php if(isset($cat->description) && $cat->description !='' && !is_shop()) { ?>
+        <?php if(isset($cat->description) && $cat->description !='' && !is_shop()) : ?>
           	<div class="product-category-description">
             	<?php echo do_shortcode($cat->description); ?>
           	</div>
-        <?php } ?>
-
-        <?php etheme_demo_alerts(); ?>
+        <?php endif; ?>
 
     		<?php if ( have_posts() ) : ?>
 
@@ -84,8 +82,6 @@ get_header('shop');
       				<?php endwhile; // end of the loop. ?>
   				</div>
 
-  				<!-- <script type="text/javascript">listSwitcher(); check_view_mod();</script> -->
-
           <div class="grid_pagination_bottom_block cfx">
           	<?php do_action('woocommerce_after_shop_loop'); ?>
           </div>
@@ -96,8 +92,11 @@ get_header('shop');
 
   					<div class="empty-category-block">
 
-  						<?php etheme_option('empty_category_content'); ?>
-  						<p><a class="button active arrow-left" href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>"><span><?php _e('Return To Shop', ETHEME_DOMAIN) ?></span></a></p>
+							<?php dynamic_sidebar( 'empty-category-area' ); ?>
+
+  						<p>
+								<a class="button big active" href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>"><span><?php _e('Return To Shop', ETHEME_DOMAIN) ?></span></a>
+							</p>
 
   					</div>
 

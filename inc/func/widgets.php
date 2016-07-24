@@ -180,6 +180,28 @@ function desirees_widgets_init() {
         'before_title' => '<h5>',
         'after_title' => '</h5>'
 	) );
+
+  // Empty category.
+  register_sidebar( array(
+    'name' => __( 'Empty category', ETHEME_DOMAIN ),
+    'id' => 'empty-category-area',
+    'before_widget' => '',
+    'after_widget' => '',
+    'description' => __( 'Empty category area', ETHEME_DOMAIN ),
+        'before_title' => '<h5>',
+        'after_title' => '</h5>'
+  ) );
+
+  // Product page banner.
+  register_sidebar( array(
+    'name' => __( 'Product page banner', ETHEME_DOMAIN ),
+    'id' => 'product_bage_banner',
+    'before_widget' => '',
+    'after_widget' => '',
+    'description' => __( 'Product page banner', ETHEME_DOMAIN ),
+        'before_title' => '<h5>',
+        'after_title' => '</h5>'
+  ) );
 }
 
 add_action( 'widgets_init', 'desirees_widgets_init' );

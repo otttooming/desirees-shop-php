@@ -167,35 +167,3 @@ function etheme_get_page_sidebar($blog = false) {
 	return $result;
 
 }
-
-/* Get shop sidebar position */
-
-function etheme_get_shop_sidebar() {
-
-	$result = array(
-		'product_sidebar' => '',
-		'responsive' => '',
-		'grid_sidebar' => '',
-		'product_per_row' => 3
-	);
-
-	$result['product_sidebar'] = etheme_get_option('product_page_sidebar');
-	$result['responsive'] = etheme_get_option('blog_sidebar_responsive');
-	$result['grid_sidebar'] = etheme_get_option('grid_sidebar');
-    $result['product_per_row'] = etheme_get_option('prodcuts_per_row');
-
-    if(isset($_GET['cols'])){
-        $result['product_per_row'] = $_GET['cols'];
-    }
-    if(isset($_GET['sb']) && $_GET['sb'] == 0){
-        $result['product_sidebar'] = false;
-    }
-
-
-    if($result['product_per_row'] == 6){
-        $result['product_sidebar'] = false;
-    }
-
-	return $result;
-
-}
