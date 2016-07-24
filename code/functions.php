@@ -487,29 +487,3 @@ function etheme_recognized_google_font_families( $array, $field_id = false ) {
 	return $array;
 
 }
-
-function etheme_get_chosen_google_font() {
-	$chosenFonts = array();
-	$fontOptions = array();
-    $fontOptions[] = etheme_get_option('h1');
-    $fontOptions[] = etheme_get_option('h2');
-    $fontOptions[] = etheme_get_option('h3');
-    $fontOptions[] = etheme_get_option('h4');
-    $fontOptions[] = etheme_get_option('h5');
-    $fontOptions[] = etheme_get_option('h6');
-    $fontOptions[] = etheme_get_option('sfont');
-
-    foreach($fontOptions as $value){
-    	if($value['google-font'] != '')
-		    $chosenFonts[] = $value['google-font'];
-    }
-
-    return $chosenFonts;
-
-}
-
-function prar($arr){
-	echo '<pre>';
-	print_r($arr);
-	echo '</pre>';
-}

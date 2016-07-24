@@ -21,6 +21,11 @@ require get_template_directory() . '/inc/func/enqueue.php';
 */
 require get_template_directory() . '/inc/func/options.php';
 
+/**
+* Widgets
+*/
+require get_template_directory() . '/inc/func/widgets.php';
+
 global $etheme_theme_data;
 $etheme_theme_data = wp_get_theme( 'idstore' );
 define('ETHEME_DOMAIN', 'idstore');
