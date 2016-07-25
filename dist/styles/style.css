@@ -4700,8 +4700,7 @@ div.pp_woocommerce .pp_content_container .pp_right {
   margin-top: 0;
   text-transform: uppercase;
   font-weight: 300;
-  font-size: 24px;
-  line-height: 25px; }
+  font-size: 24px; }
 
 .product-title2 {
   display: none; }
@@ -13516,8 +13515,7 @@ form .form-row.terms label a {
   text-transform: uppercase; }
 
 .product_description_mainblock h1 {
-  font-size: 40px;
-  line-height: 40px; }
+  font-size: 40px; }
 
 .page-title {
   text-transform: inherit; }
@@ -14200,8 +14198,7 @@ hr {
   margin-left: 115px; }
 
 .addto-container form.cart .button {
-  float: right !important;
-  margin-top: 0 !important; }
+  float: right !important; }
 
 /* Top of the page Cart widget */
 #top-cart a {
@@ -14638,10 +14635,6 @@ td.product-quantity {
   width: 100%;
   padding: 10px 0 15px;
   text-align: right; }
-
-.button {
-  box-shadow: 2px 2px #111 !important;
-  text-shadow: 2px 2px #111 !important; }
 
 /* Mobile opt */
 @media only screen and (max-width: 479px) {
@@ -16530,8 +16523,16 @@ a {
   cursor: pointer;
   text-decoration: none; }
 
-h2 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.2; }
+
+h2 {
+  margin: 0 0 15px; }
 
 h5 {
   margin: 0 0 5px; }
@@ -16754,6 +16755,12 @@ ul {
 .control__up, .control__down {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg); }
+
+.button {
+  box-shadow: 2px 2px #111 !important;
+  text-shadow: 2px 2px #111 !important; }
+  .button.active {
+    background: #a30000; }
 
 /*! PhotoSwipe main CSS by Dmitry Semenov | photoswipe.com | MIT license */
 /*

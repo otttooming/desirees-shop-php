@@ -460,7 +460,6 @@ form .form-row.terms label a {
 
 .product_description_mainblock h1 {
   font-size:40px;
-  line-height: 40px;
 }
 
 .page-title {
@@ -1329,7 +1328,6 @@ hr {
 
 .addto-container form.cart .button {
   float: right!important;
-  margin-top: 0!important;
 }
 
 /* Top of the page Cart widget */
@@ -1863,11 +1861,6 @@ td.product-quantity {
   width: 100%;
   padding: 10px 0 15px;
   text-align: right;
-}
-
-.button {
-  box-shadow: $site-shadow-std!important;
-  text-shadow: $site-shadow-std!important;
 }
 
 /* Mobile opt */
