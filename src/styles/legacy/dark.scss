@@ -15,9 +15,8 @@ body{
 }
 
 .boxed .wrapper{
-	-webkit-box-shadow: 0 1px 6px #111 !important;
-	        box-shadow: 0 1px 6px #111 !important;
-	    background: #222 !important;
+  box-shadow: 0 1px 6px #111 !important;
+  background: #222 !important;
 }
 
 .header-top-variant4,
@@ -25,15 +24,6 @@ body{
 .header-top-variant5 .container{
 	background: #fc5a5a;
 }
-/* PA777
-.header-top-variant5 .header-variant2 #searchform .field{
-	background-color: transparent !important;
-}
-
-.header-top-variant5 .header-variant2 #searchform .field:focus{
-	background: #333 !important;
-}
-*/
 
 .logo a,
 .logo a:hover{
@@ -314,14 +304,6 @@ del{
 	background-color: #333 !important;
 }
 
-/* PA777
-#searchform .field,
-.header-variant2 #searchform .field{
-	background-color: #222 !important;
-	border: 1px solid #111!important;
-}
-*/
-
 #searchform .button{
 	background-color: #111;
 	border:1px solid #111;
@@ -334,9 +316,8 @@ del{
 }
 
 #searchform .field:focus{
-/* PA777	border:1px solid #111 !important;*/
 	background-color: #333 !important;
-/* PA777 */	color: white !important;
+	color: white !important;
 }
 
 .search_text{
@@ -907,10 +888,6 @@ table th{
 }
 
 .progress-bar{
-/*PA777*/
-/*	background: #333;
-	border-top:1px solid #111;
-	*/
 	background: #555;
 	border-top:transparent;
 }

@@ -10530,8 +10530,6 @@ form.login .lost_password {
   .custom-tabs1 {
     border-right: none !important;
     padding: 0; }
-  /* PA777
-.tab-content .col2-set .col-2{width:65.8%;}*/
   .tab-content .col2-set .col-2 {
     width: 55%; }
   .with-sidebar-left .tab-content .col2-set .col-2, .with-sidebar-right .tab-content .col2-set .col-2 {
@@ -14932,15 +14930,6 @@ body {
 .header-top-variant5 .container {
   background: #fc5a5a; }
 
-/* PA777
-.header-top-variant5 .header-variant2 #searchform .field{
-	background-color: transparent !important;
-}
-
-.header-top-variant5 .header-variant2 #searchform .field:focus{
-	background: #333 !important;
-}
-*/
 .logo a,
 .logo a:hover {
   color: white; }
@@ -15165,13 +15154,6 @@ del {
 .next.disabled:hover {
   background-color: #333 !important; }
 
-/* PA777
-#searchform .field,
-.header-variant2 #searchform .field{
-	background-color: #222 !important;
-	border: 1px solid #111!important;
-}
-*/
 #searchform .button {
   background-color: #111;
   border: 1px solid #111; }
@@ -15182,9 +15164,7 @@ del {
   border: none !important; }
 
 #searchform .field:focus {
-  /* PA777	border:1px solid #111 !important;*/
   background-color: #333 !important;
-  /* PA777 */
   color: white !important; }
 
 .search_text {
@@ -15630,10 +15610,6 @@ table th {
   color: white; }
 
 .progress-bar {
-  /*PA777*/
-  /*	background: #333;
-	border-top:1px solid #111;
-	*/
   background: #555;
   border-top: transparent; }
 
