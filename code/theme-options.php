@@ -572,27 +572,6 @@ looking at its layout.</p>
             )
         ),
         array(
-            'id'          => 'grid_sidebar',
-            'label'       => 'Layout',
-            'desc'        => 'Sidebar position',
-            'default'     => 'left',
-            'type'        => 'radio-image',
-            'section'     => 'product_grid',
-            'class'       => '',
-            'choices'     => array(
-                array(
-                    'value'   => 'left',
-                    'label'   => 'Left Sidebar',
-                    'src'     => OT_URL . '/assets/images/layout/left-sidebar.png'
-                ),
-                array(
-                    'value'   => 'right',
-                    'label'   => 'Right Sidebar',
-                    'src'     => OT_URL . '/assets/images/layout/right-sidebar.png'
-                )
-            )
-        ),
-        array(
             'id'          => 'product_img_hover',
             'label'       => 'Product Image Hover',
             'type'        => 'select',
@@ -721,44 +700,6 @@ looking at its layout.</p>
                     'value'   => 'horizontal',
                     'label'   => 'Portrait Images 2',
                     'src'     => get_template_directory_uri().'/code/css/images/blog_3.jpg'
-                )
-            )
-        ),
-        array(
-            'id'          => 'blog_sidebar',
-            'label'       => 'Sidebar position',
-            'default'     => 'left',
-            'type'        => 'radio-image',
-            'section'     => 'blog_page',
-            'class'       => '',
-            'choices'     => array(
-                array(
-                    'value'   => 'left',
-                    'label'   => 'Left Sidebar',
-                    'src'     => OT_URL . '/assets/images/layout/left-sidebar.png'
-                ),
-                array(
-                    'value'   => 'right',
-                    'label'   => 'Right Sidebar',
-                    'src'     => OT_URL . '/assets/images/layout/right-sidebar.png'
-                )
-            )
-        ),
-        array(
-            'id'          => 'blog_sidebar_responsive',
-            'label'       => 'Sidebar position for responsive layout',
-            'default'     => 'bottom',
-            'type'        => 'select',
-            'section'     => 'blog_page',
-            'class'       => '',
-            'choices'     => array(
-                array(
-                    'value'   => 'top',
-                    'label'   => 'Top'
-                ),
-                array(
-                    'value'   => 'bottom',
-                    'label'   => 'Bottom'
                 )
             )
         ),
@@ -986,58 +927,6 @@ looking at its layout.</p>
   if ( $saved_settings !== $custom_settings ) {
     update_option( 'option_tree_settings', $custom_settings );
   }
-
-}
-
-/**
- * Initialize the meta boxes for pages.
- */
-add_action( 'admin_init', 'page_meta_boxes' );
-
-
-function page_meta_boxes() {
-	$page_options = array(
-		array(
-			'id'          => 'sidebar_state',
-			'label'       => 'Sidebar Position',
-			'type'        => 'select',
-			'choices'     => array(
-	              array(
-	                'value' => '',
-	                'label' => 'Default'
-	              ),
-	              array(
-	                'value' => 'no_sidebar',
-	                'label' => 'Without Sidebar'
-	              ),
-	              array(
-	                'value' => 'left',
-	                'label' => 'Left Sidebar'
-	              ),
-	              array(
-	                'value' => 'right',
-	                'label' => 'Right Sidebar'
-	              )
-	            )
-		),
-		array(
-			'id'          => 'widget_area',
-			'label'       => 'Widget Area',
-			'type'        => 'sidebar_select'
-		)
-	);
-
-  $my_meta_box = array(
-    'id'        => 'page_layout',
-    'title'     => 'Page Layout',
-    'desc'      => '',
-    'pages'     => array( 'page', 'post' ),
-    'context'   => 'side',//side normal
-    'priority'  => 'low',
-    'fields'    => $page_options
-  );
-
-  ot_register_meta_box( $my_meta_box );
 
 }
 
