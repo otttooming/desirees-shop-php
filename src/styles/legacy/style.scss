@@ -1364,7 +1364,7 @@ ins{text-decoration:none;}
 #size,#color{margin:0 0 20px;outline:none;border:1px solid #EFEFEF;color:gray;font:12px 'Open Sans', sans-serif;}
 .product_description_tags{margin-bottom:20px;padding-top:20px;border-top:1px solid #eee;color:#444;font:12px 'Open Sans', sans-serif;}
 .pd_tags_title{color:gray;}
-.qty-block, #product-quantity{float:none;margin:5px auto !important;width: 170px;}
+.qty-block, #product-quantity{float:none;margin:5px auto !important;}
 #product-quantity{float: left;width: auto;}
 .qty-block label{font-size:12px;}
 .qty-block label{float:left;margin:8px 10px 8px 0;}
@@ -2029,7 +2029,7 @@ tfoot tr:nth-child(3) td {
 .order_details td.product-name{border-bottom:1px solid #ededed;}
 #shipping_method li{list-style: none;}
 #shipping_method li label{display: inline-block;}
-#cart-quantity .quantity{float:none;margin:0;width: 85px;}
+#cart-quantity .quantity{float:none;margin:0;}
 #cart-quantity .input-text,#product-quantity .input-text{padding:0;outline:none;text-align:center; font-weight: 400;}
 
 .coupon{float:left;}

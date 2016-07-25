@@ -4961,8 +4961,7 @@ ins {
 
 .qty-block, #product-quantity {
   float: none;
-  margin: 5px auto !important;
-  width: 170px; }
+  margin: 5px auto !important; }
 
 #product-quantity {
   float: left;
@@ -7312,8 +7311,7 @@ tfoot tr:nth-child(3) td {
 
 #cart-quantity .quantity {
   float: none;
-  margin: 0;
-  width: 85px; }
+  margin: 0; }
 
 #cart-quantity .input-text, #product-quantity .input-text {
   padding: 0;
@@ -10468,8 +10466,7 @@ form.login .lost_password {
     float: none; }
   .product_layout_variant3 .qty-block {
     float: none;
-    margin: 25px auto;
-    width: 125px; }
+    margin: 25px auto; }
   .product_layout_default .button.big.active.etheme-simple-product {
     float: none;
     margin-top: 20px !important; }
@@ -10833,8 +10830,6 @@ form.login .lost_password {
     width: 415px; }
   .page-template-contacts2-php .contact_textarea {
     width: 260px; }
-  #cart-quantity .quantity {
-    width: 45px; }
   .page-template-contacts2-php .contact-form {
     width: 428px;
     box-sizing: border-box; }
@@ -15441,9 +15436,6 @@ table th {
 .cart_table_item .product-name .variation dt,
 .checkout_table_item .product-name .variation dt {
   color: white; }
-
-#cart-quantity .quantity {
-  width: 100px; }
 
 #cart-quantity .input-text {
   position: relative;
