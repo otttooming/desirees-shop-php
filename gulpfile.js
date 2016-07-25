@@ -42,6 +42,7 @@ gulp.task('scripts', function() {
                    'bower_components/photoswipe/dist/photoswipe.min.js',
                    'bower_components/photoswipe/dist/photoswipe-ui-default.min.js',
                    'bower_components/swiper/dist/js/swiper.min.js',
+                   'bower_components/lazysizes/lazysizes.min.js',
                    'src/scripts/legacy/*.js',
                    'src/scripts/*.js' ],
                    {base: './'})
@@ -89,7 +90,7 @@ gulp.task('deploy', function () {
 
   return gulp.src( globs, { base: '.', buffer: false } )
     .pipe(conn.dest( secrets.servers.development.remotepath ))
-    .pipe(notify({ message: 'Deploy to dev complete' }));
+    // .pipe(notify({ message: 'Deploy to dev complete' }));
 });
 
 // Push

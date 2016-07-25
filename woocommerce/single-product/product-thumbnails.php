@@ -25,7 +25,7 @@ $attachment_ids = $product->get_gallery_attachment_ids();
 
                 <figure class="swiper-slide product__image-object is-disabled" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                     <a href="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' )[0]; ?>" itemprop="contentUrl" data-size="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' )[1] . 'x' . wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' )[2] ?>">
-                        <img src="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium' )[0]; ?>" class="product__image" itemprop="thumbnail">
+                        <img data-src="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium' )[0]; ?>" class="product__image lazyload" itemprop="thumbnail">
                     </a>
                 </figure>
 
@@ -45,7 +45,7 @@ $attachment_ids = $product->get_gallery_attachment_ids();
                         ?>
                         <figure class="swiper-slide product__image-object" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                             <a href="<?php echo wp_get_attachment_image_src( $id, 'full' )[0]; ?>" itemprop="contentUrl" data-size="<?php echo $img[1] . 'x' . $img[2] ?>">
-                                <img src="<?php echo wp_get_attachment_image_src( $id, 'medium' )[0]; ?>" class="product__image" itemprop="thumbnail">
+                                <img data-src="<?php echo wp_get_attachment_image_src( $id, 'medium' )[0]; ?>" class="product__image lazyload" itemprop="thumbnail">
                             </a>
                         </figure>
 

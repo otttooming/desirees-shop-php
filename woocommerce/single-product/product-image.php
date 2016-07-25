@@ -24,7 +24,7 @@ global $post, $woocommerce;
     <div class="main-image product__main-image-wrap">
         <?php etheme_wc_product_labels(); ?>
         <a class="main-image product__main-image" itemprop="image" href="<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>" rel="thumbnails" title="<?php echo get_the_title( get_post_thumbnail_id() ); ?>">
-            <img class="attachment-shop_single" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>"  alt="<?php the_title(); ?>">
+            <img class="attachment-shop_single lazyload" data-src="<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>"  alt="<?php the_title(); ?>">
         </a>
     </div>
 
