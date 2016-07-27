@@ -46,7 +46,7 @@ $woocommerce_loop['loop']++;
 					<?php woocommerce_get_template( 'loop/sale-flash.php' );  ?>
         	<div class="product-loop__images">
 							<?php if( has_post_thumbnail() ) : ?>
-									<img class="product-loop__img lazyload" data-src="<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>" alt="<?php the_title(); ?>">
+									<img class="product-loop__img lazyload" data-src="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium' )[0]; ?>" alt="<?php the_title(); ?>">
 							<?php else : ?>
 									<img class="product-loop__img lazyload" data-src="<?php echo woocommerce_placeholder_img_src(); ?>" alt="<?php the_title(); ?>">
 							<?php endif; ?>
