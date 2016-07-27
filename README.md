@@ -19,11 +19,8 @@ Modern e-commerce solution based on WordPress.
 #### Setup development tools
 1. Install NPM:
   * ```npm install```
-* Install NPM dependencies:
-  * ```npm install gulp gulp-util gulp-sass vinyl-ftp gulp-autoprefixer gulp-minify-css gulp-uglify gulp-notify gulp-rename gulp-concat del --save-dev```
 * Install Bower:
   * ```bower install```
-  * ```bower install photoswipe```
 * Run Gulp tasks:
   * ```gulp```
 * Watch for modified source files:
@@ -42,6 +39,8 @@ Modern e-commerce solution based on WordPress.
 #### Components
 
 * [Swiper: modern mobile touch slider with hardware accelerated transitions](https://github.com/nolimits4web/swiper/)
+* [lazysizes: High performance and SEO friendly lazy loader for images](https://github.com/aFarkas/lazysizes)
+* [PhotoSwipe: JavaScript image gallery for mobile and desktop, modular, framework independent](https://github.com/dimsemenov/photoswipe)
 
 ## Credits
 * Based on Underscores [http://underscores.me/](http://underscores.me/), (C) 2012-2015 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
