@@ -2,10 +2,10 @@
 
 add_action('admin_init', 'etheme_load_admin_styles');
 function etheme_load_admin_styles() {
-	wp_enqueue_style('farbtastic');
-	wp_enqueue_style('etheme_admin_css', ETHEME_CODE_CSS_URL.'/admin.css');
+	// wp_enqueue_style('farbtastic');
+	// wp_enqueue_style('etheme_admin_css', ETHEME_CODE_CSS_URL.'/admin.css');
 }
-add_action('admin_init','etheme_add_admin_script');
+// add_action('admin_init','etheme_add_admin_script');
 
 function etheme_add_admin_script(){
 	add_thickbox();

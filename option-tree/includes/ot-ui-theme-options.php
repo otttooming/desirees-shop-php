@@ -34,7 +34,7 @@ if ( function_exists( 'ot_register_settings' ) ) {
             'menu_title'      => apply_filters( 'ot_theme_options_menu_title', __( 'Theme Options', 'option-tree' ) ),
             'capability'      => apply_filters( 'ot_theme_options_capability', 'edit_theme_options' ),
             'menu_slug'       => 'ot-theme-options',
-            'icon_url'        => ETHEME_CODE_CSS_URL.'/images/etheme.png',
+            'icon_url'        => '',
             'position'        => '58.925',
             'updated_message' => apply_filters( 'ot_theme_options_updated_message', __( 'Theme Options updated.', 'option-tree' ) ),
             'reset_message'   => apply_filters( 'ot_theme_options_reset_message', __( 'Theme Options reset.', 'option-tree' ) ),

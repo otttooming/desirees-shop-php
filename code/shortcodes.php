@@ -652,21 +652,21 @@ function register_shortcodes_button($buttons) {
 }
 
 function shortcodes_tinymce_plugin($plugin_array) {
-   if(class_exists('WooCommerce')){
-	   $plugin_array['et_featured'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
-	   $plugin_array['et_new_products'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
-   }
-   $plugin_array['et_contacts'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
-   $plugin_array['et_button'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
-   $plugin_array['et_blockquote'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
-   $plugin_array['et_list'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
-   $plugin_array['eth_dropcap'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
-   $plugin_array['et_tooltip'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
-   $plugin_array['et_iblock'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
-   $plugin_array['et_alert'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
-   $plugin_array['et_progress'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
-   $plugin_array['et_ptable'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
-   return $plugin_array;
+  //  if(class_exists('WooCommerce')){
+	//    $plugin_array['et_featured'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
+	//    $plugin_array['et_new_products'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
+  //  }
+  //  $plugin_array['et_contacts'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
+  //  $plugin_array['et_button'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
+  //  $plugin_array['et_blockquote'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
+  //  $plugin_array['et_list'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
+  //  $plugin_array['eth_dropcap'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
+  //  $plugin_array['et_tooltip'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
+  //  $plugin_array['et_iblock'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
+  //  $plugin_array['et_alert'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
+  //  $plugin_array['et_progress'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
+  //  $plugin_array['et_ptable'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
+  //  return $plugin_array;
 }
 
 function register_shortcodes_button2($buttons) {
@@ -685,16 +685,16 @@ function register_shortcodes_button2($buttons) {
 }
 
 function shortcodes_tinymce_plugin2($plugin_array) {
-   $plugin_array['et_row'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
-   $plugin_array['et_column1_2'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
-   $plugin_array['et_column1_3'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
-   $plugin_array['et_column2_3'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
-   $plugin_array['et_column1_4'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
-   $plugin_array['et_column3_4'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
-   $plugin_array['et_tabs'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
-   $plugin_array['et_icon'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
-   $plugin_array['et_tm'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
-   return $plugin_array;
+  //  $plugin_array['et_row'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
+  //  $plugin_array['et_column1_2'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
+  //  $plugin_array['et_column1_3'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
+  //  $plugin_array['et_column2_3'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
+  //  $plugin_array['et_column1_4'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
+  //  $plugin_array['et_column3_4'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
+  //  $plugin_array['et_tabs'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
+  //  $plugin_array['et_icon'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
+  //  $plugin_array['et_tm'] = get_bloginfo('template_url').'/code/js/editor_plugin.js';
+  //  return $plugin_array;
 }
 
 function etheme_refresh_mce($ver) {
