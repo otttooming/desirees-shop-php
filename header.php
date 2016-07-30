@@ -65,11 +65,11 @@
 					</div>
 
           <?php if ($template_header != 'min') : ?><?php // Load full header ?>
-  					<div class="span3 visible-desktop">
+  					<div class="span6 visible-desktop">
               <span class="search_text">
                   <?php echo _e( 'Telephone:', 'woocommerce' ) . ' ' .  get_option('contact_tel') ?>
               </span>
-              <div class="search_form">
+              <div class="search__wrap">
   							<?php get_search_form(); ?>
   						</div>
   					</div>

@@ -1,0 +1,20 @@
+.search {
+
+  &__form {
+    display: flex;
+  }
+
+  &__field,
+  &__select {
+    box-sizing: border-box;
+    line-height: 40px;
+    height: 40px;
+    padding: 0 15px;
+    margin: 0;
+    box-shadow: 2px 2px #111;
+  }
+
+  &__button {
+    background-color: #a30000;
+  }
+}

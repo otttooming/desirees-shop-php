@@ -794,30 +794,6 @@ label {
   display: block;
   margin-bottom: 5px; }
 
-select,
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"],
-.uneditable-input {
-  display: inline-block;
-  height: 22px;
-  padding: 4px 6px;
-  margin-bottom: 10px;
-  line-height: 20px;
-  vertical-align: middle; }
-
 input,
 textarea,
 .uneditable-input {
@@ -16802,6 +16778,21 @@ ul {
   text-shadow: 2px 2px #111 !important; }
   .button.active {
     background: #a30000; }
+
+.search__form {
+  display: -ms-flexbox;
+  display: flex; }
+
+.search__field, .search__select {
+  box-sizing: border-box;
+  line-height: 40px;
+  height: 40px;
+  padding: 0 15px;
+  margin: 0;
+  box-shadow: 2px 2px #111; }
+
+.search__button {
+  background-color: #a30000; }
 
 /*! PhotoSwipe main CSS by Dmitry Semenov | photoswipe.com | MIT license */
 /*
