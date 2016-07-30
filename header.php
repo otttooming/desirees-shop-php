@@ -21,7 +21,7 @@
           <?php if ($template_header != 'min') : ?><?php // Load full header ?>
 
   					<div class="span8">
-              <div class="search_form">
+              <div class="search_form visible-desktop">
   							<?php get_search_form(); ?>
   						</div>
 
