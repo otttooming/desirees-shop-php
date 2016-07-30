@@ -164,14 +164,6 @@ del{
 	background: #222;
 }
 
-.header-top-variant4 .header-variant2 #searchform .field{
-	background-color: transparent !important;
-}
-
-.header-top-variant4 .header-variant2 #searchform .field:focus{
-	background-color: #FFF !important;
-}
-
 .menu > ul > li > a{
 	text-shadow: 0 1px 0 #111;
 	color: white;
@@ -302,22 +294,6 @@ del{
 .prev.disabled:hover,
 .next.disabled:hover{
 	background-color: #333 !important;
-}
-
-#searchform .button{
-	background-color: #111;
-	border:1px solid #111;
-}
-
-.header-type-default #searchform .button,
-.header-variant2 #searchform .field{
-	background-image: url(../images/legacy/search_button_white_bg.png);
-	border: none !important;
-}
-
-#searchform .field:focus{
-	background-color: #333 !important;
-	color: white !important;
 }
 
 .search_text{

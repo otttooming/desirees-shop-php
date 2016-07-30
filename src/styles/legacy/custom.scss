@@ -190,10 +190,6 @@ table.shop_attributes {
   font-style: italic;
 }
 
-.adv_search_option select:hover {
-  background-color:transparent;
-}
-
 .widget-container select:hover {
   background-color:transparent;
 }
@@ -468,11 +464,6 @@ form .form-row.terms label a {
 
 .span3.shopping_cart_wrap.visible-desktop {
   margin-top:15px;
-}
-
-.header #searchform {
-  margin-top:15px;
-  box-shadow: $site-shadow-std;
 }
 
 .header {
@@ -830,10 +821,6 @@ th.product-total, td.product-total {
   margin: 0 0 20px 0 !important;
 }
 
-#searchform .button {
-  border: none !important;
-}
-
 .cart_table_item .variation p {
   color: $site-color-alt;
   font-style: italic;
@@ -931,73 +918,9 @@ th.product-total, td.product-total {
 
 /* Amazon style search bar */
 
-.search_form {
-  width: 349px;
-}
-
 .header-type-default .logo {
   width: inherit;
   margin-right: 5px;
-}
-
-#searchform .button, #searchform .button:hover {
-  float: right;
-  height: 40px;
-  border: none!important;
-  background-color: #333 !important;
-  background-image: url(../images/legacy/search_button_white_bg.png);
-  background-position: 50%!important;
-}
-
-.widget_search #searchform .button {
-  float:left;
-}
-
-/* use .header-area  if anything breaks */
-.adv_search_option {
-  display: inline-block!important;
-  float: left;
-  border-right: 1px solid #222;
-  border-left: 1px solid #222;
-}
-
-.adv_search_option select {
-  width: 99px!important;
-  height:40px;
-  padding-top:0!important;
-  padding-bottom:0!important;
-  border-bottom: 1px solid transparent!important;
-  background-color: #333 !important;
-  font-family: $site-font-main !important;
-  font-style: italic;
-}
-
-@-moz-document url-prefix() {
-
-  .header-area .adv_search_option select {
-  	padding-top: 9px!important;
-  }
-}
-
-.header-type-default #searchform {
-  display: inline-block;
-  height: 40px;
-  margin: 0 0 0 0;
-  border: transparent;
-}
-
-#searchform .field {
-  height:40px!important;
-  padding: 0 0 0 10px!important;
-  border: none!important;
-  background-color: #333!important;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
-#searchform .field:focus {
-  border: none !important;
-  box-shadow: inset 0 0 0 1px red;
 }
 
 .search_text {
@@ -1070,10 +993,6 @@ th.product-total, td.product-total {
 }
 
 .header-links a {
-  font-family: $site-font-main !important;
-}
-
-#searchform .field {
   font-family: $site-font-main !important;
 }
 
@@ -1596,10 +1515,6 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
   width: auto;
   padding-left: 0;
   text-align: left!important;
-}
-
-.header-variant2 .search_form {
-  display: none;
 }
 
 .sidebar_infoblock {
