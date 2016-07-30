@@ -12642,6 +12642,14 @@ var productGallerySlider = new Swiper ('.product__gallery-slider', {
     prevButton: '.product__gallery-control .control__up'
 });
 
+var productGallerySlider = new Swiper ('.slider__wide', {
+    direction: 'horizontal',
+    slidesPerView: '1',
+    autoplay: '1500',
+    pagination: '.swiper-pagination',
+    paginationClickable: true
+});
+
 var initPhotoSwipeFromDOM = function(gallerySelector) {
 
     // parse slide data (url, title, size ...) from DOM elements

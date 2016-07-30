@@ -1,3 +1,9 @@
 .is-disabled {
   display: none;
 }
+
+.f-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

@@ -1,12 +1,12 @@
 <?php
 /**
- * Template Name: Frontpage-ALT
+ * Template Name: Frontpage full
  */
 
   global $wp_query, $current_page_id, $template_header;
   $orig_query = $wp_query;
   $current_page_id = $wp_query->get_queried_object_id();
-  $template_header = 'min';
+  $template_header = 'full';
 
   get_header();
 ?>
