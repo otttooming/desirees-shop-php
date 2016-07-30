@@ -6,11 +6,22 @@
  *
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     2.0.0
+ * @version   2.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
+		exit; // Exit if accessed directly
+}
+
+global $wp_query;
+
+$cat = $wp_query->get_queried_object();
+$image = '';
+if ( !isset($cat->term_id) || !is_search() ) {
+		$image = '';
+} else {
+		$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
+		$image = wp_get_attachment_url( $thumbnail_id );
 }
 
 get_header('shop');
@@ -32,17 +43,6 @@ get_header('shop');
       </div>
 
     	<div id="default_products_page_container" class="grid_content with-sidebar-left span9 with-sidebar">
-        <?php
-            global $wp_query;
-            $cat = $wp_query->get_queried_object();
-            $image = '';
-            if(empty($cat->term_id) && !is_search()){
-                $image = '';
-            }else{
-                $thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
-                $image = wp_get_attachment_url( $thumbnail_id );
-            }
-        ?>
 
 				<?php
 					// Prints messages and errors which are stored in the session, then clears them.
