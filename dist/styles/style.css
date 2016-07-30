@@ -12392,18 +12392,6 @@ table.shop_attributes {
   color: #fff !important;
   font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important; }
 
-.searchpage select {
-  width: 187px !important;
-  height: 32px;
-  padding-top: 3px !important;
-  padding-right: 4px !important;
-  padding-bottom: 5px !important;
-  padding-left: 6px !important;
-  background: url(../images/legacy/select_arrow.png) no-repeat 95% center; }
-
-.searchpage_select {
-  margin-top: 10px; }
-
 /*FIXed header slimdown */
 .fixed-header-area .menu > ul > li > ul {
   top: 69px; }
@@ -12502,12 +12490,6 @@ table.shop_attributes td p {
 .product_categories_grid .category-block:nth-child(3n+1) {
   clear: none; }
 
-.grid_pagination_block {
-  padding: 0 25px;
-  background-color: #151515;
-  box-shadow: 0 0 3px #111;
-  line-height: 45px; }
-
 /*line height behavior linked to .product-name a*/
 .product-grid .product-information {
   position: static;
@@ -12550,13 +12532,6 @@ select, select:hover {
 
 .grid_pagination_block .woocommerce-result-count {
   font-style: italic; }
-
-.responsive-switcher {
-  margin: 0;
-  background: #2f2f2f; }
-
-#fancybox-wrap {
-  z-index: 99999; }
 
 .footer-black-bg .logo {
   font-size: 40px;
@@ -12626,36 +12601,6 @@ form .form-row.terms label a {
 .order_details strong {
   font-weight: normal; }
 
-/* Compare Products */
-.products_grid .compare.button, .related .compare.button, .upsells .compare.button, .product-slider .compare.button {
-  display: block !important;
-  position: absolute;
-  right: -20px;
-  bottom: 6px;
-  width: 10px;
-  height: 30px;
-  overflow: hidden;
-  background: #a30000;
-  box-shadow: 2px 2px #111;
-  text-align: center; }
-
-/* WC Photo Tab settings */
-.single-product .tabs li {
-  margin-right: 10px;
-  margin-bottom: 10px; }
-
-/*Switcher color*/
-.grid_pagination_block .wp_user_stylesheet_switcher {
-  float: right; }
-
-.grid_pagination_block .wp_user_stylesheet_switcher select {
-  width: 10px; }
-
-/*Switcher icons*/
-.wp_user_stylesheet_switcher_icon {
-  width: 20px;
-  cursor: pointer; }
-
 .tab-content.tab-shipping h3 {
   -webkit-font-smoothing: auto; }
 
@@ -12682,10 +12627,6 @@ form .form-row.terms label a {
 
 .widget_shopping_cart .button {
   background-color: #a30000 !important; }
-
-/*PRODUCT IMAGES*/
-.cta-block {
-  padding: 15px 30px 15px 30px; }
 
 /*Remove square lists*/
 .cats .block-content .wpsc_categories li {
@@ -12717,9 +12658,6 @@ div.product_meta a {
   margin-top: 10px; }
 
 /*WPCAP*/
-.post-edit-link {
-  display: none; }
-
 h2, h3, .product-slider h4, .contact_info h5 {
   font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important;
   font-size: 27px;
