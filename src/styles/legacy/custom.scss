@@ -1,7 +1,7 @@
 // scss-lint:disable all
 
 body {
-  font-family: $site-font-main !important;
+
 	background-attachment: fixed;
   -webkit-font-smoothing: subpixel-antialiased;
 }
@@ -37,7 +37,6 @@ hr {
 
 .amount {
   color: $site-color-red-light !important;
-  font-family: $site-font-main !important;
   font-style: normal;
 }
 
@@ -73,7 +72,6 @@ hr {
 }
 
 .product-name a {
-  font-family: $site-font-main !important;
   font-size: 13px !important;
   font-style: italic;
   line-height: inherit !important;
@@ -110,13 +108,13 @@ hr {
 }
 
 .logo a {
-  font-family: $site-font-main !important;
+
   font-weight: 100;
   font-style: normal;
 }
 
 .logo .logo-text-red {
-  font-family: $site-font-main !important;
+
   font-weight: 100;
   font-style: normal;
 }
@@ -185,7 +183,7 @@ table.shop_attributes {
   padding-left: 6px !important;
   background: url(../images/legacy/select_arrow.png) no-repeat 95% center;
   color: #666669;
-  font-family: $site-font-main !important;
+
   font-weight:300;
   font-style: italic;
 }
@@ -206,7 +204,7 @@ table.shop_attributes {
 #back-to-top.btn-style-standart a {
   background: $site-color-red-std url(../images/legacy/arrow_up_2.png) no-repeat 12px center !important;
   color: $site-color-white !important;
-  font-family: $site-font-main !important;
+
 }
 
 /*FIXed header slimdown */
@@ -239,7 +237,7 @@ table.shop_attributes {
 }
 
 table.shop_attributes {
-  font-family: $site-font-main !important;
+
 }
 
 table.shop_attributes td, table.shop_attributes th {
@@ -266,7 +264,7 @@ table.shop_attributes td p {
 
 .tabs .tab-title {
 	margin: 0 !important;
-  font-family: $site-font-main !important;
+
   font-weight: 400 !important;
 	&:hover {
 	  color: $site-color-red-std;
@@ -340,7 +338,6 @@ table.shop_attributes td p {
   line-height:15px !important;
 }
 .product-grid .product-information p {
-  font-family: $site-font-secondary !important;
   font-size: 14px;
 }
 
@@ -372,7 +369,7 @@ select, select:hover {
   width:180px;
   margin-left:15px !important;
   color: $site-color-alt!important;
-  font-family: $site-font-main !important;
+
   font-style: italic;
 }
 
@@ -399,9 +396,6 @@ select, select:hover {
   font-size:20px;
 }
 
-.textwidget .tavapood_kontakt p {
-  font-family: $site-font-main !important;
-}
 
 ul.product_list_widget li img {
   width: 75px;
@@ -445,7 +439,7 @@ form .form-row.terms label a {
 }
 
 .qty-block label {
-  font-family: $site-font-main !important;
+
   font-size: 15px;
 }
 
@@ -514,7 +508,7 @@ form .form-row.terms label a {
 }
 
 .wpsc_categories a, .wpsc_category_title a {
-  font-family: $site-font-main !important;
+
 }
 
 .wpsc_top_level_categories {
@@ -548,7 +542,7 @@ div.product_meta a {
 /*WPCAP*/
 
 h2, h3, .product-slider h4, .contact_info h5{
-  font-family: $site-font-main !important;
+
   font-size: 27px;
   font-weight: 100;
   font-style: normal;
@@ -556,12 +550,10 @@ h2, h3, .product-slider h4, .contact_info h5{
 }
 
 .tabs h2 {
-  display: none;
   line-height:30px;
 }
 
 .tabs p {
-  font-family: "Open Sans", sans-serif !important;
   font-size: 14px;
 }
 
@@ -638,7 +630,6 @@ h2, h3, .product-slider h4, .contact_info h5{
 
 .h2mod h5 {
   color:$site-color-alt;
-  font-family: $site-font-main !important;
   font-size: 20px !important;
   font-weight: 400;
   font-style: normal;
@@ -704,7 +695,6 @@ table.shop_attributes td {
 }
 
 .order_details h3 {
-  font-family: $site-font-main !important;
   font-size: 16px !important;
   font-weight: 400;
   font-style: normal;
@@ -721,11 +711,9 @@ th.product-total, td.product-total {
 
 .woocommerce-message {
   color: $site-color-white !important;
-  font-family: $site-font-main !important;
 }
 
 .product-stock {
-  font-family: $site-font-main !important;
   text-transform:uppercase;
 
   &__header {
@@ -903,70 +891,6 @@ th.product-total, td.product-total {
   font-style: italic;
 }
 
-/* Oswald font change */
-
-.menu > ul > li > a {
-  font-family: $site-font-main !important;
-}
-
-.button {
-  font-family: $site-font-main !important;
-}
-
-.header-links a {
-  font-family: $site-font-main !important;
-}
-
-.product_meta {
-  font-family: $site-font-main !important;
-}
-
-.woocommerce-result-count {
-  font-family: $site-font-main !important;
-}
-
-.widget-container a, .widget-container ul li {
-  font-family: $site-font-main !important;
-}
-
-.variations_form table.variations tr label, .variations_form table.variations select, .variations_form table.variations a {
-  font-family: $site-font-main !important;
-}
-
-.copyright {
-  font-family: $site-font-main !important;
-}
-
-.sub-menu a {
-  font-family: $site-font-main !important;
-}
-
-.et-mobile-menu li > a {
-  font-family: $site-font-main !important;
-}
-
-#av_verify, #av-overlay h1, #av-overlay p {
-  font-family: $site-font-main !important;
-}
-
-.grid_pagination a, .grid_bottom_pagination a {
-  background: transparent !important;
-  font-family: $site-font-main !important;
-}
-
-.grid_pagination a:hover, .grid_bottom_pagination a:hover {
-  background: #a30023 !important;
-}
-
-.grid_pagination span.current, .grid_bottom_pagination span.current {
-  background: #a30023 !important;
-  font-family: $site-font-main !important;
-}
-
-h4 {
-  font-family: $site-font-main !important;
-}
-
 /* =Order Page
 	-------------------------------------------------------------- */
 .order_details {
@@ -1007,7 +931,6 @@ h4 {
   background-color: $site-color-red-light !important;
   color:$site-color-white!important;
 }
-
 
 /* Shadows */
 
@@ -1064,7 +987,7 @@ h4 {
   background-color: $site-color-red-std;
   border-radius: 5px;
   text-shadow: 1px 1px #111;
-  font: 13px $site-font-secondary;
+  font-size: 13px;
   z-index: 9999;
   transition: 250ms;
 }
@@ -1104,7 +1027,6 @@ h4 {
 /*Read more in short excerpt*/
 
 .product__excerpt {
-  font-family: "Open Sans", sans-serif !important;
   font-size: 14px;
 }
 
@@ -1386,7 +1308,6 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
   margin: 0;
 }
 .tavpood_infoblock li, .tavpood_infoblock p, .company_list2 li {
-  font-family: $site-font-secondary !important;
   font-size: 14px;
 }
 
@@ -1513,7 +1434,6 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 }
 
 .hidden-desktop .header-phone {
-  font-family: $site-font-main !important;
   line-height: 35px;
 }
 
@@ -1647,7 +1567,6 @@ td.product-quantity {
   padding: 20px;
   background-color: $site-color-dark-light;
   box-shadow: 0 0 3px #111;
-  font-family: $site-font-secondary !important;
   font-size: 14px;
 }
 
@@ -1758,7 +1677,6 @@ td.product-quantity {
 
 .company_list3 p {
   text-shadow: $site-shadow-std;
-  font-family: $site-font-secondary !important;
   font-size: 125%;
 }
 

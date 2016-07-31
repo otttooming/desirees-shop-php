@@ -1,4 +1,5 @@
 body {
+  font-family: $typeface-primary;
   background-image: -webkit-radial-gradient(45% center, circle, rgba(17, 52, 181, 0.9) 40%, rgba(234, 0, 64, 0.9));
 }
 
@@ -22,6 +23,10 @@ h2 {
 
 h5 {
   margin: 0 0 5px;
+}
+
+p {
+  font-family: $typeface-secondary;
 }
 
 img {

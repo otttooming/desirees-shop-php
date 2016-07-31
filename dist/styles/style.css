@@ -1042,7 +1042,6 @@ table th[class*="span"] {
 .tab-content > .active,
 .pill-content > .active {
   display: block;
-  font: 12px Arial, sans-serif;
   color: #808080;
   line-height: 1.8; }
 
@@ -1141,16 +1140,8 @@ html {
 /* -------------------------------------------------- */
 /* Body
 /* -------------------------------------------------- */
-@font-face {
-  font-family: 'arrows';
-  src: url("font/arrows.eot");
-  src: url("font/arrows.eot?#iefix") format("embedded-opentype"), url("font/arrows.woff") format("woff"), url("font/arrows.ttf") format("truetype"), url("font/arrows.svg#arrows") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
 body {
   margin: 0 auto;
-  font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   line-height: 20px;
   color: #808080;
@@ -1660,7 +1651,6 @@ button:focus {
 /* -------------------------------------------------- */
 blockquote {
   background: #fafafa url(../images/legacy/quotes.png) no-repeat 10px 10px;
-  font: italic 12px 'Open Sans', sans-serif;
   color: #808080;
   line-height: 1.8;
   margin: 0 20px 20px;
@@ -1809,9 +1799,6 @@ iframe {
 
 .modal-footer .btn-block + .btn-block {
   margin-left: 0; }
-
-.span4.header-phone {
-  font-family: 'Open Sans'; }
 
 /* ----------------------------------------------------------- */
 /* Tooltip
@@ -1976,7 +1963,6 @@ body.wide {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 60px;
-  font-family: 'Open Sans', sans-serif;
   line-height: 54px; }
 
 .logo a, .logo a:hover {
@@ -2008,8 +1994,7 @@ body.wide {
   margin-bottom: 0; }
 
 .header-links li {
-  display: inline-block;
-  font: 12px Verdana, sans-serif; }
+  display: inline-block; }
 
 .header-links li:last-child {
   margin-right: 0;
@@ -2176,8 +2161,7 @@ body.wide {
   padding: 5px;
   color: #666669;
   text-align: center;
-  font-size: 11px;
-  font-family: Calibri; }
+  font-size: 11px; }
 
 .products-small .product-item h5 {
   margin-bottom: 5px;
@@ -2601,7 +2585,6 @@ div.menu {
 
 .menu > ul > li > a {
   float: none;
-  font: 14px 'Open Sans', sans-serif;
   position: relative;
   color: #444;
   text-transform: uppercase;
@@ -3005,7 +2988,6 @@ div.menu {
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
-  font: 12px Tahoma, sans-serif;
   border-color: transparent;
   padding: 6px 11px; }
 
@@ -3091,8 +3073,7 @@ div.menu {
   font-weight: 400;
   padding: 20px 0 10px 0;
   text-align: center;
-  border-bottom: 1px solid #ccc;
-  font-family: 'Open Sans', Arial, sans-serif; }
+  border-bottom: 1px solid #ccc; }
 
 .effect-1 .mask p {
   color: #444;
@@ -3111,8 +3092,7 @@ div.menu {
   color: #444;
   font-style: normal;
   font-weight: 400;
-  text-transform: uppercase;
-  font-family: 'Open Sans', Arial, sans-serif; }
+  text-transform: uppercase; }
 
 .effect-1 .mask p a.button {
   float: left;
@@ -3177,8 +3157,7 @@ div.menu {
   font-weight: 400;
   padding: 10px 0 10px 0;
   text-align: center;
-  border-bottom: 1px solid #dbdbdb;
-  font-family: 'Open Sans', Arial, sans-serif; }
+  border-bottom: 1px solid #dbdbdb; }
 
 .effect-2 .mask p {
   color: #656565;
@@ -3513,8 +3492,7 @@ div.menu {
 
 .addtocart {
   text-align: center;
-  text-transform: uppercase;
-  font: 11px Tahoma, sans-serif; }
+  text-transform: uppercase; }
 
 .addtocart a {
   color: #fffefe; }
@@ -4160,7 +4138,6 @@ div.pp_woocommerce .pp_content_container .pp_right {
   padding-bottom: 10px;
   background: url(../images/legacy/sizing_guide_img.png) no-repeat;
   background-position: 10px bottom;
-  font: 12px 'Open Sans', sans-serif;
   transition: all 0.2s ease-in-out; }
 
 .size_guide a:hover {
@@ -4309,8 +4286,7 @@ ins {
 
 .you-save .pricedisplay, .you-save .price {
   font-weight: 400;
-  font-size: 11px;
-  font-family: Verdana; }
+  font-size: 11px; }
 
 .ppp_price, .you-save {
   color: #090909;
@@ -4361,22 +4337,19 @@ ins {
 /* Variations
 ---------------------------------------------------------*/
 .label label {
-  color: #808080;
-  font: 12px 'Open Sans', sans-serif; }
+  color: #808080; }
 
 #size, #color {
   margin: 0 0 20px;
   outline: none;
   border: 1px solid #EFEFEF;
-  color: gray;
-  font: 12px 'Open Sans', sans-serif; }
+  color: gray; }
 
 .product_description_tags {
   margin-bottom: 20px;
   padding-top: 20px;
   border-top: 1px solid #eee;
-  color: #444;
-  font: 12px 'Open Sans', sans-serif; }
+  color: #444; }
 
 .pd_tags_title {
   color: gray; }
@@ -4729,7 +4702,6 @@ ins {
 
 .textwidget p {
   color: gray;
-  font: 12px 'Open Sans', sans-serif;
   line-height: 1.8; }
 
 .footer_container .textwidget p {
@@ -4750,8 +4722,7 @@ ins {
   background: #f5f5f5;
   color: #222;
   text-align: center;
-  text-transform: uppercase;
-  font: 26px "Open Sans", sans-serif !important; }
+  text-transform: uppercase; }
 
 .grid_content {
   margin-top: 20px; }
@@ -4782,7 +4753,6 @@ ins {
 -------------------------------------------------------------- */
 .cats .block-content .wpsc_categories li a, .cats .block-content .wpsc_categories li {
   font-size: 12px;
-  font-family: 'Open Sans';
   list-style: square inside;
   color: #ccc;
   transition: all 0.2s ease-in-out; }
@@ -4794,7 +4764,6 @@ ins {
   margin-left: 1px;
   padding: 1px 0 3px 0;
   color: #656565;
-  font: 12px 'Open Sans', sans-serif;
   -webkit-transition-timing-function: ease;
   -webkit-transition-duration: .2s;
   -webkit-transition-property: color; }
@@ -5084,15 +5053,13 @@ ins {
   border-bottom: 1px solid #ddd;
   color: #090909;
   text-align: center;
-  text-transform: uppercase;
-  font: 14px 'Open Sans', sans-serif; }
+  text-transform: uppercase; }
 
 .sgp_filter {
   padding: 0 10px; }
 
 .sgp_filter p {
   color: gray;
-  font: 12px 'Open Sans', sans-serif;
   line-height: 1.4; }
 
 .sgp_filter img {
@@ -5107,8 +5074,7 @@ ins {
   margin-top: 5px; }
 
 .sgp_filter_text_light {
-  color: gray;
-  font: 12px Calibri, sans-serif; }
+  color: gray; }
 
 #sgp_filter_button {
   float: right;
@@ -5194,9 +5160,6 @@ ins {
   margin-top: 15px;
   color: #666;
   font-size: 12px; }
-
-.price_filter_span_left, .price_filter_span_right {
-  font: 12px 'Open Sans', sans-serif; }
 
 .price_filter_span_left {
   float: left;
@@ -5405,7 +5368,6 @@ ul.product_list_widget li .woocommerce-price-suffix .amount {
 #recentcomments li {
   color: #444;
   list-style: square outside;
-  font: 12px 'Open Sans', sans-serif;
   line-height: 1.8;
   transition: color .2s ease-in-out; }
 
@@ -5829,8 +5791,7 @@ ul.product_list_widget li img {
 .date_month {
   padding: 4px 10px 4px;
   background: #ccc;
-  color: #fff;
-  font: 12px 'Open Sans', sans-serif; }
+  color: #fff; }
 
 .blog-post.post-portrait .post-title {
   color: #656565;
@@ -5848,7 +5809,6 @@ ul.product_list_widget li img {
 .blog-post.post-portrait .post-information p {
   margin-top: 15px;
   color: gray;
-  font: 12px 'Open Sans', sans-serif;
   line-height: 1.6; }
 
 .blog-post.post-portrait .post-information .more-link {
@@ -5866,7 +5826,6 @@ ul.product_list_widget li img {
 
 .blog3_post_text {
   color: gray;
-  font: 12px 'Open Sans', sans-serif;
   line-height: 1.8;
   width: 100%;
   float: none;
@@ -5917,8 +5876,7 @@ ul.product_list_widget li img {
 .input_title {
   float: left;
   clear: both;
-  color: #818181;
-  font: 12px 'Open Sans', sans-serif; }
+  color: #818181; }
 
 .review_input {
   float: left;
@@ -6017,8 +5975,7 @@ ul.product_list_widget li img {
   height: 28px; }
 
 .logged-in-as {
-  color: gray;
-  font: 12px 'Open Sans', sans-serif; }
+  color: gray; }
 
 .edit-link a {
   display: block;
@@ -6108,12 +6065,10 @@ ul.product_list_widget li img {
 .checkout_title {
   margin: 20px 0;
   color: #444;
-  text-transform: uppercase;
-  font: 14px 'Open Sans', sans-serif; }
+  text-transform: uppercase; }
 
 .checkout_blocks_title {
-  color: #444;
-  font: 12px 'Open Sans', sans-serif; }
+  color: #444; }
 
 .checkout_blocks {
   padding-top: 10px;
@@ -6121,17 +6076,14 @@ ul.product_list_widget li img {
 
 .checkout_blocks textarea {
   border: 1px solid #dad6d6;
-  color: gray;
-  font: 12px 'Open Sans', sans-serif; }
+  color: gray; }
 
 .checkout_select {
   width: 307px;
-  color: gray;
-  font: 12px 'Open Sans', sans-serif; }
+  color: gray; }
 
 .checkout_td {
-  width: 20%;
-  font: 14px 'Open Sans', sans-serif; }
+  width: 20%; }
 
 .checkout-login {
   width: 150px !important; }
@@ -6161,8 +6113,7 @@ ul.product_list_widget li img {
   padding-left: 10px !important;
   width: 290px;
   border: 1px solid #dad6d6;
-  color: gray;
-  font: 12px 'Open Sans', sans-serif; }
+  color: gray; }
 
 .woocommerce_info, #customer_details input {
   font-size: 12px; }
@@ -6787,8 +6738,7 @@ tfoot tr:nth-child(3) td {
   border-bottom: 1px solid #ccc;
   background: #fafafa;
   color: #666669;
-  text-transform: uppercase;
-  font: 12px 'Open Sans', sans-serif; }
+  text-transform: uppercase; }
 
 .cart_table_title td {
   padding: 5px 0;
@@ -6821,8 +6771,7 @@ tfoot tr:nth-child(3) td {
   padding: 1px 4px !important;
   width: 12px;
   border: 1px solid #efefef !important;
-  color: #acacac;
-  font: 12px Calibri, sans-serif; }
+  color: #acacac; }
 
 .input_qty_cart:focus {
   border: 1px solid #9b9b9b !important; }
@@ -6832,7 +6781,6 @@ tfoot tr:nth-child(3) td {
   margin-right: 10px;
   padding: 8px 0;
   background: #fafafa;
-  font: 12px Calibri, sans-serif;
   -webkit-transition-timing-function: ease;
   -webkit-transition-duration: .2s;
   -webkit-transition-property: background; }
@@ -6860,14 +6808,12 @@ tfoot tr:nth-child(3) td {
 .cart_proceed_to_check_price_bold_text {
   display: inline;
   float: left;
-  color: #555;
-  font: bold 18px 'Open Sans', sans-serif; }
+  color: #555; }
 
 .cart_proceed_to_check_price_bold {
   display: inline;
   float: right;
-  margin-left: 20px;
-  font: bold 18px 'Open Sans', sans-serif; }
+  margin-left: 20px; }
 
 #cart_procced_to_check_button {
   margin-top: 15px;
@@ -6877,7 +6823,6 @@ tfoot tr:nth-child(3) td {
   background-image: url(../images/legacy/cart_check_arow.png);
   background-position: 215px 24px;
   background-repeat: no-repeat;
-  font: 14px 'Open Sans', sans-serif;
   cursor: pointer;
   -webkit-transition-timing-function: ease;
   -webkit-transition-duration: .2s;
@@ -6996,15 +6941,13 @@ tfoot tr:nth-child(3) td {
   margin-bottom: 15px !important;
   width: 260px;
   border: 1px solid #efefef !important;
-  color: #c2c2c2;
-  font: 12px 'Open Sans', sans-serif; }
+  color: #c2c2c2; }
 
 .contact_textarea {
   margin-bottom: 20px !important;
   width: 310px;
   border: 1px solid #efefef;
-  color: #aaa;
-  font: 12px 'Open Sans', sans-serif; }
+  color: #aaa; }
 
 #contact_button {
   margin-left: -10px; }
@@ -7439,8 +7382,7 @@ form.login .lost_password {
   display: block;
   margin-left: -20px;
   width: 475px;
-  color: gray;
-  font: 12px 'Open Sans', sans-serif; }
+  color: gray; }
 
 .after_footer {
   margin-left: 0;
@@ -9358,8 +9300,7 @@ form.login .lost_password {
     font-weight: 400;
     padding: 0px 0 2px 0;
     text-align: center;
-    border-bottom: 1px solid #dbdbdb;
-    font-family: 'Open Sans', Arial, sans-serif; }
+    border-bottom: 1px solid #dbdbdb; }
   .effect-2 .mask, .effect-1 .mask {
     opacity: 1;
     z-index: 1;
@@ -10002,8 +9943,7 @@ form.login .lost_password {
   .banner_top_button a {
     color: #fff;
     text-decoration: none;
-    text-transform: uppercase;
-    font: 12px Tahoma, sans-serif; }
+    text-transform: uppercase; }
   .blog2_post_title {
     width: 370px; }
   .blog-post.post-horizontal .post-images, .blog-post.post-portrait .post-images {
@@ -10735,8 +10675,7 @@ form.login .lost_password {
     float: none !important;
     color: #fff;
     text-decoration: none;
-    text-transform: uppercase;
-    font: 12px Tahoma, sans-serif; }
+    text-transform: uppercase; }
   .input-append {
     float: left;
     margin: 10px 0 20px -10px; }
@@ -12222,7 +12161,6 @@ ul.icons li [class*=' icon-'] {
   content: '\f115'; }
 
 body {
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important;
   background-attachment: fixed;
   -webkit-font-smoothing: subpixel-antialiased; }
 
@@ -12250,7 +12188,6 @@ hr {
 
 .amount {
   color: #e00 !important;
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important;
   font-style: normal; }
 
 .product-grid .price .amount, .product-grid .price.sale .currentprice {
@@ -12281,7 +12218,6 @@ hr {
   font-size: 20px !important; }
 
 .product-name a {
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important;
   font-size: 13px !important;
   font-style: italic;
   line-height: inherit !important; }
@@ -12311,12 +12247,10 @@ hr {
   margin-bottom: 0 !important; }
 
 .logo a {
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important;
   font-weight: 100;
   font-style: normal; }
 
 .logo .logo-text-red {
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important;
   font-weight: 100;
   font-style: normal; }
 
@@ -12373,7 +12307,6 @@ table.shop_attributes {
   padding-left: 6px !important;
   background: url(../images/legacy/select_arrow.png) no-repeat 95% center;
   color: #666669;
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important;
   font-weight: 300;
   font-style: italic; }
 
@@ -12389,8 +12322,7 @@ table.shop_attributes {
 
 #back-to-top.btn-style-standart a {
   background: #a30000 url(../images/legacy/arrow_up_2.png) no-repeat 12px center !important;
-  color: #fff !important;
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important; }
+  color: #fff !important; }
 
 /*FIXed header slimdown */
 .fixed-header-area .menu > ul > li > ul {
@@ -12415,9 +12347,6 @@ table.shop_attributes {
 .back-to {
   width: 165px !important; }
 
-table.shop_attributes {
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important; }
-
 table.shop_attributes td, table.shop_attributes th {
   min-width: 125px;
   border-top: 1px solid transparent !important;
@@ -12438,7 +12367,6 @@ table.shop_attributes td p {
 
 .tabs .tab-title {
   margin: 0 !important;
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important;
   font-weight: 400 !important; }
   .tabs .tab-title:hover {
     color: #a30000; }
@@ -12497,7 +12425,6 @@ table.shop_attributes td p {
   line-height: 15px !important; }
 
 .product-grid .product-information p {
-  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif !important;
   font-size: 14px; }
 
 .widget-container {
@@ -12523,7 +12450,6 @@ select, select:hover {
   width: 180px;
   margin-left: 15px !important;
   color: #ff9500 !important;
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important;
   font-style: italic; }
 
 .grid_pagination_block .woocommerce-ordering select:hover {
@@ -12543,9 +12469,6 @@ select, select:hover {
 
 .footer_title {
   font-size: 20px; }
-
-.textwidget .tavapood_kontakt p {
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important; }
 
 ul.product_list_widget li img {
   width: 75px; }
@@ -12580,7 +12503,6 @@ form .form-row.terms label a {
   background-color: #a30000 !important; }
 
 .qty-block label {
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important;
   font-size: 15px; }
 
 .product_layout_default .qty-block {
@@ -12632,9 +12554,6 @@ form .form-row.terms label a {
 .cats .block-content .wpsc_categories li {
   list-style: none !important; }
 
-.wpsc_categories a, .wpsc_category_title a {
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important; }
-
 .wpsc_top_level_categories {
   margin-left: 10px; }
 
@@ -12659,18 +12578,15 @@ div.product_meta a {
 
 /*WPCAP*/
 h2, h3, .product-slider h4, .contact_info h5 {
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important;
   font-size: 27px;
   font-weight: 100;
   font-style: normal;
   text-transform: none; }
 
 .tabs h2 {
-  display: none;
   line-height: 30px; }
 
 .tabs p {
-  font-family: "Open Sans", sans-serif !important;
   font-size: 14px; }
 
 #content_tab_1 {
@@ -12732,7 +12648,6 @@ h2, h3, .product-slider h4, .contact_info h5 {
 
 .h2mod h5 {
   color: #ff9500;
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important;
   font-size: 20px !important;
   font-weight: 400;
   font-style: normal;
@@ -12786,7 +12701,6 @@ table.shop_attributes td {
   margin-left: 20px; }
 
 .order_details h3 {
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important;
   font-size: 16px !important;
   font-weight: 400;
   font-style: normal;
@@ -12799,11 +12713,9 @@ th.product-total, td.product-total {
   border-color: transparent !important; }
 
 .woocommerce-message {
-  color: #fff !important;
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important; }
+  color: #fff !important; }
 
 .product-stock {
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important;
   text-transform: uppercase; }
   .product-stock__header {
     color: #fff; }
@@ -12940,54 +12852,6 @@ th.product-total, td.product-total {
   margin-right: 15px;
   font-style: italic; }
 
-/* Oswald font change */
-.menu > ul > li > a {
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important; }
-
-.button {
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important; }
-
-.header-links a {
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important; }
-
-.product_meta {
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important; }
-
-.woocommerce-result-count {
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important; }
-
-.widget-container a, .widget-container ul li {
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important; }
-
-.variations_form table.variations tr label, .variations_form table.variations select, .variations_form table.variations a {
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important; }
-
-.copyright {
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important; }
-
-.sub-menu a {
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important; }
-
-.et-mobile-menu li > a {
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important; }
-
-#av_verify, #av-overlay h1, #av-overlay p {
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important; }
-
-.grid_pagination a, .grid_bottom_pagination a {
-  background: transparent !important;
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important; }
-
-.grid_pagination a:hover, .grid_bottom_pagination a:hover {
-  background: #a30023 !important; }
-
-.grid_pagination span.current, .grid_bottom_pagination span.current {
-  background: #a30023 !important;
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important; }
-
-h4 {
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important; }
-
 /* =Order Page
 	-------------------------------------------------------------- */
 .order_details {
@@ -13069,7 +12933,7 @@ h4 {
   background-color: #a30000;
   border-radius: 5px;
   text-shadow: 1px 1px #111;
-  font: 13px "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 13px;
   z-index: 9999;
   transition: 250ms; }
 
@@ -13100,7 +12964,6 @@ h4 {
 
 /*Read more in short excerpt*/
 .product__excerpt {
-  font-family: "Open Sans", sans-serif !important;
   font-size: 14px; }
 
 .more-info {
@@ -13321,7 +13184,6 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
   margin: 0; }
 
 .tavpood_infoblock li, .tavpood_infoblock p, .company_list2 li {
-  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif !important;
   font-size: 14px; }
 
 .new_contacts {
@@ -13419,7 +13281,6 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
   line-height: 35px; }
 
 .hidden-desktop .header-phone {
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif !important;
   line-height: 35px; }
 
 /* =Tables
@@ -13546,7 +13407,6 @@ td.product-quantity {
   padding: 20px;
   background-color: #151515;
   box-shadow: 0 0 3px #111;
-  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif !important;
   font-size: 14px; }
 
 .block-head {
@@ -13622,7 +13482,6 @@ td.product-quantity {
 
 .company_list3 p {
   text-shadow: 2px 2px #111;
-  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif !important;
   font-size: 125%; }
 
 .company_list3 h3 {
@@ -14627,9 +14486,6 @@ div.light_rounded .pp_content {
 .wide .tp-rightarrow {
   right: 8px !important; }
 
-.textwidget p {
-  font-family: 'Open Sans', sans-serif !important; }
-
 .woocommerce-error, .error, .woocommerce-message, .woocommerce_error, .success, .info, .notice {
   background-color: #333;
   border: 1px solid #111;
@@ -15290,6 +15146,7 @@ div.pp_overlay {
 
 /* END media query (min-width:1200px) */
 body {
+  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
   background-image: -webkit-radial-gradient(45% center, circle, rgba(17, 52, 181, 0.9) 40%, rgba(234, 0, 64, 0.9)); }
 
 a {
@@ -15309,6 +15166,9 @@ h2 {
 
 h5 {
   margin: 0 0 5px; }
+
+p {
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; }
 
 img {
   max-width: 100%; }
