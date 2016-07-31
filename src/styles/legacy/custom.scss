@@ -1,11 +1,5 @@
 // scss-lint:disable all
 
-body {
-
-	background-attachment: fixed;
-  -webkit-font-smoothing: subpixel-antialiased;
-}
-
 .wrapper {
   overflow: hidden;
 }
@@ -319,8 +313,6 @@ table.shop_attributes td p {
   margin:0 0 0 0 !important;
   font-size:12px !important;
   text-transform: uppercase !important;
-
-  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 .category-block mark {
@@ -463,10 +455,6 @@ form .form-row.terms label a {
 }
 .order_details strong {
   font-weight: normal;
-}
-
-.tab-content.tab-shipping h3 {
-  -webkit-font-smoothing:auto;
 }
 
 #order_comments_field {

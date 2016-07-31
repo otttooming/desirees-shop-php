@@ -12160,10 +12160,6 @@ ul.icons li [class*=' icon-'] {
 .icon-folder-open-alt:before {
   content: '\f115'; }
 
-body {
-  background-attachment: fixed;
-  -webkit-font-smoothing: subpixel-antialiased; }
-
 .wrapper {
   overflow: hidden; }
 
@@ -12409,8 +12405,7 @@ table.shop_attributes td p {
 .category-block h3 {
   margin: 0 0 0 0 !important;
   font-size: 12px !important;
-  text-transform: uppercase !important;
-  -webkit-font-smoothing: subpixel-antialiased; }
+  text-transform: uppercase !important; }
 
 .category-block mark {
   color: #a30000; }
@@ -12522,9 +12517,6 @@ form .form-row.terms label a {
 
 .order_details strong {
   font-weight: normal; }
-
-.tab-content.tab-shipping h3 {
-  -webkit-font-smoothing: auto; }
 
 #order_comments_field {
   display: inline-block; }
