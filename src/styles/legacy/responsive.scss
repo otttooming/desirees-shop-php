@@ -43,43 +43,6 @@ form.login .login-head .login-span-big, form.register .register-head .register-s
 .banner p{font-size:11px;padding:5px 10px;margin-bottom: 0;}
 .banner a.info{padding:5px 9px;}
 .banner_top_text{padding:4.7% 0;}
-.effect-3 .mask{height: 70px;}
-.effect-2 .mask h3, .effect-1 .mask h3 {
-color: #656565;
-text-transform: uppercase;
-letter-spacing: 1px;
-font-size: 14px;
-margin: 0 0px;
-font-weight: 400;
-padding: 0px 0 2px 0;
-text-align: center;
-border-bottom: 1px solid #dbdbdb;
-}
-.effect-2 .mask, .effect-1 .mask{
-	opacity: 1;
-	z-index: 1;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -o-transform: scale(1);
-  -ms-transform: scale(1);
-  padding: 7px 20px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.effect-2 .mask p, .effect-1 .mask p{
-	opacity: 1;
-  line-height: 15px;
-  padding: 2px 0;
-}
-
-.effect-2:hover .mask,.effect-1:hover .mask{
--webkit-transform: translate(0);
-  -moz-transform: translate(0);
-  -ms-transform: translate(0);
-  transform: translate(0);
-;
-}
 
 .price_filter_span_left{float:left;}
 #default_products_page_container.no-sidebar{width:100% !important;}
@@ -164,9 +127,6 @@ ul.product_list_widget .widget-text{width: 90px;}
 .product_layout_variant3 .product_description_banner .banner{width: 250px;margin-left: 80px;}
 #default_products_page_container.with-sidebar .products-list .product-grid{width: 475px !important;}
 .products-list .product-grid .product-information .product-descr{width: 96%;}
-#default_products_page_container.with-sidebar .products-list .product-grid .product-information{width: 255px;}
-#default_products_page_container.with-sidebar .products-list .product-grid .product-image .img-wrapper{width: auto !important;}
-#default_products_page_container.with-sidebar .products-list .product-grid .product-image .img-wrapper .product_image{max-width: 200px;}
 .products-list .addtocont{position: static;float: left;margin-top: 10px;width:255px;padding-left: 0;}
 .products-list .product-grid .addtocont .price{width: auto;float: left;}
 .products-list .product-grid .btn-cont{width: auto;float: right;margin-top: 0;}
@@ -187,7 +147,6 @@ ul.product_list_widget .widget-text{width: 90px;}
 .footer_thumbs li{margin:4px 7px;}
 .footer_menu{padding-bottom: 0;}
 .footer_block2{float:right;margin-right:17%;}
-.flickr-photo img{width:67px!important;}
 .footer-logo3{margin-right: 60px;}
 #after_footer_menu{margin-left:20px;width:400px;}
 #after_footer_payments{width:300px;float: right;}
@@ -368,7 +327,6 @@ div.pp_pic_holder #commentform .form-submit{margin-right: 0	!important;}
 #etheme-recent-comments-2 .widget-title,#price_filter-2 .widget-title{margin-top:20px;}
 .grid_content{float:left;}
 .sidebar_grid_price{float:left;margin:20px 20px 0 0;width:42%;}
-.follow_us_facebook,.follow_us_twitter,.follow_us_rss{margin-right:6%;}
 .span3.footer_block.tweets-block{margin-bottom:20px;}
 .sidebar_grid_menu,.blog_sidebar_menu{float:left;margin-right:20px;width:42%;}
 .product_layout_default .button.big.active.etheme-simple-product{float: right !important;}
@@ -388,7 +346,6 @@ form.login .login-head i, form.register .register-head i{margin-right: 30px;}
 .with-sidebar .rows-count4 .product-grid:nth-child(2n+1),.no-sidebar .rows-count4 .product-grid:nth-child(2n+1),.rows-count6 .product-grid:nth-child(2n+1),.rows-count5.shortcode-products .product-grid:nth-child(2n+1),.products_grid.rows-count3 .product-grid:nth-child(2n+1){clear:both;}
 .rows-count5.shortcode-products .product-grid:nth-child(5n+1){clear: none;}
 .footer_block1,.footer_block{width:199px;}
-.flickr-photo img{width: 55px !important;}
 .footer-hr{margin-left: 0;}
 .footer_follow_us span,.shopping_cart_block,.footer_copyright_payments,.tabbable,#grid_product3{display:none;}
 .copyright,.cart_totals h2{margin-left:0;}
@@ -422,7 +379,6 @@ div.pp_woocommerce div.ppt{width: 420px !important;}
 .header-variant2 .header-links { float:none; }
 .header-type-variant2 .logo, .header-type-variant6 .logo { direction: ltr;}
 .header-type-variant2 #main-nav, .header-type-variant6 #main-nav {float:left;width: 100%;}
-.header-type-variant3.header-bg{}
 .header-type-default .header-area,
 .header-type-variant3 .header-area{padding-top: 20px;}
 .header-type-default .logo,
@@ -793,8 +749,6 @@ div.pp_woocommerce div.ppt{width: 240px !important;}
 }
 }
 
-
-
 /* Smaller than standard 960 (devices and browsers) */
 /* ------------------------------------------------ */
 @media only screen and (max-width: 979px){
@@ -852,13 +806,6 @@ td.actions .coupon .input-text{width:160px;}
 }
 .no-sidebar .product_categories_grid .category-block:nth-child(4n+1){clear: none;}
 
-
-
-
-}
-
-@media only screen and (min-width: 980px){
-	.hidden-desktop{display: none !important;}
 }
 
 @media only screen and (max-width:1400px){
