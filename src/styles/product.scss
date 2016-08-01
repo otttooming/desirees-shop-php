@@ -112,3 +112,23 @@
     right: 0;
   }
 }
+
+.product {
+
+  &__attributes {
+
+    td,
+    p {
+      color: $color-tertiary;
+      letter-spacing: 1px;
+    }
+
+    td {
+      width: 100%;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}

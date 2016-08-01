@@ -25,8 +25,26 @@ h5 {
   margin: 0 0 5px;
 }
 
-p {
+p, td {
   font-family: $typeface-secondary;
+}
+
+table {
+  width: 100%;
+}
+
+tr {
+  &.alt {
+    background: rgba($site-color-dark-light, .2);
+  }
+}
+
+th,
+td {
+  border: 0;
+  text-align: left;
+  font-weight: $font-weight-normal;
+  padding: 10px;
 }
 
 img {
@@ -36,4 +54,28 @@ img {
 ul {
   margin: 0;
   padding: 0;
+}
+
+select {
+  font-family: $typeface-primary;
+}
+
+.button {
+  font-family: $typeface-primary;
+}
+
+.amount {
+  padding: 5px 10px;
+  box-shadow: 2px 2px #111;
+  border-radius: 5px;
+  background-color: #a30000;
+  text-shadow: 2px 2px $site-color-dark-light;
+  color: $site-color-white;
+  line-height: normal;
+  font-family: $typeface-primary;
+
+  .product__price-block & {
+    padding: 0;
+    box-shadow: none;
+  }
 }

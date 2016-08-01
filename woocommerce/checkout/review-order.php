@@ -12,13 +12,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <table class="shop_table checkout_cart table woocommerce-checkout-review-order-table">
-	<thead>
+	<thead class="cart__form-head">
 		<tr>
 			<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
 			<th class="product-total"><?php _e( 'Total', 'woocommerce' ); ?></th>
 		</tr>
 	</thead>
-	<tbody>
+	<tbody class="cart__form-body">
 		<?php
 			do_action( 'woocommerce_review_order_before_cart_contents' );
 
@@ -44,7 +44,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			do_action( 'woocommerce_review_order_after_cart_contents' );
 		?>
 	</tbody>
-	<tfoot>
+	<tfoot class="cart__form-footer">
 
 		<tr class="cart-subtotal">
 			<th><?php _e( 'Cart Subtotal', 'woocommerce' ); ?></th>
