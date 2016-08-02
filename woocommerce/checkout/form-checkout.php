@@ -13,27 +13,27 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 
 global $woocommerce; $woocommerce_checkout = $woocommerce->checkout(); 
-$isAccordion = etheme_get_option('checkout_accordion');
+$is = etheme_get_option('checkout_');
 $get_checkout_url = apply_filters( 'woocommerce_get_checkout_url', WC()->cart->get_checkout_url() );
 
 wc_print_notices(); 
 
 woocommerce_checkout_coupon_form(); ?>
 
-<div class="<?php if($isAccordion): ?>tabs accordion checkout-accordion<?php else: ?>checkout-default<?php endif; ?>">
+<div class="<?php if($is): ?>tabs  checkout-<?php else: ?>checkout-default<?php endif; ?>">
     <?php if(!is_user_logged_in()): ?>
         <!-- ----------------------------------------------- -->
         <!-- ------------------- LOGIN --------------------- -->
         <!-- ----------------------------------------------- -->
-        <?php if($isAccordion): ?><a class="tab-title checkout-accordion-title" id="tab_1"><span><?php _e('Checkout Method', ETHEME_DOMAIN) ?></span></a><?php endif; ?>
-        <div class="tab-content tab-login" id="content_tab_1">  
+        <?php if($is): ?><a class="tab-title checkout--title" id="tab_1"><span><?php _e('Checkout Method', ETHEME_DOMAIN) ?></span></a><?php endif; ?>
+        <div class="checkout__tab-content tab-content tab-login" id="content_tab_1">  
             <div class="col2-set">
                 <div class="col-1 checkout-login">
                     <h3><?php _e('New Customers', ETHEME_DOMAIN) ?></h3>
                     <div class="checkout-methods">
 						<?php if ($checkout->enable_guest_checkout): ?>
 	                        <div class="method-radio">
-	                            <input type="radio" id="method1" name="method" value="1" />
+	                            <input type="radio" id="method1" name="method" value="1" <?php if ($checkout->enable_guest_checkout): ?> checked <?php endif; ?>/>
 	                            <label for="method1"><?php _e('Checkout as Guest', ETHEME_DOMAIN); ?></label>
 	                            <div class="clear"></div>
 	                        </div>
@@ -42,12 +42,11 @@ woocommerce_checkout_coupon_form(); ?>
 	                        <div class="method-radio">
 	                            <input type="radio" id="method2" name="method" value="2" <?php if (!$checkout->enable_guest_checkout): ?> checked <?php endif; ?> />
 	                            <label for="method2"><?php _e('Create an Account', ETHEME_DOMAIN); ?></label>
-	                            <div class="clear"></div>
 	                        </div>
                         <?php endif; ?>
                         <div class="clear"></div>
                     </div>
-                    <?php if($isAccordion): ?><a class="button checkout-cont checkout-cont1"><span><?php _e('Continue', ETHEME_DOMAIN) ?></span></a><?php endif; ?>
+                    <?php if($is): ?><a class="button checkout-cont checkout-cont1"><span><?php _e('Continue', ETHEME_DOMAIN) ?></span></a><?php endif; ?>
                 </div>
                 <div class="col-2 checkout-customers">
                     <h3><?php _e('Returning Customers', ETHEME_DOMAIN) ?></h3>
@@ -65,15 +64,15 @@ woocommerce_checkout_coupon_form(); ?>
     <?php endif; ?>
     
         
-<form name="checkout" method="post" class="checkout checkout-form" action="<?php echo esc_url( $get_checkout_url ); ?>">
+<form name="checkout" method="post" class="checkout checkout-form cfx" action="<?php echo esc_url( $get_checkout_url ); ?>">
     
     <?php if(!is_user_logged_in()): ?>
         <?php if (get_option('woocommerce_enable_signup_and_login_from_checkout')=="yes") : ?>
             <!-- ----------------------------------------------- -->
             <!-- -------------- -- REGISTER -- ----------------- -->
             <!-- ----------------------------------------------- -->
-            <?php if($isAccordion): ?><a class="tab-title checkout-accordion-title" id="tab-register"><span><?php _e('Create an Account', ETHEME_DOMAIN) ?></span></a><?php endif; ?>
-            <div class="tab-content register-tab-content" id="content_tab-register">   	
+            <?php if($is): ?><a class="tab-title checkout--title" id="tab-register"><span><?php _e('Create an Account', ETHEME_DOMAIN) ?></span></a><?php endif; ?>
+            <div class="checkout__tab-content tab-content register-tab-content" id="content_tab-register" <?php if ($checkout->enable_guest_checkout): ?> style="display:none;" <?php endif; ?>>   	
                 
                 	<?php if (get_option('woocommerce_enable_guest_checkout')=='yes') : ?>
                 		
@@ -99,7 +98,7 @@ woocommerce_checkout_coupon_form(); ?>
                 	
                 	<?php do_action( 'woocommerce_after_checkout_registration_form', $woocommerce_checkout ); ?>
                     
-                    <?php if($isAccordion): ?><a class="button checkout-cont checkout-cont2"><span><?php _e('Continue', ETHEME_DOMAIN) ?></span></a><?php endif; ?>
+                    <?php if($is): ?><a class="button checkout-cont checkout-cont2"><span><?php _e('Continue', ETHEME_DOMAIN) ?></span></a><?php endif; ?>
                 				
             </div>	
         <?php endif; ?>
@@ -116,28 +115,28 @@ woocommerce_checkout_coupon_form(); ?>
             <!-- ----------------------------------------------- -->
             <!-- ----------------- BILLING --------------------- -->
             <!-- ----------------------------------------------- -->
-            <?php if($isAccordion): ?><a class="tab-title checkout-accordion-title" id="tab_3"><span><?php _e('Billing Address', ETHEME_DOMAIN) ?></span></a><?php endif; ?>
-            <div class="tab-content tab-billing" id="content_tab_3">
+            <?php if($is): ?><a class="tab-title checkout--title" id="tab_3"><span><?php _e('Billing Address', ETHEME_DOMAIN) ?></span></a><?php endif; ?>
+            <div class="checkout__tab-content tab-content tab-billing" id="content_tab_3">
                 <?php do_action('woocommerce_checkout_billing'); ?>
-                <?php if($isAccordion): ?><a class="button checkout-cont"><span><?php _e('Continue', ETHEME_DOMAIN) ?></span></a><?php endif; ?>
+                <?php if($is): ?><a class="button checkout-cont"><span><?php _e('Continue', ETHEME_DOMAIN) ?></span></a><?php endif; ?>
             </div>
             
             
             <!-- ----------------------------------------------- -->
             <!-- ----------------- SHIPPING -------------------- -->
             <!-- ----------------------------------------------- -->
-            <?php if($isAccordion): ?><a href="javascript:void(0)" class="tab-title checkout-accordion-title" id="tab_4"><span><?php _e('Shipping Address', ETHEME_DOMAIN) ?></span></a><?php endif; ?>
-            <div class="tab-content tab-shipping" id="content_tab_4">   
+            <?php if($is): ?><a href="javascript:void(0)" class="tab-title checkout--title" id="tab_4"><span><?php _e('Shipping Address', ETHEME_DOMAIN) ?></span></a><?php endif; ?>
+            <div class="checkout__tab-content tab-content tab-shipping" id="content_tab_4">   
         	   <?php do_action('woocommerce_checkout_shipping'); ?>
-                <?php if($isAccordion): ?><a class="button checkout-cont"><span><?php _e('Continue', ETHEME_DOMAIN) ?></span></a><?php endif; ?>
+                <?php if($is): ?><a class="button checkout-cont"><span><?php _e('Continue', ETHEME_DOMAIN) ?></span></a><?php endif; ?>
             </div>
             <!-- ----------------------------------------------- -->
             <!-- ------------------ ORDER ---------------------- -->
             <!-- ----------------------------------------------- -->
     	<?php endif; ?>
         
-        <?php if($isAccordion): ?><a class="tab-title checkout-accordion-title" id="tab_5"><span><?php _e('Your order', ETHEME_DOMAIN) ?></span></a><?php endif; ?>
-        <div class="tab-content tap-order" id="content_tab_5">   
+        <?php if($is): ?><a class="tab-title checkout--title" id="tab_5"><span><?php _e('Your order', ETHEME_DOMAIN) ?></span></a><?php endif; ?>
+        <div class="checkout__tab-content tab-content tap-order" id="content_tab_5">   
             <h3 id="order_review_heading"><?php _e('Your order', ETHEME_DOMAIN); ?></h3>
             <?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 

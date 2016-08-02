@@ -284,7 +284,6 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .uneditable-input {
-  background-color: #ffffff;
   border: 1px solid #efefef;
 }
 
@@ -332,7 +331,6 @@ input[type="file"] {
 }
 
 select {
-  background-color: #ffffff;
   border: 1px solid #cccccc;
 }
 
@@ -601,7 +599,6 @@ table {
 .tabs-left > .nav-tabs .active > a,
 .tabs-left > .nav-tabs .active > a:hover {
   border-color: #ddd transparent #ddd #ddd;
-  *border-right-color: #ffffff;
 }
 
 .tabs-right > .nav-tabs {
@@ -624,7 +621,6 @@ table {
 .tabs-right > .nav-tabs .active > a,
 .tabs-right > .nav-tabs .active > a:hover {
   border-color: #ddd #ddd #ddd transparent;
-  *border-left-color: #ffffff;
 }
 
 .nav > .disabled > a {

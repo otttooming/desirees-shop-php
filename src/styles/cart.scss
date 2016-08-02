@@ -47,3 +47,12 @@
     text-align: center;
   }
 }
+
+.checkout {
+  
+  &__tab-content {
+    background: rgba($site-color-dark-light, .3);
+    padding: 20px;
+    box-sizing: border-box;
+  }
+}

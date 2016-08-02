@@ -624,7 +624,6 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .uneditable-input {
-  background-color: #ffffff;
   border: 1px solid #efefef; }
 
 textarea:focus,
@@ -667,7 +666,6 @@ input[type="file"] {
   line-height: 30px; }
 
 select {
-  background-color: #ffffff;
   border: 1px solid #cccccc; }
 
 select[multiple],
@@ -886,8 +884,7 @@ table {
 
 .tabs-left > .nav-tabs .active > a,
 .tabs-left > .nav-tabs .active > a:hover {
-  border-color: #ddd transparent #ddd #ddd;
-  *border-right-color: #ffffff; }
+  border-color: #ddd transparent #ddd #ddd; }
 
 .tabs-right > .nav-tabs {
   float: right;
@@ -903,8 +900,7 @@ table {
 
 .tabs-right > .nav-tabs .active > a,
 .tabs-right > .nav-tabs .active > a:hover {
-  border-color: #ddd #ddd #ddd transparent;
-  *border-left-color: #ffffff; }
+  border-color: #ddd #ddd #ddd transparent; }
 
 .nav > .disabled > a {
   color: #999999; }
@@ -1385,10 +1381,6 @@ button:focus {
 
 .entry-content p .button.active.big {
   padding: 8px 20px; }
-
-.form-row .button {
-  line-height: 28px;
-  height: 30px; }
 
 .wp-caption {
   max-width: 100%; }
@@ -5610,9 +5602,6 @@ ul.product_list_widget li img {
   border: none;
   width: 100%; }
 
-.tabs.checkout-accordion .tab-content .form-row .button {
-  float: right; }
-
 .with-sidebar-right .tabs.checkout-accordion .tab-content .form-row .button, .with-sidebar-left .tabs.checkout-accordion .tab-content .form-row .button {
   margin-right: 40px; }
 
@@ -5725,9 +5714,6 @@ ul.product_list_widget li img {
 .checkout-default .tab-content h3 {
   font-size: 20px;
   color: #656565; }
-
-.checkout-default .checkout-login {
-  width: auto !important; }
 
 .register-tab-content .form-row {
   float: left;
@@ -6137,9 +6123,6 @@ ul.product_list_widget li img {
 .wc-checkout-totals input[type="radio"] {
   float: left;
   margin-right: 10px; }
-
-#payment #place_order {
-  margin-left: 20px; }
 
 /* -------------------------------------------------- */
 /* Empty Cart Page
@@ -10614,9 +10597,6 @@ h2, h3, .product-slider h4, .contact_info h5 {
 .tabs h2 {
   line-height: 30px; }
 
-#content_tab_1 {
-  padding: 30px; }
-
 .edit, .edit:hover {
   display: inline-block;
   padding: 1px 12px 0;
@@ -10715,9 +10695,6 @@ h2, h3, .product-slider h4, .contact_info h5 {
 
 .archstock .stock {
   font-size: 11px !important; }
-
-#payment #place_order {
-  margin-left: 20px; }
 
 .order_details h3 {
   font-size: 16px !important;
@@ -11013,7 +10990,7 @@ hr {
 
 /*Kassa*/
 .checkout-default .tab-content.tab-shipping h3 {
-  margin-right: 60%; }
+  width: 100%; }
 
 /*Move qty mod and buy button to align with others*/
 .product_layout_variant3 .quantity {
@@ -11104,10 +11081,6 @@ hr {
 .cart-popup-container {
   display: none; }
 
-/* Lost password bug */
-.with-sidebar-left .tabs.checkout-accordion .tab-content .form-row .button {
-  margin-right: 40px !important; }
-
 .lost_password {
   position: inherit; }
 
@@ -11181,11 +11154,6 @@ span.copyright {
 
 .cats.acc_enabled .block-content .wpsc_category_title a {
   font-size: 18px; }
-
-/* Input box */
-textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
-  background-color: #444 !important;
-  box-shadow: 2px 2px  #111; }
 
 .tavpood_infoblock {
   min-height: 170px;
@@ -11298,13 +11266,6 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
   padding: 25px;
   border: 1px solid #111 !important;
   background-color: #333; }
-
-#payment #place_order {
-  float: none;
-  height: 100%;
-  padding: 20px;
-  font-size: 16px;
-  line-height: 35px; }
 
 .product-category-description {
   padding: 20px;
@@ -11584,12 +11545,10 @@ p, a, h1, h2, h3, h4, h5, h6 {
 select,
 select:hover,
 input {
-  background-color: #333;
   border: 1px solid transparent !important;
   color: white; }
 
 textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
-  background-color: #333;
   color: white; }
 
 input[type="hidden"] {
@@ -12388,12 +12347,6 @@ div.light_rounded .pp_content {
   width: 100%;
   margin-top: 10px; }
 
-#payment #place_order {
-  background-color: #a30000 !important; }
-
-#payment #place_order:hover {
-  background-color: #fc5a5a !important; }
-
 .left-titles a:last-child {
   border-bottom: 1px solid #111 !important; }
 
@@ -12893,8 +12846,6 @@ div.pp_overlay {
     width: 25%; }
   .with-sidebar-left .tab-content .col2-set .col-2 .lost_password, .with-sidebar-right .tab-content .col2-set .col-2 .lost_password {
     left: 80px; }
-  .with-sidebar-right .tabs.checkout-accordion .tab-content .form-row .button, .with-sidebar-left .tabs.checkout-accordion .tab-content .form-row .button {
-    margin-right: 115px; }
   .account-separator {
     width: 285px;
     height: 100%;
@@ -13040,6 +12991,17 @@ ul {
 
 select {
   font-family: "Oswald", "Helvetica Neue", Arial, sans-serif; }
+
+select,
+input {
+  border-radius: 5px;
+  height: 30px;
+  background: rgba(21, 21, 21, 0.3);
+  margin: 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+  line-height: 30px;
+  box-shadow: none; }
 
 .button {
   font-family: "Oswald", "Helvetica Neue", Arial, sans-serif; }
@@ -13321,8 +13283,13 @@ select {
   margin: 0;
   box-shadow: 2px 2px #111; }
 
+.search__select {
+  background: #151515; }
+
 .search__button {
-  background-color: #a30000; }
+  background-color: #a30000;
+  line-height: 40px;
+  height: 40px; }
 
 .cart__collaterals {
   margin: 60px 0 40px; }
@@ -13351,6 +13318,11 @@ select {
 .cart .product-subtotal,
 .cart .product-remove {
   text-align: center; }
+
+.checkout__tab-content {
+  background: rgba(21, 21, 21, 0.3);
+  padding: 20px;
+  box-sizing: border-box; }
 
 /*! PhotoSwipe main CSS by Dmitry Semenov | photoswipe.com | MIT license */
 /*

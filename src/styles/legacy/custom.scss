@@ -472,10 +472,6 @@ h2, h3, .product-slider h4, .contact_info h5{
   line-height:30px;
 }
 
-#content_tab_1 {
-  padding: 30px;
-}
-
 .edit, .edit:hover {
   display: inline-block;
   padding: 1px 12px 0;
@@ -595,10 +591,6 @@ h2, h3, .product-slider h4, .contact_info h5{
 
 .archstock .stock {
   font-size:11px!important;
-}
-
-#payment #place_order {
-  margin-left:20px;
 }
 
 .order_details h3 {
@@ -973,7 +965,7 @@ hr {
 /*Kassa*/
 
 .checkout-default .tab-content.tab-shipping h3 {
-  margin-right: 60%;
+  width: 100%;
 }
 
 /*Move qty mod and buy button to align with others*/
@@ -1085,9 +1077,6 @@ hr {
   display: none;
 }
 
-/* Lost password bug */ .with-sidebar-left .tabs.checkout-accordion .tab-content .form-row .button {
-  margin-right: 40px!important;
-}
 .lost_password {
   position: inherit;
 }
@@ -1188,13 +1177,6 @@ span.copyright {
 
 .cats.acc_enabled .block-content .wpsc_category_title a {
   font-size: 18px;
-}
-
-/* Input box */
-
-textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
-  background-color: #444!important;
-  box-shadow: 2px 2px  #111;
 }
 
 .tavpood_infoblock {
@@ -1338,16 +1320,6 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
   padding: 25px;
   border: 1px solid #111 !important;
   background-color: #333;
-}
-
-#payment {
-  #place_order {
-    float: none;
-    height: 100%;
-    padding: 20px;
-    font-size: 16px;
-    line-height: 35px;
-  }
 }
 
 .product-category-description {

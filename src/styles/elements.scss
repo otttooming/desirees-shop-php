@@ -60,6 +60,18 @@ select {
   font-family: $typeface-primary;
 }
 
+select,
+input {
+  border-radius: 5px;
+  height: 30px;
+  background: rgba($site-color-dark-light, .3);
+  margin: 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+  line-height: 30px;
+  box-shadow: none;
+}
+
 .button {
   font-family: $typeface-primary;
 }
