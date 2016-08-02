@@ -17,7 +17,7 @@ hr {
 }
 
 .main-image {
-  background-color: $site-color-white;
+  background-color: $color-white;
 }
 
 .product_image .main-image img {
@@ -40,7 +40,7 @@ hr {
 }
 
 .attachment-shop_single {
-  background: $site-color-white !important;
+  background: $color-white !important;
 }
 
 .container_footer_bg {
@@ -92,7 +92,7 @@ hr {
 }
 
 #swipebox-overlay img {
-  background:$site-color-white;
+  background:$color-white;
 }
 
 .btn-cont {
@@ -103,7 +103,7 @@ hr {
 	  float:right;
 	  min-width: 60px;
 	  padding: 1px 5px 0;
-	  box-shadow: $site-shadow-std;
+	  box-shadow: $shadow-std;
 	  line-height:30px;
 	}
 }
@@ -117,7 +117,7 @@ hr {
   text-transform:uppercase;
 	a {
     margin: 0 5px;
-	  color: $site-color-alt;
+	  color: $color-warm;
     &:first-child {
       margin-left: 0;
     }
@@ -156,8 +156,8 @@ hr {
 }
 
 #back-to-top.btn-style-standart a {
-  background: $site-color-red-std url(../images/legacy/arrow_up_2.png) no-repeat 12px center !important;
-  color: $site-color-white !important;
+  background: $color-red-std url(../images/legacy/arrow_up_2.png) no-repeat 12px center !important;
+  color: $color-white !important;
 
 }
 
@@ -179,11 +179,11 @@ hr {
 }
 
 .delimeter {
-  color: $site-color-white;
+  color: $color-white;
 }
 
 .back-to:before {
-  color:$site-color-red-std !important;
+  color:$color-red-std !important;
 }
 
 .back-to {
@@ -191,7 +191,7 @@ hr {
 }
 
 .show_review_form {
-  color: $site-color-red-std;
+  color: $color-red-std;
 }
 
 .tabs .tab-title {
@@ -199,7 +199,7 @@ hr {
 
   font-weight: 400 !important;
 	&:hover {
-	  color: $site-color-red-std;
+	  color: $color-red-std;
 	}
 }
 
@@ -230,11 +230,11 @@ hr {
 }
 
 .menu .current-menu-ancestor > a {
-  color: $site-color-red-std;
+  color: $color-red-std;
 }
 
 .current-cat > a {
-  color: $site-color-red-std !important;
+  color: $color-red-std !important;
 }
 
 .category-block {
@@ -254,7 +254,7 @@ hr {
 }
 
 .category-block mark {
-  color: $site-color-red-std;
+  color: $color-red-std;
 }
 
 .product_categories_grid .category-block:nth-child(3n+1) {
@@ -284,7 +284,7 @@ hr {
   display:inherit !important;
 }
 .widget_price_filter .to, .widget_price_filter .from {
-  color:$site-color-red-std!important;
+  color:$color-red-std!important;
 }
 
 #woocommerce-sort-by-columns {
@@ -298,7 +298,7 @@ select, select:hover {
 .grid_pagination_block .woocommerce-ordering select, .grid_pagination_block .woocommerce-ordering select:hover {
   width:180px;
   margin-left:15px !important;
-  color: $site-color-alt!important;
+  color: $color-warm!important;
 
   font-style: italic;
 }
@@ -336,7 +336,7 @@ ul.product_list_widget li img {
 }
 
 form .form-row.terms label a {
-  color: $site-color-alt;
+  color: $color-warm;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -358,7 +358,7 @@ form .form-row.terms label a {
 }
 
 .button:hover {
-  background-color: $site-color-red-std !important;
+  background-color: $color-red-std !important;
 }
 
 .qty-block label {
@@ -382,7 +382,7 @@ form .form-row.terms label a {
 }
 
 .order_details li strong, mark {
-  color: $site-color-alt !important;
+  color: $color-warm !important;
 }
 .order_details strong {
   font-weight: normal;
@@ -409,7 +409,7 @@ form .form-row.terms label a {
 }
 
 .my_account_orders a {
-  color:$site-color-alt;
+  color:$color-warm;
 }
 
 .widget_shopping_cart .variation {
@@ -417,7 +417,7 @@ form .form-row.terms label a {
 }
 
 .widget_shopping_cart .button {
-  background-color: $site-color-red-std !important;
+  background-color: $color-red-std !important;
 }
 
 /*Remove square lists*/
@@ -435,7 +435,7 @@ form .form-row.terms label a {
 }
 
 div.product_meta a {
-  color: $site-color-alt!important;
+  color: $color-warm!important;
   text-transform:uppercase;
 }
 
@@ -449,7 +449,7 @@ div.product_meta a {
 }
 
 .responsive-switcher a {
-  color: $site-color-red-std;
+  color: $color-red-std;
 }
 
 .accountclear {
@@ -477,8 +477,8 @@ h2, h3, .product-slider h4, .contact_info h5{
   padding: 1px 12px 0;
   cursor: pointer;
   border: none;
-  background: $site-color-red-std;
-  color: $site-color-white;
+  background: $color-red-std;
+  color: $color-white;
   font-size: 12px;
   line-height: 28px;
   text-transform: uppercase;
@@ -517,7 +517,7 @@ h2, h3, .product-slider h4, .contact_info h5{
   display: initial;
   float: left;
   margin-right: 5px;
-  color: $site-color-white;
+  color: $color-white;
   font-size: 10px;
   text-transform: uppercase;
 }
@@ -532,11 +532,11 @@ h2, h3, .product-slider h4, .contact_info h5{
 }
 
 .transparentbutton .button:hover span {
-  color:$site-color-white!important;
+  color:$color-white!important;
 }
 
 .h2mod h5 {
-  color:$site-color-alt;
+  color:$color-warm;
   font-size: 20px !important;
   font-weight: 400;
   font-style: normal;
@@ -553,7 +553,7 @@ h2, h3, .product-slider h4, .contact_info h5{
   height: auto;
   padding: 50px;
   border: 1px solid #111;
-  background-color: $site-color-white;
+  background-color: $color-white;
   text-align: center;
 }
 
@@ -605,14 +605,14 @@ h2, h3, .product-slider h4, .contact_info h5{
 }
 
 .woocommerce-message {
-  color: $site-color-white !important;
+  color: $color-white !important;
 }
 
 .product-stock {
   text-transform:uppercase;
 
   &__header {
-    color: $site-color-white;
+    color: $color-white;
   }
 }
 
@@ -626,12 +626,12 @@ h2, h3, .product-slider h4, .contact_info h5{
 }
 
 .cart_table_item .variation p {
-  color: $site-color-alt;
+  color: $color-warm;
   font-style: italic;
 }
 
 .opened h5 a {
-  color: $site-color-red-light !important;
+  color: $color-red-light !important;
 }
 
 .next.page-numbers {
@@ -730,7 +730,7 @@ h2, h3, .product-slider h4, .contact_info h5{
 .search_text {
   width: 349px;
   margin-left: 15px;
-  color: $site-color-alt!important;
+  color: $color-warm!important;
   font-style: italic;
 }
 
@@ -770,7 +770,7 @@ h2, h3, .product-slider h4, .contact_info h5{
   float: left;
   width: 255px;
   padding: 0;
-  background-color: $site-color-red-std!important;
+  background-color: $color-red-std!important;
   font-size: 14px;
   line-height: 50px!important;
 }
@@ -815,16 +815,16 @@ h2, h3, .product-slider h4, .contact_info h5{
   padding: 8px 16px 8px 16px;
 }
 .archive .veebipoodmenu a, .archive .veebipoodmenu a:hover {
-  background-color: $site-color-red-light !important;
-  color:$site-color-white!important;
+  background-color: $color-red-light !important;
+  color:$color-white!important;
 }
 .header-type-default .menu .current-menu-item > a, .header-type-default .menu .current-menu-item > a:hover {
-  background-color: $site-color-red-light !important;
-  color:$site-color-white;
+  background-color: $color-red-light !important;
+  color:$color-white;
 }
 .single-product .veebipoodmenu a, .single-product .veebipoodmenu a:hover {
-  background-color: $site-color-red-light !important;
-  color:$site-color-white!important;
+  background-color: $color-red-light !important;
+  color:$color-white!important;
 }
 
 /* Shadows */
@@ -838,13 +838,13 @@ h2, h3, .product-slider h4, .contact_info h5{
 .variations_form table.variations tr select {
   border: 0!important;
   background-color: #333!important;
-  box-shadow: $site-shadow-std;
+  box-shadow: $shadow-std;
   letter-spacing: 1px;
 }
 
 .button75 .button {
-  box-shadow: $site-shadow-std;
-  text-shadow: $site-shadow-std;
+  box-shadow: $shadow-std;
+  text-shadow: $shadow-std;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -875,7 +875,7 @@ h2, h3, .product-slider h4, .contact_info h5{
   left: -230px;
   width: 200px;
   padding: 15px;
-  background-color: $site-color-red-std;
+  background-color: $color-red-std;
   border-radius: 5px;
   text-shadow: 1px 1px #111;
   font-size: 13px;
@@ -903,7 +903,7 @@ h2, h3, .product-slider h4, .contact_info h5{
   content: "";
   -moz-transform: scale(.9999); /* Solves jagged edges in CSS triangles in Firefox */
   border: 50px solid transparent;
-  border-left: 22px solid $site-color-red-std;
+  border-left: 22px solid $color-red-std;
 }
 
 /*WC result count bug*/
@@ -927,21 +927,21 @@ h2, h3, .product-slider h4, .contact_info h5{
   margin-top: 5px;
   padding: 10px 0;
   background-color:#333;
-  box-shadow: $site-shadow-std;
+  box-shadow: $shadow-std;
   text-align: center;
 }
 
 .more-info:hover {
-  background-color: $site-color-red-std;
+  background-color: $color-red-std;
 }
 
 .more-info {
-  color:$site-color-alt;
+  color:$color-warm;
   text-transform: uppercase;
 }
 
 .more-info:hover {
-  color: $site-color-white;
+  color: $color-white;
 }
 
 /* Jcarousel infinite loop bug */
@@ -951,7 +951,7 @@ h2, h3, .product-slider h4, .contact_info h5{
 
 .product_image .views-gallery .slide {
   overflow: hidden;
-  background-color: $site-color-white;
+  background-color: $color-white;
 }
 
 .entry-title {
@@ -1002,7 +1002,7 @@ hr {
   white-space: nowrap;
 }
 #top-cart > a:hover {
-  color:$site-color-red-std;
+  color:$color-red-std;
 }
 
 #top-cart .icon-shopping-cart {
@@ -1011,7 +1011,7 @@ hr {
 }
 
 #top-cart small {
-  color:$site-color-white;
+  color:$color-white;
   font-size: 50%;
 }
 
@@ -1031,17 +1031,17 @@ hr {
     float: none!important;
     width: auto!important;
     margin: 0;
-    color: $site-color-alt!important;
+    color: $color-warm!important;
     font-size: 16px;
   }
   h1, i {
-    color: $site-color-alt!important;
+    color: $color-warm!important;
   }
 }
 
 .tavapood h2 {
   margin: 30px 0 20px 0;
-  color: $site-color-alt;
+  color: $color-warm;
   line-height: 30px;
 }
 
@@ -1054,7 +1054,7 @@ hr {
 .woocommerce-error a,
 .woocommerce-message a {
   margin-right: 10px;
-  background-color: $site-color-red-std !important;
+  background-color: $color-red-std !important;
 }
 
 .woocommerce-error {
@@ -1130,7 +1130,7 @@ hr {
   padding: 30px;
 }
 .company_list2 h3 {
-  color: $site-color-alt;
+  color: $color-warm;
 }
 .company_list2 li {
   margin: 5px 0;
@@ -1147,7 +1147,7 @@ hr {
 span.copyright {
   width: auto;
   margin-left: 0;
-  color: $site-color-white;
+  color: $color-white;
   font-size: 17px;
   line-height: 55px;
 }
@@ -1183,7 +1183,7 @@ span.copyright {
   min-height: 170px;
   padding: 10px 20px;
   background-color: #333;
-  box-shadow: $site-shadow-std;
+  box-shadow: $shadow-std;
 }
 .tavpood_infoblock h2{
   margin: 0;
@@ -1198,14 +1198,14 @@ span.copyright {
 
 .widget_etheme-subcategories .block-content {
   padding: 20px;
-  background-color: $site-color-dark-light;
+  background-color: $color-dark-light;
   box-shadow: 0 0 3px #111;
 }
 
 /*Small fixes august 1014*/
 
 .woocommerce-error {
-  color:$site-color-white;
+  color:$color-white;
 }
 
 .opensoon, .opensoon2{
@@ -1215,12 +1215,12 @@ span.copyright {
 }
 
 .opensoon2 h4 {
-  color:$site-color-alt;
+  color:$color-warm;
   line-height: 24px;
 }
 
 .transparentbutton .button span {
-  color: $site-color-alt;
+  color: $color-warm;
 }
 
 .wc-checkout-totals {
@@ -1237,7 +1237,7 @@ span.copyright {
 .sidebar_infoblock {
   margin: 10px 0;
   padding: 20px;
-  background-color: $site-color-dark-light;
+  background-color: $color-dark-light;
   box-shadow: 0 0 3px #111;
 }
 
@@ -1251,8 +1251,8 @@ span.copyright {
 }
 
 .page-id-11573 .infotabblock a, .page-id-6788 .infotabblock a {
-  background-color: $site-color-red-std!important;
-  color:$site-color-white!important;
+  background-color: $color-red-std!important;
+  color:$color-white!important;
 }
 
 .empty-category-block {
@@ -1263,7 +1263,7 @@ span.copyright {
 .onlyphysical {
   margin: 45px 0 30px;
   padding: 20px;
-  background-color: $site-color-dark-light;
+  background-color: $color-dark-light;
   box-shadow: 0 0 3px #111;
   line-height: 30px;
 	&:first-child {
@@ -1271,7 +1271,7 @@ span.copyright {
 	}
 }
 .onlyphysical h2 {
-  color: $site-color-alt;
+  color: $color-warm;
 }
 .onlyphysical p {
   font-size: 20px;
@@ -1324,7 +1324,7 @@ span.copyright {
 
 .product-category-description {
   padding: 20px;
-  background-color: $site-color-dark-light;
+  background-color: $color-dark-light;
   box-shadow: 0 0 3px #111;
   font-size: 14px;
 }
@@ -1435,12 +1435,12 @@ span.copyright {
 }
 
 .company_list3 p {
-  text-shadow: $site-shadow-std;
+  text-shadow: $shadow-std;
   font-size: 125%;
 }
 
 .company_list3 h3 {
-  text-shadow: $site-shadow-std;
+  text-shadow: $shadow-std;
 }
 
 .company_list3_contacts p {
@@ -1523,7 +1523,7 @@ span.copyright {
 }
 
 .wc-proceed-to-checkout a {
-  background-color: $site-color-red-light;
+  background-color: $color-red-light;
 }
 abbr[title] {
   border: none!important;

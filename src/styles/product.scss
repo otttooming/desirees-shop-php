@@ -56,7 +56,7 @@
 
     color: #fff !important;
     border-radius: 3px;
-    background-color: #a30000;
+    background-color: $color-red-std;
     box-shadow: 2px 2px #111;
     text-shadow: 2px 2px #111;
 
@@ -71,7 +71,7 @@
     }
 
     .amount {
-      color: $site-color-white !important;
+      color: $color-white !important;
 
       font-size: 12px;
     }

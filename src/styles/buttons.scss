@@ -1,8 +1,8 @@
 .button {
-  box-shadow: $site-shadow-std!important;
-  text-shadow: $site-shadow-std!important;
+  box-shadow: $shadow-std!important;
+  text-shadow: $shadow-std!important;
 
   &.active {
-    background: $site-color-red-std;
+    background: $color-red-std;
   }
 }

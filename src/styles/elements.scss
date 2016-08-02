@@ -35,7 +35,7 @@ table {
 
 tr {
   &.alt {
-    background: rgba($site-color-dark-light, .2);
+    background: rgba($color-dark-light, .2);
   }
 }
 
@@ -64,7 +64,7 @@ select,
 input {
   border-radius: 5px;
   height: 30px;
-  background: rgba($site-color-dark-light, .3);
+  background: rgba($color-dark-light, .3);
   margin: 0;
   padding: 0 10px;
   box-sizing: border-box;
@@ -80,9 +80,9 @@ input {
   padding: 5px 10px;
   box-shadow: 2px 2px #111;
   border-radius: 5px;
-  background-color: #a30000;
-  text-shadow: 2px 2px $site-color-dark-light;
-  color: $site-color-white;
+  background-color: $color-red-std;
+  text-shadow: 2px 2px $color-dark-light;
+  color: $color-white;
   line-height: normal;
   font-family: $typeface-primary;
 
