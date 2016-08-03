@@ -162,7 +162,7 @@ blockquote{background:$color-grey url(../images/legacy/quotes.png) no-repeat 10p
 /* -------------------------------------------------- */
 /* Modal
 /* -------------------------------------------------- */
-.modal-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1040;background-color:#000;}
+.modal-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1040;background-color:$color-black;}
 .modal-backdrop.fade{opacity:0;}
 .modal-backdrop,.modal-backdrop.fade.in{opacity:0.5;filter:alpha(opacity=50);}
 .modal{position:fixed;top:10%;left:50%;z-index:1050;margin-left:-310px;width:620px;border:1px solid $color-grey;border-top:4px solid $color-grey;background-color:$color-white;}
@@ -192,12 +192,12 @@ blockquote{background:$color-grey url(../images/legacy/quotes.png) no-repeat 10p
 .tooltip.right{margin-left:3px;padding:0 5px;}
 .tooltip.bottom{margin-top:3px;padding:5px 0;}
 .tooltip.left{margin-left:-3px;padding:0 5px;}
-.tooltip-inner{padding:8px;max-width:200px;background-color:#000;color:$color-white;text-align:center;text-decoration:none;}
+.tooltip-inner{padding:8px;max-width:200px;background-color:$color-black;color:$color-white;text-align:center;text-decoration:none;}
 .tooltip-arrow{position:absolute;width:0;height:0;border-style:solid;border-color:transparent;}
-.tooltip.top .tooltip-arrow{bottom:0;left:50%;margin-left:-5px;border-width:5px 5px 0;border-top-color:#000;}
-.tooltip.right .tooltip-arrow{top:50%;left:0;margin-top:-5px;border-width:5px 5px 5px 0;border-right-color:#000;}
-.tooltip.left .tooltip-arrow{top:50%;right:0;margin-top:-5px;border-width:5px 0 5px 5px;border-left-color:#000;}
-.tooltip.bottom .tooltip-arrow{top:0;left:50%;margin-left:-5px;border-width:0 5px 5px;border-bottom-color:#000;}
+.tooltip.top .tooltip-arrow{bottom:0;left:50%;margin-left:-5px;border-width:5px 5px 0;border-top-color:$color-black;}
+.tooltip.right .tooltip-arrow{top:50%;left:0;margin-top:-5px;border-width:5px 5px 5px 0;border-right-color:$color-black;}
+.tooltip.left .tooltip-arrow{top:50%;right:0;margin-top:-5px;border-width:5px 0 5px 5px;border-left-color:$color-black;}
+.tooltip.bottom .tooltip-arrow{top:0;left:50%;margin-left:-5px;border-width:0 5px 5px;border-bottom-color:$color-black;}
 
 /* -------------------------------------------------- */
 /* Grid Clear
@@ -663,7 +663,7 @@ div.menu{text-align:left;margin:0;padding:0 0 8px;}
 }
 /* Etheme Popup
 -------------------------------------------------------------- */
-.etheme-popup-overlay{position:fixed;top:0;left:0;z-index:10001;width:100%;height:100%;background:#000;opacity:.50;-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=75);filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=75);}
+.etheme-popup-overlay{position:fixed;top:0;left:0;z-index:10001;width:100%;height:100%;background:$color-black;opacity:.50;-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=75);filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=75);}
 .etheme-popup{position:relative;top:0;left:0;width:100%;height:0;}
 .etheme-popup-content{position:fixed;top:50%;left:50%;z-index:10002;margin-top:-68px;margin-left:-165px;padding:15px;min-height:50px;width:366px;border:1px solid $color-grey;border-top:4px solid $color-grey;background-color:$color-white;background-image:url(../images/legacy/loading.gif);background-position:center center;background-repeat:no-repeat;}
 .etheme-popup img{float:left;margin:0 15px 15px 0;max-width: 75px;border:1px solid $color-grey;}
@@ -675,7 +675,7 @@ div.menu{text-align:left;margin:0;padding:0 0 8px;}
 .etheme-popup-content .button.cont-shop:hover{background: $color-red;}
 .etheme-popup-content em {color: $color-grey;text-transform: uppercase;font-style: normal !important;font-size: 16px;}
 div.pp_woocommerce .pp_content_container{border-top:4px solid $color-grey;padding:20px 0 0 !important;float: left;background: $color-white;}
-div.pp_woocommerce div.pp_overlay{z-index: 10001 !important;width: 100% !important;background: #000 !important;opacity: 0.5 !important;}
+div.pp_woocommerce div.pp_overlay{z-index: 10001 !important;width: 100% !important;background: $color-black !important;opacity: 0.5 !important;}
 div.pp_woocommerce div.pp_pic_holder{z-index: 10002 !important;width: 485px !important;}
 div.pp_woocommerce .pp_close{
 	        border-radius: 0px !important;

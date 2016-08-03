@@ -91,14 +91,14 @@ textarea{
 }
 .quantity.buttons_added .plus{
 	width: 23px !important;
-	border-top: 1px solid #000 !important;
-	border-right: 1px solid #000 !important;
-	border-bottom: 1px solid #000 !important;
+	border-top: 1px solid $color-black !important;
+	border-right: 1px solid $color-black !important;
+	border-bottom: 1px solid $color-black !important;
 }
 .quantity.buttons_added .minus{
 	width: 23px !important;
-	border-bottom: 1px solid #000 !important;
-	border-right: 1px solid #000 !important;
+	border-bottom: 1px solid $color-black !important;
+	border-right: 1px solid $color-black !important;
 }
 del{
 	color: $color-red;
@@ -137,7 +137,7 @@ del{
 .header-overlapped .header-type-variant6{
 	border-bottom:1px solid $color-black;
 	border-top:1px solid $color-black;
-	background: #222 !important;
+	background: $color-charcoal !important;
 }
 
 .header-type-variant2 .header,
@@ -253,7 +253,7 @@ del{
 }
 
 .fixed-header-area .fixed-header{
-	background: #222 !important;
+	background: $color-charcoal !important;
 }
 
 .product-slider .next,
@@ -460,7 +460,7 @@ del{
 }
 
 .widget_layered_nav ul li.chosen a{
-	background-color: #222 !important;
+	background-color: $color-charcoal !important;
 	border:1px solid $color-black;
 	border-right:none;
 }
@@ -551,7 +551,7 @@ div.product_meta span{
 	color: $color-grey;
 }
 #product-quantity .quantity.buttons_added .plus:focus, #product-quantity .quantity.buttons_added .minus:focus{
-	border-color: #000 !important;
+	border-color: $color-black !important;
 	border-left: none !important;
 }
 div.product_meta a{
@@ -565,7 +565,7 @@ div.product_meta a{
 
 div.pp_woocommerce .pp_content_container,
 .etheme-popup-content{
-	background-color: #222 !important;
+	background-color: $color-charcoal !important;
 	border-top:1px solid $color-red;
 	border-left:1px solid $color-black !important;
 	border-right:1px solid $color-black !important;
@@ -578,7 +578,7 @@ div.pp_woocommerce .pp_content_container,
 }
 
 div.pp_woocommerce .pp_close{
-	background-color: #222 !important;
+	background-color: $color-charcoal !important;
 }
 
 div.pp_woocommerce #respond #commentform #submit{
@@ -708,7 +708,7 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 }
 
 #reviews #comments ol.commentlist li .comment-text{
-	background: #222 !important;
+	background: $color-charcoal !important;
 	border:1px solid $color-black !important;
 }
 
@@ -888,7 +888,7 @@ form.login .login-head, form.register .register-head{
 .login .form-row .button,
 .register .form-row .button{
 	border:none !important;
-	background-color: #222 !important;
+	background-color: $color-charcoal !important;
 }
 
 .form-row .button:hover{
