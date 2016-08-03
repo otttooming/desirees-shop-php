@@ -7,8 +7,6 @@
 /* ----------------------------------------------------------- */
 @media only screen and (min-width: 768px) and (max-width: 979px) {
 	.boxed .wrapper {
-		-webkit-box-shadow: 0 1px 6px;
-		box-shadow: 0 1px 6px;
 		margin: 0 auto;
 		width: 764px;
 	}
@@ -1029,9 +1027,6 @@
 	.boxed .wrapper {
 		margin: 0 auto;
 		width: 100%;
-		-webkit-box-shadow: 0 1px 6px;
-		box-shadow: 0 1px 6px;
-		box-sizing: border-box;
 	}
 	.container-footer {
 		margin-top: -80px;
@@ -1884,9 +1879,6 @@
 	.boxed .wrapper {
 		margin: 0 auto;
 		width: 100%;
-		-webkit-box-shadow: 0 1px 6px;
-		box-shadow: 0 1px 6px;
-		box-sizing: border-box;
 	}
 	.header-phone {
 		display: none;

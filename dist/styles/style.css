@@ -553,7 +553,6 @@ img {
 .container {
   margin-right: auto;
   margin-left: auto;
-  background: #222;
   padding: 0 20px; }
 
 .container:after,
@@ -1719,9 +1718,7 @@ body.wide {
 
 .boxed .wrapper {
   margin: 0 auto;
-  width: 980px;
-  background: #fff;
-  box-shadow: 0 1px 6px; }
+  width: 980px; }
 
 .fixed-header-area,
 .header-bg {
@@ -7478,7 +7475,6 @@ form.login .lost_password {
 /* ----------------------------------------------------------- */
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   .boxed .wrapper {
-    box-shadow: 0 1px 6px;
     margin: 0 auto;
     width: 764px; }
   .logo {
@@ -8227,9 +8223,7 @@ form.login .lost_password {
     margin-bottom: 25px !important; }
   .boxed .wrapper {
     margin: 0 auto;
-    width: 100%;
-    box-shadow: 0 1px 6px;
-    box-sizing: border-box; }
+    width: 100%; }
   .container-footer {
     margin-top: -80px;
     padding-bottom: 25px;
@@ -8874,9 +8868,7 @@ form.login .lost_password {
     width: 320px !important; }
   .boxed .wrapper {
     margin: 0 auto;
-    width: 100%;
-    box-shadow: 0 1px 6px;
-    box-sizing: border-box; }
+    width: 100%; }
   .header-phone {
     display: none; }
   .grid_pagination_block {
@@ -11926,9 +11918,6 @@ abbr[title] {
 body {
   color: #fff; }
 
-.boxed .wrapper {
-  box-shadow: 0 1px 6px #151515 !important; }
-
 .logo a,
 .logo a:hover {
   color: #fff; }
@@ -12895,10 +12884,7 @@ div.pp_overlay {
     width: 1170px; }
   .boxed .wrapper {
     width: 1230px;
-    margin: 0 auto;
-    background: #fff;
-    box-shadow: 0 1px 6px;
-    -webkit-box-shadow: 0 1px 6px; }
+    margin: 0 auto; }
   .span12 {
     width: 1170px; }
   .span11 {
@@ -13489,6 +13475,11 @@ input {
   .product__price-block .amount {
     padding: 0;
     box-shadow: none; }
+
+.wrapper {
+  background: #222;
+  box-shadow: 0 1px 6px #151515;
+  box-sizing: border-box; }
 
 .is-disabled {
   display: none; }
