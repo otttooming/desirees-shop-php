@@ -375,12 +375,6 @@ form .form-row.terms label a {
   float:none!important;
 }
 
-.widget-container #dropdown_layered_nav_varv, #dropdown_layered_nav_suurus, #dropdown_layered_nav_materjal {
-  margin-right:5px;
-  margin-bottom:5px;
-  background: url(../images/legacy/select_arrow.png) no-repeat 93% center;
-}
-
 .order_details li strong, mark {
   color: $color-warm !important;
 }
@@ -498,7 +492,6 @@ h2, h3, .product-slider h4, .contact_info h5{
   margin-top:20px;
 }
 
-
 .center777, .center777 h4 {
   text-align:center !important;
 }
@@ -545,16 +538,6 @@ h2, h3, .product-slider h4, .contact_info h5{
 
 .menu > ul > li > a:after {
   height: 0 !important;
-}
-
-/*IDstore 3.3*/
-
-#content_tab_3 ul {
-  height: auto;
-  padding: 50px;
-  border: 1px solid $color-black;
-  background-color: $color-white;
-  text-align: center;
 }
 
 .footer-home i, .footer-phone i, .footer-mail i {
@@ -707,17 +690,6 @@ h2, h3, .product-slider h4, .contact_info h5{
   	height: 75px !important;
   	margin-bottom: 25px !important;
   }
-}
-
-/*Photos tab image size */
-
-#content_tab_3 ul {
-  -moz-column-count: 5;
-  -moz-column-gap: 10px;
-  -webkit-column-count: 5;
-  -webkit-column-gap: 10px;
-  column-count: 5;
-  column-gap: 10px;
 }
 
 /* Amazon style search bar */
@@ -1390,12 +1362,6 @@ span.copyright {
   	margin-top: 20px !important;
   }
 
-  #content_tab_3 ul {
-  	-moz-column-count: 1;
-  	-webkit-column-count: 1;
-  	column-count: 1;
-  }
-
   table.shop_table {
   	display: inline-block;
   }
@@ -1406,22 +1372,8 @@ span.copyright {
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  #content_tab_3 ul {
-  	-moz-column-count: 2;
-  	-webkit-column-count: 2;
-  	column-count: 2;
-  }
-
   .products-grid .product-grid.span2:hover .product-descr {
   	display: none;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 979px) {
-  #content_tab_3 ul {
-  	-moz-column-count: 3;
-  	-webkit-column-count: 3;
-  	column-count: 3;
   }
 }
 

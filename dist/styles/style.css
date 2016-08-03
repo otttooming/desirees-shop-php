@@ -2318,7 +2318,6 @@ div.menu {
   height: 40px;
   left: 0; }
 
-/* .header-type-default .menu > ul > li > a, .header-type-default .menu .current-menu-item > a,.header-type-default .menu .current-menu-item > a:hover{padding: 0 16px 16px 16px;} */
 .menu > ul > li.over > a, .menu > ul > li.active > a, .menu > ul > li > a:hover {
   text-decoration: none;
   border-bottom-style: solid;
@@ -2964,10 +2963,10 @@ div.menu {
 #product-page .product_image {
   position: relative; }
 
-#product-page .product_image::-moz-selection, #product-page .views-gallery .jcarousel-container-vertical::-moz-selection, #product-page .views-gallery::-moz-selection {
+#product-page .product_image::-moz-selection, #product-page .views-gallery::-moz-selection {
   background: transparent !important; }
 
-#product-page .product_image::selection, #product-page .views-gallery .jcarousel-container-vertical::selection, #product-page .views-gallery::selection {
+#product-page .product_image::selection, #product-page .views-gallery::selection {
   background: transparent !important; }
 
 .img-wpapper .product_image {
@@ -3078,18 +3077,6 @@ div.menu {
   height: 35px !important;
   width: 3.61em !important;
   padding-right: 6px !important; }
-
-.views-gallery .jcarousel-next-vertical {
-  background: url(../images/legacy/product-big-arrow-sprite_vertical.png) no-repeat 0 -121px !important; }
-
-.views-gallery .jcarousel-prev-vertical {
-  background: url(../images/legacy/product-big-arrow-sprite_vertical.png) no-repeat 0 -88px !important; }
-
-.views-gallery .jcarousel-next-vertical:hover, .views-gallery .jcarousel-next-vertical:focus {
-  background-position: 0 -201px !important; }
-
-.views-gallery .jcarousel-prev-vertical:hover, .views-gallery .jcarousel-prev-vertical:focus {
-  background-position: 0 -168px !important; }
 
 #cart-quantity .quantity.buttons_added {
   width: auto; }
@@ -3296,15 +3283,6 @@ div.pp_woocommerce .pp_content_container .pp_right {
 
 .product_layout_variant3 .product_image .thumbs-count-4.views-gallery {
   height: 440px; }
-
-.thumbs-count-4.views-gallery .jcarousel-next-vertical {
-  bottom: -35px !important; }
-
-.product_layout_variant3 .views-gallery .jcarousel-clip-vertical {
-  height: 440px !important; }
-
-.product_layout_variant3 .thumbs-count-3.views-gallery .jcarousel-clip-vertical {
-  height: 330px !important; }
 
 .product_layout_variant3 .product_image .views-gallery .slide {
   margin-bottom: 10px;
@@ -7890,8 +7868,6 @@ form.login .lost_password {
     margin-top: 8px; }
   .product-grid .price {
     margin-top: 7px !important; }
-  .views-gallery.thumbs-count-4 .jcarousel-clip-vertical {
-    height: 330px !important; }
   .back-to {
     display: none; }
   .contact_textarea {
@@ -8577,8 +8553,6 @@ form.login .lost_password {
     background-position: -7px -3px !important; }
   #product-page .more-views-arrow.next.disabled, #product-page .more-views-arrow.next.disabled:hover {
     background-position: -49px -3px !important; }
-  .product_layout_variant3 .views-gallery .jcarousel-clip-vertical, .product_layout_variant3 .thumbs-count-3.views-gallery .jcarousel-clip-vertical {
-    height: 220px !important; }
   .product_layout_variant3 .product_image .views-gallery {
     height: 220px !important; }
   .product_layout_variant2 .addto-container .button.big.active.single_add_to_cart_button, .product_layout_variant3 .addto-container .button.big.active.single_add_to_cart_button {
@@ -10470,11 +10444,6 @@ form .form-row.terms label a {
   display: inline !important;
   float: none !important; }
 
-.widget-container #dropdown_layered_nav_varv, #dropdown_layered_nav_suurus, #dropdown_layered_nav_materjal {
-  margin-right: 5px;
-  margin-bottom: 5px;
-  background: url(../images/legacy/select_arrow.png) no-repeat 93% center; }
-
 .order_details li strong, mark {
   color: #ff9500 !important; }
 
@@ -10602,14 +10571,6 @@ h2, h3, .product-slider h4, .contact_info h5 {
 .menu > ul > li > a:after {
   height: 0 !important; }
 
-/*IDstore 3.3*/
-#content_tab_3 ul {
-  height: auto;
-  padding: 50px;
-  border: 1px solid #151515;
-  background-color: #fff;
-  text-align: center; }
-
 .footer-home i, .footer-phone i, .footer-mail i {
   font-size: 35px; }
 
@@ -10728,15 +10689,6 @@ h2, h3, .product-slider h4, .contact_info h5 {
   .views-gallery {
     height: 75px !important;
     margin-bottom: 25px !important; } }
-
-/*Photos tab image size */
-#content_tab_3 ul {
-  -moz-column-count: 5;
-  -moz-column-gap: 10px;
-  -webkit-column-count: 5;
-  -webkit-column-gap: 10px;
-  column-count: 5;
-  column-gap: 10px; }
 
 /* Amazon style search bar */
 .header-type-default .logo {
@@ -11258,28 +11210,14 @@ span.copyright {
   .addto-container form.cart .button {
     float: none !important;
     margin-top: 20px !important; }
-  #content_tab_3 ul {
-    -moz-column-count: 1;
-    -webkit-column-count: 1;
-    column-count: 1; }
   table.shop_table {
     display: inline-block; }
   img.cat-banner, .grid_pagination_block, .back-to777, .products-grid .product-grid.span2:hover .product-descr {
     display: none; } }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  #content_tab_3 ul {
-    -moz-column-count: 2;
-    -webkit-column-count: 2;
-    column-count: 2; }
   .products-grid .product-grid.span2:hover .product-descr {
     display: none; } }
-
-@media only screen and (min-width: 768px) and (max-width: 979px) {
-  #content_tab_3 ul {
-    -moz-column-count: 3;
-    -webkit-column-count: 3;
-    column-count: 3; } }
 
 /* Tavapood uusaasta ver */
 .company_list3 {
