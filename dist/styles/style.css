@@ -2481,9 +2481,6 @@ div.menu {
   transition: color 400ms ease-in-out;
   text-transform: uppercase;
   font-size: 12px;
-  -webkit-transition: color 400ms ease-in-out;
-  -moz-transition: color 400ms ease-in-out;
-  -o-transition: color 400ms ease-in-out;
   padding: 8px 0; }
 
 .default-menu > ul > li > ul > li a:hover {
@@ -2759,7 +2756,6 @@ div.menu {
 
 .banner-transform .mask {
   background-color: rgba(255, 255, 255, 0);
-  transition: all 0.5s ease-in-out;
   bottom: -100%;
   opacity: 1; }
 
@@ -3672,8 +3668,7 @@ div.pp_woocommerce .pp_content_container .pp_right {
   left: 0;
   text-align: left;
   z-index: 1000;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box; }
+  box-sizing: border-box; }
 
 /* Price
 -------------------------------------------------------------- */
@@ -4067,7 +4062,6 @@ ins {
   display: block;
   clear: both;
   box-sizing: border-box;
-  -moz-box-sizing: border-box;
   margin-left: 0 !important;
   margin-right: 0 !important;
   width: 100%;
@@ -4819,11 +4813,7 @@ ul.product_list_widget li .woocommerce-price-suffix .amount {
   float: left;
   margin: 0 15px 15px 0;
   width: 60px;
-  height: 60px;
-  -moz-transition: opacity 0.4s ease;
-  -webkit-transition-timing-function: ease;
-  -webkit-transition-duration: 0.4s;
-  -webkit-transition-property: opacity; }
+  height: 60px; }
 
 .etheme_widget_recent_entries > ul > li .postimg:hover {
   background-color: rgba(255, 255, 255, 0.9);
@@ -7090,17 +7080,14 @@ form.login .lost_password {
   position: relative;
   left: 50%;
   -webkit-transform: translateX(-50%);
-  transform: translateX(-50%); }
+          transform: translateX(-50%); }
 
 .with-sidebar- .typography-block .p-tables-wrap {
   float: right;
   width: 740px;
   position: static;
-  transform: none;
   -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  -o-transform: none; }
+          transform: none; }
 
 .p-table,
 .p-table-2,
@@ -8806,7 +8793,7 @@ form.login .lost_password {
     position: relative;
     left: 50%;
     -webkit-transform: translateX(-50%);
-    transform: translateX(-50%); }
+            transform: translateX(-50%); }
   .checkout_cart #coupon_code {
     width: 120px !important;
     float: left; }
@@ -9906,13 +9893,15 @@ ul.icons li [class^='icon-'] {
 .icon-spin {
   display: inline-block;
   -webkit-animation: spin 2s infinite linear;
-  animation: spin 2s infinite linear; }
+          animation: spin 2s infinite linear; }
 
 @-webkit-keyframes spin {
   0% {
-    -webkit-transform: rotate(0deg); }
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
   100% {
-    -webkit-transform: rotate(359deg); } }
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg); } }
 
 @keyframes spin {
   0% {
@@ -9921,16 +9910,6 @@ ul.icons li [class^='icon-'] {
   100% {
     -webkit-transform: rotate(359deg);
             transform: rotate(359deg); } }
-
-@-moz-document url-prefix() {
-  .icon-spin {
-    height: 0.9em; }
-  .btn .icon-spin {
-    height: auto; }
-  .icon-spin.icon-large {
-    height: 1.25em; }
-  .btn .icon-spin.icon-large {
-    height: 0.75em; } }
 
 .icon-glass:before {
   content: '\f000'; }
@@ -11352,11 +11331,11 @@ h3 {
 /* Hover description */
 .products-grid .product-descr {
   -webkit-transform: scale(0, 0);
-  transform: scale(0, 0);
+          transform: scale(0, 0);
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
-  align-items: center;
+      align-items: center;
   position: absolute;
   bottom: 90px;
   top: 0;
@@ -11377,7 +11356,7 @@ h3 {
 
 .products-grid .product-grid.span2:hover .product-descr {
   -webkit-transform: scale(1, 1);
-  transform: scale(1, 1); }
+          transform: scale(1, 1); }
 
 .products-grid .product-grid.span2:hover .product-descr:after {
   position: absolute;

@@ -569,9 +569,6 @@ blockquote {
 }
 .modal.fade {
 	top: -25%;
-	-webkit-transition: opacity 0.3s linear, top 0.3s ease-out;
-	-moz-transition: opacity 0.3s linear, top 0.3s ease-out;
-	-o-transition: opacity 0.3s linear, top 0.3s ease-out;
 	transition: opacity 0.3s linear, top 0.3s ease-out;
 }
 .modal.fade.in {
@@ -613,11 +610,9 @@ blockquote {
 }
 .modal-body i {
 	cursor: pointer;
-	-moz-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
 }
 .modal-body .thumbnail {
-	-moz-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
 }
 .modal-body .thumbnail:hover i {
@@ -630,12 +625,8 @@ blockquote {
 	margin-bottom: 0;
 	padding: 14px 15px 15px;
 	border-top: 1px solid $color-grey;
-	-webkit-border-radius: 0 0 6px 6px;
-	-moz-border-radius: 0 0 6px 6px;
 	border-radius: 0 0 6px 6px;
 	background-color: $color-grey;
-	-webkit-box-shadow: inset 0 1px 0 $color-white;
-	-moz-box-shadow: inset 0 1px 0 $color-white;
 	box-shadow: inset 0 1px 0 $color-white;
 	text-align: right;
 	zoom: 1;
@@ -930,10 +921,6 @@ body.wide {
 #top-cart .cart-popup a {
 	color: $color-grey;
 	font-weight: 300;
-	-webkit-transition: color 0.2s ease-in-out;
-	-moz-transition: color 0.2s ease-in-out;
-	-ms-transition: color 0.2s ease-in-out;
-	-o-transition: color 0.2s ease-in-out;
 	transition: color 0.2s ease-in-out;
 }
 #top-cart .cart-popup a:hover {
@@ -942,7 +929,6 @@ body.wide {
 #top-cart .cart-popup a > img {
 	width: 60px;
 	opacity: 1;
-	-moz-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
 }
 #top-cart .cart-popup a > img:hover {
@@ -1407,7 +1393,6 @@ body.wide {
 .breadcrumbs a {
 	text-decoration: none;
 	font-weight: 300;
-	-moz-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
 }
 .back-to {
@@ -1423,7 +1408,6 @@ body.wide {
 	color: $color-grey;
 	font-size: 18px;
 	line-height: 3px;
-	-moz-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
 }
 .back-to:hover {}
@@ -1579,9 +1563,6 @@ div.menu {
 	transition: color 400ms ease-in-out;
 	text-transform: uppercase;
 	font-size: 12px;
-	-webkit-transition: color 400ms ease-in-out;
-	-moz-transition: color 400ms ease-in-out;
-	-o-transition: color 400ms ease-in-out;
 	padding: 8px 0;
 }
 .default-menu > ul > li > ul > li a:hover {
@@ -1698,10 +1679,6 @@ div.menu {
 }
 .et-mobile-menu li .open-child:hover {
 	background-color: $color-grey;
-	-webkit-transition: background-color 0.3s ease;
-	-moz-transition: background-color 0.3s ease;
-	-ms-transition: background-color 0.3s ease;
-	-o-transition: background-color 0.3s ease;
 	transition: background-color 0.3s ease;
 }
 .et-mobile-menu li.over > .open-child {
@@ -1722,10 +1699,6 @@ div.menu {
 	background-color: $color-grey;
 	text-decoration: none;
 	color: $color-black;
-	-webkit-transition: background-color 0.3s ease;
-	-moz-transition: background-color 0.3s ease;
-	-ms-transition: background-color 0.3s ease;
-	-o-transition: background-color 0.3s ease;
 	transition: background-color 0.3s ease;
 }
 .et-mobile-menu > li:last-child {
@@ -1824,10 +1797,6 @@ div.menu {
 	padding-top: 15px;
 	margin-bottom: 0;
 	line-height: 20px;
-	-webkit-transition: all 0.45s ease-in-out;
-	-moz-transition: all 0.45s ease-in-out;
-	-o-transition: all 0.45s ease-in-out;
-	-ms-transition: all 0.45s ease-in-out;
 	transition: all 0.45s ease-in-out;
 }
 .banner a,
@@ -1865,19 +1834,10 @@ div.menu {
 }
 .banner-transform img {
 	width: 100%;
-	-webkit-transition: all 0.5s ease-in-out;
-	-moz-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.5s ease-in-out;
-	-ms-transition: all 0.5s ease-in-out;
 	transition: all 0.5s ease-in-out;
 }
 .banner-transform .mask {
 	background-color: rgba(255,255,255,0.00);
-	-webkit-transition: all 0.5s ease-in-out;
-	-moz-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.5s ease-in-out;
-	-ms-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
 	bottom: -100%;
 	opacity: 1;
 }
@@ -1886,10 +1846,6 @@ div.menu {
 }
 .banner-transform .mask p {
 	color: $color-grey;
-	-webkit-transition: all 0.2s linear;
-	-moz-transition: all 0.2s linear;
-	-o-transition: all 0.2s linear;
-	-ms-transition: all 0.2s linear;
 	transition: all 0.2s linear;
 }
 .banner-transform:hover .mask {
@@ -1969,9 +1925,6 @@ div.menu {
 	margin-right: 0 !important;
 }
 .products_grid.loading .product-image {
-	-webkit-transition: all 400ms ease-in-out;
-	-moz-transition: all 400ms ease-in-out;
-	-o-transition: all 400ms ease-in-out;
 	transition: all 400ms ease-in-out;
 }
 .product-slide .product-grid,
@@ -2808,7 +2761,6 @@ div.pp_woocommerce .pp_content_container .pp_right {
 	text-align: left;
 	z-index: 1000;
 	box-sizing: border-box;
-	-moz-box-sizing: border-box;
 }
 /* Price
 -------------------------------------------------------------- */
@@ -2975,9 +2927,6 @@ ins {
 	left: 100px;
 	color: $color-grey;
 	line-height: 30px;
-	-webkit-transition: color 0.2s ease-in-out;
-	-moz-transition: color 0.2s ease-in-out;
-	-o-transition: color 0.2s ease-in-out;
 	transition: color 0.2s ease-in-out;
 }
 #calc_shipping_country {
@@ -3187,8 +3136,6 @@ ins {
 .tabs .tab-content {
 	display: none;
 	float: right;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	margin-top: -1px;
 	margin-bottom: 20px;
@@ -3207,13 +3154,11 @@ ins {
 	display: block;
 	clear: both;
 	box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	margin-left: 0 !important;
 	margin-right: 0 !important;
 	width: 100%;
 	border-top: 1px solid $color-grey;
 	border-bottom: 1px solid $color-grey;
-	-moz-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
 }
 .tabs.accordion .tab-title:first-child {
@@ -3391,10 +3336,6 @@ ins {
 	font-weight: 300;
 	font-size: 14px;
 	line-height: 31px;
-	-webkit-transition: color 0.2s ease-in-out;
-	-moz-transition: color 0.2s ease-in-out;
-	-ms-transition: color 0.2s ease-in-out;
-	-o-transition: color 0.2s ease-in-out;
 	transition: color 0.2s ease-in-out;
 }
 .cats.acc_enabled .block-content .categories-group > h5 {
@@ -3648,10 +3589,6 @@ ins {
 }
 .category-block h3 {
 	margin-top: 10px;
-	-webkit-transition: color 0.2s ease-in-out;
-	-moz-transition: color 0.2s ease-in-out;
-	-ms-transition: color 0.2s ease-in-out;
-	-o-transition: color 0.2s ease-in-out;
 	transition: color 0.2s ease-in-out;
 }
 .product_categories_grid .category-block:nth-child(3n+1) {
@@ -3946,17 +3883,11 @@ ul.product_list_widget li .woocommerce-price-suffix .amount {
 	margin-top: 0;
 	color: $color-grey;
 	line-height: 36px;
-	-webkit-transition: color 0.2s ease-in-out;
-	-moz-transition: color 0.2s ease-in-out;
-	-o-transition: color 0.2s ease-in-out;
 	transition: color 0.2s ease-in-out;
 }
 #categories-2 > ul > li a {
 	color: $color-grey;
 	font-size: 14px;
-	-webkit-transition: color 0.2s ease-in-out;
-	-moz-transition: color 0.2s ease-in-out;
-	-o-transition: color 0.2s ease-in-out;
 	transition: color 0.2s ease-in-out;
 }
 .widget-container ul li {
@@ -3978,10 +3909,6 @@ ul.product_list_widget li .woocommerce-price-suffix .amount {
 	margin: 0 15px 15px 0;
 	width: 60px;
 	height: 60px;
-	-moz-transition: opacity 0.4s ease;
-	-webkit-transition-timing-function: ease;
-	-webkit-transition-duration: 0.4s;
-	-webkit-transition-property: opacity;
 }
 .etheme_widget_recent_entries > ul > li .postimg:hover {
 	background-color: rgba(255,255,255,0.90);
@@ -3994,9 +3921,6 @@ ul.product_list_widget li .woocommerce-price-suffix .amount {
 	color: $color-grey;
 	list-style: square outside;
 	line-height: 1.8;
-	-webkit-transition: color 0.2s ease-in-out;
-	-moz-transition: color 0.2s ease-in-out;
-	-o-transition: color 0.2s ease-in-out;
 	transition: color 0.2s ease-in-out;
 }
 .widget-container ul {
@@ -4191,9 +4115,6 @@ ul.product_list_widget li:last-child {
 #nav-below .nav-next a,
 #nav-below .nav-previous a {
 	font-weight: 300;
-	-webkit-transition: color 0.2s ease-in-out;
-	-moz-transition: color 0.2s ease-in-out;
-	-o-transition: color 0.2s ease-in-out;
 	transition: color 0.2s ease-in-out;
 }
 #nav-above .nav-next span {
@@ -4204,9 +4125,6 @@ ul.product_list_widget li:last-child {
 	width: 100%;
 	margin-bottom: 45px;
 	margin-left: 0;
-	-webkit-transition: all 0.4s ease-in-out;
-	-moz-transition: all 0.4s ease-in-out;
-	-o-transition: all 0.4s ease-in-out;
 	transition: all 0.4s;
 }
 .post-portrait .post-images {
@@ -4218,17 +4136,11 @@ ul.product_list_widget li:last-child {
 	position: relative;
 	float: left;
 	margin-left: 0;
-	-webkit-transition: all 0.4s ease-in-out;
-	-moz-transition: all 0.4s ease-in-out;
-	-o-transition: all 0.4s ease-in-out;
 	transition: all 0.4s;
 }
 .post-images img {
 	width: 100%;
 	opacity: 1;
-	-webkit-transition: all 0.4s ease-in-out;
-	-moz-transition: all 0.4s ease-in-out;
-	-o-transition: all 0.4s ease-in-out;
 	transition: all 0.4s;
 }
 .post-images:hover img {
@@ -4255,9 +4167,6 @@ ul.product_list_widget li:last-child {
 	background-position: center center;
 	background-repeat: no-repeat;
 	opacity: 0;
-	-webkit-transition: all 0.4s ease-in-out;
-	-moz-transition: all 0.4s ease-in-out;
-	-o-transition: all 0.4s ease-in-out;
 	transition: all 0.4s;
 }
 .post-images:hover .blog-mask {
@@ -4280,9 +4189,6 @@ ul.product_list_widget li:last-child {
 	text-transform: uppercase;
 	font-size: 16px;
 	font-weight: 300;
-	-webkit-transition: all 0.4s ease-in-out;
-	-moz-transition: all 0.4s ease-in-out;
-	-o-transition: all 0.4s ease-in-out;
 	transition: all 0.4s;
 }
 .post-title:hover {}
@@ -4293,9 +4199,6 @@ ul.product_list_widget li:last-child {
 .post-title a {
 	color: $color-grey;
 	font-weight: 300;
-	-webkit-transition: color 0.2s ease-in-out;
-	-moz-transition: color 0.2s ease-in-out;
-	-o-transition: color 0.2s ease-in-out;
 	transition: color 0.2s ease-in-out;
 }
 .blog1_icon_container {
@@ -4316,9 +4219,6 @@ ul.product_list_widget li:last-child {
 .post-information a {
 	color: $color-grey;
 	font-weight: 300;
-	-webkit-transition: color 0.2s ease-in-out;
-	-moz-transition: color 0.2s ease-in-out;
-	-o-transition: color 0.2s ease-in-out;
 	transition: color 0.2s ease-in-out;
 }
 .blog1_icon_container a:hover,
@@ -4366,9 +4266,6 @@ ul.product_list_widget li:last-child {
 	background-position: 0 0;
 	color: $color-grey;
 	font-size: 12px;
-	-webkit-transition: color 0.2s ease-in-out;
-	-moz-transition: color 0.2s ease-in-out;
-	-o-transition: color 0.2s ease-in-out;
 	transition: color 0.2s ease-in-out;
 }
 .blog_icon_author {
@@ -4380,9 +4277,6 @@ ul.product_list_widget li:last-child {
 	background-position: 0 -147px;
 	color: $color-grey;
 	font-size: 12px;
-	-webkit-transition: color 0.2s ease-in-out;
-	-moz-transition: color 0.2s ease-in-out;
-	-o-transition: color 0.2s ease-in-out;
 	transition: color 0.2s ease-in-out;
 }
 .blog2_icon_webdesign,
@@ -4395,9 +4289,6 @@ ul.product_list_widget li:last-child {
 	background-position: 0 -71px;
 	color: $color-grey;
 	font-size: 12px;
-	-webkit-transition: color 0.2s ease-in-out;
-	-moz-transition: color 0.2s ease-in-out;
-	-o-transition: color 0.2s ease-in-out;
 	transition: color 0.2s ease-in-out;
 }
 .blog_icon_comment {
@@ -4409,9 +4300,6 @@ ul.product_list_widget li:last-child {
 	background-position: 0 -220px;
 	color: $color-grey;
 	font-size: 12px;
-	-webkit-transition: color 0.2s ease-in-out;
-	-moz-transition: color 0.2s ease-in-out;
-	-o-transition: color 0.2s ease-in-out;
 	transition: color 0.2s ease-in-out;
 }
 .blog2_post {
@@ -4427,9 +4315,6 @@ ul.product_list_widget li:last-child {
 	background-position: 0 -147px;
 	color: $color-grey;
 	font-size: 12px;
-	-webkit-transition: color 0.2s ease-in-out;
-	-moz-transition: color 0.2s ease-in-out;
-	-o-transition: color 0.2s ease-in-out;
 	transition: color 0.2s ease-in-out;
 }
 .blog2_icon_comment {
@@ -4441,9 +4326,6 @@ ul.product_list_widget li:last-child {
 	background-position: 0 -220px;
 	color: $color-grey;
 	font-size: 12px;
-	-webkit-transition: color 0.2s ease-in-out;
-	-moz-transition: color 0.2s ease-in-out;
-	-o-transition: color 0.2s ease-in-out;
 	transition: color 0.2s ease-in-out;
 }
 .blog2_icon_author:hover,
@@ -4464,9 +4346,6 @@ ul.product_list_widget li:last-child {
 	float: left;
 	margin-right: 20px;
 	width: 260px;
-	-webkit-transition: all 0.4s ease-in-out;
-	-moz-transition: all 0.4s ease-in-out;
-	-o-transition: all 0.4s ease-in-out;
 	transition: all 0.4s;
 }
 .blog-post.post-images:hover {
@@ -4502,9 +4381,6 @@ ul.product_list_widget li:last-child {
 .blog-post.post-portrait .post-title a {
 	color: $color-grey;
 	font-weight: 300;
-	-webkit-transition: color 0.2s ease-in-out;
-	-moz-transition: color 0.2s ease-in-out;
-	-o-transition: color 0.2s ease-in-out;
 	transition: color 0.2s ease-in-out;
 }
 .blog-post.post-portrait .post-information p {
@@ -4520,9 +4396,6 @@ ul.product_list_widget li:last-child {
 	float: left;
 	margin: 20px 20px 0 0;
 	width: 260px;
-	-webkit-transition: all 0.4s ease-in-out;
-	-moz-transition: all 0.4s ease-in-out;
-	-o-transition: all 0.4s ease-in-out;
 	transition: all 0.4s;
 }
 .blog-post.post-horizontal .post-images:hover {
@@ -5997,10 +5870,6 @@ form.login .lost_password {
 	padding: 0 50px;
 	height: 0;
 	background: $color-grey;
-	-webkit-transition: height 0.3s ease-in-out;
-	-moz-transition: height 0.3s ease-in-out;
-	-ms-transition: height 0.3s ease-in-out;
-	-o-transition: height 0.3s ease-in-out;
 	transition: height 0.3s ease-in-out;
 }
 .hide-container .footer_container {
@@ -6013,10 +5882,6 @@ form.login .lost_password {
 	line-height: 23px;
 }
 .hide-container input:checked ~ article {
-	-webkit-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
-	-moz-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
-	-ms-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
-	-o-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
 	transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
 }
 .hide-container input:checked ~ article.ac-large {
@@ -6326,10 +6191,6 @@ form.login .lost_password {
 	width: auto;
 	position: relative;
 	left: 50%;
-	-webkit-transform: translateX(-50%);
-	-moz-transform: translateX(-50%);
-	-ms-transform: translateX(-50%);
-	-o-transform: translateX(-50%);
 	transform: translateX(-50%);
 }
 .with-sidebar- .typography-block .p-tables-wrap {
@@ -6337,10 +6198,6 @@ form.login .lost_password {
 	width: 740px;
 	position: static;
 	transform: none;
-	-webkit-transform: none;
-	-moz-transform: none;
-	-ms-transform: none;
-	-o-transform: none;
 }
 .p-table,
 .p-table-2,

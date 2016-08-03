@@ -1768,10 +1768,6 @@
 		width: 280px;
 		position: relative;
 		left: 50%;
-		-webkit-transform: translateX(-50%);
-		-moz-transform: translateX(-50%);
-		-ms-transform: translateX(-50%);
-		-o-transform: translateX(-50%);
 		transform: translateX(-50%);
 	}
 	.checkout_cart #coupon_code {
@@ -2351,8 +2347,6 @@
 		box-sizing: border-box;
 	}
 	.page-template-contacts2-php .contact-form #contact_container {
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 		margin: 0 auto;
 		width: 275px;
@@ -2869,7 +2863,6 @@
 		margin-left: 0 !important;
 		width: 100%;
 		text-align: left;
-		-moz-transition: all 0.2s ease-in-out;
 		transition: all 0.2s ease-in-out;
 	}
 	.et-menu-title {
