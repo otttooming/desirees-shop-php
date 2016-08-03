@@ -63,6 +63,10 @@
 					<div class="span5 logo">
             <?php require get_template_directory() . '/inc/components/logo.php'; ?>
 					</div>
+          
+          <div class="hidden-desktop">
+            <span class="et-menu-title"><i class="icon-reorder"></i></span>
+          </div>
 
           <?php if ($template_header != 'min') : ?><?php // Load full header ?>
   					<div class="span6 visible-desktop">
@@ -88,7 +92,7 @@
 				</header>
 
         <?php if ($template_header != 'min') : ?><?php // Load full header ?>
-          <div class="row">
+          <div class="row visible-desktop">
               <div id="main-nav" class="span12">
                   <?php wp_nav_menu(array('theme_location' => 'top', 'name' => 'top', 'container' => 'div', 'container_class' => 'menu default-menu')); ?>
               </div>

@@ -2451,11 +2451,7 @@ div.menu {
   display: none;
   z-index: 999;
   padding: 0;
-  margin-top: -8px; }
-
-.default-menu > ul > li ul {
-  border-top-width: 1px;
-  border-top-style: solid; }
+  margin-top: -9px; }
 
 .default-menu > ul > li > ul li {
   display: block;
@@ -9542,7 +9538,6 @@ form.login .lost_password {
     font-size: 38px;
     line-height: 44px; }
   .et-menu-title i.icon-reorder {
-    color: #6e6e6e;
     font-size: 36px;
     transition: all 0.2s ease-in-out; }
   .et-menu-title i.icon-reorder:hover {
@@ -11271,8 +11266,8 @@ h3 {
 .header-type-default .menu > ul > li > a {
   padding: 8px 16px; }
 
-.archive .veebipoodmenu a,
-.archive .veebipoodmenu a:hover {
+.archive .veebipoodmenu > a,
+.archive .veebipoodmenu > a:hover {
   background-color: #ff0513 !important;
   color: #fff !important; }
 
