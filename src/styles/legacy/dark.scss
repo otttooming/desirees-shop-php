@@ -22,7 +22,7 @@ body{
 .header-top-variant4,
 .header-top-variant4 .container,
 .header-top-variant5 .container{
-	background: $color-red-light;
+	background: $color-red;
 }
 
 .logo a,
@@ -51,7 +51,7 @@ input[type="hidden"] {
 }
 
 input:focus{
-	border: 1px solid $color-red-light !important;
+	border: 1px solid $color-red !important;
 }
 
 code,
@@ -63,11 +63,11 @@ pre{
 
 blockquote{
 	background-color: #333;
-	border-bottom:1px solid $color-red-light;
+	border-bottom:1px solid $color-red;
 }
 
 mark{
-	color: $color-red-light;
+	color: $color-red;
 }
 
 label{
@@ -92,11 +92,11 @@ textarea{
 .modal{
 	background-color: #333;
 	border:none;
-	border-top:1px solid $color-red-light;
+	border-top:1px solid $color-red;
 }
 
 #cart-quantity .input-text:focus, #product-quantity .input-text:focus{
-	border:1px solid $color-red-light !important;
+	border:1px solid $color-red !important;
 }
 #product-quantity .input-text{
 	top:0 !important;
@@ -118,7 +118,7 @@ textarea{
 	border-right: 1px solid #000 !important;
 }
 del{
-	color: $color-red-light;
+	color: $color-red;
 }
 
 .thumbnail{
@@ -183,7 +183,7 @@ del{
 }
 
 .default-menu > ul > li > ul li:hover > a{
-	color: $color-red-light;
+	color: $color-red;
 }
 
 .default-menu > ul > li > ul li:last-child{
@@ -229,7 +229,7 @@ del{
 }
 
 #contact_button .button:hover{
-	background: $color-red-light;
+	background: $color-red;
 }
 
 .form-submit #submit{
@@ -315,7 +315,7 @@ del{
 }
 
 #top-cart .cart-popup a.emptycart:hover{
-	background-color: $color-red-light;
+	background-color: $color-red;
 }
 
 #top-cart .cart-popup .recently-added{
@@ -340,7 +340,7 @@ del{
 }
 
 #top-cart a > span .amount{
-	color: $color-red-light;
+	color: $color-red;
 }
 
 .header-links > li > a{
@@ -456,7 +456,7 @@ del{
 
 .widget_layered_nav ul li a:hover,
 .widget_layered_nav ul li span:hover{
-	color: $color-red-light ;
+	color: $color-red ;
 }
 
 .widget_layered_nav ul small.count{
@@ -465,7 +465,7 @@ del{
 }
 
 .widget_layered_nav ul li.chosen a{
-	background: $color-red-light url(../images/legacy/check.png) no-repeat 12px center ;
+	background: $color-red url(../images/legacy/check.png) no-repeat 12px center ;
 }
 
 .widget_price_filter .price_slider_wrapper .button{
@@ -509,7 +509,7 @@ del{
 
 .grid_pagination span.current,
 .grid_bottom_pagination span.current{
-	background: $color-red-light;
+	background: $color-red;
 	color: $color-white;
 }
 
@@ -583,7 +583,7 @@ div.product_meta a{
 div.pp_woocommerce .pp_content_container,
 .etheme-popup-content{
 	background-color: #222 !important;
-	border-top:1px solid $color-red-light;
+	border-top:1px solid $color-red;
 	border-left:1px solid $color-dark-light !important;
 	border-right:1px solid $color-dark-light !important;
 	border-bottom:1px solid $color-dark-light !important;
@@ -603,7 +603,7 @@ div.pp_woocommerce #respond #commentform #submit{
 }
 
 div.pp_woocommerce #respond #commentform #submit:hover{
-	background: $color-red-light;
+	background: $color-red;
 }
 
 .custom-tabs1{
@@ -677,7 +677,7 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 }
 
 .cart-collaterals .shipping_calculator .button:hover{
-	background: $color-red-light;
+	background: $color-red;
 }
 
 .cart-collaterals .shipping_calculator a,
@@ -710,7 +710,7 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 }
 
 .post-title:hover{
-	color: $color-red-light !important;
+	color: $color-red !important;
 }
 
 .post-default .post-images{
@@ -788,7 +788,7 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 .typography-block > .nav-tabs li:hover,
 .typography-block > .nav-tabs li.active:hover{
 	background: $color-grey !important;
-	border-left-color:$color-red-light;
+	border-left-color:$color-red;
 	border-left-width:1px !important;
 	border-left-style:solid !important;
 }
@@ -808,7 +808,7 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 }
 
 .typography-block > .nav-tabs li:hover a{
-	color: $color-red-light;
+	color: $color-red;
 }
 
 .typography-block > .nav-tabs > li:last-child{
@@ -832,7 +832,7 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 
 .member-details{
 	background: #333;
-	border-bottom:2px solid $color-red-light;
+	border-bottom:2px solid $color-red;
 }
 
 .member-details i{
@@ -842,7 +842,7 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 .p-table, .p-table-2, .p-table-3{
 	background: #333;
 	border:1px solid $color-dark-light;
-	border-bottom:2px solid $color-red-light;
+	border-bottom:2px solid $color-red;
 	color: $color-white;
 }
 
@@ -858,7 +858,7 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 
 .p-table li:hover, .p-table-2 li:hover{
 	background: #333 !important;
-	color: $color-red-light;
+	color: $color-red;
 }
 
 .p-table li i{
@@ -909,7 +909,7 @@ form.login .login-head, form.register .register-head{
 }
 
 .form-row .button:hover{
-	background: $color-red-light ;
+	background: $color-red ;
 }
 
 form.login .login-head i, form.register .register-head i{
@@ -933,7 +933,7 @@ form.login .login-head i, form.register .register-head i{
 
 .et-mobile-menu li > a:hover{
 	background: $color-dark-light;
-	color: $color-red-light;}
+	color: $color-red;}
 
 .et-mobile-menu li .open-child{
 	background-color: $color-grey;
@@ -941,7 +941,7 @@ form.login .login-head i, form.register .register-head i{
 }
 
 .et-mobile-menu li .open-child:hover{
-	background-color: $color-red-light;
+	background-color: $color-red;
 }
 
 #back-to-top.btn-style-standart a{
@@ -954,7 +954,7 @@ form.login .login-head i, form.register .register-head i{
 }
 
 .widget-container a:hover{
-	color: $color-red-light ;
+	color: $color-red ;
 }
 
 .portfolio-item .portfolio-mask{
@@ -1033,7 +1033,7 @@ div.light_rounded .pp_content{
 
 .tabs.checkout-accordion .tab-title.opened:hover span,
 .tabs.checkout-accordion .tab-title:hover span{
-	color:$color-red-light;
+	color:$color-red;
 }
 
 .chzn-container .chzn-results .active-result{

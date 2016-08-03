@@ -1,16 +1,14 @@
-$typeface-primary: "Oswald", "Helvetica Neue", Arial, sans-serif;
-$typeface-secondary: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+$typeface-primary: 'Oswald', 'Helvetica Neue', Arial, sans-serif;
+$typeface-secondary: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 
+// Colors
 $color-warm: #ff9500;
-$color-red-light: #e00;
-$color-red-std: #a30000;
+$color-red: #ff0513; // Official designated color-red
+// $color-red: #a30000; // Alternative dark color-red
 $color-tertiary: #adff2f;
-
 $color-dark-light: #151515;
 $color-grey: #6e6e6e;
 $color-white: #fff;
-
-$shadow-std: 2px 2px $color-dark-light;
 
 // Font weights.
 $font-weight-thin: 100;
@@ -19,3 +17,5 @@ $font-weight-normal: 400;
 $font-weight-bold: 700;
 
 $line-height-normal: 1.2;
+
+$shadow-std: 2px 2px $color-dark-light;

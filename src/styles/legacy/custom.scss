@@ -156,7 +156,7 @@ hr {
 }
 
 #back-to-top.btn-style-standart a {
-  background: $color-red-std url(../images/legacy/arrow_up_2.png) no-repeat 12px center !important;
+  background: $color-red url(../images/legacy/arrow_up_2.png) no-repeat 12px center !important;
   color: $color-white !important;
 
 }
@@ -183,7 +183,7 @@ hr {
 }
 
 .back-to:before {
-  color:$color-red-std !important;
+  color:$color-red !important;
 }
 
 .back-to {
@@ -191,7 +191,7 @@ hr {
 }
 
 .show_review_form {
-  color: $color-red-std;
+  color: $color-red;
 }
 
 .tabs .tab-title {
@@ -199,7 +199,7 @@ hr {
 
   font-weight: 400 !important;
 	&:hover {
-	  color: $color-red-std;
+	  color: $color-red;
 	}
 }
 
@@ -230,11 +230,11 @@ hr {
 }
 
 .menu .current-menu-ancestor > a {
-  color: $color-red-std;
+  color: $color-red;
 }
 
 .current-cat > a {
-  color: $color-red-std !important;
+  color: $color-red !important;
 }
 
 .category-block {
@@ -254,7 +254,7 @@ hr {
 }
 
 .category-block mark {
-  color: $color-red-std;
+  color: $color-red;
 }
 
 .product_categories_grid .category-block:nth-child(3n+1) {
@@ -284,7 +284,7 @@ hr {
   display:inherit !important;
 }
 .widget_price_filter .to, .widget_price_filter .from {
-  color:$color-red-std!important;
+  color:$color-red!important;
 }
 
 #woocommerce-sort-by-columns {
@@ -358,7 +358,7 @@ form .form-row.terms label a {
 }
 
 .button:hover {
-  background-color: $color-red-std !important;
+  background-color: $color-red !important;
 }
 
 .qty-block label {
@@ -417,7 +417,7 @@ form .form-row.terms label a {
 }
 
 .widget_shopping_cart .button {
-  background-color: $color-red-std !important;
+  background-color: $color-red !important;
 }
 
 /*Remove square lists*/
@@ -449,7 +449,7 @@ div.product_meta a {
 }
 
 .responsive-switcher a {
-  color: $color-red-std;
+  color: $color-red;
 }
 
 .accountclear {
@@ -477,7 +477,7 @@ h2, h3, .product-slider h4, .contact_info h5{
   padding: 1px 12px 0;
   cursor: pointer;
   border: none;
-  background: $color-red-std;
+  background: $color-red;
   color: $color-white;
   font-size: 12px;
   line-height: 28px;
@@ -631,7 +631,7 @@ h2, h3, .product-slider h4, .contact_info h5{
 }
 
 .opened h5 a {
-  color: $color-red-light !important;
+  color: $color-red !important;
 }
 
 .next.page-numbers {
@@ -770,7 +770,7 @@ h2, h3, .product-slider h4, .contact_info h5{
   float: left;
   width: 255px;
   padding: 0;
-  background-color: $color-red-std!important;
+  background-color: $color-red!important;
   font-size: 14px;
   line-height: 50px!important;
 }
@@ -815,15 +815,15 @@ h2, h3, .product-slider h4, .contact_info h5{
   padding: 8px 16px 8px 16px;
 }
 .archive .veebipoodmenu a, .archive .veebipoodmenu a:hover {
-  background-color: $color-red-light !important;
+  background-color: $color-red !important;
   color:$color-white!important;
 }
 .header-type-default .menu .current-menu-item > a, .header-type-default .menu .current-menu-item > a:hover {
-  background-color: $color-red-light !important;
+  background-color: $color-red !important;
   color:$color-white;
 }
 .single-product .veebipoodmenu a, .single-product .veebipoodmenu a:hover {
-  background-color: $color-red-light !important;
+  background-color: $color-red !important;
   color:$color-white!important;
 }
 
@@ -875,7 +875,7 @@ h2, h3, .product-slider h4, .contact_info h5{
   left: -230px;
   width: 200px;
   padding: 15px;
-  background-color: $color-red-std;
+  background-color: $color-red;
   border-radius: 5px;
   text-shadow: 1px 1px $color-dark-light;
   font-size: 13px;
@@ -903,7 +903,7 @@ h2, h3, .product-slider h4, .contact_info h5{
   content: "";
   -moz-transform: scale(.9999); /* Solves jagged edges in CSS triangles in Firefox */
   border: 50px solid transparent;
-  border-left: 22px solid $color-red-std;
+  border-left: 22px solid $color-red;
 }
 
 /*WC result count bug*/
@@ -932,7 +932,7 @@ h2, h3, .product-slider h4, .contact_info h5{
 }
 
 .more-info:hover {
-  background-color: $color-red-std;
+  background-color: $color-red;
 }
 
 .more-info {
@@ -1002,7 +1002,7 @@ hr {
   white-space: nowrap;
 }
 #top-cart > a:hover {
-  color:$color-red-std;
+  color:$color-red;
 }
 
 #top-cart .icon-shopping-cart {
@@ -1054,7 +1054,7 @@ hr {
 .woocommerce-error a,
 .woocommerce-message a {
   margin-right: 10px;
-  background-color: $color-red-std !important;
+  background-color: $color-red !important;
 }
 
 .woocommerce-error {
@@ -1251,7 +1251,7 @@ span.copyright {
 }
 
 .page-id-11573 .infotabblock a, .page-id-6788 .infotabblock a {
-  background-color: $color-red-std!important;
+  background-color: $color-red!important;
   color:$color-white!important;
 }
 
@@ -1523,7 +1523,7 @@ span.copyright {
 }
 
 .wc-proceed-to-checkout a {
-  background-color: $color-red-light;
+  background-color: $color-red;
 }
 abbr[title] {
   border: none!important;
