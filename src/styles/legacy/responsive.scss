@@ -1001,7 +1001,7 @@
 		padding: 25px 0;
 		width: 100%;
 		border-bottom: 1px solid $color-grey;
-		background: #eee;
+		background: $color-white;
 	}
 	.follow_us_container {
 		padding-top: 15px;
@@ -1038,7 +1038,7 @@
 		padding-bottom: 25px;
 		width: 100%;
 		border-top: 1px solid $color-grey;
-		background: #EEE;
+		background: $color-white;
 	}
 	.input-append {
 		margin-left: 15%;
@@ -1100,7 +1100,7 @@
 		margin-bottom: 20px !important;
 		padding-bottom: 20px;
 		width: 428px;
-		border-bottom: 1px solid #eee;
+		border-bottom: 1px solid $color-white;
 	}
 	.review_textarea {
 		width: 90%;
@@ -1480,13 +1480,6 @@
 		margin-right: 0 !important;
 		width: 200px !important;
 		float: right !important;
-	}
-	.sxy-zoom-container .sxy-zoom-viewfinder,
-	.sxy-zoom-mode-dock .sxy-zoom-viewport {
-		display: none !important;
-	}
-	.sxy-zoom-mode-dock .sxy-zoom-dragpad .sxy-overlay {
-		opacity: 0 !important;
 	}
 	.product_layout_variant2 .variations_form table.variations tr select,
 	.product_layout_variant2 .variations_form table.variations tr select:hover {
@@ -2730,10 +2723,7 @@
 		margin-top: 20px;
 		padding: 0;
 		border: 1px solid $color-grey;
-		background: #eee;
-	}
-	.sxy-zoom-container .sxy-controls {
-		display: none !important;
+		background: $color-white;
 	}
 	/* --------------Header Types------------------- */
 	.boxed .header-type-variant4 #main-nav {

@@ -233,7 +233,7 @@ dd {
 }
 hr {
 	border: 0;
-	border-top: 1px solid #eee;
+	border-top: 1px solid $color-white;
 	border-bottom: 1px solid $color-white;
 	margin: 20px 0;
 }
@@ -308,7 +308,7 @@ abbr[title] {
 .woocommerce-error,
 .woocommerce_error {
 	background: url("../images/legacy/error.png") no-repeat 30px center;
-	color: #6f6f6f;
+	color: $color-grey;
 	border-left-color: $color-red;
 	padding-left: 85px;
 	position: relative;
@@ -322,7 +322,7 @@ abbr[title] {
 .success,
 .woocommerce-message {
 	background: url("../images/legacy/success.png") no-repeat 30px center;
-	color: #6f6f6f;
+	color: $color-grey;
 	border-left-color: $color-tertiary;
 	padding-left: 85px;
 	position: relative;
@@ -335,18 +335,18 @@ abbr[title] {
 .info,
 .woocommerce-info .wc_points_rewards_earn_points {
 	background: url("../images/legacy/info.png") no-repeat 30px center;
-	color: #6f6f6f;
-	border-left-color: #11aff1;
+	color: $color-grey;
+	border-left-color: $color-blue;
 	padding-left: 85px;
 	position: relative;
 }
 .info h3 {
-	color: #11aff1;
+	color: $color-blue;
 	margin-bottom: 10px;
 }
 .notice {
 	background: url("../images/legacy/notice.png") no-repeat 35px center;
-	color: #6f6f6f;
+	color: $color-grey;
 	border-left-color: #edbf1e;
 	padding-left: 85px;
 	position: relative;
@@ -554,7 +554,6 @@ blockquote {
 .modal-backdrop,
 .modal-backdrop.fade.in {
 	opacity: 0.5;
-	filter:alpha(opacity=50);
 }
 .modal {
 	position: fixed;
@@ -629,7 +628,6 @@ blockquote {
 	background-color: $color-grey;
 	box-shadow: inset 0 1px 0 $color-white;
 	text-align: right;
-	zoom: 1;
 }
 .modal-footer:after,
 .modal-footer:before {
@@ -661,12 +659,10 @@ blockquote {
 	font-size: 11px;
 	line-height: 1.4;
 	opacity: 0;
-	filter:alpha(opacity=0);
 	padding-left: 5px;
 }
 .tooltip.in {
 	opacity: 0.8;
-	filter:alpha(opacity=80);
 }
 .tooltip.top {
 	margin-top: -3px;
@@ -1324,13 +1320,13 @@ body.wide {
 /* Header 6
 /* -------------------------------------------------- */
 .header-overlapped .header-type-variant6 {
-	background-color: rgba(255, 255, 255, 0.9);
+	background-color: rgba($color-white, 0.9);
 	position: relative;
 	z-index: 2;
-	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 1%,rgba(255,255,255,0.9) 100%);
+	background: linear-gradient(to bottom, rgba($color-white,1) 0%,rgba($color-white,1) 1%,rgba($color-white,0.9) 100%);
 }
 .header-overlapped .header-type-variant6 .default-menu > ul > li ul {
-	background-color: rgba(255, 255, 255, 0.9);
+	background-color: rgba($color-white, 0.9);
 }
 .header-overlapped .header-type-variant6 .container,
 .header-overlapped .header-type-variant6 .header {
@@ -1837,7 +1833,7 @@ div.menu {
 	transition: all 0.5s ease-in-out;
 }
 .banner-transform .mask {
-	background-color: rgba(255,255,255,0.00);
+	background-color: rgba($color-white,0.00);
 	bottom: -100%;
 	opacity: 1;
 }
@@ -1849,7 +1845,7 @@ div.menu {
 	transition: all 0.2s linear;
 }
 .banner-transform:hover .mask {
-	background-color: rgba(255,255,255,0.90);
+	background-color: rgba($color-white,0.90);
 	bottom: 0;
 	opacity: 1;
 }
@@ -2875,7 +2871,7 @@ ins {
 .product_description_tags {
 	margin-bottom: 20px;
 	padding-top: 20px;
-	border-top: 1px solid #eee;
+	border-top: 1px solid $color-white;
 	color: $color-grey;
 }
 .pd_tags_title {
@@ -3678,7 +3674,7 @@ ins {
 	cursor: pointer;
 }
 .widget_price_filter .price_slider_wrapper .ui-widget-content {
-	background: #eee;
+	background: $color-white;
 }
 .widget_price_filter .ui-slider-horizontal {
 	height: 8px;
@@ -3911,7 +3907,7 @@ ul.product_list_widget li .woocommerce-price-suffix .amount {
 	height: 60px;
 }
 .etheme_widget_recent_entries > ul > li .postimg:hover {
-	background-color: rgba(255,255,255,0.90);
+	background-color: rgba($color-white,0.90);
 	opacity: 0.6;
 }
 #recentcomments {
@@ -4420,7 +4416,7 @@ ul.product_list_widget li:last-child {
 #blog_full_text {
 	float: left;
 	padding-bottom: 20px;
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid $color-white;
 }
 #blog_full_text img {
 	margin: 10px 10px 10px 0;
@@ -5827,7 +5823,7 @@ form.login .lost_password {
 	font-size: 11px;
 	display: block;
 	padding: 11px 4px 12px 30px;
-	background: rgba(255,255,255,0.8) url("../images/legacy/arrow_up.png") no-repeat 12px center;
+	background: rgba($color-white,0.8) url("../images/legacy/arrow_up.png") no-repeat 12px center;
 	text-align: center;
 	text-transform: uppercase;
 }
@@ -6092,14 +6088,13 @@ form.login .lost_password {
 	padding: 0 20px;
 	width: 940px;
 	background-color: $color-white;
-	*zoom: 1;
 }
 .shortcode-products {
 	margin-bottom: 20px;
 }
 .product-add-to-cart {
 	padding: 10px;
-	border: 1px solid #eee;
+	border: 1px solid $color-white;
 }
 .list-styles-block li {
 	line-height: 25px !important;

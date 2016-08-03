@@ -126,11 +126,11 @@ ul.icons li [class^='icon-'] {
 	width: 0.75em;
 }
 .icon-muted {
-	color: #eee;
+	color: $color-white;
 }
 .icon-border {
 	padding: 0.2em 0.25em 0.15em;
-	border: solid 1px #eee;
+	border: solid 1px $color-white;
 	border-radius: 3px;
 }
 .icon-2x {

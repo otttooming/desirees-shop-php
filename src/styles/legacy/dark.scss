@@ -926,7 +926,7 @@ div.pp_overlay {
 }
 .chosen-container-single .chosen-single {
 	background: #333;
-	color: #eee;
+	color: $color-white;
 	box-shadow: 0 1px 0 $color-black inset !important;
 }
 .woocommerce-checkout .form-row .chosen-container .chosen-drop {
@@ -937,7 +937,7 @@ div.pp_overlay {
 	box-shadow: 0 1px 0 $color-black inset !important;
 	background: #333;
 	border: 1px solid $color-black;
-	color: #eee;
+	color: $color-white;
 }
 .chosen-container-single .chosen-search input[type=text] {
 	background: url("../images/legacy/chosen-sprite.png") no-repeat 100% -20px,#333;
