@@ -22,7 +22,7 @@ body{
 .header-top-variant4,
 .header-top-variant4 .container,
 .header-top-variant5 .container{
-	background: #fc5a5a;
+	background: $color-red-light;
 }
 
 .logo a,
@@ -46,12 +46,12 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 }
 
 input[type="hidden"] {
-	background-color: #fff !important;
-	color: #444 !important;
+	background-color: $color-white !important;
+	color: $color-grey !important;
 }
 
 input:focus{
-	border: 1px solid #fc5a5a !important;
+	border: 1px solid $color-red-light !important;
 }
 
 code,
@@ -63,11 +63,11 @@ pre{
 
 blockquote{
 	background-color: #333;
-	border-bottom:1px solid #fc5a5a;
+	border-bottom:1px solid $color-red-light;
 }
 
 mark{
-	color: #fc5a5a;
+	color: $color-red-light;
 }
 
 label{
@@ -92,11 +92,11 @@ textarea{
 .modal{
 	background-color: #333;
 	border:none;
-	border-top:1px solid #fc5a5a;
+	border-top:1px solid $color-red-light;
 }
 
 #cart-quantity .input-text:focus, #product-quantity .input-text:focus{
-	border:1px solid #fc5a5a !important;
+	border:1px solid $color-red-light !important;
 }
 #product-quantity .input-text{
 	top:0 !important;
@@ -118,7 +118,7 @@ textarea{
 	border-right: 1px solid #000 !important;
 }
 del{
-	color: #fc5a5a;
+	color: $color-red-light;
 }
 
 .thumbnail{
@@ -183,7 +183,7 @@ del{
 }
 
 .default-menu > ul > li > ul li:hover > a{
-	color: #fc5a5a;
+	color: $color-red-light;
 }
 
 .default-menu > ul > li > ul li:last-child{
@@ -229,7 +229,7 @@ del{
 }
 
 #contact_button .button:hover{
-	background: #fc5a5a;
+	background: $color-red-light;
 }
 
 .form-submit #submit{
@@ -315,7 +315,7 @@ del{
 }
 
 #top-cart .cart-popup a.emptycart:hover{
-	background-color: #fc5a5a;
+	background-color: $color-red-light;
 }
 
 #top-cart .cart-popup .recently-added{
@@ -340,7 +340,7 @@ del{
 }
 
 #top-cart a > span .amount{
-	color: #fc5a5a;
+	color: $color-red-light;
 }
 
 .header-links > li > a{
@@ -456,7 +456,7 @@ del{
 
 .widget_layered_nav ul li a:hover,
 .widget_layered_nav ul li span:hover{
-	color: #fc5a5a ;
+	color: $color-red-light ;
 }
 
 .widget_layered_nav ul small.count{
@@ -465,7 +465,7 @@ del{
 }
 
 .widget_layered_nav ul li.chosen a{
-	background: #fc5a5a url(../images/legacy/check.png) no-repeat 12px center ;
+	background: $color-red-light url(../images/legacy/check.png) no-repeat 12px center ;
 }
 
 .widget_price_filter .price_slider_wrapper .button{
@@ -509,7 +509,7 @@ del{
 
 .grid_pagination span.current,
 .grid_bottom_pagination span.current{
-	background: #fc5a5a;
+	background: $color-red-light;
 	color: white;
 }
 
@@ -583,7 +583,7 @@ div.product_meta a{
 div.pp_woocommerce .pp_content_container,
 .etheme-popup-content{
 	background-color: #222 !important;
-	border-top:1px solid #fc5a5a;
+	border-top:1px solid $color-red-light;
 	border-left:1px solid #111 !important;
 	border-right:1px solid #111 !important;
 	border-bottom:1px solid #111 !important;
@@ -603,7 +603,7 @@ div.pp_woocommerce #respond #commentform #submit{
 }
 
 div.pp_woocommerce #respond #commentform #submit:hover{
-	background: #fc5a5a;
+	background: $color-red-light;
 }
 
 .custom-tabs1{
@@ -677,7 +677,7 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 }
 
 .cart-collaterals .shipping_calculator .button:hover{
-	background: #fc5a5a;
+	background: $color-red-light;
 }
 
 .cart-collaterals .shipping_calculator a,
@@ -710,7 +710,7 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 }
 
 .post-title:hover{
-	color: #fc5a5a !important;
+	color: $color-red-light !important;
 }
 
 .post-default .post-images{
@@ -787,8 +787,8 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 .nav-tabs > .active > a,
 .typography-block > .nav-tabs li:hover,
 .typography-block > .nav-tabs li.active:hover{
-	background: #444 !important;
-	border-left-color:#fc5a5a;
+	background: $color-grey !important;
+	border-left-color:$color-red-light;
 	border-left-width:1px !important;
 	border-left-style:solid !important;
 }
@@ -808,7 +808,7 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 }
 
 .typography-block > .nav-tabs li:hover a{
-	color: #fc5a5a;
+	color: $color-red-light;
 }
 
 .typography-block > .nav-tabs > li:last-child{
@@ -832,7 +832,7 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 
 .member-details{
 	background: #333;
-	border-bottom:2px solid #fc5a5a;
+	border-bottom:2px solid $color-red-light;
 }
 
 .member-details i{
@@ -842,7 +842,7 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 .p-table, .p-table-2, .p-table-3{
 	background: #333;
 	border:1px solid #111;
-	border-bottom:2px solid #fc5a5a;
+	border-bottom:2px solid $color-red-light;
 	color: white;
 }
 
@@ -858,7 +858,7 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 
 .p-table li:hover, .p-table-2 li:hover{
 	background: #333 !important;
-	color: #fc5a5a;
+	color: $color-red-light;
 }
 
 .p-table li i{
@@ -909,7 +909,7 @@ form.login .login-head, form.register .register-head{
 }
 
 .form-row .button:hover{
-	background: #fc5a5a ;
+	background: $color-red-light ;
 }
 
 form.login .login-head i, form.register .register-head i{
@@ -933,20 +933,20 @@ form.login .login-head i, form.register .register-head i{
 
 .et-mobile-menu li > a:hover{
 	background: #111;
-	color: #fc5a5a;}
+	color: $color-red-light;}
 
 .et-mobile-menu li .open-child{
-	background-color: #444;
+	background-color: $color-grey;
 	border-top:1px solid #222;
 }
 
 .et-mobile-menu li .open-child:hover{
-	background-color: #fc5a5a;
+	background-color: $color-red-light;
 }
 
 #back-to-top.btn-style-standart a{
 	background-color: transparent;
-	color: #fff !important;
+	color: $color-white !important;
 }
 
 .post-horizontal .post-information{
@@ -954,7 +954,7 @@ form.login .login-head i, form.register .register-head i{
 }
 
 .widget-container a:hover{
-	color: #fc5a5a ;
+	color: $color-red-light ;
 }
 
 .portfolio-item .portfolio-mask{
@@ -974,9 +974,9 @@ form.login .login-head i, form.register .register-head i{
 }
 
 .etheme_cp .etheme_cp_content .layout-select{
-	background-color: #FFF !important;
+	background-color: $color-white !important;
 	border-color: #ccc !important;
-	color: #444 !important;
+	color: $color-grey !important;
 }
 
 div.pp_default .pp_content_container .pp_left,
@@ -1033,11 +1033,11 @@ div.light_rounded .pp_content{
 
 .tabs.checkout-accordion .tab-title.opened:hover span,
 .tabs.checkout-accordion .tab-title:hover span{
-	color:#fc5a5a;
+	color:$color-red-light;
 }
 
 .chzn-container .chzn-results .active-result{
-	color:#444 !important;
+	color:$color-grey !important;
 }
 
 #payment ul.payment_methods{
@@ -1100,7 +1100,7 @@ blockquote{
 	height: 10px;
 	margin-right: 5px;
 	font-size: 12px;
-	color: #FFF;
+	color: $color-white;
 	font-family: fontAwesome;
 	-webkit-transition: all .2s ease-in-out;
 	-moz-transition: all .2s ease-in-out;

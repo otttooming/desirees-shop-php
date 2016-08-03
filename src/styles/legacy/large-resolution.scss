@@ -28,7 +28,7 @@
   .navbar-fixed-bottom .container, .page-template-contacts2-php .contact-form{
     width: 1170px;
   }
-  .boxed .wrapper{width:1230px;margin: 0 auto;background: #ffffff; box-shadow: 0 1px 6px; -webkit-box-shadow: 0 1px 6px;}
+  .boxed .wrapper{width:1230px;margin: 0 auto;background: $color-white; box-shadow: 0 1px 6px; -webkit-box-shadow: 0 1px 6px;}
   .span12 {
     width: 1170px;
   }
@@ -303,7 +303,7 @@ width: 890px !important;
 /*-----------------------------------------*/
 .rows-count5.products-grid  .product-grid .product-name{text-align: center;}
 .rows-count6.products-grid .product-grid .product-name{text-align: center;}
-.rows-count6 .product-grid .price {text-align: center;float: left;font-size: 14px;color: #444;margin: 7px 0 12px 0;width: 100%;}
+.rows-count6 .product-grid .price {text-align: center;float: left;font-size: 14px;color: $color-grey;margin: 7px 0 12px 0;width: 100%;}
 .rows-count6 .product-grid .starwrapper{bottom: 115px;}
 .rows-count6 .product-grid .btn-cont{float: none;}
 #products-grid > .clear{
@@ -366,7 +366,7 @@ text-align: left;
 float: left;
 width: auto;
 font-size: 14px;
-color: #444;
+color: $color-grey;
 margin-top: 15px;
 }
 .no-sidebar .rows-count4 .product-grid .product-information .price{margin-top:17px;}
@@ -451,8 +451,8 @@ form.track-order-box .login-head .login-span-big{width: auto;}
 
 .p-table{width: 268px;}
 .p-table li, .p-table-2 li{float:left;border-bottom: 1px solid #ccc; padding: 15px;width: 100%;box-sizing:border-box;position: relative;font-size: 12px;}
-.p-table li:hover, .p-table-2 li:hover{background: #f5f5f5;}
-.p-table li.last:hover, .p-table-2 li.last:hover{background: #fff;}
+.p-table li:hover, .p-table-2 li:hover{background: $color-grey;}
+.p-table li.last:hover, .p-table-2 li.last:hover{background: $color-white;}
 .p-table li.last:hover .button, .p-table-2 li.last:hover .button{text-decoration: none;}
 .p-table li a i, .p-table-2 li a i{margin-right: 20px;line-height: 35px;}
 .p-table-offset{width: 210px;float: left;min-height: 1px;}
