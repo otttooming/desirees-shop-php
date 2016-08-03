@@ -57,8 +57,8 @@
     color: $color-white !important;
     border-radius: 3px;
     background-color: $color-red-std;
-    box-shadow: 2px 2px #111;
-    text-shadow: 2px 2px #111;
+    box-shadow: 2px 2px $color-dark-light;
+    text-shadow: 2px 2px $color-dark-light;
 
     font-size: 13px !important;
     line-height: normal;

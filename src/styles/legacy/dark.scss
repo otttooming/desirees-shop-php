@@ -1,7 +1,7 @@
 // scss-lint:disable all
 
 body{
-	color: white;
+	color: $color-white;
 }
 .container,
 .header-type-variant4 .header-area,
@@ -11,11 +11,11 @@ body{
 .header-type-variant2 .header,
 .header-type-variant6 .header,
 .header-type-variant5 .header{
-	background: #222;
+	background: $color-dark-light;
 }
 
 .boxed .wrapper{
-  box-shadow: 0 1px 6px #111 !important;
+  box-shadow: 0 1px 6px $color-dark-light !important;
   background: #222 !important;
 }
 
@@ -27,22 +27,22 @@ body{
 
 .logo a,
 .logo a:hover{
-	color: white;
+	color: $color-white;
 }
 
 p, a, h1, h2, h3, h4, h5, h6{
-	color: white;
+	color: $color-white;
 }
 
 select,
 select:hover,
 input{
 border:1px solid transparent !important;
-color: white;
+color: $color-white;
 }
 
 textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input{
-	color: white;
+	color: $color-white;
 }
 
 input[type="hidden"] {
@@ -57,8 +57,8 @@ input:focus{
 code,
 pre{
 	background: #333;
-	border:1px solid #111;
-	color: white;
+	border:1px solid $color-dark-light;
+	color: $color-white;
 }
 
 blockquote{
@@ -81,7 +81,7 @@ select:hover{
 
 textarea{
 	background-color: #333 !important;
-	border:1px solid #111 !important;
+	border:1px solid $color-dark-light !important;
 	color: white !important;
 }
 
@@ -122,15 +122,15 @@ del{
 }
 
 .thumbnail{
-	border:1px solid #111
+	border:1px solid $color-dark-light
 }
 
 .modal-header h3{
-	color: white;
+	color: $color-white;
 }
 
 .span3.icon6 i, .span3.icon5 i, .span2.icon4 i, .span2.icon3 i, .span1.icon2 i, .span1.icon1 i{
-	color: white;
+	color: $color-white;
 }
 
 .minus,
@@ -146,25 +146,25 @@ del{
 
 .header-type-variant4 #main-nav{
 	background: #333;
-	border-top:1px solid #111;
+	border-top:1px solid $color-dark-light;
 }
 
 .header-bg,
 .fixed-header-area,
 .header-overlapped .header-type-variant6{
-	border-bottom:1px solid #111;
-	border-top:1px solid #111;
+	border-bottom:1px solid $color-dark-light;
+	border-top:1px solid $color-dark-light;
 	background: #222 !important;
 }
 
 .header-type-variant2 .header,
 .header-type-variant5 .header{
-	background: #222;
+	background: $color-dark-light;
 }
 
 .menu > ul > li > a{
-	text-shadow: 0 1px 0 #111;
-	color: white;
+	text-shadow: 0 1px 0 $color-dark-light;
+	color: $color-white;
 }
 
 .default-menu > ul > li ul,
@@ -173,13 +173,13 @@ del{
 }
 
 .default-menu > ul > li > ul li{
-	border-top: 1px solid #111;
-	border-left: 1px solid #111;
-	border-right: 1px solid #111;
+	border-top: 1px solid $color-dark-light;
+	border-left: 1px solid $color-dark-light;
+	border-right: 1px solid $color-dark-light;
 }
 
 .default-menu > ul > li > ul li:hover{
-	background: #111;
+	background: $color-dark-light;
 }
 
 .default-menu > ul > li > ul li:hover > a{
@@ -187,7 +187,7 @@ del{
 }
 
 .default-menu > ul > li > ul li:last-child{
-	border-bottom: 1px solid #111;
+	border-bottom: 1px solid $color-dark-light;
 }
 
 .default-menu .sub-menu .current-menu-item{
@@ -195,37 +195,37 @@ del{
 }
 
 .et-mobile-menu > li:last-child{
-	border-bottom:1px solid #222;
+	border-bottom:1px solid $color-dark-light;
 }
 
 .products_grid .product-grid,
 .product-slide .product-grid{
 	background: #333;
-	border-bottom:1px solid #111;
+	border-bottom:1px solid $color-dark-light;
 }
 
 .product-grid .product-name a,
 .product-slider .slider-title{
-	color: white;
+	color: $color-white;
 }
 
 .product-grid .price del .amount{
-	color: #bbb;
+	color: $color-grey;
 }
 
 .product-grid .price .amount,
 .product-grid .price.sale .currentprice{
-	color: #ddd;
+	color: $color-grey;
 }
 
 #submit,
 .button{
 	background: #333;
-	color: white;
+	color: $color-white;
 }
 
 .btn-cont .button{
-	background: #222;
+	background: $color-dark-light;
 }
 
 #contact_button .button:hover{
@@ -261,12 +261,12 @@ del{
 }
 
 .container_footer_bg{
-	border-top:1px solid #111;
+	border-top:1px solid $color-dark-light;
 }
 
 .fixed-header-area{
 	background: #333;
-	border-top:1px solid #111;
+	border-top:1px solid $color-dark-light;
 }
 
 .fixed-header-area .fixed-header{
@@ -275,7 +275,7 @@ del{
 
 .product-slider .next,
 .product-slider .prev{
-	background-color: #111;
+	background-color: $color-dark-light;
 }
 
 .prev.disabled,
@@ -290,28 +290,28 @@ del{
 }
 
 #top-cart > a{
-	color: white;
+	color: $color-white;
 }
 
 
 #top-cart .cart-popup{
 	background: #333;
-	border:1px solid #111;
+	border:1px solid $color-dark-light;
 }
 
 
 .products-small .product-item{
 	background: #333;
-	color: white;
-	border-bottom:1px solid #111;
+	color: $color-white;
+	border-bottom:1px solid $color-dark-light;
 }
 
 #top-cart .cart-popup a{
-	color: white;
+	color: $color-white;
 }
 
 #top-cart .cart-popup a.emptycart{
-	background-color: #222;
+	background-color: $color-dark-light;
 }
 
 #top-cart .cart-popup a.emptycart:hover{
@@ -319,24 +319,24 @@ del{
 }
 
 #top-cart .cart-popup .recently-added{
-	border-bottom:1px solid #111;
+	border-bottom:1px solid $color-dark-light;
 }
 
 .products-small .product-item .qty{
-	color: white;
+	color: $color-white;
 }
 
 #top-cart .cart-popup .totals .amount,
 #top-cart .cart-popup .totals{
-	color: white;
+	color: $color-white;
 }
 
 .footer-hr{
-	border-color: #666;
+	border-color: $color-grey;
 }
 
 .block-with-icon i{
-	color: white;
+	color: $color-white;
 }
 
 #top-cart a > span .amount{
@@ -344,7 +344,7 @@ del{
 }
 
 .header-links > li > a{
-	color: white;
+	color: $color-white;
 }
 
 .header-links > li > a:hover{
@@ -362,12 +362,12 @@ del{
 }
 
 .cta-block:hover{
-	background: #111;
+	background: $color-dark-light;
 }
 
 .tabs .tab-content{
 	background: #333;
-	border:1px solid #111;
+	border:1px solid $color-dark-light;
 }
 
 #product-page .tabs .tab-content{
@@ -375,19 +375,19 @@ del{
 }
 
 .tabs .tab-title, .left-titles a{
-	background: #111;
-	border-top: 1px solid #111;
-	border-right: 1px solid #111;
-	border-left: 1px solid #111;
-	color: white;
+	background: $color-dark-light;
+	border-top: 1px solid $color-dark-light;
+	border-right: 1px solid $color-dark-light;
+	border-left: 1px solid $color-dark-light;
+	color: $color-white;
 
 }
 
 .tabs .tab-title:hover{
-	background: #111;
-	border-top: 1px solid #111;
-	border-right: 1px solid #111;
-	border-left: 1px solid #111;
+	background: $color-dark-light;
+	border-top: 1px solid $color-dark-light;
+	border-right: 1px solid $color-dark-light;
+	border-left: 1px solid $color-dark-light;
 }
 
 .tabs .tab-title.opened,
@@ -404,33 +404,33 @@ del{
 }
 
 .tabs:last-child{
-	border-bottom:1px solid #111;
+	border-bottom:1px solid $color-dark-light;
 }
 
 .cbp-qtrotator .cbp-qtcontent{
-	border-bottom:1px solid #111 !important;
-	border-top:1px solid #111 !important;
+	border-bottom:1px solid $color-dark-light !important;
+	border-top:1px solid $color-dark-light !important;
 }
 
 .woocommerce-price-suffix{
-	color: #aaa;
+	color: $color-grey;
 }
 
 /* Grid & List*/
 
 .block-head{
 	background: #333;
-	color: white;
+	color: $color-white;
 }
 
 .cats.acc_enabled .block-content .wpsc_category_title a,
 .widget-title{
-	color: white;
+	color: $color-white;
 }
 
 .cats .block-content .wpsc_categories > li > a,
 .grid_pagination_block{
-	color: white;
+	color: $color-white;
 }
 
 .cats.acc_enabled .block-content .categories-group.has-subnav.opened .btn-show,
@@ -461,7 +461,7 @@ del{
 
 .widget_layered_nav ul small.count{
 	color: white !important;
-	border:1px solid #111 !important;
+	border:1px solid $color-dark-light !important;
 }
 
 .widget_layered_nav ul li.chosen a{
@@ -478,14 +478,14 @@ del{
 
 .widget_layered_nav ul li.chosen a{
 	background-color: #222 !important;
-	border:1px solid #111;
+	border:1px solid $color-dark-light;
 	border-right:none;
 }
 
 .grid_pagination a,
 .grid_bottom_pagination a{
 	background: #333;
-	color: white;
+	color: $color-white;
 
 }
 
@@ -510,15 +510,15 @@ del{
 .grid_pagination span.current,
 .grid_bottom_pagination span.current{
 	background: $color-red-light;
-	color: white;
+	color: $color-white;
 }
 
 .grid_pagination_bottom_block{
-	border-bottom:1px solid #111;
+	border-bottom:1px solid $color-dark-light;
 }
 
 #categories-2 > ul > li a{
-	color: white;
+	color: $color-white;
 }
 
 .widget-placeholder{
@@ -528,7 +528,7 @@ del{
 .widget-placeholder .side-icon,
 .widget-placeholder .side-text{
 	background: #333;
-	color: white;
+	color: $color-white;
 }
 
 .widget-placeholder .side-icon i,
@@ -541,38 +541,38 @@ del{
 /* Single Product */
 
 hr{
-	border-bottom: 0px solid #111;
-	border-top: 1px solid #111;
+	border-bottom: 0px solid $color-dark-light;
+	border-top: 1px solid $color-dark-light;
 }
 
 .product-stock{
-	color: white;
+	color: $color-white;
 }
 
 .product-code > span{
-	color: #aaa;
+	color: $color-grey;
 }
 
 .product-stock .stock span{
-	color: white;
+	color: $color-white;
 }
 
 .label label{
-	color: white;
+	color: $color-white;
 }
 
 div.product_meta span{
-	color: white;
+	color: $color-white;
 }
 .product_description_mainblock .product_meta .sku{
-	color: #aaa;
+	color: $color-grey;
 }
 #product-quantity .quantity.buttons_added .plus:focus, #product-quantity .quantity.buttons_added .minus:focus{
 	border-color: #000 !important;
 	border-left: none !important;
 }
 div.product_meta a{
-	color: #aaa;
+	color: $color-grey;
 }
 
 .tab-content h3,
@@ -584,14 +584,14 @@ div.pp_woocommerce .pp_content_container,
 .etheme-popup-content{
 	background-color: #222 !important;
 	border-top:1px solid $color-red-light;
-	border-left:1px solid #111 !important;
-	border-right:1px solid #111 !important;
-	border-bottom:1px solid #111 !important;
+	border-left:1px solid $color-dark-light !important;
+	border-right:1px solid $color-dark-light !important;
+	border-bottom:1px solid $color-dark-light !important;
 }
 
 .pp_content_container #reply-title{
 	padding-right: 35px;
-	color: white;
+	color: $color-white;
 }
 
 div.pp_woocommerce .pp_close{
@@ -607,12 +607,12 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 }
 
 .custom-tabs1{
-	border-right:1px solid #111 !important;
+	border-right:1px solid $color-dark-light !important;
 }
 
 .custom-tabs1,
 .custom-tabs2{
-	color: white;
+	color: $color-white;
 }
 
 #product-quantity .input-text{
@@ -621,7 +621,7 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 }
 
 .etheme-popup-content em{
-	color: white;
+	color: $color-white;
 }
 
 .etheme-popup-content .button.cont-shop{
@@ -630,7 +630,7 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 
 .page-template-contacts2-php .contact-form h1,
 .page-title{
-	border-bottom:1px solid #111;
+	border-bottom:1px solid $color-dark-light;
 	color:white;
 }
 
@@ -640,19 +640,19 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 
 .widget_categories .widget-title{
 	background: #333;
-	color: white;
+	color: $color-white;
 }
 
 .widget-container a,
 .widget-container ul li{
-	color: white;
+	color: $color-white;
 }
 
 .cart_table_item .product-name a,
 .checkout_table_item .product-name a,
 .cart_table_item .product-name .variation dt,
 .checkout_table_item .product-name .variation dt{
-	color: white;
+	color: $color-white;
 }
 
 #cart-quantity .input-text{
@@ -661,13 +661,13 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 }
 
 .checkout_cart td.product-price .amount{
-	color: white;
+	color: $color-white;
 }
 
 .cart-collaterals .shipping_calculator .button,
 #payment div.payment_box{
 	background: #333 !important;
-	border:1px solid #111 !important;
+	border:1px solid $color-dark-light !important;
 	float: left;
 
 	margin-bottom: 10px;
@@ -692,7 +692,7 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 }
 
 .table.order_details td{
-	border-bottom:1px solid #111 !important;
+	border-bottom:1px solid $color-dark-light !important;
 }
 
 .myaccount_user, .myaccount_address, .col-1 h3, .col-2 h3, .col-2 address{
@@ -700,13 +700,13 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 }
 
 #recentcomments li{
-	color: #818181;
+	color: $color-grey;
 }
 
 /* Blog */
 .post-title,
 .blog-post.post-portrait .post-title{
-	color: white;
+	color: $color-white;
 }
 
 .post-title:hover{
@@ -715,7 +715,7 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 
 .post-default .post-images{
 	background-color: #333;
-	border-bottom:1px solid #111;
+	border-bottom:1px solid $color-dark-light;
 }
 
 .post-information{
@@ -726,11 +726,11 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 
 #reviews #comments ol.commentlist li .comment-text{
 	background: #222 !important;
-	border:1px solid #111 !important;
+	border:1px solid $color-dark-light !important;
 }
 
 .post-information{
-	border-bottom:1px solid #111;
+	border-bottom:1px solid $color-dark-light;
 	background-color: #333;
 	padding-left: 10px;
 }
@@ -738,50 +738,50 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 .post-information a,
 .post-information a,
 .post-information i{
-	color: white;
+	color: $color-white;
 }
 
 .comment-body{
-	border-bottom:1px solid #111;
+	border-bottom:1px solid $color-dark-light;
 }
 
 .portfolio-item .portfolio-mask{
-	background: #111;
+	background: $color-dark-light;
 }
 
 .entry-title{
-	border-bottom:1px solid #111;
-	color: white;
+	border-bottom:1px solid $color-dark-light;
+	color: $color-white;
 }
 
 .portfolio-filters{
-	border-bottom:1px solid #111;
+	border-bottom:1px solid $color-dark-light;
 }
 
 .portfolio-content h3,
 .blog_icon_date,
 .blog2_icon_author{
-	color: white;
+	color: $color-white;
 }
 
 .portfolio-content .post-information{
-	border-top:1px solid #111;
+	border-top:1px solid $color-dark-light;
 }
 
 .portfolio-content h2,
 .review_title{
-	color: white;
+	color: $color-white;
 }
 
 .product-add-to-cart{
 	background: #333;
-	border:1px solid #111;
+	border:1px solid $color-dark-light;
 }
 
 .nav-tabs > li{
-	border-top: 1px solid #111 !important;
-	border-left: 1px solid #111 ;
-	border-right: 1px solid #111 !important;
+	border-top: 1px solid $color-dark-light !important;
+	border-left: 1px solid $color-dark-light ;
+	border-right: 1px solid $color-dark-light !important;
 }
 
 .nav-tabs > .active > a,
@@ -803,8 +803,8 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 }
 
 .typography-block > .nav-tabs li.active{
-	border-top: 1px solid #111 !important;
-	border-right: 1px solid #111 !important;
+	border-top: 1px solid $color-dark-light !important;
+	border-right: 1px solid $color-dark-light !important;
 }
 
 .typography-block > .nav-tabs li:hover a{
@@ -812,11 +812,11 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 }
 
 .typography-block > .nav-tabs > li:last-child{
-	border-bottom:1px solid #111 !important;
+	border-bottom:1px solid $color-dark-light !important;
 }
 
 .typography-block .list-square li strong{
-	color: white;
+	color: $color-white;
 }
 
 .menu .current-menu-item > a,
@@ -836,14 +836,14 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 }
 
 .member-details i{
-	color: white;
+	color: $color-white;
 }
 
 .p-table, .p-table-2, .p-table-3{
 	background: #333;
-	border:1px solid #111;
+	border:1px solid $color-dark-light;
 	border-bottom:2px solid $color-red-light;
-	color: white;
+	color: $color-white;
 }
 
 .p-table-head{
@@ -852,8 +852,8 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 }
 
 .p-table li, .p-table-2 li{
-	border-bottom:1px solid #111 !important;
-	color: white;
+	border-bottom:1px solid $color-dark-light !important;
+	color: $color-white;
 }
 
 .p-table li:hover, .p-table-2 li:hover{
@@ -862,11 +862,11 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 }
 
 .p-table li i{
-	color: white;
+	color: $color-white;
 }
 
 .the-icons li i{
-	color: white;
+	color: $color-white;
 }
 
 .table-striped tbody tr:nth-child(odd) td, .table-striped tbody tr:nth-child(odd) th{
@@ -875,7 +875,7 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th{
 	background-color: #333;
-	color: white;
+	color: $color-white;
 }
 
 .page-template-contacts2-php .contact-form{
@@ -887,11 +887,11 @@ div.pp_woocommerce #respond #commentform #submit:hover{
 .contact_info span,
 #contact_container h2,
 .contact_info h5{
-	color: white;
+	color: $color-white;
 }
 
 .contact_input{
-	border:1px solid #111 !important;
+	border:1px solid $color-dark-light !important;
 }
 
 form.login, form.register{
@@ -899,7 +899,7 @@ form.login, form.register{
 }
 
 form.login .login-head, form.register .register-head{
-	border-bottom:1px solid #111;
+	border-bottom:1px solid $color-dark-light;
 }
 
 .login .form-row .button,
@@ -913,31 +913,31 @@ form.login .login-head, form.register .register-head{
 }
 
 form.login .login-head i, form.register .register-head i{
-	color: white;
+	color: $color-white;
 }
 
 .lost_password{
-	color: white;
+	color: $color-white;
 }
 
 .product-title2{
 	background: #333;
-	color: white;
+	color: $color-white;
 }
 
 .et-mobile-menu li > a{
 	background: #333;
-	border-top:1px solid #222;
-	color: white;
+	border-top:1px solid $color-dark-light;
+	color: $color-white;
 }
 
 .et-mobile-menu li > a:hover{
-	background: #111;
+	background: $color-dark-light;
 	color: $color-red-light;}
 
 .et-mobile-menu li .open-child{
 	background-color: $color-grey;
-	border-top:1px solid #222;
+	border-top:1px solid $color-dark-light;
 }
 
 .et-mobile-menu li .open-child:hover{
@@ -963,7 +963,7 @@ form.login .login-head i, form.register .register-head i{
 
 @media (max-width: 979px){
 	.header-type-variant4 #main-nav, .header-type-variant5 #main-nav{
-		background: #111 !important;
+		background: $color-dark-light !important;
 		min-height: 0px;
 	}
 
@@ -975,7 +975,7 @@ form.login .login-head i, form.register .register-head i{
 
 .etheme_cp .etheme_cp_content .layout-select{
 	background-color: $color-white !important;
-	border-color: #ccc !important;
+	border-color: $color-grey !important;
 	color: $color-grey !important;
 }
 
@@ -996,33 +996,33 @@ div.light_rounded .pp_content{
 
 .woocommerce-error, .error, .woocommerce-message, .woocommerce_error, .success, .info, .notice{
 	background-color: #333;
-	border:1px solid #111;
+	border:1px solid $color-dark-light;
 	display: block;
 	overflow: hidden;
 }
 
 .tabs.checkout-accordion .tab-content{
 	background-color: transparent !important;
-	border:1px solid #111 !important;
+	border:1px solid $color-dark-light !important;
 }
 
 .tabs.checkout-accordion .tab-title{
 	background-color: #333;
-	border-bottom:1px solid #111 !important;
-	border-top:1px solid #111 !important;
+	border-bottom:1px solid $color-dark-light !important;
+	border-top:1px solid $color-dark-light !important;
 }
 
 .tabs.checkout-accordion .tab-title.opened{
-	background-color: #111 !important;
+	background-color: $color-dark-light !important;
 	margin-bottom: 9px;
 }
 
 .tabs.checkout-accordion .tab-title.opened span{
-	color: white;
+	color: $color-white;
 }
 
 .tabs.checkout-accordion .tab-title.opened:hover{
-	background-color: #111 !important;
+	background-color: $color-dark-light !important;
 }
 
 .tabs.checkout-accordion .tab-title:hover{
@@ -1041,7 +1041,7 @@ div.light_rounded .pp_content{
 }
 
 #payment ul.payment_methods{
-	border-bottom:1px solid #111 !important;
+	border-bottom:1px solid $color-dark-light !important;
 	float: left;
 	width: 100%;
 }
@@ -1053,7 +1053,7 @@ div.light_rounded .pp_content{
 }
 
 .left-titles a:last-child{
-	border-bottom:1px solid #111 !important;
+	border-bottom:1px solid $color-dark-light !important;
 }
 
 .widget_layered_nav ul small.count{
@@ -1063,7 +1063,7 @@ div.light_rounded .pp_content{
 /* Demo panel */
 .etheme_cp{
 	background: #333 !important;
-	color: white;
+	color: $color-white;
 }
 
 
@@ -1080,13 +1080,13 @@ blockquote{
 
 .banner a,
 .banner a.info{
-	background-color: #222;
-	background: #222;
+	background-color: $color-dark-light;
+	background: $color-dark-light;
 }
 
 .banner-transform .mask p,
 .banner-transform:hover .mask h2{
-	color: white;
+	color: $color-white;
 }
 
 .back-to{
@@ -1110,23 +1110,23 @@ blockquote{
 }
 
 .add_review .button{
-	background-color: #222;
+	background-color: $color-dark-light;
 }
 
 div.pp_overlay{
-	background-color: #111 !important;
+	background-color: $color-dark-light !important;
 }
 
-.chosen-container-single .chosen-single {background: #333; color:#eee;box-shadow: 0 1px 0 #111 inset !important;}
-.woocommerce-checkout .form-row .chosen-container .chosen-drop {background: #333;border: 1px solid #111;}
-.chosen-container-active.chosen-with-drop .chosen-single{box-shadow: 0 1px 0 #111 inset !important;background: #333;border: 1px solid #111;color: #eee;}
+.chosen-container-single .chosen-single {background: #333; color:#eee;box-shadow: 0 1px 0 $color-dark-light inset !important;}
+.woocommerce-checkout .form-row .chosen-container .chosen-drop {background: #333;border: 1px solid $color-dark-light;}
+.chosen-container-active.chosen-with-drop .chosen-single{box-shadow: 0 1px 0 $color-dark-light inset !important;background: #333;border: 1px solid $color-dark-light;color: #eee;}
 .chosen-container-single .chosen-search input[type=text] {background: url(../images/legacy/chosen-sprite.png) no-repeat 100% -20px,#333;}
 .chosen-container .chosen-results li.no-results {background: #333;}
 
 .tab-content.tab-login, .tab-content.register-tab-content{
-	border-bottom: 1px solid #111;
+	border-bottom: 1px solid $color-dark-light;
 }
 
 .tab-content.tap-order{
-	border-top: 1px solid #111;
+	border-top: 1px solid $color-dark-light;
 }

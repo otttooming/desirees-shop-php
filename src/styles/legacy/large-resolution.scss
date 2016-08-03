@@ -421,7 +421,7 @@ width: auto;
 padding-left: 19%;
 }
 .custom-tabs1, .custom-tabs2{width: 530px;}
-.custom-tabs1{float: left;padding-right: 40px; border-right: 1px solid #efefef;}
+.custom-tabs1{float: left;padding-right: 40px; border-right: 1px solid $color-grey;}
 .custom-tabs2{float: right;}
 .tabs.left-tabs .tab-content{width: 75%;}
 .tabs.left-tabs .left-titles{width: 25%;}
@@ -450,7 +450,7 @@ form.track-order-box .login-head .login-span-big{width: auto;}
 
 
 .p-table{width: 268px;}
-.p-table li, .p-table-2 li{float:left;border-bottom: 1px solid #ccc; padding: 15px;width: 100%;box-sizing:border-box;position: relative;font-size: 12px;}
+.p-table li, .p-table-2 li{float:left;border-bottom: 1px solid $color-grey; padding: 15px;width: 100%;box-sizing:border-box;position: relative;font-size: 12px;}
 .p-table li:hover, .p-table-2 li:hover{background: $color-grey;}
 .p-table li.last:hover, .p-table-2 li.last:hover{background: $color-white;}
 .p-table li.last:hover .button, .p-table-2 li.last:hover .button{text-decoration: none;}

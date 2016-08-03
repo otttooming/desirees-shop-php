@@ -10,7 +10,7 @@ $color-dark-light: #151515;
 $color-grey: #6e6e6e;
 $color-white: #fff;
 
-$shadow-std: 2px 2px #111;
+$shadow-std: 2px 2px $color-dark-light;
 
 // Font weights.
 $font-weight-thin: 100;

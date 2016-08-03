@@ -284,7 +284,7 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .uneditable-input {
-  border: 1px solid #efefef;
+  border: 1px solid $color-grey;
 }
 
 textarea:focus,
@@ -331,7 +331,7 @@ input[type="file"] {
 }
 
 select {
-  border: 1px solid #cccccc;
+  border: 1px solid $color-grey;
 }
 
 select[multiple],
@@ -350,17 +350,17 @@ input[type="checkbox"]:focus {
 
 input:-moz-placeholder,
 textarea:-moz-placeholder {
-  color: #999999;
+  color: $color-grey;
 }
 
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-  color: #999999;
+  color: $color-grey;
 }
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  color: #999999;
+  color: $color-grey;
 }
 
 .radio,
@@ -475,7 +475,7 @@ input[readonly],
 select[readonly],
 textarea[readonly] {
   cursor: not-allowed;
-  background-color: #eeeeee;
+  background-color: $color-grey;
 }
 
 input[type="radio"][disabled],
@@ -493,7 +493,7 @@ table {
 }
 
 .tabs-stacked .open > a:hover {
-  border-color: #999999;
+  border-color: $color-grey;
 }
 
 .tabbable:before,
@@ -517,10 +517,10 @@ table {
 
 .tab-content {
   overflow: auto;
-  border-top: 4px solid #efefef;
-  border-right: 1px solid #efefef;
-  border-bottom: 1px solid #efefef;
-  border-left: 1px solid #efefef;
+  border-top: 4px solid $color-grey;
+  border-right: 1px solid $color-grey;
+  border-bottom: 1px solid $color-grey;
+  border-left: 1px solid $color-grey;
   margin-bottom: 20px;
 }
 
@@ -538,12 +538,12 @@ table {
 .tab-content > .active,
 .pill-content > .active {
   display: block;
-  color: #808080;
+  color: $color-grey;
   line-height: 1.8;
 }
 
 .tabs-below > .nav-tabs {
-  border-top: 1px solid #ddd;
+  border-top: 1px solid $color-grey;
 }
 
 .tabs-below > .nav-tabs > li {
@@ -558,13 +558,13 @@ table {
 }
 
 .tabs-below > .nav-tabs > li > a:hover {
-  border-top-color: #ddd;
+  border-top-color: $color-grey;
   border-bottom-color: transparent;
 }
 
 .tabs-below > .nav-tabs > .active > a,
 .tabs-below > .nav-tabs > .active > a:hover {
-  border-color: transparent #ddd #ddd #ddd;
+  border-color: transparent $color-grey $color-grey $color-grey;
 }
 
 .tabs-left > .nav-tabs > li,
@@ -582,7 +582,7 @@ table {
 .tabs-left > .nav-tabs {
   float: left;
   margin-right: 19px;
-  border-right: 1px solid #ddd;
+  border-right: 1px solid $color-grey;
 }
 
 .tabs-left > .nav-tabs > li > a {
@@ -593,18 +593,18 @@ table {
 }
 
 .tabs-left > .nav-tabs > li > a:hover {
-  border-color: #eeeeee #dddddd #eeeeee #eeeeee;
+  border-color: $color-grey $color-grey $color-grey $color-grey;
 }
 
 .tabs-left > .nav-tabs .active > a,
 .tabs-left > .nav-tabs .active > a:hover {
-  border-color: #ddd transparent #ddd #ddd;
+  border-color: $color-grey transparent $color-grey $color-grey;
 }
 
 .tabs-right > .nav-tabs {
   float: right;
   margin-left: 19px;
-  border-left: 1px solid #ddd;
+  border-left: 1px solid $color-grey;
 }
 
 .tabs-right > .nav-tabs > li > a {
@@ -615,16 +615,16 @@ table {
 }
 
 .tabs-right > .nav-tabs > li > a:hover {
-  border-color: #eeeeee #eeeeee #eeeeee #dddddd;
+  border-color: $color-grey $color-grey $color-grey $color-grey;
 }
 
 .tabs-right > .nav-tabs .active > a,
 .tabs-right > .nav-tabs .active > a:hover {
-  border-color: #ddd #ddd #ddd transparent;
+  border-color: $color-grey $color-grey $color-grey transparent;
 }
 
 .nav > .disabled > a {
-  color: #999999;
+  color: $color-grey;
 }
 
 .nav > .disabled > a:hover {
