@@ -232,7 +232,6 @@ body.wide{background:none!important;}
     -ms-transition: all 0.2s ease-in-out;
      -o-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;}
-.header-area{background:$color-grey;}
 .header{padding-top:30px;}
 .logo{color:$color-grey;text-transform:uppercase;font-weight:700;font-size:60px;line-height:54px;}
 .logo a, .logo a:hover{color:$color-grey;}
@@ -268,10 +267,10 @@ body.wide{background:none!important;}
 #top-cart .button.emptycart{background-image:none!important;}
 #top-cart .button.emptycart span{padding-right:3px;}
 #top-cart .button span{padding-left:3px;line-height:30px;}
-#top-cart .cart-popup .totals .price{color:$color-dark-light;font-weight:400;font-size:14px;}
+#top-cart .cart-popup .totals .price{color:$color-black;font-weight:400;font-size:14px;}
 #top-cart .cart-popup .empty{margin-bottom:0;}
-.products-small .product-item{padding:20px 5px 20px 0;border-bottom:1px solid $color-grey;background:$color-white;color:$color-dark-light;font-size:12px;}
-.products-small .product-item h5 a{color:$color-dark-light;}
+.products-small .product-item{padding:20px 5px 20px 0;border-bottom:1px solid $color-grey;background:$color-white;color:$color-black;font-size:12px;}
+.products-small .product-item h5 a{color:$color-black;}
 .products-small .product-item .product-image{float:left;margin:0 10px 0 0;padding-bottom:16px;}
 .products-small .product-item .qty{float:none;color:$color-grey;}
 .quanity-span{margin-right:5px;margin-left:0!important;color:$color-grey;}
@@ -481,7 +480,7 @@ div.menu{text-align:left;margin:0;padding:0 0 8px;}
 .et-mobile-menu li .open-child:hover{background-color:$color-grey;-webkit-transition:background-color .3s ease;-moz-transition:background-color .3s ease;-ms-transition:background-color .3s ease;-o-transition:background-color .3s ease;transition:background-color .3s ease;}
 .et-mobile-menu li.over > .open-child{background-image:url(../images/legacy/menu-minus.png);}
 .et-mobile-menu li > a{text-transform: uppercase;display:block;line-height:45px;font-size:16px;background:$color-white;color:$color-grey;border-top:1px solid $color-grey;padding:0 10px; font-weight:300;}
-.et-mobile-menu li > a:hover{background-color:$color-grey;text-decoration:none;color:$color-dark-light;-webkit-transition:background-color .3s ease;-moz-transition:background-color .3s ease;-ms-transition:background-color .3s ease;-o-transition:background-color .3s ease;transition:background-color .3s ease;}
+.et-mobile-menu li > a:hover{background-color:$color-grey;text-decoration:none;color:$color-black;-webkit-transition:background-color .3s ease;-moz-transition:background-color .3s ease;-ms-transition:background-color .3s ease;-o-transition:background-color .3s ease;transition:background-color .3s ease;}
 .et-mobile-menu > li:last-child{border-bottom:1px solid $color-grey;}
 /* level 1
 -------------------------------------------------------------- */
@@ -724,7 +723,7 @@ div.pp_woocommerce .pp_content_container .pp_right{padding-right: 20px !importan
 .product_description_mainblock .from{position:relative;top:-3px;margin-right:5px;}
 .product_description_mainblock .size_guide{margin-bottom: 30px !important;}
 .woocommerce-demo-store{margin-top: 40px;}
-.demo_store{position: fixed;width: 100%;top:0;z-index: 10000;color: $color-dark-light; padding: 10px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;background-color: $color-grey;border-bottom: 1px solid $color-grey;text-align: center;}
+.demo_store{position: fixed;width: 100%;top:0;z-index: 10000;color: $color-black; padding: 10px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;background-color: $color-grey;border-bottom: 1px solid $color-grey;text-align: center;}
 
 /* -------------------------------------------------- */
 /* Product Page Variant 2
@@ -910,7 +909,7 @@ ins{text-decoration:none;}
 .amount,.onsale-price .price,.currentprice{ color: $color-red;font-weight:300;font-size:16px;}
 .ppp_price .pp_price .pricedisplay{font-size:11px;}
 .you-save .pricedisplay,.you-save .price{font-weight:400;font-size:11px;}
-.ppp_price,.you-save{color:$color-dark-light;font-size:11px;}
+.ppp_price,.you-save{color:$color-black;font-size:11px;}
 
 /* Stock
 -------------------------------------------------------------- */
@@ -1030,7 +1029,7 @@ ins{text-decoration:none;}
 .footer_container .textwidget p{float: left;width: 100%;}
 .sidebar_grid_price{margin-top:20px;}
 .product_row_arrows{position:relative;margin-bottom:15px;}
-.sidebar_grid_title{margin-bottom:15px;padding:10px 0;border:1px solid $color-grey;background:$color-grey;color:$color-dark-light;text-align:center;text-transform:uppercase;}
+.sidebar_grid_title{margin-bottom:15px;padding:10px 0;border:1px solid $color-grey;background:$color-grey;color:$color-black;text-align:center;text-transform:uppercase;}
 .grid_content{margin-top:20px;}
 .grid_content.with-sidebar-left{float: right !important;}
 .grid_content.with-sidebar-left.no-sidebar{float: left !important;}
@@ -1105,7 +1104,7 @@ ins{text-decoration:none;}
 .product_categories_grid .category-block:nth-child(3n+1){clear: both;}
 .no-sidebar .product_categories_grid .category-block:nth-child(3n+1){clear: none;}
 .no-sidebar .product_categories_grid .category-block:nth-child(4n+1){clear: both;}
-.sgp_title{margin-bottom:20px;padding:10px 0 5px;border-bottom:1px solid $color-grey;color:$color-dark-light;text-align:center;text-transform:uppercase;}
+.sgp_title{margin-bottom:20px;padding:10px 0 5px;border-bottom:1px solid $color-grey;color:$color-black;text-align:center;text-transform:uppercase;}
 .sgp_filter{padding:0 10px;}
 .sgp_filter p{color:$color-grey;line-height:1.4;}
 .sgp_filter img{margin-top:10px;}
@@ -1638,7 +1637,7 @@ form.login .lost_password{left: 160px !important;}
 /* Footer
 /* -------------------------------------------------- */
 
-.footer_container{padding-top:50px;background:$color-dark-light;}
+.footer_container{padding-top:50px;background:$color-black;}
 .footer_block1, .footer_block{ margin-bottom:25px;width:220px; }
 .footer-menu-wrap .footer_block1, .footer-menu-wrap .footer_block{margin-bottom: 0; }
 .footer_block2{float:right;margin-bottom: 30px;width:230px !important;}
@@ -1669,9 +1668,9 @@ form.login .lost_password{left: 160px !important;}
 .footer_thumbs li{display:inline-block;margin:10px 14px 10px 0;opacity:1;-webkit-transition-timing-function:ease;-webkit-transition-duration:.4s;-webkit-transition-property:opacity;}
 .footer_thumbs li:hover{opacity:0.6;}
 .footer_thumbs_last-child{margin-right:0!important;}
-.footer-black-bg{background: $color-dark-light;}
+.footer-black-bg{background: $color-black;}
 #after_footer_menu {margin-left: 0;width: 470px;}
-.container_footer_bg{margin-top: 40px;width:100%;background:$color-dark-light; }
+.container_footer_bg{margin-top: 40px;width:100%;background:$color-black; }
 .footer_copyright_menu{display:inline-block;float:left;padding-top:15px;}
 .footer_copyright_menu :last-child{border:none;}
 .footer_copyright_menu span{float:left;}

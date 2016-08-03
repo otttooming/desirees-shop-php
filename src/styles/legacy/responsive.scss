@@ -486,7 +486,7 @@ header{padding-top:0!important;}
 .tabs.checkout-accordion .tab-title.opened{background: $color-grey url(../images/legacy/arrow_down.png) no-repeat 95% center !important;}
 #loader {display: block;position:fixed;width: 100%;height: 100%;z-index:2500;top:0;left:0;right:0;bottom:0;background-color:$color-white; z-index:999999;}
 #loader-status {position:fixed;z-index:999999;height:140px;position:absolute;left:50%; top:70%; background-image:url(../images/legacy/status.gif); background-size:32px 32px;background-repeat:no-repeat;background-position:center;margin:-200px 0 0 -125px; }
-#loader-status p{top:65%;text-align: center;color: $color-dark-light;}
+#loader-status p{top:65%;text-align: center;color: $color-black;}
 #loader-status em{font-size:12px!important;display:block;font-style:normal;}
 .p-tables-wrap{width: 100%;}
 .portfolio-item .portfolio-image{margin-bottom: 20px;}

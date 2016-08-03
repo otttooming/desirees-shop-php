@@ -23,7 +23,7 @@
 .cart {
 
   &__form-head {
-    background: rgba($color-dark-light, .2);
+    background: rgba($color-black, .2);
   }
 
   &__form-body {
@@ -35,7 +35,7 @@
     tr {
 
       &:nth-child(2) {
-        background: rgba($color-dark-light, .2);
+        background: rgba($color-black, .2);
       }
     }
   }
@@ -51,7 +51,7 @@
 .checkout {
   
   &__tab-content {
-    background: rgba($color-dark-light, .3);
+    background: rgba($color-black, .3);
     padding: 20px;
     box-sizing: border-box;
   }

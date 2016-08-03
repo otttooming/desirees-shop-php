@@ -9,7 +9,7 @@ select {
 }
 
 hr {
-  border: 1px solid $color-dark-light;
+  border: 1px solid $color-black;
 }
 
 .grid_content, .sidebar_grid {
@@ -552,7 +552,7 @@ h2, h3, .product-slider h4, .contact_info h5{
 #content_tab_3 ul {
   height: auto;
   padding: 50px;
-  border: 1px solid $color-dark-light;
+  border: 1px solid $color-black;
   background-color: $color-white;
   text-align: center;
 }
@@ -672,7 +672,7 @@ h2, h3, .product-slider h4, .contact_info h5{
 .progress-bar div {
   width: 50%;
   height: 100%;
-  border-right: 1px solid $color-dark-light;
+  border-right: 1px solid $color-black;
   background-color: #a444b1;
   background-image: linear-gradient(to right, #0b0c18, #903);
   background-size: 100% 100%, 20px 20px, 100% 100%;
@@ -778,7 +778,7 @@ h2, h3, .product-slider h4, .contact_info h5{
 /* Disabled elements */
 
 .imageboxshadow img {
-  box-shadow: 0 15px 10px -5px $color-dark-light;
+  box-shadow: 0 15px 10px -5px $color-black;
 }
 
 .statictagcloud a {
@@ -832,7 +832,7 @@ h2, h3, .product-slider h4, .contact_info h5{
 .products_grid .product-grid,
 .product-slide .product-grid {
 	background: rgba(51, 51, 51, 0.5) !important;
-  box-shadow: 2px 2px 0 $color-dark-light;
+  box-shadow: 2px 2px 0 $color-black;
 }
 
 .variations_form table.variations tr select {
@@ -850,8 +850,8 @@ h2, h3, .product-slider h4, .contact_info h5{
 }
 
 .button.small.arrow-left {
-  box-shadow: 2px 2px 0 $color-dark-light;
-  text-shadow: 2px 2px 0 $color-dark-light;
+  box-shadow: 2px 2px 0 $color-black;
+  text-shadow: 2px 2px 0 $color-black;
 }
 
 /* Hover description */
@@ -877,7 +877,7 @@ h2, h3, .product-slider h4, .contact_info h5{
   padding: 15px;
   background-color: $color-red;
   border-radius: 5px;
-  text-shadow: 1px 1px $color-dark-light;
+  text-shadow: 1px 1px $color-black;
   font-size: 13px;
   z-index: 9999;
   transition: 250ms;
@@ -1198,8 +1198,8 @@ span.copyright {
 
 .widget_etheme-subcategories .block-content {
   padding: 20px;
-  background-color: $color-dark-light;
-  box-shadow: 0 0 3px $color-dark-light;
+  background-color: $color-black;
+  box-shadow: 0 0 3px $color-black;
 }
 
 /*Small fixes august 1014*/
@@ -1237,8 +1237,8 @@ span.copyright {
 .sidebar_infoblock {
   margin: 10px 0;
   padding: 20px;
-  background-color: $color-dark-light;
-  box-shadow: 0 0 3px $color-dark-light;
+  background-color: $color-black;
+  box-shadow: 0 0 3px $color-black;
 }
 
 .page-id-11573 ol, .page-id-6788 ol, .page-id-112 ol{
@@ -1263,8 +1263,8 @@ span.copyright {
 .onlyphysical {
   margin: 45px 0 30px;
   padding: 20px;
-  background-color: $color-dark-light;
-  box-shadow: 0 0 3px $color-dark-light;
+  background-color: $color-black;
+  box-shadow: 0 0 3px $color-black;
   line-height: 30px;
 	&:first-child {
 		margin: 0 0 30px;
@@ -1318,14 +1318,14 @@ span.copyright {
 
 .tab-content.tap-order #payment .terms {
   padding: 25px;
-  border: 1px solid $color-dark-light !important;
+  border: 1px solid $color-black !important;
   background-color: #333;
 }
 
 .product-category-description {
   padding: 20px;
-  background-color: $color-dark-light;
-  box-shadow: 0 0 3px $color-dark-light;
+  background-color: $color-black;
+  box-shadow: 0 0 3px $color-black;
   font-size: 14px;
 }
 
@@ -1584,8 +1584,8 @@ abbr[title] {
     background-color: #333;
     margin: 0!important;
     padding: 9px;
-    box-shadow: 2px 2px $color-dark-light;
-    border-right: 1px solid $color-dark-light;
+    box-shadow: 2px 2px $color-black;
+    border-right: 1px solid $color-black;
   }
 
   &__input {
@@ -1631,7 +1631,7 @@ abbr[title] {
       display: flex;
       flex-direction: column;
       padding: 30px 15px;
-      box-shadow: 2px 2px $color-dark-light;
+      box-shadow: 2px 2px $color-black;
       background-color: #333;
       margin: 30px 0;
     }

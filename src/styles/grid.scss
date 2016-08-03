@@ -13,7 +13,7 @@
     line-height: 45px;
     display: flex;
     background-color: #151515;
-    box-shadow: 0 0 3px $color-dark-light;
+    box-shadow: 0 0 3px $color-black;
     padding: 0 20px;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -22,8 +22,8 @@
 
 .woocommerce-ordering {
   margin: 0;
-  // border-right: 1px solid $color-dark-light;
-  // border-left: 1px solid $color-dark-light;
+  // border-right: 1px solid $color-black;
+  // border-left: 1px solid $color-black;
 
   select {
     margin: 0;
@@ -101,5 +101,5 @@
 
 .product-grid {
   background: rgba(51,51,51,.5)!important;
-  box-shadow: 2px 2px 0 $color-dark-light;
+  box-shadow: 2px 2px 0 $color-black;
 }
