@@ -1416,22 +1416,6 @@ blockquote {
   color: #fff; }
 
 /* -------------------------------------------------- */
-/* Video
-/* -------------------------------------------------- */
-.youtube-video {
-  position: relative; }
-
-.youtube-video iframe, .youtube-video object, .youtube-video embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
-
-iframe {
-  max-width: 100%; }
-
-/* -------------------------------------------------- */
 /* Modal
 /* -------------------------------------------------- */
 .modal-backdrop {
@@ -1947,7 +1931,6 @@ body.wide {
   width: auto; }
 
 .fixed-already {
-  top: 0;
   transition: all 0.2s ease-in-out; }
 
 .admin-bar .fixed-already {
@@ -2179,8 +2162,7 @@ body.wide {
   background-color: rgba(255, 255, 255, 0.9);
   position: relative;
   z-index: 2;
-  background: linear-gradient(to bottom, white 0%, white 1%, rgba(255, 255, 255, 0.9) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-white', endColorstr='#e6ffffff',GradientType=0 ); }
+  background: linear-gradient(to bottom, white 0%, white 1%, rgba(255, 255, 255, 0.9) 100%); }
 
 .header-overlapped .header-type-variant6 .default-menu > ul > li ul {
   background-color: rgba(255, 255, 255, 0.9); }
@@ -3222,14 +3204,6 @@ div.pp_woocommerce .pp_close {
   width: 34px !important;
   height: 31px !important; }
 
-/*.col2-set .col-1 {
-  float: left;
-  width: 48%;
-}
-.col2-set .col-2 {
-  float: right;
-  width: 48%;
-}*/
 div.pp_woocommerce #respond #commentform textarea {
   margin-bottom: 20px !important; }
 
@@ -5202,9 +5176,6 @@ ul.product_list_widget li img {
   margin-right: auto;
   margin-left: auto; }
 
-#blog_full_text .vimeo-video {
-  margin: 10px 0; }
-
 .aligncenter {
   display: block;
   margin-top: 10px;
@@ -6372,30 +6343,6 @@ form.login .lost_password {
 
 .footer_thumbs li:hover {
   opacity: 0.6; }
-
-.flickr-photo img {
-  width: 60px !important; }
-
-.flickr_badge_image {
-  transition: all 0.2s ease-in-out;
-  margin: 10px 16px 10px 0;
-  width: 74px;
-  height: 74px;
-  float: left;
-  background: none;
-  padding: 0; }
-
-.flickr_badge_image a {
-  border: none; }
-
-.flickr_badge_image img {
-  margin: 0;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%; }
 
 .footer_thumbs_last-child {
   margin-right: 0 !important; }
