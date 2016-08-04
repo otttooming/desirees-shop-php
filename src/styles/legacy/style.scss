@@ -2856,10 +2856,6 @@ ins {
 .qty-block .minus {
 	background-position: -2px -4px;
 }
-.input-text {
-	padding: 3px 5px;
-	outline: none;
-}
 .lost_password {
 	position: relative;
 	left: 100px;
@@ -5091,12 +5087,7 @@ ul.product_list_widget li:last-child {
 .wc-checkout-totals .shipping li {
 	list-style: none;
 }
-#shipping_method {
-	padding-left: 0;
-	margin-bottom: 0;
-	list-style: none;
-	text-align: right;
-}
+
 #product-quantity .quantity.buttons_added .minus:focus,
 #product-quantity .quantity.buttons_added .plus:focus {
 	border: 1px solid $color-grey !important;
@@ -5115,12 +5106,6 @@ ul.product_list_widget li:last-child {
 .order_details td.product-name {
 	border-bottom: 1px solid $color-grey;
 }
-#shipping_method li {
-	list-style: none;
-}
-#shipping_method li label {
-	display: inline-block;
-}
 #cart-quantity .quantity {
 	float: none;
 	margin: 0;
@@ -5132,22 +5117,8 @@ ul.product_list_widget li:last-child {
 	text-align: center;
 	font-weight: 400;
 }
-.coupon {
-	float: left;
-}
-.coupon label {
-	display: none;
-}
-.checkout_cart #coupon_code {
-	width: 240px !important;
-}
 .checkout_cart .update-button {
 	float: right;
-}
-#coupon_code {
-	width: auto;
-	line-height: 20px;
-	height: 22px;
 }
 .checkout_coupon .form-row-first #coupon_code {
 	margin-top: 8px !important;

@@ -1097,10 +1097,7 @@ span.copyright {
 	padding: 10px;
 	text-transform: uppercase;
 }
-#shipping_method input[type="radio"] {
-	float: left;
-	margin-right: 10px;
-}
+
 /*Last line*/
 .label-icon.sale-label {
 	width: 100px!important;
@@ -1152,12 +1149,6 @@ span.copyright {
 		&:nth-child(2n+1) {
 			margin-left: -14px;
 		}
-	}
-}
-#shipping_method {
-	li {
-		white-space: nowrap;
-		text-align: left;
 	}
 }
 .wc-proceed-to-checkout a {

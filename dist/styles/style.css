@@ -3764,10 +3764,6 @@ ins {
 .qty-block .minus {
   background-position: -2px -4px; }
 
-.input-text {
-  padding: 3px 5px;
-  outline: none; }
-
 .lost_password {
   position: relative;
   left: 100px;
@@ -5986,12 +5982,6 @@ ul.product_list_widget li:last-child {
 .wc-checkout-totals .shipping li {
   list-style: none; }
 
-#shipping_method {
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-  text-align: right; }
-
 #product-quantity .quantity.buttons_added .minus:focus,
 #product-quantity .quantity.buttons_added .plus:focus {
   border: 1px solid #6e6e6e !important; }
@@ -6010,12 +6000,6 @@ ul.product_list_widget li:last-child {
 .order_details td.product-name {
   border-bottom: 1px solid #6e6e6e; }
 
-#shipping_method li {
-  list-style: none; }
-
-#shipping_method li label {
-  display: inline-block; }
-
 #cart-quantity .quantity {
   float: none;
   margin: 0; }
@@ -6027,22 +6011,8 @@ ul.product_list_widget li:last-child {
   text-align: center;
   font-weight: 400; }
 
-.coupon {
-  float: left; }
-
-.coupon label {
-  display: none; }
-
-.checkout_cart #coupon_code {
-  width: 240px !important; }
-
 .checkout_cart .update-button {
   float: right; }
-
-#coupon_code {
-  width: auto;
-  line-height: 20px;
-  height: 22px; }
 
 .checkout_coupon .form-row-first #coupon_code {
   margin-top: 8px !important;
@@ -11639,10 +11609,6 @@ span.copyright {
   padding: 10px;
   text-transform: uppercase; }
 
-#shipping_method input[type="radio"] {
-  float: left;
-  margin-right: 10px; }
-
 /*Last line*/
 .label-icon.sale-label {
   width: 100px !important;
@@ -11693,10 +11659,6 @@ span.copyright {
     margin-right: 0px !important; }
     .with-sidebar .rows-count4.products-grid .product-grid:nth-child(2n+1) {
       margin-left: -14px; } }
-
-#shipping_method li {
-  white-space: nowrap;
-  text-align: left; }
 
 .wc-proceed-to-checkout a {
   background-color: #ff0513; }
@@ -13668,11 +13630,30 @@ input {
 
 .cart_totals {
   box-shadow: 2px 2px #151515; }
+  .cart_totals tr:nth-child(2) {
+    background: rgba(21, 21, 21, 0.2); }
 
 .checkout__tab-content {
   background: rgba(21, 21, 21, 0.3);
   padding: 20px;
   box-sizing: border-box; }
+
+#shipping_method li {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+  #shipping_method li label {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center; }
+
+#shipping_method .amount {
+  margin-left: 10px; }
+
+.coupon {
+  margin: 0 0 20px; }
 
 /*! PhotoSwipe main CSS by Dmitry Semenov | photoswipe.com | MIT license */
 /*
