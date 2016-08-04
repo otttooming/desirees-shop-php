@@ -361,58 +361,7 @@ abbr[title] {
 /* -------------------------------------------------- */
 /* Buttons
 /* -------------------------------------------------- */
-#searchsubmit,
-#submit,
-.button {
-	display: inline-block;
-	padding: 1px 12px 0;
-	border: none;
-	background: $color-grey;
-	color: $color-white;
-	text-align: center;
-	text-transform: uppercase;
-	white-space: nowrap;
-	font-size: 12px;
-	line-height: 28px;
-	cursor: pointer;
-	-webkit-transition-timing-function: ease;
-	-webkit-transition-duration: 0.2s;
-	-webkit-transition-property: background, border-color;
-}
-.button span {
-	color: $color-white;
-	line-height: 30px;
-}
-.button:hover {
-	color: $color-white !important;
-}
-.button.active {
-	-webkit-transition-timing-function: ease;
-	-webkit-transition-duration: 0.2s;
-	-webkit-transition-property: background-color, border-color;
-}
-.button.active:hover {
-	background-color: $color-red;
-}
-.button.big {
-	padding: 10px 28px;
-}
-.button.big.active:hover {}
-.button.big span {
-	font-weight: 300;
-	font-size: 16px;
-	line-height: 36px;
-}
-.button.medium {
-	padding: 6px 20px;
-	font-size: 14px;
-}
-.button.underline:hover {
-	text-decoration: underline;
-}
-.more-link .button {
-	margin-top: 30px;
-}
+
 .button.small.arrow-left {
 	padding-left: 24px;
 	background-image: url("../images/legacy/prew_arrow.png");
@@ -5194,14 +5143,6 @@ ul.product_list_widget li:last-child {
 }
 .checkout_cart .update-button {
 	float: right;
-}
-.actions .button {
-	color: $color-white;
-	text-transform: uppercase;
-	height: 31px;
-}
-.actions .checkout-button {
-	display: none;
 }
 #coupon_code {
 	width: auto;

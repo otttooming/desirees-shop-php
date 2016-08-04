@@ -181,9 +181,6 @@
 	.row-fluid .thumbnails {
 		margin-left: 0;
 	}
-	.button.big.arrow-right {
-		padding-right: 55px;
-	}
 	.header {
 		padding-top: 30px;
 	}
@@ -212,9 +209,6 @@
 	.banners_top_row {
 		margin-top: 10px;
 		margin-bottom: 20px;
-	}
-	.button.big span {
-		font-size: 18px;
 	}
 	.banner-transform img {
 		width: 100%;
@@ -423,9 +417,6 @@
 		float: left;
 		width: auto;
 	}
-	.addto-container .button.big.active.single_add_to_cart_button {
-		margin-top: 0;
-	}
 	.blog-post.post-portrait .post-information {
 		float: right;
 		width: 590px !important;
@@ -514,14 +505,8 @@
 	.variations_form table.variations tr select:hover {
 		width: 263px;
 	}
-	.product_layout_default .addto-container .button.big.active.single_add_to_cart_button {
-		float: right;
-	}
 	.product_layout_default .quantity {
 		margin-right: 20px;
-	}
-	.product_layout_default .button.big.active.etheme-simple-product {
-		margin-top: 0;
 	}
 	.addto-container {
 		float: none;
@@ -654,9 +639,6 @@
 	.product_layout_variant3 .main-image {
 		float: right;
 	}
-	.product_layout_variant3 .button.etheme-simple-product {
-		margin-top: 0;
-	}
 	.p-table {
 		width: 268px;
 	}
@@ -677,10 +659,6 @@
 	.p-table li.last:hover,
 	.p-table-2 li.last:hover {
 		background: $color-white;
-	}
-	.p-table li.last:hover .button,
-	.p-table-2 li.last:hover .button {
-		text-decoration: none;
 	}
 	.p-table li a i,
 	.p-table-2 li a i {

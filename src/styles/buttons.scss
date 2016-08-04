@@ -1,8 +1,36 @@
 .button {
-  box-shadow: $shadow-std!important;
-  text-shadow: $shadow-std!important;
+  display: inline-block;
+
+  padding: 7px 10px;
+  height: auto;
+  line-height: 1.5;
+
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  text-transform: uppercase;
+
+  color: $color-white;
+  border: none;
+  box-shadow: $shadow-std;
+  text-shadow: $shadow-std;
+
+  font-family: $typeface-primary;
+  font-size: 11px;
 
   &.active {
     background: $color-red;
+  }
+
+  &.medium {
+    padding: 15px 20px;
+
+    font-size: 14px;
+  }
+
+  &.big {
+    padding: 20px 30px;
+
+    font-size: 16px;
   }
 }

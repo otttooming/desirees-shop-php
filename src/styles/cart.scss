@@ -12,6 +12,10 @@
     .wc-proceed-to-checkout {
       text-align: right;
     }
+
+    .wc-proceed-to-checkout {
+      margin: 10px;
+    }
   }
 
   &__thumbnail {
@@ -46,10 +50,14 @@
   .product-remove {
     text-align: center;
   }
+
+  &_totals {
+    box-shadow: $shadow-std;
+  }
 }
 
 .checkout {
-  
+
   &__tab-content {
     background: rgba($color-black, .3);
     padding: 20px;

@@ -9,10 +9,6 @@ select {
 hr {
 	border: 1px solid $color-black;
 }
-.grid_content,
-.sidebar_grid {
-	margin-top: 0;
-}
 .main-image {
 	background-color: $color-white;
 }
@@ -75,21 +71,7 @@ hr {
 #swipebox-overlay img {
 	background: $color-white;
 }
-.btn-cont {
-	position: absolute;
-	right: 4px;
-	bottom: 5px;
-	.button {
-		float: right;
-		min-width: 60px;
-		padding: 1px 5px 0;
-		box-shadow: $shadow-std;
-		line-height: 30px;
-	}
-}
-.button {
-	font-size: 11px;
-}
+
 .breadcrumbs {
 	margin: 10px 0;
 	text-transform: uppercase;
@@ -285,9 +267,6 @@ form .form-row.terms label a {
 .header {
 	margin-bottom: 0 !important;
 }
-.button:hover {
-	background-color: $color-red !important;
-}
 .qty-block label {
 	font-size: 15px;
 }
@@ -325,9 +304,6 @@ mark {
 }
 .widget_shopping_cart .variation {
 	float: left;
-}
-.widget_shopping_cart .button {
-	background-color: $color-red !important;
 }
 /*Remove square lists*/
 .cats .block-content .wpsc_categories li {
@@ -401,10 +377,6 @@ h3 {
 	margin-top: 10px;
 	margin-left: 10px;
 }
-.button75 .button {
-	width: 100%;
-	padding: 10px 0;
-}
 .product-grid .price .from {
 	display: initial;
 	float: left;
@@ -415,13 +387,6 @@ h3 {
 }
 .woocommerce_message .close-parent {
 	font-size: 0!important;
-}
-.transparentbutton .button {
-	width: 75%;
-	padding: 10px 0;
-}
-.transparentbutton .button:hover span {
-	color: $color-white!important;
 }
 .h2mod h5 {
 	color: $color-warm;
@@ -647,11 +612,7 @@ h3 {
 	background-color: $color-red !important;
 	color: $color-white!important;
 }
-.header-type-default .menu .current-menu-item > a,
-.header-type-default .menu .current-menu-item > a:hover {
-	background-color: $color-red !important;
-	color: $color-white;
-}
+
 .single-product .veebipoodmenu a,
 .single-product .veebipoodmenu a:hover {
 	background-color: $color-red !important;
@@ -669,16 +630,7 @@ h3 {
 	box-shadow: $shadow-std;
 	letter-spacing: 1px;
 }
-.button75 .button {
-	box-shadow: $shadow-std;
-	text-shadow: $shadow-std;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-}
-.button.small.arrow-left {
-	box-shadow: 2px 2px 0 $color-black;
-	text-shadow: 2px 2px 0 $color-black;
-}
+
 /* Hover description */
 .products-grid .product-descr {
 	transform: scale(0,0);
