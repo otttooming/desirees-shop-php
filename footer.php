@@ -83,12 +83,12 @@
       </div>
   </div>
 
-  </div> <!-- .wrapper -->
+</div> <?php // END .wrapper ?>
   
 <?php
 
   // Get PSWP lightbox template
-  require get_template_directory() . 'inc/components/lightbox.php';
+  require get_template_directory() . '/inc/components/lightbox.php';
   
 	/* Always have wp_footer() just before the closing </body>
 	 * tag of your theme, or you will break many plugins, which
