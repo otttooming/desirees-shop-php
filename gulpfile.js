@@ -75,15 +75,30 @@ gulp.task('deploy', function () {
     log:      gutil.log
   });
 
-  var globs = [
-    '**/*',
-    '*',
-    '!images/**',
-    '!js/**',
-    '!src/**',
-    '!bower_components/**',
-    '!node_modules/**'
-  ];
+  if (gutil.env.css) {
+
+    var globs = [
+      'dist/styles/*',
+      '!images/**',
+      '!js/**',
+      '!src/**',
+      '!bower_components/**',
+      '!node_modules/**'
+    ];
+
+  } else {
+
+    var globs = [
+      '**/*',
+      '*',
+      '!images/**',
+      '!js/**',
+      '!src/**',
+      '!bower_components/**',
+      '!node_modules/**'
+    ];
+    
+  }
 
   // using base = '.' will transfer everything to /public_html correctly
   // turn off buffering in gulp.src for best performance
