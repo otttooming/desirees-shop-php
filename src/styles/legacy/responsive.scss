@@ -312,30 +312,6 @@
 	.product_description_addtocart {
 		height: 120px;
 	}
-	.variations_form table.variations tr select,
-	.variations_form table.variations tr select:hover {
-		float: right;
-		width: 225px;
-	}
-	.product_layout_default .variations_form table.variations tr select,
-	.product_layout_default .variations_form table.variations tr select:hover {
-		margin-left: 0 !important;
-		width: 155px;
-	}
-	.product_layout_variant3 .quantity {
-		margin-right: 0;
-	}
-	.product_layout_variant3 .variations_form table.variations tr select,
-	.product_layout_variant3 .variations_form table.variations tr select:hover {
-		width: 225px;
-	}
-	.product_layout_variant3 .addto-container .button.big.active.single_add_to_cart_button {
-		margin-top: 20px;
-	}
-	.product_layout_default .addto-container .button.big.active.single_add_to_cart_button {
-		margin-top: 20px;
-		float: none;
-	}
 	.product_layout_default .qty-block {
 		float: none;
 	}
@@ -453,10 +429,6 @@
 	}
 	.product_layout_variant2 .button.big.active.etheme-simple-product {
 		float: none;
-	}
-	.product_layout_variant3 .qty-block {
-		float: none;
-		margin: 25px auto;
 	}
 	.product_layout_default .button.big.active.etheme-simple-product {
 		float: none;
@@ -1415,9 +1387,6 @@
 	.product-grid .btn-cont {
 		margin-bottom: 10px;
 	}
-	#product-page .variations_form .variations_button {
-		text-align: center;
-	}
 	.product-title2 {
 		display: block;
 		margin-bottom: 15px;
@@ -1439,21 +1408,12 @@
 		margin-top: 7px;
 		text-align: center;
 	}
-	.main-info .product-stock {
-		margin-bottom: -15px;
-	}
 	.main-info .price-block {
 		float: none;
 		text-align: center;
 	}
 	.main-info .price-block .amount {
 		font-size: 28px;
-	}
-	.product_description_mainblock.productcol.summary ins .amount {
-		font-size: 32px !important;
-	}
-	.product_description_mainblock.productcol.summary del .amount {
-		font-size: 22px !important;
 	}
 	.product_layout_variant3 .span5.product_image {
 		display: block;
@@ -1506,9 +1466,6 @@
 	}
 	.product_meta {
 		margin-bottom: 20px;
-	}
-	#cart-quantity .quantity.buttons_added .input-text {
-		border-right: 1px solid $color-grey !important;
 	}
 	.blog-content {
 		float: left;
@@ -2517,14 +2474,6 @@
 	.review_textarea,
 	.with-sidebar .rows-count4 .product-grid {
 		width: 260px;
-	}
-	#color,
-	#size {
-		width: 290px;
-	}
-	.product_layout_variant2 .variations_form table.variations tr select,
-	.product_layout_variant2 .variations_form table.variations tr select:hover {
-		width: 220px !important;
 	}
 	.views-gallery.thumbs-count-4 {
 		width: 242px;

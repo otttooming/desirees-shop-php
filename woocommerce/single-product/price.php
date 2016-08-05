@@ -18,7 +18,7 @@ global $post, $product;
 
 <div class="main-info product_meta cfx" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 
-    <div itemprop="price" class="product__price-block">
+    <div itemprop="price" class="product__price-block product__price-block-big">
         <?php echo $product->get_price_html(); ?>
     </div>
 
@@ -31,7 +31,7 @@ global $post, $product;
     	$availability = $product->get_availability();
 
     	if ($availability['availability']) :
-    		echo apply_filters( 'woocommerce_stock_html', '<div class="product-stock ' . $availability['class'].'">' . '<span class="stock__header">' . __('Availability:', ETHEME_DOMAIN) . '</span>' . ' <span class="stock__number">'.$availability['availability'].'</span></div>', $availability['availability'] );
+    		echo apply_filters( 'woocommerce_stock_html', '<div class="product-stock ' . $availability['class'].'">' . '<span class="stock__header">' . __('Availability', ETHEME_DOMAIN) . '</span>' . ' <span class="stock__number">'.$availability['availability'].'</span></div>', $availability['availability'] );
       endif;
     ?>
 </div>

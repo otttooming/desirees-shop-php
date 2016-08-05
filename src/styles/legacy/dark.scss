@@ -81,28 +81,6 @@ textarea {
 	border: none;
 	border-top: 1px solid $color-red;
 }
-#cart-quantity .input-text:focus,
-#product-quantity .input-text:focus {
-	border: 1px solid $color-red !important;
-}
-#product-quantity .input-text {
-	top: 0 !important;
-}
-.quantity.buttons_added {
-	background-color: #333;
-	padding-right: 23px;
-}
-.quantity.buttons_added .plus {
-	width: 23px !important;
-	border-top: 1px solid $color-black !important;
-	border-right: 1px solid $color-black !important;
-	border-bottom: 1px solid $color-black !important;
-}
-.quantity.buttons_added .minus {
-	width: 23px !important;
-	border-bottom: 1px solid $color-black !important;
-	border-right: 1px solid $color-black !important;
-}
 del {
 	color: $color-red;
 }
@@ -464,11 +442,6 @@ div.product_meta span {
 .product_description_mainblock .product_meta .sku {
 	color: $color-grey;
 }
-#product-quantity .quantity.buttons_added .minus:focus,
-#product-quantity .quantity.buttons_added .plus:focus {
-	border-color: $color-black !important;
-	border-left: none !important;
-}
 div.product_meta a {
 	color: $color-grey;
 }
@@ -504,10 +477,6 @@ div.pp_woocommerce #respond #commentform #submit:hover {
 .custom-tabs2 {
 	color: $color-white;
 }
-#product-quantity .input-text {
-	position: relative;
-	top: -2px;
-}
 .etheme-popup-content em {
 	color: $color-white;
 }
@@ -535,10 +504,6 @@ div.pp_woocommerce #respond #commentform #submit:hover {
 .checkout_table_item .product-name .variation dt,
 .checkout_table_item .product-name a {
 	color: $color-white;
-}
-#cart-quantity .input-text {
-	position: relative;
-	top: -2px;
 }
 .checkout_cart td.product-price .amount {
 	color: $color-white;

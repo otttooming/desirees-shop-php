@@ -75,6 +75,13 @@
 
       font-size: 12px;
     }
+
+    &-big {
+
+      .amount {
+        font-size: 25px;
+      }
+    }
   }
 
   &__buy-btn {
@@ -131,4 +138,34 @@
       margin: 0;
     }
   }
+}
+
+.variations_form  {
+
+  td {
+    padding: 0;
+    font-family: $typeface-primary;
+  }
+
+  td.value {
+    text-align: right;
+  }
+
+  .variations_button {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .button {
+      padding: 6px 23px;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 36px;
+    }
+  }
+
+}
+
+.product-stock {
+  margin: 20px 0;
 }
