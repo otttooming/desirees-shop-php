@@ -12,16 +12,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<div class="product__excerpt">
-  <?php echo content(40); ?>
-</div>
+<?php if ( get_the_content() ) : ?>
 
-<a class="more-info" href="#content_tab_1" >
-  <span class="more-info__text">
-    <?php _e('More information', ETHEME_DOMAIN) ?>
-  </span>
-	
-  <i class="more-info__icon icon-chevron-down"></i>
-</a>
+	<div class="product__excerpt">
+	  <?php echo content(40); ?>
+	</div>
 
-<hr>
+	<a class="more-info" href="#content_tab_1" >
+	  <span class="more-info__text">
+	    <?php _e('More information', ETHEME_DOMAIN) ?>
+	  </span>
+
+	  <i class="more-info__icon icon-chevron-down"></i>
+	</a>
+
+	<hr>
+
+<?php endif; ?>
