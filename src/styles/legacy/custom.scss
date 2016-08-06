@@ -288,10 +288,6 @@ mark {
 .wpsc_top_level_categories {
 	margin-left: 10px;
 }
-div.product_meta a {
-	color: $color-warm!important;
-	text-transform: uppercase;
-}
 /*DOUBLE line CART*/
 .widget_shopping_cart .total {
 	border-top: 1px solid $color-grey!important;
@@ -983,20 +979,6 @@ span.copyright {
 }
 .single_variation_wrap .single_variation span {
 	float: none;
-}
-.product_description_mainblock {
-	.product_meta {
-		@at-root .posted-in__header, .tagged-as__header {
-			margin: 0 5px 0 0;
-		}
-		@at-root .separator__tag {
-			margin: 0 5px;
-			text-transform: uppercase;
-			&.product-code {
-				display: none;
-			}
-		}
-	}
 }
 .footer-black-bg {
 	background: #2f2f2f;

@@ -184,3 +184,21 @@
     text-align: right;
   }
 }
+
+.product__meta {
+
+  a {
+    color: $color-warm;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+
+  @at-root .posted-in__header, .tagged-as__header {
+    margin: 0 5px 0 0;
+    text-transform: uppercase;
+  }
+  @at-root .separator__tag {
+    margin: 0 5px;
+    text-transform: uppercase;
+  }
+}

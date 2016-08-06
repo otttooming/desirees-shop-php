@@ -16,7 +16,7 @@ global $post, $product;
 
 <?php if ( $price_html = $product->get_display_price() ) : ?>
 
-<div class="main-info product_meta cfx" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+<div class="main-info product___price-wrap" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 
     <div itemprop="price" class="product__price-block product__price-block-big">
         <?php echo $product->get_price_html(); ?>
@@ -36,6 +36,6 @@ global $post, $product;
     ?>
 </div>
 
-<hr />
+<hr>
 
 <?php endif; ?>
