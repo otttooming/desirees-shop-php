@@ -13079,8 +13079,8 @@ input {
 .product__main-image {
   width: 100% !important; }
 
-.product__gallery {
-  margin: 10px 0; }
+.product__gallery-slider {
+  background: #fff; }
 
 .product .swiper-wrapper {
   -ms-flex-align: center;
@@ -13089,7 +13089,7 @@ input {
 
 .product__image-object {
   width: 75px;
-  margin: 0 0 10px; }
+  margin: 0; }
 
 .product__price-block {
   margin: 0 5px 0 0;
@@ -13189,11 +13189,16 @@ input {
 .control__up, .control__down, .control__prev, .control__next {
   padding: 5px;
   cursor: pointer;
-  background: #151515; }
+  background: #151515;
+  transition: color 500ms; }
 
 .control__up, .control__down {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg); }
+
+.swiper-button-disabled {
+  cursor: not-allowed;
+  color: #222; }
 
 .lazyload,
 .lazyloading {
@@ -13218,7 +13223,10 @@ input {
   box-shadow: 2px 2px #151515;
   text-shadow: 2px 2px #151515;
   font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
-  font-size: 11px; }
+  font-size: 11px;
+  transition: background-color 500ms; }
+  .button:hover {
+    background: #a30000; }
   .button.active {
     background: #a30000; }
   .button.medium {
@@ -13227,6 +13235,10 @@ input {
   .button.big {
     padding: 20px 50px;
     font-size: 16px; }
+  .button__icon {
+    margin: 0 0 0 1em;
+    width: 1em;
+    height: 1em; }
 
 .search__form {
   display: -ms-flexbox;

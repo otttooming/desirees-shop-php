@@ -18,6 +18,11 @@
 
   font-family: $typeface-primary;
   font-size: 11px;
+  transition: background-color $transition-normal;
+
+  &:hover {
+    background: $color-red;
+  }
 
   &.active {
     background: $color-red;
@@ -33,5 +38,11 @@
     padding: 20px 50px;
 
     font-size: 16px;
+  }
+
+  &__icon {
+    margin: 0 0 0 1em;
+    width: 1em;
+    height: 1em;
   }
 }

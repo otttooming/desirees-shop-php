@@ -12638,8 +12638,8 @@ var productGallerySlider = new Swiper ('.product__gallery-slider', {
     slidesPerView: '5',
 
     // Navigation arrows
-    nextButton: '.product__gallery-control .control__down',
-    prevButton: '.product__gallery-control .control__up'
+    nextButton: '.product__gallery-control .control__next',
+    prevButton: '.product__gallery-control .control__prev'
 });
 
 var productGallerySlider = new Swiper ('.slider__wide', {

@@ -13,12 +13,18 @@
     cursor: pointer;
 
     background: $color-black;
+    transition: color $transition-normal;
   }
 
   &__up,
   &__down {
     transform: rotate(90deg);
   }
+}
+
+.swiper-button-disabled {
+  cursor: not-allowed;
+  color: $color-charcoal;
 }
 
 .lazyload,

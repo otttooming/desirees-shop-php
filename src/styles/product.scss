@@ -35,10 +35,11 @@
   }
 
   &__gallery {
-    margin: 10px 0;
+    // margin: 10px 0;
   }
 
   &__gallery-slider {
+    background: $color-white;
   }
 
   .swiper-wrapper {
@@ -47,7 +48,7 @@
 
   &__image-object {
     width: 75px;
-    margin: 0 0 10px;
+    margin: 0;
   }
 
   &__price-block {
