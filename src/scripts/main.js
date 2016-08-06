@@ -38,8 +38,8 @@ var productRelatedSlider = new Swiper ('.product__related-slider', {
 });
 
 var productGallerySlider = new Swiper ('.product__gallery-slider', {
-    direction: 'vertical',
-    slidesPerView: 'auto',
+    direction: 'horizontal',
+    slidesPerView: '5',
 
     // Navigation arrows
     nextButton: '.product__gallery-control .control__down',

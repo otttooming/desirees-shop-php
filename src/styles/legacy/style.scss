@@ -444,10 +444,6 @@ button:focus {
 .product_layout_variant2 .button.big.active.etheme-simple-product {
 	float: none;
 }
-.product_layout_variant3 .button.etheme-simple-product {
-	float: none;
-	margin: 0 auto;
-}
 .entry-content p .button.active.big {
 	padding: 8px 20px;
 }
@@ -2365,48 +2361,6 @@ div.pp_woocommerce .pp_content_container .pp_right {
 	background-color: $color-grey;
 	border-bottom: 1px solid $color-grey;
 	text-align: center;
-}
-/* -------------------------------------------------- */
-/* Product Page Variant 2
-/* -------------------------------------------------- */
-.product_layout_variant2 .span3.product_description_banner {
-	display: none;
-}
-.product_layout_variant2 .product_description_mainblock {
-	width: 540px;
-}
-/* -------------------------------------------------- */
-/* Product Page Variant 3
-/* -------------------------------------------------- */
-.product_layout_variant3 .product_image .views-gallery {
-	width: 80px !important;
-	height: 330px;
-	margin-top: 0;
-	padding: 40px 0;
-	float: left;
-}
-.product_layout_variant3 .product_image .views-gallery ul {
-	padding-left: 0;
-	display: inline-block;
-}
-.product_layout_variant3 .product_image .thumbs-count-4.views-gallery {
-	height: 440px;
-}
-.product_layout_variant3 .product_image .views-gallery .slide {
-	margin-bottom: 10px;
-	margin-right: 0;
-}
-.product_layout_variant3 .main-image {
-	width: 320px;
-}
-.product_layout_variant3 .span4.product_description_mainblock.productcol.summary {
-	width: 310px;
-}
-.product_layout_variant3 .span5.product_image {
-	width: 410px;
-}
-.product_layout_variant3 .main-image {
-	float: right;
 }
 /* Portfolio
 -------------------------------------------------------------- */

@@ -681,10 +681,6 @@ hr {
 .checkout-default .tab-content.tab-shipping h3 {
 	width: 100%;
 }
-/*Move qty mod and buy button to align with others*/
-.product_layout_variant3 .quantity {
-	display: inherit!important;
-}
 .single_variation_wrap .single_variation p.stock {
 	display: none;
 	margin-left: 115px;
@@ -1139,9 +1135,6 @@ abbr[title] {
 .product_image .views-gallery .slide {
 	float: none!important;
 	display: inline-block;
-}
-.product_layout_variant3 .product_image .views-gallery {
-	padding: 0;
 }
 .products-list .product-grid {
 	display: flex;
