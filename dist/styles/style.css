@@ -2371,11 +2371,7 @@ div.menu {
 
 .default-menu .sub-menu .current-menu-item > a {
   text-decoration: none;
-  border-bottom: none;
-  padding: 8px 0 !important;
-  color: #a30000;
-  height: auto !important;
-  line-height: 20px !important; }
+  border-bottom: none; }
 
 .default-menu .sub-menu .current-menu-item > a:hover {
   color: #a30000 !important; }
@@ -2401,7 +2397,6 @@ div.menu {
 .default-menu > ul > li > ul li {
   display: block;
   position: relative;
-  padding: 0 15px;
   border-top: 1px solid #6e6e6e;
   border-left: 1px solid #6e6e6e;
   border-right: 1px solid #6e6e6e; }
@@ -2415,7 +2410,7 @@ div.menu {
   transition: color 400ms ease-in-out;
   text-transform: uppercase;
   font-size: 12px;
-  padding: 8px 0; }
+  padding: 8px 15px; }
 
 .default-menu > ul > li > ul > li a:hover {
   color: #6e6e6e; }
@@ -3461,17 +3456,6 @@ div.pp_woocommerce .pp_content_container .pp_right {
 
 /* Mainblock
 -------------------------------------------------------------- */
-.product-title2,
-.product_description_mainblock h1 {
-  margin-bottom: 30px;
-  margin-top: 0;
-  text-transform: uppercase;
-  font-weight: 300;
-  font-size: 24px; }
-
-.product-title2 {
-  display: none; }
-
 .price-block {
   float: left; }
 
@@ -7420,9 +7404,6 @@ form.login .lost_password {
     margin-right: 10px; }
   ul.product_list_widget .widget-text {
     width: 90px; }
-  .product-title2,
-  .product_description_mainblock h1 {
-    font-size: 22px; }
   .product_small_slider {
     margin-left: 15px; }
   .thumbnails-slider .slide {
@@ -8019,7 +8000,6 @@ form.login .lost_password {
     width: 60%; }
   .tabs.checkout-accordion .tab-content .form-row .button {
     margin-right: 5px; }
-  .product_description_mainblock h1,
   .product_description_title {
     text-align: center; }
   .products_grid.rows-count3 .product-grid:nth-child(3n+1),
@@ -8192,14 +8172,6 @@ form.login .lost_password {
     border: none; }
   .product-grid .btn-cont {
     margin-bottom: 10px; }
-  .product-title2 {
-    display: block;
-    margin-bottom: 15px;
-    background: #6e6e6e;
-    color: #6e6e6e;
-    text-align: center;
-    font-size: 18px;
-    line-height: 50px; }
   .product_image .main-image img {
     width: 100%; }
   .views-gallery {
@@ -8327,7 +8299,6 @@ form.login .lost_password {
   .cart_table_title > :first-child,
   .hide-container,
   .last_td,
-  .product_description_mainblock h1,
   .products_grid .clear,
   .search_text,
   .shopping_cart_wrap p,
@@ -10506,9 +10477,6 @@ form .form-row.terms label a {
   font-weight: bold;
   text-transform: uppercase; }
 
-.product_description_mainblock h1 {
-  font-size: 40px; }
-
 .page-title {
   text-transform: inherit; }
 
@@ -10847,8 +10815,8 @@ h3 {
   background-color: #a30000 !important;
   color: #fff !important; }
 
-.single-product .veebipoodmenu a,
-.single-product .veebipoodmenu a:hover {
+.single-product .veebipoodmenu > a,
+.single-product .veebipoodmenu > a:hover {
   background-color: #a30000 !important;
   color: #fff !important; }
 
@@ -12159,10 +12127,6 @@ form.register .register-head i {
 .lost_password {
   color: #fff; }
 
-.product-title2 {
-  background: #333;
-  color: #fff; }
-
 .et-mobile-menu li > a {
   background: #333;
   border-top: 1px solid #151515;
@@ -13053,7 +13017,8 @@ input {
   display: -ms-flexbox !important;
   display: flex !important;
   -ms-flex-direction: column;
-      flex-direction: column; }
+      flex-direction: column;
+  margin-bottom: 15px; }
 
 .product__title {
   display: block;
@@ -13092,7 +13057,6 @@ input {
   margin: 0; }
 
 .product__price-block {
-  margin: 0 5px 0 0;
   padding: 5px 10px;
   text-align: center;
   color: #fff !important;

@@ -325,10 +325,6 @@
 	ul.product_list_widget .widget-text {
 		width: 90px;
 	}
-	.product-title2,
-	.product_description_mainblock h1 {
-		font-size: 22px;
-	}
 	.product_small_slider {
 		margin-left: 15px;
 	}
@@ -1139,7 +1135,6 @@
 	.tabs.checkout-accordion .tab-content .form-row .button {
 		margin-right: 5px;
 	}
-	.product_description_mainblock h1,
 	.product_description_title {
 		text-align: center;
 	}
@@ -1367,15 +1362,6 @@
 	.product-grid .btn-cont {
 		margin-bottom: 10px;
 	}
-	.product-title2 {
-		display: block;
-		margin-bottom: 15px;
-		background: $color-grey;
-		color: $color-grey;
-		text-align: center;
-		font-size: 18px;
-		line-height: 50px;
-	}
 	.product_image .main-image img {
 		width: 100%;
 	}
@@ -1547,7 +1533,6 @@
 	.cart_table_title > :first-child,
 	.hide-container,
 	.last_td,
-	.product_description_mainblock h1,
 	.products_grid .clear,
 	.search_text,
 	.shopping_cart_wrap p,

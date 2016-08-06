@@ -15,10 +15,6 @@ global $post, $woocommerce;
 
 ?>
 
-<h1 class="product-title2">
-		<?php the_title(); ?>
-</h1>
-
 <div class="span5 product_image product__left cfx">
 
     <div class="main-image product__main-image-wrap">

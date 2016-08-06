@@ -238,9 +238,6 @@ form .form-row.terms label a {
 	font-weight: bold;
 	text-transform: uppercase;
 }
-.product_description_mainblock h1 {
-	font-size: 40px;
-}
 .page-title {
 	text-transform: inherit;
 }
@@ -585,8 +582,8 @@ h3 {
 	color: $color-white!important;
 }
 
-.single-product .veebipoodmenu a,
-.single-product .veebipoodmenu a:hover {
+.single-product .veebipoodmenu > a,
+.single-product .veebipoodmenu > a:hover {
 	background-color: $color-red !important;
 	color: $color-white!important;
 }

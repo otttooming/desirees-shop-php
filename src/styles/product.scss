@@ -3,6 +3,7 @@
   &__left {
     display: flex!important;
     flex-direction: column;
+    margin-bottom: 15px;
   }
 
   &__title {
@@ -52,7 +53,6 @@
   }
 
   &__price-block {
-    margin: 0 5px 0 0;
     padding: 5px 10px;
 
     text-align: center;
