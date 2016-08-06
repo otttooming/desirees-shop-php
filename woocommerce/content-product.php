@@ -61,7 +61,7 @@ $woocommerce_loop['loop']++;
 							</h3>
 					</a>
 
-					<?php if ( get_the_content() ) { ?>
+					<?php if ( get_the_content() && $woocommerce_loop['name'] != 'related' ) { ?>
 						<div class="product-descr">
 							<div class="product-descr-info">
 								<?php echo content(30); ?>
