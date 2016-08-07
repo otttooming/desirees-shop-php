@@ -1,11 +1,13 @@
 body {
-  font-family: $typeface-primary;  
+  font-family: $typeface-primary;
   background-image: radial-gradient(circle at 50%, rgba(17, 52, 181, 0.9) 40%, rgba(234, 0, 64, 0.9) 100%);
 }
 
 a {
   cursor: pointer;
   text-decoration: none;
+  display: inline-block;
+  max-width: 100%;
 }
 
 h1,

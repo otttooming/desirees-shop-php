@@ -63,10 +63,12 @@
 					<div class="span5 logo">
             <?php require get_template_directory() . '/inc/components/logo.php'; ?>
 					</div>
-          
-          <div class="hidden-desktop">
-            <span class="et-menu-title"><i class="icon-reorder"></i></span>
-          </div>
+
+          <?php if ($template_header != 'min') : ?><?php // Load full header ?>
+            <div class="hidden-desktop">
+              <span class="et-menu-title"><i class="icon-reorder"></i></span>
+            </div>
+          <?php endif; ?>
 
           <?php if ($template_header != 'min') : ?><?php // Load full header ?>
   					<div class="span6 visible-desktop">

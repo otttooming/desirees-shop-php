@@ -8,6 +8,13 @@
   justify-content: center;
 }
 
+.w100 {
+  width: 100%;
+}
+
+.c-warm {
+  color: $color-warm!important;
+}
 
 @media only screen and (min-width: 980px){
 	.hidden-desktop{display: none !important;}

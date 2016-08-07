@@ -12684,7 +12684,9 @@ body {
 
 a {
   cursor: pointer;
-  text-decoration: none; }
+  text-decoration: none;
+  display: inline-block;
+  max-width: 100%; }
 
 h1,
 h2,
@@ -12765,6 +12767,12 @@ input {
       flex-wrap: wrap;
   -ms-flex-pack: center;
       justify-content: center; }
+
+.w100 {
+  width: 100%; }
+
+.c-warm {
+  color: #ff9500 !important; }
 
 @media only screen and (min-width: 980px) {
   .hidden-desktop {
@@ -13065,7 +13073,7 @@ input {
   padding: 7px 10px;
   height: auto;
   line-height: 1.5;
-  border-radius: 5px;
+  border-radius: 3px;
   cursor: pointer;
   text-align: center;
   white-space: nowrap;
@@ -13076,7 +13084,11 @@ input {
   text-shadow: 2px 2px #151515;
   font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
   font-size: 11px;
-  transition: background-color 500ms; }
+  transition: background-color 500ms;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis; }
   .button:hover {
     background: #a30000; }
   .button.active {

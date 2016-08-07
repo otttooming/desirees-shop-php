@@ -20,24 +20,24 @@
 ?>
 
 <div class="container center777 transparentbutton">
-    <div class="row ">
+    <div class="row f-center">
 
         <?php if (  $fp_shopnav_1 ) : ?>
-          <div class="span6">
+          <div class="span4">
               <p>
-                <a class="button big" href="<?php echo the_field('fp_shopnav_link_1'); ?>">
-                  <span><?php echo the_field('fp_shopnav_text_1'); ?></span>
-                </a>
+                  <a class="button big w100 c-warm" href="<?php echo the_field('fp_shopnav_link_1'); ?>">
+                      <?php echo the_field('fp_shopnav_text_1'); ?>
+                  </a>
               </p>
           </div>
         <?php endif; ?>
 
         <?php if (  $fp_shopnav_2 ) : ?>
-          <div class="span6">
+          <div class="span4">
               <p>
-                <a class="button big" href="<?php the_field('fp_shopnav_link_2'); ?>">
-                  <span><?php the_field('fp_shopnav_text_2'); ?></span>
-                </a>
+                  <a class="button big w100 c-warm" href="<?php the_field('fp_shopnav_link_2'); ?>">
+                      <?php the_field('fp_shopnav_text_2'); ?>
+                  </a>
               </p>
           </div>
         <?php endif; ?>
@@ -113,30 +113,38 @@
 		<div class="imageboxshadow center777 f-center">
       <?php if ( get_field('fp_illustration_link_1') && get_field('fp_illustration_img_1') ) : ?>
   			<div class="span3">
-  				<a href="<?php the_field('fp_illustration_link_1'); ?>">
-  					<img class="lazyload" data-src="<?php echo wp_get_attachment_image_src(get_field('fp_illustration_img_1'), 'medium')[0]; ?>" alt="<?php echo get_the_title(get_field('fp_illustration_img_1')); ?>">
-  				</a>
+          <p>
+            <a href="<?php the_field('fp_illustration_link_1'); ?>">
+              <img class="lazyload" data-src="<?php echo wp_get_attachment_image_src(get_field('fp_illustration_img_1'), 'medium')[0]; ?>" alt="<?php echo get_the_title(get_field('fp_illustration_img_1')); ?>">
+            </a>
+          </p>
   			</div>
       <?php endif; ?>
       <?php if ( get_field('fp_illustration_link_2') && get_field('fp_illustration_img_2') ) : ?>
         <div class="span3">
-          <a href="<?php the_field('fp_illustration_link_2'); ?>">
-            <img class="lazyload" data-src="<?php echo wp_get_attachment_image_src(get_field('fp_illustration_img_2'), 'medium')[0]; ?>" alt="<?php echo get_the_title(get_field('fp_illustration_img_2')); ?>">
-          </a>
+          <p>
+            <a href="<?php the_field('fp_illustration_link_2'); ?>">
+              <img class="lazyload" data-src="<?php echo wp_get_attachment_image_src(get_field('fp_illustration_img_2'), 'medium')[0]; ?>" alt="<?php echo get_the_title(get_field('fp_illustration_img_2')); ?>">
+            </a>
+          </p>
         </div>
       <?php endif; ?>
       <?php if ( get_field('fp_illustration_link_3') && get_field('fp_illustration_img_3') ) : ?>
         <div class="span3">
-          <a href="<?php the_field('fp_illustration_link_3'); ?>">
-            <img class="lazyload" data-src="<?php echo wp_get_attachment_image_src(get_field('fp_illustration_img_3'), 'medium')[0]; ?>" alt="<?php echo get_the_title(get_field('fp_illustration_img_3')); ?>">
-          </a>
+          <p>
+            <a href="<?php the_field('fp_illustration_link_3'); ?>">
+              <img class="lazyload" data-src="<?php echo wp_get_attachment_image_src(get_field('fp_illustration_img_3'), 'medium')[0]; ?>" alt="<?php echo get_the_title(get_field('fp_illustration_img_3')); ?>">
+            </a>
+          </p>
         </div>
       <?php endif; ?>
       <?php if ( get_field('fp_illustration_link_4') && get_field('fp_illustration_img_4') ) : ?>
         <div class="span4">
-          <a href="<?php the_field('fp_illustration_link_4'); ?>">
-            <img class="lazyload" data-src="<?php echo wp_get_attachment_image_src(get_field('fp_illustration_img_4'), 'medium')[0]; ?>" alt="<?php echo get_the_title(get_field('fp_illustration_img_4')); ?>">
-          </a>
+          <p>
+            <a href="<?php the_field('fp_illustration_link_4'); ?>">
+              <img class="lazyload" data-src="<?php echo wp_get_attachment_image_src(get_field('fp_illustration_img_4'), 'medium')[0]; ?>" alt="<?php echo get_the_title(get_field('fp_illustration_img_4')); ?>">
+            </a>
+          </p>
         </div>
       <?php endif; ?>
 		</div>
@@ -152,7 +160,7 @@
   				<div>
   				  <?php the_field('fp_catdesc_text_1'); ?>
   				</div>
-          <a class="button small active" href="<?php the_field('fp_catdesc_btn_link_1'); ?>"><?php the_field('fp_catdesc_btn_1'); ?></a>
+          <p><a class="button small active" href="<?php the_field('fp_catdesc_btn_link_1'); ?>"><?php the_field('fp_catdesc_btn_1'); ?></a></p>
   			</div>
       <?php endif; ?>
 
@@ -162,7 +170,7 @@
           <div>
             <?php the_field('fp_catdesc_text_2'); ?>
           </div>
-          <a class="button small active" href="<?php the_field('fp_catdesc_btn_link_2'); ?>"><?php the_field('fp_catdesc_btn_2'); ?></a>
+          <p><a class="button small active" href="<?php the_field('fp_catdesc_btn_link_2'); ?>"><?php the_field('fp_catdesc_btn_2'); ?></a></p>
         </div>
       <?php endif; ?>
 		</div>
@@ -182,7 +190,7 @@
                   $thumbnail_id = get_woocommerce_term_meta( $term->term_id, 'thumbnail_id', true );
 
                   echo '<div class="span3">';
-                    echo '<a href="' . get_term_link( $term->slug, 'product_cat' ) . '" title="' . sprintf(__('View all post filed under %s', 'desirees'), $term->name) . '" class="">' . '<!--<img class="lazyload" data-src="' . $image = wp_get_attachment_url( $thumbnail_id ) . '">-->' . '<span class="button big">' . $term->name . '</span>' . '</a>';
+                    echo '<p class="w100"><a href="' . get_term_link( $term->slug, 'product_cat' ) . '" title="' . sprintf(__('View all products filed under %s', 'desirees'), $term->name) . '" class="w100">' . '<!--<img class="lazyload" data-src="' . $image = wp_get_attachment_url( $thumbnail_id ) . '">-->' . '<span class="button big w100">' . $term->name . '</span>' . '</a></p>';
                   echo '</div>';
               }
           }
