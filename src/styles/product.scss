@@ -147,6 +147,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   td {
     padding: 0;
@@ -155,6 +156,15 @@
 
   td.value {
     text-align: right;
+  }
+
+  .qty-block {
+    flex: 1;
+    margin: 15px 15px 15px 0;
+  }
+
+  .button {
+    flex: 1;
   }
 
   .variations_button {
