@@ -86,6 +86,18 @@ gulp.task('deploy', function () {
       '!node_modules/**'
     ];
 
+  } else if (gutil.env.php) {
+
+    var globs = [
+      '**/*.php',
+      '*.php',
+      '!images/**',
+      '!js/**',
+      '!src/**',
+      '!bower_components/**',
+      '!node_modules/**'
+    ];
+
   } else {
 
     var globs = [
@@ -97,7 +109,7 @@ gulp.task('deploy', function () {
       '!bower_components/**',
       '!node_modules/**'
     ];
-    
+
   }
 
   // using base = '.' will transfer everything to /public_html correctly
