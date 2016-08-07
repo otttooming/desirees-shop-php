@@ -71,21 +71,6 @@ hr {
 #swipebox-overlay img {
 	background: $color-white;
 }
-
-.breadcrumbs {
-	margin: 10px 0;
-	text-transform: uppercase;
-	a {
-		margin: 0 5px;
-		color: $color-warm;
-		&:first-child {
-			margin-left: 0;
-		}
-	}
-	@media screen and (min-width: 1200px) {
-		margin: 10px !important;
-	}
-}
 .widget-container select {
 	width: 187px !important;
 	height: 32px;
@@ -786,10 +771,6 @@ hr {
 	}
 	.footer-big-block {
 		width: 69%!important;
-	}
-	.breadcrumbs span:last-child {
-		margin-right: 5px;
-		font-weight: bold;
 	}
 }
 /* Tavapoe elemendid */

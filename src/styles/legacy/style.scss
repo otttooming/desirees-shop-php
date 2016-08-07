@@ -1280,58 +1280,14 @@ body.wide {
 	z-index: 1;
 }
 /* -------------------------------------------------- */
-/* Breadcrumbs
+/* Back to
 /* -------------------------------------------------- */
-.breadcrumbs {
-	box-sizing: border-box;
-	margin-top: 30px;
-	margin-bottom: 5px;
-	margin-left: 20px;
-	padding: 0 20px;
-}
-.woocommerce-breadcrumb {
-	float: left;
-}
-.page-template .breadcrumbs {
-	margin-bottom: 25px;
-	margin-left: 0;
-}
-.page-template-et-registration-php .breadcrumbs {
-	margin-top: 30px;
-	margin-bottom: 5px;
-	margin-left: 30px;
-}
-.content .page-breadcrumbs {
-	margin-top: 0 !important;
-	margin-bottom: 25px;
-	margin-left: 0 !important;
-}
-.page-template-contacts2-php .page-breadcrumbs {
-	margin-top: 30px !important;
-}
 .page-template-contacts2-php #map,
 .page-template-contacts2-php #map-image {
 	height: 400px!important;
 }
-#breadcrumb {
-	float: left;
-	font-size: 12px;
-}
 .delimeter {
 	padding: 0 6px 0 8px;
-}
-.breadcrumbs .current {
-	font-weight: 300;
-}
-#breadcrumb a {
-	padding: 2px 0;
-	font-size: 12px;
-	cursor: pointer;
-}
-.breadcrumbs a {
-	text-decoration: none;
-	font-weight: 300;
-	transition: all 0.2s ease-in-out;
 }
 .back-to {
 	float: right;
@@ -1351,12 +1307,6 @@ body.wide {
 .back-to:hover {}
 .back_to_previous_page a {
 	color: $color-grey;
-}
-#breadcrumb a:hover,
-.back-to:hover,
-.back-to:hover span {
-	color: $color-red;
-	cursor: pointer;
 }
 .back-to:before {
 	content: "\f104";

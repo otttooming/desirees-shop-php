@@ -2199,58 +2199,14 @@ body.wide {
   z-index: 1; }
 
 /* -------------------------------------------------- */
-/* Breadcrumbs
+/* Back to
 /* -------------------------------------------------- */
-.breadcrumbs {
-  box-sizing: border-box;
-  margin-top: 30px;
-  margin-bottom: 5px;
-  margin-left: 20px;
-  padding: 0 20px; }
-
-.woocommerce-breadcrumb {
-  float: left; }
-
-.page-template .breadcrumbs {
-  margin-bottom: 25px;
-  margin-left: 0; }
-
-.page-template-et-registration-php .breadcrumbs {
-  margin-top: 30px;
-  margin-bottom: 5px;
-  margin-left: 30px; }
-
-.content .page-breadcrumbs {
-  margin-top: 0 !important;
-  margin-bottom: 25px;
-  margin-left: 0 !important; }
-
-.page-template-contacts2-php .page-breadcrumbs {
-  margin-top: 30px !important; }
-
 .page-template-contacts2-php #map,
 .page-template-contacts2-php #map-image {
   height: 400px !important; }
 
-#breadcrumb {
-  float: left;
-  font-size: 12px; }
-
 .delimeter {
   padding: 0 6px 0 8px; }
-
-.breadcrumbs .current {
-  font-weight: 300; }
-
-#breadcrumb a {
-  padding: 2px 0;
-  font-size: 12px;
-  cursor: pointer; }
-
-.breadcrumbs a {
-  text-decoration: none;
-  font-weight: 300;
-  transition: all 0.2s ease-in-out; }
 
 .back-to {
   float: right;
@@ -2269,12 +2225,6 @@ body.wide {
 
 .back_to_previous_page a {
   color: #6e6e6e; }
-
-#breadcrumb a:hover,
-.back-to:hover,
-.back-to:hover span {
-  color: #a30000;
-  cursor: pointer; }
 
 .back-to:before {
   content: "\f104";
@@ -7224,9 +7174,6 @@ form.login .lost_password {
     margin-left: 150px; }
   .quanity-span {
     width: auto !important; }
-  .breadcrumbs {
-    margin-top: 10px !important;
-    margin-bottom: 10px !important; }
   .error,
   .info,
   .notice,
@@ -7730,12 +7677,6 @@ form.login .lost_password {
     margin-top: 10px; }
   .navbar .brand {
     padding-right: 340px; }
-  .breadcrumbs {
-    margin-bottom: 20px !important;
-    padding-left: 15px;
-    margin-top: 10px; }
-  .page-template .breadcrumbs {
-    margin-top: 10px; }
   .delimeter {
     padding: 0 4px 0 6px; }
   .shopping_cart_wrap ul {
@@ -8532,11 +8473,6 @@ form.login .lost_password {
   .grid_pagination_bottom_block .woocommerce_ordering select {
     margin-top: 25px;
     margin-left: 80px; }
-  .breadcrumbs {
-    margin-bottom: 15px !important;
-    margin-top: 10px !important;
-    float: left;
-    padding-left: 15px; }
   .delimeter {
     padding: 0 4px 0 6px; }
   .main-info .price-block {
@@ -8996,8 +8932,6 @@ form.login .lost_password {
     left: 40px !important; }
   form.track-order-box {
     width: 280px !important; }
-  .page-template-et-registration-php .breadcrumbs {
-    margin-left: 0; }
   .tab-content .col2-set .col-2 {
     width: 100%; }
   .tabs.checkout-accordion h3 {
@@ -9165,8 +9099,6 @@ form.login .lost_password {
     text-transform: uppercase; }
   .banners_top_row {
     margin-bottom: 10px; }
-  .breadcrumbs {
-    margin-bottom: 10px !important; }
   .grid_slider {
     margin-bottom: 10px; }
   .carousel {
@@ -10306,18 +10238,6 @@ hr {
 #swipebox-overlay img {
   background: #fff; }
 
-.breadcrumbs {
-  margin: 10px 0;
-  text-transform: uppercase; }
-  .breadcrumbs a {
-    margin: 0 5px;
-    color: #ff9500; }
-    .breadcrumbs a:first-child {
-      margin-left: 0; }
-  @media screen and (min-width: 1200px) {
-    .breadcrumbs {
-      margin: 10px !important; } }
-
 .widget-container select {
   width: 187px !important;
   height: 32px;
@@ -11008,10 +10928,7 @@ hr {
   .f-contacts {
     width: 25% !important; }
   .footer-big-block {
-    width: 69% !important; }
-  .breadcrumbs span:last-child {
-    margin-right: 5px;
-    font-weight: bold; } }
+    width: 69% !important; } }
 
 /* Tavapoe elemendid */
 .tava_333 {
@@ -13198,6 +13115,13 @@ input {
     margin: 0 0 0 1em;
     width: 1em;
     height: 1em; }
+
+.breadcrumbs {
+  text-transform: uppercase;
+  padding: 10px 0; }
+  .breadcrumbs a {
+    margin: 0 5px;
+    color: #ff9500; }
 
 .search__form {
   display: -ms-flexbox;

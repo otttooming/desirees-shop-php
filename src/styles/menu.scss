@@ -5,3 +5,13 @@
     // list-style: none;
   }
 }
+
+.breadcrumbs {
+	text-transform: uppercase;
+  padding: 10px 0;
+
+	a {
+		margin: 0 5px;
+		color: $color-warm;
+	}
+}
