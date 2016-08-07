@@ -1765,7 +1765,7 @@
 	.container {
 		box-sizing: border-box;
 		margin: 0 auto;
-		padding: 0 20px !important;
+		padding: 0 5px !important;
 		width: 320px !important;
 	}
 	.boxed .wrapper {
@@ -2069,9 +2069,6 @@
 	.checkout_td {
 		width: 40%;
 	}
-	#cart-quantity .quantity {
-		width: auto;
-	}
 	.checkout_input_small {
 		width: 170px!important;
 	}
@@ -2136,8 +2133,7 @@
 		display: none;
 	}
 	.cart_table_item .product-name {
-		font-size: 12px;
-		min-width: 115px;
+		font-size: 10px;
 	}
 	.checkout_cart td {
 		width: 35px;

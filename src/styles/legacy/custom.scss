@@ -16,14 +16,6 @@ hr {
 	width: 100%!important;
 	height: auto!important;
 }
-.product-name {
-	height: 35px;
-}
-.product-name a {
-	font-size: 13px !important;
-	font-style: italic;
-	line-height: inherit !important;
-}
 .product-grid .product-name-price {
 	text-align: center !important;
 }
@@ -978,9 +970,6 @@ span.copyright {
 		float: none !important;
 		margin-top: 20px !important;
 	}
-	table.shop_table {
-		display: inline-block;
-	}
 	.back-to777,
 	.grid_pagination_block,
 	.products-grid .product-grid.span2:hover .product-descr,
@@ -1116,6 +1105,8 @@ abbr[title] {
 	&__title {
 
 	}
+
+	input,
 	&__input {
 		width: 75px;
 		height: 36px!important;

@@ -4734,13 +4734,6 @@ ul.product_list_widget li:last-child {
 	-webkit-border-radius: 0;
 	border-radius: 0;
 }
-.cart_table_item .product-name,
-.checkout_table_item .product-name {
-	color: $color-grey;
-	text-align: left !important;
-	font-weight: 300;
-	font-size: 14px;
-}
 .cart_table_item .product-name .variation,
 .checkout_table_item .product-name .variation {
 	margin-top: 2px;
@@ -4753,6 +4746,7 @@ ul.product_list_widget li:last-child {
 .checkout_table_item .product-name .variation dt {
 	float: left;
 	font-weight: 300!important;
+	margin: 0;
 }
 .cart_table_item .product-name .variation dt,
 .checkout_table_item .product-name .variation dt {

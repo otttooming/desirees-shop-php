@@ -20,7 +20,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 <table class="cart table checkout_cart" cellspacing="0" style="margin-bottom: 20px;">
 	<thead class="cart__form-head">
 		<tr>
-			<th class="product-thumbnail cart_del_column">&nbsp;</th>
+			<th class="product-thumbnail cart_del_column visible-desktop">&nbsp;</th>
 			<th class="product-name"><?php _e('Product', ETHEME_DOMAIN); ?></th>
 			<th class="product-price cart_del_column"><?php _e('Price', ETHEME_DOMAIN); ?></th>
 			<th class="product-quantity"><?php _e('Qty', ETHEME_DOMAIN); ?></th>
@@ -41,7 +41,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 				<tr class = "<?php echo esc_attr( apply_filters('woocommerce_cart_table_item_class', 'cart_table_item', $values, $cart_item_key ) ); ?>">
 
 					<!-- The thumbnail -->
-					<td class="cart__thumbnail cart_del_column">
+					<td class="cart__thumbnail cart_del_column visible-desktop">
 						<?php
 							$thumbnail = apply_filters( 'woocommerce_in_cart_product_thumbnail', $_product->get_image(), $values, $cart_item_key );
 							printf('<a href="%s">%s</a>', esc_url( get_permalink( apply_filters('woocommerce_in_cart_product_id', $values['product_id'] ) ) ), $thumbnail );
@@ -117,7 +117,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 		<td colspan="6" class="actions">
 
 			<?php if ( get_option( 'woocommerce_enable_coupons' ) == 'yes' ) { ?>
-				<div class="coupon">
+				<div class="coupon cfx">
 
 					<label for="coupon_code"><?php _e('Coupon', ETHEME_DOMAIN); ?>:</label> <input name="coupon_code" class="input-text" id="coupon_code" value="" /> <input type="submit" class="button apply-coupon" name="apply_coupon" value="<?php _e('Apply Coupon', ETHEME_DOMAIN); ?>" />
 
@@ -128,7 +128,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 			<input type="submit" class="button update-button" name="update_cart" value="<?php _e('Update Cart', ETHEME_DOMAIN); ?>" />
 
-			<?php do_action('woocommerce_proceed_to_checkout'); ?>
+			<?php // do_action('woocommerce_proceed_to_checkout'); ?>
 
 			<?php wp_nonce_field('woocommerce-cart') ?>
 		</td>
