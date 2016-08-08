@@ -1382,17 +1382,11 @@ div.menu {
 .menu > ul > li > a:hover,
 .menu > ul > li.active > a,
 .menu > ul > li.over > a {
-	text-decoration: none;
-	border-bottom-style: solid;
-	border-bottom-width: 2px;
 	padding: 30px 16px 13px;
 }
 .menu .current-menu-item > a,
 .menu .current-menu-item > a:hover {
 	color: $color-grey;
-	text-decoration: none;
-	border-bottom-width: 2px !important;
-	border-bottom-style: solid;
 }
 .menu > ul > li:last-child > a,
 .menu > ul > li:last-child > a:hover {
@@ -1424,7 +1418,6 @@ div.menu {
 	display: none;
 	z-index: 999;
 	padding: 0;
-	margin-top: -9px;
 }
 .default-menu > ul > li > ul li {
 	display: block;
