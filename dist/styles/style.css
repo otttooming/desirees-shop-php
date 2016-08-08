@@ -12877,8 +12877,12 @@ input {
   width: 100%;
   margin: 0; }
 
-.slider__wide {
-  max-height: 300px; }
+.slider-promo__wrapper {
+  -ms-flex-align: center;
+      -ms-grid-row-align: center;
+      align-items: center; }
+  .slider-promo__wrapper img {
+    width: 100%; }
 
 .product__left {
   display: -ms-flexbox !important;

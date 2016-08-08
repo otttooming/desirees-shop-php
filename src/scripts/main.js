@@ -46,7 +46,7 @@ var productGallerySlider = new Swiper ('.product__gallery-slider', {
     prevButton: '.product__gallery-control .control__prev'
 });
 
-var productGallerySlider = new Swiper ('.slider__wide', {
+var productGallerySlider = new Swiper ('.slider-promo', {
     direction: 'horizontal',
     slidesPerView: '1',
     autoplay: '1500',

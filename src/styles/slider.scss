@@ -10,9 +10,14 @@
   margin: 0;
 }
 
-.slider {
-  
-  &__wide {
-    max-height: 300px;
+.slider-promo {
+
+  &__wrapper {
+    // max-height: 300px;
+    align-items: center;
+
+    img {
+      width: 100%;
+    }
   }
 }

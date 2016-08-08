@@ -45,8 +45,8 @@
     </div>
 </div>
 
-<div class="swiper-container slider__wide">
-    <div class="swiper-wrapper">
+<div class="swiper-container slider-promo">
+    <div class="slider-promo__wrapper swiper-wrapper">
 
         <?php if ($fp_slider_1_image) : ?>
   				<div class="swiper-slide">
