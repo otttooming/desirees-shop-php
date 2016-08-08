@@ -62,10 +62,13 @@ select {
   font-family: $typeface-primary;
 }
 
+input[type=text] {
+  min-height: 30px;
+}
+
 select,
 input {
   border-radius: 5px;
-  height: 30px;
   background: rgba($color-black, .3);
   margin: 0;
   padding: 0 10px;

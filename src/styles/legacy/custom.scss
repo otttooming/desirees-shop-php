@@ -212,8 +212,7 @@ ul.product_list_widget li img {
 }
 form .form-row.terms label a {
 	color: $color-warm;
-	font-weight: bold;
-	text-transform: uppercase;
+	text-transform: capitalize;
 }
 .page-title {
 	text-transform: inherit;
@@ -936,7 +935,7 @@ span.copyright {
 	padding: 25px;
 }
 .tab-content.tap-order #payment .terms {
-	padding: 25px;
+	padding: 20px;
 	border: 1px solid $color-black !important;
 	background-color: #333;
 }
