@@ -83,6 +83,17 @@
   }
 }
 
+.checkout-default .tab-content h3 {
+	font-size: 20px;
+	color: $color-grey;
+	text-transform: uppercase;
+	font-weight: 400;
+  
+  label {
+    font-size: inherit;
+  }
+}
+
 .checkout_cart {
   
   .product-total {
