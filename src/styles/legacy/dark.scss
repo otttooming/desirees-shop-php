@@ -449,39 +449,12 @@ div.product_meta a {
 .tab-content h3 {
 	color: white !important;
 }
-.etheme-popup-content,
-div.pp_woocommerce .pp_content_container {
-	background-color: $color-charcoal !important;
-	border-top: 1px solid $color-red;
-	border-left: 1px solid $color-black !important;
-	border-right: 1px solid $color-black !important;
-	border-bottom: 1px solid $color-black !important;
-}
-.pp_content_container #reply-title {
-	padding-right: 35px;
-	color: $color-white;
-}
-div.pp_woocommerce .pp_close {
-	background-color: $color-charcoal !important;
-}
-div.pp_woocommerce #respond #commentform #submit {
-	background: #333;
-}
-div.pp_woocommerce #respond #commentform #submit:hover {
-	background: $color-red;
-}
 .custom-tabs1 {
 	border-right: 1px solid $color-black !important;
 }
 .custom-tabs1,
 .custom-tabs2 {
 	color: $color-white;
-}
-.etheme-popup-content em {
-	color: $color-white;
-}
-.etheme-popup-content .button.cont-shop {
-	background: #333;
 }
 .page-template-contacts2-php .contact-form h1,
 .page-title {
@@ -558,10 +531,6 @@ div.pp_woocommerce #respond #commentform #submit:hover {
 	padding-top: 4px;
 	padding-bottom: 7px;
 }
-#reviews #comments ol.commentlist li .comment-text {
-	background: $color-charcoal !important;
-	border: 1px solid $color-black !important;
-}
 .post-information {
 	border-bottom: 1px solid $color-black;
 	background-color: #333;
@@ -575,25 +544,14 @@ div.pp_woocommerce #respond #commentform #submit:hover {
 .comment-body {
 	border-bottom: 1px solid $color-black;
 }
-.portfolio-item .portfolio-mask {
-	background: $color-black;
-}
 .entry-title {
 	border-bottom: 1px solid $color-black;
 	color: $color-white;
 }
-.portfolio-filters {
-	border-bottom: 1px solid $color-black;
-}
 .blog2_icon_author,
-.blog_icon_date,
-.portfolio-content h3 {
+.blog_icon_date {
 	color: $color-white;
 }
-.portfolio-content .post-information {
-	border-top: 1px solid $color-black;
-}
-.portfolio-content h2,
 .review_title {
 	color: $color-white;
 }
@@ -746,36 +704,12 @@ form.register .register-head i {
 .widget-container a:hover {
 	color: $color-red;
 }
-.portfolio-item .portfolio-mask {
-	height: 100%;
-}
 @media (max-width: 979px) {
 	.header-type-variant4 #main-nav,
 	.header-type-variant5 #main-nav {
 		background: $color-black !important;
 		min-height: 0;
 	}
-	.portfolio-content .post-information {
-		border-top: none;
-		margin-top: 10px;
-	}
-}
-.etheme_cp .etheme_cp_content .layout-select {
-	background-color: $color-white !important;
-	border-color: $color-grey !important;
-	color: $color-grey !important;
-}
-div.light_rounded .pp_content,
-div.pp_default .pp_bottom .pp_left,
-div.pp_default .pp_bottom .pp_middle,
-div.pp_default .pp_bottom .pp_right,
-div.pp_default .pp_content,
-div.pp_default .pp_content_container .pp_left,
-div.pp_default .pp_content_container .pp_right,
-div.pp_default .pp_top .pp_left,
-div.pp_default .pp_top .pp_middle,
-div.pp_default .pp_top .pp_right {
-	background-color: #333 !important;
 }
 .wide .tp-rightarrow {
 	right: 8px !important;
@@ -840,13 +774,8 @@ div.pp_default .pp_top .pp_right {
 	padding-bottom: 5px !important;
 }
 /* Demo panel */
-.etheme_cp {
-	background: #333 !important;
-	color: $color-white;
-}
 .footer_menu a,
 .textwidget p,
-.tweets1,
 blockquote {
 	color: #999;
 }
