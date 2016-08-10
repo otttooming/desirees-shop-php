@@ -78,7 +78,7 @@ gulp.task('deploy', function () {
   if (gutil.env.css) {
 
     var globs = [
-      'dist/styles/*',
+      'dist/styles/*.min.css',
       '!images/**',
       '!js/**',
       '!src/**',
