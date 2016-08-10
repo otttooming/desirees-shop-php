@@ -1363,10 +1363,6 @@ div.menu {
 .menu > ul > li.over > a {
 	padding: 30px 16px 13px;
 }
-.menu .current-menu-item > a,
-.menu .current-menu-item > a:hover {
-	color: $color-grey;
-}
 .menu > ul > li:last-child > a,
 .menu > ul > li:last-child > a:hover {
 	margin-right: 0;
@@ -3765,9 +3761,6 @@ ul.product_list_widget li:last-child {
 .woocommerce-account form {
 	float: left;
 }
-.woocommerce-account form .button {
-	float: right;
-}
 /* -------------------------------------------------- */
 /* Checkout page
 /* -------------------------------------------------- */
@@ -4047,9 +4040,6 @@ ul.product_list_widget li:last-child {
 	float: left;
 	margin-top: 0;
 }
-.checkout_coupon .form-row.form-row-last input {
-	margin-top: 8px;
-}
 .tab-content.register-tab-content,
 .tab-content.tab-billing,
 .tab-content.tab-login,
@@ -4232,9 +4222,6 @@ ul.product_list_widget li:last-child {
 	text-transform: uppercase;
 	font-size: 16px;
 }
-.cart_totals h2 {
-	font-weight: 300;
-}
 .wc-checkout-totals {
 	margin-bottom: 20px;
 	font-weight: 300;
@@ -4291,11 +4278,6 @@ ul.product_list_widget li:last-child {
 }
 .checkout_cart .update-button {
 	float: right;
-}
-.checkout_coupon .form-row-first #coupon_code {
-	margin-top: 8px !important;
-	height: 20px;
-	margin-right: 20px;
 }
 .with-sidebar-left #coupon_code,
 .with-sidebar-right #coupon_code {

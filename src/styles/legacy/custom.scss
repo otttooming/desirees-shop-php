@@ -214,9 +214,6 @@ form .form-row.terms label a {
 	color: $color-warm;
 	text-transform: capitalize;
 }
-.page-title {
-	text-transform: inherit;
-}
 .span3.shopping_cart_wrap.visible-desktop {
 	margin-top: 15px;
 }
@@ -564,7 +561,7 @@ h3 {
 /* Shadows */
 .product-slide .product-grid,
 .products_grid .product-grid {
-	background: rgba(51, 51, 51, 0.5) !important;
+	background: rgba($color-grey, .5);
 	box-shadow: 2px 2px 0 $color-black;
 }
 

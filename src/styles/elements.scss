@@ -19,6 +19,12 @@ h6 {
   line-height: 1.2;
 }
 
+h1,
+h2 {
+  text-transform: uppercase;
+  font-weight: $font-weight-normal;
+}
+
 h2 {
   margin: 0 0 15px;
 }
@@ -75,6 +81,8 @@ input {
   box-sizing: border-box;
   line-height: 30px;
   box-shadow: none;
+  box-shadow: $shadow-std;
+  vertical-align: middle;
 }
 
 .amount {

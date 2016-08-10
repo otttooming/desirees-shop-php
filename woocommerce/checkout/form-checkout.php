@@ -86,13 +86,14 @@ woocommerce_checkout_coupon_form(); ?>
                 	
                 	<div class="create-account-form">
                 	
-                		<!--<p><?php _e('Create an account by entering the information below. If you are a returning customer please login with your username at the top of the page.', ETHEME_DOMAIN); ?></p>-->
+                		<p><?php _e('Create an account by entering the information below. If you are a returning customer please login with your username at the top of the page.', ETHEME_DOMAIN); ?></p>
                 	
-                		<?php foreach ($woocommerce_checkout->checkout_fields['account'] as $key => $field) : ?>
-                		
-                			<?php woocommerce_form_field( $key, $field, $woocommerce_checkout->get_value( $key ) ); ?>
-                		
-                		<?php endforeach; ?>
+                    <?php if ( is_user_logged_in() ) { ?>
+                    	<a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account','woothemes'); ?>"><?php _e('My Account','woothemes'); ?></a>
+                    <?php } 
+                    else { ?>
+                    	<a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('Login / Register','woothemes'); ?>"><?php _e('Login / Register','woothemes'); ?></a>
+                    <?php } ?>
                 	
                 	</div>
                 	

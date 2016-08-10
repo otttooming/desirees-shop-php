@@ -2275,10 +2275,6 @@ div.menu {
 .menu > ul > li.over > a {
   padding: 30px 16px 13px; }
 
-.menu .current-menu-item > a,
-.menu .current-menu-item > a:hover {
-  color: #333; }
-
 .menu > ul > li:last-child > a,
 .menu > ul > li:last-child > a:hover {
   margin-right: 0; }
@@ -4663,9 +4659,6 @@ ul.product_list_widget li:last-child {
 .woocommerce-account form {
   float: left; }
 
-.woocommerce-account form .button {
-  float: right; }
-
 /* -------------------------------------------------- */
 /* Checkout page
 /* -------------------------------------------------- */
@@ -4945,9 +4938,6 @@ ul.product_list_widget li:last-child {
   float: left;
   margin-top: 0; }
 
-.checkout_coupon .form-row.form-row-last input {
-  margin-top: 8px; }
-
 .tab-content.register-tab-content,
 .tab-content.tab-billing,
 .tab-content.tab-login,
@@ -5129,9 +5119,6 @@ ul.product_list_widget li:last-child {
   text-transform: uppercase;
   font-size: 16px; }
 
-.cart_totals h2 {
-  font-weight: 300; }
-
 .wc-checkout-totals {
   margin-bottom: 20px;
   font-weight: 300; }
@@ -5187,11 +5174,6 @@ ul.product_list_widget li:last-child {
 
 .checkout_cart .update-button {
   float: right; }
-
-.checkout_coupon .form-row-first #coupon_code {
-  margin-top: 8px !important;
-  height: 20px;
-  margin-right: 20px; }
 
 .with-sidebar-left #coupon_code,
 .with-sidebar-right #coupon_code {
@@ -9703,9 +9685,6 @@ form .form-row.terms label a {
   color: #ff9500;
   text-transform: capitalize; }
 
-.page-title {
-  text-transform: inherit; }
-
 .span3.shopping_cart_wrap.visible-desktop {
   margin-top: 15px; }
 
@@ -10047,7 +10026,7 @@ h3 {
 /* Shadows */
 .product-slide .product-grid,
 .products_grid .product-grid {
-  background: rgba(51, 51, 51, 0.5) !important;
+  background: rgba(51, 51, 51, 0.5);
   box-shadow: 2px 2px 0 #151515; }
 
 /* Hover description */
@@ -11937,6 +11916,11 @@ h5,
 h6 {
   line-height: 1.2; }
 
+h1,
+h2 {
+  text-transform: uppercase;
+  font-weight: 400; }
+
 h2 {
   margin: 0 0 15px; }
 
@@ -11980,7 +11964,9 @@ input {
   padding: 0 10px;
   box-sizing: border-box;
   line-height: 30px;
-  box-shadow: none; }
+  box-shadow: none;
+  box-shadow: 2px 2px #151515;
+  vertical-align: middle; }
 
 .amount {
   padding: 5px 10px;
@@ -12456,6 +12442,7 @@ input {
   margin-left: 10px; }
 
 .coupon {
+  text-align: left;
   margin: 0 0 20px; }
 
 .wc_payment_method {
@@ -12476,6 +12463,19 @@ input {
   background-color: #151515;
   box-shadow: 0 0 3px #151515;
   box-sizing: border-box; }
+
+.form-login {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .form-login__col {
+    background: rgba(51, 51, 51, 0.5);
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px #151515; }
 
 /*! PhotoSwipe main CSS by Dmitry Semenov | photoswipe.com | MIT license */
 /*
