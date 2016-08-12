@@ -65,6 +65,17 @@
 
 .cart-checkout {
   
+  &__place-order {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    .terms {
+      margin: 0;
+    }
+  }
+  
   &__place-order-button {
     float: right;
   }

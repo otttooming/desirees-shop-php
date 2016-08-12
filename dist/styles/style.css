@@ -12398,6 +12398,18 @@ input {
   .cart_totals tr:nth-child(2) {
     background: rgba(21, 21, 21, 0.2); }
 
+.cart-checkout__place-order {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .cart-checkout__place-order .terms {
+    margin: 0; }
+
 .cart-checkout__place-order-button {
   float: right; }
 
