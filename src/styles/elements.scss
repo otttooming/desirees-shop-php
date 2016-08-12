@@ -80,14 +80,17 @@ input {
   padding: 0 10px;
   box-sizing: border-box;
   line-height: 30px;
-  box-shadow: none;
   box-shadow: $shadow-std;
   vertical-align: middle;
+  outline: none;
+  border: 1px solid $color-grey;
+  font-size: 12px;
+  border-radius: $border-radius-std;
 }
 
 .amount {
   padding: 5px 10px;
-  box-shadow: 2px 2px $color-black;
+  box-shadow: $shadow-std;
   border-radius: 5px;
   background-color: $color-red;
   text-shadow: 2px 2px $color-black;

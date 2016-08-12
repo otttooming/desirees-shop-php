@@ -1312,14 +1312,6 @@ abbr[title] {
   background-position: 91% center;
   background-repeat: no-repeat; }
 
-input,
-select {
-  outline: none !important;
-  border: 1px solid #333;
-  font-size: 12px;
-  -webkit-appearance: none;
-  border-radius: 0 !important; }
-
 input[type="file"],
 select {
   line-height: 20px; }
@@ -9849,10 +9841,6 @@ h3 {
   font-style: normal;
   text-transform: none !important; }
 
-.product-slide .product-grid:hover,
-.products_grid .product-grid:hover {
-  border-color: transparent !important; }
-
 .woocommerce-message {
   color: #fff !important; }
 
@@ -10016,18 +10004,22 @@ h3 {
 .archive .veebipoodmenu > a,
 .archive .veebipoodmenu > a:hover {
   background-color: #a30000 !important;
-  color: #fff !important; }
+  color: #fff !important;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46);
+  border-radius: 3px; }
 
 .single-product .veebipoodmenu > a,
 .single-product .veebipoodmenu > a:hover {
   background-color: #a30000 !important;
-  color: #fff !important; }
+  color: #fff !important;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46);
+  border-radius: 3px; }
 
 /* Shadows */
 .product-slide .product-grid,
 .products_grid .product-grid {
   background: rgba(51, 51, 51, 0.5);
-  box-shadow: 2px 2px 0 #151515; }
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46); }
 
 /* Hover description */
 .products-grid .product-descr {
@@ -10085,7 +10077,7 @@ h3 {
   margin-top: 5px;
   padding: 10px 0;
   background-color: #333;
-  box-shadow: 2px 2px #151515;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46);
   text-align: center; }
 
 .more-info:hover {
@@ -10275,7 +10267,7 @@ span.copyright {
   min-height: 170px;
   padding: 10px 20px;
   background-color: #333;
-  box-shadow: 2px 2px #151515; }
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46); }
 
 .tavpood_infoblock h2 {
   margin: 0; }
@@ -10380,7 +10372,8 @@ span.copyright {
 .tab-content.tap-order #payment .terms {
   padding: 20px;
   border: 1px solid #151515 !important;
-  background-color: #333; }
+  background-color: #333;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46); }
 
 .product-category-description {
   padding: 20px;
@@ -10427,11 +10420,11 @@ span.copyright {
   text-align: center; }
 
 .company_list3 p {
-  text-shadow: 2px 2px #151515;
+  text-shadow: 0 0px 15px rgba(0, 0, 0, 0.46);
   font-size: 125%; }
 
 .company_list3 h3 {
-  text-shadow: 2px 2px #151515; }
+  text-shadow: 0 0px 15px rgba(0, 0, 0, 0.46); }
 
 .company_list3_contacts p {
   display: inline-block;
@@ -11964,13 +11957,16 @@ input {
   padding: 0 10px;
   box-sizing: border-box;
   line-height: 30px;
-  box-shadow: none;
-  box-shadow: 2px 2px #151515;
-  vertical-align: middle; }
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46);
+  vertical-align: middle;
+  outline: none;
+  border: 1px solid #333;
+  font-size: 12px;
+  border-radius: 3px; }
 
 .amount {
   padding: 5px 10px;
-  box-shadow: 2px 2px #151515;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46);
   border-radius: 5px;
   background-color: #a30000;
   text-shadow: 2px 2px #151515;
@@ -12011,7 +12007,7 @@ input {
   padding: 5px 10px;
   border-radius: 5px;
   background-color: #a30000;
-  box-shadow: 2px 2px #151515;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46);
   text-shadow: 2px 2px #151515;
   color: #fff !important;
   line-height: normal; }
@@ -12028,7 +12024,7 @@ input {
   display: -ms-flexbox;
   display: flex;
   background-color: #151515;
-  box-shadow: 0 0 3px #151515;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46);
   padding: 0 20px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -12169,7 +12165,7 @@ input {
   color: #fff !important;
   border-radius: 3px;
   background-color: #a30000;
-  box-shadow: 2px 2px #151515;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46);
   text-shadow: 2px 2px #151515;
   font-size: 13px !important;
   line-height: normal;
@@ -12315,8 +12311,8 @@ input {
   text-transform: uppercase;
   color: #fff;
   border: none;
-  box-shadow: 2px 2px #151515;
-  text-shadow: 2px 2px #151515;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46);
+  text-shadow: 0 0px 15px rgba(0, 0, 0, 0.46);
   font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
   font-size: 11px;
   transition: background-color 500ms;
@@ -12356,7 +12352,7 @@ input {
   height: 40px;
   padding: 0 15px;
   margin: 0;
-  box-shadow: 2px 2px #151515; }
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46); }
 
 .search__select {
   background: #151515; }
@@ -12398,7 +12394,7 @@ input {
   text-align: center; }
 
 .cart_totals {
-  box-shadow: 2px 2px #151515; }
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46); }
   .cart_totals tr:nth-child(2) {
     background: rgba(21, 21, 21, 0.2); }
 
@@ -12461,7 +12457,7 @@ input {
 .sidebar_grid > .widget-container {
   padding: 20px;
   background-color: #151515;
-  box-shadow: 0 0 3px #151515;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46);
   box-sizing: border-box; }
 
 .form-login {
@@ -12475,7 +12471,7 @@ input {
     background: rgba(51, 51, 51, 0.5);
     padding: 20px;
     box-sizing: border-box;
-    box-shadow: 2px 2px #151515; }
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46); }
 
 /*! PhotoSwipe main CSS by Dmitry Semenov | photoswipe.com | MIT license */
 /*

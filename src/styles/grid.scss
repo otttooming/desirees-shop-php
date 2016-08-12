@@ -13,7 +13,7 @@
     line-height: 45px;
     display: flex;
     background-color: #151515;
-    box-shadow: 0 0 3px $color-black;
+    box-shadow: $shadow-std;
     padding: 0 20px;
     justify-content: space-around;
     flex-wrap: wrap;

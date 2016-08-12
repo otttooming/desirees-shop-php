@@ -8,6 +8,7 @@ $color-red: #a30000; // Alternative dark color-red
 $color-tertiary: #adff2f;
 $color-black: #151515;
 $color-charcoal: #222;
+// $color-charcoal: #261c2f;
 $color-grey: #333;
 $color-white: #fff;
 $color-blue: #11aff1;
@@ -21,6 +22,10 @@ $font-weight-bold: 700;
 
 $line-height-normal: 1.2;
 
-$shadow-std: 2px 2px $color-black;
+// $shadow-std: 2px 2px $color-black;
+
+$shadow-std: 0 0px 15px rgba(0, 0, 0, 0.46);
 
 $transition-normal: 500ms;
+
+$border-radius-std: 3px;

@@ -380,10 +380,6 @@ h3 {
 	font-style: normal;
 	text-transform: none !important;
 }
-.product-slide .product-grid:hover,
-.products_grid .product-grid:hover {
-	border-color: transparent !important;
-}
 .woocommerce-message {
 	color: $color-white !important;
 }
@@ -551,18 +547,22 @@ h3 {
 .archive .veebipoodmenu > a:hover {
 	background-color: $color-red !important;
 	color: $color-white!important;
+	box-shadow: $shadow-std;
+	border-radius: 3px;
 }
 
 .single-product .veebipoodmenu > a,
 .single-product .veebipoodmenu > a:hover {
 	background-color: $color-red !important;
 	color: $color-white!important;
+	box-shadow: $shadow-std;
+	border-radius: 3px;
 }
 /* Shadows */
 .product-slide .product-grid,
 .products_grid .product-grid {
 	background: rgba($color-grey, .5);
-	box-shadow: 2px 2px 0 $color-black;
+	box-shadow: $shadow-std;
 }
 
 /* Hover description */
@@ -923,6 +923,7 @@ span.copyright {
 	padding: 20px;
 	border: 1px solid $color-black !important;
 	background-color: #333;
+	box-shadow: $shadow-std;
 }
 .product-category-description {
 	padding: 20px;
