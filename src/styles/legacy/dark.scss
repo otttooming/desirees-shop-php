@@ -409,24 +409,10 @@ del {
 .widget_price_filter .price_label {
 	color: white !important;
 }
-/* Single Product */
-hr {
-	border-bottom: 0 solid $color-black;
-	border-top: 1px solid $color-black;
-}
-.product-stock {
-	color: $color-white;
-}
 .product-code > span {
 	color: $color-grey;
 }
-.product-stock .stock span {
-	color: $color-white;
-}
 .label label {
-	color: $color-white;
-}
-div.product_meta span {
 	color: $color-white;
 }
 .product_description_mainblock .product_meta .sku {

@@ -225,12 +225,6 @@ dt {
 .alignleft {
 	float: left;
 }
-hr {
-	border: 0;
-	border-top: 1px solid $color-white;
-	border-bottom: 1px solid $color-white;
-	margin: 20px 0;
-}
 .clear,
 .clearfix:after {
 	clear: both;
@@ -4119,12 +4113,10 @@ ul.product_list_widget li:last-child {
 }
 .entry-title {
 	margin: 30px 0;
-	padding-bottom: 30px;
+	padding-bottom: 10px;
 	border-bottom: 1px solid $color-grey;
 	color: $color-grey;
-	text-transform: uppercase;
 	font-weight: 300;
-	font-size: 28px;
 }
 .woocommerce-cart .page-title {
 	border-bottom: none;

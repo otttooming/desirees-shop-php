@@ -37,6 +37,10 @@ p, td {
   font-family: $typeface-secondary;
 }
 
+p {
+  line-height: 1.4;
+}
+
 table {
   width: 100%;
 }
@@ -86,6 +90,12 @@ input {
   border: 1px solid $color-grey;
   font-size: 12px;
   border-radius: $border-radius-std;
+}
+
+hr {
+  border-width: 0;
+  border-top: 1px solid $color-grey;
+  margin: 15px 0;
 }
 
 .amount {

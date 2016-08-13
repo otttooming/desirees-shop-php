@@ -18,12 +18,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	  <?php echo content(40); ?>
 	</div>
 
-	<a class="more-info" href="#content_tab_1" >
+	<a class="button" href="#content_tab_1" >
 	  <span class="more-info__text">
-	    <?php _e('More information', ETHEME_DOMAIN) ?>
+	    <?php _e('Read more', ETHEME_DOMAIN) ?>
 	  </span>
-
-	  <i class="more-info__icon icon-chevron-down"></i>
 	</a>
 
 	<hr>

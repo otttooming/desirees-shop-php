@@ -40,6 +40,10 @@
   &__gallery {
     // margin: 10px 0;
   }
+  
+  &__gallery-control {
+    margin: 10px 0;
+  }
 
   &__gallery-slider {
     background: $color-white;
@@ -47,6 +51,12 @@
 
   .swiper-wrapper {
     align-items: center;
+  }
+  
+  &__image {
+    padding: 1px;
+    box-sizing: border-box;
+    border-radius: $border-radius-std;
   }
 
   &__image-object {
@@ -190,7 +200,7 @@
 }
 
 .product-stock {
-  margin: 20px 0;
+  margin: 15px 0;
 }
 
 .product-cart {

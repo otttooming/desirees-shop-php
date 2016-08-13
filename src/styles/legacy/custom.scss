@@ -6,9 +6,6 @@
 select {
 	-moz-appearance: none;
 }
-hr {
-	border: 1px solid $color-black;
-}
 .main-image {
 	background-color: $color-white;
 }
@@ -393,7 +390,7 @@ h3 {
 	color: #adff2f !important;
 }
 .entry-title {
-	margin: 0 0 20px !important;
+	margin: 0 0 10px !important;
 }
 .cart_table_item .variation p {
 	color: $color-warm;
@@ -610,7 +607,6 @@ h3 {
 }
 /*Read more in short excerpt*/
 .product__excerpt {
-	font-size: 14px;
 }
 .more-info {
 	display: block;
@@ -640,9 +636,6 @@ h3 {
 }
 .entry-title {
 	border-bottom: 1px solid $color-grey!important;
-}
-hr {
-	border-top: 1px solid $color-grey!important;
 }
 .single_variation_wrap .single_variation p.stock {
 	display: none;
