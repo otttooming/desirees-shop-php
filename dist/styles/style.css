@@ -2239,7 +2239,6 @@ div.menu {
   background: transparent;
   text-decoration: none;
   border-bottom: 1px solid transparent;
-  text-shadow: 0 1px 0 #fff;
   padding: 20px 16px;
   margin: 0; }
 
@@ -6226,7 +6225,6 @@ form.login .lost_password {
 
 .hide-text {
   color: transparent;
-  text-shadow: none;
   background-color: transparent;
   border: 0; }
 
@@ -10007,7 +10005,6 @@ h3 {
   padding: 15px;
   background-color: #a30000;
   border-radius: 5px;
-  text-shadow: 1px 1px #151515;
   font-size: 13px;
   z-index: 9999;
   transition: 250ms; }
@@ -10379,11 +10376,7 @@ span.copyright {
   text-align: center; }
 
 .company_list3 p {
-  text-shadow: 0 0px 15px rgba(0, 0, 0, 0.46);
   font-size: 125%; }
-
-.company_list3 h3 {
-  text-shadow: 0 0px 15px rgba(0, 0, 0, 0.46); }
 
 .company_list3_contacts p {
   display: inline-block;
@@ -10651,7 +10644,6 @@ del {
   border-top: 1px solid #151515; }
 
 .menu > ul > li > a {
-  text-shadow: 0 1px 0 #151515;
   color: #fff; }
 
 .default-menu > ul > li ul,
@@ -11828,7 +11820,8 @@ div.pp_overlay {
 /* END media query (min-width:1200px) */
 body {
   font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
-  background-image: radial-gradient(circle at 50%, rgba(17, 52, 181, 0.9) 40%, rgba(234, 0, 64, 0.9) 100%); }
+  background-image: radial-gradient(circle at 50%, rgba(17, 52, 181, 0.9) 40%, rgba(234, 0, 64, 0.9) 100%);
+  text-shadow: 2px 2px 5px #151515; }
 
 a {
   cursor: pointer;
@@ -11903,6 +11896,7 @@ input {
   border-radius: 3px; }
 
 hr {
+  width: 100%;
   border-width: 0;
   border-top: 1px solid #333;
   margin: 15px 0; }
@@ -11912,7 +11906,6 @@ hr {
   box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46);
   border-radius: 5px;
   background-color: #a30000;
-  text-shadow: 2px 2px #151515;
   color: #fff;
   line-height: normal;
   font-family: "Oswald", "Helvetica Neue", Arial, sans-serif; }
@@ -11951,7 +11944,6 @@ hr {
   border-radius: 5px;
   background-color: #a30000;
   box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46);
-  text-shadow: 2px 2px #151515;
   color: #fff !important;
   line-height: normal; }
 
@@ -12120,7 +12112,6 @@ hr {
   border-radius: 3px;
   background-color: #a30000;
   box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46);
-  text-shadow: 2px 2px #151515;
   font-size: 13px !important;
   line-height: normal;
   -ms-flex: 1;
@@ -12268,7 +12259,6 @@ hr {
   color: #fff;
   border: none;
   box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46);
-  text-shadow: 0 0px 15px rgba(0, 0, 0, 0.46);
   font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
   font-size: 11px;
   transition: background-color 500ms;

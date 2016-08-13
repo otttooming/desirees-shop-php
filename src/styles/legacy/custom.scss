@@ -575,7 +575,7 @@ h3 {
 	padding: 15px;
 	background-color: $color-red;
 	border-radius: 5px;
-	text-shadow: 1px 1px $color-black;
+	
 	font-size: 13px;
 	z-index: 9999;
 	transition: 250ms;
@@ -962,11 +962,11 @@ span.copyright {
 	text-align: center;
 }
 .company_list3 p {
-	text-shadow: $shadow-std;
+	
 	font-size: 125%;
 }
 .company_list3 h3 {
-	text-shadow: $shadow-std;
+	
 }
 .company_list3_contacts p {
 	display: inline-block;
