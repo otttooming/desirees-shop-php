@@ -14,6 +14,8 @@
 
     background: $color-black;
     transition: color $transition-normal;
+    box-shadow: $shadow-std;
+    border-radius: $border-radius-std;
   }
 
   &__up,

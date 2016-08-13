@@ -79,13 +79,15 @@ hr {
 .header-type-default .header {
 	padding-top: 15px;
 }
-#back-to-top.btn-style-standart {
+#back-to-top {
 	right: 15px;
 	bottom: 15px!important;
 }
-#back-to-top.btn-style-standart a {
+#top-link {
 	background: $color-red url("../images/legacy/arrow_up_2.png") no-repeat 12px center !important;
 	color: $color-white !important;
+	box-shadow: $shadow-std;
+	border-radius: $border-radius-std;
 }
 /*FIXed header slimdown */
 .fixed-header-area .menu > ul > li > ul {
