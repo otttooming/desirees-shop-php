@@ -424,14 +424,8 @@ video {
 audio:not([controls]) {
   display: none; }
 
-html {
-  font-size: 100%;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%; }
-
 a:focus {
   outline: thin dotted #333;
-  outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px; }
 
 a:active,
@@ -669,7 +663,6 @@ input[type="file"]:focus,
 input[type="radio"]:focus,
 select:focus {
   outline: thin dotted #333;
-  outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px; }
 
 input:-moz-placeholder,
@@ -920,10 +913,6 @@ table {
 .affix {
   position: fixed; }
 
-html {
-  -webkit-text-size-adjust: none;
-  /* Prevent font scaling in landscape */ }
-
 /* -------------------------------------------------- */
 /* Body
 /* -------------------------------------------------- */
@@ -1008,7 +997,6 @@ a {
 
 a:focus {
   outline: thin dotted #333;
-  outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px; }
 
 a:active,
@@ -11818,6 +11806,12 @@ div.pp_overlay {
     width: 125px; } }
 
 /* END media query (min-width:1200px) */
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: none; }
+
 body {
   font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
   background-image: radial-gradient(circle at 50%, rgba(17, 52, 181, 0.9) 40%, rgba(234, 0, 64, 0.9) 100%);

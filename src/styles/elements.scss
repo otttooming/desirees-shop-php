@@ -1,3 +1,10 @@
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: none; // Prevent font scaling in landscape
+}
+
 body {
   font-family: $typeface-primary;
   background-image: radial-gradient(circle at 50%, rgba(17, 52, 181, 0.9) 40%, rgba(234, 0, 64, 0.9) 100%);

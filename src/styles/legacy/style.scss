@@ -1,9 +1,5 @@
 // scss-lint:disable all
 
-html {
-	-webkit-text-size-adjust: none;
-	/* Prevent font scaling in landscape */
-}
 /* -------------------------------------------------- */
 /* Body
 /* -------------------------------------------------- */
@@ -88,7 +84,6 @@ a {
 }
 a:focus {
 	outline: thin dotted #333;
-	outline: 5px auto -webkit-focus-ring-color;
 	outline-offset: -2px;
 }
 a:active,

@@ -31,14 +31,8 @@ video {
 audio:not([controls]) {
 	display: none;
 }
-html {
-	font-size: 100%;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
-}
 a:focus {
 	outline: thin dotted #333;
-	outline: 5px auto -webkit-focus-ring-color;
 	outline-offset: -2px;
 }
 a:active,
@@ -276,7 +270,6 @@ input[type="file"]:focus,
 input[type="radio"]:focus,
 select:focus {
 	outline: thin dotted #333;
-	outline: 5px auto -webkit-focus-ring-color;
 	outline-offset: -2px;
 }
 input:-moz-placeholder,
