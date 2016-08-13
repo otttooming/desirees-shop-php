@@ -418,9 +418,9 @@ function etheme_get_wc_categories_menu($title = 'Categories'){
     global $wp_query;
     ?>
         <div class="block cats widget-container">
-            <div class="block-head">
+            <h2 class="block-head">
                 <?php echo ($title != '') ? $title : 'Categories'; ?>
-            </div>
+            </h2>
             <div class="block-content">
             	<?php
                     $instance_categories = get_terms( 'product_cat', 'hide_empty=0&parent=0');

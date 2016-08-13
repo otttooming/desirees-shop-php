@@ -4,6 +4,8 @@
     display: flex!important;
     flex-direction: column;
     margin-bottom: 15px;
+    border-radius: $border-radius-std;
+    overflow: hidden;
   }
 
   &__title {
