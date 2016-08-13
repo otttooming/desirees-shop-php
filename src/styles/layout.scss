@@ -1,5 +1,6 @@
 .wrapper {
-  background: $color-charcoal;
+  // background: $color-charcoal;
+  background: rgba($color-charcoal, .8);
   box-shadow: 0 1px 6px $color-black;
   box-sizing: border-box;
 }

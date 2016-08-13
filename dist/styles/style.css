@@ -1632,10 +1632,7 @@ body.wide {
 
 .fixed-header-area,
 .header-bg {
-  border-top: 1px solid #333;
-  border-bottom: 1px solid #333;
-  background: #333;
-  transition: all 0.2s ease-in-out; }
+  border-top: 1px solid #333; }
 
 .header {
   padding-top: 30px; }
@@ -6045,15 +6042,13 @@ form.login .lost_password {
   text-align: center; }
 
 .error404 h1.notFound strong {
-  font-weight: 300 !important;
-  color: #333; }
+  font-weight: 300 !important; }
 
 .error404 h3 {
   display: none; }
 
 .error404 .grid_content p {
   font-size: 18px;
-  color: #333;
   font-weight: 300;
   width: 100%;
   text-align: center;
@@ -10147,10 +10142,6 @@ hr {
   color: #ff9500;
   line-height: 30px; }
 
-/*idStore 3.4 bugs*/
-.header-bg {
-  border-bottom: transparent !important; }
-
 .woocommerce-error a,
 .woocommerce-message a {
   margin-right: 10px;
@@ -10674,13 +10665,7 @@ del {
 .fixed-header-area,
 .header-bg,
 .header-overlapped .header-type-variant6 {
-  border-bottom: 1px solid #151515;
-  border-top: 1px solid #151515;
-  background: #222 !important; }
-
-.header-type-variant2 .header,
-.header-type-variant5 .header {
-  background: #151515; }
+  border-top: 1px solid #151515; }
 
 .menu > ul > li > a {
   text-shadow: 0 1px 0 #151515;
@@ -11959,7 +11944,7 @@ input {
     box-shadow: none; }
 
 .wrapper {
-  background: #222;
+  background: rgba(34, 34, 34, 0.8);
   box-shadow: 0 1px 6px #151515;
   box-sizing: border-box; }
 
@@ -12341,7 +12326,9 @@ input {
   box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46); }
 
 .search__select {
-  background: #151515; }
+  background: #151515;
+  text-transform: uppercase;
+  font-size: 11px; }
 
 .search__button {
   background-color: #a30000;
