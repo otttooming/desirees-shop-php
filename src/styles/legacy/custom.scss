@@ -547,7 +547,7 @@ h3 {
 	padding: 15px;
 	background-color: $color-red;
 	border-radius: 5px;
-	
+
 	font-size: 13px;
 	z-index: 9999;
 	transition: 250ms;
@@ -897,11 +897,11 @@ span.copyright {
 	text-align: center;
 }
 .company_list3 p {
-	
+
 	font-size: 125%;
 }
 .company_list3 h3 {
-	
+
 }
 .company_list3_contacts p {
 	display: inline-block;
@@ -1003,9 +1003,9 @@ abbr[title] {
 .qty-block {
 	display: flex;
 	align-items: center;
-	
+
 	.cart & {
-		justify-content: center;		
+		justify-content: center;
 	}
 
 	&__title {
@@ -1014,7 +1014,7 @@ abbr[title] {
 
 	input,
 	&__input {
-		width: 75px;
+		width: 60px;
 		height: 36px!important;
 		border: 1px solid transparent !important;
 	}

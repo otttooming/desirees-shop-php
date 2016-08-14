@@ -10135,7 +10135,7 @@ abbr[title] {
     -ms-flex-pack: center;
         justify-content: center; }
   .qty-block input, .qty-block__input {
-    width: 75px;
+    width: 60px;
     height: 36px !important;
     border: 1px solid transparent !important; }
 
@@ -11872,24 +11872,25 @@ hr {
 
 .button {
   display: inline-block;
-  padding: 7px 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+  max-width: 100%;
   height: auto;
-  line-height: 1.5;
-  border-radius: 3px;
+  padding: 7px 10px;
   cursor: pointer;
+  transition: background-color 500ms;
   text-align: center;
   white-space: nowrap;
   text-transform: uppercase;
+  text-overflow: ellipsis;
   color: #fff;
   border: none;
+  border-radius: 3px;
   box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46);
+  text-shadow: 2px 2px 5px #151515;
   font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
   font-size: 11px;
-  transition: background-color 500ms;
-  box-sizing: border-box;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis; }
+  line-height: 1.5; }
   .button:hover {
     background: #a30000; }
   .button.active {
@@ -11901,9 +11902,9 @@ hr {
     padding: 20px 50px;
     font-size: 16px; }
   .button__icon {
-    margin: 0 0 0 1em;
     width: 1em;
-    height: 1em; }
+    height: 1em;
+    margin: 0 0 0 1em; }
 
 .breadcrumbs {
   text-transform: uppercase;

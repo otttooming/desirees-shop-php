@@ -1,28 +1,29 @@
 .button {
   display: inline-block;
+  overflow: hidden;
 
-  padding: 7px 10px;
+  box-sizing: border-box;
+  max-width: 100%;
   height: auto;
-  line-height: 1.5;
-  border-radius: 3px;
+  padding: 7px 10px;
 
   cursor: pointer;
+  transition: background-color $transition-normal;
   text-align: center;
   white-space: nowrap;
   text-transform: uppercase;
+  text-overflow: ellipsis;
 
   color: $color-white;
   border: none;
+  border-radius: 3px;
   box-shadow: $shadow-std;
-  
+  text-shadow: $shadow-text;
 
   font-family: $typeface-primary;
   font-size: 11px;
-  transition: background-color $transition-normal;
-  box-sizing: border-box;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  line-height: 1.5;
+
 
   &:hover {
     background: $color-red;
@@ -45,8 +46,8 @@
   }
 
   &__icon {
-    margin: 0 0 0 1em;
     width: 1em;
     height: 1em;
+    margin: 0 0 0 1em;
   }
 }
