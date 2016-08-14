@@ -320,10 +320,6 @@ del {
 .widget-title {
 	color: $color-white;
 }
-.cats .block-content .wpsc_categories > li > a,
-.grid_pagination_block {
-	color: $color-white;
-}
 .cats.acc_enabled .block-content .categories-group.has-subnav .btn-show,
 .cats.acc_enabled .block-content .categories-group.has-subnav.opened .btn-show {
 	background-color: #333;
@@ -362,36 +358,6 @@ del {
 	background-color: $color-charcoal !important;
 	border: 1px solid $color-black;
 	border-right: none;
-}
-.grid_bottom_pagination a,
-.grid_pagination a {
-	background: #333;
-	color: $color-white;
-}
-.grid_bottom_pagination span,
-.grid_pagination span {
-	padding: 7px 12px;
-	height: 21px;
-	margin-bottom: -12px;
-}
-.next.page-numbers,
-.next.page-numbers:hover,
-.prev.page-numbers,
-.prev.page-numbers:hover {
-	height: 19px;
-	margin-bottom: -12px;
-}
-.next.page-numbers,
-.prev.page-numbers {
-	background-color: #333;
-}
-.grid_bottom_pagination span.current,
-.grid_pagination span.current {
-	background: $color-red;
-	color: $color-white;
-}
-.grid_pagination_bottom_block {
-	border-bottom: 1px solid $color-black;
 }
 #categories-2 > ul > li a {
 	color: $color-white;
