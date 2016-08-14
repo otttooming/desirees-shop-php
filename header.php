@@ -29,7 +29,7 @@
   							<?php $cart_widget = new Etheme_WooCommerce_Widget_Cart(); $cart_widget->widget(); ?>
   						</div>
 
-              <?php  get_template_part( 'et-links' ); ?>
+              <?php require get_template_directory() . '/inc/components/header-links.php'; ?>
   					</div>
 
           <?php endif; ?><?php // END Load full header ?>
@@ -86,7 +86,7 @@
   							<?php $cart_widget = new Etheme_WooCommerce_Widget_Cart(); $cart_widget->widget(); ?>
   						</div>
 
-              <?php get_template_part( 'et-links' ); ?>
+              <?php require get_template_directory() . '/inc/components/header-links.php'; ?>
   					</div>
 
           <?php endif; ?><?php // END Load full header ?>
