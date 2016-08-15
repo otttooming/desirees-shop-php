@@ -116,9 +116,6 @@ select {
 		color: $color-red;
 	}
 }
-.header-links > li > a:hover {
-	text-decoration: none !important;
-}
 .menu .current-menu-ancestor > a {
 	color: $color-red;
 }
@@ -581,43 +578,6 @@ h3 {
 .addto-container form.cart .button {
 	float: right!important;
 }
-/* Top of the page Cart widget */
-#top-cart {
-	a {
-		transition: all 0.2s ease-in-out;
-	}
-	span:nth-child(2) {
-		display: none;
-	}
-	.icon-shopping-cart {
-		transition: none;
-	}
-}
-#top-cart > a {
-	font-size: 20px;
-	font-style: italic;
-	text-transform: uppercase!important;
-	white-space: nowrap;
-}
-#top-cart > a:hover {
-	color: $color-red;
-}
-#top-cart .icon-shopping-cart {
-	margin-right: 10px;
-	font-size: 30px;
-}
-#top-cart small {
-	color: $color-white;
-	font-size: 50%;
-}
-.header-links a {
-	font-style: italic;
-}
-#top-cart a > span .amount {
-	font-size: 18px;
-	margin: 0 0 0 10px;
-}
-/* Tavapood */
 .tavapood_kontakt {
 	p {
 		float: none!important;
@@ -834,9 +794,6 @@ span.copyright {
 }
 .products-list .product-name {
 	text-align: left;
-}
-.hidden-desktop .header-links a {
-	line-height: 35px;
 }
 .hidden-desktop .header-phone {
 	line-height: 35px;

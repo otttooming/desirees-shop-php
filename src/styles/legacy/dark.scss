@@ -110,13 +110,8 @@ del {
 	background: #333;
 	border-top: 1px solid $color-black;
 }
-.fixed-header-area,
-.header-bg,
-.header-overlapped .header-type-variant6 {
-	border-top: 1px solid $color-black;
-}
 .menu > ul > li > a {
-	
+
 	color: $color-white;
 }
 .default-menu > ul > li ul,
@@ -216,51 +211,11 @@ del {
 .search_text {
 	color: white;
 }
-#top-cart > a {
-	color: $color-white;
-}
-#top-cart .cart-popup {
-	background: #333;
-	border: 1px solid $color-black;
-}
-.products-small .product-item {
-	background: #333;
-	color: $color-white;
-	border-bottom: 1px solid $color-black;
-}
-#top-cart .cart-popup a {
-	color: $color-white;
-}
-#top-cart .cart-popup a.emptycart {
-	background-color: $color-black;
-}
-#top-cart .cart-popup a.emptycart:hover {
-	background-color: $color-red;
-}
-#top-cart .cart-popup .recently-added {
-	border-bottom: 1px solid $color-black;
-}
-.products-small .product-item .qty {
-	color: $color-white;
-}
-#top-cart .cart-popup .totals,
-#top-cart .cart-popup .totals .amount {
-	color: $color-white;
-}
 .footer-hr {
 	border-color: $color-grey;
 }
 .block-with-icon i {
 	color: $color-white;
-}
-#top-cart a > span .amount {
-	color: $color-red;
-}
-.header-links > li > a {
-	color: $color-white;
-}
-.header-links > li > a:hover {
-	text-decoration: underline;
 }
 .cta-block {
 	background: #333;

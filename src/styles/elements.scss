@@ -108,6 +108,7 @@ hr {
 }
 
 .amount {
+  display: inline-block;
   padding: 5px 10px;
   box-shadow: $shadow-std;
   border-radius: 5px;

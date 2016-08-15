@@ -702,10 +702,6 @@ body.wide {
 	margin: 0 auto;
 	width: 980px;
 }
-.fixed-header-area,
-.header-bg {
-	border-top: 1px solid $color-grey;
-}
 .header {
 	padding-top: 30px;
 }
@@ -730,142 +726,6 @@ body.wide {
 	margin-left: 4px;
 	color: $color-grey;
 	font-size: 12px;
-}
-/* -------------------------------------------------- */
-/* Top Cart
-/* -------------------------------------------------- */
-.shopping_cart_wrap {
-	position: relative;
-	float: right;
-	margin-top: 0;
-}
-.header-links {
-	float: right;
-	margin-top: 5px;
-	margin-left: 0;
-	margin-bottom: 0;
-}
-.header-links li {
-	display: inline-block;
-}
-.header-links li:last-child {
-	margin-right: 0;
-	border: none;
-}
-.header-links > li > a {
-	color: $color-grey;
-	-webkit-transition-timing-function: ease;
-	-webkit-transition-duration: 0.2s;
-	-webkit-transition-property: color;
-}
-.header-links li:last-child a {
-	padding-right: 0;
-	border: none;
-}
-#top-cart {
-	position: relative;
-	float: right;
-	clear: both;
-	padding: 0 0 5px;
-	text-align: left;
-}
-#top-cart.hover {
-	background-image: url("../images/legacy/cart-arrow2.png");
-}
-#top-cart > a {
-	float: left;
-	color: $color-grey;
-	font-size: 12px;
-}
-#top-cart > span {
-	float: left;
-	margin-left: 5px;
-	width: auto;
-	color: $color-grey;
-	text-transform: uppercase;
-}
-#top-cart a > span .amount {
-	color: $color-grey;
-	font-size: 14px;
-}
-.cart-popup-container {
-	position: relative;
-	top: 12px;
-	right: 0;
-	padding-top: 17px;
-}
-#top-cart .cart-popup {
-	position: absolute;
-	top: 15px;
-	right: 0;
-	z-index: 10001;
-	display: none;
-	padding: 20px;
-	width: 325px;
-	border-top: 3px solid $color-grey;
-	border-right: 2px solid $color-grey;
-	border-bottom: 2px solid $color-grey;
-	border-left: 1px solid $color-grey;
-	background: $color-white;
-	text-align: left;
-}
-.header-variant2 #top-cart .cart-popup {
-	right: -47px;
-}
-#top-cart .cart-popup a {
-	color: $color-grey;
-	font-weight: 300;
-	transition: color 0.2s ease-in-out;
-}
-#top-cart .cart-popup a:hover {
-	color: $color-red;
-}
-#top-cart .cart-popup a > img {
-	width: 60px;
-	opacity: 1;
-	transition: all 0.2s ease-in-out;
-}
-#top-cart .cart-popup a > img:hover {
-	opacity: 0.6;
-}
-#top-cart .cart-popup .totals,
-#top-cart .cart-popup .totals .amount {
-	clear: both;
-	padding: 10px 0;
-	color: $color-grey;
-	text-align: right;
-	text-transform: uppercase;
-	font-weight: 300;
-	font-size: 18px;
-}
-#top-cart .cart-popup .totals {
-	margin: 20px 0 10px;
-	padding: 0 0 10px;
-}
-#top-cart .button {
-	float: left;
-	width: 40%;
-	background-image: url("../images/legacy/back_arrow.png");
-	background-position: 129px center;
-	background-repeat: no-repeat;
-}
-#top-cart .button.emptycart {
-	background-image: none!important;
-}
-#top-cart .button.emptycart span {
-	padding-right: 3px;
-}
-#top-cart .button span {
-	padding-left: 3px;
-	line-height: 30px;
-}
-#top-cart .cart-popup .totals .price {
-	color: $color-black;
-	font-weight: 400;
-	font-size: 14px;
-}
-#top-cart .cart-popup .empty {
-	margin-bottom: 0;
 }
 .products-small .product-item {
 	padding: 20px 5px 20px 0;
@@ -915,24 +775,6 @@ body.wide {
 .products-small .product-item h5 {
 	margin-bottom: 5px;
 	font-size: 14px;
-}
-#top-cart .cart-popup .recently-added {
-	margin: 0;
-	padding-bottom: 5px;
-	border-bottom: 1px solid $color-grey;
-	font-size: 12px;
-}
-#top-cart .cart-popup .variation dt {
-	float: left;
-	clear: both;
-	margin-right: 5px;
-	color: $color-grey;
-	font-size: 12px;
-}
-#top-cart .cart-popup .variation,
-#top-cart .cart-popup .variation dd {
-	float: left;
-	margin: 0;
 }
 /* -------------------------------------------------- */
 /* Header 2 & Header 6
@@ -1064,16 +906,6 @@ body.wide {
 	padding: 8px 0 2px;
 	position: relative;
 }
-.header-variant2 .header-links,
-.header-variant6 .header-links {
-	margin-top: 0;
-	float: right;
-}
-.header-variant2 #top-cart,
-.header-variant6 #top-cart {
-	clear: none;
-	margin-left: 40px;
-}
 /* -------------------------------------------------- */
 /* Header 3
 /* -------------------------------------------------- */
@@ -1101,9 +933,6 @@ body.wide {
 /* -------------------------------------------------- */
 /* Header 4
 /* -------------------------------------------------- */
-.header-type-variant4.header-bg {
-	border-top: none;
-}
 .header-top-variant4,
 .header-top-variant4 .container {
 	background: $color-red;
@@ -1205,14 +1034,6 @@ body.wide {
 .header-variant5 {
 	padding: 12px 0 2px;
 	position: relative;
-}
-.header-variant5 .header-links {
-	margin-top: 0;
-	float: right;
-}
-.header-variant5 #top-cart {
-	clear: none;
-	margin-left: 40px;
 }
 /* -------------------------------------------------- */
 /* Header 6
@@ -1321,7 +1142,7 @@ div.menu {
 	background: transparent;
 	text-decoration: none;
 	border-bottom: 1px solid transparent;
-	
+
 	padding: 20px 16px;
 	margin: 0;
 }

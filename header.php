@@ -14,19 +14,19 @@
 			<div class="container">
 				<div class="row header-variant2">
 
-					<div class="span4 header-phone">
-            <?php echo _e( 'Telephone:', 'woocommerce' ) . ' ' .  get_option('contact_tel') ?>
-					</div>
-
           <?php if ($template_header != 'min') : ?><?php // Load full header ?>
 
-  					<div class="span8">
+  					<div class="span12 header-variant2__wrap">
+              <div class="header-phone">
+                <?php echo _e( 'Telephone:', 'woocommerce' ) . ' ' .  get_option('contact_tel') ?>
+              </div>
+
               <div class="search_form visible-desktop">
   							<?php get_search_form(); ?>
   						</div>
 
-              <div id="top-cart" class="shopping-cart-wrapper widget_shopping_cart cfx">
-  							<?php $cart_widget = new Etheme_WooCommerce_Widget_Cart(); $cart_widget->widget(); ?>
+              <div id="cart__top" class="cart__top-wrapper">
+                <?php require get_template_directory() . '/inc/components/cart-links.php'; ?>
   						</div>
 
               <?php require get_template_directory() . '/inc/components/header-links.php'; ?>
@@ -82,8 +82,8 @@
 
   					<div class="span3 shopping_cart_wrap visible-desktop">
 
-              <div id="top-cart" class="shopping-cart-wrapper widget_shopping_cart cfx">
-  							<?php $cart_widget = new Etheme_WooCommerce_Widget_Cart(); $cart_widget->widget(); ?>
+              <div id="cart__top" class="cart__top-wrapper">
+                <?php require get_template_directory() . '/inc/components/cart-links.php'; ?>
   						</div>
 
               <?php require get_template_directory() . '/inc/components/header-links.php'; ?>
