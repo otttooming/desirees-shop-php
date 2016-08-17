@@ -43,6 +43,7 @@ gulp.task('scripts', function() {
                    'bower_components/photoswipe/dist/photoswipe-ui-default.min.js',
                    'bower_components/swiper/dist/js/swiper.min.js',
                    'bower_components/lazysizes/lazysizes.min.js',
+                   'bower_components/js-cookie/src/js.cookie.js',
                    'src/scripts/legacy/*.js',
                    'src/scripts/*.js' ],
                    {base: './'})

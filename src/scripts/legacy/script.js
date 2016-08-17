@@ -195,10 +195,10 @@ jQuery(document).ready(function() {
 
 function check_view_mod() {
   var activeClass = 'switcher-active';
-  if (jQuery.cookie('products_page') == 'grid') {
+  if (Cookies.get('products_page') == 'grid') {
     jQuery('#products-grid').removeClass('products-list').addClass('products-grid');
     jQuery('.switchToGrid').addClass(activeClass);
-  } else if (jQuery.cookie('products_page') == 'list') {
+  } else if (Cookies.get('products_page') == 'list') {
     jQuery('#products-grid').removeClass('products-grid').addClass('products-list');
     jQuery('.switchToList').addClass(activeClass);
   } else {
@@ -217,12 +217,12 @@ function listSwitcher() {
   var gridClass = 'products-grid';
   var listClass = 'products-list';
   jQuery('.switchToList').click(function() {
-    if (!jQuery.cookie('products_page') || jQuery.cookie('products_page') == 'grid') {
+    if (!Cookies.get('products_page') || Cookies.get('products_page') == 'grid') {
       switchToList();
     }
   });
   jQuery('.switchToGrid').click(function() {
-    if (!jQuery.cookie('products_page') || jQuery.cookie('products_page') == 'list') {
+    if (!Cookies.get('products_page') || Cookies.get('products_page') == 'list') {
       switchToGrid();
     }
   });
@@ -232,7 +232,7 @@ function listSwitcher() {
     jQuery('.switchToGrid').removeClass(activeClass);
     jQuery('#products-grid').fadeOut(300, function() {
       jQuery(this).removeClass(gridClass).addClass(listClass).fadeIn(300);
-      jQuery.cookie('products_page', 'list');
+      Cookies.set('products_page', 'list');
     });
   }
 
@@ -241,7 +241,7 @@ function listSwitcher() {
     jQuery('.switchToList').removeClass(activeClass);
     jQuery('#products-grid').fadeOut(300, function() {
       jQuery(this).removeClass(listClass).addClass(gridClass).fadeIn(300);
-      jQuery.cookie('products_page', 'grid');
+      Cookies.set('products_page', 'grid');
     });
   }
 }
