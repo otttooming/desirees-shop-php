@@ -38,7 +38,6 @@ gulp.task('styles', function() {
 // Scripts
 gulp.task('scripts', function() {
   return gulp.src(['bower_components/jquery/dist/jquery.js',
-                   'bower_components/jquery-migrate/index.js',
                    'bower_components/photoswipe/dist/photoswipe.min.js',
                    'bower_components/photoswipe/dist/photoswipe-ui-default.min.js',
                    'bower_components/swiper/dist/js/swiper.min.js',
