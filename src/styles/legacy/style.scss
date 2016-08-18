@@ -2179,47 +2179,35 @@ ins {
 .tabs.left-tabs .tab-title {
 	display: none;
 }
-.left-titles a,
 .tabs .tab-title {
 	display: inline-block;
-	margin-right: 15px;
-	margin-left: -5px;
-	padding: 15px 30px;
-	border-top: 1px solid $color-grey;
-	border-right: 1px solid $color-grey;
-	border-left: 1px solid $color-grey;
+	padding: 15px 20px;
 	background: $color-grey;
 	color: $color-grey;
 	text-transform: uppercase;
 	font-weight: 300;
 	font-size: 14px;
-}
-.tabs .tab-title.last {
-	border-bottom: 1px solid $color-grey;
+  box-shadow: $shadow-std;
+  border-radius: $border-radius-std;
 }
 .tabs .tab-title:hover {
-	border-color: #f2f2f2;
 	background: #f2f2f2;
 	text-decoration: none;
 }
 .left-titles a.opened,
 .tabs .tab-title.opened {
-	margin-bottom: -1px;
-	border-bottom: 1px solid $color-white;
 	background: $color-white;
-}
-.tabs .tab-title:first-child {
-	margin-left: 20px;
 }
 .tabs .tab-content {
 	display: none;
 	float: right;
 	box-sizing: border-box;
-	margin-top: -1px;
 	margin-bottom: 20px;
 	padding: 15px 20px 20px;
 	width: 100%;
-	border: 1px solid $color-grey;
+  box-shadow: $shadow-std;
+  border-radius: $border-radius-std;
+  position: relative;
 }
 .tab-content h2,
 .tab-content h3 {
@@ -2235,12 +2223,7 @@ ins {
 	margin-left: 0 !important;
 	margin-right: 0 !important;
 	width: 100%;
-	border-top: 1px solid $color-grey;
-	border-bottom: 1px solid $color-grey;
 	transition: all 0.2s ease-in-out;
-}
-.tabs.accordion .tab-title:first-child {
-	border-top: 1px solid $color-grey;
 }
 .left-titles a,
 .tabs.left-tabs .tab-title {
@@ -2251,7 +2234,6 @@ ins {
 	box-sizing: border-box;
 }
 .tabs.left-tabs .tab-title.opened {
-	border-right-color: $color-grey;
 	background: $color-grey;
 }
 .tabs.left-tabs .tab-title:first-child {

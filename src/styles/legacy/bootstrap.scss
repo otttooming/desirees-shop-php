@@ -274,15 +274,15 @@ select:focus {
 }
 input:-moz-placeholder,
 textarea:-moz-placeholder {
-	color: $color-grey;
+	color: $color-white;
 }
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-	color: $color-grey;
+	color: $color-white;
 }
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-	color: $color-grey;
+	color: $color-white;
 }
 .checkbox,
 .radio {
@@ -413,16 +413,7 @@ table {
 }
 .tab-content {
 	overflow: auto;
-	border-top: 4px solid $color-grey;
-	border-right: 1px solid $color-grey;
-	border-bottom: 1px solid $color-grey;
-	border-left: 1px solid $color-grey;
 	margin-bottom: 20px;
-}
-.tabs-below > .nav-tabs,
-.tabs-left > .nav-tabs,
-.tabs-right > .nav-tabs {
-	border-bottom: 0;
 }
 .pill-content > .pill-pane,
 .tab-content > .tab-pane {

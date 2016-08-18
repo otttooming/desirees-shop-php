@@ -667,15 +667,15 @@ select:focus {
 
 input:-moz-placeholder,
 textarea:-moz-placeholder {
-  color: rgba(51, 51, 51, 0.5); }
+  color: #fff; }
 
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-  color: rgba(51, 51, 51, 0.5); }
+  color: #fff; }
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  color: rgba(51, 51, 51, 0.5); }
+  color: #fff; }
 
 .checkbox,
 .radio {
@@ -806,16 +806,7 @@ table {
 
 .tab-content {
   overflow: auto;
-  border-top: 4px solid rgba(51, 51, 51, 0.5);
-  border-right: 1px solid rgba(51, 51, 51, 0.5);
-  border-bottom: 1px solid rgba(51, 51, 51, 0.5);
-  border-left: 1px solid rgba(51, 51, 51, 0.5);
   margin-bottom: 20px; }
-
-.tabs-below > .nav-tabs,
-.tabs-left > .nav-tabs,
-.tabs-right > .nav-tabs {
-  border-bottom: 0; }
 
 .pill-content > .pill-pane,
 .tab-content > .tab-pane {
@@ -3080,47 +3071,35 @@ ins {
 .tabs.left-tabs .tab-title {
   display: none; }
 
-.left-titles a,
 .tabs .tab-title {
   display: inline-block;
-  margin-right: 15px;
-  margin-left: -5px;
-  padding: 15px 30px;
-  border-top: 1px solid rgba(51, 51, 51, 0.5);
-  border-right: 1px solid rgba(51, 51, 51, 0.5);
-  border-left: 1px solid rgba(51, 51, 51, 0.5);
+  padding: 15px 20px;
   background: rgba(51, 51, 51, 0.5);
   color: rgba(51, 51, 51, 0.5);
   text-transform: uppercase;
   font-weight: 300;
-  font-size: 14px; }
-
-.tabs .tab-title.last {
-  border-bottom: 1px solid rgba(51, 51, 51, 0.5); }
+  font-size: 14px;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46);
+  border-radius: 3px; }
 
 .tabs .tab-title:hover {
-  border-color: #f2f2f2;
   background: #f2f2f2;
   text-decoration: none; }
 
 .left-titles a.opened,
 .tabs .tab-title.opened {
-  margin-bottom: -1px;
-  border-bottom: 1px solid #fff;
   background: #fff; }
-
-.tabs .tab-title:first-child {
-  margin-left: 20px; }
 
 .tabs .tab-content {
   display: none;
   float: right;
   box-sizing: border-box;
-  margin-top: -1px;
   margin-bottom: 20px;
   padding: 15px 20px 20px;
   width: 100%;
-  border: 1px solid rgba(51, 51, 51, 0.5); }
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46);
+  border-radius: 3px;
+  position: relative; }
 
 .tab-content h2,
 .tab-content h3 {
@@ -3136,12 +3115,7 @@ ins {
   margin-left: 0 !important;
   margin-right: 0 !important;
   width: 100%;
-  border-top: 1px solid rgba(51, 51, 51, 0.5);
-  border-bottom: 1px solid rgba(51, 51, 51, 0.5);
   transition: all 0.2s ease-in-out; }
-
-.tabs.accordion .tab-title:first-child {
-  border-top: 1px solid rgba(51, 51, 51, 0.5); }
 
 .left-titles a,
 .tabs.left-tabs .tab-title {
@@ -3152,7 +3126,6 @@ ins {
   box-sizing: border-box; }
 
 .tabs.left-tabs .tab-title.opened {
-  border-right-color: rgba(51, 51, 51, 0.5);
   background: rgba(51, 51, 51, 0.5); }
 
 .tabs.left-tabs .tab-title:first-child {
@@ -9021,11 +8994,8 @@ select {
 .show_review_form {
   color: #a30000; }
 
-.tabs .tab-title {
-  margin: 0 !important;
-  font-weight: 400 !important; }
-  .tabs .tab-title:hover {
-    color: #a30000; }
+.tabs .tab-title:hover {
+  color: #a30000; }
 
 .menu .current-menu-ancestor > a {
   color: #a30000; }
@@ -10125,8 +10095,7 @@ del {
   background: #151515; }
 
 .tabs .tab-content {
-  background: rgba(51, 51, 51, 0.5);
-  border: 1px solid #151515; }
+  background: rgba(51, 51, 51, 0.5); }
 
 #product-page .tabs .tab-content {
   background-color: rgba(51, 51, 51, 0.5) !important; }
@@ -10134,34 +10103,20 @@ del {
 .left-titles a,
 .tabs .tab-title {
   background: #151515;
-  border-top: 1px solid #151515;
-  border-right: 1px solid #151515;
-  border-left: 1px solid #151515;
   color: #fff; }
 
 .tabs .tab-title:hover {
-  background: #151515;
-  border-top: 1px solid #151515;
-  border-right: 1px solid #151515;
-  border-left: 1px solid #151515; }
+  background: #151515; }
 
 .left-titles a.opened,
 .tabs .tab-title.opened {
   background: rgba(51, 51, 51, 0.5);
   color: #cacaca !important;
-  border-bottom: 1px solid transparent;
   margin-bottom: 0; }
 
 .left-titles a.opened:hover,
 .tabs .tab-title.opened:hover {
   color: #cacaca; }
-
-.tabs:last-child {
-  border-bottom: 1px solid #151515; }
-
-.cbp-qtrotator .cbp-qtcontent {
-  border-bottom: 1px solid #151515 !important;
-  border-top: 1px solid #151515 !important; }
 
 .woocommerce-price-suffix {
   color: rgba(51, 51, 51, 0.5); }
@@ -10251,11 +10206,7 @@ div.product_meta a {
 
 .page-template-contacts2-php .contact-form h1,
 .page-title {
-  border-bottom: 1px solid #151515;
   color: white; }
-
-.woocommerce-cart .page-title {
-  border-bottom: none !important; }
 
 .widget_categories .widget-title {
   background: rgba(51, 51, 51, 0.5);
@@ -10516,13 +10467,10 @@ form.register .register-head i {
   overflow: hidden; }
 
 .tabs.checkout-accordion .tab-content {
-  background-color: transparent !important;
-  border: 1px solid #151515 !important; }
+  background-color: transparent !important; }
 
 .tabs.checkout-accordion .tab-title {
-  background-color: rgba(51, 51, 51, 0.5);
-  border-bottom: 1px solid #151515 !important;
-  border-top: 1px solid #151515 !important; }
+  background-color: rgba(51, 51, 51, 0.5); }
 
 .tabs.checkout-accordion .tab-title.opened {
   background-color: #151515 !important;
@@ -10535,9 +10483,7 @@ form.register .register-head i {
   background-color: #151515 !important; }
 
 .tabs.checkout-accordion .tab-title:hover {
-  background-color: rgba(51, 51, 51, 0.5) !important;
-  border-left: none !important;
-  border-right: none !important; }
+  background-color: rgba(51, 51, 51, 0.5) !important; }
 
 .tabs.checkout-accordion .tab-title.opened:hover span,
 .tabs.checkout-accordion .tab-title:hover span {

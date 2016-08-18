@@ -230,7 +230,6 @@ del {
 }
 .tabs .tab-content {
 	background: $color-grey;
-	border: 1px solid $color-black;
 }
 #product-page .tabs .tab-content {
 	background-color: $color-grey !important;
@@ -238,34 +237,20 @@ del {
 .left-titles a,
 .tabs .tab-title {
 	background: $color-black;
-	border-top: 1px solid $color-black;
-	border-right: 1px solid $color-black;
-	border-left: 1px solid $color-black;
 	color: $color-white;
 }
 .tabs .tab-title:hover {
 	background: $color-black;
-	border-top: 1px solid $color-black;
-	border-right: 1px solid $color-black;
-	border-left: 1px solid $color-black;
 }
 .left-titles a.opened,
 .tabs .tab-title.opened {
 	background: $color-grey;
 	color: #cacaca !important;
-	border-bottom: 1px solid transparent;
 	margin-bottom: 0;
 }
 .left-titles a.opened:hover,
 .tabs .tab-title.opened:hover {
 	color: #cacaca;
-}
-.tabs:last-child {
-	border-bottom: 1px solid $color-black;
-}
-.cbp-qtrotator .cbp-qtcontent {
-	border-bottom: 1px solid $color-black !important;
-	border-top: 1px solid $color-black !important;
 }
 .woocommerce-price-suffix {
 	color: $color-grey;
@@ -355,11 +340,7 @@ div.product_meta a {
 }
 .page-template-contacts2-php .contact-form h1,
 .page-title {
-	border-bottom: 1px solid $color-black;
 	color: white;
-}
-.woocommerce-cart .page-title {
-	border-bottom: none !important;
 }
 .widget_categories .widget-title {
 	background: $color-grey;
@@ -624,12 +605,9 @@ form.register .register-head i {
 }
 .tabs.checkout-accordion .tab-content {
 	background-color: transparent !important;
-	border: 1px solid $color-black !important;
 }
 .tabs.checkout-accordion .tab-title {
 	background-color: $color-grey;
-	border-bottom: 1px solid $color-black !important;
-	border-top: 1px solid $color-black !important;
 }
 .tabs.checkout-accordion .tab-title.opened {
 	background-color: $color-black !important;
@@ -643,8 +621,6 @@ form.register .register-head i {
 }
 .tabs.checkout-accordion .tab-title:hover {
 	background-color: $color-grey !important;
-	border-left: none !important;
-	border-right: none !important;
 }
 .tabs.checkout-accordion .tab-title.opened:hover span,
 .tabs.checkout-accordion .tab-title:hover span {
