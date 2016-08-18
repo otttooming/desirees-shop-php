@@ -98,6 +98,9 @@ input {
   border: 1px solid $color-grey;
   font-size: 12px;
   border-radius: $border-radius-std;
+  -webkit-appearance: none;
+  text-shadow: $shadow-text;
+  text-transform: uppercase;
 }
 
 hr {

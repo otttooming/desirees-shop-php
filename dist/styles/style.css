@@ -9854,6 +9854,7 @@ abbr[title] {
     -ms-flex-pack: center;
         justify-content: center; }
   .qty-block input, .qty-block__input {
+    min-width: 60px;
     width: 60px;
     height: 36px !important;
     border: 1px solid transparent !important; }
@@ -11191,7 +11192,10 @@ input {
   outline: none;
   border: 1px solid #333;
   font-size: 12px;
-  border-radius: 3px; }
+  border-radius: 3px;
+  -webkit-appearance: none;
+  text-shadow: 2px 2px 5px #151515;
+  text-transform: uppercase; }
 
 hr {
   width: 100%;
@@ -11599,7 +11603,7 @@ hr {
     padding: 15px 20px;
     font-size: 14px; }
   .button.big {
-    padding: 20px 50px;
+    padding: 20px;
     font-size: 16px; }
   .button__icon {
     width: 1em;

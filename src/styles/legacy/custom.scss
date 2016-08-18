@@ -971,6 +971,7 @@ abbr[title] {
 
 	input,
 	&__input {
+    min-width: 60px;
 		width: 60px;
 		height: 36px!important;
 		border: 1px solid transparent !important;
