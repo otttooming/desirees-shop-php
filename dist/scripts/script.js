@@ -11521,9 +11521,13 @@ function clearSelected(event){
   }
 };
 
-document.getElementsByClassName('cart__reset-variations')[0].addEventListener('click', function() {
-  clearSelected(event);
-});
+if (document.getElementsByClassName('cart__reset-variations')[0]) {
+
+  document.getElementsByClassName('cart__reset-variations')[0].addEventListener('click', function() {
+    clearSelected(event);
+  });
+
+}
 
 var initPhotoSwipeFromDOM = function(gallerySelector) {
 
