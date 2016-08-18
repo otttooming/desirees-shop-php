@@ -11506,6 +11506,25 @@ var productGallerySlider = new Swiper ('.slider-promo', {
     paginationClickable: true
 });
 
+// Clear WooCommerce product variations
+function clearSelected(event){
+  event.preventDefault();
+
+  var elements = document.querySelectorAll('.cart__variations select');
+
+  for (var select = 0; select < elements.length; select++) {
+    var elementsOptions = elements[select].options;
+
+    for(var option = 0; option < elementsOptions.length; option++){
+      elementsOptions[option].selected = false;
+    }
+  }
+};
+
+document.getElementsByClassName('cart__reset-variations')[0].addEventListener('click', function() {
+  clearSelected(event);
+});
+
 var initPhotoSwipeFromDOM = function(gallerySelector) {
 
     // parse slide data (url, title, size ...) from DOM elements
