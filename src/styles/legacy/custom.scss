@@ -451,7 +451,7 @@ h3 {
 .cart_totals {
 	max-width: 400px!important;
 	padding: 20px;
-	background-color: #333;
+	background-color: $color-grey;
 }
 .wc-checkout-totals .shipping th,
 .wc-checkout-totals .total th {
@@ -647,7 +647,7 @@ h3 {
 /* Tavapoe elemendid */
 .tava_333 {
 	margin: 20px 0;
-	background-color: #333;
+	background-color: $color-grey;
 }
 .tava_333 .company_list2 {
 	padding: 30px;
@@ -697,7 +697,7 @@ span.copyright {
 .tavpood_infoblock {
 	min-height: 170px;
 	padding: 10px 20px;
-	background-color: #333;
+	background-color: $color-grey;
 	box-shadow: $shadow-std;
 }
 .tavpood_infoblock h2 {
@@ -776,7 +776,7 @@ span.copyright {
 }
 .products-list .product-grid,
 .products-list .product-grid:hover {
-	background: #333!important;
+	background: $color-grey!important;
 }
 .products-list .product-grid .button {
 	background: $color-charcoal!important;
@@ -800,7 +800,7 @@ span.copyright {
 .tab-content.tap-order #payment .terms {
 	padding: 20px;
 	border: 1px solid $color-black !important;
-	background-color: #333;
+	background-color: $color-grey;
 	box-shadow: $shadow-std;
 }
 .product-category-description {
@@ -1003,7 +1003,7 @@ abbr[title] {
 			flex-direction: column;
 			padding: 30px 15px;
 			box-shadow: 2px 2px $color-black;
-			background-color: #333;
+			background-color: $color-grey;
 			margin: 30px 0;
 		}
 	}

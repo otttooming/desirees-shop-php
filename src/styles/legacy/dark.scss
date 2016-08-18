@@ -50,12 +50,12 @@ input:focus {
 }
 code,
 pre {
-	background: #333;
+	background: $color-grey;
 	border: 1px solid $color-black;
 	color: $color-white;
 }
 blockquote {
-	background-color: #333;
+	background-color: $color-grey;
 	border-bottom: 1px solid $color-red;
 }
 mark {
@@ -69,7 +69,7 @@ select:hover {
 	cursor: pointer;
 }
 textarea {
-	background-color: #333 !important;
+	background-color: $color-grey !important;
 	border: 1px solid $color-black !important;
 	color: white !important;
 }
@@ -77,7 +77,7 @@ textarea {
 	background-color: #2a2a2a;
 }
 .modal {
-	background-color: #333;
+	background-color: $color-grey;
 	border: none;
 	border-top: 1px solid $color-red;
 }
@@ -107,7 +107,7 @@ del {
 	background-position: 2px 0;
 }
 .header-type-variant4 #main-nav {
-	background: #333;
+	background: $color-grey;
 	border-top: 1px solid $color-black;
 }
 .menu > ul > li > a {
@@ -116,7 +116,7 @@ del {
 }
 .default-menu > ul > li ul,
 .header-overlapped .header-type-variant6 .default-menu > ul > li ul {
-	background: #333;
+	background: $color-grey;
 }
 .default-menu > ul > li > ul li {
 	border-top: 1px solid $color-black;
@@ -133,14 +133,14 @@ del {
 	border-bottom: 1px solid $color-black;
 }
 .default-menu .sub-menu .current-menu-item {
-	background-color: #333;
+	background-color: $color-grey;
 }
 .et-mobile-menu > li:last-child {
 	border-bottom: 1px solid $color-black;
 }
 .product-slide .product-grid,
 .products_grid .product-grid {
-	background: #333;
+	background: $color-grey;
 	border-bottom: 1px solid $color-black;
 }
 .product-grid .product-name a,
@@ -156,7 +156,7 @@ del {
 }
 #submit,
 .button {
-	background: #333;
+	background: $color-grey;
 	color: $color-white;
 }
 .btn-cont .button {
@@ -170,11 +170,11 @@ del {
 }
 .blog-content .button,
 .products-list .product-grid .button {
-	background: #333;
+	background: $color-grey;
 }
 .product-slide .product-grid:hover,
 .products_grid .product-grid:hover {
-	background: #333;
+	background: $color-grey;
 }
 .products-list .product-grid,
 .products-list .product-grid:hover {
@@ -192,7 +192,7 @@ del {
 	border-top: 1px solid $color-black;
 }
 .fixed-header-area {
-	background: #333;
+	background: $color-grey;
 	border-top: 1px solid $color-black;
 }
 .fixed-header-area .fixed-header {
@@ -206,7 +206,7 @@ del {
 .next.disabled:hover,
 .prev.disabled,
 .prev.disabled:hover {
-	background-color: #333 !important;
+	background-color: $color-grey !important;
 }
 .search_text {
 	color: white;
@@ -218,7 +218,7 @@ del {
 	color: $color-white;
 }
 .cta-block {
-	background: #333;
+	background: $color-grey;
 	border-left-width: 1px;
 }
 .cta-block h4 {
@@ -229,11 +229,11 @@ del {
 	background: $color-black;
 }
 .tabs .tab-content {
-	background: #333;
+	background: $color-grey;
 	border: 1px solid $color-black;
 }
 #product-page .tabs .tab-content {
-	background-color: #333 !important;
+	background-color: $color-grey !important;
 }
 .left-titles a,
 .tabs .tab-title {
@@ -251,7 +251,7 @@ del {
 }
 .left-titles a.opened,
 .tabs .tab-title.opened {
-	background: #333;
+	background: $color-grey;
 	color: #cacaca !important;
 	border-bottom: 1px solid transparent;
 	margin-bottom: 0;
@@ -277,7 +277,7 @@ del {
 }
 .cats.acc_enabled .block-content .categories-group.has-subnav .btn-show,
 .cats.acc_enabled .block-content .categories-group.has-subnav.opened .btn-show {
-	background-color: #333;
+	background-color: $color-grey;
 }
 .star-rating {
 	background: url("../images/legacy/star-dark.png") repeat-x 0 0 !important;
@@ -290,7 +290,7 @@ del {
 .widget_layered_nav ul li span,
 .widget_price_filter .price_slider_wrapper .ui-widget-content,
 .widget_price_filter .ui-slider .ui-slider-handle {
-	background-color: #333 !important;
+	background-color: $color-grey !important;
 }
 .widget_layered_nav ul li a:hover,
 .widget_layered_nav ul li span:hover {
@@ -304,7 +304,7 @@ del {
 	background: $color-red url("../images/legacy/check.png") no-repeat 12px center;
 }
 .widget_price_filter .price_slider_wrapper .button {
-	background-color: #333;
+	background-color: $color-grey;
 }
 .widget_price_filter .price_slider_wrapper .button span {
 	color: white !important;
@@ -322,7 +322,7 @@ del {
 }
 .widget-placeholder .side-icon,
 .widget-placeholder .side-text {
-	background: #333;
+	background: $color-grey;
 	color: $color-white;
 }
 .widget-placeholder .side-icon i,
@@ -362,7 +362,7 @@ div.product_meta a {
 	border-bottom: none !important;
 }
 .widget_categories .widget-title {
-	background: #333;
+	background: $color-grey;
 	color: $color-white;
 }
 .widget-container a,
@@ -380,7 +380,7 @@ div.product_meta a {
 }
 #payment div.payment_box,
 .cart-collaterals .shipping_calculator .button {
-	background: #333 !important;
+	background: $color-grey !important;
 	border: 1px solid $color-black !important;
 	float: left;
 	margin-bottom: 10px;
@@ -420,7 +420,7 @@ div.product_meta a {
 	color: $color-red !important;
 }
 .post-default .post-images {
-	background-color: #333;
+	background-color: $color-grey;
 	border-bottom: 1px solid $color-black;
 }
 .post-information {
@@ -430,7 +430,7 @@ div.product_meta a {
 }
 .post-information {
 	border-bottom: 1px solid $color-black;
-	background-color: #333;
+	background-color: $color-grey;
 	padding-left: 10px;
 }
 .post-information a,
@@ -453,7 +453,7 @@ div.product_meta a {
 	color: $color-white;
 }
 .product-add-to-cart {
-	background: #333;
+	background: $color-grey;
 	border: 1px solid $color-black;
 }
 .nav-tabs > li {
@@ -470,7 +470,7 @@ div.product_meta a {
 	border-left-style: solid !important;
 }
 .typography-block > .nav-tabs li {
-	background: #333;
+	background: $color-grey;
 	border-left: 1px solid transparent;
 }
 .typography-block > .nav-tabs li a {
@@ -496,7 +496,7 @@ div.product_meta a {
 	border-top: transparent;
 }
 .member-details {
-	background: #333;
+	background: $color-grey;
 	border-bottom: 2px solid $color-red;
 }
 .member-details i {
@@ -505,13 +505,13 @@ div.product_meta a {
 .p-table,
 .p-table-2,
 .p-table-3 {
-	background: #333;
+	background: $color-grey;
 	border: 1px solid $color-black;
 	border-bottom: 2px solid $color-red;
 	color: $color-white;
 }
 .p-table-head {
-	background: #333;
+	background: $color-grey;
 	color: white !important;
 }
 .p-table li,
@@ -521,7 +521,7 @@ div.product_meta a {
 }
 .p-table li:hover,
 .p-table-2 li:hover {
-	background: #333 !important;
+	background: $color-grey !important;
 	color: $color-red;
 }
 .p-table li i {
@@ -532,11 +532,11 @@ div.product_meta a {
 }
 .table-striped tbody tr:nth-child(odd) td,
 .table-striped tbody tr:nth-child(odd) th {
-	background-color: #333;
+	background-color: $color-grey;
 }
 .table-hover tbody tr:hover td,
 .table-hover tbody tr:hover th {
-	background-color: #333;
+	background-color: $color-grey;
 	color: $color-white;
 }
 .page-template-contacts2-php .contact-form {
@@ -554,7 +554,7 @@ div.product_meta a {
 }
 form.login,
 form.register {
-	background: #333;
+	background: $color-grey;
 }
 form.login .login-head,
 form.register .register-head {
@@ -576,7 +576,7 @@ form.register .register-head i {
 	color: $color-white;
 }
 .et-mobile-menu li > a {
-	background: #333;
+	background: $color-grey;
 	border-top: 1px solid $color-black;
 	color: $color-white;
 }
@@ -618,7 +618,7 @@ form.register .register-head i {
 .woocommerce-error,
 .woocommerce-message,
 .woocommerce_error {
-	background-color: #333;
+	background-color: $color-grey;
 	display: block;
 	overflow: hidden;
 }
@@ -627,7 +627,7 @@ form.register .register-head i {
 	border: 1px solid $color-black !important;
 }
 .tabs.checkout-accordion .tab-title {
-	background-color: #333;
+	background-color: $color-grey;
 	border-bottom: 1px solid $color-black !important;
 	border-top: 1px solid $color-black !important;
 }
@@ -642,7 +642,7 @@ form.register .register-head i {
 	background-color: $color-black !important;
 }
 .tabs.checkout-accordion .tab-title:hover {
-	background-color: #333 !important;
+	background-color: $color-grey !important;
 	border-left: none !important;
 	border-right: none !important;
 }
@@ -708,17 +708,17 @@ div.pp_overlay {
 	background-color: $color-black !important;
 }
 .chosen-container-single .chosen-single {
-	background: #333;
+	background: $color-grey;
 	color: $color-white;
 	box-shadow: 0 1px 0 $color-black inset !important;
 }
 .woocommerce-checkout .form-row .chosen-container .chosen-drop {
-	background: #333;
+	background: $color-grey;
 	border: 1px solid $color-black;
 }
 .chosen-container-active.chosen-with-drop .chosen-single {
 	box-shadow: 0 1px 0 $color-black inset !important;
-	background: #333;
+	background: $color-grey;
 	border: 1px solid $color-black;
 	color: $color-white;
 }
@@ -726,7 +726,7 @@ div.pp_overlay {
 	background: url("../images/legacy/chosen-sprite.png") no-repeat 100% -20px,#333;
 }
 .chosen-container .chosen-results li.no-results {
-	background: #333;
+	background: $color-grey;
 }
 .tab-content.register-tab-content,
 .tab-content.tab-login {
