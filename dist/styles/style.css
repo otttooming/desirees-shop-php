@@ -1190,7 +1190,9 @@ abbr[title] {
   border-color: #333;
   padding: 20px 70px 20px 20px;
   font-size: 14px;
-  font-weight: 300; }
+  font-weight: 300;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46);
+  border-radius: 3px; }
 
 .woocommerce-error,
 .woocommerce_error {
@@ -1204,7 +1206,6 @@ abbr[title] {
 .woocommerce-error,
 .woocommerce_error {
   background: url("../images/legacy/error.png") no-repeat 30px center;
-  color: #333;
   border-left-color: #a30000;
   padding-left: 85px;
   position: relative; }
@@ -9512,8 +9513,8 @@ h3 {
       align-items: center; }
 
 .woocommerce-message {
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-flexbox !important;
+  display: flex !important;
   -ms-flex-align: center;
       align-items: center; }
 
@@ -9610,10 +9611,6 @@ span.copyright {
 .tavpood_infoblock li,
 .tavpood_infoblock p {
   font-size: 14px; }
-
-/*Small fixes august 1014*/
-.woocommerce-error {
-  color: #fff; }
 
 .opensoon,
 .opensoon2 {
@@ -10515,7 +10512,6 @@ form.register .register-head i {
 .woocommerce-message,
 .woocommerce_error {
   background-color: #333;
-  border: 1px solid #151515;
   display: block;
   overflow: hidden; }
 

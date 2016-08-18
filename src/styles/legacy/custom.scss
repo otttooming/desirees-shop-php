@@ -608,7 +608,7 @@ h3 {
 	}
 }
 .woocommerce-message {
-	display: flex;
+	display: flex!important;
 	align-items: center;
 }
 .cart-popup-container .product-image img {
@@ -707,10 +707,6 @@ span.copyright {
 .tavpood_infoblock li,
 .tavpood_infoblock p {
 	font-size: 14px;
-}
-/*Small fixes august 1014*/
-.woocommerce-error {
-	color: $color-white;
 }
 .opensoon,
 .opensoon2 {

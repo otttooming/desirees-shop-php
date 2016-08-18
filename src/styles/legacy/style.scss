@@ -278,6 +278,8 @@ abbr[title] {
 	padding: 20px 70px 20px 20px;
 	font-size: 14px;
 	font-weight: 300;
+  box-shadow: $shadow-std;
+  border-radius: $border-radius-std;
 }
 .woocommerce-error,
 .woocommerce_error {
@@ -291,7 +293,6 @@ abbr[title] {
 .woocommerce-error,
 .woocommerce_error {
 	background: url("../images/legacy/error.png") no-repeat 30px center;
-	color: $color-grey;
 	border-left-color: $color-red;
 	padding-left: 85px;
 	position: relative;
