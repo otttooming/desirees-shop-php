@@ -458,9 +458,16 @@ h3 {
 .wc-checkout-totals tr {
 	border-top: 1px solid $color-grey;
 }
+.tab-shipping .form-row label,
 .tab-billing label {
 	display: inline-block;
 	width: 130px;
+}
+.tab-shipping .form-row select,
+.tab-billing select {
+	display: inline-block;
+	width: 148px;
+  font-family: $typeface-secondary;
 }
 .checkout-cont {
 	float: left;

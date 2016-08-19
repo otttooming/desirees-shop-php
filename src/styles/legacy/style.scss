@@ -3661,6 +3661,10 @@ ul.product_list_widget li:last-child {
 .tab-content.tab-shipping h3 {
 	float: left;
 	margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 .checkout-default .tab-content.tab-shipping h3 {
 	margin-right: 0;
