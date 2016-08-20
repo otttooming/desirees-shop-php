@@ -11087,6 +11087,10 @@ td {
   text-align: left;
   font-weight: 400;
   padding: 10px; }
+  @media (max-width: 767px) {
+    th,
+    td {
+      padding: 5px; } }
 
 img {
   max-width: 100%; }
@@ -11593,6 +11597,9 @@ hr {
 .cart__form-body tr:nth-child(2) {
   background: rgba(21, 21, 21, 0.2); }
 
+.cart__form-footer {
+  background: rgba(21, 21, 21, 0.2); }
+
 .cart .product-price,
 .cart .product-quantity,
 .cart .product-subtotal,
@@ -11631,6 +11638,9 @@ hr {
   background: rgba(21, 21, 21, 0.3);
   padding: 20px;
   box-sizing: border-box; }
+  @media (max-width: 767px) {
+    .checkout__tab-content.tap-order {
+      padding: 20px 5px; } }
 
 .checkout-default .tab-content h3 {
   font-size: 20px;

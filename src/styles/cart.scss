@@ -44,6 +44,10 @@
     }
   }
 
+  &__form-footer {
+    background: rgba($color-black, .2);
+  }
+
   .product-price,
   .product-quantity,
   .product-subtotal,
@@ -96,6 +100,12 @@
     background: rgba($color-black, .3);
     padding: 20px;
     box-sizing: border-box;
+
+    &.tap-order {
+      @media (max-width: 767px) {
+        padding: 20px 5px;
+      }
+    }
   }
 }
 
