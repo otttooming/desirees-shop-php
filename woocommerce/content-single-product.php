@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
       	<?php do_action( 'woocommerce_before_single_product_summary' ); ?>
 
-        <div class="span4 product_description_mainblock productcol summary">
+        <div class="span4 product__mainblock product_description_mainblock productcol summary">
     		    <?php do_action( 'woocommerce_single_product_summary' ); ?>
     	  </div>
 

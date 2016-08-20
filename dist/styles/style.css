@@ -11311,6 +11311,12 @@ hr {
   .slider-promo__wrapper img {
     width: 100%; }
 
+.product__mainblock {
+  border-radius: 3px;
+  background: rgba(21, 21, 21, 0.2);
+  padding: 20px;
+  box-sizing: border-box; }
+
 .product__left {
   display: -ms-flexbox !important;
   display: flex !important;

@@ -1,5 +1,12 @@
 .product {
 
+  &__mainblock {
+    border-radius: $border-radius-std;
+    background: rgba($color-black, .2);
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
   &__left {
     display: flex!important;
     flex-direction: column;
@@ -40,7 +47,7 @@
   &__gallery {
     // margin: 10px 0;
   }
-  
+
   &__gallery-control {
     margin: 10px 0;
   }
@@ -52,7 +59,7 @@
   .swiper-wrapper {
     align-items: center;
   }
-  
+
   &__image {
     padding: 1px;
     box-sizing: border-box;
@@ -73,7 +80,7 @@
     border-radius: 3px;
     background-color: $color-red;
     box-shadow: $shadow-std;
-    
+
 
     font-size: 13px !important;
     line-height: normal;
@@ -97,7 +104,7 @@
         font-size: 25px;
       }
     }
-    
+
     + .button {
       margin: 0 0 0 5px;
     }
