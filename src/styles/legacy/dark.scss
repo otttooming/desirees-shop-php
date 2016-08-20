@@ -70,8 +70,6 @@ select:hover {
 }
 textarea {
 	background-color: $color-grey !important;
-	border: 1px solid $color-black !important;
-	color: white !important;
 }
 .login-fields .form-row input:focus {
 	background-color: #2a2a2a;
@@ -359,10 +357,8 @@ div.product_meta a {
 .checkout_cart td.product-price .amount {
 	color: $color-white;
 }
-#payment div.payment_box,
 .cart-collaterals .shipping_calculator .button {
 	background: $color-grey !important;
-	border: 1px solid $color-black !important;
 	float: left;
 	margin-bottom: 10px;
 	box-sizing: border-box;
@@ -703,11 +699,4 @@ div.pp_overlay {
 }
 .chosen-container .chosen-results li.no-results {
 	background: $color-grey;
-}
-.tab-content.register-tab-content,
-.tab-content.tab-login {
-	border-bottom: 1px solid $color-black;
-}
-.tab-content.tap-order {
-	border-top: 1px solid $color-black;
 }

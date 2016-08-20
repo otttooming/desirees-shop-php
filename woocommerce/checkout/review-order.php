@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <table class="shop_table checkout_cart table woocommerce-checkout-review-order-table">
 	<thead class="cart__form-head">
 		<tr>
-      <th class="product-thumbnail cart_del_column visible-desktop">&nbsp;</th>
+      <th class="product-thumbnail cart_del_column">&nbsp;</th>
 			<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
 			<th class="product-total"><?php _e( 'Total', 'woocommerce' ); ?></th>
 		</tr>
@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					?>
 					<tr class="<?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
             <!-- The thumbnail -->
-  					<td class="cart__thumbnail cart_del_column visible-desktop">
+  					<td class="cart__thumbnail cart_del_column">
   						<?php
   							$thumbnail = apply_filters( 'woocommerce_in_cart_product_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
   							printf('<a href="%s">%s</a>', esc_url( get_permalink( apply_filters('woocommerce_in_cart_product_id', $cart_item['product_id'] ) ) ), $thumbnail );
@@ -55,13 +55,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<tfoot class="cart__form-footer">
 
 		<tr class="cart-subtotal">
-			<th><?php _e( 'Cart Subtotal', 'woocommerce' ); ?></th>
+			<th colspan="2"><?php _e( 'Cart Subtotal', 'woocommerce' ); ?></th>
 			<td><?php wc_cart_totals_subtotal_html(); ?></td>
 		</tr>
 
 		<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
 			<tr class="cart-discount coupon-<?php echo esc_attr( $code ); ?>">
-				<th><?php wc_cart_totals_coupon_label( $coupon ); ?></th>
+				<th colspan="2"><?php wc_cart_totals_coupon_label( $coupon ); ?></th>
 				<td><?php wc_cart_totals_coupon_html( $coupon ); ?></td>
 			</tr>
 		<?php endforeach; ?>
@@ -78,7 +78,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php foreach ( WC()->cart->get_fees() as $fee ) : ?>
 			<tr class="fee">
-				<th><?php echo esc_html( $fee->name ); ?></th>
+				<th colspan="2"><?php echo esc_html( $fee->name ); ?></th>
 				<td><?php wc_cart_totals_fee_html( $fee ); ?></td>
 			</tr>
 		<?php endforeach; ?>
@@ -102,7 +102,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php do_action( 'woocommerce_review_order_before_order_total' ); ?>
 
 		<tr class="order-total">
-			<th><?php _e( 'Order Total', 'woocommerce' ); ?></th>
+			<th colspan="2"><?php _e( 'Order Total', 'woocommerce' ); ?></th>
 			<td><?php wc_cart_totals_order_total_html(); ?></td>
 		</tr>
 

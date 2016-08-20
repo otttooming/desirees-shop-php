@@ -100,7 +100,13 @@ input {
   border-radius: $border-radius-std;
   -webkit-appearance: none;
   text-shadow: $shadow-text;
-  text-transform: uppercase;
+}
+
+textarea {
+  border: 0;
+  text-shadow: $shadow-text;
+  border-radius: $border-radius-std;
+  box-shadow: $shadow-std;
 }
 
 hr {

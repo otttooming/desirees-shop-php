@@ -65,18 +65,22 @@
 }
 
 .cart-checkout {
-  
+
   &__place-order {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-    
+
     .terms {
       margin: 0;
+      box-shadow: $shadow-std;
+      border-radius: $border-radius-std;
+      padding: 20px;
+      background-color: $color-grey;
     }
   }
-  
+
   &__place-order-button {
     float: right;
   }
@@ -100,14 +104,14 @@
 	color: $color-grey;
 	text-transform: uppercase;
 	font-weight: 400;
-  
+
   label {
     font-size: inherit;
   }
 }
 
 .checkout_cart {
-  
+
   .product-total {
     text-align: right;
   }
@@ -145,15 +149,21 @@
   padding-left: 40px;
   box-sizing: border-box;
   position: relative;
-  
+
   label {
     margin: 5px 0;
   }
-  
+
   .input-radio {
     position: absolute;
     top: 50%;
     transform: translate3d(0,-50%,0);
     left: 10px;
   }
+}
+
+#payment div.payment_box {
+  box-shadow: $shadow-std;
+  background: $color-grey;
+  border-radius: $border-radius-std;
 }

@@ -5,15 +5,6 @@
 
 add_filter( 'woocommerce_enqueue_styles', '__return_false' );
 
-add_action('after_setup_theme', 'et_template_hooks');
-if(!function_exists('et_template_hooks')) {
-	function et_template_hooks() {
-		remove_action( 'woocommerce_cart_totals_after_shipping', 'woocommerce_shipping_calculator', 15 );
-		remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display' );
-		add_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display', 150 );
-	}
-}
-
 add_theme_support(ETHEME_DOMAIN);
 
 if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 18000)) {
