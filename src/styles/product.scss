@@ -54,6 +54,8 @@
 
   &__gallery-slider {
     background: $color-white;
+    border-bottom-right-radius: $border-radius-std;
+    border-bottom-left-radius: $border-radius-std;
   }
 
   .swiper-wrapper {
@@ -101,7 +103,7 @@
     &-big {
 
       .amount {
-        font-size: 25px;
+        @include rem(font-size, 25px);
       }
     }
 
@@ -182,12 +184,12 @@
   }
 
   .qty-block {
-    flex: 1;
+    flex: 1 0 150px;
     margin: 15px 15px 15px 0;
   }
 
   .button {
-    flex: 1;
+    flex: 1 0 150px;
   }
 
   .variations_button {
