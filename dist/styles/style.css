@@ -11104,6 +11104,18 @@ select {
 input[type=text] {
   min-height: 30px; }
 
+textarea::-webkit-input-placeholder,
+input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5); }
+
+textarea::-moz-placeholder,
+input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5); }
+
+textarea:-ms-input-placeholder,
+input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5); }
+
 select,
 input {
   border-radius: 5px;

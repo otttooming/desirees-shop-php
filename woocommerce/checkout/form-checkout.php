@@ -17,8 +17,7 @@ $is = etheme_get_option('checkout_');
 $get_checkout_url = apply_filters( 'woocommerce_get_checkout_url', WC()->cart->get_checkout_url() );
 
 wc_print_notices();
-
-woocommerce_checkout_coupon_form(); ?>
+?>
 
 <div class="checkout-default">
 
@@ -26,9 +25,9 @@ woocommerce_checkout_coupon_form(); ?>
         <div class="checkout__tab-content tab-content tab-login" id="content_tab_1">
             <div class="col2-set">
                 <div class="col-1 checkout-login">
-                  
+
                     <h3><?php _e('New Customers', ETHEME_DOMAIN) ?></h3>
-                    
+
                     <div class="checkout-methods cfx">
 						            <?php if ($checkout->enable_guest_checkout): ?>
 	                        <div class="method-radio">
@@ -37,7 +36,7 @@ woocommerce_checkout_coupon_form(); ?>
 	                            <div class="clear"></div>
 	                        </div>
 						            <?php endif ?>
-                        
+
 						            <?php if (get_option('woocommerce_enable_signup_and_login_from_checkout') != 'no'): ?>
 	                        <div class="method-radio">
 	                            <input type="radio" id="method2" name="method" value="2" <?php if (!$checkout->enable_guest_checkout): ?> checked <?php endif; ?> />
@@ -45,10 +44,10 @@ woocommerce_checkout_coupon_form(); ?>
 	                        </div>
                         <?php endif; ?>
                     </div>
-                    
+
                 </div>
                 <div class="col-2 checkout-customers cfx">
-                  
+
                     <h3><?php _e('Returning Customers', ETHEME_DOMAIN) ?></h3>
                     <?php do_action( 'woocommerce_before_checkout_form', $checkout );
                         // If checkout registration is disabled and not logged in, the user cannot checkout

@@ -93,6 +93,19 @@ input[type=text] {
   min-height: 30px;
 }
 
+textarea,
+input {
+  &::-webkit-input-placeholder {
+    color: rgba($color-white, .5);
+  }
+  &::-moz-placeholder {
+    color: rgba($color-white, .5);
+  }
+  &:-ms-input-placeholder {
+    color: rgba($color-white, .5);
+  }
+}
+
 select,
 input {
   border-radius: 5px;
