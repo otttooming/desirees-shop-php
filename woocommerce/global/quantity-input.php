@@ -12,12 +12,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<div class="qty-block" id="product-quantity">
+<div class="product-qty__wrap qty-block" id="product-quantity">
     <label class="qty-block__title"><?php _e('Quantity', ETHEME_DOMAIN); ?></label>
     <input
       type="number"
       step="<?php echo esc_attr( $step ); ?>"
-      min="<?php echo esc_attr( $min_value ); ?>"
+      min="1"
       max="<?php echo esc_attr( $max_value ); ?>"
       name="<?php echo esc_attr( $input_name ); ?>"
       value="<?php echo esc_attr( $input_value ); ?>"

@@ -11119,7 +11119,11 @@ input {
   font-size: 12px;
   border-radius: 3px;
   -webkit-appearance: none;
-  text-shadow: 2px 2px 5px #151515; }
+  text-shadow: 2px 2px 5px #151515;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
 
 textarea {
   border: 0;
@@ -11408,7 +11412,7 @@ del {
     color: #fff !important;
     font-size: 12px; }
   .product__price-block-big .amount {
-    font-size: 1.5625rem; }
+    font-size: 1.25rem; }
   .product__price-block + .button {
     margin: 0 0 0 5px; }
 
@@ -11465,8 +11469,7 @@ del {
     text-align: right; }
   .cart__add-to .qty-block {
     -ms-flex: 1 0 150px;
-        flex: 1 0 150px;
-    margin: 15px 15px 15px 0; }
+        flex: 1 0 150px; }
   .cart__add-to .button {
     -ms-flex: 1 0 150px;
         flex: 1 0 150px; }
@@ -11481,9 +11484,15 @@ del {
   margin: 15px 0; }
 
 .product-cart__variations {
-  padding: 0 10px 10px; }
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 10px 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
   .product-cart__variations select {
-    margin: 0 10px 0 0; }
+    margin: 0 10px 10px 0;
+    -ms-flex: 1;
+        flex: 1; }
 
 .product-cart__reset-wrap {
   padding: 0 10px; }
@@ -11500,6 +11509,30 @@ del {
 .separator__tag {
   margin: 0 5px;
   text-transform: uppercase; }
+
+.product-qty__wrap {
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px;
+  padding: 0 10px;
+  border-radius: 3px;
+  background: rgba(51, 51, 51, 0.5);
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46);
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .product-qty__wrap label {
+    height: 42px;
+    text-transform: none;
+    line-height: 42px; }
+  .product-qty__wrap input {
+    display: -ms-flexbox;
+    display: flex;
+    border: 0 !important;
+    background: none;
+    box-shadow: none;
+    font-size: 17px; }
 
 .control__items {
   -webkit-user-select: none;
@@ -11551,7 +11584,11 @@ del {
   text-shadow: 2px 2px 5px #151515;
   font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
   font-size: 11px;
-  line-height: 1.5; }
+  line-height: 1.5;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
   .button:hover {
     background: #a30000; }
   .button.active {

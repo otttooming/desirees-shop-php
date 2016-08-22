@@ -109,6 +109,8 @@ input {
   border-radius: $border-radius-std;
   -webkit-appearance: none;
   text-shadow: $shadow-text;
+
+  user-select: none;
 }
 
 textarea {
