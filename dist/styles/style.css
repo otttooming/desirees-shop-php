@@ -11477,16 +11477,16 @@ del {
         justify-content: space-between;
     width: 100%; }
 
-.cart__variations td, .cart__variations th {
-  padding: 5px 0;
-  text-align: right; }
-
 .product-stock {
   margin: 15px 0; }
 
+.product-cart__variations {
+  padding: 0 10px 10px; }
+  .product-cart__variations select {
+    margin: 0 10px 0 0; }
+
 .product-cart__reset-wrap {
-  padding: 10px 0;
-  text-align: right; }
+  padding: 0 10px; }
 
 .product__meta a {
   color: #ff9500;

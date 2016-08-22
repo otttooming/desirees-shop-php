@@ -200,23 +200,22 @@
 
 }
 
-.cart__variations {
-
-  td, th {
-    padding: 5px 0;
-    text-align: right;
-  }
-}
-
 .product-stock {
   margin: 15px 0;
 }
 
 .product-cart {
 
+  &__variations {
+    padding: 0 10px 10px;
+
+    select {
+      margin: 0 10px 0 0;
+    }
+  }
+
   &__reset-wrap {
-    padding: 10px 0;
-    text-align: right;
+    padding: 0 10px;
   }
 }
 

@@ -11510,7 +11510,7 @@ var productGallerySlider = new Swiper ('.slider-promo', {
 function clearSelected(event){
   event.preventDefault();
 
-  var elements = document.querySelectorAll('.cart__variations select');
+  var elements = document.querySelectorAll('.product-cart__variations select');
 
   for (var select = 0; select < elements.length; select++) {
     var elementsOptions = elements[select].options;
