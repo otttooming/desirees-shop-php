@@ -61,15 +61,6 @@ $woocommerce_loop['loop']++;
 							</h3>
 					</a>
 
-					<?php if ( isset($woocommerce_loop['name']) && $woocommerce_loop['name'] == 'related' ) : ?>
-					<?php elseif ( get_the_content() ) : ?>
-						<div class="product-descr">
-							<div class="product-descr-info">
-								<?php echo content(30); ?>
-							</div>
-						</div>
-					<?php endif; ?>
-
           <div class="product__purchase">
             <?php if($product_page_price): ?>
                 <?php do_action( 'woocommerce_after_shop_loop_item_title' ); ?>
@@ -80,5 +71,14 @@ $woocommerce_loop['loop']++;
           </div>
 
       </div>
+
+      <?php if ( isset($woocommerce_loop['name']) && $woocommerce_loop['name'] == 'related' ) : ?>
+      <?php elseif ( get_the_content() ) : ?>
+        <div class="product-descr">
+          <div class="product-descr-info">
+            <?php echo content(30); ?>
+          </div>
+        </div>
+      <?php endif; ?>
 	</div>
 <?php

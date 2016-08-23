@@ -79,6 +79,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-top-left-radius: $border-radius-std;
+    border-top-right-radius: $border-radius-std;
+    overflow: hidden;
   }
 
   &__images {
@@ -103,4 +106,5 @@
 .product-grid {
   background: rgba(51,51,51,.5)!important;
   box-shadow: $shadow-std;
+  border-radius: $border-radius-std;
 }

@@ -34,6 +34,9 @@
   &__info-block {
     display: flex;
     flex-direction: column;
+    border-bottom-right-radius: $border-radius-std;
+    border-bottom-left-radius: $border-radius-std;
+    overflow: hidden;
   }
 
   &__main-image-wrap {
