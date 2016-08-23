@@ -2407,17 +2407,23 @@ div.menu {
 /* Labels
 -------------------------------------------------------------- */
 .label-icon {
-  font-size: 0;
+  position: absolute;
+  z-index: 999;
+  top: 5px;
+  right: 0;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  background: #a30000;
   background-repeat: no-repeat;
   background-position: left top;
-  position: absolute;
-  left: 0;
-  z-index: 999; }
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46);
+  font-size: 12px; }
 
 .label-icon.sale-label {
-  right: 0;
-  left: auto;
-  z-index: 999; }
+  z-index: 999;
+  right: 5px;
+  left: auto; }
 
 /* -------------------------------------------------- */
 /* Product Grid
@@ -9698,11 +9704,6 @@ span.copyright {
   display: inline-block;
   padding: 10px;
   text-transform: uppercase; }
-
-/*Last line*/
-.label-icon.sale-label {
-  width: 100px !important;
-  height: 100px !important; }
 
 #default_products_page_container {
   padding-bottom: 0; }

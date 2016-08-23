@@ -1530,18 +1530,29 @@ div.menu {
 /* Labels
 -------------------------------------------------------------- */
 .label-icon {
-	font-size: 0;
-	background-repeat: no-repeat;
-	background-position: left top;
-	position: absolute;
-	left: 0;
-	z-index: 999;
+  position: absolute;
+  z-index: 999;
+  top: 5px;
+  right: 0;
+
+  padding: 5px 10px;
+
+  text-transform: uppercase;
+
+  border-radius: $border-radius-std;
+  background: $color-red;
+  background-repeat: no-repeat;
+  background-position: left top;
+  box-shadow: $shadow-std;
+
+  font-size: 12px;
 }
 .label-icon.sale-label {
-	right: 0;
-	left: auto;
-	z-index: 999;
+  z-index: 999;
+  right: 5px;
+  left: auto;
 }
+
 /* -------------------------------------------------- */
 /* Product Grid
 /* -------------------------------------------------- */
