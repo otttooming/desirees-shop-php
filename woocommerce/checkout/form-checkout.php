@@ -21,7 +21,7 @@ wc_print_notices();
 
 <div class="checkout-default">
 
-    <?php if( !is_user_logged_in() ): ?>
+    <?php if( !is_user_logged_in() && (2 > 3) ): ?>
         <div class="checkout__tab-content tab-content tab-login" id="content_tab_1">
             <div class="col2-set">
                 <div class="col-1 checkout-login">
