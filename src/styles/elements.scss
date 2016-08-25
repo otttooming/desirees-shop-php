@@ -122,8 +122,6 @@ input {
   border-radius: $border-radius-std;
   -webkit-appearance: none;
   text-shadow: $shadow-text;
-
-  user-select: none;
 }
 
 textarea {
@@ -164,6 +162,10 @@ del {
     border-radius: $border-radius-std;
     box-shadow: $shadow-std;
   }
+}
+
+svg {
+  filter: drop-shadow($shadow-text);
 }
 
 .amount {
