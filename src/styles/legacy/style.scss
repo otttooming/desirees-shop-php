@@ -1997,6 +1997,7 @@ ins {
 .product_description_banner {
 	float: right;
 	width: 180px;
+  flex: 1;
 }
 .product_description_banner .banner {
 	margin-top: 0;
@@ -2343,7 +2344,6 @@ ins {
 .cats .block-content .wpsc_categories li a {
 	font-size: 12px;
 	list-style: square inside;
-	color: $color-grey;
 	transition: all 0.2s ease-in-out;
 }
 .cats .block-content .wpsc_categories li a:hover,
@@ -2353,7 +2353,6 @@ ins {
 .cats .block-content .wpsc_categories > li > a {
 	margin-left: 1px;
 	padding: 1px 0 3px;
-	color: $color-grey;
 	-webkit-transition-timing-function: ease;
 	-webkit-transition-duration: 0.2s;
 	-webkit-transition-property: color;
@@ -4143,7 +4142,6 @@ form.login .lost_password {
 /* -------------------------------------------------- */
 .footer_container {
 	padding-top: 50px;
-	background: $color-black;
 }
 .footer_block,
 .footer_block1 {
@@ -4261,7 +4259,8 @@ form.login .lost_password {
 .container_footer_bg {
 	margin-top: 40px;
 	width: 100%;
-	background: $color-black;
+	background: $color-grey;
+  box-shadow: $shadow-std;
 }
 .footer_copyright_menu {
 	display: inline-block;

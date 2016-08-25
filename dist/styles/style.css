@@ -2865,7 +2865,9 @@ ins {
 -------------------------------------------------------------- */
 .product_description_banner {
   float: right;
-  width: 180px; }
+  width: 180px;
+  -ms-flex: 1;
+      flex: 1; }
 
 .product_description_banner .banner {
   margin-top: 0;
@@ -3212,7 +3214,6 @@ ins {
 .cats .block-content .wpsc_categories li a {
   font-size: 12px;
   list-style: square inside;
-  color: rgba(51, 51, 51, 0.5);
   transition: all 0.2s ease-in-out; }
 
 .cats .block-content .wpsc_categories li a:hover,
@@ -3222,7 +3223,6 @@ ins {
 .cats .block-content .wpsc_categories > li > a {
   margin-left: 1px;
   padding: 1px 0 3px;
-  color: rgba(51, 51, 51, 0.5);
   -webkit-transition-timing-function: ease;
   -webkit-transition-duration: 0.2s;
   -webkit-transition-property: color; }
@@ -5005,8 +5005,7 @@ form.login .lost_password {
 /* Footer
 /* -------------------------------------------------- */
 .footer_container {
-  padding-top: 50px;
-  background: #151515; }
+  padding-top: 50px; }
 
 .footer_block,
 .footer_block1 {
@@ -5121,7 +5120,8 @@ form.login .lost_password {
 .container_footer_bg {
   margin-top: 40px;
   width: 100%;
-  background: #151515; }
+  background: rgba(51, 51, 51, 0.5);
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46); }
 
 .footer_copyright_menu {
   display: inline-block;
@@ -8885,9 +8885,6 @@ select {
 .attachment-shop_single {
   background: #fff !important; }
 
-.container_footer_bg {
-  margin-top: 40px; }
-
 .block-head,
 .widget_categories .widget-title {
   padding-top: 0;
@@ -9591,10 +9588,11 @@ span.copyright {
     width: 100px; } }
 
 .sidebar_infoblock {
-  margin: 10px 0;
+  margin: 0 0 10px;
   padding: 20px;
-  background-color: #151515;
-  box-shadow: 0 0 3px #151515; }
+  background-color: #222;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46);
+  border-radius: 3px; }
 
 .page-id-112 ol,
 .page-id-11573 ol,
@@ -10016,16 +10014,6 @@ del {
 .products-list .product-grid:hover {
   background: transparent;
   border-bottom: none; }
-
-.container_footer_bg,
-.footer_container {
-  background-color: #2f2f2f !important; }
-
-.footer-black-bg .container {
-  background: #2f2f2f !important; }
-
-.container_footer_bg {
-  border-top: 1px solid #151515; }
 
 .fixed-header-area {
   background: rgba(51, 51, 51, 0.5);
@@ -11166,8 +11154,16 @@ del {
     padding: 0;
     box-shadow: none; }
 
+.f-center {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
 .wrapper {
-  background: rgba(34, 34, 34, 0.8);
+  background: rgba(34, 34, 34, 0.4);
   box-shadow: 0 1px 6px #151515;
   box-sizing: border-box; }
 
@@ -11226,7 +11222,13 @@ del {
       justify-content: space-between; }
 
 .grid__slider {
-  text-align: center; }
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 0 0 20px;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46);
+  border-radius: 3px;
+  background: rgba(51, 51, 51, 0.5); }
 
 .grid__cat-banner {
   max-height: 290px; }
@@ -11338,7 +11340,10 @@ del {
   border-radius: 3px;
   background: rgba(21, 21, 21, 0.2);
   padding: 20px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  -ms-flex: 1 0 320px;
+      flex: 1 0 320px;
+  margin-bottom: 20px; }
 
 .product__left {
   display: -ms-flexbox !important;

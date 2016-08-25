@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 <?php do_action( 'woocommerce_before_single_product' ); ?>
 
 <div itemscope="" itemtype="http://schema.org/Product">
-    <div id="product-page" class="row product">
+    <div id="product-page" class="row product f-center">
 
       	<?php do_action( 'woocommerce_before_single_product_summary' ); ?>
 

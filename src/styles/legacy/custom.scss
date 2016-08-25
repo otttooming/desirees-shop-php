@@ -19,9 +19,6 @@ select {
 .attachment-shop_single {
 	background: $color-white !important;
 }
-.container_footer_bg {
-	margin-top: 40px;
-}
 .block-head,
 .widget_categories .widget-title {
 	padding-top: 0;
@@ -735,10 +732,11 @@ span.copyright {
 	}
 }
 .sidebar_infoblock {
-	margin: 10px 0;
+	margin: 0 0 10px;
 	padding: 20px;
-	background-color: $color-black;
-	box-shadow: 0 0 3px $color-black;
+	background-color: $color-charcoal;
+	box-shadow: $shadow-std;
+  border-radius: $border-radius-std;
 }
 .page-id-112 ol,
 .page-id-11573 ol,

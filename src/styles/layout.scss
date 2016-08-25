@@ -1,6 +1,13 @@
+.f-center {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .wrapper {
   // background: $color-charcoal;
-  background: rgba($color-charcoal, .8);
+  // background: rgba($color-charcoal, .8);
+  background: rgba($color-charcoal, .4);
   box-shadow: 0 1px 6px $color-black;
   box-sizing: border-box;
 }

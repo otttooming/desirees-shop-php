@@ -1,7 +1,13 @@
 .grid {
 
   &__slider {
+    display: inline-block;
+    width: 100%;
     text-align: center;
+    margin: 0 0 20px;
+    box-shadow: $shadow-std;
+    border-radius: $border-radius-std;
+    background: $color-grey;
   }
 
   &__cat-banner {
