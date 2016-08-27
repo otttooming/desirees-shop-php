@@ -11208,8 +11208,8 @@ svg {
     text-transform: uppercase;
     font-size: 19px; }
   .cart-links svg {
-    -ms-flex: 1 0 32px;
-        flex: 1 0 32px; }
+    -ms-flex: 0 0 32px;
+        flex: 0 0 32px; }
 
 .header-variant2__wrap {
   display: -ms-flexbox;
@@ -11252,9 +11252,9 @@ svg {
   margin: 0; }
   .woocommerce-ordering select {
     margin: 0;
-    padding: 0;
+    padding: 0 15px;
     border: 0 !important;
-    background: transparent;
+    background: rgba(51, 51, 51, 0.5);
     color: #ff9500; }
 
 .view-switcher {
