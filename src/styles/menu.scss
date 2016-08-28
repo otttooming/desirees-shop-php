@@ -2,10 +2,9 @@
   box-sizing: border-box;
 }
 
-.header-type-default .menu .current-menu-item > a,
-.header-type-default .menu .current-menu-item > a:hover,
-.header-type-default .menu > ul > li > a {
-	padding: 8px 16px;
+.menu>ul>li>a {
+	padding: 0 16px;
+  line-height: 42px;
 }
 
 .current_page_parent > a,
