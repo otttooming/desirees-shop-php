@@ -1282,7 +1282,6 @@ div.menu {
 	font-size: 20px;
 	text-align: left;
 	margin: 20px 0;
-	padding: 0 15px;
 	text-transform: uppercase;
 	font-weight: 300;
 }
@@ -1301,7 +1300,6 @@ div.menu {
 	font-size: 0;
 	width: 46px;
 	height: 45px;
-	border-top: 1px solid $color-grey;
 	background: $color-grey;
 	background-image: url("../images/legacy/menu-plus.png");
 	background-position: center center;
@@ -1322,7 +1320,6 @@ div.menu {
 	font-size: 16px;
 	background: $color-white;
 	color: $color-grey;
-	border-top: 1px solid $color-grey;
 	padding: 0 10px;
 	font-weight: 300;
 }
@@ -1331,14 +1328,6 @@ div.menu {
 	text-decoration: none;
 	color: $color-black;
 	transition: background-color 0.3s ease;
-}
-.et-mobile-menu > li:last-child {
-	border-bottom: 1px solid $color-grey;
-}
-/* level 1
--------------------------------------------------------------- */
-.et-mobile-menu > li > ul {
-	border-top: 0!important;
 }
 /* level 1 +
 -------------------------------------------------------------- */
@@ -1370,9 +1359,6 @@ div.menu {
 	font-size: 12px;
 	box-sizing: border-box;
 	border-left: 3px solid $color-grey;
-	-webkit-transition-property: all;
-	-webkit-transition-duration: 0.4s;
-	-webkit-transition-timing-function: ease;
 	padding: 30px;
 	background: $color-grey;
 	margin: 20px 0 20px 20px;

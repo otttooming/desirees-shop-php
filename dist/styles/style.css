@@ -2161,7 +2161,6 @@ div.menu {
   font-size: 20px;
   text-align: left;
   margin: 20px 0;
-  padding: 0 15px;
   text-transform: uppercase;
   font-weight: 300; }
 
@@ -2180,7 +2179,6 @@ div.menu {
   font-size: 0;
   width: 46px;
   height: 45px;
-  border-top: 1px solid rgba(51, 51, 51, 0.5);
   background: rgba(51, 51, 51, 0.5);
   background-image: url("../images/legacy/menu-plus.png");
   background-position: center center;
@@ -2201,7 +2199,6 @@ div.menu {
   font-size: 16px;
   background: #fff;
   color: rgba(51, 51, 51, 0.5);
-  border-top: 1px solid rgba(51, 51, 51, 0.5);
   padding: 0 10px;
   font-weight: 300; }
 
@@ -2210,14 +2207,6 @@ div.menu {
   text-decoration: none;
   color: #151515;
   transition: background-color 0.3s ease; }
-
-.et-mobile-menu > li:last-child {
-  border-bottom: 1px solid rgba(51, 51, 51, 0.5); }
-
-/* level 1
--------------------------------------------------------------- */
-.et-mobile-menu > li > ul {
-  border-top: 0 !important; }
 
 /* level 1 +
 -------------------------------------------------------------- */
@@ -2249,9 +2238,6 @@ div.menu {
   font-size: 12px;
   box-sizing: border-box;
   border-left: 3px solid rgba(51, 51, 51, 0.5);
-  -webkit-transition-property: all;
-  -webkit-transition-duration: 0.4s;
-  -webkit-transition-timing-function: ease;
   padding: 30px;
   background: rgba(51, 51, 51, 0.5);
   margin: 20px 0 20px 20px; }
@@ -6677,8 +6663,7 @@ form.login .lost_password {
   .row-fluid [class*=span],
   .uneditable-input[class*=span],
   [class*=span] {
-    float: left !important;
-    margin-right: 15px !important; }
+    float: left !important; }
   .footer_block2 {
     margin-bottom: 20px;
     width: 100% !important;
@@ -6850,9 +6835,6 @@ form.login .lost_password {
   .header-type-variant6 #main-nav {
     float: left;
     width: 100%; }
-  .header-type-default .header-area,
-  .header-type-variant3 .header-area {
-    padding-top: 20px; }
   .header-type-default .logo,
   .header-type-variant3 .logo {
     width: 100% !important;
@@ -7765,9 +7747,7 @@ form.login .lost_password {
     color: #a30000; }
   .header-type-default .header,
   .header-type-variant3 .header {
-    margin-bottom: 0;
-    padding-top: 20px;
-    padding-bottom: 20px; }
+    margin-bottom: 0; }
   .header-type-variant4,
   .header-type-variant5 {
     position: relative; }
@@ -9926,9 +9906,6 @@ del {
 .default-menu .sub-menu .current-menu-item {
   background-color: rgba(51, 51, 51, 0.5); }
 
-.et-mobile-menu > li:last-child {
-  border-bottom: 1px solid #151515; }
-
 .product-grid .product-name a,
 .product-slider .slider-title {
   color: #fff; }
@@ -10330,7 +10307,6 @@ form.register .register-head i {
 
 .et-mobile-menu li > a {
   background: rgba(51, 51, 51, 0.5);
-  border-top: 1px solid #151515;
   color: #fff; }
 
 .et-mobile-menu li > a:hover {
@@ -10338,8 +10314,7 @@ form.register .register-head i {
   color: #a30000; }
 
 .et-mobile-menu li .open-child {
-  background-color: rgba(51, 51, 51, 0.5);
-  border-top: 1px solid #151515; }
+  background-color: rgba(51, 51, 51, 0.5); }
 
 .et-mobile-menu li .open-child:hover {
   background-color: #a30000; }
@@ -11144,6 +11119,9 @@ svg {
   float: right;
   font-style: italic; }
 
+.header {
+  position: relative; }
+
 .header-links {
   text-align: right;
   white-space: nowrap; }
@@ -11582,14 +11560,15 @@ svg {
 
 .bc {
   text-transform: uppercase;
-  padding: 10px 15px;
+  margin: 5px 10px;
   font-size: 11px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+  line-height: 42px;
+  overflow: hidden;
+  white-space: nowrap; }
   .bc__delim {
     margin: 0 5px; }
+  .bc a, .bc__current {
+    padding: 0 5px; }
   .bc a {
     color: #ff9500; }
 

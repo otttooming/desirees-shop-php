@@ -27,13 +27,19 @@
 
 .bc {
   text-transform: uppercase;
-  padding: 10px 15px;
+  margin: 5px 10px;
   font-size: 11px;
-  display: flex;
-  flex-wrap: wrap;
+  line-height: 42px;
+  overflow: hidden;
+  white-space: nowrap;
 
   &__delim {
     margin: 0 5px;
+  }
+
+  a,
+  &__current {
+    padding: 0 5px;
   }
 
   a {

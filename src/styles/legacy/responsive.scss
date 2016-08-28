@@ -880,7 +880,6 @@
 	.uneditable-input[class*=span],
 	[class*=span] {
 		float: left!important;
-		margin-right: 15px !important;
 	}
 	.footer_block2 {
 		margin-bottom: 20px;
@@ -1109,10 +1108,6 @@
 	.header-type-variant6 #main-nav {
 		float: left;
 		width: 100%;
-	}
-	.header-type-default .header-area,
-	.header-type-variant3 .header-area {
-		padding-top: 20px;
 	}
 	.header-type-default .logo,
 	.header-type-variant3 .logo {
@@ -2310,8 +2305,6 @@
 	.header-type-default .header,
 	.header-type-variant3 .header {
 		margin-bottom: 0;
-		padding-top: 20px;
-		padding-bottom: 20px;
 	}
 	.header-type-variant4,
 	.header-type-variant5 {

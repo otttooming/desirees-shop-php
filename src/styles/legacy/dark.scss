@@ -133,9 +133,6 @@ del {
 .default-menu .sub-menu .current-menu-item {
 	background-color: $color-grey;
 }
-.et-mobile-menu > li:last-child {
-	border-bottom: 1px solid $color-black;
-}
 .product-grid .product-name a,
 .product-slider .slider-title {
 	color: $color-white;
@@ -539,7 +536,6 @@ form.register .register-head i {
 }
 .et-mobile-menu li > a {
 	background: $color-grey;
-	border-top: 1px solid $color-black;
 	color: $color-white;
 }
 .et-mobile-menu li > a:hover {
@@ -548,7 +544,6 @@ form.register .register-head i {
 }
 .et-mobile-menu li .open-child {
 	background-color: $color-grey;
-	border-top: 1px solid $color-black;
 }
 .et-mobile-menu li .open-child:hover {
 	background-color: $color-red;
