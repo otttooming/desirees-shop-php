@@ -2230,8 +2230,6 @@ ins {
 /* -------------------------------------------------- */
 .sidebar_grid {
 	float: left;
-	margin-top: 10px;
-	margin-bottom: 60px !important;
 }
 .widget-title {
 	margin-bottom: 10px !important;
@@ -2280,9 +2278,6 @@ ins {
 	color: $color-black;
 	text-align: center;
 	text-transform: uppercase;
-}
-.grid_content {
-	margin-top: 10px;
 }
 .grid_content.with-sidebar-left {
 	float: right !important;
@@ -2745,7 +2740,7 @@ ul.product_list_widget li .woocommerce-price-suffix .amount {
 .widget-container {
 	float: left;
 	clear: both;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	width: 100%;
 }
 .widget_special_offers {
