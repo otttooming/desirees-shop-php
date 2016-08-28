@@ -29,7 +29,7 @@ get_header('shop');
 
 <div class="container">
     <div class="row">
-        <div class="span12 breadcrumbs">
+        <div class="span12">
             <?php do_action('woocommerce_before_main_content'); ?>
         </div>
     </div>
@@ -70,7 +70,7 @@ get_header('shop');
 
           <div class="grid__options">
           	<?php do_action('woocommerce_before_shop_loop'); ?>
-            
+
             <div class="view-switcher">
               <label><?php _e('View as', ETHEME_DOMAIN); ?></label>
               <div class="switchToGrid"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 80.538 80.538"><path d="M0 21.965h21.965V0H0v21.965zm29.287 0h21.965V0H29.287v21.965zM58.573 0v21.965h21.965V0H58.573zM0 51.25h21.965V29.288H0V51.25zm29.287 0h21.965V29.288H29.287V51.25zm29.286 0h21.965V29.288H58.573V51.25zM0 80.54h21.965V58.573H0v21.965zm29.287 0h21.965V58.573H29.287v21.965zm29.286 0h21.965V58.573H58.573v21.965z" fill="currentColor"/></svg></div>

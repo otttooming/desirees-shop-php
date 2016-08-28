@@ -1944,9 +1944,6 @@ body.wide {
 .page-template-contacts2-php #map-image {
   height: 400px !important; }
 
-.delimeter {
-  padding: 0 6px 0 8px; }
-
 .back-to {
   float: right;
   padding: 0 0 2px 12px;
@@ -6561,8 +6558,6 @@ form.login .lost_password {
     margin-top: 10px; }
   .navbar .brand {
     padding-right: 340px; }
-  .delimeter {
-    padding: 0 4px 0 6px; }
   .shopping_cart_wrap ul {
     float: none;
     margin-bottom: -20px;
@@ -7219,8 +7214,6 @@ form.login .lost_password {
     margin-bottom: 20px !important; }
   .text-banner {
     margin-bottom: 30px; }
-  .delimeter {
-    padding: 0 4px 0 6px; }
   .main-info .price-block {
     margin-top: 0; }
   .more-views-arrow.next,
@@ -8960,9 +8953,6 @@ select {
   padding: 0 16px;
   line-height: 78px; }
 
-.delimeter {
-  color: #fff; }
-
 .back-to:before {
   color: #a30000 !important; }
 
@@ -9599,9 +9589,6 @@ span.copyright {
 .page-id-6788 ol {
   margin: 30px;
   list-style: decimal; }
-
-.page #breadcrumb {
-  display: none; }
 
 .page-id-11573 .infotabblock a,
 .page-id-6788 .infotabblock a {
@@ -11612,13 +11599,13 @@ svg {
     height: 1em;
     margin: 0 0 0 1em; }
 
-.breadcrumbs {
+.bc {
   text-transform: uppercase;
-  padding: 10px;
-  font-size: 11px;
-  font-style: italic; }
-  .breadcrumbs a {
-    margin: 0 5px;
+  padding: 10px 15px;
+  font-size: 11px; }
+  .bc__delim {
+    margin: 0 5px; }
+  .bc a {
     color: #ff9500; }
 
 .search__form {

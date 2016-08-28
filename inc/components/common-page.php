@@ -22,8 +22,6 @@
               $title = get_post_field('post_title', $post_id);
           ?>
 
-          <h1 class="page-title"><?php echo $title; ?></h1>
-
           <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
               <?php the_content(); ?>
               <?php wp_link_pages(array('before' => ''.__('Pages:', ETHEME_DOMAIN), 'after' => '')); ?>

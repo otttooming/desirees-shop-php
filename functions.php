@@ -26,6 +26,11 @@ require get_template_directory() . '/inc/func/options.php';
 */
 require get_template_directory() . '/inc/func/widgets.php';
 
+/**
+* Breadcrumbs
+*/
+require get_template_directory() . '/inc/func/breadcrumbs.php';
+
 global $etheme_theme_data;
 $etheme_theme_data = wp_get_theme( 'idstore' );
 define('ETHEME_DOMAIN', 'idstore');

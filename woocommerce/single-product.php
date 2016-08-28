@@ -15,7 +15,7 @@ get_header('shop'); ?>
 
 <div class="container">
     <div class="row">
-        <div class="span12 breadcrumbs">
+        <div class="span12">
             <?php do_action('woocommerce_before_main_content'); ?>
         </div>
     </div>
