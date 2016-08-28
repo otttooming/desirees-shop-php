@@ -11594,7 +11594,11 @@ svg {
 .bc {
   text-transform: uppercase;
   padding: 10px 15px;
-  font-size: 11px; }
+  font-size: 11px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
   .bc__delim {
     margin: 0 5px; }
   .bc a {

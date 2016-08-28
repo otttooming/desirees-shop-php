@@ -30,6 +30,8 @@
   text-transform: uppercase;
   padding: 10px 15px;
   font-size: 11px;
+  display: flex;
+  flex-wrap: wrap;
 
   &__delim {
     margin: 0 5px;
