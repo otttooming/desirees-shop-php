@@ -1,12 +1,6 @@
 // scss-lint:disable all
 
 @media screen and (min-width:1200px) {
-	.container {
-		padding: 0 30px;
-	}
-	.row {
-		margin-left: -30px;
-	}
 	.row:after,
 	.row:before {
 		display: table;
@@ -19,7 +13,6 @@
 	[class*="span"] {
 		float: left;
 		min-height: 1px;
-		margin-left: 30px;
 	}
 	.container,
 	.navbar-fixed-bottom .container,
@@ -109,9 +102,6 @@
 	textarea {
 		margin-left: 0;
 	}
-	.controls-row [class*="span"] + [class*="span"] {
-		margin-left: 30px;
-	}
 	.uneditable-input.span12,
 	input.span12,
 	textarea.span12 {
@@ -172,17 +162,8 @@
 	textarea.span1 {
 		width: 56px;
 	}
-	.thumbnails {
-		margin-left: -30px;
-	}
-	.thumbnails > li {
-		margin-left: 30px;
-	}
 	.row-fluid .thumbnails {
 		margin-left: 0;
-	}
-	.header {
-		padding-top: 30px;
 	}
 	.header-type-variant2 .header {
 		padding-top: 20px;
@@ -219,9 +200,6 @@
 	#banner_top_bottom_text {
 		width: 75%;
 	}
-	.banner {
-		margin-bottom: 30px;
-	}
 	.product-slider .product-slide {
 		float: left;
 	}
@@ -237,7 +215,6 @@
 	.product-slider.columns5 .product-slide,
 	.product-slider.columns6 .product-slide {
 		float: left;
-		margin-right: 30px;
 		position: relative;
 	}
 	.product-slider.columns3 .span3 .product-image,
@@ -289,16 +266,11 @@
 	.grid_content.no-sidebar .cat-banner {
 		width: 100%;
 	}
-	.product-slide .product-grid,
-	.products_grid .product-grid {
-		margin-top: 30px;
-	}
 	.product-slide .img-wrapper {
 		width: 270px;
 	}
 	.category-block {
 		float: left;
-		margin-right: 30px;
 		margin-top: 20px;
 		max-width: 260px;
 	}
@@ -455,14 +427,10 @@
 		text-align: left;
 	}
 	#after_footer_menu {
-		margin-left: 30px;
 		width: 470px;
 	}
 	#after_footer_payments {
 		float: right;
-	}
-	.copyright {
-		margin-left: -30px;
 	}
 	.product-grid .price {
 		text-align: left;
@@ -525,12 +493,6 @@
 	.starwrapper {
 		bottom: 148px;
 	}
-	.product-grid .starwrapper {
-		top: -30px;
-	}
-	.typography-block .nav-tabs {
-		margin-left: 30px !important;
-	}
 	.typography-block .span10 {
 		width: 960px;
 	}
@@ -539,9 +501,6 @@
 	}
 	.typography-block .team-member.span4 {
 		width: 360px;
-	}
-	#typography-tabs .tabs-left > .nav-tabs {
-		margin-left: 30px;
 	}
 	#typography-tabs .tabs-left > .tab-content {
 		width: 965px;
@@ -588,9 +547,6 @@
 	}
 	.tp-caption iframe {
 		width: 480px !important;
-	}
-	.footer-hr {
-		margin-left: 30px;
 	}
 	.p-table {
 		width: 268px;

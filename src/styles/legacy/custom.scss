@@ -843,9 +843,6 @@ span.copyright {
 	}
 	@media only screen and (min-width: 1200px) {
 		width: 216px!important;
-		&:nth-child(4n+1) {
-			margin-left: 30px;
-		}
 	}
 	@media only screen and (max-width: 979px) and (min-width: 768px) {
 		width: 237px !important;
