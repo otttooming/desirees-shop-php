@@ -1268,8 +1268,11 @@ div.menu {
 -------------------------------------------------------------- */
 .et-mobile-menu {
 	text-align: left;
-	display: none;
 	margin: -20px 0 20px;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 .header-type-variant2 .et-mobile-menu {
 	margin: 0 0 20px;

@@ -21,7 +21,7 @@
 }
 .hide-text {
 	color: transparent;
-	
+
 	background-color: transparent;
 	border: 0;
 }
@@ -34,6 +34,16 @@
 .hidden {
 	display: none;
 	visibility: hidden;
+}
+@media (min-width: 768px) {
+  .vis-to-phone {
+    display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  .vis-to-tablet-up {
+    display: none !important;
+  }
 }
 .visible-phone {
 	display: none !important;

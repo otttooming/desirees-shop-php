@@ -17,14 +17,7 @@ $(document).ready(function() {
     $(this).parent().removeClass('over').find('>ul').slideUp(200);
   });
 
-  $('.header-bg').after(navList[0]);
-  $('div.menu').after('<span class="et-menu-title"><i class="icon-reorder"></i></span>');
-
-  $('.et-menu-title').clicktoggle(function() {
-    $('.et-mobile-menu').slideDown(200);
-  }, function() {
-    $('.et-mobile-menu').slideUp(200);
-  });
+  document.querySelector('#products-sidebar').insertBefore(navList[0], document.querySelector('#products-sidebar > div'));
 
   /* Fixed menu */
   $(window).scroll(function() {

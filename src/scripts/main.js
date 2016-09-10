@@ -76,3 +76,21 @@ if (document.getElementsByClassName('cart__reset-variations')[0]) {
   });
 
 }
+
+var Desirees = Desirees || {};
+
+Desirees.nav = {
+
+  handleNavSidebarOpen: function() {
+    console.log('logggme');
+    if (document.body.classList.contains('nav-sidebar__open')) {
+      document.body.classList.remove('nav-sidebar__open');
+    } else {
+      document.body.classList.add('nav-sidebar__open');
+    }
+  }
+};
+
+var bodyEl = document.querySelector('body');
+
+document.querySelector('.et-menu-title').addEventListener('click', Desirees.nav.handleNavSidebarOpen, false);

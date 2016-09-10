@@ -10,7 +10,7 @@
 
 	<div class="wrapper">
 
-		<div class="header-top header-top-default hidden-desktop">
+		<div class="header-top header-top-default vis-to-phone">
 			<div class="container">
 				<div class="row header-variant2">
 
@@ -65,8 +65,10 @@
 					</div>
 
           <?php if ($template_header != 'min') : ?><?php // Load full header ?>
-            <div class="hidden-desktop">
-              <span class="et-menu-title"><i class="icon-reorder"></i></span>
+            <div class="vis-to-phone">
+              <span class="et-menu-title">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 302 302"><path d="M0 36h302v30H0zM0 236h302v30H0zM0 136h302v30H0z" fill="currentColor"/></svg>
+              </span>
             </div>
           <?php endif; ?>
 
@@ -80,7 +82,7 @@
   						</div>
   					</div>
 
-  					<div class="span3 shopping_cart_wrap visible-desktop">
+  					<div class="span3 shopping_cart_wrap vis-to-tablet-up">
 
               <div id="cart__top" class="cart__top-wrapper">
                 <?php require get_template_directory() . '/inc/components/cart-links.php'; ?>
@@ -94,7 +96,7 @@
 				</header>
 
         <?php if ($template_header != 'min') : ?><?php // Load full header ?>
-          <div class="row visible-desktop">
+          <div class="row vis-to-tablet-up">
               <div id="main-nav" class="span12">
                   <?php wp_nav_menu(array('theme_location' => 'top', 'name' => 'top', 'container' => 'div', 'container_class' => 'menu default-menu')); ?>
               </div>

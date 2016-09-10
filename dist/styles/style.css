@@ -2147,8 +2147,10 @@ div.menu {
 -------------------------------------------------------------- */
 .et-mobile-menu {
   text-align: left;
-  display: none;
   margin: -20px 0 20px; }
+  @media screen and (min-width: 768px) {
+    .et-mobile-menu {
+      display: none; } }
 
 .header-type-variant2 .et-mobile-menu {
   margin: 0 0 20px; }
@@ -5787,6 +5789,14 @@ form.login .lost_password {
   display: none;
   visibility: hidden; }
 
+@media (min-width: 768px) {
+  .vis-to-phone {
+    display: none !important; } }
+
+@media (max-width: 767px) {
+  .vis-to-tablet-up {
+    display: none !important; } }
+
 .visible-phone {
   display: none !important; }
 
@@ -6494,7 +6504,6 @@ form.login .lost_password {
     width: 428px;
     padding: 0; }
   .et-mobile-menu {
-    width: 428px;
     padding: 0;
     margin: -20px auto 20px; }
   .page-template-contacts2-php .contact-form #contact_container {
@@ -10891,7 +10900,8 @@ html {
 body {
   font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
   background-image: radial-gradient(circle at 50%, rgba(17, 52, 181, 0.9) 40%, rgba(234, 0, 64, 0.9) 100%);
-  text-shadow: 2px 2px 5px #151515; }
+  text-shadow: 2px 2px 5px #151515;
+  overflow-x: hidden; }
 
 a {
   cursor: pointer;
@@ -11521,6 +11531,32 @@ svg {
     padding: 0 5px; }
   .bc a {
     color: #ff9500; }
+
+@media screen and (max-width: 768px) {
+  .sidebar_left {
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+    position: absolute;
+    transition: -webkit-transform 500ms linear;
+    transition: transform 500ms linear;
+    transition: transform 500ms linear, -webkit-transform 500ms linear;
+    max-width: 320px;
+    z-index: 1;
+    right: 0; }
+    .nav-sidebar__open .sidebar_left {
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0); } }
+
+@media screen and (max-width: 768px) {
+  .grid_content {
+    position: relative;
+    transition: opacity 500ms, -webkit-transform 500ms linear;
+    transition: transform 500ms linear, opacity 500ms;
+    transition: transform 500ms linear, opacity 500ms, -webkit-transform 500ms linear; }
+    .nav-sidebar__open .grid_content {
+      -webkit-transform: translate3d(-320px, 0, 0);
+              transform: translate3d(-320px, 0, 0);
+      opacity: .5; } }
 
 .search__form {
   display: -ms-flexbox;
