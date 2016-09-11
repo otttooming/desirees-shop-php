@@ -11,6 +11,7 @@ load_template( trailingslashit( get_template_directory() ) . 'option-tree/ot-loa
 add_theme_support('woocommerce');
 
 register_nav_menu('top', 'Top Navigation');
+register_nav_menu('top-right', 'Top Right Navigation');
 
 function remove_loop_button(){
     remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );

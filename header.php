@@ -28,8 +28,6 @@
               <div id="cart__top" class="cart__top-wrapper">
                 <?php require get_template_directory() . '/inc/components/cart-links.php'; ?>
   						</div>
-
-              <?php require get_template_directory() . '/inc/components/header-links.php'; ?>
   					</div>
 
           <?php endif; ?><?php // END Load full header ?>
@@ -87,8 +85,6 @@
               <div id="cart__top" class="cart__top-wrapper">
                 <?php require get_template_directory() . '/inc/components/cart-links.php'; ?>
   						</div>
-
-              <?php require get_template_directory() . '/inc/components/header-links.php'; ?>
   					</div>
 
           <?php endif; ?><?php // END Load full header ?>
@@ -97,8 +93,11 @@
 
         <?php if ($template_header != 'min') : ?><?php // Load full header ?>
           <div class="row vis-to-tablet-up">
-              <div id="main-nav" class="span12">
+              <div id="main-nav" class="span8">
                   <?php wp_nav_menu(array('theme_location' => 'top', 'name' => 'top', 'container' => 'div', 'container_class' => 'menu default-menu')); ?>
+              </div>
+              <div id="main-nav-top-right" class="span4 main-nav-top-right">
+                  <?php wp_nav_menu(array('theme_location' => 'top-right', 'name' => 'top-right', 'container' => 'div', 'container_class' => 'menu default-menu')); ?>
               </div>
           </div>
         <?php endif; ?><?php // END Load full header ?>

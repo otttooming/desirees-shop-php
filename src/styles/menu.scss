@@ -64,7 +64,7 @@
 }
 
 .grid_content {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     position: relative;
     transition: transform 500ms linear, opacity 500ms;
 
@@ -73,4 +73,9 @@
       opacity: .5;
     }
   }
+}
+
+.main-nav-top-right {
+  display: flex;
+  justify-content: flex-end;
 }
