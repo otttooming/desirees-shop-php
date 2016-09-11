@@ -9241,8 +9241,7 @@ h3 {
 .search_text {
   width: 349px;
   margin-left: 15px;
-  color: #ff9500 !important;
-  font-style: italic; }
+  color: #ff9500 !important; }
 
 @media only screen and (max-width: 979px) and (min-width: 768px) {
   .logo {
@@ -11077,7 +11076,6 @@ svg {
   display: flex;
   float: right;
   height: 80px;
-  font-style: italic;
   -ms-flex-align: center;
       align-items: center;
   -ms-flex-pack: end;
@@ -11259,7 +11257,6 @@ svg {
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 100;
-  font-style: italic;
   line-height: 1.35; }
 
 .product__info-block {
