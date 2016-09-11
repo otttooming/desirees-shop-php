@@ -9233,11 +9233,6 @@ h3 {
     height: 75px !important;
     margin-bottom: 25px !important; } }
 
-/* Amazon style search bar */
-.header-type-default .logo {
-  width: inherit;
-  margin-right: 5px; }
-
 .search_text {
   width: 349px;
   margin-left: 15px;
@@ -11118,7 +11113,8 @@ svg {
 
 .main-nav-top-right li:last-child {
   background: rgba(21, 21, 21, 0.5);
-  border-radius: 3px; }
+  border-radius: 3px;
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46); }
 
 .grid__slider {
   text-align: center;

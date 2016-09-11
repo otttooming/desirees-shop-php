@@ -58,7 +58,7 @@
 			<div class="container header-area">
 
 				<header class="row header ">
-					<div class="span5 logo">
+					<div class="span3 logo">
             <?php require get_template_directory() . '/inc/components/logo.php'; ?>
 					</div>
 
