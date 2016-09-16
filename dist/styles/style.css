@@ -5085,12 +5085,6 @@ form.login .lost_password {
   margin-left: 0;
   width: 470px; }
 
-.container_footer_bg {
-  margin-top: 40px;
-  width: 100%;
-  background: rgba(51, 51, 51, 0.5);
-  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46); }
-
 .footer_copyright_menu {
   display: inline-block;
   float: left;
@@ -10906,7 +10900,8 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: 1.2; }
+  line-height: 1.2;
+  margin: 0 0 .5em; }
 
 h1,
 h2 {
@@ -11044,6 +11039,14 @@ svg {
   background: rgba(34, 34, 34, 0.4);
   box-shadow: 0 1px 6px #151515;
   box-sizing: border-box; }
+
+.container__footer {
+  box-sizing: border-box;
+  width: 100% !important;
+  margin-top: 40px;
+  padding: 20px;
+  background: rgba(51, 51, 51, 0.5);
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46); }
 
 .is-disabled {
   display: none; }

@@ -62,7 +62,7 @@ function desirees_widgets_init() {
 
 	// Area 4, located in the footer.
 	register_sidebar( array(
-		'name' => __( 'The First Footer Widget Area', ETHEME_DOMAIN ),
+		'name' => __( 'Footer Primary Widget Area', ETHEME_DOMAIN ),
 		'id' => 'first-footer-widget-area',
 		'before_widget' => '',
 		'after_widget' => '',
@@ -73,7 +73,7 @@ function desirees_widgets_init() {
 
 	// Area 5, located in the footer.
 	register_sidebar( array(
-		'name' => __( 'The Second Footer Widget Area', ETHEME_DOMAIN ),
+		'name' => __( 'Footer Secondary Widget Area', ETHEME_DOMAIN ),
 		'id' => 'second-footer-widget-area',
 		'before_widget' => '',
 		'after_widget' => '',
@@ -82,86 +82,9 @@ function desirees_widgets_init() {
         'after_title' => '</span>'
 	) );
 
-	// Area 6, located in the footer.
-	register_sidebar( array(
-		'name' => __( 'The Third Footer Widget Area', ETHEME_DOMAIN ),
-		'id' => 'third-footer-widget-area',
-		'before_widget' => '',
-		'after_widget' => '',
-		'description' => __( 'The Third Footer Widget Area', ETHEME_DOMAIN ),
-        'before_title' => '<span class="footer_title">',
-        'after_title' => '</span>'
-	) );
-
-	// Area 7, located in the footer.
-	register_sidebar( array(
-		'name' => __( 'The Fourth Footer Widget Area', ETHEME_DOMAIN ),
-		'id' => 'fourth-footer-widget-area',
-		'before_widget' => '',
-		'after_widget' => '',
-		'description' => __( 'The Fourth Footer Widget Area', ETHEME_DOMAIN ),
-        'before_title' => '<span class="footer_title">',
-        'after_title' => '</span>'
-	) );
-
-	// Area 7, located in the footer.
-	register_sidebar( array(
-		'name' => __( 'The Fifth Footer Widget Area', ETHEME_DOMAIN ),
-		'id' => 'fifth-footer-widget-area',
-		'before_widget' => '',
-		'after_widget' => '',
-		'description' => __( 'The Fifth Footer Widget Area', ETHEME_DOMAIN ),
-        'before_title' => '<span class="footer_title">',
-        'after_title' => '</span>'
-	) );
-
-	// Area 15, located in the footer.
-	register_sidebar( array(
-		'name' => __( 'The Sixth Footer Widget Area', ETHEME_DOMAIN ),
-		'id' => 'sixth-footer-widget-area',
-		'before_widget' => '',
-		'after_widget' => '',
-		'description' => __( 'The Sixth Footer Widget Area', ETHEME_DOMAIN ),
-        'before_title' => '<span class="footer_title">',
-        'after_title' => '</span>'
-	) );
-
-	// Area 16, located in the footer.
-	register_sidebar( array(
-		'name' => __( 'The Seventh Footer Widget Area', ETHEME_DOMAIN ),
-		'id' => 'seventh-footer-widget-area',
-		'before_widget' => '',
-		'after_widget' => '',
-		'description' => __( 'The Seventh Footer Widget Area', ETHEME_DOMAIN ),
-        'before_title' => '<span class="footer_title">',
-        'after_title' => '</span>'
-	) );
-
-	// Area 17, located in the footer.
-	register_sidebar( array(
-		'name' => __( 'The Eighth Footer Widget Area', ETHEME_DOMAIN ),
-		'id' => 'eighth-footer-widget-area',
-		'before_widget' => '',
-		'after_widget' => '',
-		'description' => __( 'The Eighth Footer Widget Area', ETHEME_DOMAIN ),
-        'before_title' => '<span class="footer_title">',
-        'after_title' => '</span>'
-	) );
-
-	// Area 10, located in the footer.
-	register_sidebar( array(
-		'name' => __( 'Payments Area', ETHEME_DOMAIN ),
-		'id' => 'payments-area',
-		'before_widget' => '',
-		'after_widget' => '',
-		'description' => __( 'Payments Area', ETHEME_DOMAIN ),
-        'before_title' => '<h5>',
-        'after_title' => '</h5>'
-	) );
-
 	// Area 11, located in the footer.
 	register_sidebar( array(
-		'name' => __( 'Payments Area', ETHEME_DOMAIN ),
+		'name' => __( 'Footer Payments Area', ETHEME_DOMAIN ),
 		'id' => 'payments-area',
 		'before_widget' => '',
 		'after_widget' => '',
@@ -172,7 +95,7 @@ function desirees_widgets_init() {
 
 	// Area 12, located in the footer.
 	register_sidebar( array(
-		'name' => __( 'Copyrights', ETHEME_DOMAIN ),
+		'name' => __( 'Footer Copyrights', ETHEME_DOMAIN ),
 		'id' => 'copyrights-area',
 		'before_widget' => '',
 		'after_widget' => '',

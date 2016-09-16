@@ -11,3 +11,15 @@
   box-shadow: 0 1px 6px $color-black;
   box-sizing: border-box;
 }
+
+.container {
+
+  &__footer {
+    box-sizing: border-box;
+    width: 100%!important;
+  	margin-top: 40px;
+    padding: 20px;
+  	background: $color-grey;
+    box-shadow: $shadow-std;
+  }
+}
