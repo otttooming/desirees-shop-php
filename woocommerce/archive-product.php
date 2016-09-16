@@ -38,7 +38,7 @@ get_header('shop');
 <div class="container">
     <div class="row cfx">
 
-    	<div id="products-sidebar" class="span3 sidebar_grid leftnav acc_enabled sidebar_left cfx">
+    	<div id="products-sidebar" class="span3 sidebar_grid leftnav acc_enabled sidebar_left cfx vis-to-tablet-up">
           <?php dynamic_sidebar( 'product-widget-area' ); ?>
       </div>
 

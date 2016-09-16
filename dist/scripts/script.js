@@ -11190,42 +11190,6 @@ b.params.hashnav&&b.hashnav&&b.hashnav.init(),b.params.a11y&&b.a11y&&b.a11y.init
 
 $(document).ready(function() {
 
-  /* Mobile navigation
-  -------------------------------------------------------------- */
-
-  var navList = $('div.menu > ul').clone();
-  var etOpener = '<span class="open-child">(open)</span>';
-  navList.removeClass('menu').addClass('et-mobile-menu');
-
-  navList.find('li:has(ul)', this).each(function() {
-    $(this).prepend(etOpener);
-  })
-
-  navList.find('.open-child').clicktoggle(function() {
-    $(this).parent().addClass('over').find('>ul').slideDown(200);
-  }, function() {
-    $(this).parent().removeClass('over').find('>ul').slideUp(200);
-  });
-
-  document.querySelector('#products-sidebar').insertBefore(navList[0], document.querySelector('#products-sidebar > div'));
-
-  /* Fixed menu */
-  $(window).scroll(function() {
-    var fixedHeader = $('.fixed-header-area');
-    var scrollTop = $(this).scrollTop();
-    var headerHeight = $('.header-top').height() + $('.header-bg').height();
-
-    if (scrollTop > headerHeight) {
-      if (!fixedHeader.hasClass('fixed-already')) {
-        fixedHeader.stop().addClass('fixed-already');
-      }
-    } else {
-      if (fixedHeader.hasClass('fixed-already')) {
-        fixedHeader.stop().removeClass('fixed-already');
-      }
-    }
-  });
-
   /* Tabs
   -------------------------------------------------------------- */
   var tabs = $('.tabs');
@@ -11526,19 +11490,19 @@ var Desirees = Desirees || {};
 
 Desirees.nav = {
 
-  handleNavSidebarOpen: function() {
+  mobileMenuOpen: function() {
     console.log('logggme');
-    if (document.body.classList.contains('nav-sidebar__open')) {
-      document.body.classList.remove('nav-sidebar__open');
+    if (document.body.classList.contains('menu-mobile_open')) {
+      document.body.classList.remove('menu-mobile_open');
     } else {
-      document.body.classList.add('nav-sidebar__open');
+      document.body.classList.add('menu-mobile_open');
     }
   }
 };
 
 var bodyEl = document.querySelector('body');
 
-document.querySelector('.et-menu-title').addEventListener('click', Desirees.nav.handleNavSidebarOpen, false);
+document.querySelector('.menu-mobile_toggle').addEventListener('click', Desirees.nav.mobileMenuOpen, false);
 
 var initPhotoSwipeFromDOM = function(gallerySelector) {
 

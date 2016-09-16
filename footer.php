@@ -42,6 +42,9 @@
 
 <?php
 
+  // Get mobile menu navigation
+  require get_template_directory() . '/inc/components/menu-mobile.php';
+
   // Get PSWP lightbox template
   require get_template_directory() . '/inc/components/lightbox.php';
 

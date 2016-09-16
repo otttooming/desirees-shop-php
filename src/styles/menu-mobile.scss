@@ -1,0 +1,38 @@
+.menu-mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+
+  box-sizing: border-box;
+  width: 320px;
+  padding: 20px;
+
+  transition: transform 500ms linear;
+  transform: translate3d(320px,0,0);
+
+  background: rgba($color-black, .5);
+
+  .menu-mobile_open & {
+    transform: translate3d(0,0,0);
+  }
+
+  &__primary,
+  &__secondary,
+  &__categories {
+    margin: 0 0 20px;
+  }
+}
+
+.wrapper {
+  transition: transform 500ms linear, opacity 500ms;
+
+  .menu-mobile_open & {
+    transform: translate3d(-320px,0,0);
+
+    opacity: .5;
+  }
+}

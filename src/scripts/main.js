@@ -81,16 +81,16 @@ var Desirees = Desirees || {};
 
 Desirees.nav = {
 
-  handleNavSidebarOpen: function() {
+  mobileMenuOpen: function() {
     console.log('logggme');
-    if (document.body.classList.contains('nav-sidebar__open')) {
-      document.body.classList.remove('nav-sidebar__open');
+    if (document.body.classList.contains('menu-mobile_open')) {
+      document.body.classList.remove('menu-mobile_open');
     } else {
-      document.body.classList.add('nav-sidebar__open');
+      document.body.classList.add('menu-mobile_open');
     }
   }
 };
 
 var bodyEl = document.querySelector('body');
 
-document.querySelector('.et-menu-title').addEventListener('click', Desirees.nav.handleNavSidebarOpen, false);
+document.querySelector('.menu-mobile_toggle').addEventListener('click', Desirees.nav.mobileMenuOpen, false);
