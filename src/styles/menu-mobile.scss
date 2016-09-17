@@ -20,6 +20,30 @@
     transform: translate3d(0,0,0);
   }
 
+  &__toggle {
+    position: absolute;
+    top: 6px;
+    right: 0;
+
+    width: 42px;
+    height: 42px;
+
+    cursor: pointer;
+
+    line-height: 1;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 24px;
+      height: 24px;
+
+      transform: translate3d(-50%, -50%, 0);
+    }
+  }
+
   &__primary,
   &__secondary,
   &__categories {

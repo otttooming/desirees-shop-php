@@ -11491,7 +11491,6 @@ var Desirees = Desirees || {};
 Desirees.nav = {
 
   mobileMenuOpen: function() {
-    console.log('logggme');
     if (document.body.classList.contains('menu-mobile_open')) {
       document.body.classList.remove('menu-mobile_open');
     } else {
@@ -11500,9 +11499,11 @@ Desirees.nav = {
   }
 };
 
-var bodyEl = document.querySelector('body');
+var mobileMenuToggleBtns = document.querySelectorAll('.menu-mobile__toggle');
 
-document.querySelector('.menu-mobile_toggle').addEventListener('click', Desirees.nav.mobileMenuOpen, false);
+for (var i = 0; i < mobileMenuToggleBtns.length; i++) {
+  mobileMenuToggleBtns[i].addEventListener('click', Desirees.nav.mobileMenuOpen, false);
+}
 
 var initPhotoSwipeFromDOM = function(gallerySelector) {
 
