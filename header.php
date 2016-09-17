@@ -35,12 +35,12 @@
 
 	<div class="container header-area header-bg header-type-default">
 
-		<header class="row header ">
-			<div class="span3 logo">
+		<header class="row header">
+			<div class="span3 header__logo">
         <?php require get_template_directory() . '/inc/components/logo.php'; ?>
 			</div>
 
-			<div class="span6 visible-desktop">
+			<div class="span6 header__search visible-desktop">
         <span class="search_text">
             <?php echo _e( 'Telephone:', 'woocommerce' ) . ' ' .  get_option('contact_tel') ?>
         </span>
@@ -49,7 +49,7 @@
 				</div>
 			</div>
 
-			<div class="span3 shopping_cart_wrap vis-to-tablet-up">
+			<div class="span3 header__cart vis-to-tablet-up">
 
         <div id="cart__top" class="cart__top-wrapper">
           <?php require get_template_directory() . '/inc/components/cart-links.php'; ?>

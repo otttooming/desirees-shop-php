@@ -41,11 +41,15 @@
   }
 
   &__main-image-wrap {
-    width: 100%!important;
+    flex: 1 0 290px;
   }
 
   &__main-image {
     width: 100%!important;
+  }
+
+  &__banner {
+    flex: 1 0 180px;
   }
 
   &__gallery {

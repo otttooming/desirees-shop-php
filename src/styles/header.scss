@@ -1,23 +1,28 @@
-.shopping_cart_wrap {
-  display: flex;
-  float: right;
 
-  height: 80px;
-
-  align-items: center;
-  justify-content: flex-end;
-}
 
 .header {
   position: relative;
-}
+  padding: 15px 0;
 
-.header-links {
-  text-align: right;
-  white-space: nowrap;
+  &__logo {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-  &__item {
-    padding: 5px 12px;
+  &__logo-img {
+    max-height: 80px;
+  }
+
+  &__cart {
+    display: flex;
+    float: right;
+
+    height: 80px;
+
+    align-items: center;
+    justify-content: flex-end;
   }
 }
 
