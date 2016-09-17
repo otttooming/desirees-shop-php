@@ -787,8 +787,7 @@ table {
   margin-left: 20px; }
 
 .tab-content {
-  overflow: auto;
-  margin-bottom: 20px; }
+  overflow: auto; }
 
 .pill-content > .pill-pane,
 .tab-content > .tab-pane {
@@ -3009,7 +3008,8 @@ ins {
 /* Product Tabs
 -----------------------------------------------------*/
 .tabs {
-  position: relative; }
+  position: relative;
+  margin-bottom: 20px; }
 
 .left-titles {
   float: left;
@@ -3045,7 +3045,6 @@ ins {
   display: none;
   float: right;
   box-sizing: border-box;
-  margin-bottom: 20px;
   padding: 15px 20px 20px;
   width: 100%;
   box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46);
@@ -7798,9 +7797,6 @@ form.login .lost_password {
     background: rgba(51, 51, 51, 0.5) url("../images/legacy/arrow_down.png") no-repeat 98.5% center;
     font-size: 16px;
     border-top: 1px solid rgba(51, 51, 51, 0.5); }
-  .tabs .tab-content {
-    margin-bottom: 0;
-    border-bottom: none; }
   .single-product .div.woocommerce_error,
   .single-product div.woocommerce_message {
     margin-top: 0; }
@@ -11223,10 +11219,6 @@ del {
   margin-bottom: 20px; }
 
 .product__left {
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -ms-flex-direction: column;
-      flex-direction: column;
   margin-bottom: 15px;
   border-radius: 3px;
   overflow: hidden; }
@@ -11263,7 +11255,7 @@ del {
       flex: 1 0 180px; }
 
 .product__gallery-control {
-  margin: 10px 0; }
+  margin: 20px 0 0; }
 
 .product__gallery-slider {
   background: #fff;

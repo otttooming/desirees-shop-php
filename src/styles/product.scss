@@ -10,8 +10,6 @@
   }
 
   &__left {
-    display: flex!important;
-    flex-direction: column;
     margin-bottom: 15px;
     border-radius: $border-radius-std;
     overflow: hidden;
@@ -57,7 +55,7 @@
   }
 
   &__gallery-control {
-    margin: 10px 0;
+    margin: 20px 0 0;
   }
 
   &__gallery-slider {

@@ -21,7 +21,7 @@ if ( ! empty( $tabs ) ) : ?>
 
     <div class="row">
         <div class="span12">
-            <div class="tabs">
+            <div class="tabs cfx">
 
                 <?php $i=0; foreach ( $tabs as $key => $tab ) : $i++; ?>
             				<a href="#tab<?php echo $i; ?>" id="tab_<?php echo $i; ?>" class="tab-title <?php if($i==1): ?> opened<?php endif; ?>">
