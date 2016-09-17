@@ -167,7 +167,7 @@ del {
 }
 
 svg {
-  filter: drop-shadow($shadow-text);
+  // filter: drop-shadow($shadow-text); // BUG: Disabled - Safari WebKit will not display SVG
 }
 
 .amount {
