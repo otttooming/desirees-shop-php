@@ -11496,7 +11496,7 @@ del {
   box-sizing: border-box; }
 
 .menu > ul > li > a {
-  padding: 0 16px;
+  padding: 0 20px;
   line-height: 42px; }
 
 .current_page_parent > a,
@@ -11510,7 +11510,7 @@ del {
 
 .bc {
   text-transform: uppercase;
-  margin: 5px 10px;
+  margin: 5px 0 0 15px;
   font-size: 11px;
   line-height: 42px;
   overflow: hidden;
@@ -11581,16 +11581,21 @@ del {
   margin: 0;
   box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46); }
 
+.search__field {
+  border-radius: 3px 0 0 3px; }
+
 .search__select {
   background: #151515;
   text-transform: uppercase;
-  font-size: 11px; }
+  font-size: 11px;
+  border-radius: 0; }
 
 .search__button {
   background-color: #a30000;
   line-height: 40px;
   height: 40px;
-  padding: 0 10px; }
+  padding: 0 10px;
+  border-radius: 0 3px 3px 0; }
 
 .cart__collaterals {
   margin: 60px 0 40px; }
@@ -11712,7 +11717,7 @@ del {
   border-radius: 3px; }
 
 .sidebar_grid > .widget-container {
-  padding: 15px;
+  padding: 20px;
   background-color: #151515;
   box-shadow: 0 0px 15px rgba(0, 0, 0, 0.46);
   box-sizing: border-box;
