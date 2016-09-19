@@ -1,5 +1,4 @@
 .control {
-
   &__items {
     user-select: none;
   }
@@ -11,11 +10,11 @@
     padding: 5px;
 
     cursor: pointer;
-
-    background: $color-black;
     transition: color $transition-normal;
-    box-shadow: $shadow-std;
+
     border-radius: $border-radius-std;
+    background: $color-black;
+    box-shadow: $shadow-std;
   }
 
   &__up,
@@ -26,6 +25,7 @@
 
 .swiper-button-disabled {
   cursor: not-allowed;
+
   color: $color-charcoal;
 }
 
@@ -35,6 +35,7 @@
 }
 
 .lazyloaded {
-  opacity: 1;
   transition: opacity 300ms;
+
+  opacity: 1;
 }

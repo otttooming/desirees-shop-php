@@ -8,6 +8,7 @@
   padding: 7px 10px;
 
   cursor: pointer;
+  user-select: none;
   transition: background-color $transition-normal;
   text-align: center;
   white-space: nowrap;
@@ -23,7 +24,6 @@
   font-family: $typeface-primary;
   font-size: 11px;
   line-height: 1.5;
-  user-select: none;
 
   &:hover {
     background: $color-red;
@@ -41,9 +41,9 @@
 
   &.big {
     padding: 20px;
-    @include rem(padding, 20px);
 
     @include rem(font-size, 16px);
+    @include rem(padding, 20px);
   }
 
   &__icon {

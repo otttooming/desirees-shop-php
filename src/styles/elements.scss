@@ -1,9 +1,9 @@
 html {
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: none; // Prevent font scaling in landscape
-
   font-size: 16px;
+
+  -webkit-text-size-adjust: none; // Prevent font scaling in landscape
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
 
   @media screen and (max-width: 767px) {
     font-size: 12px;
@@ -11,17 +11,21 @@ html {
 }
 
 body {
-  font-family: $typeface-primary;
-  background-image: radial-gradient(circle at 50%, rgba(17, 52, 181, 0.9) 40%, rgba(234, 0, 64, 0.9) 100%);
-  text-shadow: $shadow-text;
   overflow-x: hidden;
+
+  background-image: radial-gradient(circle at 50%, rgba(17, 52, 181, .9) 40%, rgba(234, 0, 64, .9) 100%);
+  text-shadow: $shadow-text;
+
+  font-family: $typeface-primary;
 }
 
 a {
+  display: inline-block;
+
+  max-width: 100%;
+
   cursor: pointer;
   text-decoration: none;
-  display: inline-block;
-  max-width: 100%;
 }
 
 h1,
@@ -30,13 +34,15 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: 1.2;
   margin: 0 0 .5em;
+
+  line-height: 1.2;
 }
 
 h1,
 h2 {
   text-transform: uppercase;
+
   font-weight: $font-weight-normal;
 }
 
@@ -48,7 +54,8 @@ h5 {
   margin: 0 0 5px;
 }
 
-p, td {
+p,
+td {
   font-family: $typeface-secondary;
 }
 
@@ -68,10 +75,13 @@ tr {
 
 th,
 td {
-  border: 0;
-  text-align: left;
-  font-weight: $font-weight-normal;
   padding: 10px;
+
+  text-align: left;
+
+  border: 0;
+
+  font-weight: $font-weight-normal;
 
   @media (max-width: 767px) {
     padding: 5px;
@@ -110,34 +120,39 @@ input {
 
 select,
 input {
-  border-radius: 5px;
-  background: $color-grey;
+  box-sizing: border-box;
   margin: 0;
   padding: 0 10px;
-  box-sizing: border-box;
-  line-height: 30px;
-  box-shadow: $shadow-std;
+
   vertical-align: middle;
-  outline: none;
+
   border: 1px solid $color-grey;
-  font-size: 12px;
+  border-radius: 5px;
   border-radius: $border-radius-std;
-  -webkit-appearance: none;
+  outline: none;
+  background: $color-grey;
+  box-shadow: $shadow-std;
   text-shadow: $shadow-text;
+
+  font-size: 12px;
+  line-height: 30px;
+
+  -webkit-appearance: none;
 }
 
 textarea {
   border: 0;
-  text-shadow: $shadow-text;
   border-radius: $border-radius-std;
   box-shadow: $shadow-std;
+  text-shadow: $shadow-text;
 }
 
 hr {
   width: 100%;
+  margin: 15px 0;
+
   border-width: 0;
   border-top: 1px solid $color-grey;
-  margin: 15px 0;
 }
 
 del,
@@ -172,16 +187,20 @@ svg {
 
 .amount {
   display: inline-block;
+
   padding: 5px 10px;
-  box-shadow: $shadow-std;
+
+  color: $color-white;
   border-radius: 5px;
   background-color: $color-red;
-  color: $color-white;
-  line-height: normal;
+  box-shadow: $shadow-std;
+
   font-family: $typeface-primary;
+  line-height: normal;
 
   .product__price-block & {
     padding: 0;
+
     box-shadow: none;
   }
 }

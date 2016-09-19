@@ -4,6 +4,7 @@
 
 .f-center {
   display: flex;
+
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -16,6 +17,8 @@
   color: $color-warm!important;
 }
 
-@media only screen and (min-width: 980px){
-	.hidden-desktop{display: none !important;}
+@media only screen and (min-width: 980px) {
+  .hidden-desktop {
+    display: none !important;
+  }
 }

@@ -1,18 +1,21 @@
 .product {
-
   &__mainblock {
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding: 20px;
+
     border-radius: $border-radius-std;
     background: rgba($color-black, .2);
-    padding: 20px;
-    box-sizing: border-box;
+
     flex: 1 0 310px;
-    margin-bottom: 20px;
   }
 
   &__left {
-    margin-bottom: 15px;
-    border-radius: $border-radius-std;
     overflow: hidden;
+
+    margin-bottom: 15px;
+
+    border-radius: $border-radius-std;
   }
 
   &__title {
@@ -32,10 +35,11 @@
 
   &__info-block {
     display: flex;
+    overflow: hidden;
     flex-direction: column;
+
     border-bottom-right-radius: $border-radius-std;
     border-bottom-left-radius: $border-radius-std;
-    overflow: hidden;
   }
 
   &__main-image-wrap {
@@ -59,9 +63,9 @@
   }
 
   &__gallery-slider {
-    background: $color-white;
     border-bottom-right-radius: $border-radius-std;
     border-bottom-left-radius: $border-radius-std;
+    background: $color-white;
   }
 
   .swiper-wrapper {
@@ -69,8 +73,9 @@
   }
 
   &__image {
-    padding: 1px;
     box-sizing: border-box;
+    padding: 1px;
+
     border-radius: $border-radius-std;
   }
 
@@ -89,7 +94,6 @@
     background-color: $color-red;
     box-shadow: $shadow-std;
 
-
     font-size: 13px !important;
     line-height: normal;
 
@@ -107,7 +111,6 @@
     }
 
     &-big {
-
       .amount {
         @include rem(font-size, 20px);
       }
@@ -155,13 +158,12 @@
 }
 
 .product {
-
   &__attributes {
-
     td,
     p {
-      color: $color-tertiary;
       letter-spacing: 1px;
+
+      color: $color-tertiary;
     }
 
     td {
@@ -174,14 +176,17 @@
   }
 }
 
-.cart__add-to  {
-  width: 100%;
+.cart__add-to {
   display: flex;
-  justify-content: space-between;
+
+  width: 100%;
+
   flex-wrap: wrap;
+  justify-content: space-between;
 
   td {
     padding: 0;
+
     font-family: $typeface-primary;
   }
 
@@ -199,10 +204,11 @@
 
   .variations_button {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
 
+    width: 100%;
+
+    justify-content: space-between;
+  }
 }
 
 .product-stock {
@@ -231,25 +237,27 @@
 
 
 .product__meta {
-
   a {
-    color: $color-warm;
-    text-transform: uppercase;
     display: inline-block;
+
+    text-transform: uppercase;
+
+    color: $color-warm;
   }
 
   @at-root .posted-in__header, .tagged-as__header {
     margin: 0 5px 0 0;
+
     text-transform: uppercase;
   }
   @at-root .separator__tag {
     margin: 0 5px;
+
     text-transform: uppercase;
   }
 }
 
 .product-qty {
-
   &__wrap {
     display: flex;
 

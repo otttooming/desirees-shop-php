@@ -1,12 +1,14 @@
 .form-login {
   display: flex;
+
   flex-wrap: wrap;
   justify-content: center;
 
   &__col {
-    background: rgba($color-grey, .5);
-    padding: 20px;
     box-sizing: border-box;
+    padding: 20px;
+
+    background: rgba($color-grey, .5);
     box-shadow: $shadow-std;
   }
 }
