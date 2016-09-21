@@ -44,6 +44,8 @@
 
   &__main-image-wrap {
     flex: 1 0 290px;
+    border-radius: $border-radius-std;
+    overflow: hidden;
   }
 
   &__main-image {
