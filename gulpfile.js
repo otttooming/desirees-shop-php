@@ -13,6 +13,7 @@ var gulp          = require( 'gulp' ),
     rename        = require( 'gulp-rename' ),
     concat        = require( 'gulp-concat' ),
     del           = require( 'del' );
+    csscomb       = require('gulp-csscomb');
     secrets       = require( './secrets.json' );
 
 var supportedBrowsers = [
@@ -20,6 +21,13 @@ var supportedBrowsers = [
     'ie >= 11',
     'android 4.4'
 ];
+
+// Styleguide
+gulp.task('styleguide', function() {
+  return gulp.src(['src/styles/**/*.scss'], {base: './'})
+  .pipe(csscomb())
+  .pipe(gulp.dest('./'));
+});
 
 // Styles
 gulp.task('styles', function() {
