@@ -24,7 +24,7 @@ var supportedBrowsers = [
 
 // Styleguide
 gulp.task('styleguide', function() {
-  return gulp.src(['src/styles/**/*.scss'], {base: './'})
+  return gulp.src(['src/styles/**/*.scss', '!src/styles/_mixins.scss'], {base: './'})
   .pipe(csscomb())
   .pipe(gulp.dest('./'));
 });
