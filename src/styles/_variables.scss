@@ -1,6 +1,5 @@
 $typeface-primary: 'Oswald', 'Helvetica Neue', Arial, sans-serif;
 $typeface-secondary: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-
 $font-size-normal: 16px;
 
 // Colors
@@ -23,15 +22,11 @@ $font-weight-thin: 100;
 $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-bold: 700;
-
 $line-height-normal: 1.2;
 
 // $shadow-std: 2px 2px $color-black;
 
-$shadow-std: 0 0px 15px rgba(0, 0, 0, 0.46);
-
+$shadow-std: 0 0 15px rgba(0, 0, 0, .46);
 $shadow-text: 2px 2px 5px $color-black;
-
 $transition-normal: 500ms;
-
 $border-radius-std: 3px;

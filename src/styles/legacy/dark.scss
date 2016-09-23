@@ -1,11 +1,11 @@
 // scss-lint:disable all
 
 body {
-	color: $color-white;
+  color: $color-white;
 }
 .logo a,
 .logo a:hover {
-	color: $color-white;
+  color: $color-white;
 }
 a,
 h1,
@@ -15,78 +15,78 @@ h4,
 h5,
 h6,
 p {
-	color: $color-white;
+  color: $color-white;
 }
 input,
 select,
 select:hover {
-	border: 1px solid transparent !important;
-	color: $color-white;
+  color: $color-white;
+  border: 1px solid transparent !important;
 }
 .uneditable-input,
-input[type="color"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="email"],
-input[type="month"],
-input[type="number"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="time"],
-input[type="url"],
-input[type="week"],
+input[type='color'],
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='email'],
+input[type='month'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='time'],
+input[type='url'],
+input[type='week'],
 textarea {
-	color: $color-white;
+  color: $color-white;
 }
-input[type="hidden"] {
-	background-color: $color-white !important;
-	color: $color-grey !important;
+input[type='hidden'] {
+  color: $color-grey !important;
+  background-color: $color-white !important;
 }
 input:focus {
-	border: 1px solid $color-red !important;
+  border: 1px solid $color-red !important;
 }
 code,
 pre {
-	background: $color-grey;
-	border: 1px solid $color-black;
-	color: $color-white;
+  color: $color-white;
+  border: 1px solid $color-black;
+  background: $color-grey;
 }
 blockquote {
-	background-color: $color-grey;
-	border-bottom: 1px solid $color-red;
+  border-bottom: 1px solid $color-red;
+  background-color: $color-grey;
 }
 mark {
-	color: $color-red;
+  color: $color-red;
 }
 label {
-	color: white !important;
+  color: white !important;
 }
 select,
 select:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 textarea {
-	background-color: $color-grey !important;
+  background-color: $color-grey !important;
 }
 .login-fields .form-row input:focus {
-	background-color: #2a2a2a;
+  background-color: #2a2a2a;
 }
 .modal {
-	background-color: $color-grey;
-	border: none;
-	border-top: 1px solid $color-red;
+  border: none;
+  border-top: 1px solid $color-red;
+  background-color: $color-grey;
 }
 del {
-	color: $color-red;
+  color: $color-red;
 }
 .thumbnail {
-	border: 1px solid $color-black;
+  border: 1px solid $color-black;
 }
 .modal-header h3 {
-	color: $color-white;
+  color: $color-white;
 }
 .span1.icon1 i,
 .span1.icon2 i,
@@ -94,479 +94,484 @@ del {
 .span2.icon4 i,
 .span3.icon5 i,
 .span3.icon6 i {
-	color: $color-white;
+  color: $color-white;
 }
 .minus,
 .plus {
-	border: none !important;
-	background-color: transparent !important;
+  border: none !important;
+  background-color: transparent !important;
 }
 .minus {
-	background-position: 2px 0;
+  background-position: 2px 0;
 }
 .header-type-variant4 #main-nav {
-	background: $color-grey;
-	border-top: 1px solid $color-black;
+  border-top: 1px solid $color-black;
+  background: $color-grey;
 }
 .menu > ul > li > a {
-
-	color: $color-white;
+  color: $color-white;
 }
 .default-menu > ul > li ul,
 .header-overlapped .header-type-variant6 .default-menu > ul > li ul {
-	background: $color-grey;
+  background: $color-grey;
 }
 .default-menu > ul > li > ul li {
-	border-top: 1px solid $color-black;
-	border-left: 1px solid $color-black;
-	border-right: 1px solid $color-black;
+  border-top: 1px solid $color-black;
+  border-right: 1px solid $color-black;
+  border-left: 1px solid $color-black;
 }
 .default-menu > ul > li > ul li:hover {
-	background: $color-black;
+  background: $color-black;
 }
 .default-menu > ul > li > ul li:hover > a {
-	color: $color-red;
+  color: $color-red;
 }
 .default-menu > ul > li > ul li:last-child {
-	border-bottom: 1px solid $color-black;
+  border-bottom: 1px solid $color-black;
 }
 .default-menu .sub-menu .current-menu-item {
-	background-color: $color-grey;
+  background-color: $color-grey;
 }
 .product-grid .product-name a,
 .product-slider .slider-title {
-	color: $color-white;
+  color: $color-white;
 }
 .product-grid .price del .amount {
-	color: $color-grey;
+  color: $color-grey;
 }
 .product-grid .price .amount,
 .product-grid .price.sale .currentprice {
-	color: $color-grey;
+  color: $color-grey;
 }
 #submit,
 .button {
-	background: $color-grey;
-	color: $color-white;
+  color: $color-white;
+  background: $color-grey;
 }
 .btn-cont .button {
-	background: $color-black;
+  background: $color-black;
 }
 #contact_button .button:hover {
-	background: $color-red;
+  background: $color-red;
 }
 .form-submit #submit {
-	height: auto;
+  height: auto;
 }
 .blog-content .button,
 .products-list .product-grid .button {
-	background: $color-grey;
+  background: $color-grey;
 }
 .product-slide .product-grid:hover,
 .products_grid .product-grid:hover {
-	background: $color-grey;
+  background: $color-grey;
 }
 .products-list .product-grid,
 .products-list .product-grid:hover {
-	background: transparent;
-	border-bottom: none;
+  border-bottom: none;
+  background: transparent;
 }
 .fixed-header-area {
-	background: $color-grey;
-	border-top: 1px solid $color-black;
+  border-top: 1px solid $color-black;
+  background: $color-grey;
 }
 .fixed-header-area .fixed-header {
-	background: $color-charcoal !important;
+  background: $color-charcoal !important;
 }
 .product-slider .next,
 .product-slider .prev {
-	background-color: $color-black;
+  background-color: $color-black;
 }
 .next.disabled,
 .next.disabled:hover,
 .prev.disabled,
 .prev.disabled:hover {
-	background-color: $color-grey !important;
+  background-color: $color-grey !important;
 }
 .search_text {
-	color: white;
+  color: white;
 }
 .footer-hr {
-	border-color: $color-grey;
+  border-color: $color-grey;
 }
 .block-with-icon i {
-	color: $color-white;
+  color: $color-white;
 }
 .cta-block {
-	background: $color-grey;
-	border-left-width: 1px;
+  border-left-width: 1px;
+  background: $color-grey;
 }
 .cta-block h4 {
-	font-weight: 300;
-	color: white;
+  color: white;
+
+  font-weight: 300;
 }
 .cta-block:hover {
-	background: $color-black;
+  background: $color-black;
 }
 .tabs .tab-content {
-	background: $color-grey;
+  background: $color-grey;
 }
 #product-page .tabs .tab-content {
-	background-color: $color-grey !important;
+  background-color: $color-grey !important;
 }
 .left-titles a,
 .tabs .tab-title {
-	background: $color-black;
-	color: $color-white;
+  color: $color-white;
+  background: $color-black;
 }
 .tabs .tab-title:hover {
-	background: $color-black;
+  background: $color-black;
 }
 .left-titles a.opened,
 .tabs .tab-title.opened {
-	background: $color-grey;
-	color: #cacaca !important;
-	margin-bottom: 0;
+  margin-bottom: 0;
+
+  color: #cacaca !important;
+  background: $color-grey;
 }
 .left-titles a.opened:hover,
 .tabs .tab-title.opened:hover {
-	color: #cacaca;
+  color: #cacaca;
 }
 .woocommerce-price-suffix {
-	color: $color-grey;
+  color: $color-grey;
 }
 /* Grid & List*/
 .cats.acc_enabled .block-content .wpsc_category_title a,
 .widget-title {
-	color: $color-white;
+  color: $color-white;
 }
 .cats.acc_enabled .block-content .categories-group.has-subnav .btn-show,
 .cats.acc_enabled .block-content .categories-group.has-subnav.opened .btn-show {
-	background-color: $color-grey;
+  background-color: $color-grey;
 }
 .star-rating {
-	background: url("../images/legacy/star-dark.png") repeat-x 0 0 !important;
-	width: 74px !important;
+  width: 74px !important;
+
+  background: url('../images/legacy/star-dark.png') repeat-x 0 0 !important;
 }
 .star-rating span {
-	background: url("../images/legacy/star-dark.png") repeat-x left bottom !important;
+  background: url('../images/legacy/star-dark.png') repeat-x left bottom !important;
 }
 .widget_layered_nav ul li a,
 .widget_layered_nav ul li span,
 .widget_price_filter .price_slider_wrapper .ui-widget-content,
 .widget_price_filter .ui-slider .ui-slider-handle {
-	background-color: $color-grey !important;
+  background-color: $color-grey !important;
 }
 .widget_layered_nav ul li a:hover,
 .widget_layered_nav ul li span:hover {
-	color: $color-red;
+  color: $color-red;
 }
 .widget_layered_nav ul small.count {
-	color: white !important;
-	border: 1px solid $color-black !important;
+  color: white !important;
+  border: 1px solid $color-black !important;
 }
 .widget_layered_nav ul li.chosen a {
-	background: $color-red url("../images/legacy/check.png") no-repeat 12px center;
+  background: $color-red url('../images/legacy/check.png') no-repeat 12px center;
 }
 .widget_price_filter .price_slider_wrapper .button {
-	background-color: $color-grey;
+  background-color: $color-grey;
 }
 .widget_price_filter .price_slider_wrapper .button span {
-	color: white !important;
+  color: white !important;
 }
 .widget_layered_nav ul li.chosen a {
-	background-color: $color-charcoal !important;
-	border: 1px solid $color-black;
-	border-right: none;
+  border: 1px solid $color-black;
+  border-right: none;
+  background-color: $color-charcoal !important;
 }
 #categories-2 > ul > li a {
-	color: $color-white;
+  color: $color-white;
 }
 .widget-placeholder {
-	background: transparent;
+  background: transparent;
 }
 .widget-placeholder .side-icon,
 .widget-placeholder .side-text {
-	background: $color-grey;
-	color: $color-white;
+  color: $color-white;
+  background: $color-grey;
 }
 .widget-placeholder .side-icon i,
 .widget-placeholder .side-text h3,
 .widget_price_filter .price_label {
-	color: white !important;
+  color: white !important;
 }
 .product-code > span {
-	color: $color-grey;
+  color: $color-grey;
 }
 .label label {
-	color: $color-white;
+  color: $color-white;
 }
 .product_description_mainblock .product_meta .sku {
-	color: $color-grey;
+  color: $color-grey;
 }
 div.product_meta a {
-	color: $color-grey;
+  color: $color-grey;
 }
 .tab-content h2,
 .tab-content h3 {
-	color: white !important;
+  color: white !important;
 }
 .custom-tabs1 {
-	border-right: 1px solid $color-black !important;
+  border-right: 1px solid $color-black !important;
 }
 .custom-tabs1,
 .custom-tabs2 {
-	color: $color-white;
+  color: $color-white;
 }
 .page-template-contacts2-php .contact-form h1,
 .page-title {
-	color: white;
+  color: white;
 }
 .widget_categories .widget-title {
-	background: $color-grey;
-	color: $color-white;
+  color: $color-white;
+  background: $color-grey;
 }
 .widget-container a,
 .widget-container ul li {
-	color: $color-white;
+  color: $color-white;
 }
 .cart_table_item .product-name .variation dt,
 .cart_table_item .product-name a,
 .checkout_table_item .product-name .variation dt,
 .checkout_table_item .product-name a {
-	color: $color-white;
+  color: $color-white;
 }
 .checkout_cart td.product-price .amount {
-	color: $color-white;
+  color: $color-white;
 }
 .cart-collaterals .shipping_calculator .button {
-	background: $color-grey !important;
-	float: left;
-	margin-bottom: 10px;
-	box-sizing: border-box;
+  float: left;
+
+  box-sizing: border-box;
+  margin-bottom: 10px;
+
+  background: $color-grey !important;
 }
 .cart-collaterals .shipping_calculator .button:hover {
-	background: $color-red;
+  background: $color-red;
 }
 .cart-collaterals .shipping_calculator a,
 .cart_totals h2,
 .shipping_calculator h2 {
-	color: white !important;
+  color: white !important;
 }
 .cart_table_item .product-name,
 .checkout_table_item .product-name {
-	color: white !important;
+  color: white !important;
 }
 .table.order_details td {
-	border-bottom: 1px solid $color-black !important;
+  border-bottom: 1px solid $color-black !important;
 }
 .col-1 h3,
 .col-2 address,
 .col-2 h3,
 .myaccount_address,
 .myaccount_user {
-	color: white !important;
+  color: white !important;
 }
 #recentcomments li {
-	color: $color-grey;
+  color: $color-grey;
 }
 /* Blog */
 .blog-post.post-portrait .post-title,
 .post-title {
-	color: $color-white;
+  color: $color-white;
 }
 .post-title:hover {
-	color: $color-red !important;
+  color: $color-red !important;
 }
 .post-default .post-images {
-	background-color: $color-grey;
-	border-bottom: 1px solid $color-black;
+  border-bottom: 1px solid $color-black;
+  background-color: $color-grey;
 }
 .post-information {
-	margin-top: 0;
-	padding-top: 4px;
-	padding-bottom: 7px;
+  margin-top: 0;
+  padding-top: 4px;
+  padding-bottom: 7px;
 }
 .post-information {
-	border-bottom: 1px solid $color-black;
-	background-color: $color-grey;
-	padding-left: 10px;
+  padding-left: 10px;
+
+  border-bottom: 1px solid $color-black;
+  background-color: $color-grey;
 }
 .post-information a,
 .post-information a,
 .post-information i {
-	color: $color-white;
+  color: $color-white;
 }
 .comment-body {
-	border-bottom: 1px solid $color-black;
+  border-bottom: 1px solid $color-black;
 }
 .entry-title {
-	border-bottom: 1px solid $color-black;
-	color: $color-white;
+  color: $color-white;
+  border-bottom: 1px solid $color-black;
 }
 .blog2_icon_author,
 .blog_icon_date {
-	color: $color-white;
+  color: $color-white;
 }
 .review_title {
-	color: $color-white;
+  color: $color-white;
 }
 .product-add-to-cart {
-	background: $color-grey;
-	border: 1px solid $color-black;
+  border: 1px solid $color-black;
+  background: $color-grey;
 }
 .nav-tabs > li {
-	border-top: 1px solid $color-black !important;
-	border-left: 1px solid $color-black;
-	border-right: 1px solid $color-black !important;
+  border-top: 1px solid $color-black !important;
+  border-right: 1px solid $color-black !important;
+  border-left: 1px solid $color-black;
 }
 .nav-tabs > .active > a,
 .typography-block > .nav-tabs li.active:hover,
 .typography-block > .nav-tabs li:hover {
-	background: $color-grey !important;
-	border-left-color: $color-red;
-	border-left-width: 1px !important;
-	border-left-style: solid !important;
+  border-left-width: 1px !important;
+  border-left-style: solid !important;
+  border-left-color: $color-red;
+  background: $color-grey !important;
 }
 .typography-block > .nav-tabs li {
-	background: $color-grey;
-	border-left: 1px solid transparent;
+  border-left: 1px solid transparent;
+  background: $color-grey;
 }
 .typography-block > .nav-tabs li a {
-	color: white;
+  color: white;
 }
 .typography-block > .nav-tabs li.active {
-	border-top: 1px solid $color-black !important;
-	border-right: 1px solid $color-black !important;
+  border-top: 1px solid $color-black !important;
+  border-right: 1px solid $color-black !important;
 }
 .typography-block > .nav-tabs li:hover a {
-	color: $color-red;
+  color: $color-red;
 }
 .typography-block > .nav-tabs > li:last-child {
-	border-bottom: 1px solid $color-black !important;
+  border-bottom: 1px solid $color-black !important;
 }
 .typography-block .list-square li strong {
-	color: $color-white;
+  color: $color-white;
 }
-.menu .current-menu-item > a,
-.menu .current-menu-item > a:hover {}
+
 .progress-bar {
-	background: #555;
-	border-top: transparent;
+  border-top: transparent;
+  background: #555;
 }
 .member-details {
-	background: $color-grey;
-	border-bottom: 2px solid $color-red;
+  border-bottom: 2px solid $color-red;
+  background: $color-grey;
 }
 .member-details i {
-	color: $color-white;
+  color: $color-white;
 }
 .p-table,
 .p-table-2,
 .p-table-3 {
-	background: $color-grey;
-	border: 1px solid $color-black;
-	border-bottom: 2px solid $color-red;
-	color: $color-white;
+  color: $color-white;
+  border: 1px solid $color-black;
+  border-bottom: 2px solid $color-red;
+  background: $color-grey;
 }
 .p-table-head {
-	background: $color-grey;
-	color: white !important;
+  color: white !important;
+  background: $color-grey;
 }
 .p-table li,
 .p-table-2 li {
-	border-bottom: 1px solid $color-black !important;
-	color: $color-white;
+  color: $color-white;
+  border-bottom: 1px solid $color-black !important;
 }
 .p-table li:hover,
 .p-table-2 li:hover {
-	background: $color-grey !important;
-	color: $color-red;
+  color: $color-red;
+  background: $color-grey !important;
 }
 .p-table li i {
-	color: $color-white;
+  color: $color-white;
 }
 .the-icons li i {
-	color: $color-white;
+  color: $color-white;
 }
 .table-striped tbody tr:nth-child(odd) td,
 .table-striped tbody tr:nth-child(odd) th {
-	background-color: $color-grey;
+  background-color: $color-grey;
 }
 .table-hover tbody tr:hover td,
 .table-hover tbody tr:hover th {
-	background-color: $color-grey;
-	color: $color-white;
+  color: $color-white;
+  background-color: $color-grey;
 }
 .page-template-contacts2-php .contact-form {
-	background-color: transparent;
+  background-color: transparent;
 }
 #contact_container h2,
 .contact_info h5,
 .contact_info p,
 .contact_info span,
 .page-template-contacts2-php .contact-form h1 {
-	color: $color-white;
+  color: $color-white;
 }
 .contact_input {
-	border: 1px solid $color-black !important;
+  border: 1px solid $color-black !important;
 }
 form.login,
 form.register {
-	background: $color-grey;
+  background: $color-grey;
 }
 form.login .login-head,
 form.register .register-head {
-	border-bottom: 1px solid $color-black;
+  border-bottom: 1px solid $color-black;
 }
 .login .form-row .button,
 .register .form-row .button {
-	border: none !important;
-	background-color: $color-charcoal !important;
+  border: none !important;
+  background-color: $color-charcoal !important;
 }
 .form-row .button:hover {
-	background: $color-red;
+  background: $color-red;
 }
 form.login .login-head i,
 form.register .register-head i {
-	color: $color-white;
+  color: $color-white;
 }
 .lost_password {
-	color: $color-white;
+  color: $color-white;
 }
 .et-mobile-menu li > a {
-	background: $color-grey;
-	color: $color-white;
+  color: $color-white;
+  background: $color-grey;
 }
 .et-mobile-menu li > a:hover {
-	background: $color-black;
-	color: $color-red;
+  color: $color-red;
+  background: $color-black;
 }
 .et-mobile-menu li .open-child {
-	background-color: $color-grey;
+  background-color: $color-grey;
 }
 .et-mobile-menu li .open-child:hover {
-	background-color: $color-red;
+  background-color: $color-red;
 }
 #back-to-top.btn-style-standart a {
-	background-color: transparent;
-	color: $color-white !important;
+  color: $color-white !important;
+  background-color: transparent;
 }
 .post-horizontal .post-information {
-	border-top: none;
+  border-top: none;
 }
 .widget-container a:hover {
-	color: $color-red;
+  color: $color-red;
 }
 @media (max-width: 979px) {
-	.header-type-variant4 #main-nav,
-	.header-type-variant5 #main-nav {
-		background: $color-black !important;
-		min-height: 0;
-	}
+  .header-type-variant4 #main-nav,
+  .header-type-variant5 #main-nav {
+    min-height: 0;
+
+    background: $color-black !important;
+  }
 }
 .wide .tp-rightarrow {
-	right: 8px !important;
+  right: 8px !important;
 }
 .error,
 .info,
@@ -575,108 +580,117 @@ form.register .register-head i {
 .woocommerce-error,
 .woocommerce-message,
 .woocommerce_error {
-	background-color: $color-grey;
-	display: block;
-	overflow: hidden;
+  display: block;
+  overflow: hidden;
+
+  background-color: $color-grey;
 }
 .tabs.checkout-accordion .tab-content {
-	background-color: transparent !important;
+  background-color: transparent !important;
 }
 .tabs.checkout-accordion .tab-title {
-	background-color: $color-grey;
+  background-color: $color-grey;
 }
 .tabs.checkout-accordion .tab-title.opened {
-	background-color: $color-black !important;
-	margin-bottom: 9px;
+  margin-bottom: 9px;
+
+  background-color: $color-black !important;
 }
 .tabs.checkout-accordion .tab-title.opened span {
-	color: $color-white;
+  color: $color-white;
 }
 .tabs.checkout-accordion .tab-title.opened:hover {
-	background-color: $color-black !important;
+  background-color: $color-black !important;
 }
 .tabs.checkout-accordion .tab-title:hover {
-	background-color: $color-grey !important;
+  background-color: $color-grey !important;
 }
 .tabs.checkout-accordion .tab-title.opened:hover span,
 .tabs.checkout-accordion .tab-title:hover span {
-	color: $color-red;
+  color: $color-red;
 }
 .chzn-container .chzn-results .active-result {
-	color: $color-grey !important;
+  color: $color-grey !important;
 }
 #payment ul.payment_methods {
-	border-bottom: 1px solid $color-black !important;
-	float: left;
-	width: 100%;
+  float: left;
+
+  width: 100%;
+
+  border-bottom: 1px solid $color-black !important;
 }
 #payment div.form-row {
-	float: left;
-	width: 100%;
-	margin-top: 10px;
+  float: left;
+
+  width: 100%;
+  margin-top: 10px;
 }
 .left-titles a:last-child {
-	border-bottom: 1px solid $color-black !important;
+  border-bottom: 1px solid $color-black !important;
 }
 .widget_layered_nav ul small.count {
-	padding-bottom: 5px !important;
+  padding-bottom: 5px !important;
 }
 /* Demo panel */
 .footer_menu a,
 .textwidget p,
 blockquote {
-	color: #999;
+  color: #999;
 }
 .banner-transform:hover .mask {
-	background-color: rgba(51,51,51,0.85);
+  background-color: rgba(51,51,51,.85);
 }
 .banner a,
 .banner a.info {
-	background-color: $color-black;
-	background: $color-black;
+  background: $color-black;
+  background-color: $color-black;
 }
 .banner-transform .mask p,
 .banner-transform:hover .mask h2 {
-	color: $color-white;
+  color: $color-white;
 }
 .back-to {
-	background: none !important;
-	width: 150px;
+  width: 150px;
+
+  background: none !important;
 }
 .back-to:before {
-	content: "\f104";
-	width: 10px;
-	height: 10px;
-	margin-right: 5px;
-	font-size: 12px;
-	color: $color-white;
-	font-family: fontAwesome;
-	transition: all 0.2s ease-in-out;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+
+  content: '\f104';
+  transition: all .2s ease-in-out;
+
+  color: $color-white;
+
+  font-family: fontAwesome;
+  font-size: 12px;
 }
 .add_review .button {
-	background-color: $color-black;
+  background-color: $color-black;
 }
 div.pp_overlay {
-	background-color: $color-black !important;
+  background-color: $color-black !important;
 }
 .chosen-container-single .chosen-single {
-	background: $color-grey;
-	color: $color-white;
-	box-shadow: 0 1px 0 $color-black inset !important;
+  color: $color-white;
+  background: $color-grey;
+  box-shadow: 0 1px 0 $color-black inset !important;
 }
 .woocommerce-checkout .form-row .chosen-container .chosen-drop {
-	background: $color-grey;
-	border: 1px solid $color-black;
+  border: 1px solid $color-black;
+  background: $color-grey;
 }
 .chosen-container-active.chosen-with-drop .chosen-single {
-	box-shadow: 0 1px 0 $color-black inset !important;
-	background: $color-grey;
-	border: 1px solid $color-black;
-	color: $color-white;
+  color: $color-white;
+  border: 1px solid $color-black;
+  background: $color-grey;
+  box-shadow: 0 1px 0 $color-black inset !important;
 }
 .chosen-container-single .chosen-search input[type=text] {
-	background: url("../images/legacy/chosen-sprite.png") no-repeat 100% -20px,#333;
+  background: url('../images/legacy/chosen-sprite.png') no-repeat 100% -20px,#333;
 }
 .chosen-container .chosen-results li.no-results {
-	background: $color-grey;
+  background: $color-grey;
 }

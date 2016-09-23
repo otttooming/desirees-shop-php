@@ -43,9 +43,11 @@
   }
 
   &__main-image-wrap {
-    flex: 1 0 290px;
-    border-radius: $border-radius-std;
     overflow: hidden;
+
+    border-radius: $border-radius-std;
+
+    flex: 1 0 290px;
   }
 
   &__main-image {
