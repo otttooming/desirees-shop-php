@@ -1255,9 +1255,6 @@ div.menu {
 .menu ul > li:hover > ul {
   display: block;
 }
-.default-menu > ul > li > ul li:last-child {
-  border-bottom: 1px solid $color-grey;
-}
 /* level 0
 -------------------------------------------------------------- */
 .menu {
@@ -1318,8 +1315,15 @@ div.menu {
 /* level 1
 -------------------------------------------------------------- */
 .default-menu > ul > li > ul {
-  top: 42px;
-  left: 0;
+  top: 100%;
+  left: 50%;
+
+  overflow: hidden;
+
+  transform: translateX(-50%);
+
+  border-radius: $border-radius-std;
+  box-shadow: $shadow-std;
 }
 /* level 1 +
 -------------------------------------------------------------- */
@@ -1339,10 +1343,6 @@ div.menu {
   position: relative;
 
   display: block;
-
-  border-top: 1px solid $color-grey;
-  border-right: 1px solid $color-grey;
-  border-left: 1px solid $color-grey;
 }
 .default-menu > ul > li > ul li:hover {
   background: $color-grey;

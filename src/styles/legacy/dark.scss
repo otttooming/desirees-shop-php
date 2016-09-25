@@ -115,19 +115,11 @@ del {
 .header-overlapped .header-type-variant6 .default-menu > ul > li ul {
   background: $color-grey;
 }
-.default-menu > ul > li > ul li {
-  border-top: 1px solid $color-black;
-  border-right: 1px solid $color-black;
-  border-left: 1px solid $color-black;
-}
 .default-menu > ul > li > ul li:hover {
   background: $color-black;
 }
 .default-menu > ul > li > ul li:hover > a {
   color: $color-red;
-}
-.default-menu > ul > li > ul li:last-child {
-  border-bottom: 1px solid $color-black;
 }
 .default-menu .sub-menu .current-menu-item {
   background-color: $color-grey;
