@@ -211,22 +211,6 @@ add_filter( 'get_the_excerpt', 'etheme_custom_excerpt_more' );
  */
 add_filter( 'use_default_gallery_style', '__return_false' );
 
-/**
- * Deprecated way to remove inline styles printed when the gallery shortcode is used.
- *
- * This function is no longer needed or used. Use the use_default_gallery_style
- * filter instead, as seen above.
- *
- *
- * @return string The gallery style filter, with the styles themselves removed.
- */
-function etheme_remove_gallery_css( $css ) {
-	return preg_replace( "#<style type='text/css'>(.*?)</style>#s", '', $css );
-}
-// Backwards compatibility with WordPress 3.0.
-if ( version_compare( $GLOBALS['wp_version'], '3.1', '<' ) )
-	add_filter( 'gallery_style', 'etheme_remove_gallery_css' );
-
 if ( ! function_exists( 'etheme_comment' ) ) :
 function etheme_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
