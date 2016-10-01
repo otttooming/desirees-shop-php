@@ -36,7 +36,6 @@ require_once( trailingslashit(ETHEME_CODE_DIR). 'woo.php' );
 
 if ( is_admin() ) {
 	require_once( trailingslashit(ETHEME_CODE_DIR) . 'admin_functions.php');
-	require_once( trailingslashit(ETHEME_CODE_DIR) . 'admin.php');
   require_once( trailingslashit(ETHEME_CODE_DIR) . 'product.php' );
   require_once( trailingslashit(ETHEME_CODE_DIR) . 'meta-boxes.php' );
 	require_once( trailingslashit(ETHEME_CODE_DIR) . 'theme-options.php');
