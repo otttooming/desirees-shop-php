@@ -328,17 +328,6 @@ function etheme_get_image( $attachment_id = 0, $width = null, $height = null, $c
 
 }
 
-function etheme_product_page_banner(){
-    global $post;
-    $etheme_productspage_id = etheme_shortcode2id('[productspage]');
-    if($post->ID == $etheme_productspage_id && etheme_get_option('product_bage_banner') && etheme_get_option('product_bage_banner') != ''):
-    ?>
-        <div class="wpsc_category_details">
-            <img src="<?php etheme_option('product_bage_banner') ?>"/>
-        </div>
-    <?php endif;
-}
-
 // Add GOOGLE fonts
 function etheme_recognized_google_font_families( $array, $field_id = false ) {
 	$array = array(
