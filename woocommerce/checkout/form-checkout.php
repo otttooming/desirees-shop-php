@@ -13,7 +13,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 
 global $woocommerce; $woocommerce_checkout = $woocommerce->checkout();
-$is = etheme_get_option('checkout_');
 $get_checkout_url = apply_filters( 'woocommerce_get_checkout_url', WC()->cart->get_checkout_url() );
 
 wc_print_notices();
@@ -26,13 +25,13 @@ wc_print_notices();
             <div class="col2-set">
                 <div class="col-1 checkout-login">
 
-                    <h3><?php _e('New Customers', ETHEME_DOMAIN) ?></h3>
+                    <h3><?php _e('New Customers', 'desirees') ?></h3>
 
                     <div class="checkout-methods cfx">
 						            <?php if ($checkout->enable_guest_checkout): ?>
 	                        <div class="method-radio">
 	                            <input type="radio" id="method1" name="method" value="1" <?php if ($checkout->enable_guest_checkout): ?> checked <?php endif; ?>/>
-	                            <label for="method1"><?php _e('Checkout as Guest', ETHEME_DOMAIN); ?></label>
+	                            <label for="method1"><?php _e('Checkout as Guest', 'desirees'); ?></label>
 	                            <div class="clear"></div>
 	                        </div>
 						            <?php endif ?>
@@ -40,7 +39,7 @@ wc_print_notices();
 						            <?php if (get_option('woocommerce_enable_signup_and_login_from_checkout') != 'no'): ?>
 	                        <div class="method-radio">
 	                            <input type="radio" id="method2" name="method" value="2" <?php if (!$checkout->enable_guest_checkout): ?> checked <?php endif; ?> />
-	                            <label for="method2"><?php _e('Create an Account', ETHEME_DOMAIN); ?></label>
+	                            <label for="method2"><?php _e('Create an Account', 'desirees'); ?></label>
 	                        </div>
                         <?php endif; ?>
                     </div>
@@ -48,11 +47,11 @@ wc_print_notices();
                 </div>
                 <div class="col-2 checkout-customers cfx">
 
-                    <h3><?php _e('Returning Customers', ETHEME_DOMAIN) ?></h3>
+                    <h3><?php _e('Returning Customers', 'desirees') ?></h3>
                     <?php do_action( 'woocommerce_before_checkout_form', $checkout );
                         // If checkout registration is disabled and not logged in, the user cannot checkout
                         if (get_option('woocommerce_enable_signup_and_login_from_checkout')=="no" && get_option('woocommerce_enable_guest_checkout')=="no" && !is_user_logged_in()) :
-                        	echo apply_filters('woocommerce_checkout_must_be_logged_in_message', __('You must be logged in to checkout.', ETHEME_DOMAIN));
+                        	echo apply_filters('woocommerce_checkout_must_be_logged_in_message', __('You must be logged in to checkout.', 'desirees'));
                         endif;
                     ?>
 
@@ -69,13 +68,12 @@ wc_print_notices();
             <!-- ----------------------------------------------- -->
             <!-- -------------- -- REGISTER -- ----------------- -->
             <!-- ----------------------------------------------- -->
-            <?php if($is): ?><a class="tab-title checkout--title" id="tab-register"><span><?php _e('Create an Account', ETHEME_DOMAIN) ?></span></a><?php endif; ?>
             <div class="checkout__tab-content tab-content register-tab-content" id="content_tab-register" <?php if ($checkout->enable_guest_checkout): ?> style="display:none;" <?php endif; ?>>
 
                 	<?php if (get_option('woocommerce_enable_guest_checkout')=='yes') : ?>
 
                 		<p class="form-row">
-                			<input class="input-checkbox" id="createaccount" <?php checked($woocommerce_checkout->get_value('createaccount'), true) ?> type="checkbox" name="createaccount" value="1" /> <label for="createaccount" class="checkbox"><?php _e('Create an account?', ETHEME_DOMAIN); ?></label>
+                			<input class="input-checkbox" id="createaccount" <?php checked($woocommerce_checkout->get_value('createaccount'), true) ?> type="checkbox" name="createaccount" value="1" /> <label for="createaccount" class="checkbox"><?php _e('Create an account?', 'desirees'); ?></label>
                 		</p>
 
                 	<?php endif; ?>
@@ -84,7 +82,7 @@ wc_print_notices();
 
                 	<div class="create-account-form">
 
-                		<p><?php _e('Create an account by entering the information below. If you are a returning customer please login with your username at the top of the page.', ETHEME_DOMAIN); ?></p>
+                		<p><?php _e('Create an account by entering the information below. If you are a returning customer please login with your username at the top of the page.', 'desirees'); ?></p>
 
                     <?php if ( is_user_logged_in() ) { ?>
                     	<a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account','woothemes'); ?>"><?php _e('My Account','woothemes'); ?></a>
@@ -96,8 +94,6 @@ wc_print_notices();
                 	</div>
 
                 	<?php do_action( 'woocommerce_after_checkout_registration_form', $woocommerce_checkout ); ?>
-
-                    <?php if($is): ?><a class="button checkout-cont checkout-cont2"><span><?php _e('Continue', ETHEME_DOMAIN) ?></span></a><?php endif; ?>
 
             </div>
         <?php endif; ?>
@@ -114,29 +110,24 @@ wc_print_notices();
             <!-- ----------------------------------------------- -->
             <!-- ----------------- BILLING --------------------- -->
             <!-- ----------------------------------------------- -->
-            <?php if($is): ?><a class="tab-title checkout--title" id="tab_3"><span><?php _e('Billing Address', ETHEME_DOMAIN) ?></span></a><?php endif; ?>
             <div class="checkout__tab-content tab-content tab-billing" id="content_tab_3">
                 <?php do_action('woocommerce_checkout_billing'); ?>
-                <?php if($is): ?><a class="button checkout-cont"><span><?php _e('Continue', ETHEME_DOMAIN) ?></span></a><?php endif; ?>
             </div>
 
 
             <!-- ----------------------------------------------- -->
             <!-- ----------------- SHIPPING -------------------- -->
             <!-- ----------------------------------------------- -->
-            <?php if($is): ?><a href="javascript:void(0)" class="tab-title checkout--title" id="tab_4"><span><?php _e('Shipping Address', ETHEME_DOMAIN) ?></span></a><?php endif; ?>
             <div class="checkout__tab-content tab-content tab-shipping" id="content_tab_4">
         	   <?php do_action('woocommerce_checkout_shipping'); ?>
-                <?php if($is): ?><a class="button checkout-cont"><span><?php _e('Continue', ETHEME_DOMAIN) ?></span></a><?php endif; ?>
             </div>
             <!-- ----------------------------------------------- -->
             <!-- ------------------ ORDER ---------------------- -->
             <!-- ----------------------------------------------- -->
     	<?php endif; ?>
 
-        <?php if($is): ?><a class="tab-title checkout--title" id="tab_5"><span><?php _e('Your order', ETHEME_DOMAIN) ?></span></a><?php endif; ?>
         <div class="checkout__tab-content tab-content tap-order" id="content_tab_5">
-            <h3 id="order_review_heading"><?php _e('Your order', ETHEME_DOMAIN); ?></h3>
+            <h3 id="order_review_heading"><?php _e('Your order', 'desirees'); ?></h3>
             <?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 
             <div id="order_review" class="woocommerce-checkout-review-order">

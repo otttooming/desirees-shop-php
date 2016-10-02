@@ -31,7 +31,7 @@ global $post, $product;
     	$availability = $product->get_availability();
 
     	if ($availability['availability']) :
-    		echo apply_filters( 'woocommerce_stock_html', '<div class="product-stock ' . $availability['class'].'">' . '<span class="stock__header">' . __('Availability', ETHEME_DOMAIN) . '</span>' . ' <span class="stock__number">'.$availability['availability'].'</span></div>', $availability['availability'] );
+    		echo apply_filters( 'woocommerce_stock_html', '<div class="product-stock ' . $availability['class'].'">' . '<span class="stock__header">' . __('Availability', 'desirees') . '</span>' . ' <span class="stock__number">'.$availability['availability'].'</span></div>', $availability['availability'] );
       endif;
     ?>
 </div>

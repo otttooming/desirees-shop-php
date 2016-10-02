@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <div class="product-qty__wrap qty-block" id="product-quantity">
-    <label class="qty-block__title"><?php _e('Quantity', ETHEME_DOMAIN); ?></label>
+    <label class="qty-block__title"><?php _e('Quantity', 'desirees'); ?></label>
     <input
       type="number"
       step="<?php echo esc_attr( $step ); ?>"

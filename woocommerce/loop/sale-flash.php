@@ -10,4 +10,4 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 
-etheme_wc_product_labels(); ?>
+// etheme_wc_product_labels(); ?>

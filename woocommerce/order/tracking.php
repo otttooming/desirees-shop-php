@@ -13,9 +13,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 <?php
 	$status = get_term_by( 'slug', $order->status, 'shop_order_status' );
 
-	$order_status_text = sprintf( __( 'Order %s which was made %s has the status &ldquo;%s&rdquo;', ETHEME_DOMAIN ), $order->get_order_number(), human_time_diff( strtotime( $order->order_date ), current_time( 'timestamp' ) ) . ' ' . __( 'ago', ETHEME_DOMAIN ), __( $status->name, ETHEME_DOMAIN ) );
+	$order_status_text = sprintf( __( 'Order %s which was made %s has the status &ldquo;%s&rdquo;', 'desirees' ), $order->get_order_number(), human_time_diff( strtotime( $order->order_date ), current_time( 'timestamp' ) ) . ' ' . __( 'ago', 'desirees' ), __( $status->name, 'desirees' ) );
 
-	if ( $order->status === 'completed' ) $order_status_text .= ' ' . __( 'and was completed', ETHEME_DOMAIN ) . ' ' . human_time_diff( strtotime( $order->completed_date ), current_time( 'timestamp' ) ) . __( ' ago', ETHEME_DOMAIN );
+	if ( $order->status === 'completed' ) $order_status_text .= ' ' . __( 'and was completed', 'desirees' ) . ' ' . human_time_diff( strtotime( $order->completed_date ), current_time( 'timestamp' ) ) . __( ' ago', 'desirees' );
 
 	$order_status_text .= '.';
 
@@ -26,13 +26,13 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	$notes = $order->get_customer_order_notes();
 	if ( $notes ) :
 		?>
-		<h2><?php _e( 'Order Updates', ETHEME_DOMAIN ); ?></h2>
+		<h2><?php _e( 'Order Updates', 'desirees' ); ?></h2>
 		<ol class="commentlist notes">
 			<?php foreach ( $notes as $note ) : ?>
 			<li class="comment note">
 				<div class="comment_container">
 					<div class="comment-text">
-						<p class="meta"><?php echo date_i18n( __( 'l jS \o\f F Y, h:ia', ETHEME_DOMAIN ), strtotime( $note->comment_date ) ); ?></p>
+						<p class="meta"><?php echo date_i18n( __( 'l jS \o\f F Y, h:ia', 'desirees' ), strtotime( $note->comment_date ) ); ?></p>
 						<div class="description">
 							<?php echo wpautop( wptexturize( wp_kses_post( $note->comment_content ) ) ); ?>
 						</div>

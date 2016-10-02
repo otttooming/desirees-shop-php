@@ -12,7 +12,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 global $product, $woocommerce_loop;
 
 $upsells = $product->get_upsells();
-$product_per_row = etheme_get_option('prodcuts_per_row');
 
 $rand = rand(1000,9999);
 
@@ -31,8 +30,8 @@ $products = new WP_Query( $args );
 $upsells_count = 0;
 if ( $products->have_posts() ) : ?>
 
-    <div class="product-slider upsells columns<?php echo $product_per_row ?>">
-        <h4 class="slider-title"><?php _e('You may also like&hellip;', ETHEME_DOMAIN) ?></h4>
+    <div class="product-slider upsells columns4">
+        <h4 class="slider-title"><?php _e('You may also like&hellip;', 'desirees') ?></h4>
         <div class="clear"></div>
         <div class="carousel slider-<?php echo $rand ?>" <?php if($upsells_count < 5): ?>style="height:auto;"<?php endif; ?>>
             <div class="slider">

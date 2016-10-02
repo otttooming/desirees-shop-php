@@ -78,9 +78,6 @@ $(document).ready(function() {
   /* Accordion Navigation
   -------------------------------------------------------------- */
   $(function() {
-    if (!nav_accordion) {
-      $('.categories-group .wpsc_category_title .btn-show ').hide();
-    } else {
       $('.block.cats').addClass('acc_enabled');
       $('.categories-group').each(function() {
         $(this).has('.wpsc_top_level_categories').addClass('has-subnav');
@@ -116,7 +113,6 @@ $(document).ready(function() {
       function hideActiveSection() {
         $('.categories-group.opened').removeClass('opened').find('.wpsc_top_level_categories').hide(nav_speed);
       }
-    }
   });
 
   /* Load in view */
@@ -151,6 +147,7 @@ $(document).ready(function() {
 -------------------------------------------------------------- */
 
 function check_view_mod() {
+  var view_mode_default = 'grid_list';
   var activeClass = 'switcher-active';
   if (Cookies.get('products_page') == 'grid') {
     $('#products-grid').removeClass('products-list').addClass('products-grid');

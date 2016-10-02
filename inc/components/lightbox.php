@@ -28,13 +28,13 @@
 
                 <div class="pswp__counter"></div>
 
-                <button class="pswp__button pswp__button--close" title="<?php _e('Close', ETHEME_DOMAIN); ?>"></button>
+                <button class="pswp__button pswp__button--close" title="<?php _e('Close', 'desirees'); ?>"></button>
 
-                <button class="pswp__button pswp__button--share" title="<?php _e('Share', ETHEME_DOMAIN); ?>"></button>
+                <button class="pswp__button pswp__button--share" title="<?php _e('Share', 'desirees'); ?>"></button>
 
-                <button class="pswp__button pswp__button--fs" title="<?php _e('Toggle fullscreen', ETHEME_DOMAIN); ?>"></button>
+                <button class="pswp__button pswp__button--fs" title="<?php _e('Toggle fullscreen', 'desirees'); ?>"></button>
 
-                <button class="pswp__button pswp__button--zoom" title="<?php _e('Zoom in/out', ETHEME_DOMAIN); ?>"></button>
+                <button class="pswp__button pswp__button--zoom" title="<?php _e('Zoom in/out', 'desirees'); ?>"></button>
 
                 <?php 
                   // Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR
@@ -53,9 +53,9 @@
                 <div class="pswp__share-tooltip"></div>
             </div>
 
-            <button class="pswp__button pswp__button--arrow--left" title="<?php _e('Previous', ETHEME_DOMAIN); ?>"></button>
+            <button class="pswp__button pswp__button--arrow--left" title="<?php _e('Previous', 'desirees'); ?>"></button>
 
-            <button class="pswp__button pswp__button--arrow--right" title="<?php _e('Next', ETHEME_DOMAIN); ?>"></button>
+            <button class="pswp__button pswp__button--arrow--right" title="<?php _e('Next', 'desirees'); ?>"></button>
 
             <div class="pswp__caption">
                 <div class="pswp__caption__center"></div>

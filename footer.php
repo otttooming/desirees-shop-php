@@ -38,7 +38,7 @@
 </div>
 <?php // END .wrapper ?>
 
-<div id="back-to-top" class="btn-style-standart"><a href="#top" id="top-link" ><span><?php _e('Back to top',ETHEME_DOMAIN) ?></span></a></div>
+<div id="back-to-top" class="btn-style-standart"><a href="#top" id="top-link" ><span><?php _e('Back to top','desirees') ?></span></a></div>
 
 <?php
 

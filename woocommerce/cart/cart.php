@@ -21,10 +21,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 	<thead class="cart__form-head">
 		<tr>
 			<th class="product-thumbnail cart_del_column visible-desktop">&nbsp;</th>
-			<th class="product-name"><?php _e('Product', ETHEME_DOMAIN); ?></th>
-			<th class="product-price cart_del_column"><?php _e('Price', ETHEME_DOMAIN); ?></th>
-			<th class="product-quantity"><?php _e('Qty', ETHEME_DOMAIN); ?></th>
-			<th class="product-subtotal"><?php _e('Total', ETHEME_DOMAIN); ?></th>
+			<th class="product-name"><?php _e('Product', 'desirees'); ?></th>
+			<th class="product-price cart_del_column"><?php _e('Price', 'desirees'); ?></th>
+			<th class="product-quantity"><?php _e('Qty', 'desirees'); ?></th>
+			<th class="product-subtotal"><?php _e('Total', 'desirees'); ?></th>
 			<th class="product-remove cart_del_column">&nbsp;</th>
 		</tr>
 	</thead>
@@ -61,7 +61,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
                				// Backorder notification
                				if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $values['quantity'] ) )
-               					echo '<p class="backorder_notification">' . __('Available on backorder', ETHEME_DOMAIN) . '</p>';
+               					echo '<p class="backorder_notification">' . __('Available on backorder', 'desirees') . '</p>';
 						?>
 					</td>
 
@@ -100,7 +100,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 					<!-- Remove from cart link -->
 					<td class="product-remove cart_del_column">
 						<?php
-							echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf('<a href="%s" class="delete-btn" title="%s"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 149.337 149.337"><path fill="currentColor" d="M149.337 143.96L80.044 74.668l69.292-69.292L143.96 0 74.668 69.292 5.378 0 0 5.376l69.292 69.292L0 143.96l5.376 5.376 69.292-69.292 69.293 69.292z"/></svg></a>', esc_url( $woocommerce->cart->get_remove_url( $cart_item_key ) ), __('Remove this item', ETHEME_DOMAIN) ), $cart_item_key );
+							echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf('<a href="%s" class="delete-btn" title="%s"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 149.337 149.337"><path fill="currentColor" d="M149.337 143.96L80.044 74.668l69.292-69.292L143.96 0 74.668 69.292 5.378 0 0 5.376l69.292 69.292L0 143.96l5.376 5.376 69.292-69.292 69.293 69.292z"/></svg></a>', esc_url( $woocommerce->cart->get_remove_url( $cart_item_key ) ), __('Remove this item', 'desirees') ), $cart_item_key );
 						?>
 					</td>
 				</tr>
@@ -119,14 +119,14 @@ do_action( 'woocommerce_before_cart' ); ?>
 			<?php if ( get_option( 'woocommerce_enable_coupons' ) == 'yes' ) { ?>
 				<div class="coupon cfx">
 
-					<label for="coupon_code"><?php _e('Coupon', ETHEME_DOMAIN); ?>:</label> <input name="coupon_code" class="input-text" id="coupon_code" value="" /> <input type="submit" class="button apply-coupon" name="apply_coupon" value="<?php _e('Apply Coupon', ETHEME_DOMAIN); ?>" />
+					<label for="coupon_code"><?php _e('Coupon', 'desirees'); ?>:</label> <input name="coupon_code" class="input-text" id="coupon_code" value="" /> <input type="submit" class="button apply-coupon" name="apply_coupon" value="<?php _e('Apply Coupon', 'desirees'); ?>" />
 
 					<?php do_action('woocommerce_cart_coupon'); ?>
 
 				</div>
 			<?php } ?>
 
-			<input type="submit" class="button update-button" name="update_cart" value="<?php _e('Update Cart', ETHEME_DOMAIN); ?>" />
+			<input type="submit" class="button update-button" name="update_cart" value="<?php _e('Update Cart', 'desirees'); ?>" />
 
 			<?php // do_action('woocommerce_proceed_to_checkout'); ?>
 

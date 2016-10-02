@@ -67,6 +67,24 @@ function handle_logo_upload() {
     return $option;
 }
 
+function handle_favicon_upload() {
+    if (!empty($_FILES['favicon']['tmp_name'])) {
+        $urls = wp_handle_upload($_FILES['favicon'], array('test_form' => false));
+        $temp = $urls['url'];
+
+        return $temp;
+    }
+
+    return $option;
+}
+
+function display_favicon() {
+    ?>
+        <input type="file" name="favicon" />
+        <?php echo get_option('favicon'); ?>
+   <?php
+}
+
 function display_theme_panel_fields() {
     add_settings_section('section', 'All Settings', null, 'theme-options');
 
@@ -78,6 +96,7 @@ function display_theme_panel_fields() {
     add_settings_field('layout_fixed_nav', 'Fixed navigation', 'display_layout_element', 'theme-options', 'section');
 
     add_settings_field('company_logo', 'Logo', 'display_company_logo', 'theme-options', 'section');
+    add_settings_field('favicon', 'Favicon', 'display_favicon', 'theme-options', 'section');
 
 		register_setting('section', 'contact_tel');
     register_setting('section', 'twitter_url');
@@ -86,6 +105,7 @@ function display_theme_panel_fields() {
     register_setting('section', 'layout_fixed_nav');
 
     register_setting('section', 'company_logo', 'handle_logo_upload');
+    register_setting('section', 'favicon', 'handle_favicon_upload');
 }
 
 add_action('admin_init', 'display_theme_panel_fields');

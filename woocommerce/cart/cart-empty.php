@@ -19,7 +19,7 @@ wc_print_notices();
 <div class="empty-cart-block">
 		<i class="icon-shopping-cart"></i>
 
-		<?php etheme_option('empty_cart_content'); ?>
+		<?php // etheme_option('empty_cart_content'); ?>
 		<p>
 				<a class="button" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
 						<?php _e( 'Return To Shop', 'woocommerce' ) ?>

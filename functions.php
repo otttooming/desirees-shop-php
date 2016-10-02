@@ -31,12 +31,6 @@ require get_template_directory() . '/inc/func/widgets.php';
 */
 require get_template_directory() . '/inc/func/breadcrumbs.php';
 
-global $etheme_theme_data;
-$etheme_theme_data = wp_get_theme( 'idstore' );
-define('ETHEME_DOMAIN', 'idstore');
-define('ETHEME_OPTIONS', 'site_basic_options');
-require_once( get_template_directory() . '/code/init.php' );
-
 function content($limit) {
   $content = explode(' ', get_the_content(), $limit);
   if (count($content)>=$limit) {
@@ -52,7 +46,6 @@ function content($limit) {
 
   return $content;
 }
-
 
 // User selects how many products to view per page
 // via http://designloud.com/how-to-add-products-per-page-dropdown-to-woocommerce/

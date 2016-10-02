@@ -4,7 +4,7 @@ function blog_breadcrumbs()
 {
   $showOnHome = 0; // 1 - show breadcrumbs on the homepage, 0 - don't show
   $delimiter = '<span class="bc__delim">/</span>'; // delimiter between crumbs
-  $home = __('Home', ETHEME_DOMAIN); // text for the 'Home' link
+  $home = __('Home', 'desirees'); // text for the 'Home' link
   $blogPage = 'Blog';
   $showCurrent = 1; // 1 - show current post/page title in breadcrumbs, 0 - don't show
   $before = '<span class="bc__current">'; // tag before the current crumb
@@ -27,9 +27,9 @@ function blog_breadcrumbs()
             if ($thisCat->parent != 0) {
                 echo get_category_parents($thisCat->parent, true, ' '.$delimiter.' ');
             }
-            echo $before.__('Archive by category', ETHEME_DOMAIN).' "'.single_cat_title('', false).'"'.$after;
+            echo $before.__('Archive by category', 'desirees').' "'.single_cat_title('', false).'"'.$after;
         } elseif (is_search()) {
-            echo $before.__('Search results for', ETHEME_DOMAIN).' "'.get_search_query().'"'.$after;
+            echo $before.__('Search results for', 'desirees').' "'.get_search_query().'"'.$after;
         } elseif (is_day()) {
             echo '<a href="'.get_year_link(get_the_time('Y')).'">'.get_the_time('Y').'</a> '.$delimiter.' ';
             echo '<a href="'.get_month_link(get_the_time('Y'), get_the_time('m')).'">'.get_the_time('F').'</a> '.$delimiter.' ';

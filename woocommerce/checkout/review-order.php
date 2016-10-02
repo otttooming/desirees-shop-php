@@ -18,7 +18,7 @@ global $woocommerce;
 		<tr>
       <th class="product-thumbnail cart_del_column">&nbsp;</th>
 			<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
-      <th class="product-quantity"><?php _e('Qty', ETHEME_DOMAIN); ?></th>
+      <th class="product-quantity"><?php _e('Qty', 'desirees'); ?></th>
 			<th class="product-total"><?php _e( 'Total', 'woocommerce' ); ?></th>
 		</tr>
 	</thead>
@@ -51,7 +51,7 @@ global $woocommerce;
 
                  				// Backorder notification
                  				if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) )
-                 					echo '<p class="backorder_notification">' . __('Available on backorder', ETHEME_DOMAIN) . '</p>';
+                 					echo '<p class="backorder_notification">' . __('Available on backorder', 'desirees') . '</p>';
   						?>
   					</td>
             <!-- Quantity inputs -->

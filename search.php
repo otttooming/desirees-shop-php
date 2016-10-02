@@ -14,7 +14,7 @@ get_header();
 				<?php if ( have_posts() ) : ?>
 
 					<p>
-						<?php printf( __( 'Search Results for: %s', ETHEME_DOMAIN ), '<em>' . get_search_query() . '</em>' ); ?>
+						<?php printf( __( 'Search Results for: %s', 'desirees' ), '<em>' . get_search_query() . '</em>' ); ?>
 					</p>
 
 					<?php
@@ -28,10 +28,10 @@ get_header();
 				<?php else : ?>
 
 					<div id="post-0" class="post no-results not-found">
-						<h2 class="entry-title"><?php _e( 'Nothing Found', ETHEME_DOMAIN ); ?></h2>
+						<h2 class="entry-title"><?php _e( 'Nothing Found', 'desirees' ); ?></h2>
 						<div class="entry-content">
 							<p>
-								<?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', ETHEME_DOMAIN ); ?>
+								<?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'desirees' ); ?>
 							</p>
 							<?php get_search_form(); ?>
 						</div>

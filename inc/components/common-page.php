@@ -24,12 +24,12 @@
 
           <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
               <?php the_content(); ?>
-              <?php wp_link_pages(array('before' => ''.__('Pages:', ETHEME_DOMAIN), 'after' => '')); ?>
+              <?php wp_link_pages(array('before' => ''.__('Pages:', 'desirees'), 'after' => '')); ?>
           <?php endwhile; ?>
           <?php else : ?>
-            <p><strong><?php _e('Not Found', ETHEME_DOMAIN); ?></strong></p>
+            <p><strong><?php _e('Not Found', 'desirees'); ?></strong></p>
             <p>
-              <?php _e('Apologies, but the page you requested could not be found. Perhaps searching will help.', ETHEME_DOMAIN); ?>
+              <?php _e('Apologies, but the page you requested could not be found. Perhaps searching will help.', 'desirees'); ?>
             </p>
             <?php get_search_form(); ?>
           <?php endif; ?>
