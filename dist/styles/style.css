@@ -8623,40 +8623,29 @@ span.copyright {
 #default_products_page_container {
   padding-bottom: 0; }
 
-/* Disable elements */
-#searchsubmit,
-.back-to777,
-.lightbox-btn,
-.pp_overlay,
-.pp_pic_holder.pp_woocommerce,
-.screen-reader-text,
-.sku_wrapper,
-.widget_shopping_cart_content .checkout {
-  display: none !important; }
-
 /* Rem spacing between products */
 @media only screen and (min-width: 480px) {
-  .with-sidebar .rows-count4.products-grid .product-grid {
+  .product-grid {
     width: 174px !important;
     margin-left: 1px; }
-    .with-sidebar .rows-count4.products-grid .product-grid:nth-child(4n+1) {
+    .product-grid:nth-child(4n+1) {
       margin-left: 20px; } }
 
 @media only screen and (min-width: 1200px) {
-  .with-sidebar .rows-count4.products-grid .product-grid {
+  .product-grid {
     width: 216px !important; } }
 
 @media only screen and (max-width: 979px) and (min-width: 768px) {
-  .with-sidebar .rows-count4.products-grid .product-grid {
+  .product-grid {
     width: 237px !important; }
-    .with-sidebar .rows-count4.products-grid .product-grid:nth-child(2n+1) {
+    .product-grid:nth-child(2n+1) {
       margin-left: 20px; } }
 
 @media only screen and (max-width: 767px) and (min-width: 480px) {
-  .with-sidebar .rows-count4.products-grid .product-grid {
+  .product-grid {
     width: 213px !important;
     margin-right: 0 !important; }
-    .with-sidebar .rows-count4.products-grid .product-grid:nth-child(2n+1) {
+    .product-grid:nth-child(2n+1) {
       margin-left: -14px; } }
 
 .wc-proceed-to-checkout a {
@@ -10794,6 +10783,9 @@ del {
       background: #a30000; }
   .pagination a.page-numbers:hover {
     background: #a30000; }
+
+.txt-center {
+  text-align: center; }
 
 /*! PhotoSwipe main CSS by Dmitry Semenov | photoswipe.com | MIT license */
 /*

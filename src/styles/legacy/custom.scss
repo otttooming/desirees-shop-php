@@ -896,19 +896,8 @@ span.copyright {
 #default_products_page_container {
   padding-bottom: 0;
 }
-/* Disable elements */
-#searchsubmit,
-.back-to777,
-.lightbox-btn,
-.pp_overlay,
-.pp_pic_holder.pp_woocommerce,
-.screen-reader-text,
-.sku_wrapper,
-.widget_shopping_cart_content .checkout {
-  display: none!important;
-}
 /* Rem spacing between products */
-.with-sidebar .rows-count4.products-grid .product-grid {
+.product-grid {
   @media only screen and (min-width: 480px) {
     width: 174px!important;
     margin-left: 1px;
