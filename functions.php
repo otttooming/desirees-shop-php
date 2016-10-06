@@ -27,6 +27,11 @@ require get_template_directory() . '/inc/func/options.php';
 require get_template_directory() . '/inc/func/widgets.php';
 
 /**
+* Shortcodes
+*/
+require get_template_directory() . '/inc/func/shortcodes.php';
+
+/**
 * Breadcrumbs
 */
 require get_template_directory() . '/inc/func/breadcrumbs.php';
