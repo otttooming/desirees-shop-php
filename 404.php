@@ -1,25 +1,44 @@
 <?php
 /**
- * The template for displaying 404 pages (Not Found).
+ * The template for displaying 404 pages (not found).
  *
+ * @package desirees
  */
 
 get_header(); ?>
 
-        <div class="container">
-            <div class="row">
-                <div class="span12 grid_content">
-                    <h1 class="notFound"><?php _e('<strong>404</strong>', 'desirees'); ?></h1>
+	<div class="container">
+		<div class="row">
+			<div class="span12 txt-center">
+        <header>
+          <h1>
+            <?php _e('<strong>Page not found.</strong>', 'desirees'); ?>
+          </h1>
+        </header>
 
-    				<p><?php _e('Sorry, but the page you are looking for is not found. Please, make sure you’ve typed the current  URL.', 'desirees'); ?> <br />
+				<p>
+					<?php _e('Sorry, but the page you are looking for is not found. Please, make sure you’ve typed the current  URL.', 'desirees'); ?>
+        </p>
 
-    				<p><?php get_search_form(); ?></p>
+				<div class="f-center">
+					<?php get_search_form(); ?>
+				</div>
 
-    				<p><a class="button medium arrow-left" href="javascript: history.go(-1)"><?php _e('Return to Previous Page', 'desirees'); ?></a></p>
+        <?php
+						echo desirees_do_shortcode( 'desirees_best_selling_products', array(
+							'per_page'  => 4,
+							'columns'   => 4,
+						) );
+        ?>
 
-    				<div class="clear"></div>
-                </div>
-    		</div>
-		</div><!-- .container -->
+				<p>
+					<a class="button medium arrow-left" href="javascript: history.go(-1)">
+						<?php _e('Return to Previous Page', 'desirees'); ?>
+					</a>
+				</p>
 
-<?php get_footer(); ?>
+			</div>
+		</div>
+	</div>
+
+	<?php get_footer(); ?>

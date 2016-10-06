@@ -1232,38 +1232,32 @@ abbr[title] {
 /* -------------------------------------------------- */
 .button.small.arrow-left {
   padding-left: 24px;
-  background-image: url("../images/legacy/prew_arrow.png");
   background-repeat: no-repeat;
   background-position: 10px center; }
 
 .button.small.arrow-right {
   padding-right: 24px;
-  background-image: url("../images/legacy/back_arrow.png");
   background-repeat: no-repeat;
   background-position: 90% center; }
 
 .button.medium.arrow-left {
   padding-left: 24px;
-  background-image: url("../images/legacy/arrow_medium_left.png");
   background-repeat: no-repeat;
   background-position: 10px center; }
 
 .button.medium.arrow-right {
   padding-right: 34px;
   padding-left: 18px;
-  background-image: url("../images/legacy/arrow_medium_right.png");
   background-repeat: no-repeat;
   background-position: 141px center; }
 
 .button.big.arrow-left {
   padding-left: 55px;
-  background-image: url("../images/legacy/arrow_big_left.png");
   background-repeat: no-repeat;
   background-position: 25px center; }
 
 .button.big.arrow-right {
   padding-right: 55px;
-  background-image: url("../images/legacy/arrow_big_right.png");
   background-repeat: no-repeat;
   background-position: 91% center; }
 
@@ -8314,47 +8308,6 @@ h3 {
   background: rgba(51, 51, 51, 0.5);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
 
-/* Hover description */
-.products-grid .product-descr {
-  position: absolute;
-  z-index: 9999;
-  top: 0;
-  bottom: 90px;
-  bottom: 0;
-  left: -230px;
-  display: -ms-flexbox;
-  display: flex;
-  width: 200px;
-  padding: 15px;
-  transition: 250ms;
-  -webkit-transform: scale(0, 0);
-          transform: scale(0, 0);
-  border-radius: 5px;
-  background-color: #a30000;
-  font-size: 13px;
-  -ms-flex-align: center;
-      align-items: center; }
-
-.product-descr-info {
-  overflow: hidden;
-  max-height: 100%; }
-
-.products-grid .product-grid.span2:hover .product-descr {
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1); }
-
-.products-grid .product-grid.span2:hover .product-descr:after {
-  position: absolute;
-  top: 0;
-  left: 228px;
-  width: 0;
-  height: 0;
-  content: '';
-  -moz-transform: scale(0.9999);
-  /* Solves jagged edges in CSS triangles in Firefox */
-  border: 50px solid transparent;
-  border-left: 22px solid #a30000; }
-
 .entry-title {
   border-bottom: 1px solid rgba(51, 51, 51, 0.5) !important; }
 
@@ -8622,31 +8575,6 @@ span.copyright {
 
 #default_products_page_container {
   padding-bottom: 0; }
-
-/* Rem spacing between products */
-@media only screen and (min-width: 480px) {
-  .product-grid {
-    width: 174px !important;
-    margin-left: 1px; }
-    .product-grid:nth-child(4n+1) {
-      margin-left: 20px; } }
-
-@media only screen and (min-width: 1200px) {
-  .product-grid {
-    width: 216px !important; } }
-
-@media only screen and (max-width: 979px) and (min-width: 768px) {
-  .product-grid {
-    width: 237px !important; }
-    .product-grid:nth-child(2n+1) {
-      margin-left: 20px; } }
-
-@media only screen and (max-width: 767px) and (min-width: 480px) {
-  .product-grid {
-    width: 213px !important;
-    margin-right: 0 !important; }
-    .product-grid:nth-child(2n+1) {
-      margin-left: -14px; } }
 
 .wc-proceed-to-checkout a {
   background-color: #a30000; }
@@ -9860,8 +9788,8 @@ div.pp_overlay {
 /* END media query (min-width:1200px) */
 html {
   font-size: 16px;
-  -webkit-text-size-adjust: none;
   -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: none;
   -ms-text-size-adjust: 100%; }
   @media screen and (max-width: 767px) {
     html {
@@ -10125,6 +10053,7 @@ del {
 .grid__options {
   display: -ms-flexbox;
   display: flex;
+  margin: 0 0 20px;
   padding: 0 20px;
   white-space: nowrap;
   border-radius: 3px;
@@ -10202,11 +10131,6 @@ del {
   -ms-flex-pack: justify;
       justify-content: space-between; }
 
-.product-grid {
-  border-radius: 3px;
-  background: rgba(51, 51, 51, 0.5) !important;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
-
 .product__related-slider {
   padding: 0 0 40px; }
 
@@ -10220,6 +10144,57 @@ del {
       align-items: center; }
   .slider-promo__wrapper img {
     width: 100%; }
+
+.products-listing {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -1px; }
+  .products-listing__item {
+    position: relative;
+    margin: 0 1px 20px;
+    border-radius: 3px;
+    background: rgba(51, 51, 51, 0.5) !important;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
+    -ms-flex: 1 0 170px;
+        flex: 1 0 170px; }
+    .products-listing__item:hover .products-listing__item-desc {
+      position: absolute;
+      top: 0;
+      -webkit-transform: scale(1, 1);
+              transform: scale(1, 1); }
+      .products-listing__item:hover .products-listing__item-desc:after {
+        left: 100%;
+        width: 0;
+        height: 0;
+        content: '';
+        -moz-transform: scale(0.9999);
+        /* Solves jagged edges in CSS triangles in Firefox */
+        border: 50px solid transparent;
+        border-left: 22px solid #a30000; }
+  .products-listing__item-desc {
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    bottom: 90px;
+    bottom: 0;
+    left: -230px;
+    display: -ms-flexbox;
+    display: flex;
+    width: 200px;
+    padding: 15px;
+    transition: 250ms;
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
+    border-radius: 5px;
+    background-color: #a30000;
+    font-size: 13px;
+    -ms-flex-align: center;
+        align-items: center; }
+  .products-listing__item-desc-text {
+    overflow: hidden;
+    max-height: 100%; }
 
 .product__mainblock {
   box-sizing: border-box;
@@ -10494,8 +10469,8 @@ del {
     font-size: 14px; }
   .button.big {
     padding: 20px;
-    font-size: 1rem;
-    padding: 1.25rem; }
+    padding: 1.25rem;
+    font-size: 1rem; }
   .button__icon {
     width: 1em;
     height: 1em;
@@ -10751,7 +10726,7 @@ del {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
 
 .pagination {
-  margin-top: 40px;
+  margin-top: 20px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;

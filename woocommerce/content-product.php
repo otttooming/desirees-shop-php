@@ -34,7 +34,7 @@ $woocommerce_loop['loop']++;
 
 ?>
 
-	<div class="product-grid span2 cfx">
+	<div class="products-listing__item">
 	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
 
       <a href="<?php echo the_permalink(); ?>" class="product-loop__images-wrap">
@@ -68,11 +68,11 @@ $woocommerce_loop['loop']++;
 
       <?php if ( isset($woocommerce_loop['name']) && $woocommerce_loop['name'] == 'related' ) : ?>
       <?php elseif ( get_the_content() ) : ?>
-        <div class="product-descr">
-          <div class="product-descr-info">
+        <!-- <div class="products-listing__item-desc">
+          <div class="products-listing__item-desc-text">
             <?php echo content(30); ?>
           </div>
-        </div>
+        </div> -->
       <?php endif; ?>
 	</div>
 <?php

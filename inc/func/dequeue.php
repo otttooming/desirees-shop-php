@@ -50,6 +50,8 @@ function devotion_dequeue_scripts_styles() {
 }
 add_action( 'wp_print_styles', 'devotion_dequeue_scripts_styles', 100 );
 
+add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+
 /**
  * Remove wp_head actions
  */

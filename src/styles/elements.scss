@@ -1,8 +1,8 @@
 html {
   font-size: 16px;
 
-  -webkit-text-size-adjust: none; // Prevent font scaling in landscape
   -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: none; // Prevent font scaling in landscape
       -ms-text-size-adjust: 100%;
 
   @media screen and (max-width: 767px) {
