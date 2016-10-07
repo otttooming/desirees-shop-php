@@ -9788,8 +9788,8 @@ div.pp_overlay {
 /* END media query (min-width:1200px) */
 html {
   font-size: 16px;
-  -webkit-text-size-adjust: 100%;
   -webkit-text-size-adjust: none;
+  -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
   @media screen and (max-width: 767px) {
     html {
@@ -10148,17 +10148,17 @@ del {
 .products-listing {
   display: -ms-flexbox;
   display: flex;
+  margin: 0 -1px;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: 0 -1px; }
+      flex-wrap: wrap; }
   .products-listing__item {
     position: relative;
     margin: 0 1px 20px;
     border-radius: 3px;
     background: rgba(51, 51, 51, 0.5) !important;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
-    -ms-flex: 1 0 170px;
-        flex: 1 0 170px; }
+    -ms-flex: 1 0 180px;
+        flex: 1 0 180px; }
     .products-listing__item:hover .products-listing__item-desc {
       position: absolute;
       top: 0;
@@ -10227,6 +10227,7 @@ del {
   overflow: hidden;
   -ms-flex-direction: column;
       flex-direction: column;
+  padding: 0 5px;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px; }
 
@@ -10469,8 +10470,8 @@ del {
     font-size: 14px; }
   .button.big {
     padding: 20px;
-    padding: 1.25rem;
-    font-size: 1rem; }
+    font-size: 1rem;
+    padding: 1.25rem; }
   .button__icon {
     width: 1em;
     height: 1em;
