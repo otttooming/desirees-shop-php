@@ -128,3 +128,72 @@ function desirees_widgets_init() {
 }
 
 add_action( 'widgets_init', 'desirees_widgets_init' );
+
+add_action( 'widgets_init', 'desirees_register_general_widgets' );
+function desirees_register_general_widgets() {
+  register_widget('Desirees_Subcategories_Widget');
+}
+
+
+function desirees_get_wc_categories_menu($title = 'Categories'){
+    global $wp_query;
+    ?>
+        <div class="block cats widget-container">
+            <h2 class="block-head">
+                <?php echo ($title != '') ? $title : 'Categories'; ?>
+            </h2>
+            <div class="block-content">
+            	<?php
+                    $instance_categories = get_terms( 'product_cat', 'hide_empty=0&parent=0');
+                    $cat = $wp_query->get_queried_object();
+                    $current_cat = '';
+                    if(!empty($cat->term_id)){ $current_cat = $cat->term_id; }
+                    foreach($instance_categories as $categories){
+                        $term_id = $categories->term_id;
+                        $term_name = $categories->name;
+                        ?>
+                        <div class='categories-group <?php if($term_id == $current_cat) echo 'current-parent opened' ; ?>' id='sidebar_categorisation_group_<?php echo $term_id; ?>'>
+                            <h5 class='wpsc_category_title'><a href="<?php echo get_term_link( $categories, 'product_cat' ); ?>"><?php echo $term_name; ?></a><span class="btn-show"></span></h5>
+                                <?php $subcat_args = array( 'taxonomy' => 'product_cat',
+                                'title_li' => '', 'show_count' => 0, 'hide_empty' => 0, 'echo' => false,
+                                'show_option_none' => '', 'child_of' => $term_id ); ?>
+                                <?php if(get_option('show_category_count') == 1) $subcat_args['show_count'] = 1; ?>
+                                <?php $subcategories = wp_list_categories( $subcat_args ); ?>
+                                <?php if ( $subcategories ) { ?>
+                                <ul class='wpsc_categories wpsc_top_level_categories'><?php echo $subcategories ?></ul>
+                                <?php } ?>
+                            <div class='clear_category_group'></div>
+                        </div>
+                        <?php
+                    }
+                ?>
+            </div>
+        </div>
+    <?php
+}
+
+class Desirees_Subcategories_Widget extends WP_Widget {
+    function Desirees_Subcategories_Widget() {
+        $widget_ops = array( 'clasname' => 'desirees_subcats', 'description' => __('Display a list of subcategories on Category Page', 'desirees'));
+        $control_ops = array('id_base' => 'desirees-subcategories');
+        parent::__construct('desirees-subcategories', 'Desirees - '.__('Subcategories List', 'desirees'), $widget_ops, $control_ops);
+    }
+	function update( $new_instance, $old_instance ) {
+		$instance = $old_instance;
+		$instance['title'] = strip_tags( $new_instance['title'] );
+		return $instance;
+	}
+	function form( $instance ) {
+		$defaults = array( 'title' => 'Categories' );
+		$instance = wp_parse_args( (array) $instance, $defaults );
+	}
+    function widget( $args, $instance ) {
+		extract( $args );
+		$title = apply_filters('widget_title', $instance['title'] );
+		echo $before_widget;
+        if(class_exists('Woocommerce')){
+            desirees_get_wc_categories_menu($title);
+        }
+		echo $after_widget;
+	}
+}
