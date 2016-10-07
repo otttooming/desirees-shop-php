@@ -34,7 +34,7 @@ $woocommerce_loop['loop']++;
 
 ?>
 
-	<div class="products-listing__item">
+	<div class="products-listing__item" <?php if ( get_the_content() ) : ?> data-wenk="<?php echo strip_tags(content(30)); ?>" data-wenk-pos="left" data-wenk-length="fit" <?php endif; ?>>
 	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
 
       <a href="<?php echo the_permalink(); ?>" class="product-loop__images-wrap">
@@ -65,14 +65,5 @@ $woocommerce_loop['loop']++;
           </div>
 
       </div>
-
-      <?php if ( isset($woocommerce_loop['name']) && $woocommerce_loop['name'] == 'related' ) : ?>
-      <?php elseif ( get_the_content() ) : ?>
-        <!-- <div class="products-listing__item-desc">
-          <div class="products-listing__item-desc-text">
-            <?php echo content(30); ?>
-          </div>
-        </div> -->
-      <?php endif; ?>
 	</div>
 <?php
