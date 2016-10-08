@@ -40,10 +40,9 @@ get_header();
 				<?php endif; ?>
 
 			</div>
-			<div class="span3 sidebar_grid">
+			<div class="span3 sidebar_grid cfx">
 				<?php get_sidebar(); ?>
 			</div>
-			<div class="clear"></div>
 		</div>
 	</div>
 

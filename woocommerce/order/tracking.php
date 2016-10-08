@@ -36,9 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 						<div class="description">
 							<?php echo wpautop( wptexturize( wp_kses_post( $note->comment_content ) ) ); ?>
 						</div>
-		  				<div class="clear"></div>
 		  			</div>
-					<div class="clear"></div>
 				</div>
 			</li>
 			<?php endforeach; ?>

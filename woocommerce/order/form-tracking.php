@@ -18,7 +18,6 @@ global $woocommerce, $post;
 
 	<p class="form-row form-row-first"><label for="orderid"><?php _e( 'Order ID', 'desirees' ); ?></label> <input class="input-text" type="text" name="orderid" id="orderid" placeholder="<?php _e( 'Found in your order confirmation email.', 'desirees' ); ?>" /></p>
 	<p class="form-row form-row-last"><label for="order_email"><?php _e( 'Billing Email', 'desirees' ); ?></label> <input class="input-text" type="text" name="order_email" id="order_email" placeholder="<?php _e( 'Email you used during checkout.', 'desirees' ); ?>" /></p>
-	<div class="clear"></div>
 
 	<p class="form-row"><input type="submit" class="button" name="track" value="<?php _e( 'Track', 'desirees' ); ?>" /></p>
 	<?php wp_nonce_field( 'woocommerce-order_tracking' ); ?>

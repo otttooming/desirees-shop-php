@@ -32,7 +32,6 @@ wc_print_notices();
 	                        <div class="method-radio">
 	                            <input type="radio" id="method1" name="method" value="1" <?php if ($checkout->enable_guest_checkout): ?> checked <?php endif; ?>/>
 	                            <label for="method1"><?php _e('Checkout as Guest', 'desirees'); ?></label>
-	                            <div class="clear"></div>
 	                        </div>
 						            <?php endif ?>
 

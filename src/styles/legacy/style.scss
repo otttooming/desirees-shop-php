@@ -209,14 +209,6 @@ dt {
 /* -------------------------------------------------- */
 /* Tools
 /* -------------------------------------------------- */
-.clearfix:after,
-.clearfix:before {
-  display: table;
-
-  content: '';
-
-  line-height: 0;
-}
 .fl-l {
   float: left!important;
 }
@@ -240,10 +232,6 @@ dt {
 }
 .alignleft {
   float: left;
-}
-.clear,
-.clearfix:after {
-  clear: both;
 }
 .container_footer_bg .container,
 .follow_us_container .container,

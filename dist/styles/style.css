@@ -1075,12 +1075,6 @@ dt {
 /* -------------------------------------------------- */
 /* Tools
 /* -------------------------------------------------- */
-.clearfix:after,
-.clearfix:before {
-  display: table;
-  content: '';
-  line-height: 0; }
-
 .fl-l {
   float: left !important; }
 
@@ -1104,10 +1098,6 @@ dt {
 
 .alignleft {
   float: left; }
-
-.clear,
-.clearfix:after {
-  clear: both; }
 
 .container_footer_bg .container,
 .follow_us_container .container,
@@ -5747,15 +5737,6 @@ form.login .lost_password {
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
-.clearfix:after,
-.clearfix:before {
-  display: table;
-  content: '';
-  line-height: 0; }
-
-.clearfix:after {
-  clear: both; }
-
 .hide-text {
   color: transparent;
   border: 0;
@@ -6989,7 +6970,6 @@ form.login .lost_password {
   .cart_table_title > :first-child,
   .hide-container,
   .last_td,
-  .products_grid .clear,
   .search_text,
   .shopping_cart_wrap p,
   .size_guide {
@@ -8755,8 +8735,6 @@ div.pp_overlay {
     bottom: 115px; }
   .rows-count6 .product-grid .btn-cont {
     float: none; }
-  #products-grid > .clear {
-    clear: none; }
   .block-head,
   .widget_categories .widget-title {
     font-size: 28px !important; }

@@ -24,7 +24,6 @@ global $woocommerce;
 		<label for="password_2"><?php _e( 'Re-enter new password', 'desirees' ); ?> <span class="required">*</span></label>
 		<input type="password" class="input-text" name="password_2" id="password_2" />
 	</p>
-	<div class="clear"></div>
 
 	<p><input type="submit" class="button" name="change_password" value="<?php _e( 'Save', 'desirees' ); ?>" /></p>
 

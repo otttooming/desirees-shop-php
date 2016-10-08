@@ -57,7 +57,6 @@ if ( $order ) : ?>
 			</li>
 			<?php endif; ?>
 		</ul>
-		<div class="clear"></div>
 
 	<?php endif; ?>
 

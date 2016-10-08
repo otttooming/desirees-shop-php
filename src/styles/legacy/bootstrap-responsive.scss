@@ -10,17 +10,6 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
-.clearfix:after,
-.clearfix:before {
-  display: table;
-
-  content: '';
-
-  line-height: 0;
-}
-.clearfix:after {
-  clear: both;
-}
 .hide-text {
   color: transparent;
   border: 0;

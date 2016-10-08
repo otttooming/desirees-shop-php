@@ -32,7 +32,6 @@ if ( $products->have_posts() ) : ?>
 
     <div class="product-slider upsells columns4">
         <h4 class="slider-title"><?php _e('You may also like&hellip;', 'desirees') ?></h4>
-        <div class="clear"></div>
         <div class="carousel slider-<?php echo $rand ?>" <?php if($upsells_count < 5): ?>style="height:auto;"<?php endif; ?>>
             <div class="slider">
 			<?php while ( $products->have_posts() ) : $products->the_post(); $upsells_count++; ?>

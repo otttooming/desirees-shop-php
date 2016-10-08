@@ -35,7 +35,6 @@ $crosssells_count = 0;
 if ( $products->have_posts() ) : ?>
     <div class="product-slider cross-sells columns4">
         <h4 class="slider-title"><?php _e('You may be interested in&hellip;', 'desirees') ?></h4>
-        <div class="clear"></div>
         <div class="carousel">
             <div class="slider">
 			<?php while ( $products->have_posts() ) : $products->the_post(); $crosssells_count++; ?>
