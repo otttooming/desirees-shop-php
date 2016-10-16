@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php if ( get_the_content() ) : ?>
 
 	<div class="product__excerpt">
-	  <?php echo content(40); ?>
+	  <?php echo content(20); ?>
 	</div>
 
 	<a class="button" href="#content_tab_1" >

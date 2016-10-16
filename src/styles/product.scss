@@ -6,6 +6,7 @@
 
     border-radius: $border-radius-std;
     background: rgba($color-black, .2);
+    box-shadow: $shadow-std;
 
     flex: 1 0 310px;
   }
@@ -13,7 +14,7 @@
   &__left {
     overflow: hidden;
 
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 
     border-radius: $border-radius-std;
   }
@@ -50,13 +51,18 @@
     border-radius: $border-radius-std;
 
     flex: 1 0 290px;
+    background: $color-white;
   }
 
   &__main-image {
-    width: 100%!important;
+    display: block;
   }
 
   &__banner {
+    padding: 20px;
+    border-radius: $border-radius-std;
+    background: rgba($color-black, .2);
+    margin-bottom: 20px;
     flex: 1 0 180px;
   }
 
@@ -145,11 +151,33 @@
     align-items: center;
     justify-content: space-around;
   }
+
+  &__details-wrap {
+    padding: 20px;
+    margin-bottom: 20px;
+
+    border-radius: $border-radius-std;
+    background: rgba($color-black, .2);
+    box-shadow: $shadow-std;
+
+    > div:first-child {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__details-block {
+  }
 }
 
 .product {
   &__related {
+    padding: 20px;
+
     position: relative;
+    background: rgba($color-black, .2);
+    border-radius: $border-radius-std;
+    box-shadow: $shadow-std;
+
   }
 
   &__related-header {
@@ -158,8 +186,8 @@
 
   &__control-items {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 10px;
+    right: 10px;
   }
 }
 
@@ -168,8 +196,6 @@
     td,
     p {
       letter-spacing: 1px;
-
-      color: $color-tertiary;
     }
 
     td {
@@ -225,19 +251,14 @@
   &__variations {
     display: flex;
 
-    padding: 0 10px 0;
 
     flex-wrap: wrap;
 
     select {
       margin: 0 10px 10px 0;
 
-      flex: 1;
+      // flex: 1;
     }
-  }
-
-  &__reset-wrap {
-    padding: 0 10px;
   }
 }
 

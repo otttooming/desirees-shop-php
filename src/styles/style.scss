@@ -1,13 +1,6 @@
 @import 'variables';
 @import 'mixins';
 
-@import 'legacy/bootstrap';
-@import 'legacy/style';
-@import 'legacy/bootstrap-responsive';
-@import 'legacy/responsive';
-@import 'legacy/dark';
-@import 'legacy/large-resolution';
-
 @import 'elements';
 @import 'layout';
 @import 'conditionals';
@@ -17,6 +10,8 @@
 @import 'grid';
 
 @import 'slider';
+@import 'widgets';
+@import 'messages';
 
 @import 'products-listing';
 @import 'product';

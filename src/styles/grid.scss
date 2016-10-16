@@ -35,12 +35,16 @@
 }
 
 .woocommerce-ordering {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   margin: 0;
 
   select {
     margin: 0;
     padding: 0 15px;
 
+    height: 30px;
     color: $color-warm;
     border: 0!important;
     background: $color-grey;
@@ -115,4 +119,30 @@
   display: flex;
 
   justify-content: space-between;
+}
+
+.subcat {
+
+  &__grid {
+    display: flex;
+    margin: 0 0 20px;
+  }
+
+  &__block {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    width: 50px;
+  }
+
+  &__header {
+    display: inline-block;
+    margin: 0;
+  }
 }

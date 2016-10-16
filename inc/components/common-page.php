@@ -6,17 +6,17 @@
  */
 ?>
 
-<div class="container">
-    <div class="row cfx">
-        <?php blog_breadcrumbs(); ?>
+<div class="container container__content">
+
+    <div class="row">
 
         <?php if ($template_common_page == 'sidebar') : ?>
-          <div class="span3 sidebar_grid sidebar_left">
+          <div class="col-md-3 sidebar_grid sidebar_left">
               <?php dynamic_sidebar( 'primary-widget-area' ); ?>
           </div>
         <?php endif; ?>
 
-        <div class="<?php echo ($template_common_page == 'sidebar') ? 'span9' : 'span12'; ?> grid_content with-sidebar-top cfx">
+        <div class="<?php echo ($template_common_page == 'sidebar') ? 'col-md-9' : 'col-xs-12'; ?> center-xs grid_content with-sidebar-top cfx">
           <?php
               $post_id = $wp_query->get_queried_object_id();
               $title = get_post_field('post_title', $post_id);

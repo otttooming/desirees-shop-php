@@ -1,0 +1,29 @@
+.woocommerce-error,
+.woocommerce-message {
+  display: flex;
+  list-style: none;
+  margin: 0 0 20px;
+  background: $color-black;
+  border-radius: $border-radius-std;
+  box-shadow: $shadow-std;
+  padding: 10px 20px;
+  align-items: center;
+
+  li {
+    display: flex;
+    align-items: center;
+  }
+
+  .button {
+    margin-right: 20px;
+  }
+}
+
+.woocommerce-error {
+  background: $color-red;
+}
+
+.woocommerce-message,
+.woocommerce-success {
+  background: $color-tertiary;
+}

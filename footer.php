@@ -7,13 +7,13 @@
 
   <div class="container container__footer">
       <div class="row">
-          <div class="span3">
+          <div class="col-md-3 col-sm-4">
               <?php if ( is_active_sidebar( 'first-footer-widget-area' ) ) : ?>
                   <?php dynamic_sidebar( 'first-footer-widget-area' ); ?>
               <?php endif; ?>
           </div>
 
-          <div class="span9">
+          <div class="col-md-9 col-sm-8">
               <?php if ( is_active_sidebar( 'second-footer-widget-area' ) ) : ?>
                   <?php dynamic_sidebar( 'second-footer-widget-area' ); ?>
               <?php endif; ?>
@@ -21,13 +21,13 @@
       </div>
 
       <div class="row">
-        <div class="span6">
+        <div class="col-md-6">
             <?php if ( is_active_sidebar( 'copyrights-area' ) ) : ?>
                 <?php dynamic_sidebar( 'copyrights-area' ); ?>
             <?php endif; ?>
         </div>
 
-        <div class="span6">
+        <div class="col-md-6">
             <?php if ( is_active_sidebar( 'payments-area' ) ) : ?>
                 <?php dynamic_sidebar( 'payments-area' ); ?>
             <?php endif; ?>
@@ -37,8 +37,6 @@
 
 </div>
 <?php // END .wrapper ?>
-
-<div id="back-to-top" class="btn-style-standart"><a href="#top" id="top-link" ><span><?php _e('Back to top','desirees') ?></span></a></div>
 
 <?php
 

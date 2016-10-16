@@ -8,7 +8,6 @@ get_header(); ?>
 
     <div class="container">
         <div class="row cfx">
-              <?php blog_breadcrumbs(); ?>
 
               <div class="span3 sidebar_grid sidebar_left">
                   <?php dynamic_sidebar( 'primary-widget-area' ); ?>

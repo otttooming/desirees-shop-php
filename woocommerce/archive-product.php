@@ -38,11 +38,11 @@ get_header('shop');
 <div class="container">
     <div class="row cfx">
 
-    	<div id="products-sidebar" class="span3 sidebar_grid leftnav acc_enabled sidebar_left cfx vis-to-tablet-up">
+    	<div id="products-sidebar" class="col-lg-3 sidebar_grid leftnav acc_enabled sidebar_left cfx hidden-md-down">
           <?php dynamic_sidebar( 'product-widget-area' ); ?>
       </div>
 
-    	<div id="default_products_page_container" class="grid_content with-sidebar-left span9 with-sidebar">
+    	<div id="default_products_page_container" class="col-lg-9 grid_content with-sidebar-left with-sidebar">
 
 				<?php
 					// Prints messages and errors which are stored in the session, then clears them.

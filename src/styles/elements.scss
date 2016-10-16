@@ -1,5 +1,5 @@
 html {
-  font-size: 16px;
+  font-size: 13px;
 
   -webkit-text-size-adjust: none; // Prevent font scaling in landscape
   -webkit-text-size-adjust: 100%;
@@ -17,6 +17,7 @@ body {
   text-shadow: $shadow-text;
 
   font-family: $typeface-primary;
+  margin: 0;
 }
 
 a {
@@ -26,6 +27,7 @@ a {
 
   cursor: pointer;
   text-decoration: none;
+  color: inherit;
 }
 
 h1,
@@ -90,6 +92,8 @@ td {
 
 img {
   max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 
 ul {
@@ -99,6 +103,7 @@ ul {
 
 select {
   font-family: $typeface-primary;
+  cursor: pointer;
 }
 
 input[type=text] {
@@ -123,10 +128,11 @@ input {
   box-sizing: border-box;
   margin: 0;
   padding: 0 10px;
+  color: inherit;
 
   vertical-align: middle;
 
-  border: 1px solid $color-grey;
+  border: none;
   border-radius: 5px;
   border-radius: $border-radius-std;
   outline: none;
@@ -183,6 +189,11 @@ del {
 
 svg {
   // filter: drop-shadow($shadow-text); // BUG: Disabled - Safari WebKit will not display SVG
+}
+
+mark {
+  background: transparent;
+    color: inherit;
 }
 
 .amount {

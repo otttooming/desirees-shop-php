@@ -15,7 +15,7 @@ global $post, $woocommerce;
 
 ?>
 
-<div class="span5 product_image product__left cfx">
+<div class="col-xs-12 col-md-5 product_image product__left">
 
     <div class="main-image product__main-image-wrap">
         <?php // etheme_wc_product_labels(); ?>
