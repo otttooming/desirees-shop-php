@@ -5,7 +5,7 @@
  */
 ?>
 
-  <div class="container container__footer">
+  <footer class="container container__footer">
       <div class="row">
           <div class="col-md-3 col-sm-4">
               <?php if ( is_active_sidebar( 'first-footer-widget-area' ) ) : ?>
@@ -33,7 +33,7 @@
             <?php endif; ?>
         </div>
       </div>
-  </div>
+  </footer>
 
 </div>
 <?php // END .wrapper ?>
