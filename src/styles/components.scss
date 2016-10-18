@@ -10,14 +10,17 @@
     padding: 5px;
 
     cursor: pointer;
-    transition: color $transition-normal;
+    transition: color $transition-normal, transform $transition-normal;
 
     border-radius: $border-radius-std;
     background: $color-black;
     box-shadow: $shadow-std;
   }
 
-  &__up,
+  &__up {
+    transform: rotate(-90deg);
+  }
+
   &__down {
     transform: rotate(90deg);
   }

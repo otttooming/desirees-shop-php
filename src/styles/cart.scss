@@ -1,7 +1,5 @@
 .cart {
   &__collaterals {
-    margin: 60px 0 40px;
-
     h2 {
       margin: 10px;
     }
@@ -55,6 +53,8 @@
   &_totals {
     border-radius: 3px;
     box-shadow: $shadow-std;
+    background: rgba($color-black, .5);
+    padding: 20px;
 
     tr {
       &:nth-child(2) {
@@ -106,19 +106,6 @@
   }
 }
 
-.checkout-default .tab-content h3 {
-  text-transform: uppercase;
-
-  color: $color-grey;
-
-  font-size: 20px;
-  font-weight: 400;
-
-  label {
-    font-size: inherit;
-  }
-}
-
 .checkout_cart {
   .product-total {
     text-align: right;
@@ -134,13 +121,14 @@
 #shipping_method {
   li {
     display: flex;
-
-    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin: 5px 0;
 
     label {
       display: flex;
 
       align-items: center;
+      margin-right: 20px;
     }
   }
 
@@ -151,8 +139,6 @@
 
 .coupon {
   margin: 0 0 20px;
-
-  text-align: left;
 }
 
 .wc_payment_method {

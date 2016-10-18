@@ -67,6 +67,7 @@ p {
 
 table {
   width: 100%;
+  border-collapse: collapse;
 }
 
 tr {
@@ -88,6 +89,16 @@ td {
   @media (max-width: 767px) {
     padding: 5px;
   }
+}
+
+dl {
+  margin: 0;
+}
+
+dt,
+dd {
+  display: inline-block;
+  margin: 0;
 }
 
 img {

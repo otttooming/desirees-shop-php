@@ -87,6 +87,25 @@ Desirees.nav = {
 		} else {
 			document.body.classList.add('menu-mobile_open');
 		}
+	},
+
+	subCatToggle: function() {
+		var catGroup = event.target.closest('.cat-list__group'),
+				catGroupControl = catGroup.querySelector('svg');
+
+		if (catGroupControl.classList.contains('control__down')) {
+			catGroupControl.classList.remove('control__down');
+			catGroupControl.classList.add('control__up')
+		} else {
+			catGroupControl.classList.remove('control__up');
+			catGroupControl.classList.add('control__down')
+		}
+
+		if (catGroup.classList.contains('cat-list__group-open')) {
+			catGroup.classList.remove('cat-list__group-open');
+		} else {
+			catGroup.classList.add('cat-list__group-open');
+		}
 	}
 };
 
@@ -94,4 +113,10 @@ var mobileMenuToggleBtns = document.querySelectorAll('.menu-mobile__toggle');
 
 for (var i = 0; i < mobileMenuToggleBtns.length; i++) {
 	mobileMenuToggleBtns[i].addEventListener('click', Desirees.nav.mobileMenuOpen, false);
+}
+
+var subCatToggleBtns = document.querySelectorAll('.cat-list__subcat-control');
+
+for (var i = 0; i < subCatToggleBtns.length; i++) {
+	subCatToggleBtns[i].addEventListener('click', Desirees.nav.subCatToggle, false);
 }
