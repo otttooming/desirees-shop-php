@@ -1,8 +1,8 @@
 html {
   font-size: 13px;
 
-  -webkit-text-size-adjust: none; // Prevent font scaling in landscape
   -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: none; // Prevent font scaling in landscape
       -ms-text-size-adjust: 100%;
 
   @media screen and (max-width: 767px) {
@@ -13,11 +13,12 @@ html {
 body {
   overflow-x: hidden;
 
+  margin: 0;
+
   background-image: radial-gradient(circle at 50%, rgba(17, 52, 181, .9) 40%, rgba(234, 0, 64, .9) 100%);
   text-shadow: $shadow-text;
 
   font-family: $typeface-primary;
-  margin: 0;
 }
 
 a {
@@ -27,6 +28,7 @@ a {
 
   cursor: pointer;
   text-decoration: none;
+
   color: inherit;
 }
 
@@ -67,6 +69,7 @@ p {
 
 table {
   width: 100%;
+
   border-collapse: collapse;
 }
 
@@ -98,12 +101,13 @@ dl {
 dt,
 dd {
   display: inline-block;
+
   margin: 0;
 }
 
 img {
-  max-width: 100%;
   width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -113,8 +117,9 @@ ul {
 }
 
 select {
-  font-family: $typeface-primary;
   cursor: pointer;
+
+  font-family: $typeface-primary;
 }
 
 input[type=text] {
@@ -139,10 +144,10 @@ input {
   box-sizing: border-box;
   margin: 0;
   padding: 0 10px;
-  color: inherit;
 
   vertical-align: middle;
 
+  color: inherit;
   border: none;
   border-radius: 5px;
   border-radius: $border-radius-std;
@@ -203,8 +208,8 @@ svg {
 }
 
 mark {
+  color: inherit;
   background: transparent;
-    color: inherit;
 }
 
 .amount {

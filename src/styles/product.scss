@@ -49,9 +49,9 @@
     overflow: hidden;
 
     border-radius: $border-radius-std;
+    background: $color-white;
 
     flex: 1 0 290px;
-    background: $color-white;
   }
 
   &__main-image {
@@ -59,10 +59,12 @@
   }
 
   &__banner {
+    margin-bottom: 20px;
     padding: 20px;
+
     border-radius: $border-radius-std;
     background: rgba($color-black, .2);
-    margin-bottom: 20px;
+
     flex: 1 0 180px;
   }
 
@@ -153,8 +155,8 @@
   }
 
   &__details-wrap {
-    padding: 20px;
     margin-bottom: 20px;
+    padding: 20px;
 
     border-radius: $border-radius-std;
     background: rgba($color-black, .2);
@@ -164,20 +166,17 @@
       margin-bottom: 20px;
     }
   }
-
-  &__details-block {
-  }
 }
 
 .product {
   &__related {
+    position: relative;
+
     padding: 20px;
 
-    position: relative;
-    background: rgba($color-black, .2);
     border-radius: $border-radius-std;
+    background: rgba($color-black, .2);
     box-shadow: $shadow-std;
-
   }
 
   &__related-header {
@@ -250,7 +249,6 @@
 .product-cart {
   &__variations {
     display: flex;
-
 
     flex-wrap: wrap;
 

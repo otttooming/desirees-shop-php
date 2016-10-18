@@ -1,29 +1,38 @@
 .cat-list {
-
   &__title {
     position: relative;
-    height: 35px;
+
     display: flex;
-    align-items: center;
+
+    height: 35px;
     margin: 0 0 5px;
+
     font-size: 14px;
+
+    align-items: center;
   }
 
   &__count {
-    font-size: .7em;
-    /* height: 35px; */
-    display: inline-block;
-    background: rgba(0,0,0,.5);
-    padding: 2px 11px;
-    border-radius: 3px;
     position: absolute;
-    right: 35px;
     top: 50%;
+    right: 35px;
+    /* height: 35px; */
+
+    display: inline-block;
+
+    padding: 2px 11px;
+
     transform: translateY(-50%);
+
+    border-radius: 3px;
+    background: rgba(0,0,0,.5);
+
+    font-size: .7em;
   }
 
   &__subcat {
     display: none;
+
     list-style: none;
 
     .cat-list__group-open & {

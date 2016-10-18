@@ -51,10 +51,11 @@
   }
 
   &_totals {
-    border-radius: 3px;
-    box-shadow: $shadow-std;
-    background: rgba($color-black, .5);
     padding: 20px;
+
+    border-radius: 3px;
+    background: rgba($color-black, .5);
+    box-shadow: $shadow-std;
 
     tr {
       &:nth-child(2) {
@@ -122,13 +123,15 @@
   li {
     display: flex;
     flex-direction: row-reverse;
+
     margin: 5px 0;
 
     label {
       display: flex;
 
-      align-items: center;
       margin-right: 20px;
+
+      align-items: center;
     }
   }
 
