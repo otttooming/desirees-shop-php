@@ -3,16 +3,21 @@ $typeface-secondary: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 $font-size-normal: 16px;
 
 // Colors
-$color-warm: #ff9500;
+// $color-warm: #ff9500;
+$color-warm: #ffc000;
 // $color-red: #ff0513; // Official designated color-red
 $color-red: #a30000; // Alternative dark color-red
 // $color-red: #821196;
 $color-tertiary: #00b31a;
-$color-black: #151515;
-$color-charcoal: #222;
+$color-black: #340644;
+$color-charcoal: #340644;
+
+// $color-black: #151515;
+// $color-charcoal: #222;
 // $color-charcoal: #261c2f;
 // $color-grey: #333;
-$color-grey: rgba(51, 51, 51, .5);
+$color-grey: rgba(#340644, .5);
+// $color-grey: rgba(51, 51, 51, .5);
 $color-white: #fff;
 $color-blue: #11aff1;
 // $color-blue: #0c68af;

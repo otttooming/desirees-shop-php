@@ -90,6 +90,8 @@
 
 .product-loop {
   &__images-wrap {
+    position: relative;
+
     display: flex;
     overflow: hidden;
 
@@ -99,6 +101,51 @@
 
     align-items: center;
     justify-content: center;
+  }
+
+
+  &__price-block {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+
+    padding: 5px 10px;
+
+    text-align: center;
+
+    color: $color-white !important;
+    border-radius: 3px;
+    background-color: $color-red;
+    box-shadow: $shadow-std;
+
+    font-size: 13px !important;
+    line-height: normal;
+
+    flex: 1;
+
+    del,
+    ins {
+      display: block;
+    }
+
+    .amount {
+      padding: 0;
+
+      color: $color-white !important;
+      box-shadow: none;
+
+      font-size: 12px;
+    }
+
+    &-big {
+      .amount {
+        @include rem(font-size, 20px);
+      }
+    }
+
+    + .button {
+      margin: 0 0 0 5px;
+    }
   }
 
   &__images {
