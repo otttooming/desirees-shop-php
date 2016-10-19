@@ -205,3 +205,7 @@ function remove_menus(){
 
 }
 add_action( 'admin_menu', 'remove_menus' );
+
+
+remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
+add_action( 'desirees_after_product_loop_images_wrap', 'woocommerce_template_loop_price', 11 );

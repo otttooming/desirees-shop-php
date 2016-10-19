@@ -47,6 +47,8 @@ $woocommerce_loop['loop']++;
 									<img class="product-loop__img lazyload" data-src="<?php echo woocommerce_placeholder_img_src(); ?>" alt="<?php the_title(); ?>">
 							<?php endif; ?>
 					</div>
+
+					<?php do_action( 'desirees_after_product_loop_images_wrap' ); ?>
       </a>
 
       <div class="product-information product__info-block">
