@@ -395,8 +395,8 @@ button.swiper-pagination-bullet {
 
 html {
   font-size: 13px;
-  -webkit-text-size-adjust: none;
   -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: none;
   -ms-text-size-adjust: 100%; }
   @media screen and (max-width: 767px) {
     html {
@@ -1924,8 +1924,8 @@ mark {
     font-size: 14px; }
   .button.big {
     padding: 20px;
-    font-size: 1rem;
-    padding: 1.25rem; }
+    padding: 1.25rem;
+    font-size: 1rem; }
   .button__icon {
     width: 1em;
     height: 1em;
@@ -1996,11 +1996,25 @@ mark {
   display: -ms-flexbox;
   display: flex;
   height: 35px;
-  margin: 0 0 5px;
+  margin: 0 0 5px 20px;
   color: #ffc000;
   font-size: 14px;
   -ms-flex-align: center;
       align-items: center; }
+
+.cat-list__desc {
+  display: block;
+  text-transform: none;
+  color: #fff;
+  font-size: 11px; }
+
+.cat-list__thumb {
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  width: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); }
 
 .cat-list__count {
   position: absolute;

@@ -5,13 +5,33 @@
     display: flex;
 
     height: 35px;
-    margin: 0 0 5px;
+    margin: 0 0 5px 20px;
 
     color: $color-warm;
 
     font-size: 14px;
 
     align-items: center;
+  }
+
+  &__desc {
+    display: block;
+
+    text-transform: none;
+
+    color: $color-white;
+
+    font-size: 11px;
+  }
+
+  &__thumb {
+    position: absolute;
+    top: 50%;
+    left: -30px;
+
+    width: 20px;
+
+    transform: translateY(-50%);
   }
 
   &__count {

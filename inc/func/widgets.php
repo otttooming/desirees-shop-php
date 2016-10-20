@@ -149,32 +149,41 @@ function desirees_get_wc_categories_menu($title = 'Categories'){
 										$term_id = $categories->term_id;
 										$term_name = $categories->name;
 										$term_count = $categories->count;
+										$term_desc = $categories->description;
+										$thumbnail_id = get_woocommerce_term_meta( $term_id, 'thumbnail_id', true );
 										?>
 										<div class='cat-list__group <?php if($term_id == $current_cat) echo 'current-parent cat-list__group-open' ; ?>'>
+											<?php
+												$subcat_args = array(
+													'taxonomy' => 'product_cat',
+													'title_li' => '',
+													'show_count' => 1,
+													'hide_empty' => 0,
+													'echo' => false,
+													'show_option_none' => '',
+													'child_of' => $term_id
+												);
+											?>
+
+											<?php if(get_option('show_category_count') == 1) $subcat_args['show_count'] = 1; ?>
+											<?php $subcategories = wp_list_categories( $subcat_args ); ?>
+
 												<h2 class='cat-list__title'>
 													<a href="<?php echo get_term_link( $categories, 'product_cat' ); ?>">
-														<?php echo $term_name; ?>
+														<span class="cat-list__name"><?php echo $term_name; ?></span>
+														<span class="cat-list__desc"><?php _e($term_desc); ?></span>
 														<span class="cat-list__count"><?php echo $term_count; ?></span>
+														<img class="cat-list__thumb" src="<?php echo wp_get_attachment_url( $thumbnail_id ); ?>" alt="" />
 													</a>
+													<?php if ( $subcategories ) : ?>
+
 													<div class="cat-list__subcat-control control__items">
 															<svg class="<?php if($term_id == $current_cat) { echo 'control__up'; } else { echo 'control__down'; } ; ?>" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 501.5 501.5"><g><path fill="currentColor" d="M199.33 410.622l-55.77-55.508L247.425 250.75 143.56 146.384l55.77-55.507L358.44 250.75z"></path></g></svg>
 													</div>
+
+												<?php endif; ?>
+
 												</h2>
-
-												<?php
-													$subcat_args = array(
-														'taxonomy' => 'product_cat',
-														'title_li' => '',
-														'show_count' => 1,
-														'hide_empty' => 0,
-														'echo' => false,
-														'show_option_none' => '',
-														'child_of' => $term_id
-													);
-												?>
-
-												<?php if(get_option('show_category_count') == 1) $subcat_args['show_count'] = 1; ?>
-												<?php $subcategories = wp_list_categories( $subcat_args ); ?>
 
 												<?php if ( $subcategories ) : ?>
 													<ul class='cat-list__subcat'>
