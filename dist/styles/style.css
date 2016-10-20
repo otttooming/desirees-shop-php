@@ -1854,6 +1854,14 @@ mark {
     box-shadow: none;
     font-size: 17px; }
 
+.product-sale {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color: #a30000; }
+
 .control__items {
   -webkit-user-select: none;
      -moz-user-select: none;
