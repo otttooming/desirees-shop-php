@@ -509,7 +509,7 @@ input {
   border-radius: 3px;
   outline: none;
   background: rgba(52, 6, 68, 0.5);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
+  box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4);
   text-shadow: 2px 2px 5px #340644;
   font-size: 12px;
   line-height: 30px;
@@ -518,7 +518,7 @@ input {
 textarea {
   border: 0;
   border-radius: 3px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
+  box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4);
   text-shadow: 2px 2px 5px #340644; }
 
 hr {
@@ -544,7 +544,7 @@ del {
             transform: translate3d(-50%, 0, 0);
     border-top: 3px solid #340644;
     border-radius: 3px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
+    box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4); }
 
 mark {
   color: inherit;
@@ -556,7 +556,7 @@ mark {
   color: #fff;
   border-radius: 5px;
   background-color: #a30000;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
+  box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4);
   font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
   line-height: normal; }
   .product__price-block .amount {
@@ -1268,7 +1268,7 @@ mark {
   padding-top: 20px;
   padding-bottom: 20px;
   background: rgba(52, 6, 68, 0.5);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
+  box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4); }
 
 .is-disabled {
   display: none; }
@@ -1384,7 +1384,7 @@ mark {
   .main-nav-top-right li:last-child {
     border-radius: 3px;
     background: rgba(52, 6, 68, 0.5);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
+    box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4); }
 
 .grid__slider {
   overflow: hidden;
@@ -1392,7 +1392,7 @@ mark {
   text-align: center;
   border-radius: 3px;
   background: rgba(52, 6, 68, 0.5);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
+  box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4); }
   .grid__slider .textwidget {
     display: -ms-flexbox;
     display: flex;
@@ -1412,7 +1412,7 @@ mark {
   white-space: nowrap;
   border-radius: 3px;
   background-color: #151515;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
+  box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4);
   line-height: 45px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -1482,7 +1482,7 @@ mark {
   color: #fff !important;
   border-radius: 3px;
   background-color: #a30000;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
+  box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4);
   font-size: 13px !important;
   line-height: normal;
   -ms-flex: 1;
@@ -1565,7 +1565,7 @@ mark {
   list-style: none;
   border-radius: 3px;
   background: #340644;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
+  box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4);
   -ms-flex-align: center;
       align-items: center; }
   .woocommerce-error li,
@@ -1596,7 +1596,7 @@ mark {
     margin: 0 1px 20px;
     border-radius: 3px;
     background: rgba(51, 51, 51, 0.5);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
+    box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4);
     -ms-flex: 1 0 180px;
         flex: 1 0 180px; }
     .products-listing__item:hover .products-listing__item-desc {
@@ -1642,7 +1642,7 @@ mark {
   padding: 20px;
   border-radius: 3px;
   background: rgba(52, 6, 68, 0.2);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
+  box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4);
   -ms-flex: 1 0 310px;
       flex: 1 0 310px; }
 
@@ -1719,7 +1719,7 @@ mark {
   color: #fff !important;
   border-radius: 3px;
   background-color: #a30000;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
+  box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4);
   font-size: 13px !important;
   line-height: normal;
   -ms-flex: 1;
@@ -1756,7 +1756,7 @@ mark {
   padding: 20px;
   border-radius: 3px;
   background: rgba(52, 6, 68, 0.2);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
+  box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4); }
   .product__details-wrap > div:first-child {
     margin-bottom: 20px; }
 
@@ -1765,7 +1765,7 @@ mark {
   padding: 20px;
   border-radius: 3px;
   background: rgba(52, 6, 68, 0.2);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
+  box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4); }
 
 .product__related-header {
   margin-right: 100px; }
@@ -1842,7 +1842,7 @@ mark {
   padding: 0 10px;
   border-radius: 3px;
   background: rgba(52, 6, 68, 0.5);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
+  box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4);
   -ms-flex-align: center;
       align-items: center;
   -ms-flex-pack: center;
@@ -1881,7 +1881,7 @@ mark {
   transition: color 500ms, transform 500ms, -webkit-transform 500ms;
   border-radius: 3px;
   background: #340644;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
+  box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4); }
 
 .control__up {
   -webkit-transform: rotate(-90deg);
@@ -1934,7 +1934,7 @@ mark {
   color: #fff;
   border: none;
   border-radius: 3px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
+  box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4);
   text-shadow: 2px 2px 5px #340644;
   font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
   font-size: 11px;
@@ -1979,7 +1979,8 @@ mark {
           transform: translateX(-50%);
   border-radius: 3px;
   background: #340644;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
+  box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4);
+  z-index: 1; }
   .sub-menu .menu-item {
     padding: 10px 20px; }
 
@@ -1994,7 +1995,7 @@ mark {
   color: #fff;
   border-radius: 3px;
   background-color: #a30000;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
+  box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4); }
 
 .bc {
   overflow: hidden;
@@ -2013,14 +2014,14 @@ mark {
 .qtranxs-lang-menu {
   border-radius: 3px;
   background: rgba(52, 6, 68, 0.5);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
+  box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4); }
 
 .cat-list__title {
   position: relative;
   display: -ms-flexbox;
   display: flex;
   height: 35px;
-  margin: 0 0 5px 20px;
+  margin: 0 0 10px 20px;
   padding: 0 70px 0 0;
   color: #ffc000;
   font-size: 14px;
@@ -2071,7 +2072,9 @@ mark {
 .cat-list__subcat-control {
   position: absolute;
   top: 0;
-  right: 0; }
+  right: -10px; }
+  .cat-list__subcat-control svg {
+    border-radius: 50%; }
 
 .menu-mobile {
   position: fixed;
@@ -2129,7 +2132,7 @@ mark {
   height: 40px;
   margin: 0;
   padding: 0 15px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
+  box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4);
   line-height: 40px; }
 
 .search__field {
@@ -2185,7 +2188,7 @@ mark {
   padding: 20px;
   border-radius: 3px;
   background: rgba(52, 6, 68, 0.5);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
+  box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4); }
   .cart_totals tr:nth-child(2) {
     background: rgba(52, 6, 68, 0.2); }
 
@@ -2203,7 +2206,7 @@ mark {
     padding: 20px;
     border-radius: 3px;
     background-color: rgba(52, 6, 68, 0.5);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
+    box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4); }
 
 .cart-checkout__place-order-button {
   float: right; }
@@ -2260,14 +2263,15 @@ mark {
 #payment div.payment_box {
   border-radius: 3px;
   background: rgba(52, 6, 68, 0.5);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
+  box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4); }
 
 .sidebar_grid > .widget-container {
   box-sizing: border-box;
   padding: 20px;
+  margin: 0 0 20px;
   border-radius: 3px;
   background-color: #340644;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
+  box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4); }
 
 .form-login {
   display: -ms-flexbox;
@@ -2280,7 +2284,7 @@ mark {
     box-sizing: border-box;
     padding: 20px;
     background: rgba(52, 6, 68, 0.5);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
+    box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4); }
 
 .pagination {
   margin-top: 20px;
@@ -2308,7 +2312,7 @@ mark {
     text-align: center;
     border-radius: 3px;
     background: rgba(52, 6, 68, 0.5);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
+    box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4);
     line-height: 42px; }
     .pagination span.page-numbers.current,
     .pagination a.page-numbers.current {
@@ -2995,7 +2999,7 @@ a.pswp__share--download:hover {
     color: #fff;
     border-radius: 3px;
     background-color: #a30000;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
+    box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4);
     font-size: 13px;
     line-height: 1.25rem; }
   [data-wenk]:after {
