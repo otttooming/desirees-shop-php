@@ -26,7 +26,7 @@
     </div>
 
 		<div class="row header">
-			<div class="col-sm-3 header__logo">
+			<div class="col-xs-12 col-sm-3 header__logo">
         <?php require get_template_directory() . '/inc/components/logo.php'; ?>
 			</div>
 

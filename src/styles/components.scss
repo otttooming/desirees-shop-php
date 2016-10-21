@@ -42,3 +42,17 @@
 
   opacity: 1;
 }
+
+.img-padding-ratio__wrap {
+  position: relative;
+  width: 100%;
+
+  a,
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}

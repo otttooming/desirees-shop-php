@@ -209,3 +209,28 @@ add_action( 'admin_menu', 'remove_menus' );
 
 remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
 add_action( 'desirees_after_product_loop_images_wrap', 'woocommerce_template_loop_price', 11 );
+
+
+function wc_authenticate_alter(){
+    //return wp_get_current_user();
+    if( 'GET' ==  WC()->api->server->method ){
+        return new WP_User( 1 );
+    } else {
+        throw new Exception( __( 'You dont have permission', 'woocommerce' ), 401 );
+    }
+}
+
+add_filter( 'woocommerce_api_check_authentication', 'wc_authenticate_alter', 1 );
+
+add_theme_support( 'custom-logo' );
+
+function theme_prefix_setup() {
+
+	add_theme_support( 'custom-logo', array(
+		'height'      => 160,
+		'width'       => 430,
+		'flex-width' => true,
+	) );
+
+}
+add_action( 'after_setup_theme', 'theme_prefix_setup' );

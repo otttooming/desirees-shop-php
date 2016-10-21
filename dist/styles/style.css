@@ -1335,13 +1335,10 @@ mark {
   .header__logo {
     display: -ms-flexbox;
     display: flex;
-    height: 80px;
     -ms-flex-align: center;
         align-items: center;
     -ms-flex-pack: center;
         justify-content: center; }
-  .header__logo-img {
-    max-height: 80px; }
   .header__cart {
     display: -ms-flexbox;
     display: flex;
@@ -1396,6 +1393,13 @@ mark {
   border-radius: 3px;
   background: rgba(52, 6, 68, 0.5);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
+  .grid__slider .textwidget {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
 
 .grid__cat-banner {
   max-height: 290px; }
@@ -1692,7 +1696,8 @@ mark {
 .product__gallery-slider {
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
-  background: #fff; }
+  background: #fff;
+  height: 80px; }
 
 .product .swiper-wrapper {
   -ms-flex-align: center;
@@ -1897,6 +1902,17 @@ mark {
 .lazyloaded {
   transition: opacity 300ms;
   opacity: 1; }
+
+.img-padding-ratio__wrap {
+  position: relative;
+  width: 100%; }
+  .img-padding-ratio__wrap a,
+  .img-padding-ratio__wrap img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
 
 .button {
   display: inline-block;
