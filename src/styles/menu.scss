@@ -29,6 +29,7 @@
 }
 .sub-menu {
   position: absolute;
+  z-index: 1;
   left: 50%;
 
   display: none;
@@ -40,7 +41,6 @@
   border-radius: $border-radius-std;
   background: $color-black;
   box-shadow: $shadow-std;
-  z-index: 1;
 
   .menu-item {
     padding: 10px 20px;
