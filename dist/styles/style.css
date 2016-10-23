@@ -1089,7 +1089,8 @@ mark {
 
 @media only screen and (min-width: 992px) {
   .container {
-    width: 992px; }
+    width: 90%;
+    max-width: 1200px; }
   .col-lg,
   .col-lg-1,
   .col-lg-2,
@@ -1599,7 +1600,8 @@ mark {
     background: rgba(51, 51, 51, 0.5);
     box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4);
     -ms-flex: 1 0 180px;
-        flex: 1 0 180px; }
+        flex: 1 0 180px;
+    width: 180px; }
     .products-listing__item:hover .products-listing__item-desc {
       position: absolute;
       top: 0;

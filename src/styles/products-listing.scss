@@ -15,6 +15,7 @@
     box-shadow: $shadow-std;
 
     flex: 1 0 180px;
+    width: 180px;
 
     &:hover {
       .products-listing__item-desc {
