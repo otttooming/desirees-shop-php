@@ -16,7 +16,14 @@ function filter_wc_price( $price, $args = array() ) {
 		'decimals'           => wc_get_price_decimals(),
 		'price_format'       => get_woocommerce_price_format(),
 	) ) ) );
+
+  $price = filter_var( $price, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION );
+
+	$symbols = array('$', '€', '£', '-');
+
+	$price = str_replace($symbols, '', $price);
 	$negative        = $price < 0;
+
 	$price           = apply_filters( 'raw_woocommerce_price', floatval( $negative ? $price * -1 : $price ) );
 	$price           = apply_filters( 'formatted_woocommerce_price', number_format( $price, $decimals, $decimal_separator, $thousand_separator ), $price, $decimals, $decimal_separator, $thousand_separator );
 	if ( apply_filters( 'woocommerce_price_trim_zeros', false ) && $decimals > 0 ) {
