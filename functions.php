@@ -40,6 +40,11 @@ require get_template_directory() . '/inc/func/shortcodes.php';
 */
 require get_template_directory() . '/inc/func/breadcrumbs.php';
 
+/**
+* Price
+*/
+require get_template_directory() . '/inc/func/price.php';
+
 function content($limit) {
   $content = explode(' ', get_the_content(), $limit);
   if (count($content)>=$limit) {
