@@ -45,13 +45,11 @@ gulp.task('styles', function() {
 
 // Scripts
 gulp.task('scripts', function() {
-  return gulp.src(['bower_components/jquery/dist/jquery.js',
-                   'bower_components/photoswipe/dist/photoswipe.min.js',
+  return gulp.src(['bower_components/photoswipe/dist/photoswipe.min.js',
                    'bower_components/photoswipe/dist/photoswipe-ui-default.min.js',
                    'bower_components/swiper/dist/js/swiper.min.js',
                    'bower_components/lazysizes/lazysizes.min.js',
                    'bower_components/js-cookie/src/js.cookie.js',
-                   'src/scripts/legacy/*.js',
                    'src/scripts/*.js' ],
                    {base: './'})
     .pipe(concat('script.js'))
