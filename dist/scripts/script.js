@@ -179,11 +179,6 @@ b.params.hashnav&&b.hashnav&&b.hashnav.init(),b.params.a11y&&b.a11y&&b.a11y.init
 	return init(function () {});
 }));
 
-$(document).ready(function() {
-	listSwitcher();
-	check_view_mod();
-});
-
 var productRelatedSlider = new Swiper('.product__related-slider', {
 	// Optional parameters
 	direction: 'horizontal',
@@ -220,7 +215,7 @@ var productRelatedSlider = new Swiper('.product__related-slider', {
 
 var productGallerySlider = new Swiper('.product__gallery-slider', {
 	direction: 'horizontal',
-	slidesPerView: '5',
+	slidesPerView: '10',
 
 	// Navigation arrows
 	nextButton: '.product__gallery-control .control__next',
