@@ -159,7 +159,7 @@
     background-color: $color-red;
     box-shadow: $shadow-std;
 
-    font-size: 13px !important;
+    font-size: 13px;
     line-height: normal;
 
     flex: 1;
@@ -176,9 +176,7 @@
     }
 
     &-big {
-      .amount {
-        @include rem(font-size, 20px);
-      }
+      @include rem(font-size, 24px);
     }
 
     + .button {

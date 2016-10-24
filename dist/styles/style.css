@@ -1770,7 +1770,7 @@ mark {
   border-radius: 3px;
   background-color: #a30000;
   box-shadow: 0 25px 100px rgba(0, 0, 0, 0.4);
-  font-size: 13px !important;
+  font-size: 13px;
   line-height: normal;
   -ms-flex: 1;
       flex: 1; }
@@ -1780,8 +1780,8 @@ mark {
   .product__price-block .amount {
     color: #fff !important;
     font-size: 12px; }
-  .product__price-block-big .amount {
-    font-size: 1.25rem; }
+  .product__price-block-big {
+    font-size: 1.5rem; }
   .product__price-block + .button {
     margin: 0 0 0 5px; }
 
@@ -2005,7 +2005,7 @@ mark {
     font-size: 14px; }
   .button.big {
     padding: 20px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     padding: 1.25rem; }
   .button__icon {
     width: 1em;
