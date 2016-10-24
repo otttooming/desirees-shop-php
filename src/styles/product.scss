@@ -86,8 +86,6 @@
   &__main-image-wrap {
     overflow: hidden;
 
-    max-height: 80%;
-
     border-radius: $border-radius-std;
     background: $color-white;
 
@@ -119,13 +117,14 @@
   }
 
   &__gallery {
-    height: 20%;
     width: 100%;
+    height: 90px;
     // margin: 10px 0;
   }
 
   &__gallery-control {
     margin: 20px 0 0;
+    display: none;
   }
 
   &__gallery-slider {

@@ -1546,6 +1546,9 @@ mark {
 
 .product__related-slider {
   padding: 0 0 40px; }
+  .product__related-slider .swiper-slide {
+    display: -ms-flexbox;
+    display: flex; }
 
 .product-grid {
   width: 100%;
@@ -1710,7 +1713,6 @@ mark {
 
 .product__main-image-wrap {
   overflow: hidden;
-  max-height: 80%;
   border-radius: 3px;
   background: #fff;
   -ms-flex: 1 0 290px;
@@ -1735,11 +1737,12 @@ mark {
       flex: 1 0 180px; }
 
 .product__gallery {
-  height: 20%;
-  width: 100%; }
+  width: 100%;
+  height: 90px; }
 
 .product__gallery-control {
-  margin: 20px 0 0; }
+  margin: 20px 0 0;
+  display: none; }
 
 .product__gallery-slider {
   border-bottom-right-radius: 3px;
