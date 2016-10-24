@@ -33,6 +33,8 @@ if ( ! empty( $tabs ) ) : ?>
                     </div>
                   </div>
                 <?php endforeach; ?>
+
+                <?php do_action('desirees_after_product_details_wrap'); ?>
             </div>
     	  </div>
     </div>

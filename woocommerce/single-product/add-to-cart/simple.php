@@ -48,5 +48,4 @@ if ( ! $product->is_purchasable() ) {
 
 	</div>
 
-	<hr>
 <?php endif; ?>

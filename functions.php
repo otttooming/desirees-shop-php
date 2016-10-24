@@ -239,3 +239,7 @@ function theme_prefix_setup() {
 
 }
 add_action( 'after_setup_theme', 'theme_prefix_setup' );
+
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
+
+add_action( 'desirees_after_product_details_wrap', 'woocommerce_template_single_meta', 11 );
