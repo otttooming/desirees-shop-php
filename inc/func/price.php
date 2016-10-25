@@ -7,7 +7,7 @@
  * @param array $args (default: array())
  * @return string
  */
-function filter_wc_price( $price, $args = array() ) {
+function filter_wc_price( $args, $price ) {
 	extract( apply_filters( 'wc_price_args', wp_parse_args( $args, array(
 		'ex_tax_label'       => false,
 		'currency'           => '',
@@ -17,11 +17,6 @@ function filter_wc_price( $price, $args = array() ) {
 		'price_format'       => get_woocommerce_price_format(),
 	) ) ) );
 
-  $price = filter_var( $price, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION );
-
-	$symbols = array('$', '€', '£', '-');
-
-	$price = str_replace($symbols, '', $price);
 	$negative        = $price < 0;
 
 	$price           = apply_filters( 'raw_woocommerce_price', floatval( $negative ? $price * -1 : $price ) );
@@ -37,4 +32,4 @@ function filter_wc_price( $price, $args = array() ) {
   return $return;
 };
 
-add_filter( 'wc_price', 'filter_wc_price', 10, 3 );
+add_filter( 'wc_price', 'filter_wc_price', 10, 3);
