@@ -19,14 +19,9 @@
     margin-bottom: 20px;
 
     border-radius: $border-radius-std;
-
-    @media screen and (max-width: 768px) {
-      height: 50vh;
-    }
   }
 
   &__left-wrap {
-    position: absolute;
     z-index: 1;
     top: 0;
     right: 10px;
@@ -34,14 +29,17 @@
     left: 10px;
 
     display: flex;
+    display: flex;
     overflow: hidden;
+    flex-direction: column;
 
     border-radius: 5px;
     /* min-height: 500px; */
     background: #fff;
 
-    align-items: center;
-    flex-direction: column;
+    @media screen and (min-width: 768px) {
+      position: absolute;
+    }
   }
 
   &__title {
@@ -104,6 +102,12 @@
     display: block;
 
     max-height: 100%;
+
+    img {
+      top: 50%!important;
+
+      transform: translateY(-50%);
+    }
   }
 
   &__banner {
@@ -123,8 +127,9 @@
   }
 
   &__gallery-control {
-    margin: 20px 0 0;
     display: none;
+
+    margin: 20px 0 0;
   }
 
   &__gallery-slider {
@@ -150,8 +155,6 @@
   }
 
   &__price-block {
-    padding: 5px 10px;
-
     text-align: center;
 
     color: $color-white !important;
@@ -163,6 +166,7 @@
     line-height: normal;
 
     flex: 1;
+    @include rem(padding, 20px);
 
     del,
     ins {
@@ -261,6 +265,8 @@
   display: flex;
 
   width: 100%;
+  width: calc(100% + 20px);
+  margin: 0 -10px;
 
   flex-wrap: wrap;
   justify-content: space-between;
@@ -280,6 +286,8 @@
   }
 
   .button {
+    margin: 0 10px;
+
     flex: 1 0 150px;
   }
 

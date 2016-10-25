@@ -8,6 +8,7 @@
   &__item {
     position: relative;
 
+    width: 180px;
     margin: 0 1px 20px;
 
     border-radius: $border-radius-std;
@@ -15,7 +16,6 @@
     box-shadow: $shadow-std;
 
     flex: 1 0 180px;
-    width: 180px;
 
     &:hover {
       .products-listing__item-desc {

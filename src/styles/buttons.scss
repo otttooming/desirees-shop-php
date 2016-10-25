@@ -42,8 +42,8 @@
   &.big {
     padding: 20px;
 
-    @include rem(font-size, 24px);
     @include rem(padding, 20px);
+    @include rem(font-size, 24px);
   }
 
   &__icon {
