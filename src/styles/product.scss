@@ -166,7 +166,7 @@
     line-height: normal;
 
     flex: 1;
-    @include rem(padding, 20px);
+    @include rem(padding, 16px);
 
     del,
     ins {
@@ -215,10 +215,10 @@
     border-radius: $border-radius-std;
     background: rgba($color-black, .2);
     box-shadow: $shadow-std;
+  }
 
-    > div:first-child {
-      margin-bottom: 20px;
-    }
+  &__details-block {
+    margin-bottom: 20px;
   }
 }
 
@@ -325,18 +325,14 @@
 
     text-transform: uppercase;
 
-    color: $color-warm;
-  }
-
-  @at-root .posted-in__header, .tagged-as__header {
-    margin: 0 5px 0 0;
-
-    text-transform: uppercase;
-  }
-  @at-root .separator__tag {
-    margin: 0 5px;
-
-    text-transform: uppercase;
+    display: inline-block;
+    background: $color-warm;
+    color: #333;
+    padding: 5px 20px;
+    border-radius: 15px;
+    text-shadow: none;
+    margin: 0 10px 10px 0;
+    box-shadow: $shadow-std;
   }
 }
 
