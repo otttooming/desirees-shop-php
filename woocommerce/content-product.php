@@ -34,7 +34,7 @@ $woocommerce_loop['loop']++;
 
 ?>
 
-	<div class="products-listing__item" <?php if ( get_the_content() ) : ?> data-wenk="<?php echo strip_tags(content(30)); ?>" data-wenk-pos="left" data-wenk-length="fit" <?php endif; ?>>
+	<div class="products-listing__item">
 	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
 
       <a href="<?php echo the_permalink(); ?>" class="product-loop__images-wrap">
