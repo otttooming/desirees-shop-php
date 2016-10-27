@@ -115,6 +115,17 @@ function desirees_widgets_init() {
         'after_title' => '</h5>'
   ) );
 
+	// Empty cart.
+  register_sidebar( array(
+    'name' => __( 'Empty cart', 'desirees' ),
+    'id' => 'empty-cart',
+    'before_widget' => '',
+    'after_widget' => '',
+    'description' => __( 'Empty cart', 'desirees' ),
+        'before_title' => '<h5>',
+        'after_title' => '</h5>'
+  ) );
+
   // Product page banner.
   register_sidebar( array(
     'name' => __( 'Product page banner', 'desirees' ),
