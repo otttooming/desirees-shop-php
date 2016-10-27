@@ -162,6 +162,12 @@ input {
   -webkit-appearance: none;
 }
 
+input {
+  &:checked {
+    background: $color-tertiary;
+  }
+}
+
 textarea {
   border: 0;
   border-radius: $border-radius-std;
@@ -231,4 +237,8 @@ mark {
 
     box-shadow: none;
   }
+}
+
+.qty {
+  width: 50px;
 }

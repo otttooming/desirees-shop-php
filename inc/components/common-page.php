@@ -16,7 +16,7 @@
           </div>
         <?php endif; ?>
 
-        <div class="<?php echo ($template_common_page == 'sidebar') ? 'col-md-9' : 'col-xs-12'; ?> center-xs grid_content with-sidebar-top cfx">
+        <div class="<?php echo ($template_common_page == 'sidebar') ? 'col-md-9' : 'col-xs-12'; ?> grid_content with-sidebar-top cfx">
           <?php
               $post_id = $wp_query->get_queried_object_id();
               $title = get_post_field('post_title', $post_id);

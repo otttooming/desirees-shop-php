@@ -52,7 +52,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
   <?php if ( apply_filters( 'woocommerce_enable_order_notes_field', get_option( 'woocommerce_enable_order_comments', 'yes' ) === 'yes' ) ) : ?>
 
-    <h3><?php _e( 'Additional Information', 'woocommerce' ); ?></h3>
+    <h2><?php _e( 'Additional Information', 'woocommerce' ); ?></h2>
 
     <?php foreach ( $checkout->checkout_fields['order'] as $key => $field ) : ?>
 

@@ -515,6 +515,9 @@ input {
   line-height: 30px;
   -webkit-appearance: none; }
 
+input:checked {
+  background: #00b31a; }
+
 textarea {
   border: 0;
   border-radius: 3px;
@@ -563,6 +566,9 @@ mark {
   .product__price-block .amount {
     padding: 0;
     box-shadow: none; }
+
+.qty {
+  width: 50px; }
 
 .container {
   box-sizing: border-box;
@@ -2301,6 +2307,9 @@ mark {
   border-radius: 3px;
   background: rgba(52, 6, 68, 0.5);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
+
+.checkout__tab-content label {
+  display: block; }
 
 .sidebar_grid > .widget-container {
   box-sizing: border-box;
