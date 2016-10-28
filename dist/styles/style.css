@@ -1791,6 +1791,8 @@ mark {
   border-radius: 3px;
   background: rgba(52, 6, 68, 0.2);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
+  .product__details-wrap > div:last-child {
+    margin-bottom: 0; }
 
 .product__details-block {
   margin-bottom: 20px; }
@@ -1860,7 +1862,7 @@ mark {
   .product-cart__variations select {
     margin: 0 10px 10px 0; }
 
-.product__meta a {
+.product-meta a {
   display: inline-block;
   text-transform: uppercase;
   display: inline-block;
@@ -2348,7 +2350,9 @@ mark {
       margin-right: 0; }
   .pagination ul.page-numbers {
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
   .pagination span.page-numbers,
   .pagination a.page-numbers {
     display: block;

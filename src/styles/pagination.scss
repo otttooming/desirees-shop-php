@@ -20,6 +20,7 @@
 
   ul.page-numbers {
     display: flex;
+    flex-wrap: wrap;
   }
 
   span.page-numbers,

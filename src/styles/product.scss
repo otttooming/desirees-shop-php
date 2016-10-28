@@ -215,6 +215,12 @@
     border-radius: $border-radius-std;
     background: rgba($color-black, .2);
     box-shadow: $shadow-std;
+
+    > div {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__details-block {
@@ -318,8 +324,7 @@
   }
 }
 
-
-.product__meta {
+.product-meta {
   a {
     display: inline-block;
 
