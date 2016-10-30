@@ -42,7 +42,7 @@ get_header('shop');
           <?php dynamic_sidebar( 'product-widget-area' ); ?>
       </div>
 
-    	<div id="default_products_page_container" class="col-lg-9 grid_content with-sidebar-left with-sidebar">
+    	<div id="default_products_page_container" class="col-xs-12 col-lg-9 grid_content with-sidebar-left with-sidebar">
 
 				<?php
 					// Prints messages and errors which are stored in the session, then clears them.
