@@ -42,6 +42,13 @@ Modern e-commerce solution based on WordPress.
 * [lazysizes: High performance and SEO friendly lazy loader for images](https://github.com/aFarkas/lazysizes)
 * [PhotoSwipe: JavaScript image gallery for mobile and desktop, modular, framework independent](https://github.com/dimsemenov/photoswipe)
 
+## Third party components
+
+### Plugins
+
+* [Image Widget - A simple image widget](https://wordpress.org/plugins/image-widget/)
+  > [***GitHub*** - image-widget](https://github.com/moderntribe/image-widget)
+
 ## Credits
 * Based on Underscores [http://underscores.me/](http://underscores.me/), (C) 2012-2015 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css [http://necolas.github.io/normalize.css/](http://necolas.github.io/normalize.css/), (C) 2012-2015 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
