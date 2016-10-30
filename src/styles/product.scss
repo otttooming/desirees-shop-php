@@ -267,7 +267,7 @@
   }
 }
 
-.cart__add-to {
+.addto {
   display: flex;
 
   width: 100%;
@@ -287,6 +287,10 @@
     text-align: right;
   }
 
+  input[type="submit"] {
+    display: none;
+  }
+
   .qty-block {
     flex: 1 0 150px;
   }
@@ -295,6 +299,9 @@
     margin: 0 10px;
 
     flex: 1 0 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .variations_button {
@@ -303,6 +310,10 @@
     width: 100%;
 
     justify-content: space-between;
+  }
+
+  &__icon {
+    margin: 0 5px 0 0;
   }
 }
 
@@ -338,6 +349,7 @@
     text-shadow: none;
     margin: 0 10px 10px 0;
     box-shadow: $shadow-std;
+    font-size: 12px;
   }
 }
 
