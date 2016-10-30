@@ -445,7 +445,8 @@ p {
 
 table {
   width: 100%;
-  border-collapse: collapse; }
+  border-collapse: collapse;
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif; }
 
 tr.alt {
   background: rgba(52, 6, 68, 0.2); }
@@ -1395,6 +1396,10 @@ mark {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
 
 .grid__slider {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
   overflow: hidden;
   margin: 0 0 20px;
   text-align: center;
