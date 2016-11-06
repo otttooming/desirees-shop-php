@@ -1282,6 +1282,9 @@ mark {
 .m-0-0-20-0 {
   margin: 0 0 20px 0; }
 
+.m-20-0-20-0 {
+  margin: 20px 0 20px 0; }
+
 .is-disabled {
   display: none; }
 
@@ -1293,7 +1296,7 @@ mark {
   -ms-flex-pack: center;
       justify-content: center; }
 
-.w100 {
+.w-100 {
   width: 100%; }
 
 .c-warm {
