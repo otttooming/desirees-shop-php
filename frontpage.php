@@ -3,19 +3,6 @@
  * Template Name: Frontpage minimal
  */
 
-  global $wp_query, $current_page_id, $template_header;
-  $orig_query = $wp_query;
-  $current_page_id = $wp_query->get_queried_object_id();
-  $template_header = 'min';
-
-  $fp_shopnav_1 = get_field('fp_shopnav_link_1') && get_field('fp_shopnav_text_1');
-  $fp_shopnav_2 = get_field('fp_shopnav_link_2') && get_field('fp_shopnav_text_2');
-
-  $fp_slider_1_image = wp_get_attachment_image_src(get_field('fp_slider_1'), 'full');
-  $fp_slider_2_image = wp_get_attachment_image_src(get_field('fp_slider_2'), 'full');
-  $fp_slider_3_image = wp_get_attachment_image_src(get_field('fp_slider_3'), 'full');
-  $fp_slider_4_image = wp_get_attachment_image_src(get_field('fp_slider_4'), 'full');
-
   get_header();
 ?>
 

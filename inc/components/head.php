@@ -41,7 +41,6 @@
       ?>
     </title>
 
-	  <link rel="shortcut icon" href="<?php echo get_option('company_logo') ?>">
     <link rel="profile" href="http://gmpg.org/xfn/11">
 
     <?php wp_head(); ?>

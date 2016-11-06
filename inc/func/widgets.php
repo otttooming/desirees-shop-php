@@ -136,6 +136,17 @@ function desirees_widgets_init() {
         'before_title' => '<h5>',
         'after_title' => '</h5>'
   ) );
+
+	// Product page banner.
+	register_sidebar( array(
+		'name' => __( 'Contact telephone', 'desirees' ),
+		'id' => 'contact-telephone',
+		'before_widget' => '',
+		'after_widget' => '',
+		'description' => __( 'Contact telephone', 'desirees' ),
+				'before_title' => '<h5>',
+				'after_title' => '</h5>'
+	) );
 };
 
 function desirees_widgets_frontpage_init() {

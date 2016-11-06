@@ -32,7 +32,9 @@
 
 			<div class="col-md-5 header__search hidden-md-down">
         <span class="search_text">
-            <?php echo _e( 'Telephone:', 'woocommerce' ) . ' ' .  get_option('contact_tel') ?>
+            <?php if (  is_active_sidebar( 'contact-telephone' ) ) : ?>
+                <?php dynamic_sidebar( 'contact-telephone' ); ?>
+            <?php endif; ?>
         </span>
         <div class="search__wrap">
 					<?php get_search_form(); ?>
