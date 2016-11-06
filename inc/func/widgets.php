@@ -136,9 +136,135 @@ function desirees_widgets_init() {
         'before_title' => '<h5>',
         'after_title' => '</h5>'
   ) );
-}
+};
+
+function desirees_widgets_frontpage_init() {
+
+	// Area 1, located at the top of the sidebar.
+	register_sidebar( array(
+		'name' => __( 'FP shopnav 1', 'desirees'),
+		'id' => 'fp-shopnav-1',
+		'description' => __( 'The primary widget area', 'desirees' ),
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+
+	// Area 1, located at the top of the sidebar.
+	register_sidebar( array(
+		'name' => __( 'FP shopnav 2', 'desirees'),
+		'id' => 'fp-shopnav-2',
+		'description' => __( 'The primary widget area', 'desirees' ),
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+
+	// Area 1, located at the top of the sidebar.
+	register_sidebar( array(
+		'name' => __( 'FP slider top', 'desirees'),
+		'id' => 'fp-slider-top',
+		'description' => __( 'FP slider top', 'desirees' ),
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+
+	// Area 1, located at the top of the sidebar.
+	register_sidebar( array(
+		'name' => __( 'FP slogan 1', 'desirees'),
+		'id' => 'fp-slogan-1',
+		'description' => __( 'FP slogan 1', 'desirees' ),
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+
+	// Area 1, located at the top of the sidebar.
+	register_sidebar( array(
+		'name' => __( 'FP slogan 2', 'desirees'),
+		'id' => 'fp-slogan-2',
+		'description' => __( 'FP slogan 2', 'desirees' ),
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+
+	// Area 1, located at the top of the sidebar.
+	register_sidebar( array(
+		'name' => __( 'FP slogan 3', 'desirees'),
+		'id' => 'fp-slogan-3',
+		'description' => __( 'FP slogan 3', 'desirees' ),
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+
+	// Area 1, located at the top of the sidebar.
+	register_sidebar( array(
+		'name' => __( 'FP slogan 4', 'desirees'),
+		'id' => 'fp-slogan-4',
+		'description' => __( 'FP slogan 4', 'desirees' ),
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+
+	// Area 1, located at the top of the sidebar.
+	register_sidebar( array(
+	  'name' => __( 'FP illustration 1', 'desirees'),
+	  'id' => 'fp-illustration-1',
+	  'description' => __( 'FP illustration 1', 'desirees' ),
+	  'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+	  'after_widget' => '</div>',
+	  'before_title' => '<h3 class="widget-title">',
+	  'after_title' => '</h3>',
+	) );
+
+	// Area 1, located at the top of the sidebar.
+	register_sidebar( array(
+	  'name' => __( 'FP illustration 2', 'desirees'),
+	  'id' => 'fp-illustration-2',
+	  'description' => __( 'FP illustration 2', 'desirees' ),
+	  'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+	  'after_widget' => '</div>',
+	  'before_title' => '<h3 class="widget-title">',
+	  'after_title' => '</h3>',
+	) );
+
+	// Area 1, located at the top of the sidebar.
+	register_sidebar( array(
+	  'name' => __( 'FP illustration 3', 'desirees'),
+	  'id' => 'fp-illustration-3',
+	  'description' => __( 'FP illustration 3', 'desirees' ),
+	  'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+	  'after_widget' => '</div>',
+	  'before_title' => '<h3 class="widget-title">',
+	  'after_title' => '</h3>',
+	) );
+
+	// Area 1, located at the top of the sidebar.
+	register_sidebar( array(
+	  'name' => __( 'FP illustration 4', 'desirees'),
+	  'id' => 'fp-illustration-4',
+	  'description' => __( 'FP illustration 4', 'desirees' ),
+	  'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+	  'after_widget' => '</div>',
+	  'before_title' => '<h3 class="widget-title">',
+	  'after_title' => '</h3>',
+	) );
+};
 
 add_action( 'widgets_init', 'desirees_widgets_init' );
+add_action( 'widgets_init', 'desirees_widgets_frontpage_init' );
+
 
 add_action( 'widgets_init', 'desirees_register_general_widgets' );
 function desirees_register_general_widgets() {

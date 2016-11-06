@@ -22,3 +22,12 @@
     }
   }
 }
+
+.slider-conf {
+
+  &__v-cent {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

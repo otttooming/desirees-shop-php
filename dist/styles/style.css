@@ -1279,6 +1279,9 @@ mark {
   background: rgba(52, 6, 68, 0.5);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
 
+.m-0-0-20-0 {
+  margin: 0 0 20px 0; }
+
 .is-disabled {
   display: none; }
 
@@ -1546,6 +1549,12 @@ mark {
       align-items: center; }
   .slider-promo__wrapper img {
     width: 100%; }
+
+.slider-conf__v-cent {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); }
 
 .woocommerce-error,
 .woocommerce-message {
