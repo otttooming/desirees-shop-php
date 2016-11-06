@@ -2042,10 +2042,18 @@ mark {
     display: inline-block; }
     .menu > .menu-item:hover .sub-menu {
       display: block; }
+  .menu > .current_page_parent > a,
+  .menu > .current_page_parent > a:hover,
+  .menu > .current-menu-item > a,
+  .menu > .current-menu-item > a:hover {
+    color: #fff;
+    border-radius: 3px;
+    background-color: #a30000;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
 
 .sub-menu {
   position: absolute;
-  z-index: 1;
+  z-index: 999;
   left: 50%;
   display: none;
   min-width: 100%;
@@ -2061,14 +2069,12 @@ mark {
   padding: 0 20px;
   line-height: 42px; }
 
-.current_page_parent > a,
-.current_page_parent > a:hover,
-.current-menu-item > a,
-.current-menu-item > a:hover {
-  color: #fff;
-  border-radius: 3px;
-  background-color: #a30000;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
+.menu-item {
+  white-space: nowrap;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center; }
 
 .bc {
   overflow: hidden;
