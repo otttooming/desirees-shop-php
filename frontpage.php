@@ -39,7 +39,7 @@
 	<hr>
 
   <?php if (  is_active_sidebar( 'fp-slogan-1' ) || is_active_sidebar( 'fp-slogan-2' ) || is_active_sidebar( 'fp-slogan-3' ) || is_active_sidebar( 'fp-slogan-4' ) ) : ?>
-    <div class="row">
+    <div class="row center-xs">
         <?php if (  is_active_sidebar( 'fp-slogan-1' ) ) : ?>
           <div class="col-sm-3">
               <?php dynamic_sidebar( 'fp-slogan-1' ); ?>
@@ -69,7 +69,7 @@
 	<hr>
 
   <?php if (  is_active_sidebar( 'fp-illustration-1' ) || is_active_sidebar( 'fp-illustration-2' ) || is_active_sidebar( 'fp-illustration-3' ) || is_active_sidebar( 'fp-illustration-4' ) ) : ?>
-    <div class="row">
+    <div class="row center-xs">
         <?php if (  is_active_sidebar( 'fp-illustration-1' ) ) : ?>
           <div class="col-sm-3">
               <?php dynamic_sidebar( 'fp-illustration-1' ); ?>
@@ -97,7 +97,7 @@
   <?php endif; ?>
 
 
-  <div class="row">
+  <div class="row center-xs">
     <?php
     $args = array( 'taxonomy' => 'product_cat' );
     $terms = get_terms('product_cat', $args);
