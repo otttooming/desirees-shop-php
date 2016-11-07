@@ -3,20 +3,8 @@
 
   padding: 15px 0;
 
-  &__logo {
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-  }
-
   &__cart {
     display: flex;
-    float: right;
-
-    height: 80px;
-
-    align-items: center;
     justify-content: flex-end;
   }
 }

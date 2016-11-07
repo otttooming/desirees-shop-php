@@ -11,7 +11,7 @@
 
 	<header class="container">
 
-    <div class="row">
+    <div class="row center-xs">
       <div class="col-xs-12">
         <?php if (  is_active_sidebar( 'contacts' ) ) : ?>
             <?php dynamic_sidebar( 'contacts' ); ?>
@@ -33,7 +33,7 @@
 
     </div>
 
-		<div class="row header">
+		<div class="row header middle-xs">
 			<div class="col-xs-12 col-sm-3 header__logo">
         <?php require get_template_directory() . '/inc/components/logo.php'; ?>
 			</div>

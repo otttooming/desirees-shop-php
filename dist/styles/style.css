@@ -1383,20 +1383,9 @@ mark {
 .header {
   position: relative;
   padding: 15px 0; }
-  .header__logo {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-        align-items: center;
-    -ms-flex-pack: center;
-        justify-content: center; }
   .header__cart {
     display: -ms-flexbox;
     display: flex;
-    float: right;
-    height: 80px;
-    -ms-flex-align: center;
-        align-items: center;
     -ms-flex-pack: end;
         justify-content: flex-end; }
 
