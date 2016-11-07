@@ -108,10 +108,9 @@
                 $thumbnail_id = get_woocommerce_term_meta( $term->term_id, 'thumbnail_id', true );
                 ?>
 
-                    <div class="col-sm-3">
-                        <a href="<?php echo get_term_link( $term->slug, 'product_cat' ); ?>" title="<?php echo sprintf(__('View all products filed under %s', 'desirees'), $term->name); ?>" class="">
-                            <img class="lazyload" data-src="<?php echo wp_get_attachment_url( $thumbnail_id ); ?>">
-                            <span><?php echo $term->name; ?></span>
+                    <div class="col-xs-12 col-sm-3">
+                        <a href="<?php echo get_term_link( $term->slug, 'product_cat' ); ?>" title="<?php echo sprintf(__('View all products filed under %s', 'desirees'), $term->name); ?>" class="button medium w-100 m-10-0-10-0">
+                            <?php echo $term->name; ?>
                         </a>
                     </div>
 

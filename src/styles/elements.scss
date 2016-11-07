@@ -254,3 +254,13 @@ mark {
 .d-inlineblock {
   display: inline-block;
 }
+
+.ws-wrap {
+  white-space: normal!important;
+}
+
+.el-bg-def {
+  background: $color-charcoal;
+  box-shadow: $shadow-std;
+  border-radius: $border-radius-std;
+}

@@ -610,6 +610,14 @@ mark {
 .d-inlineblock {
   display: inline-block; }
 
+.ws-wrap {
+  white-space: normal !important; }
+
+.el-bg-def {
+  background: #340644;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
+  border-radius: 3px; }
+
 .container {
   box-sizing: border-box;
   width: 100%;
@@ -1317,6 +1325,9 @@ mark {
   padding-bottom: 20px;
   background: rgba(52, 6, 68, 0.5);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
+
+.m-10-0-10-0 {
+  margin: 10px 0 10px 0; }
 
 .m-0-0-20-0 {
   margin: 0 0 20px 0; }
@@ -2029,7 +2040,6 @@ mark {
           user-select: none;
   transition: background-color 500ms;
   text-align: center;
-  white-space: nowrap;
   text-transform: uppercase;
   text-overflow: ellipsis;
   color: #fff;
