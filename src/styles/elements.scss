@@ -1,3 +1,10 @@
+@include fontFace('Oswald', '../fonts/oswald-extralight', normal, 200);
+@include fontFace('Oswald', '../fonts/oswald-light', normal, 300);
+@include fontFace('Oswald', '../fonts/oswald-regular', normal, 400);
+@include fontFace('Oswald', '../fonts/oswald-medium', normal, 500);
+@include fontFace('Oswald', '../fonts/oswald-demibold', normal, 600);
+@include fontFace('Oswald', '../fonts/oswald-bold', normal, 700);
+
 html {
   font-size: 13px;
 

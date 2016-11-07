@@ -393,6 +393,42 @@ button.swiper-pagination-bullet {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg); } }
 
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/oswald-extralight.woff2") format("woff2"), url("../fonts/oswald-extralight.woff") format("woff");
+  font-style: normal;
+  font-weight: 200; }
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/oswald-light.woff2") format("woff2"), url("../fonts/oswald-light.woff") format("woff");
+  font-style: normal;
+  font-weight: 300; }
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/oswald-regular.woff2") format("woff2"), url("../fonts/oswald-regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400; }
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/oswald-medium.woff2") format("woff2"), url("../fonts/oswald-medium.woff") format("woff");
+  font-style: normal;
+  font-weight: 500; }
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/oswald-demibold.woff2") format("woff2"), url("../fonts/oswald-demibold.woff") format("woff");
+  font-style: normal;
+  font-weight: 600; }
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/oswald-bold.woff2") format("woff2"), url("../fonts/oswald-bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700; }
+
 html {
   font-size: 13px;
   -webkit-text-size-adjust: 100%;

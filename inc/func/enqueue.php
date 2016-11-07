@@ -17,7 +17,7 @@ add_action( 'wp_enqueue_scripts', 'desirees_assets' );
  */
 function desirees_assets_cdn() {
 
-	wp_enqueue_style( 'desirees_google_typefaces', 'https://fonts.googleapis.com/css?family=Oswald:400,300|Playfair+Display|Oranienbaum', false );
+	wp_enqueue_style( 'desirees_google_typefaces', 'https://fonts.googleapis.com/css?family=Playfair+Display|Oranienbaum', false );
 
 }
 add_action( 'wp_enqueue_scripts', 'desirees_assets_cdn' );

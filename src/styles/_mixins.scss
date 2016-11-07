@@ -36,3 +36,15 @@ $remBase: $font-size-normal;
   // #{$property}: $pxValue;
   #{$property}: $remValue;
 }
+
+// font-face
+@mixin fontFace($family,$src,$style: normal,$weight: normal) {
+	@font-face {
+		font-family: $family;
+		src: url('#{$src}.woff2') format('woff2'),
+			   url('#{$src}.woff') format('woff');
+
+		font-style: $style;
+		font-weight: $weight;
+	}
+}
