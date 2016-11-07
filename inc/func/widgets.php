@@ -5,58 +5,14 @@
 
 function desirees_widgets_init() {
 
-	// Area 1, located at the top of the sidebar.
+	// Sidebar
 	register_sidebar( array(
-		'name' => __( 'Primary Widget Area', 'desirees'),
-		'id' => 'primary-widget-area',
-		'description' => __( 'The primary widget area', 'desirees' ),
+		'name' => __( 'Sidebar Widget Area', 'desirees'),
+		'id' => 'sidebar-widget-area',
+		'description' => __( 'The sidebar widget area', 'desirees' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-
-  // Area 1, located at the top of the sidebar.
-	register_sidebar( array(
-		'name' => __( 'Secondary Widget Area', 'desirees'),
-		'id' => 'secondary-widget-area',
-		'description' => __( 'The secondary widget area', 'desirees' ),
-		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-
-	// Single product sidebar.
-	register_sidebar( array(
-		'name' => __( 'Single product sidebar', 'desirees' ),
-		'id' => 'product-single-widget-area',
-		'description' => __( 'Single product sidebar widget area', 'desirees' ),
-		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-
-	// Products sidebar.
-	register_sidebar( array(
-		'name' => __( 'Product Page sidebar', 'desirees' ),
-		'id' => 'product-widget-area',
-		'description' => __( 'Product Page sidebar', 'desirees' ),
-		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-
-	// Under products
-	register_sidebar( array(
-		'name' => __( 'Under Products', 'desirees' ),
-		'id' => 'under-product-widget-area',
-		'description' => __( 'Under Products widget area', 'desirees' ),
-		'before_widget' => '<div class="page-widget">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3>',
 		'after_title' => '</h3>',
 	) );
 
@@ -126,28 +82,33 @@ function desirees_widgets_init() {
         'after_title' => '</h5>'
   ) );
 
-  // Product page banner.
+  // Products top banner.
   register_sidebar( array(
-    'name' => __( 'Product page banner', 'desirees' ),
-    'id' => 'product_bage_banner',
+    'name' => __( 'Products top banner', 'desirees' ),
+    'id' => 'products-banner-top',
     'before_widget' => '',
     'after_widget' => '',
-    'description' => __( 'Product page banner', 'desirees' ),
+    'description' => __( 'Products top banner', 'desirees' ),
         'before_title' => '<h5>',
         'after_title' => '</h5>'
   ) );
+};
+add_action( 'widgets_init', 'desirees_widgets_init' );
 
-	// Product page banner.
+function desirees_widgets_contacts_init() {
+
+	// Contacts
 	register_sidebar( array(
-		'name' => __( 'Contact telephone', 'desirees' ),
-		'id' => 'contact-telephone',
+		'name' => __( 'Contacts', 'desirees' ),
+		'id' => 'contacts',
 		'before_widget' => '',
 		'after_widget' => '',
-		'description' => __( 'Contact telephone', 'desirees' ),
+		'description' => __( 'Contacts', 'desirees' ),
 				'before_title' => '<h5>',
 				'after_title' => '</h5>'
 	) );
 };
+add_action( 'widgets_init', 'desirees_widgets_contacts_init' );
 
 function desirees_widgets_frontpage_init() {
 
@@ -272,8 +233,6 @@ function desirees_widgets_frontpage_init() {
 	  'after_title' => '</h3>',
 	) );
 };
-
-add_action( 'widgets_init', 'desirees_widgets_init' );
 add_action( 'widgets_init', 'desirees_widgets_frontpage_init' );
 
 

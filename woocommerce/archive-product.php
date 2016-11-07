@@ -38,9 +38,7 @@ get_header('shop');
 <div class="container">
     <div class="row cfx">
 
-    	<div id="products-sidebar" class="col-lg-3 sidebar_grid leftnav acc_enabled sidebar_left cfx hidden-md-down">
-          <?php dynamic_sidebar( 'product-widget-area' ); ?>
-      </div>
+			<?php get_sidebar(); ?>
 
     	<div id="default_products_page_container" class="col-xs-12 col-lg-9 grid_content with-sidebar-left with-sidebar">
 
@@ -54,9 +52,9 @@ get_header('shop');
           <div class="grid__slider">
               <img class="grid__cat-banner" src="<?php echo $image ?>" />
           </div>
-				<?php elseif (empty($cat->term_id) && !is_search() && is_active_sidebar( 'product_bage_banner' ) ) : ?>
+				<?php elseif (empty($cat->term_id) && !is_search() && is_active_sidebar( 'products-banner-top' ) ) : ?>
 					<div class="grid__slider">
-							<?php dynamic_sidebar( 'product_bage_banner' ); ?>
+							<?php dynamic_sidebar( 'products-banner-top' ); ?>
 					</div>
         <?php endif; ?>
 
@@ -105,8 +103,6 @@ get_header('shop');
     			<?php endif; ?>
 
     		<?php endif; ?>
-
-        <?php dynamic_sidebar( 'under-product-widget-area' ); ?>
 
     	  <?php do_action('woocommerce_after_main_content'); ?>
 

@@ -11,9 +11,7 @@
     <div class="row">
 
         <?php if ($template_common_page == 'sidebar') : ?>
-          <div class="col-md-3 sidebar_grid sidebar_left">
-              <?php dynamic_sidebar( 'primary-widget-area' ); ?>
-          </div>
+          <?php get_sidebar(); ?>
         <?php endif; ?>
 
         <div class="<?php echo ($template_common_page == 'sidebar') ? 'col-md-9' : 'col-xs-12'; ?> grid_content with-sidebar-top cfx">

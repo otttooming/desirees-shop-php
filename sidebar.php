@@ -5,18 +5,10 @@
  */
 ?>
 
-<?php	if ( is_active_sidebar( 'primary-widget-area' ) ) : ?>
+<?php	if ( is_active_sidebar( 'sidebar-widget-area' ) ) : ?>
 
-		<div id="primary" class="widget-area" role="complementary">
-				<?php dynamic_sidebar( 'primary-widget-area' ); ?>
-		</div>
-
-<?php endif; ?>
-
-<?php	if ( is_active_sidebar( 'secondary-widget-area' ) ) : ?>
-
-		<div id="secondary" class="widget-area" role="complementary">
-				<?php dynamic_sidebar( 'secondary-widget-area' ); ?>
-		</div>
+	<aside class="col-lg-3 sidebar_grid sidebar_left hidden-md-down">
+			<?php dynamic_sidebar( 'sidebar-widget-area' ); ?>
+	</aside>
 
 <?php endif; ?>

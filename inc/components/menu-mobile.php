@@ -7,7 +7,7 @@
 
     <?php wp_nav_menu(array('theme_location' => 'top-right', 'name' => 'top-right', 'container' => 'div', 'container_class' => 'menu-mobile__secondary')); ?>
 
-    <div class="menu-mobile__categories cfx">
-        <?php dynamic_sidebar( 'product-widget-area' ); ?>
+    <div class="menu-mobile__categories">
+        <?php dynamic_sidebar( 'sidebar-widget-area' ); ?>
     </div>
 </div>

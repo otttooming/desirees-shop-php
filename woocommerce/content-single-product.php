@@ -24,10 +24,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
             <?php do_action( 'woocommerce_single_product_summary' ); ?>
           </div>
     	  </div>
-<!--
-        <div class="col-md-3 product__banner product_description_banner cfx">
-            <?php dynamic_sidebar( 'product-single-widget-area' ); ?>
-        </div> -->
 
     </div>
     <?php do_action( 'woocommerce_after_single_product_summary' ); ?>

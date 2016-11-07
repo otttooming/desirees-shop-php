@@ -11,6 +11,14 @@
 
 	<header class="container">
 
+    <div class="row">
+      <div class="col-xs-12">
+        <?php if (  is_active_sidebar( 'contacts' ) ) : ?>
+            <?php dynamic_sidebar( 'contacts' ); ?>
+        <?php endif; ?>
+      </div>
+    </div>
+
     <div class="row header-variant2 hidden-md-up">
 
       <div class="col-xs-12 center-xs header-variant2__wrap">
@@ -31,11 +39,6 @@
 			</div>
 
 			<div class="col-md-5 header__search hidden-md-down">
-        <span class="search_text">
-            <?php if (  is_active_sidebar( 'contact-telephone' ) ) : ?>
-                <?php dynamic_sidebar( 'contact-telephone' ); ?>
-            <?php endif; ?>
-        </span>
         <div class="search__wrap">
 					<?php get_search_form(); ?>
 				</div>
