@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div class="form-login cfx" id="form-login">
 
-	<div class="form-login__col span5">
+	<div class="form-login__col col-sm-5">
 
 <?php endif; ?>
 
@@ -70,7 +70,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	</div>
 
-	<div class="form-login__col span5">
+	<div class="form-login__col col-sm-5">
 
 		<h2><?php _e( 'Register', 'woocommerce' ); ?></h2>
 

@@ -9,7 +9,7 @@ get_header(); ?>
 
 	<div class="container">
 		<div class="row">
-			<div class="span12 txt-center">
+			<div class="col-xs-12 txt-center">
         <header>
           <h1>
             <?php _e('<strong>Page not found.</strong>', 'desirees'); ?>

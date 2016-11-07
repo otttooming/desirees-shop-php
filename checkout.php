@@ -2,7 +2,7 @@
 get_header(); ?>
         <div class="container">
             <div class="row">
-                <div class="span12 grid_content">
+                <div class="col-xs-12 grid_content">
 
         			<?php
         			/* Run the loop to output the posts.
@@ -12,7 +12,7 @@ get_header(); ?>
         			get_template_part( 'loop', 'page' );
         			?>
     			</div><!-- #content -->
-                <div class="span3 sidebar_grid">
+                <div class="col-sm-3 sidebar_grid">
                     <?php get_sidebar(); ?>
                 </div>
     		</div>

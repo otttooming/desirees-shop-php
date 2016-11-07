@@ -9,7 +9,7 @@ get_header();
 
 	<div class="container">
 		<div class="row">
-			<div class="span9 grid_content">
+			<div class="col-sm-9 grid_content">
 
 				<?php if ( have_posts() ) : ?>
 
@@ -40,7 +40,7 @@ get_header();
 				<?php endif; ?>
 
 			</div>
-			<div class="span3 sidebar_grid cfx">
+			<div class="col-sm-3 sidebar_grid cfx">
 				<?php get_sidebar(); ?>
 			</div>
 		</div>

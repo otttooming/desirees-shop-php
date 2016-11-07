@@ -15,11 +15,11 @@ get_header(); ?>
     <div class="container">
         <div class="row cfx">
 
-            <div class="span3 sidebar_grid sidebar_left">
+            <div class="col-sm-3 sidebar_grid sidebar_left">
                 <?php dynamic_sidebar( 'primary-widget-area' ); ?>
             </div>
 
-            <div class="span12 grid_content with-sidebar-left">
+            <div class="col-xs-12 grid_content with-sidebar-left">
 
           			<?php
           			/* Run the loop to output the posts.
