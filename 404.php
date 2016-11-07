@@ -8,36 +8,14 @@
 get_header(); ?>
 
 	<div class="container">
-		<div class="row">
-			<div class="col-xs-12 txt-center">
-        <header>
-          <h1>
-            <?php _e('<strong>Page not found.</strong>', 'desirees'); ?>
-          </h1>
-        </header>
+		<div class="row center-xs">
 
-				<p>
-					<?php _e('Sorry, but the page you are looking for is not found. Please, make sure you’ve typed the current  URL.', 'desirees'); ?>
-        </p>
+			<?php get_sidebar(); ?>
 
-				<div class="f-center">
-					<?php get_search_form(); ?>
-				</div>
-
-        <?php
-						echo desirees_do_shortcode( 'desirees_best_selling_products', array(
-							'per_page'  => 4,
-							'columns'   => 4,
-						) );
-        ?>
-
-				<p>
-					<a class="button medium arrow-left" href="javascript: history.go(-1)">
-						<?php _e('Return to Previous Page', 'desirees'); ?>
-					</a>
-				</p>
-
+			<div class="col-xs-12 col-lg-9">
+				<?php dynamic_sidebar( 'empty-page-widget-area' ); ?>
 			</div>
+
 		</div>
 	</div>
 

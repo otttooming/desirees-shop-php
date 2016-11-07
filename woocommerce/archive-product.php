@@ -36,7 +36,7 @@ get_header('shop');
 </div>
 
 <div class="container">
-    <div class="row cfx">
+    <div class="row center-xs">
 
 			<?php get_sidebar(); ?>
 
@@ -87,19 +87,7 @@ get_header('shop');
     		<?php else : ?>
 
     			<?php if ( ! woocommerce_product_subcategories( array( 'before' => '<ul class="products">', 'after' => '</ul>' ) ) ) : ?>
-
-  					<div class="empty-category-block">
-
-							<?php dynamic_sidebar( 'empty-category-area' ); ?>
-
-  						<p>
-								<a class="button big active" href="<?php echo get_permalink(woocommerce_get_page_id('shop')); ?>">
-									<span><?php _e( 'Return To Shop', 'woocommerce' ) ?></span>
-								</a>
-							</p>
-
-  					</div>
-
+						<?php dynamic_sidebar( 'empty-category-area' ); ?>
     			<?php endif; ?>
 
     		<?php endif; ?>

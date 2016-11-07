@@ -60,6 +60,17 @@ function desirees_widgets_init() {
         'after_title' => '</h5>'
 	) );
 
+	// Empty category.
+	register_sidebar( array(
+		'name' => __( 'Empty page', 'desirees' ),
+		'id' => 'empty-page-widget-area',
+		'before_widget' => '',
+		'after_widget' => '',
+		'description' => __( '404 page area', 'desirees' ),
+				'before_title' => '<h5>',
+				'after_title' => '</h5>'
+	) );
+
   // Empty category.
   register_sidebar( array(
     'name' => __( 'Empty category', 'desirees' ),
