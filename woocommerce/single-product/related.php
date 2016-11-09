@@ -46,36 +46,37 @@ $woocommerce_loop['columns'] = apply_filters( 'woocommerce_related_products_colu
 
 if ( $products->have_posts() ) : ?>
 
-	<div class="related products product__related">
+<div class="row">
+		<div class="col-xs-12">
+			<div class="related products product__related">
 
-		<h2 class="product__related-header"><?php _e( 'Related Products', 'woocommerce' ); ?></h2>
+				<h2 class="product__related-header"><?php _e( 'Related Products', 'woocommerce' ); ?></h2>
 
-		<div class="product__control-items control__items">
-			<svg class="control__prev" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 501.5 501.5"><g><path fill="currentColor" d="M302.67 90.877l55.77 55.508L254.575 250.75 358.44 355.116l-55.77 55.506L143.56 250.75z"></path></g></svg>
-			<svg class="control__next" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 501.5 501.5"><g><path fill="currentColor" d="M199.33 410.622l-55.77-55.508L247.425 250.75 143.56 146.384l55.77-55.507L358.44 250.75z"></path></g></svg>
-		</div>
+				<div class="product__control-items control__items">
+					<svg class="control__prev" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 501.5 501.5"><g><path fill="currentColor" d="M302.67 90.877l55.77 55.508L254.575 250.75 358.44 355.116l-55.77 55.506L143.56 250.75z"></path></g></svg>
+					<svg class="control__next" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 501.5 501.5"><g><path fill="currentColor" d="M199.33 410.622l-55.77-55.508L247.425 250.75 143.56 146.384l55.77-55.507L358.44 250.75z"></path></g></svg>
+				</div>
 
-		<div class="swiper-container product__related-slider">
-		    <div class="swiper-wrapper">
+				<div class="swiper-container product__related-slider">
+						<div class="swiper-wrapper">
 
-					<?php while ( $products->have_posts() ) : $products->the_post(); ?>
+							<?php while ( $products->have_posts() ) : $products->the_post(); ?>
 
-						<div class="swiper-slide">
-							<?php wc_get_template_part( 'content', 'product' ); ?>
+								<div class="swiper-slide">
+									<?php wc_get_template_part( 'content', 'product' ); ?>
+								</div>
+
+							<?php endwhile; // end of the loop. ?>
 						</div>
 
-					<?php endwhile; // end of the loop. ?>
-		    </div>
+						<div class="swiper-pagination"></div>
 
-		    <div class="swiper-pagination"></div>
+				</div>
 
+
+			</div>
 		</div>
-
-
-	</div>
-
-
-
+</div>
 
 <?php endif;
 

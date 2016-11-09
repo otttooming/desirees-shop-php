@@ -14,14 +14,8 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 get_header('shop'); ?>
 
 <div class="container">
-    <div class="row">
-        <div class="col-xs-12">
-            <?php do_action('woocommerce_before_main_content'); ?>
-        </div>
-    </div>
-</div>
+  <?php do_action('woocommerce_before_main_content'); ?>
 
-<div class="container cfx">
 	<?php while ( have_posts() ) : the_post(); ?>
 		<?php woocommerce_get_template_part( 'content', 'single-product' ); ?>
 	<?php endwhile; ?>

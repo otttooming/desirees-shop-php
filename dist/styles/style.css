@@ -677,8 +677,7 @@ mark {
 .col-xs-offset-11,
 .col-xs-offset-12 {
   box-sizing: border-box;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding: 10px;
   -ms-flex: 0 0 auto;
       flex: 0 0 auto; }
 
@@ -865,8 +864,7 @@ mark {
   .col-sm-offset-11,
   .col-sm-offset-12 {
     box-sizing: border-box;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding: 10px;
     -ms-flex: 0 0 auto;
         flex: 0 0 auto; }
   .col-sm {
@@ -1018,8 +1016,7 @@ mark {
   .col-md-offset-11,
   .col-md-offset-12 {
     box-sizing: border-box;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding: 10px;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto; }
   .col-md {
@@ -1172,8 +1169,7 @@ mark {
   .col-lg-offset-11,
   .col-lg-offset-12 {
     box-sizing: border-box;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding: 10px;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto; }
   .col-lg {
@@ -1395,8 +1391,7 @@ mark {
   display: none !important; }
 
 .header {
-  position: relative;
-  padding: 15px 0; }
+  position: relative; }
   .header__cart {
     display: -ms-flexbox;
     display: flex;
@@ -1681,7 +1676,6 @@ mark {
 
 .product__mainblock {
   box-sizing: border-box;
-  margin-bottom: 20px;
   padding: 20px;
   border-radius: 3px;
   background: rgba(52, 6, 68, 0.2);
@@ -1690,19 +1684,22 @@ mark {
       flex: 1 0 310px; }
 
 .product__left {
+  width: 100%;
   position: relative;
   overflow: hidden;
-  margin-bottom: 20px;
   border-radius: 3px; }
 
 .product__left-wrap {
+  display: -ms-flexbox;
+  display: flex; }
+
+.product__left-inner {
   z-index: 1;
   top: 0;
-  right: 10px;
+  right: 0;
   bottom: 0;
-  left: 10px;
+  left: 0;
   display: -ms-flexbox;
-  display: flex;
   display: flex;
   overflow: hidden;
   -ms-flex-direction: column;
@@ -1711,7 +1708,7 @@ mark {
   /* min-height: 500px; */
   background: #fff; }
   @media screen and (min-width: 768px) {
-    .product__left-wrap {
+    .product__left-inner {
       position: absolute; } }
 
 .product__title {
@@ -1842,7 +1839,6 @@ mark {
       justify-content: space-around; }
 
 .product__details-wrap {
-  margin-bottom: 20px;
   padding: 20px;
   border-radius: 3px;
   background: rgba(52, 6, 68, 0.2);
@@ -2116,11 +2112,10 @@ mark {
 
 .bc {
   overflow: hidden;
-  margin: 5px 0 0 15px;
+  margin: 0 0 0 15px;
   white-space: nowrap;
   text-transform: uppercase;
-  font-size: 11px;
-  line-height: 42px; }
+  font-size: 11px; }
   .bc a {
     color: #ffc000; }
   .bc__delim {

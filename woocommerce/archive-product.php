@@ -28,14 +28,6 @@ get_header('shop');
 ?>
 
 <div class="container">
-    <div class="row">
-        <div class="col-xs-12">
-            <?php do_action('woocommerce_before_main_content'); ?>
-        </div>
-    </div>
-</div>
-
-<div class="container">
     <div class="row center-xs">
 
 			<?php get_sidebar(); ?>
@@ -47,6 +39,8 @@ get_header('shop');
 					// e.g. "Product" has been added to your cart.
 					echo wc_print_notices();
 				?>
+
+				<?php do_action('woocommerce_before_main_content'); ?>
 
         <?php if($image && $image !='') : ?>
           <div class="grid__slider">

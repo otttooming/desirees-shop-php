@@ -14,19 +14,18 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 <?php do_action( 'woocommerce_before_single_product' ); ?>
 
-<div itemscope="" itemtype="http://schema.org/Product">
-    <div class="row product">
+<div itemscope="" itemtype="http://schema.org/Product" class="row product">
 
-      	<?php do_action( 'woocommerce_before_single_product_summary' ); ?>
+  	<?php do_action( 'woocommerce_before_single_product_summary' ); ?>
 
-        <div class="col-xs-12 col-md-7">
-          <div class="product__mainblock product_description_mainblock productcol summary">
-            <?php do_action( 'woocommerce_single_product_summary' ); ?>
-          </div>
-    	  </div>
+    <div class="col-xs-12 col-md-7">
+      <div class="product__mainblock product_description_mainblock productcol summary">
+        <?php do_action( 'woocommerce_single_product_summary' ); ?>
+      </div>
+	  </div>
 
-    </div>
     <?php do_action( 'woocommerce_after_single_product_summary' ); ?>
 
-    <?php do_action( 'woocommerce_after_single_product' ); ?>
 </div>
+
+<?php do_action( 'woocommerce_after_single_product' ); ?>
