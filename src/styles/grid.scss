@@ -86,9 +86,9 @@
 
     text-align: center;
 
-    color: $color-white !important;
+    color: $color-white;
     border-radius: 3px;
-    background-color: $color-red;
+    background: $color-buy-button-bg;
     box-shadow: $shadow-std;
 
     font-size: 13px !important;

@@ -23,13 +23,14 @@
   font-family: $typeface-primary;
   font-size: 11px;
   line-height: 1.5;
+  background: $color-button-bg;
 
   &:hover {
     background: $color-red;
   }
 
   &.active {
-    background: $color-red;
+    background: $color-buy-button-bg;
   }
 
   &.medium {

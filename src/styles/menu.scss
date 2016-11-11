@@ -33,7 +33,7 @@
   > .current-menu-item > a:hover {
     color: $color-white;
     border-radius: $border-radius-std;
-    background-color: $color-red;
+    background: $color-button-bg;
     box-shadow: $shadow-std;
   }
 }
@@ -95,6 +95,6 @@
 
 .qtranxs-lang-menu {
   border-radius: $border-radius-std;
-  background: rgba($color-black, .5);
+  background: $color-button-bg;
   box-shadow: $shadow-std;
 }

@@ -596,7 +596,7 @@ mark {
   padding: 5px 10px;
   color: #fff;
   border-radius: 5px;
-  background-color: #a30000;
+  background: linear-gradient(to top right, #78239d, #ff5300);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
   font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
   line-height: normal; }
@@ -1508,9 +1508,9 @@ mark {
   bottom: 5px;
   padding: 5px 10px;
   text-align: center;
-  color: #fff !important;
+  color: #fff;
   border-radius: 3px;
-  background-color: #a30000;
+  background: linear-gradient(to top right, #78239d, #ff5300);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
   font-size: 13px !important;
   line-height: normal;
@@ -1805,7 +1805,7 @@ mark {
   text-align: center;
   color: #fff !important;
   border-radius: 3px;
-  background-color: #a30000;
+  background: linear-gradient(to top right, #78239d, #ff5300);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
   font-size: 13px;
   line-height: normal;
@@ -1971,7 +1971,7 @@ mark {
   display: flex;
   padding: 5px 10px;
   border-radius: 3px;
-  background-color: #a30000;
+  background: linear-gradient(to top right, #78239d, #ff5300);
   -ms-flex-align: center;
       align-items: center; }
   .product-sale__label {
@@ -1986,18 +1986,22 @@ mark {
 .control__up, .control__down, .control__prev, .control__next {
   padding: 5px;
   cursor: pointer;
-  transition: color 500ms, -webkit-transform 500ms;
-  transition: color 500ms, transform 500ms;
-  transition: color 500ms, transform 500ms, -webkit-transform 500ms;
+  transition: color 500ms;
   border-radius: 3px;
   background: #340644;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
+  .control__up path, .control__down path, .control__prev path, .control__next path {
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    transition: -webkit-transform 500ms;
+    transition: transform 500ms;
+    transition: transform 500ms, -webkit-transform 500ms; }
 
-.control__up {
+.control__up path {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg); }
 
-.control__down {
+.control__down path {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg); }
 
@@ -2047,11 +2051,12 @@ mark {
   text-shadow: 2px 2px 5px #340644;
   font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
   font-size: 11px;
-  line-height: 1.5; }
+  line-height: 1.5;
+  background: linear-gradient(45deg, #93278f, #00a99d); }
   .button:hover {
     background: #a30000; }
   .button.active {
-    background: #a30000; }
+    background: linear-gradient(to top right, #78239d, #ff5300); }
   .button.medium {
     padding: 15px 20px;
     font-size: 14px; }
@@ -2084,7 +2089,7 @@ mark {
   .menu > .current-menu-item > a:hover {
     color: #fff;
     border-radius: 3px;
-    background-color: #a30000;
+    background: linear-gradient(45deg, #93278f, #00a99d);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
 
 .sub-menu {
@@ -2127,7 +2132,7 @@ mark {
 
 .qtranxs-lang-menu {
   border-radius: 3px;
-  background: rgba(52, 6, 68, 0.5);
+  background: linear-gradient(45deg, #93278f, #00a99d);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
 
 .cat-list__title {
@@ -2262,7 +2267,7 @@ mark {
   height: 40px;
   padding: 0 10px;
   border-radius: 0 3px 3px 0;
-  background-color: #a30000;
+  background: linear-gradient(45deg, #93278f, #00a99d);
   line-height: 40px; }
 
 .cart__collaterals h2 {
@@ -2435,7 +2440,7 @@ mark {
     line-height: 42px; }
     .pagination span.page-numbers.current,
     .pagination a.page-numbers.current {
-      background: #a30000; }
+      background: linear-gradient(45deg, #93278f, #00a99d); }
   .pagination a.page-numbers:hover {
     background: #a30000; }
 

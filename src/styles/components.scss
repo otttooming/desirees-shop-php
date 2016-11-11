@@ -10,19 +10,28 @@
     padding: 5px;
 
     cursor: pointer;
-    transition: color $transition-normal, transform $transition-normal;
+    transition: color $transition-normal;
 
     border-radius: $border-radius-std;
     background: $color-black;
     box-shadow: $shadow-std;
+
+    path {
+      transform-origin: 50% 50%;
+      transition: transform $transition-normal;
+    }
   }
 
   &__up {
-    transform: rotate(-90deg);
+    path {
+      transform: rotate(-90deg);
+    }
   }
 
   &__down {
-    transform: rotate(90deg);
+    path {
+      transform: rotate(90deg);
+    }
   }
 }
 
