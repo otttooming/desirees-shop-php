@@ -74,6 +74,10 @@ td {
 p {
   line-height: 1.4;
   margin: 0 0 1em;
+
+  a {
+    color: $color-warm;
+  }
 }
 
 fieldset {
@@ -235,6 +239,18 @@ svg {
 mark {
   color: inherit;
   background: transparent;
+}
+
+address {
+  font-family: $typeface-secondary;
+}
+
+.required {
+  color: $color-attention;
+}
+
+.edit {
+  color: $color-warm;
 }
 
 .amount {

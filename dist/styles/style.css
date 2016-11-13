@@ -480,6 +480,8 @@ td {
 p {
   line-height: 1.4;
   margin: 0 0 1em; }
+  p a {
+    color: #ffc000; }
 
 fieldset {
   margin: 0 0 1em; }
@@ -598,6 +600,15 @@ del {
 mark {
   color: inherit;
   background: transparent; }
+
+address {
+  font-family: "Helvetica Neue", Arial, sans-serif; }
+
+.required {
+  color: #a30000; }
+
+.edit {
+  color: #ffc000; }
 
 .amount {
   display: inline-block;
