@@ -7,6 +7,13 @@
     list-style: none;
   }
 
+  >li {
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
   a {
     box-sizing: border-box;
   }
@@ -19,8 +26,17 @@
     position: relative;
 
     display: inline-block;
+    border-radius: $border-radius-std;
+
+    background: $color-button-bg-normal;
+
+    box-shadow: $shadow-std;
+    margin-right: 5px;
+    transition: background $transition-normal;
 
     &:hover {
+      background: $color-button-bg;
+
       .sub-menu {
         display: block;
       }
@@ -89,12 +105,6 @@
   &__item {
     padding: 0 5px;
   }
-}
-
-.qtranxs-lang-menu {
-  border-radius: $border-radius-std;
-  background: $color-button-bg;
-  box-shadow: $shadow-std;
 }
 
 .woocommerce-MyAccount-navigation {

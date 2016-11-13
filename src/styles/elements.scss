@@ -170,7 +170,7 @@ input {
   border-radius: 5px;
   border-radius: $border-radius-std;
   outline: none;
-  background: $color-grey;
+  background: $color-button-bg-normal;
   box-shadow: $shadow-std;
   text-shadow: $shadow-text;
 
@@ -182,7 +182,7 @@ input {
 
 input {
   &:checked {
-    background: $color-tertiary;
+    background: $color-go;
   }
 }
 

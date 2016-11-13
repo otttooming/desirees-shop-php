@@ -2007,7 +2007,7 @@ address {
   cursor: pointer;
   transition: color 500ms;
   border-radius: 3px;
-  background: #340644;
+  background: rgba(52, 6, 68, 0.5);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
   .control__up path, .control__down path, .control__prev path, .control__next path {
     -webkit-transform-origin: 50% 50%;
@@ -2073,7 +2073,7 @@ address {
   line-height: 1.5;
   background: linear-gradient(45deg, #93278f, #00a99d); }
   .button:hover {
-    background: #a30000; }
+    background: #00b31a; }
   .button.active {
     background: linear-gradient(to top right, #78239d, #ff5300); }
   .button.medium {
@@ -2093,15 +2093,24 @@ address {
   text-transform: uppercase; }
   .menu li {
     list-style: none; }
+  .menu > li:last-child {
+    margin-right: 0; }
   .menu a {
     box-sizing: border-box; }
   .menu img {
     width: 15px; }
   .menu > .menu-item {
     position: relative;
-    display: inline-block; }
-    .menu > .menu-item:hover .sub-menu {
-      display: block; }
+    display: inline-block;
+    border-radius: 3px;
+    background: rgba(52, 6, 68, 0.5);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
+    margin-right: 5px;
+    transition: background 500ms; }
+    .menu > .menu-item:hover {
+      background: linear-gradient(45deg, #93278f, #00a99d); }
+      .menu > .menu-item:hover .sub-menu {
+        display: block; }
   .menu > .current_page_parent > a,
   .menu > .current_page_parent > a:hover,
   .menu > .current-menu-item > a,
@@ -2147,11 +2156,6 @@ address {
     margin: 0 3px; }
   .bc__item {
     padding: 0 5px; }
-
-.qtranxs-lang-menu {
-  border-radius: 3px;
-  background: linear-gradient(45deg, #93278f, #00a99d);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
 
 .woocommerce-MyAccount-navigation {
   margin-bottom: 20px; }
