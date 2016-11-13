@@ -28,15 +28,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php if ( get_option( 'woocommerce_enable_myaccount_registration' ) === 'yes' ) : ?>
 
-<div class="form-login cfx" id="form-login">
+<div class="u-columns col2-set" id="customer_login">
 
-	<div class="form-login__col col-sm-5">
+	<div class="u-column1 col-1">
 
 <?php endif; ?>
 
 		<h2><?php _e( 'Login', 'woocommerce' ); ?></h2>
 
-		<form method="post" class="form-login__login">
+		<form method="post" class="login">
 
 			<?php do_action( 'woocommerce_login_form_start' ); ?>
 
@@ -54,8 +54,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<p class="form-row">
 				<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
 				<input type="submit" class="woocommerce-Button button" name="login" value="<?php esc_attr_e( 'Login', 'woocommerce' ); ?>" />
-				<label for="rememberme" class="inline">
-					<input class="woocommerce-Input woocommerce-Input--checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <?php _e( 'Remember me', 'woocommerce' ); ?>
+				<label for="rememberme" class="inline is-disabled">
+					<input class="woocommerce-Input woocommerce-Input--checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" checked="true"/> <?php _e( 'Remember me', 'woocommerce' ); ?>
 				</label>
 			</p>
 			<p class="woocommerce-LostPassword lost_password">
@@ -70,11 +70,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	</div>
 
-	<div class="form-login__col col-sm-5">
+	<div class="u-column2 col-2">
 
 		<h2><?php _e( 'Register', 'woocommerce' ); ?></h2>
 
-		<form method="post" class="form-login__register">
+		<form method="post" class="register">
 
 			<?php do_action( 'woocommerce_register_form_start' ); ?>
 
@@ -102,7 +102,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php endif; ?>
 
 			<!-- Spam Trap -->
-			<div style="<?php echo ( ( is_rtl() ) ? 'right' : 'left' ); ?>: -999em; position: absolute;"><label for="trap"><?php _e( 'Anti-spam', 'woocommerce' ); ?></label><input type="text" name="email_2" id="trap" tabindex="-1" /></div>
+			<div style="<?php echo ( ( is_rtl() ) ? 'right' : 'left' ); ?>: -999em; position: absolute;"><label for="trap"><?php _e( 'Anti-spam', 'woocommerce' ); ?></label><input type="text" name="email_2" id="trap" tabindex="-1" autocomplete="off" /></div>
 
 			<?php do_action( 'woocommerce_register_form' ); ?>
 			<?php do_action( 'register_form' ); ?>
