@@ -459,7 +459,8 @@ h4,
 h5,
 h6 {
   margin: 0 0 .5em;
-  line-height: 1.2; }
+  line-height: 1.2;
+  font-weight: 400; }
 
 h1,
 h2 {
@@ -477,7 +478,11 @@ td {
   font-family: "Helvetica Neue", Arial, sans-serif; }
 
 p {
-  line-height: 1.4; }
+  line-height: 1.4;
+  margin: 0 0 1em; }
+
+fieldset {
+  margin: 0 0 1em; }
 
 table {
   width: 100%;
@@ -554,6 +559,9 @@ input {
 
 input:checked {
   background: #00b31a; }
+
+label {
+  display: block; }
 
 textarea {
   border: 0;
@@ -2134,6 +2142,21 @@ mark {
   border-radius: 3px;
   background: linear-gradient(45deg, #93278f, #00a99d);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
+
+.woocommerce-MyAccount-navigation {
+  margin-bottom: 20px; }
+  .woocommerce-MyAccount-navigation ul {
+    list-style: none;
+    display: -ms-flexbox;
+    display: flex; }
+  .woocommerce-MyAccount-navigation li {
+    margin: 5px 5px 5px 0;
+    border-radius: 3px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
+  .woocommerce-MyAccount-navigation a {
+    padding: 5px 15px; }
+  .woocommerce-MyAccount-navigation .is-active {
+    background: linear-gradient(45deg, #93278f, #00a99d); }
 
 .cat-list__title {
   position: relative;
