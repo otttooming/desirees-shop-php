@@ -73,8 +73,6 @@
 .bc {
   overflow: hidden;
 
-  margin: 0 0 0 15px;
-
   white-space: nowrap;
   text-transform: uppercase;
 
@@ -85,7 +83,7 @@
   }
 
   &__delim {
-    margin: 0 5px;
+    margin: 0 3px;
   }
 
   &__item {

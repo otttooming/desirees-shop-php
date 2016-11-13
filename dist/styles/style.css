@@ -2127,14 +2127,13 @@ mark {
 
 .bc {
   overflow: hidden;
-  margin: 0 0 0 15px;
   white-space: nowrap;
   text-transform: uppercase;
   font-size: 11px; }
   .bc a {
     color: #ffc000; }
   .bc__delim {
-    margin: 0 5px; }
+    margin: 0 3px; }
   .bc__item {
     padding: 0 5px; }
 
