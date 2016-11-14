@@ -275,7 +275,7 @@ function desirees_get_wc_categories_menu($title = 'Categories'){
 												$subcat_args = array(
 													'taxonomy' => 'product_cat',
 													'title_li' => '',
-													'show_count' => 1,
+													'show_count' => 0,
 													'hide_empty' => 0,
 													'echo' => false,
 													'show_option_none' => '',
@@ -297,19 +297,32 @@ function desirees_get_wc_categories_menu($title = 'Categories'){
 													</a>
 													<?php if ( $subcategories ) : ?>
 
-													<div class="cat-list__subcat-control control__items">
-															<svg class="<?php if($term_id == $current_cat) { echo 'control__up'; } else { echo 'control__down'; } ; ?>" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 501.5 501.5"><g><path fill="currentColor" d="M199.33 410.622l-55.77-55.508L247.425 250.75 143.56 146.384l55.77-55.507L358.44 250.75z"></path></g></svg>
-													</div>
+														<div class="cat-list__subcat-control control__items">
+																<svg class="<?php if($term_id == $current_cat) { echo 'control__up'; } else { echo 'control__down'; } ; ?>" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 501.5 501.5"><g><path fill="currentColor" d="M199.33 410.622l-55.77-55.508L247.425 250.75 143.56 146.384l55.77-55.507L358.44 250.75z"></path></g></svg>
+														</div>
 
-												<?php endif; ?>
+													<?php endif; ?>
 
 												</h2>
 
-												<?php if ( $subcategories ) : ?>
-													<ul class='cat-list__subcat'>
-														<?php echo $subcategories ?>
-													</ul>
-												<?php endif; ?>
+												<?php $subcats = get_categories( array ('taxonomy' => 'product_cat', 'parent' => $categories->term_id )); ?>
+												<ul class='cat-list__subcat'>
+														<?php foreach ( $subcats as $subcat ) { ?>
+																<li class="cat-list__title">
+																		<a href="<?php echo get_term_link( $subcat, 'product_cat' ); ?>">
+
+																				<span class="cat-list__name"><?php echo $subcat->name; ?></span>
+																				<span class="cat-list__desc"><?php _e($subcat->description); ?></span>
+																				<span class="cat-list__count"><?php echo $subcat->count; ?></span>
+
+																				<?php if (wp_get_attachment_url( get_woocommerce_term_meta( $subcat->term_id, 'thumbnail_id', true ) )) : ?>
+																						<img class="cat-list__thumb" src="<?php echo wp_get_attachment_url( get_woocommerce_term_meta( $subcat->term_id, 'thumbnail_id', true ) ); ?>" alt="" />
+																				<?php endif; ?>
+																		</a>
+																</li>
+														<?php } ?>
+												</ul>
+
 										</div>
 										<?php
 								}

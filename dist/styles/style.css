@@ -2182,7 +2182,8 @@ address {
   color: #ffc000;
   font-size: 14px;
   -ms-flex-align: center;
-      align-items: center; }
+      align-items: center;
+  text-align: left; }
 
 .cat-list__name {
   display: block;
@@ -2221,7 +2222,10 @@ address {
 
 .cat-list__subcat {
   display: none;
-  list-style: none; }
+  list-style: none;
+  margin: 0 -20px;
+  padding: 0 0px 0 25px;
+  border-left: 1px solid #a30000; }
   .cat-list__group-open .cat-list__subcat {
     display: block; }
 
