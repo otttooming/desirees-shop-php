@@ -14,37 +14,27 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-global $product, $post, $woocommerce_loop, $woocommerce;
+global $product;
 
 // Ensure visibility
 if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 
-// Store loop count we're currently on
-if ( empty( $woocommerce_loop['loop'] ) )
-	$woocommerce_loop['loop'] = 0;
-
-// Store column count for displaying the grid
-if ( empty( $woocommerce_loop['columns'] ) )
-	$woocommerce_loop['columns'] = apply_filters( 'loop_shop_columns', 4 );
-
-// Increase loop count
-$woocommerce_loop['loop']++;
-
 ?>
 
-	<div class="products-listing__item">
-	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
+	<li itemscope itemtype="http://schema.org/Product" class="products-listing__item">
+			<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
 
       <a href="<?php echo the_permalink(); ?>" class="product-loop__images-wrap">
 
 					<?php woocommerce_get_template( 'loop/sale-flash.php' );  ?>
+
         	<div class="product-loop__images">
 							<?php if( has_post_thumbnail() ) : ?>
-									<img class="product-loop__img lazyload" data-src="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium' )[0]; ?>" alt="<?php the_title(); ?>"  width="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium' )[1] ?>" height="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium' )[2] ?>">
+									<img itemprop="image" class="product-loop__img lazyload" data-src="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium' )[0]; ?>" alt="<?php the_title(); ?>"  width="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium' )[1] ?>" height="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium' )[2] ?>">
 							<?php else : ?>
-									<img class="product-loop__img lazyload" data-src="<?php echo woocommerce_placeholder_img_src(); ?>" alt="<?php the_title(); ?>">
+									<svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 392.697 392.697"><path d="M21.837 83.42l36.496 16.677 169.387-80.21a3.5 3.5 0 0 0-.102-6.355L197.766.3c-.903-.4-1.933-.4-2.837 0L21.872 77.036a3.5 3.5 0 0 0-.036 6.383zM185.69 177.26l-64.99-30.01v91.618a2.502 2.502 0 0 1-3.578 2.256L48.248 208.5a2.5 2.5 0 0 1-1.42-2.257v-92.23L6.803 95.5a3.498 3.498 0 0 0-4.955 3.182v208.744c0 1.37.798 2.615 2.044 3.185l178.886 81.77a3.512 3.512 0 0 0 3.347-.24 3.503 3.503 0 0 0 1.608-2.946v-208.75c0-1.368-.8-2.613-2.046-3.183zM389.24 95.74a3.503 3.503 0 0 0-3.347-.238l-178.876 81.76a3.502 3.502 0 0 0-2.045 3.185v208.75a3.5 3.5 0 0 0 4.955 3.186l178.876-81.768a3.498 3.498 0 0 0 2.045-3.185V98.685a3.5 3.5 0 0 0-1.608-2.945zM372.915 80.216a3.504 3.504 0 0 0-2.082-3.18l-60.182-26.68a3.5 3.5 0 0 0-2.937.044l-173.755 82.992 60.933 29.117a3.5 3.5 0 0 0 2.91 0l173.067-79.093a3.493 3.493 0 0 0 2.048-3.2z"/></svg>
 							<?php endif; ?>
 					</div>
 
@@ -53,19 +43,18 @@ $woocommerce_loop['loop']++;
 
       <div class="product-information product__info-block">
 
-					<a href="<?php the_permalink(); ?>">
-							<h3 class="product__title">
-								<?php the_title(); ?>
+					<a itemprop="url" href="<?php the_permalink(); ?>">
+							<h3 itemprop="name" class="product__title">
+									<?php the_title(); ?>
 							</h3>
 					</a>
 
           <div class="product__purchase">
-
               <?php do_action( 'woocommerce_after_shop_loop_item_title' ); ?>
 
-                <?php do_action( 'woocommerce_after_shop_loop_item' ); ?>
+              <?php do_action( 'woocommerce_after_shop_loop_item' ); ?>
           </div>
 
       </div>
-	</div>
+	</li>
 <?php
