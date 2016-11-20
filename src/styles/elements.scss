@@ -8,8 +8,8 @@
 html {
   font-size: 13px;
 
-  -webkit-text-size-adjust: 100%;
   -webkit-text-size-adjust: none; // Prevent font scaling in landscape
+  -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 
   @media screen and (max-width: 767px) {
@@ -47,8 +47,8 @@ h5,
 h6 {
   margin: 0 0 .5em;
 
-  line-height: 1.2;
   font-weight: $font-weight-normal;
+  line-height: 1.2;
 }
 
 h1,
@@ -72,8 +72,9 @@ td {
 }
 
 p {
-  line-height: 1.4;
   margin: 0 0 1em;
+
+  line-height: 1.4;
 
   a {
     color: $color-warm;
@@ -88,6 +89,7 @@ table {
   width: 100%;
 
   border-collapse: collapse;
+
   font-family: $typeface-secondary;
 }
 
@@ -141,34 +143,37 @@ select {
 }
 
 input {
-
   &[type=text] {
     min-height: 30px;
   }
 
   &[type=checkbox],
   &[type=radio] {
+    position: relative;
+
+    width: 20px;
     height: 20px;
-    -webkit-appearance: none;
     margin: 0;
     padding: 0;
-    width: 20px;
-    box-shadow: $shadow-std;
-    border-radius: $border-radius-round;
+
     color: $color-white;
-    text-shadow: $shadow-text;
-    background: $color-button-bg-normal;
     border: 1px solid $color-go;
-    position: relative;
+    border-radius: $border-radius-round;
+    background: $color-button-bg-normal;
+    box-shadow: $shadow-std;
+    text-shadow: $shadow-text;
+
+    -webkit-appearance: none;
 
     &:checked {
       background: $color-go;
 
       &:after {
-        content: '✔';
         position: absolute;
         top: 50%;
         left: 50%;
+
+        content: '✔';
         transform: translate3d(-50%, -50%, 0);
       }
     }
@@ -219,12 +224,12 @@ label {
 }
 
 textarea {
+  color: $color-white;
   border: 0;
   border-radius: $border-radius-std;
+  background: $color-button-bg-normal;
   box-shadow: $shadow-std;
   text-shadow: $shadow-text;
-  background: $color-button-bg-normal;
-  color: $color-white;
 }
 
 hr {
@@ -316,7 +321,7 @@ address {
 }
 
 .bg__common {
+  border-radius: $border-radius-std;
   background: $color-bg;
   box-shadow: $shadow-std;
-  border-radius: $border-radius-std;
 }

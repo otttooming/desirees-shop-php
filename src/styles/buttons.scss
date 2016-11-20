@@ -17,13 +17,13 @@
   color: $color-white;
   border: none;
   border-radius: 3px;
+  background: $color-button-bg;
   box-shadow: $shadow-std;
   text-shadow: $shadow-text;
 
   font-family: $typeface-primary;
   font-size: 11px;
   line-height: 1.5;
-  background: $color-button-bg;
 
   &:hover {
     background: $color-go;
@@ -42,8 +42,8 @@
   &.big {
     padding: 20px;
 
-    @include rem(padding, 20px);
     @include rem(font-size, 24px);
+    @include rem(padding, 20px);
   }
 
   &__icon {

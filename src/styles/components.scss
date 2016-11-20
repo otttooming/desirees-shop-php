@@ -17,8 +17,8 @@
     box-shadow: $shadow-std;
 
     path {
-      transform-origin: 50% 50%;
       transition: transform $transition-normal;
+      transform-origin: 50% 50%;
     }
   }
 

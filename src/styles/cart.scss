@@ -51,7 +51,6 @@
   }
 
   &_totals {
-
     tr {
       &:nth-child(2) {
         background: $color-bg;
@@ -137,8 +136,9 @@
 
 .wc_payment_method {
   position: relative;
-  padding-left: 40px;
+
   margin-bottom: 20px;
+  padding-left: 40px;
 
   label {
     margin: 5px 0;
@@ -152,6 +152,7 @@
     position: absolute;
     top: 50%;
     left: 10px;
+
     height: 20px;
 
     transform: translate3d(0,-50%,0);
@@ -159,15 +160,17 @@
 }
 
 #payment div.payment_box {
+  padding: 20px;
+
   border-radius: $border-radius-std;
   background: $color-grey;
   box-shadow: $shadow-std;
-  padding: 20px;
 }
 
 .wc-terms-and-conditions {
-  padding-left: 40px;
   position: relative;
+
+  padding-left: 40px;
 
   input {
     position: absolute;
