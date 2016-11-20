@@ -24,7 +24,7 @@
 
 .cart {
   &__form-head {
-    background: rgba($color-black, .2);
+    background: $color-bg;
   }
 
   &__form-body {
@@ -34,13 +34,13 @@
 
     tr {
       &:nth-child(2) {
-        background: rgba($color-black, .2);
+        background: $color-bg;
       }
     }
   }
 
   &__form-footer {
-    background: rgba($color-black, .2);
+    background: $color-bg;
   }
 
   .product-price,
@@ -51,15 +51,10 @@
   }
 
   &_totals {
-    padding: 20px;
-
-    border-radius: 3px;
-    background: rgba($color-black, .5);
-    box-shadow: $shadow-std;
 
     tr {
       &:nth-child(2) {
-        background: rgba($color-black, .2);
+        background: $color-bg;
       }
     }
   }
@@ -86,10 +81,6 @@
   &__place-order-button {
     float: right;
   }
-}
-
-#place_order {
-  float: right!important;
 }
 
 .checkout {
@@ -124,7 +115,7 @@
     display: flex;
     flex-direction: row-reverse;
 
-    margin: 5px 0;
+    margin: 0 0 20px;
 
     label {
       display: flex;
@@ -146,18 +137,22 @@
 
 .wc_payment_method {
   position: relative;
-
-  box-sizing: border-box;
   padding-left: 40px;
+  margin-bottom: 20px;
 
   label {
     margin: 5px 0;
+  }
+
+  img {
+    width: 25px;
   }
 
   .input-radio {
     position: absolute;
     top: 50%;
     left: 10px;
+    height: 20px;
 
     transform: translate3d(0,-50%,0);
   }
@@ -167,4 +162,15 @@
   border-radius: $border-radius-std;
   background: $color-grey;
   box-shadow: $shadow-std;
+  padding: 20px;
+}
+
+.wc-terms-and-conditions {
+  padding-left: 40px;
+  position: relative;
+
+  input {
+    position: absolute;
+    left: 10px;
+  }
 }

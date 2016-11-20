@@ -15,7 +15,7 @@ wc_print_notices();
 
 do_action( 'woocommerce_before_cart' ); ?>
 
-<form action="<?php echo esc_url( $woocommerce->cart->get_cart_url() ); ?>" method="post" class="cart__form">
+<form action="<?php echo esc_url( $woocommerce->cart->get_cart_url() ); ?>" method="post" class="cart__form bg__common p1 mb1">
 <?php do_action( 'woocommerce_before_cart_table' ); ?>
 <table class="cart table checkout_cart" cellspacing="0" style="margin-bottom: 20px;">
 	<thead class="cart__form-head">
@@ -119,7 +119,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 			<?php if ( get_option( 'woocommerce_enable_coupons' ) == 'yes' ) { ?>
 				<div class="coupon cfx">
 
-					<label for="coupon_code"><?php _e('Coupon', 'desirees'); ?>:</label> <input name="coupon_code" class="input-text" id="coupon_code" value="" /> <input type="submit" class="button apply-coupon" name="apply_coupon" value="<?php _e('Apply Coupon', 'desirees'); ?>" />
+					<label for="coupon_code"><?php _e('Coupon', 'desirees'); ?>:</label> <input name="coupon_code" class="input-text" id="coupon_code" value="" type="text" /> <input type="submit" class="button apply-coupon" name="apply_coupon" value="<?php _e('Apply Coupon', 'desirees'); ?>" />
 
 					<?php do_action('woocommerce_cart_coupon'); ?>
 
@@ -140,6 +140,6 @@ do_action( 'woocommerce_before_cart' ); ?>
 <?php do_action( 'woocommerce_after_cart_table' ); ?>
 </form>
 
-<div class="cart__collaterals cfx">
+<div class="cart__collaterals cfx bg__common p1">
 	<?php do_action('woocommerce_cart_collaterals'); ?>
 </div>

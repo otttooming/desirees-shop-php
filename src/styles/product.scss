@@ -4,7 +4,7 @@
     padding: 20px;
 
     border-radius: $border-radius-std;
-    background: rgba($color-black, .2);
+    background: $color-bg;
     box-shadow: $shadow-std;
 
     flex: 1 0 310px;
@@ -116,7 +116,7 @@
     padding: 20px;
 
     border-radius: $border-radius-std;
-    background: rgba($color-black, .2);
+    background: $color-bg;
 
     flex: 1 0 180px;
   }
@@ -213,7 +213,7 @@
     padding: 20px;
 
     border-radius: $border-radius-std;
-    background: rgba($color-black, .2);
+    background: $color-bg;
     box-shadow: $shadow-std;
 
     > div {
@@ -235,7 +235,7 @@
     padding: 20px;
 
     border-radius: $border-radius-std;
-    background: rgba($color-black, .2);
+    background: $color-bg;
     box-shadow: $shadow-std;
   }
 

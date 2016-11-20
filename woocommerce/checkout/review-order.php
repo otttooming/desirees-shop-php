@@ -14,7 +14,7 @@ global $woocommerce;
 
 ?>
 <table class="shop_table checkout_cart table woocommerce-checkout-review-order-table">
-	<thead class="cart__form-head">
+	<thead class="cart__form-head bg__common">
 		<tr>
       <th class="product-thumbnail cart_del_column">&nbsp;</th>
 			<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>

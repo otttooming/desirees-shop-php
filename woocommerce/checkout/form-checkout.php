@@ -1,141 +1,67 @@
-
-
 <?php
 /**
  * Checkout Form
  *
+ * This template can be overridden by copying it to yourtheme/woocommerce/checkout/form-checkout.php.
+ *
+ * HOWEVER, on occasion WooCommerce will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
+ *
+ * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
  * @version     2.3.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-
-
-global $woocommerce; $woocommerce_checkout = $woocommerce->checkout();
-$get_checkout_url = apply_filters( 'woocommerce_get_checkout_url', WC()->cart->get_checkout_url() );
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 wc_print_notices();
+
+do_action( 'woocommerce_before_checkout_form', $checkout );
+
+// If checkout registration is disabled and not logged in, the user cannot checkout
+if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_user_logged_in() ) {
+	echo apply_filters( 'woocommerce_checkout_must_be_logged_in_message', __( 'You must be logged in to checkout.', 'woocommerce' ) );
+	return;
+}
+
 ?>
 
-<div class="checkout-default">
+<form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
 
-    <?php if( !is_user_logged_in() && (2 > 3) ): ?>
-        <div class="checkout__tab-content tab-content tab-login" id="content_tab_1">
-            <div class="col2-set">
-                <div class="col-1 checkout-login">
+	<?php if ( sizeof( $checkout->checkout_fields ) > 0 ) : ?>
 
-                    <h3><?php _e('New Customers', 'desirees') ?></h3>
+		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 
-                    <div class="checkout-methods cfx">
-						            <?php if ($checkout->enable_guest_checkout): ?>
-	                        <div class="method-radio">
-	                            <input type="radio" id="method1" name="method" value="1" <?php if ($checkout->enable_guest_checkout): ?> checked <?php endif; ?>/>
-	                            <label for="method1"><?php _e('Checkout as Guest', 'desirees'); ?></label>
-	                        </div>
-						            <?php endif ?>
+		<div class="col2-set bg__common p1" id="customer_details">
+			<div class="col-1">
+				<?php do_action( 'woocommerce_checkout_billing' ); ?>
+			</div>
 
-						            <?php if (get_option('woocommerce_enable_signup_and_login_from_checkout') != 'no'): ?>
-	                        <div class="method-radio">
-	                            <input type="radio" id="method2" name="method" value="2" <?php if (!$checkout->enable_guest_checkout): ?> checked <?php endif; ?> />
-	                            <label for="method2"><?php _e('Create an Account', 'desirees'); ?></label>
-	                        </div>
-                        <?php endif; ?>
-                    </div>
+			<div class="col-2">
+				<?php do_action( 'woocommerce_checkout_shipping' ); ?>
+			</div>
+		</div>
 
-                </div>
-                <div class="col-2 checkout-customers cfx">
+		<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
 
-                    <h3><?php _e('Returning Customers', 'desirees') ?></h3>
-                    <?php do_action( 'woocommerce_before_checkout_form', $checkout );
-                        // If checkout registration is disabled and not logged in, the user cannot checkout
-                        if (get_option('woocommerce_enable_signup_and_login_from_checkout')=="no" && get_option('woocommerce_enable_guest_checkout')=="no" && !is_user_logged_in()) :
-                        	echo apply_filters('woocommerce_checkout_must_be_logged_in_message', __('You must be logged in to checkout.', 'desirees'));
-                        endif;
-                    ?>
+	<?php endif; ?>
 
-                </div>
-            </div>
-        </div>
-    <?php endif; ?>
+	<div id="order_review" class="woocommerce-checkout-review-order bg__common p1 mt1">
+		<h3 id="order_review_heading"><?php _e( 'Your order', 'woocommerce' ); ?></h3>
 
+		<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 
-<form name="checkout" method="post" class="checkout checkout-form cfx" action="<?php echo esc_url( $get_checkout_url ); ?>">
+		<?php do_action( 'woocommerce_checkout_order_review' ); ?>
+	</div>
 
-    <?php if(!is_user_logged_in()): ?>
-        <?php if (get_option('woocommerce_enable_signup_and_login_from_checkout')=="yes") : ?>
-            <!-- ----------------------------------------------- -->
-            <!-- -------------- -- REGISTER -- ----------------- -->
-            <!-- ----------------------------------------------- -->
-            <div class="checkout__tab-content tab-content register-tab-content" id="content_tab-register" <?php if ($checkout->enable_guest_checkout): ?> style="display:none;" <?php endif; ?>>
+	<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
 
-                	<?php if (get_option('woocommerce_enable_guest_checkout')=='yes') : ?>
-
-                		<p class="form-row">
-                			<input class="input-checkbox" id="createaccount" <?php checked($woocommerce_checkout->get_value('createaccount'), true) ?> type="checkbox" name="createaccount" value="1" /> <label for="createaccount" class="checkbox"><?php _e('Create an account?', 'desirees'); ?></label>
-                		</p>
-
-                	<?php endif; ?>
-
-                	<?php do_action( 'woocommerce_before_checkout_registration_form', $woocommerce_checkout ); ?>
-
-                	<div class="create-account-form">
-
-                		<p><?php _e('Create an account by entering the information below. If you are a returning customer please login with your username at the top of the page.', 'desirees'); ?></p>
-
-                    <?php if ( is_user_logged_in() ) { ?>
-                    	<a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account','woothemes'); ?>"><?php _e('My Account','woothemes'); ?></a>
-                    <?php }
-                    else { ?>
-                    	<a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('Login / Register','woothemes'); ?>"><?php _e('Login / Register','woothemes'); ?></a>
-                    <?php } ?>
-
-                	</div>
-
-                	<?php do_action( 'woocommerce_after_checkout_registration_form', $woocommerce_checkout ); ?>
-
-            </div>
-        <?php endif; ?>
-
-    <?php endif; ?>
-
-
-    <?php
-    // filter hook for include new pages inside the payment method
-    $get_checkout_url = apply_filters( 'woocommerce_get_checkout_url', $woocommerce->cart->get_checkout_url() ); ?>
-
-    	<?php if (sizeof($woocommerce_checkout->checkout_fields)>0) : ?>
-
-            <!-- ----------------------------------------------- -->
-            <!-- ----------------- BILLING --------------------- -->
-            <!-- ----------------------------------------------- -->
-            <div class="checkout__tab-content tab-content tab-billing" id="content_tab_3">
-                <?php do_action('woocommerce_checkout_billing'); ?>
-            </div>
-
-
-            <!-- ----------------------------------------------- -->
-            <!-- ----------------- SHIPPING -------------------- -->
-            <!-- ----------------------------------------------- -->
-            <div class="checkout__tab-content tab-content tab-shipping" id="content_tab_4">
-        	   <?php do_action('woocommerce_checkout_shipping'); ?>
-            </div>
-            <!-- ----------------------------------------------- -->
-            <!-- ------------------ ORDER ---------------------- -->
-            <!-- ----------------------------------------------- -->
-    	<?php endif; ?>
-
-        <div class="checkout__tab-content tab-content tap-order" id="content_tab_5">
-            <h3 id="order_review_heading"><?php _e('Your order', 'desirees'); ?></h3>
-            <?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
-
-            <div id="order_review" class="woocommerce-checkout-review-order">
-                <?php do_action( 'woocommerce_checkout_order_review' ); ?>
-            </div>
-
-            <?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
-        </div>
 </form>
-</div>
 
-<?php do_action('woocommerce_after_checkout_form'); ?>
+<?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>

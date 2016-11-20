@@ -146,7 +146,7 @@ add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_p
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 10 );
 
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
-add_action( 'woocommerce_after_single_product', 'woocommerce_output_related_products', 20 ); 
+add_action( 'woocommerce_after_single_product', 'woocommerce_output_related_products', 20 );
 
 
 //Minium order amount
@@ -244,3 +244,15 @@ add_action( 'desirees_after_product_details_wrap', 'woocommerce_template_single_
 
 // Add shortcode support for standard text widget
 add_filter('widget_text','do_shortcode');
+
+remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_login_form', 10 );
+
+
+// hide coupon field on cart page
+function hide_coupon_field_on_cart( $enabled ) {
+  if ( is_checkout() ) {
+  $enabled = false;
+  }
+  return $enabled;
+}
+add_filter( 'woocommerce_coupons_enabled', 'hide_coupon_field_on_cart' );
