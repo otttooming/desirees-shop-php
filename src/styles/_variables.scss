@@ -15,9 +15,11 @@ $color-charcoal: #340644;
 $color-button-bg: linear-gradient(45deg, #93278f, #00a99d);
 $color-buy-button-bg: linear-gradient(to top right, #78239d, #ff5300);
 $color-attention: $color-red;
-$color-button-bg-normal: rgba(#340644, .5);
+$color-button-bg-normal: rgba(#340644, .5); // Rec: better choice ? #340644
 $color-go: #00b31a;
 $color-bg: rgba(#340644, .2);
+
+$color-input-bg-normal: transparent;
 
 // $color-black: #151515;
 // $color-charcoal: #222;
@@ -44,4 +46,5 @@ $shadow-std: 0 0 15px rgba(0, 0, 0, .46);
 $shadow-text: 2px 2px 5px $color-black;
 $transition-normal: 500ms;
 $border-radius-std: 3px;
+$border-radius-medium: 15px;
 $border-radius-round: 50%;

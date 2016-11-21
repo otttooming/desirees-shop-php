@@ -1063,3 +1063,15 @@
 .m-20-0-20-0 {
   margin: 20px 0 20px 0;
 }
+
+.col2-set {
+  display: flex;
+  flex-wrap: wrap;
+
+  .col-1,
+  .col-2 {
+    padding: 20px;
+    flex: 1 0 270px;
+    box-sizing: border-box;
+  }
+}

@@ -21,6 +21,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
+<h2>Pay</h2>
+
 <form id="order_review" method="post">
 
 	<table class="shop_table">

@@ -38,7 +38,7 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
 
 		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 
-		<div class="col2-set bg__common p1" id="customer_details">
+		<div class="col2-set bg__common mb1" id="customer_details">
 			<div class="col-1">
 				<?php do_action( 'woocommerce_checkout_billing' ); ?>
 			</div>
@@ -52,12 +52,17 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
 
 	<?php endif; ?>
 
-	<div id="order_review" class="woocommerce-checkout-review-order bg__common p1 mt1">
-		<h3 id="order_review_heading"><?php _e( 'Your order', 'woocommerce' ); ?></h3>
+	<div id="order_review" class="woocommerce-checkout-review-order">
+		<div class="bg__common p1 mb1">
+			<h2 id="order_review_heading"><?php _e( 'Your order', 'woocommerce' ); ?></h2>
 
-		<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
+			<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
+		</div>
 
-		<?php do_action( 'woocommerce_checkout_order_review' ); ?>
+		<div class="bg__common p1 mb1">
+			<?php do_action( 'woocommerce_checkout_order_review' ); ?>
+		</div>
+
 	</div>
 
 	<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>

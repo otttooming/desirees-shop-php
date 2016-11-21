@@ -523,10 +523,6 @@ ul {
   margin: 0;
   padding: 0; }
 
-select {
-  cursor: pointer;
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif; }
-
 input[type=text] {
   min-height: 30px; }
 
@@ -569,6 +565,7 @@ select,
 input[type=text],
 input[type=tel],
 input[type=email],
+input[type=password],
 input[type=number] {
   box-sizing: border-box;
   margin: 0;
@@ -577,17 +574,24 @@ input[type=number] {
   color: inherit;
   border: none;
   border-radius: 5px;
-  border-radius: 3px;
+  border-radius: 15px;
   outline: none;
-  background: rgba(52, 6, 68, 0.5);
+  background: transparent;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
-  text-shadow: 2px 2px 5px #340644;
   font-size: 12px;
   line-height: 30px;
   -webkit-appearance: none; }
 
+select {
+  cursor: pointer;
+  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
+  background: #ffc000;
+  color: #340644;
+  border-radius: 3px; }
+
 label {
-  display: block; }
+  display: block;
+  font-family: "Helvetica Neue", Arial, sans-serif; }
 
 textarea {
   color: #fff;
@@ -595,7 +599,9 @@ textarea {
   border-radius: 3px;
   background: rgba(52, 6, 68, 0.5);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
-  text-shadow: 2px 2px 5px #340644; }
+  text-shadow: 2px 2px 5px #340644;
+  width: 100%;
+  min-height: 300px; }
 
 hr {
   width: 100%;
@@ -1378,6 +1384,18 @@ address {
 .m-20-0-20-0 {
   margin: 20px 0 20px 0; }
 
+.col2-set {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .col2-set .col-1,
+  .col2-set .col-2 {
+    padding: 20px;
+    -ms-flex: 1 0 270px;
+        flex: 1 0 270px;
+    box-sizing: border-box; }
+
 .is-disabled {
   display: none; }
 
@@ -1704,13 +1722,16 @@ address {
   background: #340644;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
   -ms-flex-align: center;
-      align-items: center; }
+      align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
   .woocommerce-error li,
   .woocommerce-message li {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
-        align-items: center; }
+        align-items: center;
+    width: 100%; }
   .woocommerce-error .button,
   .woocommerce-message .button {
     margin-right: 20px; }
@@ -2376,12 +2397,13 @@ address {
   line-height: 40px; }
 
 .search__field {
-  border-radius: 3px 0 0 3px; }
+  border-radius: 3px 0 0 3px !important; }
 
 .search__select {
   text-transform: uppercase;
   border-radius: 0;
   background: #340644;
+  color: #fff;
   font-size: 11px; }
 
 .search__button {
@@ -2508,8 +2530,10 @@ address {
     position: absolute;
     left: 10px; }
 
-.checkout__tab-content label {
-  display: block; }
+.checkout input[type=email],
+.checkout input[type=tel],
+.checkout input[type=text] {
+  width: 50%; }
 
 .sidebar_grid > .widget-container {
   box-sizing: border-box;

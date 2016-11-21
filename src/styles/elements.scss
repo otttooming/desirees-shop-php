@@ -136,12 +136,6 @@ ul {
   padding: 0;
 }
 
-select {
-  cursor: pointer;
-
-  font-family: $typeface-primary;
-}
-
 input {
   &[type=text] {
     min-height: 30px;
@@ -197,6 +191,7 @@ select,
 input[type=text],
 input[type=tel],
 input[type=email],
+input[type=password],
 input[type=number] {
   box-sizing: border-box;
   margin: 0;
@@ -207,11 +202,11 @@ input[type=number] {
   color: inherit;
   border: none;
   border-radius: 5px;
-  border-radius: $border-radius-std;
+  border-radius: $border-radius-medium;
   outline: none;
-  background: $color-button-bg-normal;
+  background: $color-input-bg-normal;
   box-shadow: $shadow-std;
-  text-shadow: $shadow-text;
+  // text-shadow: $shadow-text;
 
   font-size: 12px;
   line-height: 30px;
@@ -219,8 +214,18 @@ input[type=number] {
   -webkit-appearance: none;
 }
 
+select {
+  cursor: pointer;
+
+  font-family: $typeface-primary;
+  background: $color-warm;
+  color: $color-black;
+  border-radius: $border-radius-std;
+}
+
 label {
   display: block;
+  font-family: $typeface-secondary;
 }
 
 textarea {
@@ -230,6 +235,8 @@ textarea {
   background: $color-button-bg-normal;
   box-shadow: $shadow-std;
   text-shadow: $shadow-text;
+  width: 100%;
+  min-height: 300px;
 }
 
 hr {

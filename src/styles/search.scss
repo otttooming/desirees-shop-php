@@ -16,7 +16,7 @@
   }
 
   &__field {
-    border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px!important;
   }
 
   &__select {
@@ -24,6 +24,7 @@
 
     border-radius: 0;
     background: $color-black;
+    color: $color-white;
 
     font-size: 11px;
   }

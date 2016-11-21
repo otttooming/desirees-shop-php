@@ -1,7 +1,8 @@
 .checkout {
-  &__tab-content {
-    label {
-      display: block;
-    }
+
+  input[type=email],
+  input[type=tel],
+  input[type=text] {
+    width: 50%;
   }
 }

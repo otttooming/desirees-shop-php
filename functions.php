@@ -256,3 +256,7 @@ function hide_coupon_field_on_cart( $enabled ) {
   return $enabled;
 }
 add_filter( 'woocommerce_coupons_enabled', 'hide_coupon_field_on_cart' );
+
+
+remove_action( 'woocommerce_checkout_order_review', 'woocommerce_order_review', 10 );
+add_action( 'woocommerce_checkout_before_order_review', 'woocommerce_order_review', 20 );
