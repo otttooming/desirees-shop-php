@@ -1368,11 +1368,7 @@ address {
       flex-grow: 1; }
 
 .container__footer {
-  width: 100% !important;
-  margin-top: 40px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background: rgba(52, 6, 68, 0.5);
+  background: rgba(52, 6, 68, 0.2);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
 
 .m-10-0-10-0 {

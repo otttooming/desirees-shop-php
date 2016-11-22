@@ -16,48 +16,59 @@ function desirees_widgets_init() {
 		'after_title' => '</h3>',
 	) );
 
-	// Area 4, located in the footer.
+	// Footer 1 widget area
 	register_sidebar( array(
-		'name' => __( 'Footer Primary Widget Area', 'desirees' ),
-		'id' => 'first-footer-widget-area',
+		'name' => __( 'Footer 1', 'desirees' ),
+		'id' => 'footer-1',
 		'before_widget' => '',
 		'after_widget' => '',
-		'description' => __( 'The First Footer Widget Area', 'desirees' ),
-        'before_title' => '<span class="footer_title">',
-        'after_title' => '</span>'
+		'description' => __( 'Footer 1', 'desirees' ),
+        'before_title' => '<h2>',
+        'after_title' => '</h2>'
 	) );
 
-	// Area 5, located in the footer.
+	// Footer 2 widget area
 	register_sidebar( array(
-		'name' => __( 'Footer Secondary Widget Area', 'desirees' ),
-		'id' => 'second-footer-widget-area',
+		'name' => __( 'Footer 2', 'desirees' ),
+		'id' => 'footer-2',
 		'before_widget' => '',
 		'after_widget' => '',
-		'description' => __( 'The Second Footer Widget Area', 'desirees' ),
-        'before_title' => '<span class="footer_title">',
-        'after_title' => '</span>'
+		'description' => __( 'Footer 2', 'desirees' ),
+        'before_title' => '<h2>',
+        'after_title' => '</h2>'
 	) );
 
-	// Area 11, located in the footer.
+	// Footer 3 widget area
 	register_sidebar( array(
-		'name' => __( 'Footer Payments Area', 'desirees' ),
-		'id' => 'payments-area',
+		'name' => __( 'Footer 3', 'desirees' ),
+		'id' => 'footer-3',
 		'before_widget' => '',
 		'after_widget' => '',
-		'description' => __( 'Payments Area', 'desirees' ),
-        'before_title' => '<h5>',
-        'after_title' => '</h5>'
+		'description' => __( 'Footer 3', 'desirees' ),
+				'before_title' => '<h2>',
+				'after_title' => '</h2>'
 	) );
 
-	// Area 12, located in the footer.
+	// Footer 4 widget area
 	register_sidebar( array(
-		'name' => __( 'Footer Copyrights', 'desirees' ),
-		'id' => 'copyrights-area',
+		'name' => __( 'Footer 4', 'desirees' ),
+		'id' => 'footer-4',
 		'before_widget' => '',
 		'after_widget' => '',
-		'description' => __( 'Copyrights', 'desirees' ),
-        'before_title' => '<h5>',
-        'after_title' => '</h5>'
+		'description' => __( 'Footer 4', 'desirees' ),
+				'before_title' => '<h2>',
+				'after_title' => '</h2>'
+	) );
+
+	// Footer wide widget area
+	register_sidebar( array(
+		'name' => __( 'Footer wide', 'desirees' ),
+		'id' => 'footer-wide',
+		'before_widget' => '',
+		'after_widget' => '',
+		'description' => __( 'Footer wide', 'desirees' ),
+				'before_title' => '<h2>',
+				'after_title' => '</h2>'
 	) );
 
 	// Empty category.

@@ -5,34 +5,48 @@
  */
 ?>
 
-  <footer class="container container__footer">
-      <div class="row">
-          <div class="col-md-3 col-sm-4">
-              <?php if ( is_active_sidebar( 'first-footer-widget-area' ) ) : ?>
-                  <?php dynamic_sidebar( 'first-footer-widget-area' ); ?>
-              <?php endif; ?>
+  <footer class="container container__footer mt1 py1">
+      <?php if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) ) : ?>
+          <div class="row">
+              <div class="col-md-3 col-sm-4 col-xs-12">
+                  <?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
+                      <?php dynamic_sidebar( 'footer-1' ); ?>
+                  <?php endif; ?>
+              </div>
+
+              <div class="col-md-9 col-sm-8 col-xs-12">
+                  <?php if ( is_active_sidebar( 'footer-2' ) ) : ?>
+                      <?php dynamic_sidebar( 'footer-2' ); ?>
+                  <?php endif; ?>
+              </div>
           </div>
+      <?php endif; ?>
 
-          <div class="col-md-9 col-sm-8">
-              <?php if ( is_active_sidebar( 'second-footer-widget-area' ) ) : ?>
-                  <?php dynamic_sidebar( 'second-footer-widget-area' ); ?>
-              <?php endif; ?>
+      <?php if ( is_active_sidebar( 'footer-3' ) || is_active_sidebar( 'footer-4' ) ) : ?>
+          <div class="row">
+              <div class="col-md-6 col-xs-12">
+                  <?php if ( is_active_sidebar( 'footer-3' ) ) : ?>
+                      <?php dynamic_sidebar( 'footer-3' ); ?>
+                  <?php endif; ?>
+              </div>
+
+              <div class="col-md-6 col-xs-12">
+                  <?php if ( is_active_sidebar( 'footer-4' ) ) : ?>
+                      <?php dynamic_sidebar( 'footer-4' ); ?>
+                  <?php endif; ?>
+              </div>
           </div>
-      </div>
+      <?php endif; ?>
 
-      <div class="row">
-        <div class="col-md-6">
-            <?php if ( is_active_sidebar( 'copyrights-area' ) ) : ?>
-                <?php dynamic_sidebar( 'copyrights-area' ); ?>
-            <?php endif; ?>
-        </div>
-
-        <div class="col-md-6">
-            <?php if ( is_active_sidebar( 'payments-area' ) ) : ?>
-                <?php dynamic_sidebar( 'payments-area' ); ?>
-            <?php endif; ?>
-        </div>
-      </div>
+      <?php if ( is_active_sidebar( 'footer-wide' ) ) : ?>
+          <div class="row">
+              <div class="col-xs-12">
+                  <?php if ( is_active_sidebar( 'footer-wide' ) ) : ?>
+                      <?php dynamic_sidebar( 'footer-wide' ); ?>
+                  <?php endif; ?>
+              </div>
+          </div>
+      <?php endif; ?>
   </footer>
 
 </div>
