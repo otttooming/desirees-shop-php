@@ -41,7 +41,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 		</div>
 
 		<div class="product-cart__reset-wrap">
-			<?php echo apply_filters( 'woocommerce_reset_variations_link', '<a class="cart__reset-variations button" href="#"><span class="button__text">' . __( 'Clear selection', 'desirees' ) . '</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 149.337 149.337" class="button__icon"><path fill="currentColor" d="M149.337 143.96L80.044 74.668l69.292-69.292L143.96 0 74.668 69.292 5.378 0 0 5.376l69.292 69.292L0 143.96l5.376 5.376 69.292-69.292 69.293 69.292z"></path></svg></a>'); ?>
+			<?php echo apply_filters( 'woocommerce_reset_variations_link', '<a class="cart__reset-variations button" href="#"><span class="button__text">' . __( 'Clear', 'woocommerce' ) . '</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 149.337 149.337" class="button__icon"><path fill="currentColor" d="M149.337 143.96L80.044 74.668l69.292-69.292L143.96 0 74.668 69.292 5.378 0 0 5.376l69.292 69.292L0 143.96l5.376 5.376 69.292-69.292 69.293 69.292z"></path></svg></a>'); ?>
 		</div>
 
 		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>

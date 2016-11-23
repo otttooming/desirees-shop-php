@@ -11,15 +11,15 @@
       <input
           type="text"
           class="search__field"
-          value="<?php if(get_search_query() == ''){  _e('Search', 'desirees');} else { the_search_query(); } ?>"
-          onblur="if(this.value=='')this.value='<?php _e('Search', 'desirees'); ?>'"
-          onfocus="if(this.value=='<?php _e('Search', 'desirees'); ?>')this.value=''"
+          value="<?php if(get_search_query() == ''){ _e( 'Search', 'woocommerce' ); } else { the_search_query(); } ?>"
+          onblur="if(this.value=='')this.value='<?php _e( 'Search', 'woocommerce' ); ?>'"
+          onfocus="if(this.value=='<?php _e( 'Search', 'woocommerce' ); ?>')this.value=''"
           name="s" id="s">
 
       <input type="hidden" name="post_type" value="product" />
 
     	<select name="product_cat" class="search__select">
-    		<option value=""><?php  _e('All categories', 'desirees') ?></option>
+    		<option value=""><?php  _e( 'Categories', 'woocommerce' ) ?></option>
     		<?php
     		// generate list of categories
     		$catTerms = get_terms('product_cat', array(
@@ -48,7 +48,7 @@
     		?>
     	</select>
 
-      <input type="submit" value="<?php _e('Search', 'desirees'); ?>" title="<?php _e('Search', 'desirees'); ?>" class="search__button button">
+      <input type="submit" value="<?php _e( 'Search', 'woocommerce' ); ?>" title="<?php _e( 'Search', 'woocommerce' ); ?>" class="search__button button">
   </form>
 
 <?php else: ?>

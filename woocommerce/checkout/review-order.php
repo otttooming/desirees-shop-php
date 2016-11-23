@@ -18,7 +18,7 @@ global $woocommerce;
 		<tr>
       <th class="product-thumbnail cart_del_column">&nbsp;</th>
 			<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
-      <th class="product-quantity"><?php _e('Qty', 'desirees'); ?></th>
+      <th class="product-quantity"><?php _e('Qty', 'woocommerce'); ?></th>
 			<th class="product-total"><?php _e( 'Total', 'woocommerce' ); ?></th>
 		</tr>
 	</thead>
@@ -84,7 +84,7 @@ global $woocommerce;
 	<tfoot class="cart__form-footer">
 
 		<tr class="cart-subtotal">
-			<th colspan="2"><?php _e( 'Cart Subtotal', 'woocommerce' ); ?></th>
+			<th colspan="2"><?php _e( 'Subtotal', 'woocommerce' ); ?></th>
 			<td colspan="2"><?php wc_cart_totals_subtotal_html(); ?></td>
 		</tr>
 

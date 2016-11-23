@@ -21,10 +21,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 	<thead class="cart__form-head">
 		<tr>
 			<th class="product-thumbnail cart_del_column visible-desktop">&nbsp;</th>
-			<th class="product-name"><?php _e('Product', 'desirees'); ?></th>
-			<th class="product-price cart_del_column"><?php _e('Price', 'desirees'); ?></th>
-			<th class="product-quantity"><?php _e('Qty', 'desirees'); ?></th>
-			<th class="product-subtotal"><?php _e('Total', 'desirees'); ?></th>
+			<th class="product-name"><?php _e('Product', 'woocommerce'); ?></th>
+			<th class="product-price cart_del_column"><?php _e('Price', 'woocommerce'); ?></th>
+			<th class="product-quantity"><?php _e('Qty', 'woocommerce'); ?></th>
+			<th class="product-subtotal"><?php _e('Total', 'woocommerce'); ?></th>
 			<th class="product-remove cart_del_column">&nbsp;</th>
 		</tr>
 	</thead>
@@ -119,14 +119,14 @@ do_action( 'woocommerce_before_cart' ); ?>
 			<?php if ( get_option( 'woocommerce_enable_coupons' ) == 'yes' ) { ?>
 				<div class="coupon cfx">
 
-					<label for="coupon_code"><?php _e('Coupon', 'desirees'); ?>:</label> <input name="coupon_code" class="input-text" id="coupon_code" value="" type="text" /> <input type="submit" class="button apply-coupon" name="apply_coupon" value="<?php _e('Apply Coupon', 'desirees'); ?>" />
+					<label for="coupon_code"><?php _e('Coupon', 'woocommerce'); ?>:</label> <input name="coupon_code" class="input-text" id="coupon_code" value="" type="text" /> <input type="submit" class="button apply-coupon" name="apply_coupon" value="<?php _e('Apply Coupon', 'woocommerce'); ?>" />
 
 					<?php do_action('woocommerce_cart_coupon'); ?>
 
 				</div>
 			<?php } ?>
 
-			<input type="submit" class="button update-button" name="update_cart" value="<?php _e('Update Cart', 'desirees'); ?>" />
+			<input type="submit" class="button update-button" name="update_cart" value="<?php _e('Update Cart', 'woocommerce'); ?>" />
 
 			<?php // do_action('woocommerce_proceed_to_checkout'); ?>
 

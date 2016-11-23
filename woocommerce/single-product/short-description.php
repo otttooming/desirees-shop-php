@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<a class="button" href="#content_tab_1" >
 	  <span class="more-info__text">
-	    <?php _e('Read more', 'desirees') ?>
+	    <?php _e('Read more', 'woocommerce') ?>
 	  </span>
 	</a>
 
