@@ -2176,7 +2176,7 @@ address {
   .button.medium {
     padding: 15px 20px;
     font-size: 14px; }
-  .button.big {
+  .button.alt, .button.big {
     padding: 20px;
     font-size: 1.5rem;
     padding: 1.25rem; }
@@ -2413,8 +2413,7 @@ address {
   margin: 10px; }
 
 .cart__collaterals td,
-.cart__collaterals span,
-.cart__collaterals .wc-proceed-to-checkout {
+.cart__collaterals span {
   text-align: right; }
 
 .cart__collaterals .wc-proceed-to-checkout {

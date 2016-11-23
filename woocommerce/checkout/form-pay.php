@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-<h2>Pay</h2>
+<h2><?php _e( 'Pay', 'woocommerce' ); ?></h2>
 
 <form id="order_review" method="post">
 
