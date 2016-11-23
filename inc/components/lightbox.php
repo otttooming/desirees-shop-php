@@ -1,7 +1,7 @@
 <?php // Root element of PhotoSwipe. Must have class pswp. ?>
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
-    <?php 
+    <?php
       // Background of PhotoSwipe.
       // It's a separate element as animating opacity is faster than rgba().
     ?>
@@ -28,15 +28,15 @@
 
                 <div class="pswp__counter"></div>
 
-                <button class="pswp__button pswp__button--close" title="<?php _e('Close', 'desirees'); ?>"></button>
+                <button class="pswp__button pswp__button--close" title="<?php _e('Close', 'woocommerce'); ?>"></button>
 
-                <button class="pswp__button pswp__button--share" title="<?php _e('Share', 'desirees'); ?>"></button>
+                <button class="pswp__button pswp__button--share" title="<?php _e('Share', 'woocommerce'); ?>"></button>
 
-                <button class="pswp__button pswp__button--fs" title="<?php _e('Toggle fullscreen', 'desirees'); ?>"></button>
+                <button class="pswp__button pswp__button--fs" title="<?php _e('Toggle fullscreen', 'woocommerce'); ?>"></button>
 
-                <button class="pswp__button pswp__button--zoom" title="<?php _e('Zoom in/out', 'desirees'); ?>"></button>
+                <button class="pswp__button pswp__button--zoom" title="<?php _e('Zoom in/out', 'woocommerce'); ?>"></button>
 
-                <?php 
+                <?php
                   // Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR
                   // element will get class pswp__preloader--active when preloader is running
                 ?>
@@ -53,9 +53,9 @@
                 <div class="pswp__share-tooltip"></div>
             </div>
 
-            <button class="pswp__button pswp__button--arrow--left" title="<?php _e('Previous', 'desirees'); ?>"></button>
+            <button class="pswp__button pswp__button--arrow--left" title="<?php _e('Previous', 'woocommerce'); ?>"></button>
 
-            <button class="pswp__button pswp__button--arrow--right" title="<?php _e('Next', 'desirees'); ?>"></button>
+            <button class="pswp__button pswp__button--arrow--right" title="<?php _e('Next', 'woocommerce'); ?>"></button>
 
             <div class="pswp__caption">
                 <div class="pswp__caption__center"></div>
