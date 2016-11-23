@@ -16,6 +16,9 @@ wc_print_notices();
 do_action( 'woocommerce_before_cart' ); ?>
 
 <form action="<?php echo esc_url( $woocommerce->cart->get_cart_url() ); ?>" method="post" class="cart__form bg__common p1 mb1">
+
+<h2><?php _e('Cart', 'woocommerce') ?></h2>
+
 <?php do_action( 'woocommerce_before_cart_table' ); ?>
 <table class="cart table checkout_cart" cellspacing="0" style="margin-bottom: 20px;">
 	<thead class="cart__form-head">
@@ -84,7 +87,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 								$data_max = ( $_product->backorders_allowed() ) ? '' : $_product->get_stock_quantity();
 								$data_max = apply_filters( 'woocommerce_cart_item_data_max', $data_max, $_product );
 
-								$product_quantity = sprintf( '<div class="qty-block quantity"><input name="cart[%s][qty]" type="number" data-min="%s" data-max="%s" value="%s" size="4" title="Qty" class="input-text qty text" maxlength="12" /></div>', $cart_item_key, $data_min, $data_max, esc_attr( $values['quantity'] ) );
+								$product_quantity = sprintf( '<div class="qty-block quantity"><input name="cart[%s][qty]" type="number" data-min="%s" data-max="%s" value="%s" size="4" title="%s" class="input-text qty text" maxlength="12" /></div>', $cart_item_key, $data_min, $data_max, esc_attr( $values['quantity'] ), __('Qty', 'woocommerce') );
 							}
 
 							echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key );
@@ -100,7 +103,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 					<!-- Remove from cart link -->
 					<td class="product-remove cart_del_column">
 						<?php
-							echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf('<a href="%s" class="delete-btn" title="%s"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 149.337 149.337"><path fill="currentColor" d="M149.337 143.96L80.044 74.668l69.292-69.292L143.96 0 74.668 69.292 5.378 0 0 5.376l69.292 69.292L0 143.96l5.376 5.376 69.292-69.292 69.293 69.292z"/></svg></a>', esc_url( $woocommerce->cart->get_remove_url( $cart_item_key ) ), __('Remove this item', 'desirees') ), $cart_item_key );
+							echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf('<a href="%s" class="delete-btn" title="%s"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 149.337 149.337"><path fill="currentColor" d="M149.337 143.96L80.044 74.668l69.292-69.292L143.96 0 74.668 69.292 5.378 0 0 5.376l69.292 69.292L0 143.96l5.376 5.376 69.292-69.292 69.293 69.292z"/></svg></a>', esc_url( $woocommerce->cart->get_remove_url( $cart_item_key ) ), __('Remove this item', 'woocommerce') ), $cart_item_key );
 						?>
 					</td>
 				</tr>

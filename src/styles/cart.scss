@@ -1,16 +1,9 @@
 .cart {
   &__collaterals {
-    h2 {
-      margin: 10px;
-    }
 
     td,
     span {
       text-align: right;
-    }
-
-    .wc-proceed-to-checkout {
-      margin: 10px;
     }
   }
 
@@ -98,12 +91,6 @@
 
 .checkout_cart {
   .product-total {
-    text-align: right;
-  }
-}
-
-.cart__form-footer {
-  td {
     text-align: right;
   }
 }

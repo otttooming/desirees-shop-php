@@ -64,7 +64,7 @@ global $woocommerce;
                   $data_max = ( $_product->backorders_allowed() ) ? '' : $_product->get_stock_quantity();
                   $data_max = apply_filters( 'woocommerce_cart_item_data_max', $data_max, $_product );
 
-                  $product_quantity = sprintf( '<div class="qty-block quantity"><input name="cart[%s][qty]" type="number" data-min="%s" data-max="%s" value="%s" size="4" title="Qty" class="input-text qty text" maxlength="12" readonly /></div>', $cart_item_key, $data_min, $data_max, esc_attr( $cart_item['quantity'] ) );
+                  $product_quantity = sprintf( '<div class="qty-block quantity"><input name="cart[%s][qty]" type="number" data-min="%s" data-max="%s" value="%s" size="4" title="%s" class="input-text qty text" maxlength="12" readonly /></div>', $cart_item_key, $data_min, $data_max, esc_attr( $cart_item['quantity'] ), __('Qty', 'woocommerce') );
                 }
 
                 echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key );
@@ -85,7 +85,7 @@ global $woocommerce;
 
 		<tr class="cart-subtotal">
 			<th colspan="2"><?php _e( 'Subtotal', 'woocommerce' ); ?></th>
-			<td colspan="2"><?php wc_cart_totals_subtotal_html(); ?></td>
+			<td colspan="2" class="right-align"><?php wc_cart_totals_subtotal_html(); ?></td>
 		</tr>
 
 		<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
@@ -132,7 +132,7 @@ global $woocommerce;
 
 		<tr class="order-total">
 			<th colspan="2"><?php _e( 'Order Total', 'woocommerce' ); ?></th>
-			<td colspan="2"><?php wc_cart_totals_order_total_html(); ?></td>
+			<td colspan="2" class="right-align"><?php wc_cart_totals_order_total_html(); ?></td>
 		</tr>
 
 		<?php do_action( 'woocommerce_review_order_after_order_total' ); ?>

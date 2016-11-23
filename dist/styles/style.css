@@ -526,6 +526,12 @@ ul {
 input[type=text] {
   min-height: 30px; }
 
+input[type=number] {
+  text-align: center; }
+  input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; }
+
 input[type=checkbox], input[type=radio] {
   position: relative;
   width: 20px;
@@ -1549,6 +1555,18 @@ address {
   margin-top: 20px;
   margin-bottom: 20px; }
 
+.left-align {
+  text-align: left; }
+
+.center {
+  text-align: center; }
+
+.right-align {
+  text-align: right; }
+
+.justify {
+  text-align: justify; }
+
 .grid__slider {
   display: -ms-flexbox;
   display: flex;
@@ -2409,15 +2427,9 @@ address {
   background: linear-gradient(45deg, #93278f, #00a99d);
   line-height: 40px; }
 
-.cart__collaterals h2 {
-  margin: 10px; }
-
 .cart__collaterals td,
 .cart__collaterals span {
   text-align: right; }
-
-.cart__collaterals .wc-proceed-to-checkout {
-  margin: 10px; }
 
 .cart__thumbnail {
   width: 55px;
@@ -2472,9 +2484,6 @@ address {
       padding: 20px 5px; } }
 
 .checkout_cart .product-total {
-  text-align: right; }
-
-.cart__form-footer td {
   text-align: right; }
 
 #shipping_method li {
