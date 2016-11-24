@@ -2435,6 +2435,21 @@ address {
   width: 55px;
   text-align: center; }
 
+.shop_table thead {
+  background: rgba(52, 6, 68, 0.2); }
+
+.shop_table tr:nth-child(2) {
+  background: rgba(52, 6, 68, 0.2); }
+
+.shop_table tfoot {
+  background: rgba(52, 6, 68, 0.2); }
+  .shop_table tfoot tr:last-child {
+    background: rgba(52, 6, 68, 0.2); }
+
+.shop_table td:last-child,
+.shop_table th:last-child {
+  text-align: right; }
+
 .cart__form-head {
   background: rgba(52, 6, 68, 0.2); }
 
