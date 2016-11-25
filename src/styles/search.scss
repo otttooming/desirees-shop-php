@@ -17,6 +17,7 @@
 
   &__field {
     border-radius: 3px 0 0 3px!important;
+    flex: 4;
   }
 
   &__select {
@@ -27,6 +28,7 @@
     color: $color-white;
 
     font-size: 11px;
+    flex: 2;
   }
 
   &__button {
@@ -37,5 +39,6 @@
     background: $color-button-bg;
 
     line-height: 40px;
+    flex: 1;
   }
 }

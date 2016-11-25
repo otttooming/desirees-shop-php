@@ -523,37 +523,36 @@ ul {
   margin: 0;
   padding: 0; }
 
-input[type=text] {
-  min-height: 30px; }
-
-input[type=number] {
-  text-align: center; }
-  input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0; }
-
-input[type=checkbox], input[type=radio] {
-  position: relative;
-  width: 20px;
-  height: 20px;
+input {
   margin: 0;
-  padding: 0;
-  color: #fff;
-  border: 1px solid #00b31a;
-  border-radius: 50%;
-  background: rgba(52, 6, 68, 0.5);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
-  text-shadow: 2px 2px 5px #340644;
-  -webkit-appearance: none; }
-  input[type=checkbox]:checked, input[type=radio]:checked {
-    background: #00b31a; }
-    input[type=checkbox]:checked:after, input[type=radio]:checked:after {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      content: '✔';
-      -webkit-transform: translate3d(-50%, -50%, 0);
-              transform: translate3d(-50%, -50%, 0); }
+  padding: 0; }
+  input[type=text] {
+    min-height: 30px; }
+  input[type=number] {
+    text-align: center; }
+    input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0; }
+  input[type=checkbox], input[type=radio] {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    border: 1px solid #00b31a;
+    border-radius: 50%;
+    background: rgba(52, 6, 68, 0.5);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
+    text-shadow: 2px 2px 5px #340644;
+    -webkit-appearance: none; }
+    input[type=checkbox]:checked, input[type=radio]:checked {
+      background: #00b31a; }
+      input[type=checkbox]:checked:after, input[type=radio]:checked:after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        content: '✔';
+        -webkit-transform: translate3d(-50%, -50%, 0);
+                transform: translate3d(-50%, -50%, 0); }
 
 textarea::-webkit-input-placeholder,
 input::-webkit-input-placeholder {
@@ -2413,21 +2412,27 @@ address {
   line-height: 40px; }
 
 .search__field {
-  border-radius: 3px 0 0 3px !important; }
+  border-radius: 3px 0 0 3px !important;
+  -ms-flex: 4;
+      flex: 4; }
 
 .search__select {
   text-transform: uppercase;
   border-radius: 0;
   background: #340644;
   color: #fff;
-  font-size: 11px; }
+  font-size: 11px;
+  -ms-flex: 2;
+      flex: 2; }
 
 .search__button {
   height: 40px;
   padding: 0 10px;
   border-radius: 0 3px 3px 0;
   background: linear-gradient(45deg, #93278f, #00a99d);
-  line-height: 40px; }
+  line-height: 40px;
+  -ms-flex: 1;
+      flex: 1; }
 
 .cart__collaterals td,
 .cart__collaterals span {

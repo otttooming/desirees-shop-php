@@ -137,10 +137,13 @@ ul {
 }
 
 input {
+  margin: 0;
+  padding: 0;
+
   &[type=text] {
     min-height: 30px;
   }
-  
+
   &[type=number] {
     text-align: center;
 
@@ -157,8 +160,6 @@ input {
 
     width: 20px;
     height: 20px;
-    margin: 0;
-    padding: 0;
 
     color: $color-white;
     border: 1px solid $color-go;
