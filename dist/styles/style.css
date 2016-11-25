@@ -1471,15 +1471,17 @@ address {
   white-space: nowrap;
   -ms-flex-align: center;
       align-items: center;
-  -ms-flex-pack: end;
-      justify-content: flex-end; }
+  -ms-flex-pack: center;
+      justify-content: center;
+  font-size: 16px;
+  min-height: 42px;
+  box-sizing: border-box; }
   .cart-links__title {
-    margin: 0 10px;
     text-transform: uppercase;
-    font-size: 16px; }
+    margin: 0 10px; }
   .cart-links svg {
-    -ms-flex: 0 0 32px;
-        flex: 0 0 32px; }
+    -ms-flex: 0 0 18px;
+        flex: 0 0 18px; }
 
 .header-variant2__wrap {
   display: -ms-flexbox;
