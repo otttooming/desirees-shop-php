@@ -32,7 +32,7 @@ gulp.task('styleguide', function() {
 // Styles
 gulp.task('styles', function() {
   return gulp.src(['bower_components/swiper/dist/css/swiper.min.css',
-                   'src/styles/style.scss'])
+                   'src/styles/main.scss'])
     .pipe(sass({ style: 'expanded', }))
     .pipe(autoprefixer(supportedBrowsers))
     .pipe(concat('style.css'))
