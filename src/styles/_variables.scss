@@ -12,15 +12,6 @@ $color-red: #a30000; // Alternative dark color-red
 // $color-red: #821196;
 $color-black: #340644;
 $color-charcoal: #340644;
-$color-button-bg: linear-gradient(45deg, #93278f, #00a99d);
-$color-buy-button-bg: linear-gradient(to top right, #78239d, #ff5300);
-$color-attention: $color-red;
-$color-button-bg-normal: rgba(#340644, .5); // Rec: better choice ? #340644
-$color-go: #00b31a;
-$color-bg: rgba(#340644, .2);
-
-$color-input-bg-normal: transparent;
-
 // $color-black: #151515;
 // $color-charcoal: #222;
 // $color-charcoal: #261c2f;
@@ -30,6 +21,15 @@ $color-grey: rgba(#340644, .5);
 $color-white: #fff;
 $color-blue: #11aff1;
 // $color-blue: #0c68af;
+
+// Structural colors
+$color-button-bg: linear-gradient(45deg, #93278f, #00a99d);
+$color-buy-button-bg: linear-gradient(to top right, #78239d, #ff5300);
+$color-attention: $color-red;
+$color-button-bg-normal: rgba(#340644, .5); // Rec: better choice ? #340644
+$color-go: #00b31a;
+$color-bg: rgba(#340644, .2);
+$color-input-bg-normal: transparent;
 
 // Font weights.
 $font-weight-thin: 100;
