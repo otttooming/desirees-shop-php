@@ -26,7 +26,8 @@
           <?php require get_template_directory() . '/inc/components/cart-links.php'; ?>
         </div>
 
-        <div class="menu-mobile__toggle vis-to-phone">
+        <div class="menu-mobile__toggle vis-to-phone button">
+          <span><?php _e('Menu', 'desirees'); ?></span>
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 302 302"><path d="M0 36h302v30H0zM0 236h302v30H0zM0 136h302v30H0z" fill="currentColor"/></svg>
         </div>
       </div>

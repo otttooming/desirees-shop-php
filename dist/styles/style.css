@@ -444,7 +444,8 @@ body {
   margin: 0;
   background-image: radial-gradient(circle at 50%, rgba(17, 52, 181, 0.9) 40%, rgba(234, 0, 64, 0.9) 100%);
   text-shadow: 2px 2px 5px #340644;
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif; }
+  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
+  color: #fff; }
 
 a {
   display: inline-block;
@@ -1364,7 +1365,6 @@ address {
   max-width: 1200px;
   min-height: 100vh;
   margin: 0 auto;
-  color: #fff;
   background: rgba(52, 6, 68, 0.4);
   box-shadow: 0 1px 6px #340644; }
 
@@ -2372,21 +2372,22 @@ address {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0); }
   .menu-mobile__toggle {
-    position: absolute;
-    top: 5px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
     right: 20px;
-    width: 42px;
     height: 42px;
     cursor: pointer;
-    line-height: 1; }
+    line-height: 1;
+    font-size: 16px;
+    margin-left: 10px; }
     .menu-mobile__toggle svg {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 24px;
-      height: 24px;
-      -webkit-transform: translate3d(-50%, -50%, 0);
-              transform: translate3d(-50%, -50%, 0); }
+      margin-left: 10px;
+      -ms-flex: 0 0 16px;
+          flex: 0 0 16px; }
   .menu-mobile__primary, .menu-mobile__secondary, .menu-mobile__categories {
     margin: 0 0 20px; }
 
