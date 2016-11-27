@@ -9,7 +9,7 @@ get_header(); ?>
     <div class="container">
         <div class="row cfx">
 
-              <div class="col-sm-3 sidebar_grid sidebar_left">
+              <div class="col-sm-3 sidebar_grid">
                   <?php dynamic_sidebar( 'primary-widget-area' ); ?>
               </div>
 
