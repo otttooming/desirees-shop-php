@@ -1605,22 +1605,6 @@ address {
   -ms-flex-pack: distribute;
       justify-content: space-around; }
 
-.woocommerce-ordering {
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-  .woocommerce-ordering select {
-    height: 30px;
-    margin: 0;
-    padding: 0 15px;
-    color: #ffc000;
-    border: 0 !important;
-    background: rgba(52, 6, 68, 0.5); }
-
 .product-loop__images-wrap {
   position: relative;
   display: -ms-flexbox;

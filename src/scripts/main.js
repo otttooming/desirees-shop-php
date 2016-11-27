@@ -104,6 +104,13 @@ Desirees.nav = {
 	}
 };
 
+Desirees.wc = {
+
+	filterSubmit: function() {
+		this.submit();
+	}
+};
+
 var mobileMenuToggleBtns = document.querySelectorAll('.menu-mobile__toggle');
 
 for (var i = 0; i < mobileMenuToggleBtns.length; i++) {
@@ -114,4 +121,10 @@ var subCatToggleBtns = document.querySelectorAll('.cat-list__subcat-control');
 
 for (var i = 0; i < subCatToggleBtns.length; i++) {
 	subCatToggleBtns[i].addEventListener('click', Desirees.nav.subCatToggle, false);
+}
+
+var filterOrderingSubmit = document.querySelectorAll('.woocommerce-ordering');
+
+for (var i = 0; i < filterOrderingSubmit.length; i++) {
+	filterOrderingSubmit[i].addEventListener('change', Desirees.wc.filterSubmit, false)
 }

@@ -64,7 +64,7 @@ function woocommerce_catalog_page_ordering() {
    */
   ?>
     <form class="woocommerce-ordering" action="" method="POST" name="results">
-    <select name="woocommerce-sortby-columns" id="woocommerce-sortby-columns" class="woocommerce-sortby" onchange="this.form.submit()">
+    <select name="woocommerce-sortby-columns" id="woocommerce-sortby-columns" class="woocommerce-sortby">
   <?php
     $shopCatalog_orderby = apply_filters('woocommerce_sortby_page', array(
       '24' 	=> __('24', 'woocommerce'),
