@@ -2155,6 +2155,7 @@ address {
   max-width: 100%;
   height: auto;
   padding: 7px 10px;
+  margin: 0;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -2172,7 +2173,8 @@ address {
   text-shadow: 2px 2px 5px #340644;
   font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
   font-size: 11px;
-  line-height: 1.5; }
+  line-height: 1.5;
+  -webkit-appearance: none; }
   .button:hover {
     background: #00b31a; }
   .button.active {
@@ -2413,12 +2415,15 @@ address {
 
 .search__button {
   height: 40px;
-  padding: 0 10px;
+  padding: 0 10px 0 30px;
   border-radius: 0 3px 3px 0;
   background: linear-gradient(45deg, #93278f, #00a99d);
-  line-height: 40px;
   -ms-flex: 1;
-      flex: 1; }
+      flex: 1;
+  position: relative; }
+  .search__button svg {
+    position: absolute;
+    left: 10px; }
 
 .cart__collaterals td,
 .cart__collaterals span {
