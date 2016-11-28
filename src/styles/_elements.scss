@@ -23,6 +23,7 @@ body {
   margin: 0;
 
   background-image: radial-gradient(circle at 50%, rgba(17, 52, 181, .9) 40%, rgba(234, 0, 64, .9) 100%);
+  background-attachment: fixed;
   text-shadow: $shadow-text;
 
   font-family: $typeface-primary;

@@ -443,6 +443,7 @@ body {
   overflow-x: hidden;
   margin: 0;
   background-image: radial-gradient(circle at 50%, rgba(17, 52, 181, 0.9) 40%, rgba(234, 0, 64, 0.9) 100%);
+  background-attachment: fixed;
   text-shadow: 2px 2px 5px #340644;
   font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
   color: #fff; }
