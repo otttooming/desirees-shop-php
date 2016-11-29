@@ -301,6 +301,17 @@ address {
   font-family: $typeface-secondary;
 }
 
+blockquote {
+  position: relative;
+  font-size: 16px;
+
+  &:before {
+    content: "\"";
+    position: absolute;
+    left: -15px;
+  }
+}
+
 .required {
   color: $color-attention;
 }

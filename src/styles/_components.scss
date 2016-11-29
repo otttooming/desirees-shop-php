@@ -66,3 +66,61 @@
     left: 0;
   }
 }
+
+.progress-bar {
+
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  text-align: center;
+
+  &__inner {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    color: #93A2AC;
+    font-family: Lato;
+    font-weight: 100;
+    margin: 2rem;
+
+    &:before {
+      content: attr(data-name);
+      position: absolute;
+      width: 100%;
+      bottom: -2rem;
+      font-weight: 400;
+    }
+
+    &:after {
+      content: attr(data-percent);
+      position: absolute;
+      width: 100%;
+      top: 3.7rem;
+      left: 0;
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+
+  svg {
+    width: 10rem;
+    height: 10rem;
+
+    &:nth-child(2) {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: rotate(-90deg);
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+    }
+
+    &:nth-child(2) path {
+      fill: none;
+      stroke-width: 2;
+      stroke-dasharray: 629;
+      stroke: rgba(255, 255, 255, 0.9);
+    }
+  }
+}

@@ -75,4 +75,61 @@ if ( ! function_exists( 'desirees_best_selling_products' ) ) {
 	  add_shortcode('desirees_best_selling_products','desirees_best_selling_products_function');
 }
 
+/** Progress Bar */
+function desirees_progress_shortcode($atts) {
+	$a = shortcode_atts(array(
+		'complete' => '',
+		'title'    => ''
+	),$atts);
+
+	if($a['complete'] > 100) {
+		$a['complete'] = 100;
+	}elseif($a['complete'] < 0) {
+		$a['complete'] = 0;
+	}
+
+	return '
+		<div class="progress-bar">
+		  <div class="progress-bar__inner" data-name="'.$a['title'].'" data-percent="'.$a['complete'].'%">
+				<svg viewBox="-10 -10 220 220">
+			    <g fill="none" stroke-width="3" transform="translate(100,100)">
+			      <path d="M 0,-100 A 100,100 0 0,1 86.6,-50"/>
+			      <path d="M 86.6,-50 A 100,100 0 0,1 86.6,50"/>
+			      <path d="M 86.6,50 A 100,100 0 0,1 0,100"/>
+			      <path d="M 0,100 A 100,100 0 0,1 -86.6,50"/>
+			      <path d="M -86.6,50 A 100,100 0 0,1 -86.6,-50"/>
+			      <path d="M -86.6,-50 A 100,100 0 0,1 0,-100"/>
+			    </g>
+			    </svg>
+					<svg viewBox="-10 -10 220 220">
+			    	<path d="M200,100 C200,44.771525 155.228475,0 100,0 C44.771525,0 0,44.771525 0,100 C0,155.228475 44.771525,200 100,200 C155.228475,200 200,155.228475 200,100 Z" stroke-dashoffset="'.$a['complete'].'"></path>
+			    </svg>
+				</div>
+		</div>
+	';
+}
+
+add_shortcode('progress','desirees_progress_shortcode');
+
+
+/**	Blockquote */
+function desirees_blockquote_shortcode($atts, $content = null) {
+    $a = shortcode_atts( array(
+        'align' => 'left'
+    ), $atts);
+    switch($a['align']) {
+        case 'right':
+            $align = 'fl-r';
+        break;
+        case 'center':
+            $align = 'fl-none';
+        break;
+        default:
+            $align = 'fl-l';
+    }
+    $content = wpautop(trim($content));
+    return '<blockquote class="' . $align . '">' . $content . '</blockquote>';
+}
+add_shortcode('blockquote', 'desirees_blockquote_shortcode');
+
 ?>
