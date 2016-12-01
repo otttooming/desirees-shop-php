@@ -106,21 +106,29 @@
     width: 10rem;
     height: 10rem;
 
+    path {
+      stroke-width: 10px
+    }
+
+    &:nth-child(1) {
+
+      path {
+        stroke: $color-go;
+      }
+    }
+
     &:nth-child(2) {
       position: absolute;
       left: 0;
       top: 0;
       transform: rotate(-90deg);
-      -webkit-transform: rotate(-90deg);
-      -moz-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
     }
 
     &:nth-child(2) path {
       fill: none;
-      stroke-width: 2;
       stroke-dasharray: 629;
-      stroke: rgba(255, 255, 255, 0.9);
+      stroke-width: 15px;
+      stroke: $color-black;
     }
   }
 }

@@ -2186,19 +2186,21 @@ blockquote {
   .progress-bar svg {
     width: 10rem;
     height: 10rem; }
+    .progress-bar svg path {
+      stroke-width: 10px; }
+    .progress-bar svg:nth-child(1) path {
+      stroke: #00b31a; }
     .progress-bar svg:nth-child(2) {
       position: absolute;
       left: 0;
       top: 0;
-      transform: rotate(-90deg);
       -webkit-transform: rotate(-90deg);
-      -moz-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg); }
+              transform: rotate(-90deg); }
     .progress-bar svg:nth-child(2) path {
       fill: none;
-      stroke-width: 2;
       stroke-dasharray: 629;
-      stroke: rgba(255, 255, 255, 0.9); }
+      stroke-width: 15px;
+      stroke: #340644; }
 
 .button {
   display: inline-block;
