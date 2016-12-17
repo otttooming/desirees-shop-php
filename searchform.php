@@ -11,10 +11,10 @@
       <input
           type="text"
           class="search__field"
-          value="<?php if(get_search_query() == ''){ _e( 'Search', 'woocommerce' ); } else { the_search_query(); } ?>"
-          onblur="if(this.value=='')this.value='<?php _e( 'Search', 'woocommerce' ); ?>'"
-          onfocus="if(this.value=='<?php _e( 'Search', 'woocommerce' ); ?>')this.value=''"
-          name="s" id="s">
+          placeholder="<?php _e( 'Search', 'woocommerce' ); ?>"
+          value="<?php if ( !get_search_query() == '' ) { the_search_query(); } ?>"
+          name="s"
+          id="s">
 
       <input type="hidden" name="post_type" value="product" />
 
