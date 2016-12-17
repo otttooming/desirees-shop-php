@@ -9,6 +9,8 @@ get_header();
 
 	<div class="container">
 		<div class="row">
+			<?php get_sidebar(); ?>
+
 			<div class="col-sm-9 grid_content">
 
 				<?php if ( have_posts() ) : ?>
@@ -27,21 +29,10 @@ get_header();
 
 				<?php else : ?>
 
-					<div id="post-0" class="post no-results not-found">
-						<h2 class="entry-title"><?php _e( 'Nothing Found', 'desirees' ); ?></h2>
-						<div class="entry-content">
-							<p>
-								<?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'desirees' ); ?>
-							</p>
-							<?php get_search_form(); ?>
-						</div>
-					</div>
+					<?php dynamic_sidebar( 'empty-category-area' ); ?>
 
 				<?php endif; ?>
 
-			</div>
-			<div class="col-sm-3 sidebar_grid cfx">
-				<?php get_sidebar(); ?>
 			</div>
 		</div>
 	</div>
