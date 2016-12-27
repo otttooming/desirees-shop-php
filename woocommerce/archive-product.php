@@ -28,7 +28,7 @@ get_header('shop');
 ?>
 
 <div class="container">
-    <div class="row center-xs">
+    <div class="row">
 
 			<?php get_sidebar(); ?>
 

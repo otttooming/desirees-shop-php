@@ -12,8 +12,8 @@ function desirees_widgets_init() {
 		'description' => __( 'The sidebar widget area', 'desirees' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
 	) );
 
 	// Footer 1 widget area
@@ -141,8 +141,8 @@ function desirees_widgets_frontpage_init() {
 		'description' => __( 'The primary widget area', 'desirees' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
 	) );
 
 	// Area 1, located at the top of the sidebar.
@@ -152,8 +152,8 @@ function desirees_widgets_frontpage_init() {
 		'description' => __( 'The primary widget area', 'desirees' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
 	) );
 
 	// Area 1, located at the top of the sidebar.
@@ -163,8 +163,8 @@ function desirees_widgets_frontpage_init() {
 		'description' => __( 'FP slider top', 'desirees' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
 	) );
 
 	// Area 1, located at the top of the sidebar.
@@ -174,8 +174,8 @@ function desirees_widgets_frontpage_init() {
 		'description' => __( 'FP slogan 1', 'desirees' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
 	) );
 
 	// Area 1, located at the top of the sidebar.
@@ -185,8 +185,8 @@ function desirees_widgets_frontpage_init() {
 		'description' => __( 'FP slogan 2', 'desirees' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
 	) );
 
 	// Area 1, located at the top of the sidebar.
@@ -196,8 +196,8 @@ function desirees_widgets_frontpage_init() {
 		'description' => __( 'FP slogan 3', 'desirees' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
 	) );
 
 	// Area 1, located at the top of the sidebar.
@@ -207,8 +207,8 @@ function desirees_widgets_frontpage_init() {
 		'description' => __( 'FP slogan 4', 'desirees' ),
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
 	) );
 
 	// Area 1, located at the top of the sidebar.
@@ -218,8 +218,8 @@ function desirees_widgets_frontpage_init() {
 	  'description' => __( 'FP illustration 1', 'desirees' ),
 	  'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 	  'after_widget' => '</div>',
-	  'before_title' => '<h3 class="widget-title">',
-	  'after_title' => '</h3>',
+	  'before_title' => '<h2 class="widget-title">',
+	  'after_title' => '</h2>',
 	) );
 
 	// Area 1, located at the top of the sidebar.
@@ -229,8 +229,8 @@ function desirees_widgets_frontpage_init() {
 	  'description' => __( 'FP illustration 2', 'desirees' ),
 	  'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 	  'after_widget' => '</div>',
-	  'before_title' => '<h3 class="widget-title">',
-	  'after_title' => '</h3>',
+	  'before_title' => '<h2 class="widget-title">',
+	  'after_title' => '</h2>',
 	) );
 
 	// Area 1, located at the top of the sidebar.
@@ -240,8 +240,8 @@ function desirees_widgets_frontpage_init() {
 	  'description' => __( 'FP illustration 3', 'desirees' ),
 	  'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 	  'after_widget' => '</div>',
-	  'before_title' => '<h3 class="widget-title">',
-	  'after_title' => '</h3>',
+	  'before_title' => '<h2 class="widget-title">',
+	  'after_title' => '</h2>',
 	) );
 
 	// Area 1, located at the top of the sidebar.
@@ -251,8 +251,8 @@ function desirees_widgets_frontpage_init() {
 	  'description' => __( 'FP illustration 4', 'desirees' ),
 	  'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 	  'after_widget' => '</div>',
-	  'before_title' => '<h3 class="widget-title">',
-	  'after_title' => '</h3>',
+	  'before_title' => '<h2 class="widget-title">',
+	  'after_title' => '</h2>',
 	) );
 };
 add_action( 'widgets_init', 'desirees_widgets_frontpage_init' );
