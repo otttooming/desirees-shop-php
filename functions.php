@@ -156,31 +156,35 @@ add_action( 'woocommerce_before_cart' , 'wc_minimum_order_amount' );
 
 function wc_minimum_order_amount() {
 	// Set this variable to specify a minimum order value
-	$minimum = 15;
 
-	if ( WC()->cart->total < $minimum ) {
+  global $woocommerce;
 
-		if( is_cart() ) {
+  if (empty($woocommerce->cart->applied_coupons)) {
+    $minimum = 15;
 
-			wc_print_notice(
-				sprintf( 'Miinimum tellimuse suurus on %s , teie praegune ostu summa on %s.' ,
-					woocommerce_price( $minimum ),
-					woocommerce_price( WC()->cart->total )
-				), 'error'
-			);
+    if ( WC()->cart->total < $minimum ) {
 
-		} else {
+      if( is_cart() ) {
 
-			wc_add_notice(
-				sprintf( 'Miinimum tellimuse suurus on %s , teie praegune ostu summa on %s.' ,
-					woocommerce_price( $minimum ),
-					woocommerce_price( WC()->cart->total )
-				), 'error'
-			);
+        wc_print_notice(
+          sprintf( 'Miinimum tellimuse suurus on %s , teie praegune ostu summa on %s.' ,
+            woocommerce_price( $minimum ),
+            woocommerce_price( WC()->cart->total )
+          ), 'error'
+        );
 
-		}
-	}
+      } else {
 
+        wc_add_notice(
+          sprintf( 'Miinimum tellimuse suurus on %s , teie praegune ostu summa on %s.' ,
+            woocommerce_price( $minimum ),
+            woocommerce_price( WC()->cart->total )
+          ), 'error'
+        );
+
+      }
+    }
+  }
 }
 
 
