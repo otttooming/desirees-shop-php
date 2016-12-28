@@ -22,17 +22,20 @@ $img_padding_ratio = wp_get_attachment_image_src( get_post_thumbnail_id(), 'medi
 	<div class="product__left-inner">
 		<div class="main-image product__main-image-wrap img-padding-ratio__wrap">
 				<?php // etheme_wc_product_labels(); ?>
-				<a class="main-image product__main-image" itemprop="image" href="<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>" rel="thumbnails" title="<?php echo get_the_title( get_post_thumbnail_id() ); ?>">
-						<img
-						class="attachment-shop_single lazyload"
-						data-src="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium_large' )[0]; ?>"
-						width="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium_large' )[1] ?>"
-						height="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium_large' )[2] ?>"
-						alt="<?php the_title(); ?>"
-						data-type="<?php echo gettype(wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium_large' )[2]) ?>"
-						>
+				<figure>
+					<a class="main-image product__main-image lightbox" itemprop="image" href="<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>" rel="thumbnails" title="<?php echo get_the_title( get_post_thumbnail_id() ); ?>" data-size="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' )[1] . 'x' . wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' )[2] ?>">
+							<img
+							class="attachment-shop_single lazyload"
+							data-src="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium_large' )[0]; ?>"
+							width="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium_large' )[1] ?>"
+							height="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium_large' )[2] ?>"
+							alt="<?php the_title(); ?>"
+							data-type="<?php echo gettype(wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium_large' )[2]) ?>"
+							>
 
-				</a>
+					</a>
+				</figure>
+
 				<div style="padding-bottom:<?php echo $img_padding_ratio; ?>"></div>
 
 		</div>

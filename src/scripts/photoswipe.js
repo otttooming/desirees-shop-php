@@ -3,6 +3,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
     // parse slide data (url, title, size ...) from DOM elements
     // (children of gallerySelector)
     var parseThumbnailElements = function(el) {
+
         var thumbElements = el.childNodes,
             numNodes = thumbElements.length,
             items = [],
@@ -20,7 +21,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
                 continue;
             }
 
-            linkEl = figureEl.children[0]; // <a> element
+            linkEl = figureEl.parentNode; // <a> element
 
             size = linkEl.getAttribute('data-size').split('x');
 
@@ -94,8 +95,9 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 
 
         if(index >= 0) {
+            var idNum = e.target.closest('.lightbox').getAttribute('data-pswp-uid');
             // open PhotoSwipe if valid index found
-            openPhotoSwipe( index, clickedGallery );
+            openPhotoSwipe( index, document.querySelectorAll( gallerySelector )[idNum - 1] );
         }
         return false;
     };
@@ -143,14 +145,15 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
             galleryUID: galleryElement.getAttribute('data-pswp-uid'),
             shareEl: false,
 
-            // getThumbBoundsFn: function(index) {
-            //     // See Options -> getThumbBoundsFn section of documentation for more info
-            //     var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
-            //         pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
-            //         rect = thumbnail.getBoundingClientRect();
-            //
-            //     return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
-            // }
+            getThumbBoundsFn: function(index) {
+
+                // See Options -> getThumbBoundsFn section of documentation for more info
+                var thumbnail = items[index].el, // find thumbnail
+                    pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                    rect = thumbnail.getBoundingClientRect();
+
+                return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
+            }
 
         };
 
@@ -203,17 +206,4 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 };
 
 // execute above function
-initPhotoSwipeFromDOM('.product__gallery');
-
-function openPswp(event) {
-  event.stopPropagation();
-  event.preventDefault();
-
-  if (document.getElementsByClassName('product__image-object')[0]) {
-    document.getElementsByClassName('product__image-object')[0].click();
-  }
-};
-
-if (document.getElementsByClassName('product__main-image')[0]) {
-  document.getElementsByClassName('product__main-image')[0].addEventListener('click', openPswp);
-}
+initPhotoSwipeFromDOM('.lightbox');

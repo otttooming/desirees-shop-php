@@ -15,24 +15,11 @@ global $post, $product, $woocommerce;
 $attachment_ids = $product->get_gallery_attachment_ids();
 
 ?>
-<?php if ($attachment_ids) : ?>
 
-<div class="product__gallery" itemscope itemtype="http://schema.org/ImageGallery">
+<div class="product__gallery <?php if (!$attachment_ids) : ?>hidden-xs-up<?php endif; ?>" itemscope itemtype="http://schema.org/ImageGallery">
     <div class="swiper-container product__gallery-slider">
 
         <div class="swiper-wrapper">
-
-            <?php if ( has_post_thumbnail() ) : ?>
-
-
-                <figure class="swiper-slide product__image-object is-disabled" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                    <a href="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' )[0]; ?>" itemprop="contentUrl" data-size="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' )[1] . 'x' . wp_get_attachment_image_src( get_post_thumbnail_id(), 'full' )[2] ?>">
-                        <img data-src="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium' )[0]; ?>" class="product__image lazyload" itemprop="thumbnail" width="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium' )[1] ?>" height="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium' )[2] ?>">
-                    </a>
-                </figure>
-
-            <?php endif; ?>
-
             <?php
                 if ($attachment_ids) {
 
@@ -46,7 +33,7 @@ $attachment_ids = $product->get_gallery_attachment_ids();
                         $img = wp_get_attachment_image_src( $id, 'full' );
                         ?>
                         <figure class="swiper-slide product__image-object" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                            <a href="<?php echo wp_get_attachment_image_src( $id, 'full' )[0]; ?>" itemprop="contentUrl" data-size="<?php echo $img[1] . 'x' . $img[2] ?>">
+                            <a href="<?php echo wp_get_attachment_image_src( $id, 'full' )[0]; ?>" itemprop="contentUrl" data-size="<?php echo $img[1] . 'x' . $img[2] ?>" class="lightbox">
                                 <img data-src="<?php echo wp_get_attachment_image_src( $id, 'medium' )[0]; ?>" class="product__image lazyload" itemprop="thumbnail" width="<?php echo wp_get_attachment_image_src( $id, 'medium' )[1] ?>" height="<?php echo wp_get_attachment_image_src( $id, 'medium' )[2] ?>">
                             </a>
                         </figure>
@@ -64,4 +51,3 @@ $attachment_ids = $product->get_gallery_attachment_ids();
 				</div>
 
 </div>
-<?php endif; ?>
