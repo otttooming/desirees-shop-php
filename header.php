@@ -35,7 +35,7 @@
     </div>
 
 		<div class="row header middle-xs">
-			<div class="col-xs-12 col-sm-3 header__logo">
+			<div class="col-xs-10 col-sm-6 col-sm-offset-3 col-xs-offset-1 col-md-offset-0 col-md-3 header__logo">
         <?php require get_template_directory() . '/inc/components/logo.php'; ?>
 			</div>
 
