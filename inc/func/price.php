@@ -17,18 +17,16 @@ function filter_wc_price( $args, $price ) {
 		'price_format'       => get_woocommerce_price_format(),
 	) ) ) );
 
-	$negative        = $price < 0;
-
-	$price           = apply_filters( 'raw_woocommerce_price', floatval( $negative ? $price * -1 : $price ) );
-	$price           = apply_filters( 'formatted_woocommerce_price', number_format( $price, $decimals, $decimal_separator, $thousand_separator ), $price, $decimals, $decimal_separator, $thousand_separator );
-	if ( apply_filters( 'woocommerce_price_trim_zeros', false ) && $decimals > 0 ) {
+	if ( $decimals > 0 ) {
 		$price = wc_trim_zeros( $price );
 	}
-	$formatted_price = ( $negative ? '-' : '' ) . sprintf( $price_format, '<span class="price__currency-format">' . get_woocommerce_currency_symbol( $currency ) . '</span>','<span class="price__sum">' . $price . '</span>' );
-	$return          = '<span class="price__block">' . $formatted_price . '</span>';
+
+	$return = '<span class="price__block">' . $price . get_woocommerce_currency_symbol( $currency ) . '</span>';
+
 	if ( $ex_tax_label && wc_tax_enabled() ) {
 		$return .= ' <small class="woocommerce-Price-taxLabel tax_label">' . WC()->countries->ex_tax_or_vat() . '</small>';
 	}
+
   return $return;
 };
 
