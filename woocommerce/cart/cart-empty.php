@@ -16,7 +16,7 @@ wc_print_notices();
 
 <?php do_action('woocommerce_cart_is_empty'); ?>
 
-<div class="empty-cart-block">
+<div class="empty-cart-block center-xs-col-standalone">
 		<?php dynamic_sidebar( 'empty-cart' ); ?>
 
 		<p>
