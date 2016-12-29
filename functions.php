@@ -26,6 +26,11 @@ require get_template_directory() . '/inc/func/enqueue.php';
 require get_template_directory() . '/inc/func/widgets.php';
 
 /**
+* Menus
+*/
+require get_template_directory() . '/inc/func/menus.php';
+
+/**
 * Shortcodes
 */
 require get_template_directory() . '/inc/func/shortcodes.php';
