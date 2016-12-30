@@ -105,7 +105,7 @@
                 ?>
 
                     <div class="col-xs-12 col-sm-3">
-                        <a href="<?php echo get_term_link( $term->slug, 'product_cat' ); ?>" title="<?php echo sprintf(__('View all products filed under %s', 'desirees'), $term->name); ?>" class="button medium w-100">
+                        <a href="<?php echo get_term_link( $term->slug, 'product_cat' ); ?>" title="<?php echo __('Show', 'woocommerce') . ' ' . $term->name; ?>" class="button medium w-100">
                             <?php echo $term->name; ?>
                         </a>
                     </div>
