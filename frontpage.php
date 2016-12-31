@@ -11,13 +11,13 @@
   <?php if (  is_active_sidebar( 'fp-shopnav-1' ) || is_active_sidebar( 'fp-shopnav-2' ) ) : ?>
     <div class="row">
         <?php if (  is_active_sidebar( 'fp-shopnav-1' ) ) : ?>
-          <div class="col-xs-12 col-sm-offset-2 col-sm-4">
+          <div class="col-xs-12 col-sm-offset-2 <?php echo is_active_sidebar( 'fp-shopnav-2' ) ? 'col-sm-4' : 'col-sm-8'; ?>">
             <?php dynamic_sidebar( 'fp-shopnav-1' ); ?>
           </div>
         <?php endif; ?>
 
         <?php if (  is_active_sidebar( 'fp-shopnav-2' ) ) : ?>
-          <div class="col-xs-12 col-sm-4">
+          <div class="col-xs-12 <?php echo is_active_sidebar( 'fp-shopnav-1' ) ? 'col-sm-4' : 'col-sm-offset-2 col-sm-8'; ?>">
             <?php dynamic_sidebar( 'fp-shopnav-2' ); ?>
           </div>
         <?php endif; ?>
