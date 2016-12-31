@@ -53,7 +53,7 @@ get_header('shop');
         <?php endif; ?>
 
         <?php if(isset($cat->description) && $cat->description !='' && !is_shop()) : ?>
-          	<div class="product-category-description">
+          	<div class="product-category-description bg__common p1 mb1">
             	<?php echo do_shortcode($cat->description); ?>
           	</div>
         <?php endif; ?>

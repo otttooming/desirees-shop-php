@@ -124,31 +124,3 @@
 
   justify-content: space-between;
 }
-
-.subcat {
-  &__grid {
-    display: flex;
-
-    margin: 0 0 20px;
-  }
-
-  &__block {
-    display: flex;
-  }
-
-  &__item {
-    display: flex;
-
-    align-items: center;
-  }
-
-  &__img {
-    width: 50px;
-  }
-
-  &__header {
-    display: inline-block;
-
-    margin: 0;
-  }
-}

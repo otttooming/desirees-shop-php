@@ -22,14 +22,10 @@ $image = wp_get_attachment_url( $thumbnail_id );
 <li class="subcat__block">
 	<a class="subcat__item" href="<?php echo get_term_link( $category->slug, 'product_cat' ); ?>">
 
-		<?php if ( $image ) : ?>
-			<img class="subcat__img" src="<?php echo $image; ?>" alt="<?php echo $category->name; ?>" width="<?php echo $dimensions['width'];  ?>" height="<?php echo $dimensions['height'];  ?>">
-		<?php endif; ?>
-
-		<h3 class="subcat__header">
-			<?php echo $category->name; ?>
+		<h3 class="subcat__title">
+			<span class="subcat__name"><?php echo $category->name; ?></span>
 			<?php if ( $category->count > 0 ) : ?>
-				<mark class="subcat__count">(<?php echo $category->count; ?>)</mark>
+				<span class="subcat__count">(<?php echo $category->count; ?>)</span>
 			<?php endif; ?>
 		</h3>
 
