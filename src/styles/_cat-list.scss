@@ -94,8 +94,8 @@
 .subcat {
   &__grid {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
-    margin-bottom: 20px;
   }
 
   &__item {
@@ -103,6 +103,7 @@
     background-color: $color-black;
     box-shadow: $shadow-std;
     margin-right: 20px;
+    margin-bottom: 20px;
   }
 
   &__title {

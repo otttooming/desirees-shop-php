@@ -2408,14 +2408,16 @@ blockquote {
 .subcat__grid {
   display: -ms-flexbox;
   display: flex;
-  list-style: none;
-  margin-bottom: 20px; }
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none; }
 
 .subcat__item {
   border-radius: 3px;
   background-color: #340644;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
-  margin-right: 20px; }
+  margin-right: 20px;
+  margin-bottom: 20px; }
 
 .subcat__title {
   position: relative;
