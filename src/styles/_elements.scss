@@ -84,6 +84,10 @@ p {
   }
 }
 
+div {
+  box-sizing: border-box;
+}
+
 fieldset {
   margin: 0 0 1em;
 }

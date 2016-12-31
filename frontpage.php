@@ -32,37 +32,41 @@
     </div>
   <?php endif; ?>
 
-	<hr>
-
   <?php if (  is_active_sidebar( 'fp-slogan-1' ) || is_active_sidebar( 'fp-slogan-2' ) || is_active_sidebar( 'fp-slogan-3' ) || is_active_sidebar( 'fp-slogan-4' ) ) : ?>
     <div class="row center-xs">
         <?php if (  is_active_sidebar( 'fp-slogan-1' ) ) : ?>
-          <div class="col-xs-12 col-sm-3">
+          <div class="col-xs-12 col-sm-6 col-md-3 d__flex">
+            <div class="bg__common p1 w100">
               <?php dynamic_sidebar( 'fp-slogan-1' ); ?>
+            </div>
           </div>
         <?php endif; ?>
 
         <?php if (  is_active_sidebar( 'fp-slogan-2' ) ) : ?>
-          <div class="col-xs-12 col-sm-3">
-            <?php dynamic_sidebar( 'fp-slogan-2' ); ?>
+          <div class="col-xs-12 col-sm-6 col-md-3 d__flex">
+            <div class="bg__common p1 w100">
+              <?php dynamic_sidebar( 'fp-slogan-2' ); ?>
+            </div>
           </div>
         <?php endif; ?>
 
         <?php if (  is_active_sidebar( 'fp-slogan-3' ) ) : ?>
-          <div class="col-xs-12 col-sm-3">
-            <?php dynamic_sidebar( 'fp-slogan-3' ); ?>
+          <div class="col-xs-12 col-sm-6 col-md-3 d__flex">
+            <div class="bg__common p1 w100">
+              <?php dynamic_sidebar( 'fp-slogan-3' ); ?>
+            </div>
           </div>
         <?php endif; ?>
 
         <?php if (  is_active_sidebar( 'fp-slogan-4' ) ) : ?>
-          <div class="col-xs-12 col-sm-3">
-            <?php dynamic_sidebar( 'fp-slogan-4' ); ?>
+          <div class="col-xs-12 col-sm-6 col-md-3 d__flex">
+            <div class="bg__common p1 w100">
+              <?php dynamic_sidebar( 'fp-slogan-4' ); ?>
+            </div>
           </div>
         <?php endif; ?>
     </div>
   <?php endif; ?>
-
-	<hr>
 
   <?php if (  is_active_sidebar( 'fp-illustration-1' ) || is_active_sidebar( 'fp-illustration-2' ) || is_active_sidebar( 'fp-illustration-3' ) || is_active_sidebar( 'fp-illustration-4' ) ) : ?>
     <div class="row center-xs">

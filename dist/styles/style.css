@@ -486,6 +486,9 @@ p {
   p a {
     color: #ffc000; }
 
+div {
+  box-sizing: border-box; }
+
 fieldset {
   margin: 0 0 1em; }
 
@@ -1598,6 +1601,15 @@ blockquote {
 
 .justify {
   text-align: justify; }
+
+.w100 {
+  width: 100%; }
+
+.d__flex {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
 .grid__slider {
   display: -ms-flexbox;
