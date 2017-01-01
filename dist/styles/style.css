@@ -2383,7 +2383,6 @@ blockquote {
 
 .cat-list__subcat {
   display: none;
-  margin: 0 -20px;
   padding: 0 0 0 25px;
   list-style: none;
   border-left: 1px solid #a30000; }

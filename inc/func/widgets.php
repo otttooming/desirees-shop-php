@@ -324,6 +324,21 @@ function desirees_get_wc_categories_menu($title = 'Categories'){
 																				<span class="cat-list__count"><?php echo $subcat->count; ?></span>
 																		</a>
 																</li>
+
+																<?php $subcats_lvl2 = get_categories( array ('taxonomy' => 'product_cat', 'parent' => $subcat->term_id )); ?>
+
+																<ul class='cat-list__subcat'>
+																		<?php foreach ( $subcats_lvl2 as $subcat_lvl2 ) { ?>
+																				<li class="cat-list__title">
+																						<a href="<?php echo get_term_link( $subcat_lvl2, 'product_cat' ); ?>">
+
+																								<span class="cat-list__name"><?php echo $subcat_lvl2->name; ?></span>
+																								<span class="cat-list__desc"><?php _e($subcat_lvl2->description); ?></span>
+																								<span class="cat-list__count"><?php echo $subcat_lvl2->count; ?></span>
+																						</a>
+																				</li>
+																		<?php } ?>
+																</ul>
 														<?php } ?>
 												</ul>
 
