@@ -4,7 +4,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
     // (children of gallerySelector)
     var parseThumbnailElements = function(el) {
 
-        var thumbElements = el.childNodes,
+        var thumbElements = document.querySelectorAll('.lightbox img'),
             numNodes = thumbElements.length,
             items = [],
             figureEl,
@@ -95,9 +95,9 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 
 
         if(index >= 0) {
-            var idNum = e.target.closest('.lightbox').getAttribute('data-pswp-uid');
+            var idNum = e.target.closest('.lightbox').getAttribute('data-pswp-uid') - 1;
             // open PhotoSwipe if valid index found
-            openPhotoSwipe( index, document.querySelectorAll( gallerySelector )[idNum - 1] );
+            openPhotoSwipe( idNum, document.querySelectorAll( gallerySelector )[idNum] );
         }
         return false;
     };
