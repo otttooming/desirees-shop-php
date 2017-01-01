@@ -2346,7 +2346,7 @@ blockquote {
   display: -ms-flexbox;
   display: flex;
   height: 35px;
-  margin: 0 0 10px 20px;
+  margin: 0 0 10px 0;
   padding: 0 70px 0 0;
   text-align: left;
   color: #ffc000;
@@ -2367,14 +2367,6 @@ blockquote {
   text-overflow: ellipsis;
   color: #fff;
   font-size: 11px; }
-
-.cat-list__thumb {
-  position: absolute;
-  top: 50%;
-  left: -30px;
-  width: 20px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%); }
 
 .cat-list__count {
   position: absolute;
@@ -2446,14 +2438,6 @@ blockquote {
   text-overflow: ellipsis;
   color: #fff;
   font-size: 11px; }
-
-.subcat__thumb {
-  position: absolute;
-  top: 50%;
-  left: -30px;
-  width: 20px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%); }
 
 .subcat__count {
   position: absolute;

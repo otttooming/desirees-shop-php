@@ -302,9 +302,6 @@ function desirees_get_wc_categories_menu($title = 'Categories'){
 														<span class="cat-list__name"><?php echo $term_name; ?></span>
 														<span class="cat-list__desc"><?php _e($term_desc); ?></span>
 														<span class="cat-list__count"><?php echo $term_count; ?></span>
-														<?php if (wp_get_attachment_url( $thumbnail_id )) : ?>
-															<img class="cat-list__thumb" src="<?php echo wp_get_attachment_url( $thumbnail_id ); ?>" alt="" />
-														<?php endif; ?>
 													</a>
 													<?php if ( $subcategories ) : ?>
 
@@ -325,10 +322,6 @@ function desirees_get_wc_categories_menu($title = 'Categories'){
 																				<span class="cat-list__name"><?php echo $subcat->name; ?></span>
 																				<span class="cat-list__desc"><?php _e($subcat->description); ?></span>
 																				<span class="cat-list__count"><?php echo $subcat->count; ?></span>
-
-																				<?php if (wp_get_attachment_url( get_woocommerce_term_meta( $subcat->term_id, 'thumbnail_id', true ) )) : ?>
-																						<img class="cat-list__thumb" src="<?php echo wp_get_attachment_url( get_woocommerce_term_meta( $subcat->term_id, 'thumbnail_id', true ) ); ?>" alt="" />
-																				<?php endif; ?>
 																		</a>
 																</li>
 														<?php } ?>
