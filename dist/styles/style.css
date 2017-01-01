@@ -1630,9 +1630,6 @@ blockquote {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
 
-.grid__cat-banner {
-  max-height: 290px; }
-
 .grid__options {
   display: -ms-flexbox;
   display: flex;

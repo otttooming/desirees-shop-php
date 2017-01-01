@@ -17,7 +17,7 @@ global $wp_query;
 
 $cat = $wp_query->get_queried_object();
 $image = '';
-if ( !isset($cat->term_id) || !is_search() ) {
+if ( !isset($cat->term_id) || is_search() ) {
 		$image = '';
 } else {
 		$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
