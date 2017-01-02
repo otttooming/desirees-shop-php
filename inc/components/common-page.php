@@ -21,7 +21,9 @@
           ?>
 
           <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-              <?php the_content(); ?>
+              <div class="bg__common p1">
+                  <?php the_content(); ?>
+              </div>
               <?php wp_link_pages(array('before' => ''.__('Pages:', 'desirees'), 'after' => '')); ?>
           <?php endwhile; ?>
           <?php else : ?>
