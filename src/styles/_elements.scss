@@ -22,13 +22,10 @@ body {
 
   margin: 0;
 
-  background-image: radial-gradient(circle at 50%, rgba(17, 52, 181, .9) 40%, rgba(234, 0, 64, .9) 100%);
-  background-attachment: fixed;
   text-shadow: $shadow-text;
 
   font-family: $typeface-primary;
   color: $color-white;
-
 }
 
 a {
@@ -360,4 +357,16 @@ blockquote {
   border-radius: $border-radius-std;
   background: $color-bg;
   box-shadow: $shadow-std;
+}
+
+.bg__site {
+  position: fixed;
+  background-image: radial-gradient(circle at 50%, rgba(17, 52, 181, .9) 40%, rgba(234, 0, 64, .9) 100%);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform: translate3d(0,0,0);
+  z-index: -1;
+  backface-visibility: hidden;
 }

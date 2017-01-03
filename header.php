@@ -7,6 +7,8 @@
   require get_template_directory() . '/inc/components/head.php';
 ?>
 
+<div class="bg__site"></div>
+
 <div class="wrapper">
 
 	<header class="container">
