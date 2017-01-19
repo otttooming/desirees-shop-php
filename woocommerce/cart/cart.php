@@ -115,34 +115,22 @@ do_action( 'woocommerce_before_cart' ); ?>
 	do_action( 'woocommerce_cart_contents' );
 	?>
 </tbody>
-<tfoot class="cart__form-footer">
-	<tr>
-		<td colspan="6" class="actions">
 
-			<?php if ( get_option( 'woocommerce_enable_coupons' ) == 'yes' ) { ?>
-				<div class="coupon cfx">
-
-					<label for="coupon_code"><?php _e('Coupon', 'woocommerce'); ?>:</label> <input name="coupon_code" class="input-text" id="coupon_code" value="" type="text" /> <input type="submit" class="button apply-coupon" name="apply_coupon" value="<?php _e('Apply Coupon', 'woocommerce'); ?>" />
-
-					<?php do_action('woocommerce_cart_coupon'); ?>
-
-				</div>
-			<?php } ?>
-
-			<input type="submit" class="button update-button" name="update_cart" value="<?php _e('Update Cart', 'woocommerce'); ?>" />
-
-			<?php // do_action('woocommerce_proceed_to_checkout'); ?>
-
-			<?php wp_nonce_field('woocommerce-cart') ?>
-		</td>
-	</tr>
-
-	<?php do_action( 'woocommerce_after_cart_contents' ); ?>
-</tfoot>
 </table>
-<?php do_action( 'woocommerce_after_cart_table' ); ?>
-</form>
 
-<div class="cart__collaterals cfx bg__common p1">
-	<?php do_action('woocommerce_cart_collaterals'); ?>
+<div class="mb1">
+	<?php do_action( 'woocommerce_after_cart_contents' ); ?>
+
+	<input type="submit" class="button update-button" name="update_cart" value="<?php _e('Update Cart', 'woocommerce'); ?>" />
+
+	<?php wp_nonce_field('woocommerce-cart') ?>
 </div>
+
+<hr>
+
+<?php do_action( 'woocommerce_after_cart_table' ); ?>
+
+<div class="wc-proceed-to-checkout">
+	<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
+</div>
+</form>

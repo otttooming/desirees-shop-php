@@ -64,7 +64,7 @@ global $woocommerce;
                   $data_max = ( $_product->backorders_allowed() ) ? '' : $_product->get_stock_quantity();
                   $data_max = apply_filters( 'woocommerce_cart_item_data_max', $data_max, $_product );
 
-                  $product_quantity = sprintf( '<div class="qty-block quantity"><input name="cart[%s][qty]" type="number" data-min="%s" data-max="%s" value="%s" size="4" title="%s" class="input-text qty text" maxlength="12" readonly /></div>', $cart_item_key, $data_min, $data_max, esc_attr( $cart_item['quantity'] ), __('Qty', 'woocommerce') );
+                  $product_quantity = esc_attr( $cart_item['quantity'] );
                 }
 
                 echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key );
