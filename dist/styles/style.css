@@ -2079,7 +2079,7 @@ blockquote {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
   .product-cart__variations select {
-    margin: 0 10px 10px 0; }
+    margin: 10px 10px 10px 0; }
 
 .product-meta a {
   display: inline-block;

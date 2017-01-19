@@ -324,15 +324,14 @@
 }
 
 .product-cart {
+
   &__variations {
     display: flex;
 
     flex-wrap: wrap;
 
     select {
-      margin: 0 10px 10px 0;
-
-      // flex: 1;
+      margin: 10px 10px 10px 0;
     }
   }
 }
