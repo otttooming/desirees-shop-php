@@ -57,19 +57,7 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
 			<h2 id="order_review_heading"><?php _e( 'Your order', 'woocommerce' ); ?></h2>
 
 			<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
-
-			<?php if ( get_option( 'woocommerce_enable_coupons' ) == 'yes' ) : ?>
-				<div class="mb1">
-					<h2><?php _e('Coupon', 'woocommerce'); ?></h2>
-					<input name="coupon_code" class="input-text" id="coupon_code" value="" type="text" placeholder="<?php _e('Coupon', 'woocommerce'); ?>" /> <input type="submit" class="button apply-coupon" name="apply_coupon" value="<?php _e('Apply Coupon', 'woocommerce'); ?>" />
-
-					<?php do_action('woocommerce_cart_coupon'); ?>
-				</div>
-			<?php endif; ?>
 		</div>
-
-
-
 
 		<div class="bg__common p1 mb1">
 			<?php do_action( 'woocommerce_checkout_order_review' ); ?>
