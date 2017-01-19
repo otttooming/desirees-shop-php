@@ -34,8 +34,11 @@ function devotion_used_scripts_styles() {
 function devotion_dequeue_scripts_styles() {
 	wp_deregister_style('wpr_giftcards_css');
 
-	wp_deregister_script(	'jquery'	);
-	wp_deregister_script(	'woocommerce'	);
+	if ( !is_checkout() ) {
+		wp_deregister_script(	'jquery'	);
+		wp_deregister_script(	'woocommerce'	);
+	}
+
 	wp_deregister_script(	'wc-cart-fragments'	);
 	wp_deregister_script(	'wpr_giftcards_js '	);
 	wp_deregister_script( 'prettyPhoto' );
@@ -155,10 +158,14 @@ function grd_woocommerce_script_cleaner() {
 	wp_dequeue_script( 'wc-add-to-cart' );
 	wp_dequeue_script( 'wc-cart-fragments' );
 	wp_dequeue_script( 'wc-credit-card-form' );
-	wp_dequeue_script( 'wc-checkout' );
+
+	if ( !is_checkout() ) {
+		wp_dequeue_script( 'wc-checkout' );
+		wp_dequeue_script( 'wc-cart' );
+	}
+
 	wp_dequeue_script( 'wc-add-to-cart-variation' );
 	wp_dequeue_script( 'wc-single-product' );
-	wp_dequeue_script( 'wc-cart' );
 	wp_dequeue_script( 'wc-chosen' );
 	wp_dequeue_script( 'woocommerce' );
 	wp_dequeue_script( 'prettyPhoto' );

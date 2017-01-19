@@ -23,9 +23,10 @@ if ( ! is_ajax() ) {
 	do_action( 'woocommerce_review_order_before_payment' );
 }
 ?>
-<h2><?php _e( 'Pay', 'woocommerce' ) ?></h2>
 
 <div id="payment" class="woocommerce-checkout-payment">
+	<h2 class="mb1"><?php _e( 'Pay', 'woocommerce' ) ?></h2>
+
 	<?php if ( WC()->cart->needs_payment() ) : ?>
 		<ul class="wc_payment_methods payment_methods methods list-style-none">
 			<?php
