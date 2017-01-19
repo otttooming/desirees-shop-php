@@ -680,10 +680,17 @@ blockquote {
 .ws-wrap {
   white-space: normal !important; }
 
+.content__common {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  text-shadow: none; }
+
 .bg__common {
   border-radius: 3px;
   background: rgba(52, 6, 68, 0.2);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
+  .bg__common--light {
+    background: rgba(255, 255, 255, 0.85);
+    color: #000; }
 
 .bg__site {
   position: fixed;

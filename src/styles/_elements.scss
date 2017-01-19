@@ -353,10 +353,26 @@ blockquote {
   white-space: normal!important;
 }
 
-.bg__common {
-  border-radius: $border-radius-std;
-  background: $color-bg;
-  box-shadow: $shadow-std;
+.content {
+
+  &__common {
+    font-family: $typeface-secondary;
+    text-shadow: none;
+  }
+}
+
+.bg {
+
+  &__common {
+    border-radius: $border-radius-std;
+    background: $color-bg;
+    box-shadow: $shadow-std;
+
+    &--light {
+      background: $color-bg-light;
+      color: $color-text-light;
+    }
+  }
 }
 
 .bg__site {
