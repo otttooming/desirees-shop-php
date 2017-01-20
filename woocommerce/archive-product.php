@@ -60,9 +60,7 @@ get_header('shop');
 
     		<?php if ( have_posts() ) : ?>
 
-          <div class="grid__options">
-          	<?php do_action('woocommerce_before_shop_loop'); ?>
-          </div>
+					<?php do_action('woocommerce_before_shop_loop'); ?>
 
     			<?php woocommerce_product_subcategories(array('before'=>'<ul class="subcat__grid cfx">', 'after' => '</ul>')); ?>
 

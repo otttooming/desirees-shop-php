@@ -133,3 +133,11 @@
     background: $color-button-bg;
   }
 }
+
+.filters-menu {
+
+  &__wrap {
+    display: flex;
+    position: relative;
+  }
+}

@@ -106,26 +106,31 @@ function woocommerce_catalog_page_ordering() {
       ?>
   <?php
 }
-add_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_page_ordering', 20 );
+add_action( 'desirees_sidebar_settings', 'woocommerce_catalog_page_ordering', 20 );
 
 /**
  * Return selected sortby value from cookie to loop
  */
 function woocommerce_sortby_value_save( $count ) {
-	$main_site_url = home_url( '', 'relative' );
 	$cookie_retention_time = ( 14 * 24 * 60 * 60 );
 
 	if (isset($_COOKIE['wc_sortbyValue'])) {
 		$count = $_COOKIE['wc_sortbyValue'];
 	}
 	if (isset($_POST['woocommerce-sortby-columns'])) {
-		setcookie('wc_sortbyValue', $_POST['woocommerce-sortby-columns'], time() + $cookie_retention_time, '/', $main_site_url, false);
+		setcookie('wc_sortbyValue', $_POST['woocommerce-sortby-columns'], time() + $cookie_retention_time, COOKIEPATH, COOKIE_DOMAIN, false);
 		$count = $_POST['woocommerce-sortby-columns'];
 	}
 	return $count;
 }
 add_filter( 'loop_shop_per_page', 'woocommerce_sortby_value_save' );
 
+/**
+ * http://hookr.io/actions/woocommerce_before_shop_loop/
+ */
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+add_action( 'desirees_sidebar_settings', 'woocommerce_catalog_ordering', 30 );
 
 
 // Remove Reviews tab

@@ -97,6 +97,11 @@ add_filter( 'woocommerce_checkout_fields' , 'desirees_override_checkout_fields' 
 add_filter( 'woocommerce_billing_fields' , 'desirees_override_billing_fields' );
 add_filter( 'woocommerce_shipping_fields' , 'desirees_override_shipping_fields' );
 
+/**
+ * 
+ * https://docs.woocommerce.com/document/tutorial-customising-checkout-fields-using-actions-and-filters/
+ *
+ */
 function desirees_override_checkout_fields( $fields ) {
   // unset($fields['billing']['billing_state']);
   // unset($fields['billing']['billing_country']);

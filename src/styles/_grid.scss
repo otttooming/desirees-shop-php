@@ -19,24 +19,6 @@
       flex-wrap: wrap;
     }
   }
-
-  &__options {
-    display: flex;
-
-    margin: 0 0 20px;
-    padding: 0 20px;
-
-    white-space: nowrap;
-
-    border-radius: $border-radius-std;
-    background-color: #151515;
-    box-shadow: $shadow-std;
-
-    line-height: 45px;
-
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
 }
 
 .product-loop {
