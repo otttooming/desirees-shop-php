@@ -2568,7 +2568,13 @@ blockquote {
 
 .cart__thumbnail {
   width: 55px;
-  text-align: center; }
+  margin-right: 10px; }
+
+.cart__product-name {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center; }
 
 .shop_table thead {
   background: rgba(52, 6, 68, 0.2); }

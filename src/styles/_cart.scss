@@ -9,8 +9,12 @@
 
   &__thumbnail {
     width: 55px;
+    margin-right: 10px;
+  }
 
-    text-align: center;
+  &__product-name {
+    display: flex;
+    align-items: center;
   }
 }
 

@@ -16,9 +16,7 @@ global $woocommerce;
 <table class="shop_table checkout_cart table woocommerce-checkout-review-order-table mb1">
 	<thead class="cart__form-head">
 		<tr>
-      <th class="product-thumbnail cart_del_column">&nbsp;</th>
 			<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
-      <th class="product-quantity"><?php _e('Qty', 'woocommerce'); ?></th>
 			<th class="product-total"><?php _e( 'Total', 'woocommerce' ); ?></th>
 		</tr>
 	</thead>
@@ -32,14 +30,13 @@ global $woocommerce;
 				if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_checkout_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
 					?>
 					<tr class="<?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
-            <!-- The thumbnail -->
-  					<td class="cart__thumbnail cart_del_column">
-  						<?php
-  							$thumbnail = apply_filters( 'woocommerce_in_cart_product_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
-  							printf('<a href="%s">%s</a>', esc_url( get_permalink( apply_filters('woocommerce_in_cart_product_id', $cart_item['product_id'] ) ) ), $thumbnail );
-  						?>
-  					</td>
-            <td class="product-name">
+
+            <td class="cart__product-name">
+							<?php
+								$thumbnail = apply_filters( 'woocommerce_in_cart_product_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
+								printf('<a href="%s" class="cart__thumbnail">%s</a>', esc_url( get_permalink( apply_filters('woocommerce_in_cart_product_id', $cart_item['product_id'] ) ) ), $thumbnail );
+							?>
+
   						<?php
   							if ( ! $_product->is_visible() || ( $_product instanceof WC_Product_Variation && ! $_product->parent_is_visible() ) )
   								echo apply_filters( 'woocommerce_in_cart_product_title', $_product->get_title(), $cart_item, $cart_item_key );
@@ -53,23 +50,22 @@ global $woocommerce;
                  				if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) )
                  					echo '<p class="backorder_notification">' . __('Available on backorder', 'desirees') . '</p>';
   						?>
+
+							<?php
+								if ( $_product->is_sold_individually() ) {
+									$product_quantity = '1';
+								} else {
+									$data_min = apply_filters( 'woocommerce_cart_item_data_min', '', $_product );
+									$data_max = ( $_product->backorders_allowed() ) ? '' : $_product->get_stock_quantity();
+									$data_max = apply_filters( 'woocommerce_cart_item_data_max', $data_max, $_product );
+
+									$product_quantity = esc_attr( $cart_item['quantity'] );
+								}
+
+								echo 'x' . apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key );
+							?>
   					</td>
-            <!-- Quantity inputs -->
-            <td class="product-quantity" id="cart-quantity">
-              <?php
-                if ( $_product->is_sold_individually() ) {
-                  $product_quantity = '1';
-                } else {
-                  $data_min = apply_filters( 'woocommerce_cart_item_data_min', '', $_product );
-                  $data_max = ( $_product->backorders_allowed() ) ? '' : $_product->get_stock_quantity();
-                  $data_max = apply_filters( 'woocommerce_cart_item_data_max', $data_max, $_product );
 
-                  $product_quantity = esc_attr( $cart_item['quantity'] );
-                }
-
-                echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key );
-              ?>
-            </td>
 						<td class="product-total">
 							<?php echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); ?>
 						</td>
@@ -84,14 +80,14 @@ global $woocommerce;
 	<tfoot class="cart__form-footer">
 
 		<tr class="cart-subtotal">
-			<th colspan="2"><?php _e( 'Subtotal', 'woocommerce' ); ?></th>
-			<td colspan="2" class="right-align"><?php wc_cart_totals_subtotal_html(); ?></td>
+			<th><?php _e( 'Subtotal', 'woocommerce' ); ?></th>
+			<td class="right-align"><?php wc_cart_totals_subtotal_html(); ?></td>
 		</tr>
 
 		<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
 			<tr class="cart-discount coupon-<?php echo esc_attr( $code ); ?>">
-				<th colspan="2"><?php wc_cart_totals_coupon_label( $coupon ); ?></th>
-				<td colspan="2"><?php wc_cart_totals_coupon_html( $coupon ); ?></td>
+				<th><?php wc_cart_totals_coupon_label( $coupon ); ?></th>
+				<td><?php wc_cart_totals_coupon_html( $coupon ); ?></td>
 			</tr>
 		<?php endforeach; ?>
 
@@ -107,7 +103,7 @@ global $woocommerce;
 
 		<?php foreach ( WC()->cart->get_fees() as $fee ) : ?>
 			<tr class="fee">
-				<th colspan="2"><?php echo esc_html( $fee->name ); ?></th>
+				<th><?php echo esc_html( $fee->name ); ?></th>
 				<td><?php wc_cart_totals_fee_html( $fee ); ?></td>
 			</tr>
 		<?php endforeach; ?>
@@ -131,8 +127,8 @@ global $woocommerce;
 		<?php do_action( 'woocommerce_review_order_before_order_total' ); ?>
 
 		<tr class="order-total">
-			<th colspan="2"><?php _e( 'Order Total', 'woocommerce' ); ?></th>
-			<td colspan="2" class="right-align"><?php wc_cart_totals_order_total_html(); ?></td>
+			<th><?php _e( 'Order Total', 'woocommerce' ); ?></th>
+			<td class="right-align"><?php wc_cart_totals_order_total_html(); ?></td>
 		</tr>
 
 		<?php do_action( 'woocommerce_review_order_after_order_total' ); ?>
