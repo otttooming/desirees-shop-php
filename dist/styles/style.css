@@ -517,6 +517,12 @@ img {
   max-width: 100%;
   height: auto; }
 
+.img--shadow {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
+
+.img--rounded {
+  border-radius: 3px; }
+
 ul {
   margin: 0;
   padding: 0; }

@@ -129,6 +129,17 @@ img {
   height: auto;
 }
 
+.img {
+
+  &--shadow {
+    box-shadow: $shadow-std;
+  }
+
+  &--rounded {
+    border-radius: $border-radius-std;
+  }
+}
+
 ul {
   margin: 0;
   padding: 0;
