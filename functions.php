@@ -21,6 +21,11 @@ require get_template_directory() . '/inc/func/dequeue.php';
 require get_template_directory() . '/inc/func/enqueue.php';
 
 /**
+* Media
+*/
+require get_template_directory() . '/inc/func/media.php';
+
+/**
 * Widgets
 */
 require get_template_directory() . '/inc/func/widgets.php';
