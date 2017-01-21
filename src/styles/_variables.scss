@@ -48,8 +48,6 @@ $font-size-button: 14px;
 
 $line-height-normal: 1.2;
 
-
-
 // $shadow-std: 2px 2px $color-black;
 
 $shadow-std: 0 0 15px rgba(0, 0, 0, .46);
@@ -60,3 +58,6 @@ $transition-normal: 500ms;
 $border-radius-std: 3px;
 $border-radius-medium: 15px;
 $border-radius-round: 50%;
+
+// Use 8px grid
+$spacing-small: 4px;
