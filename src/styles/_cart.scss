@@ -155,46 +155,31 @@
   margin: 0 0 20px;
 }
 
+.wc-terms-and-conditions,
 .wc_payment_method {
-  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 
   margin-bottom: 20px;
-  padding-left: 40px;
-
-  label {
-    margin: 5px 0;
-  }
 
   img {
-    width: 25px;
+    width: 50px;
+    margin: $spacing-normal 0;
+    display: block;
   }
 
-  .input-radio {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-
-    height: 20px;
-
-    transform: translate3d(0,-50%,0);
+  input {
+    margin-right: $spacing-medium;
   }
 }
 
-#payment div.payment_box {
-  padding: 20px;
+.payment_box {
+  margin: $spacing-normal 0;
+  padding: $spacing-medium;
+  width: 100%;
 
   border-radius: $border-radius-std;
   background: $color-grey;
   box-shadow: $shadow-std;
-}
-
-.wc-terms-and-conditions {
-  position: relative;
-
-  padding-left: 40px;
-
-  input {
-    position: absolute;
-    left: 10px;
-  }
 }

@@ -2669,34 +2669,31 @@ blockquote {
 .coupon {
   margin: 0 0 20px; }
 
+.wc-terms-and-conditions,
 .wc_payment_method {
-  position: relative;
-  margin-bottom: 20px;
-  padding-left: 40px; }
-  .wc_payment_method label {
-    margin: 5px 0; }
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 20px; }
+  .wc-terms-and-conditions img,
   .wc_payment_method img {
-    width: 25px; }
-  .wc_payment_method .input-radio {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    height: 20px;
-    -webkit-transform: translate3d(0, -50%, 0);
-            transform: translate3d(0, -50%, 0); }
+    width: 50px;
+    margin: 8px 0;
+    display: block; }
+  .wc-terms-and-conditions input,
+  .wc_payment_method input {
+    margin-right: 16px; }
 
-#payment div.payment_box {
-  padding: 20px;
+.payment_box {
+  margin: 8px 0;
+  padding: 16px;
+  width: 100%;
   border-radius: 3px;
   background: rgba(52, 6, 68, 0.5);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
-
-.wc-terms-and-conditions {
-  position: relative;
-  padding-left: 40px; }
-  .wc-terms-and-conditions input {
-    position: absolute;
-    left: 10px; }
 
 .checkout input[type=email],
 .checkout input[type=tel],
