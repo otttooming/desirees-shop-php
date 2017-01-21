@@ -13,6 +13,8 @@ function desirees_get_attachment_image_attributes($attr) {
   $attr['data-src'] = $attr['src'];
   $attr['data-srcset'] = $attr['srcset'];
 
+  $attr['class'] = 'lazyload';
+
   unset($attr['src']);
   unset($attr['srcset']);
 
