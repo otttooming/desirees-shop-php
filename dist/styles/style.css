@@ -589,7 +589,9 @@ input[type=number] {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
   font-size: 14px;
   line-height: 30px;
-  -webkit-appearance: none; }
+  height: 30px;
+  -webkit-appearance: none;
+  -moz-appearance: none; }
 
 select {
   cursor: pointer;
@@ -2541,7 +2543,7 @@ blockquote {
 
 .search__field, .search__select {
   box-sizing: border-box;
-  height: 40px;
+  height: 40px !important;
   padding: 0 15px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
   line-height: 40px; }

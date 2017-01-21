@@ -230,8 +230,10 @@ input[type=number] {
 
   font-size: $font-size-button;
   line-height: 30px;
+  height: 30px;
 
   -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 select {
