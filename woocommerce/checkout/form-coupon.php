@@ -30,7 +30,7 @@ if ( empty( WC()->cart->applied_coupons ) ) {
 }
 ?>
 
-<form class="checkout_coupon cfx" method="post">
+<form class="bg__common mb1 p1 checkout_coupon" method="post">
 
 	<p class="form-row form-row-first">
 		<input type="text" name="coupon_code" class="input-text" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" id="coupon_code" value="" />

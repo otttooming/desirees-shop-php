@@ -47,7 +47,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 .5em;
+  margin: $spacing-medium 0;
 
   font-weight: $font-weight-normal;
   line-height: 1.2;
@@ -60,21 +60,13 @@ h2 {
   font-weight: $font-weight-normal;
 }
 
-h2 {
-  margin: 0 0 15px;
-}
-
-h5 {
-  margin: 0 0 5px;
-}
-
 p,
 td {
   font-family: $typeface-secondary;
 }
 
 p {
-  margin: 0 0 1em;
+  margin: $spacing-medium 0;
 
   line-height: 1.4;
 
@@ -88,7 +80,7 @@ div {
 }
 
 fieldset {
-  margin: 0 0 1em;
+  margin: $spacing-small 0;
 }
 
 table {
@@ -143,7 +135,7 @@ ul {
 }
 
 input {
-  margin: $spacing-small 0;
+  margin: $spacing-normal 0;
   padding: 0;
 
   &[type=text] {
@@ -211,7 +203,7 @@ input[type=email],
 input[type=password],
 input[type=number] {
   box-sizing: border-box;
-  margin: $spacing-small 0;
+  margin: $spacing-normal 0;
   padding: 0 10px;
 
   vertical-align: middle;
@@ -248,6 +240,7 @@ label {
 }
 
 textarea {
+  box-sizing: border-box;
   color: $color-white;
   border: 0;
   border-radius: $border-radius-std;

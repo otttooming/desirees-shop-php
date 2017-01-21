@@ -460,7 +460,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 .5em;
+  margin: 16px 0;
   font-weight: 400;
   line-height: 1.2; }
 
@@ -469,18 +469,12 @@ h2 {
   text-transform: uppercase;
   font-weight: 400; }
 
-h2 {
-  margin: 0 0 15px; }
-
-h5 {
-  margin: 0 0 5px; }
-
 p,
 td {
   font-family: "Helvetica Neue", Arial, sans-serif; }
 
 p {
-  margin: 0 0 1em;
+  margin: 16px 0;
   line-height: 1.4; }
   p a {
     color: #ffc000; }
@@ -489,7 +483,7 @@ div {
   box-sizing: border-box; }
 
 fieldset {
-  margin: 0 0 1em; }
+  margin: 4px 0; }
 
 table {
   width: 100%;
@@ -528,7 +522,7 @@ ul {
   padding: 0; }
 
 input {
-  margin: 4px 0;
+  margin: 8px 0;
   padding: 0; }
   input[type=text] {
     min-height: 30px; }
@@ -577,7 +571,7 @@ input[type=email],
 input[type=password],
 input[type=number] {
   box-sizing: border-box;
-  margin: 4px 0;
+  margin: 8px 0;
   padding: 0 10px;
   vertical-align: middle;
   color: inherit;
@@ -605,6 +599,7 @@ label {
   font-family: "Helvetica Neue", Arial, sans-serif; }
 
 textarea {
+  box-sizing: border-box;
   color: #fff;
   border: 0;
   border-radius: 3px;
@@ -1404,6 +1399,10 @@ blockquote {
     -ms-flex-order: 1;
     order: 1; } }
 
+.align-self-center {
+  -ms-flex-item-align: center;
+      align-self: center; }
+
 .f-center {
   display: -ms-flexbox;
   display: flex;
@@ -1518,7 +1517,9 @@ blockquote {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: end;
-        justify-content: flex-end; }
+        justify-content: flex-end;
+    -ms-flex-align: center;
+        align-items: center; }
 
 .cart-links {
   display: -ms-flexbox;
@@ -1529,7 +1530,7 @@ blockquote {
   -ms-flex-pack: center;
       justify-content: center;
   font-size: 16px;
-  min-height: 42px;
+  height: 42px;
   box-sizing: border-box; }
   .cart-links__title {
     text-transform: uppercase;
@@ -1743,7 +1744,7 @@ blockquote {
 .woocommerce-message {
   display: -ms-flexbox;
   display: flex;
-  margin: 0 0 20px;
+  margin: 8px 0;
   padding: 10px 20px;
   list-style: none;
   border-radius: 3px;
@@ -2229,7 +2230,7 @@ blockquote {
   max-width: 100%;
   height: auto;
   padding: 7px 10px;
-  margin: 4px 0;
+  margin: 8px 0;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
