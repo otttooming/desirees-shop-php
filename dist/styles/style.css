@@ -460,7 +460,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 16px 0;
+  margin: 8px 0;
   font-weight: 400;
   line-height: 1.2; }
 
@@ -474,7 +474,7 @@ td {
   font-family: "Helvetica Neue", Arial, sans-serif; }
 
 p {
-  margin: 16px 0;
+  margin: 8px 0;
   line-height: 1.4; }
   p a {
     color: #ffc000; }
@@ -1744,10 +1744,6 @@ blockquote {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%); }
 
-.woocommerce-ordering {
-  margin-bottom: 4px;
-  margin-top: 4px; }
-
 .woocommerce-error,
 .woocommerce-message {
   display: -ms-flexbox;
@@ -2711,7 +2707,7 @@ blockquote {
 .sidebar_grid > .widget-container {
   box-sizing: border-box;
   margin: 0 0 20px;
-  padding: 20px;
+  padding: 16px 24px;
   border-radius: 3px;
   background-color: #340644;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
