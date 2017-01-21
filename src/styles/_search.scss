@@ -27,7 +27,6 @@
     background: $color-black;
     color: $color-white;
 
-    font-size: 11px;
     flex: 2;
   }
 
@@ -44,6 +43,8 @@
     svg {
       position: absolute;
       left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }

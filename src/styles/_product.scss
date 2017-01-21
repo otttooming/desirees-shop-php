@@ -178,7 +178,7 @@
     .amount {
       color: $color-white !important;
 
-      font-size: 12px;
+      font-size: $font-size-small;
     }
 
     &-big {
@@ -352,7 +352,7 @@
     box-shadow: $shadow-std;
     text-shadow: none;
 
-    font-size: 12px;
+    font-size: $font-size-small;
   }
 }
 

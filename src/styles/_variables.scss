@@ -2,7 +2,6 @@
 
 $typeface-primary: 'Oswald', 'Helvetica Neue', Arial, sans-serif;
 $typeface-secondary: 'Helvetica Neue', Arial, sans-serif;
-$font-size-normal: 16px;
 
 // Colors
 // $color-warm: #ff9500;
@@ -40,7 +39,16 @@ $font-weight-thin: 100;
 $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-bold: 700;
+
+$font-size-normal: 16px;
+
+// Lowest limit font-size
+$font-size-small: 12px;
+$font-size-button: 14px;
+
 $line-height-normal: 1.2;
+
+
 
 // $shadow-std: 2px 2px $color-black;
 

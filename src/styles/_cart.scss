@@ -108,6 +108,8 @@
 }
 
 .checkout {
+  @include rem(font-size, 16px);
+
   &__tab-content {
     box-sizing: border-box;
     padding: 20px;

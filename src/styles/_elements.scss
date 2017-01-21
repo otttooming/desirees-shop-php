@@ -6,14 +6,14 @@
 @include fontFace('Oswald', '../fonts/oswald-bold', normal, 700);
 
 html {
-  font-size: 13px;
+  font-size: $font-size-normal;
 
   -webkit-text-size-adjust: none; // Prevent font scaling in landscape
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 
   @media screen and (max-width: 767px) {
-    font-size: 12px;
+    font-size: $font-size-small;
   }
 }
 
@@ -26,6 +26,8 @@ body {
 
   font-family: $typeface-primary;
   color: $color-white;
+
+  @include rem(font-size, 14px);
 }
 
 a {
@@ -223,7 +225,7 @@ input[type=number] {
   box-shadow: $shadow-std;
   // text-shadow: $shadow-text;
 
-  font-size: 12px;
+  font-size: $font-size-button;
   line-height: 30px;
 
   -webkit-appearance: none;
@@ -240,6 +242,8 @@ select {
 
 label {
   display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
   font-family: $typeface-secondary;
 }
 
@@ -252,6 +256,7 @@ textarea {
   text-shadow: $shadow-text;
   width: 100%;
   min-height: 300px;
+  padding: 10px;
 }
 
 hr {
