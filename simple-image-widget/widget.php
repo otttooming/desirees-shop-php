@@ -22,7 +22,7 @@ endif;
 	<p class="simple-image">
 		<?php
 		echo $link_open;
-		echo wp_get_attachment_image( $image_id, $image_size,"", ["class" => "lazyload img--shadow img--rounded"] );
+		echo desirees_get_attachment_image( $image_id, $image_size,"", ["class" => "lazyload img--shadow img--rounded"] );
 		echo $link_close;
 		?>
 	</p>

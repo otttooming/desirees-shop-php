@@ -1721,6 +1721,16 @@ blockquote {
   -ms-flex-pack: justify;
       justify-content: space-between; }
 
+.aspect-ratio {
+  position: relative;
+  width: 100%; }
+  .aspect-ratio img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+
 .product__related-slider {
   padding: 0 0 40px; }
   .product__related-slider .swiper-slide {
