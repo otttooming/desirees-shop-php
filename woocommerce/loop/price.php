@@ -24,7 +24,7 @@ global $product;
 ?>
 
 <?php if ( $price_html = $product->get_display_price() ) : ?>
-  <div class="product-loop__price-block">
+  <div class="products-listing__price-block">
       <?php echo $product->get_price_html(); ?>
   </div>
 <?php endif; ?>
