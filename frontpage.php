@@ -6,7 +6,7 @@
   get_header();
 ?>
 
-<div class="container">
+<div class="container container__content">
 
   <?php if (  is_active_sidebar( 'fp-shopnav-1' ) || is_active_sidebar( 'fp-shopnav-2' ) ) : ?>
     <div class="row">

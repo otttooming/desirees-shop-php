@@ -27,7 +27,7 @@ if ( !isset($cat->term_id) || is_search() ) {
 get_header('shop');
 ?>
 
-<div class="container">
+<div class="container container__content">
     <div class="row">
 
 			<?php get_sidebar(); ?>
