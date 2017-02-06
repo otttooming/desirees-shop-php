@@ -953,8 +953,6 @@ blockquote {
   order: 1; }
 
 @media only screen and (min-width: 544px) {
-  .container {
-    width: 544px; }
   .col-sm,
   .col-sm-1,
   .col-sm-2,
@@ -1105,8 +1103,6 @@ blockquote {
     order: 1; } }
 
 @media only screen and (min-width: 768px) {
-  .container {
-    width: 768px; }
   .col-md,
   .col-md-1,
   .col-md-2,
