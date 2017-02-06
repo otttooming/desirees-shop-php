@@ -181,28 +181,6 @@
 }
 
 .product {
-  &__related {
-    position: relative;
-
-    padding: 20px;
-
-    border-radius: $border-radius-std;
-    background: $color-bg;
-    box-shadow: $shadow-std;
-  }
-
-  &__related-header {
-    margin-right: 100px;
-  }
-
-  &__control-items {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
-}
-
-.product {
   &__attributes {
     td,
     p {
