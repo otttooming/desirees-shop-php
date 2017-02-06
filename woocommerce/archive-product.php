@@ -68,7 +68,7 @@ get_header('shop');
 						<ul class="row row--no-gutters products-listing">
 							<?php while ( have_posts() ) : the_post(); ?>
 
-								<?php woocommerce_get_template_part( 'content', 'product' ); ?>
+								<?php wc_get_template( 'content-product.php' ); ?>
 
 							<?php endwhile; // end of the loop. ?>
 						</ul>

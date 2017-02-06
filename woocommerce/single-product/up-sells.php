@@ -36,8 +36,8 @@ if ( $products->have_posts() ) : ?>
             <div class="slider">
 			<?php while ( $products->have_posts() ) : $products->the_post(); $upsells_count++; ?>
 		      <div class="slide product-slide">
-				<?php woocommerce_get_template_part( 'content', 'product' ); ?>
-	           </div>
+						<?php wc_get_template( 'content-product.php' ); ?>
+	        </div>
 			<?php endwhile; // end of the loop. ?>
             </div>
         </div>
