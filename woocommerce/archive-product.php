@@ -65,7 +65,7 @@ get_header('shop');
     			<?php woocommerce_product_subcategories(array('before'=>'<ul class="subcat__grid cfx">', 'after' => '</ul>')); ?>
 
           <main role="main">
-						<ul class="products-listing">
+						<ul class="row row--no-gutters products-listing">
 							<?php while ( have_posts() ) : the_post(); ?>
 
 								<?php woocommerce_get_template_part( 'content', 'product' ); ?>

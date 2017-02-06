@@ -1,23 +1,22 @@
 .products-listing {
-  display: flex;
 
-  margin: 0 -1px;
-
-  flex-wrap: wrap;
+  &__item-wrap {
+    display: flex;
+    flex-direction: column;
+  }
 
   &__item {
     position: relative;
-    margin: 0 1px 20px;
 
     border-radius: $border-radius-std;
     background: #fff;
     box-shadow: $shadow-std;
 
-    flex: 1 0 180px;
     display: flex;
     justify-content: center;
     overflow: hidden;
     align-items: center;
+    height: 100%;
   }
 
   &__link {

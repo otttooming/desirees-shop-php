@@ -23,7 +23,8 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 
 ?>
 
-	<li itemscope itemtype="http://schema.org/Product" class="products-listing__item">
+	<li itemscope itemtype="http://schema.org/Product" class="col-xs-12 col-sm-4 col-md-3 products-listing__item-wrap p-0-1-20-1">
+		<div class="products-listing__item">
 			<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
 
 			<?php if( has_post_thumbnail() ) : ?>
@@ -41,5 +42,6 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 			</a>
 
 			<?php do_action( 'desirees_after_product_loop_images_wrap' ); ?>
+		</div>
 	</li>
 <?php
