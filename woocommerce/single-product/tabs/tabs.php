@@ -19,8 +19,7 @@ $tabs = apply_filters( 'woocommerce_product_tabs', array() );
 
 if ( ! empty( $tabs ) ) : ?>
 
-    <div class="col-xs-12">
-        <div class="product__details-wrap">
+        <div class="product__details-wrap mt1">
             <?php $i=0; foreach ( $tabs as $key => $tab ) : $i++; ?>
               <div class="product__details-block">
                 <h2 class="tab-title <?php if($i==1): ?> opened<?php endif; ?>">
@@ -35,6 +34,5 @@ if ( ! empty( $tabs ) ) : ?>
 
             <?php do_action('desirees_after_product_details_wrap'); ?>
         </div>
-    </div>
 
 <?php endif; ?>

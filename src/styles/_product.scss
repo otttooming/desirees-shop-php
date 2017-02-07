@@ -1,4 +1,11 @@
 .product {
+
+  &__title {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid $color-grey;
+  }
+
   &__mainblock {
     box-sizing: border-box;
     padding: 20px;
@@ -19,7 +26,12 @@
   }
 
   &__left-wrap {
-    display: flex;
+    height: 100%;
+
+    @media only screen and (min-width: 768px) {
+      position: sticky;
+      top: 20px;
+    }
   }
 
   &__main-image-wrap {

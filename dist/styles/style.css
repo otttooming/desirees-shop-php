@@ -1797,6 +1797,11 @@ blockquote {
   .products-listing__price-block + .button {
     margin: 0 0 0 5px; }
 
+.product__title {
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(52, 6, 68, 0.5); }
+
 .product__mainblock {
   box-sizing: border-box;
   padding: 20px;
@@ -1813,8 +1818,12 @@ blockquote {
   background: #fff; }
 
 .product__left-wrap {
-  display: -ms-flexbox;
-  display: flex; }
+  height: 100%; }
+  @media only screen and (min-width: 768px) {
+    .product__left-wrap {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 20px; } }
 
 .product__main-image-wrap {
   width: 100%;
