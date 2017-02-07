@@ -1446,9 +1446,6 @@ blockquote {
 .m-20-0-20-0 {
   margin: 20px 0 20px 0; }
 
-.p-0-1-20-1 {
-  padding: 0 1px 20px; }
-
 .col2-set {
   display: -ms-flexbox;
   display: flex;
@@ -1727,25 +1724,23 @@ blockquote {
 .woocommerce-success {
   background: #00b31a; }
 
-.products-listing__item-wrap {
+.products-listing__item {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
-      flex-direction: column; }
-
-.products-listing__item {
+      flex-direction: column;
   position: relative;
   border-radius: 3px;
-  background: #fff;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
-  display: -ms-flexbox;
-  display: flex;
+  padding: 0;
+  margin-bottom: 20px;
   -ms-flex-pack: center;
       justify-content: center;
-  overflow: hidden;
   -ms-flex-align: center;
       align-items: center;
-  height: 100%; }
+  border-right: 1px solid #340644;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
 
 .products-listing__link {
   position: absolute;

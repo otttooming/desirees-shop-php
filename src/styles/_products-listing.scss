@@ -1,22 +1,20 @@
 .products-listing {
 
-  &__item-wrap {
+  &__item {
     display: flex;
     flex-direction: column;
-  }
-
-  &__item {
     position: relative;
 
     border-radius: $border-radius-std;
-    background: #fff;
-    box-shadow: $shadow-std;
+    padding: 0;
 
-    display: flex;
+    margin-bottom: 20px;
     justify-content: center;
-    overflow: hidden;
     align-items: center;
-    height: 100%;
+    border-right: 1px solid $color-black;
+    background: $color-white;
+    overflow: hidden;
+    box-shadow: $shadow-std;
   }
 
   &__link {
