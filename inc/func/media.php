@@ -21,7 +21,9 @@ function desirees_get_attachment_image_attributes($attr) {
   return $attr;
 }
 
-add_filter( 'wp_get_attachment_image_attributes', 'desirees_get_attachment_image_attributes');
+if ( ! is_admin() ) {
+  add_filter( 'wp_get_attachment_image_attributes', 'desirees_get_attachment_image_attributes');
+}
 
 /**
  * [desirees_get_attachment_image description]
