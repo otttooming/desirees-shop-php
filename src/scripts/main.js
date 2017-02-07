@@ -1,6 +1,6 @@
 var productGallerySlider = new Swiper('.product__gallery-slider', {
 	direction: 'horizontal',
-	slidesPerView: '10',
+	slidesPerView: '3',
 
 	// Navigation arrows
 	nextButton: '.product__gallery-control .control__next',

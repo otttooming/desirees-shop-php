@@ -181,7 +181,7 @@ b.params.hashnav&&b.hashnav&&b.hashnav.init(),b.params.a11y&&b.a11y&&b.a11y.init
 
 var productGallerySlider = new Swiper('.product__gallery-slider', {
 	direction: 'horizontal',
-	slidesPerView: '10',
+	slidesPerView: '3',
 
 	// Navigation arrows
 	nextButton: '.product__gallery-control .control__next',
