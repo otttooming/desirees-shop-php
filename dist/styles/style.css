@@ -1813,6 +1813,7 @@ blockquote {
   width: 100%;
   overflow: hidden;
   border-radius: 3px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
   background: #fff; }
 
 .product__left-wrap {
