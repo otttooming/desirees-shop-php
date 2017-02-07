@@ -2015,6 +2015,9 @@ blockquote {
   .product-sale__label {
     margin-right: 5px; }
 
+.product-thumb__link {
+  display: block; }
+
 .control__items {
   -webkit-user-select: none;
      -moz-user-select: none;

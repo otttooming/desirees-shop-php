@@ -32,10 +32,11 @@ $attachment_ids = $product->get_gallery_attachment_ids();
 
                         $img = wp_get_attachment_image_src( $id, 'full' );
                         ?>
+
                         <figure class="swiper-slide product__image-object" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                            <a href="<?php echo wp_get_attachment_image_src( $id, 'full' )[0]; ?>" itemprop="contentUrl" data-size="<?php echo $img[1] . 'x' . $img[2] ?>" class="lightbox">
-                                <img data-src="<?php echo wp_get_attachment_image_src( $id, 'medium' )[0]; ?>" class="product__image lazyload" itemprop="thumbnail" width="<?php echo wp_get_attachment_image_src( $id, 'medium' )[1] ?>" height="<?php echo wp_get_attachment_image_src( $id, 'medium' )[2] ?>">
-                            </a>
+                            <a class="product-thumb__link" href="<?php echo $img[0]; ?>" itemprop="contentUrl" data-size="<?php echo $img[1] . 'x' . $img[2] ?>" class="lightbox">
+																<?php echo desirees_get_attachment_image( $id, 'medium', false, ["class" => "product__image lazyload", "itemprop" => "thumbnail", "alt" => get_the_title()] ); ?>
+														</a>
                         </figure>
 
                         <?php
