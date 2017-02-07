@@ -46,13 +46,17 @@ $woocommerce_loop['columns'] = apply_filters( 'woocommerce_related_products_colu
 
 if ( $products->have_posts() ) : ?>
 
-	<ul class="row row--no-gutters products-listing pt10">
-		<?php while ( $products->have_posts() ) : $products->the_post(); ?>
+	<div class="row row--no-gutters bg__common m-10-0-0-0">
+		<h2 class="col-xs-12 px1 product__related-header"><?php _e( 'Related Products', 'woocommerce' ); ?></h2>
 
-			<?php wc_get_template( 'content-product.php' ); ?>
+		<ul class="col-xs-12 px1 row row--no-gutters products-listing">
+			<?php while ( $products->have_posts() ) : $products->the_post(); ?>
 
-		<?php endwhile; ?>
-	</ul>
+				<?php wc_get_template( 'content-product.php' ); ?>
+
+			<?php endwhile; ?>
+		</ul>
+	</div>
 
 <?php endif;
 
