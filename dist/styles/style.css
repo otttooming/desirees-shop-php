@@ -2444,7 +2444,8 @@ blockquote {
   background: #340644;
   color: #fff;
   -ms-flex: 2;
-      flex: 2; }
+      flex: 2;
+  max-width: 130px; }
 
 .search__button {
   height: 40px;
