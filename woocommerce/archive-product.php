@@ -44,7 +44,9 @@ get_header('shop');
 
         <?php if($image && $image !='') : ?>
           <div class="grid__slider">
-              <img class="grid__cat-banner" src="<?php echo $image ?>" />
+
+							<?php echo desirees_get_attachment_image( $thumbnail_id, 'full', false, ["class" => "grid__cat-banner lazyload", "itemprop" => "image", "alt" => $cat->name] ); ?>
+
           </div>
 				<?php elseif (empty($cat->term_id) && !is_search() && is_active_sidebar( 'products-banner-top' ) ) : ?>
 					<div class="grid__slider">
@@ -74,9 +76,7 @@ get_header('shop');
 						</ul>
   				</main>
 
-          <div class="grid_pagination_bottom_block cfx">
-          	<?php do_action('woocommerce_after_shop_loop'); ?>
-          </div>
+					<?php do_action('woocommerce_after_shop_loop'); ?>
 
     		<?php else : ?>
 
