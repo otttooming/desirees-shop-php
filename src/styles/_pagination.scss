@@ -1,53 +1,10 @@
 .pagination {
-  margin-top: 20px;
-
+  margin-right: -8px;
+  margin-left: -8px;
   user-select: none;
 
-  li,
-  ul {
-    list-style: none;
-  }
-
-  li {
-    flex: 1;
-
-    &:last-child {
-      .page-numbers {
-        margin-right: 0;
-      }
-    }
-  }
-
-  ul.page-numbers {
-    display: flex;
-
-    flex-wrap: wrap;
-  }
-
-  span.page-numbers,
-  a.page-numbers {
-    display: block;
-
-    height: 42px;
-    margin: 0 10px 10px 0;
-    padding: 0 20px;
-
-    text-align: center;
-
-    border-radius: $border-radius-std;
-    background: $color-grey;
-    box-shadow: $shadow-std;
-
-    line-height: 42px;
-
-    &.current {
-      background: $color-button-bg;
-    }
-  }
-
-  a.page-numbers {
-    &:hover {
-      background: $color-red;
-    }
+  &__btn {
+    margin-left: 8px;
+    margin-right: 8px;
   }
 }

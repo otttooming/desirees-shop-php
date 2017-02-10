@@ -2158,6 +2158,11 @@ blockquote {
     width: 1em;
     height: 1em;
     margin: 0 0 0 1em; }
+  .button__disabled {
+    opacity: .5;
+    cursor: not-allowed; }
+    .button__disabled:hover {
+      background: linear-gradient(45deg, #93278f, #00a99d); }
 
 .menu {
   list-style: none;
@@ -2616,40 +2621,15 @@ blockquote {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
 
 .pagination {
-  margin-top: 20px;
+  margin-right: -8px;
+  margin-left: -8px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
-  .pagination li,
-  .pagination ul {
-    list-style: none; }
-  .pagination li {
-    -ms-flex: 1;
-        flex: 1; }
-    .pagination li:last-child .page-numbers {
-      margin-right: 0; }
-  .pagination ul.page-numbers {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
-  .pagination span.page-numbers,
-  .pagination a.page-numbers {
-    display: block;
-    height: 42px;
-    margin: 0 10px 10px 0;
-    padding: 0 20px;
-    text-align: center;
-    border-radius: 3px;
-    background: rgba(52, 6, 68, 0.5);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
-    line-height: 42px; }
-    .pagination span.page-numbers.current,
-    .pagination a.page-numbers.current {
-      background: linear-gradient(45deg, #93278f, #00a99d); }
-  .pagination a.page-numbers:hover {
-    background: #a30000; }
+  .pagination__btn {
+    margin-left: 8px;
+    margin-right: 8px; }
 
 .txt-center {
   text-align: center; }

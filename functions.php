@@ -50,6 +50,11 @@ require get_template_directory() . '/inc/func/breadcrumbs.php';
 */
 require get_template_directory() . '/inc/func/price.php';
 
+/**
+* Links
+*/
+require get_template_directory() . '/inc/func/links.php';
+
 function content($limit) {
   $content = explode(' ', get_the_content(), $limit);
   if (count($content)>=$limit) {

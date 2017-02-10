@@ -55,4 +55,13 @@
     height: 1em;
     margin: 0 0 0 1em;
   }
+
+  &__disabled {
+    opacity: .5;
+    cursor: not-allowed;
+
+    &:hover {
+      background: $color-button-bg;
+    }
+  }
 }

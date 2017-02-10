@@ -27,18 +27,23 @@ if ( $wp_query->max_num_pages <= 1 ) {
 }
 ?>
 <nav class="pagination">
-	<?php
-		echo paginate_links( apply_filters( 'woocommerce_pagination_args', array(
-			'base'         => esc_url_raw( str_replace( 999999999, '%#%', remove_query_arg( 'add-to-cart', get_pagenum_link( 999999999, false ) ) ) ),
-			'format'       => '',
-			'add_args'     => false,
-			'current'      => max( 1, get_query_var( 'paged' ) ),
-			'total'        => $wp_query->max_num_pages,
-			'prev_text'    => '&larr;',
-			'next_text'    => '&rarr;',
-			'type'         => 'list',
-			'end_size'     => 2,
-			'mid_size'     => 2
-		) ) );
-	?>
+	<?php if( get_previous_posts_link() ) :
+
+		previous_posts_link( __( 'Previous', 'woocommerce' ), 0 );
+
+		else :
+
+			echo '<span class="pagination__btn button medium button__disabled">' . __( 'Previous', 'woocommerce' ) . '</span>';
+
+	endif; ?>
+
+	<?php if( get_next_posts_link() ) :
+
+	  next_posts_link( __( 'next', 'woocommerce' ), 0 );
+
+	  else :
+
+	    echo '<span class="pagination__btn button medium button__disabled">' . __( 'Next', 'woocommerce' ) . '</span>';
+
+	endif; ?>
 </nav>
