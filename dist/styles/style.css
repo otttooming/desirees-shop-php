@@ -2070,6 +2070,12 @@ blockquote {
     bottom: 0;
     left: 0; }
 
+.skaala_paremale {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
 .progress-bar {
   position: relative;
   display: inline-block;
@@ -2079,15 +2085,15 @@ blockquote {
     display: inline-block;
     position: relative;
     text-align: center;
-    color: #93A2AC;
-    font-family: Lato;
+    color: #fff;
+    font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
     font-weight: 100;
-    margin: 2rem; }
+    margin: 1rem; }
     .progress-bar__inner:before {
       content: attr(data-name);
       position: absolute;
       width: 100%;
-      bottom: -2rem;
+      bottom: -1rem;
       font-weight: 400; }
     .progress-bar__inner:after {
       content: attr(data-percent);
@@ -2095,11 +2101,11 @@ blockquote {
       width: 100%;
       top: 3.7rem;
       left: 0;
-      font-size: 2rem;
+      font-size: 1rem;
       text-align: center; }
   .progress-bar svg {
-    width: 10rem;
-    height: 10rem; }
+    width: 128px;
+    height: 128px; }
     .progress-bar svg path {
       stroke-width: 10px; }
     .progress-bar svg:nth-child(1) path {
