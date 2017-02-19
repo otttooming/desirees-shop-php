@@ -16,10 +16,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $wp_query;
 
 $cat = $wp_query->get_queried_object();
-$image = '';
-if ( !isset($cat->term_id) || is_search() ) {
-		$image = '';
-} else {
+
+if ( !empty($cat->term_id) ) {
 		$thumbnail_id = get_woocommerce_term_meta( $cat->term_id, 'thumbnail_id', true );
 		$image = wp_get_attachment_url( $thumbnail_id );
 }
@@ -32,7 +30,7 @@ get_header('shop');
 
 			<?php get_sidebar(); ?>
 
-    	<div id="default_products_page_container" class="col-xs-12 col-lg-9 grid_content with-sidebar-left with-sidebar">
+    	<div class="col-xs-12 col-lg-9">
 
 				<?php
 					// Prints messages and errors which are stored in the session, then clears them.
@@ -42,19 +40,17 @@ get_header('shop');
 
 				<?php do_action('woocommerce_before_main_content'); ?>
 
-        <?php if($image && $image !='') : ?>
+        <?php if( !empty($cat->term_id) ) : ?>
           <div class="grid__slider">
-
 							<?php echo desirees_get_attachment_image( $thumbnail_id, 'full', false, ["class" => "grid__cat-banner lazyload", "itemprop" => "image", "alt" => $cat->name] ); ?>
-
           </div>
-				<?php elseif (empty($cat->term_id) && !is_search() && is_active_sidebar( 'products-banner-top' ) ) : ?>
+				<?php elseif ( !is_search() && is_active_sidebar( 'products-banner-top' ) ) : ?>
 					<div class="grid__slider">
 							<?php dynamic_sidebar( 'products-banner-top' ); ?>
 					</div>
         <?php endif; ?>
 
-        <?php if(isset($cat->description) && $cat->description !='' && !is_shop()) : ?>
+        <?php if( !empty($cat->description) && !is_shop()) : ?>
           	<div class="product-category-description bg__common p1 mb1">
             	<?php echo do_shortcode($cat->description); ?>
           	</div>
