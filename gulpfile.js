@@ -1,5 +1,6 @@
-
-// $ npm install gulp gulp-util gulp-sass vinyl-ftp gulp-autoprefixer gulp-minify-css gulp-uglify gulp-notify gulp-rename gulp-concat del --save-dev
+// npm install -g npm-check-updates
+// ncu
+// ncu -u
 
 // Load plugins
 var gulp          = require( 'gulp' ),
@@ -77,7 +78,7 @@ gulp.task('deploy', function () {
     host:     secrets.servers.development.serverhost,
     user:     secrets.servers.development.username,
     password: secrets.servers.development.password,
-    parallel: 1,
+    parallel: 10,
     log:      gutil.log
   });
 
