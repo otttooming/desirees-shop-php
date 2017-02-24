@@ -185,58 +185,9 @@ a.setWrapperTransition(e,b),0!==e&&(a.onTransitionStart(),a.wrapper.transitionEn
 	return init(function () {});
 }));
 
-var productGallerySlider = new Swiper('.product__gallery-slider', {
-	direction: 'horizontal',
-	slidesPerView: '3',
-
-	// Navigation arrows
-	nextButton: '.product__gallery-control .control__next',
-	prevButton: '.product__gallery-control .control__prev'
-});
-
-var productGallerySlider = new Swiper('.slider-promo', {
-	direction: 'horizontal',
-	slidesPerView: '1',
-	autoplay: '1500',
-	pagination: '.swiper-pagination',
-	paginationClickable: true
-});
-
-// Clear WooCommerce product variations
-function clearSelected(event) {
-	event.preventDefault();
-
-	var elements = document.querySelectorAll('.product-cart__variations select');
-
-	for (var select = 0; select < elements.length; select++) {
-		var elementsOptions = elements[select].options;
-
-		for (var option = 0; option < elementsOptions.length; option++) {
-			elementsOptions[option].selected = false;
-		}
-	}
-};
-
-if (document.getElementsByClassName('cart__reset-variations')[0]) {
-
-	document.getElementsByClassName('cart__reset-variations')[0].addEventListener('click', function() {
-		clearSelected(event);
-	});
-
-}
-
 var Desirees = Desirees || {};
 
 Desirees.nav = {
-
-	mobileMenuOpen: function() {
-		if (document.body.classList.contains('menu-mobile_open')) {
-			document.body.classList.remove('menu-mobile_open');
-		} else {
-			document.body.classList.add('menu-mobile_open');
-		}
-	},
-
 	subCatToggle: function() {
 		var catGroup = event.target.closest('.cat-list__group'),
 				catGroupControl = catGroup.querySelector('svg');
@@ -254,33 +205,69 @@ Desirees.nav = {
 		} else {
 			catGroup.classList.add('cat-list__group-open');
 		}
+	},
+
+	init: function() {
+		var subCatToggleBtns = document.querySelectorAll('.cat-list__subcat-control');
+
+		for (var i = 0; i < subCatToggleBtns.length; i++) {
+			subCatToggleBtns[i].addEventListener('click', Desirees.nav.subCatToggle, false);
+		}
 	}
 };
 
-Desirees.wc = {
+Desirees.navMobile = {
+	mobileMenuOpen: function() {
+		if (document.body.classList.contains('menu-mobile_open')) {
+			document.body.classList.remove('menu-mobile_open');
+		} else {
+			document.body.classList.add('menu-mobile_open');
+		}
+	},
 
+	init: function() {
+		var mobileMenuToggleBtns = document.querySelectorAll('.menu-mobile__toggle');
+
+		for (var i = 0; i < mobileMenuToggleBtns.length; i++) {
+			mobileMenuToggleBtns[i].addEventListener('click', Desirees.navMobile.mobileMenuOpen, false);
+		}
+	}
+}
+
+Desirees.filterOrdering = {
 	filterSubmit: function() {
 		this.submit();
+	},
+
+	init: function() {
+		var filterOrderingSubmit = document.querySelectorAll('.woocommerce-ordering');
+
+		for (var i = 0; i < filterOrderingSubmit.length; i++) {
+			filterOrderingSubmit[i].addEventListener('change', Desirees.filterOrdering.filterSubmit, false)
+		}
 	}
 };
 
-var mobileMenuToggleBtns = document.querySelectorAll('.menu-mobile__toggle');
+Desirees.slider = {
+	init: function() {
+		var productGallerySlider = new Swiper('.product__gallery-slider', {
+			direction: 'horizontal',
+			slidesPerView: '3',
 
-for (var i = 0; i < mobileMenuToggleBtns.length; i++) {
-	mobileMenuToggleBtns[i].addEventListener('click', Desirees.nav.mobileMenuOpen, false);
-}
+			// Navigation arrows
+			nextButton: '.product__gallery-control .control__next',
+			prevButton: '.product__gallery-control .control__prev'
+		});
 
-var subCatToggleBtns = document.querySelectorAll('.cat-list__subcat-control');
-
-for (var i = 0; i < subCatToggleBtns.length; i++) {
-	subCatToggleBtns[i].addEventListener('click', Desirees.nav.subCatToggle, false);
-}
-
-var filterOrderingSubmit = document.querySelectorAll('.woocommerce-ordering');
-
-for (var i = 0; i < filterOrderingSubmit.length; i++) {
-	filterOrderingSubmit[i].addEventListener('change', Desirees.wc.filterSubmit, false)
-}
+		var productGallerySlider = new Swiper('.slider-promo', {
+			direction: 'horizontal',
+			slidesPerView: '1',
+			autoplay: '1500',
+			pagination: '.swiper-pagination',
+			paginationClickable: true
+		});
+	}
+};
 
 var initPhotoSwipeFromDOM = function(gallerySelector) {
 

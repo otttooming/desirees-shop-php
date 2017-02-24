@@ -67,6 +67,12 @@
 	wp_footer();
 ?>
 
+<script>
+    Desirees.nav.init();
+    Desirees.navMobile.init();
+    Desirees.filterOrdering.init();
+    Desirees.slider.init();
+</script>
 
 </body>
 </html>
