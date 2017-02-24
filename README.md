@@ -19,8 +19,6 @@ Modern e-commerce solution based on WordPress.
 #### Setup development tools
 1. Install NPM:
   * ```npm install```
-* Install Bower:
-  * ```bower install```
 * Run Gulp tasks:
   * ```gulp```
 * Watch for modified source files:

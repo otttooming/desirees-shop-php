@@ -14,7 +14,7 @@ var gulp          = require( 'gulp' ),
     rename        = require( 'gulp-rename' ),
     concat        = require( 'gulp-concat' ),
     del           = require( 'del' );
-    csscomb       = require('gulp-csscomb');
+    csscomb       = require( 'gulp-csscomb' );
     secrets       = require( './secrets.json' );
 
 var supportedBrowsers = [
@@ -32,7 +32,7 @@ gulp.task('styleguide', function() {
 
 // Styles
 gulp.task('styles', function() {
-  return gulp.src(['bower_components/swiper/dist/css/swiper.min.css',
+  return gulp.src(['node_modules/swiper/dist/css/swiper.min.css',
                    'src/styles/main.scss'])
     .pipe(sass({ style: 'expanded', }))
     .pipe(autoprefixer(supportedBrowsers))
@@ -46,11 +46,11 @@ gulp.task('styles', function() {
 
 // Scripts
 gulp.task('scripts', function() {
-  return gulp.src(['bower_components/photoswipe/dist/photoswipe.min.js',
-                   'bower_components/photoswipe/dist/photoswipe-ui-default.min.js',
-                   'bower_components/swiper/dist/js/swiper.min.js',
-                   'bower_components/lazysizes/lazysizes.min.js',
-                   'bower_components/js-cookie/src/js.cookie.js',
+  return gulp.src(['node_modules/photoswipe/dist/photoswipe.min.js',
+                   'node_modules/photoswipe/dist/photoswipe-ui-default.min.js',
+                   'node_modules/swiper/dist/js/swiper.min.js',
+                   'node_modules/lazysizes/lazysizes.min.js',
+                   'node_modules/js-cookie/src/js.cookie.js',
                    'src/scripts/*.js' ],
                    {base: './'})
     .pipe(concat('script.js'))
@@ -89,7 +89,6 @@ gulp.task('deploy', function () {
       '!images/**',
       '!js/**',
       '!src/**',
-      '!bower_components/**',
       '!node_modules/**'
     ];
 
@@ -101,7 +100,6 @@ gulp.task('deploy', function () {
       '!images/**',
       '!js/**',
       '!src/**',
-      '!bower_components/**',
       '!node_modules/**'
     ];
 
@@ -113,7 +111,6 @@ gulp.task('deploy', function () {
       '!images/**',
       '!js/**',
       '!src/**',
-      '!bower_components/**',
       '!node_modules/**'
     ];
 
@@ -144,7 +141,6 @@ gulp.task('push', function () {
     '!images/**',
     '!js/**',
     '!src/**',
-    '!bower_components/**',
     '!node_modules/**'
   ];
 

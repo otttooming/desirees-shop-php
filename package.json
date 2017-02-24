@@ -32,5 +32,11 @@
     "gulp-uglify": "^2.0.1",
     "gulp-util": "^3.0.7",
     "vinyl-ftp": "^0.6.0"
+  },
+  "dependencies": {
+    "js-cookie": "^2.1.3",
+    "lazysizes": "^3.0.0-rc4",
+    "photoswipe": "^4.1.1",
+    "swiper": "^3.4.1"
   }
 }
