@@ -1806,7 +1806,7 @@ blockquote {
     .product__left-wrap {
       position: -webkit-sticky;
       position: sticky;
-      top: 20px; } }
+      top: 0; } }
 
 .product__main-image-wrap {
   width: 100%;
