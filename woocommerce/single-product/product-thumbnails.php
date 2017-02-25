@@ -34,7 +34,7 @@ $attachment_ids = $product->get_gallery_attachment_ids();
                         ?>
 
                         <figure class="swiper-slide product__image-object" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                            <a class="product-thumb__link" href="<?php echo $img[0]; ?>" itemprop="contentUrl" data-size="<?php echo $img[1] . 'x' . $img[2] ?>" class="lightbox">
+                            <a class="product-thumb__link lightbox" href="<?php echo $img[0]; ?>" itemprop="contentUrl" data-size="<?php echo $img[1] . 'x' . $img[2] ?>">
 																<?php echo desirees_get_attachment_image( $id, 'medium', false, ["class" => "product__image lazyload", "itemprop" => "thumbnail", "alt" => get_the_title()] ); ?>
 														</a>
                         </figure>

@@ -275,7 +275,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
     // (children of gallerySelector)
     var parseThumbnailElements = function(el) {
 
-        var thumbElements = document.querySelectorAll('.lightbox img'),
+        var thumbElements = document.querySelectorAll('.lightbox'),
             numNodes = thumbElements.length,
             items = [],
             figureEl,
@@ -292,7 +292,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
                 continue;
             }
 
-            linkEl = figureEl.parentNode; // <a> element
+            linkEl = figureEl; // <a> element
 
             size = linkEl.getAttribute('data-size').split('x');
 
@@ -310,9 +310,9 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
                 item.title = figureEl.children[1].innerHTML;
             }
 
-            if(linkEl.children.length > 0) {
+            if(linkEl.querySelector('img') !== null) {
                 // <img> thumbnail element, retrieving thumbnail url
-                item.msrc = linkEl.children[0].getAttribute('src');
+                item.msrc = linkEl.querySelector('img').getAttribute('src');
             }
 
             item.el = figureEl; // save link to element for getThumbBoundsFn
