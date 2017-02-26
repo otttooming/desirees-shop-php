@@ -614,7 +614,8 @@ select {
   font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
   background: #ffc000;
   color: #340644;
-  border-radius: 3px; }
+  border-radius: 3px;
+  max-width: 100%; }
 
 label {
   display: block;
