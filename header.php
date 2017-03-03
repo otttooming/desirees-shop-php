@@ -13,13 +13,13 @@
 
 	<header class="container">
 
-    <div class="row center-xs">
-      <div class="col-xs-12">
-        <?php if (  is_active_sidebar( 'contacts' ) ) : ?>
-            <?php dynamic_sidebar( 'contacts' ); ?>
-        <?php endif; ?>
+    <?php if (  is_active_sidebar( 'contacts' ) ) : ?>
+      <div class="row center-xs">
+        <div class="col-xs-12">
+          <?php dynamic_sidebar( 'contacts' ); ?>
+        </div>
       </div>
-    </div>
+    <?php endif; ?>
 
     <div class="row header-variant2 hidden-md-up">
 
