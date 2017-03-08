@@ -30,13 +30,14 @@ if ( ! $related = $product->get_related( $posts_per_page ) ) {
 	return;
 }
 
+$is_slider = true;
+
 $args = apply_filters( 'woocommerce_related_products_args', array(
 	'post_type'            => 'product',
 	'ignore_sticky_posts'  => 1,
 	'no_found_rows'        => 1,
-	'posts_per_page'       => $posts_per_page,
+	'posts_per_page'       => 16,
 	'orderby'              => $orderby,
-	'post__in'             => $related,
 	'post__not_in'         => array( $product->id )
 ) );
 
@@ -46,13 +47,13 @@ $woocommerce_loop['columns'] = apply_filters( 'woocommerce_related_products_colu
 
 if ( $products->have_posts() ) : ?>
 
-	<div class="row row--no-gutters bg__common m-10-0-0-0">
-		<h2 class="col-xs-12 px1 product__related-header"><?php _e( 'Related Products', 'woocommerce' ); ?></h2>
+	<div class="row row--no-gutters bg__common m-10-0-0-0 related">
+		<h2 class="col-xs-12 px1 related__header"><?php _e( 'Related Products', 'woocommerce' ); ?></h2>
 
-		<ul class="col-xs-12 px1 row row--no-gutters products-listing">
+		<ul class="col-xs-12 products-listing related__wrapper swiper-wrapper">
 			<?php while ( $products->have_posts() ) : $products->the_post(); ?>
 
-				<?php wc_get_template( 'content-product.php' ); ?>
+				<?php wc_get_template( 'content-product.php', array('is_slider' => $is_slider ) ); ?>
 
 			<?php endwhile; ?>
 		</ul>

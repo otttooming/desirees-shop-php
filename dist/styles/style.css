@@ -1728,7 +1728,8 @@ blockquote {
   border-right: 1px solid #340644;
   background: #fff;
   overflow: hidden;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
+  box-sizing: border-box; }
 
 .products-listing__link {
   position: absolute;
@@ -2002,6 +2003,12 @@ blockquote {
 
 .product-thumb__link {
   display: block; }
+
+.related {
+  overflow: hidden; }
+  .related__wrapper {
+    padding-right: 0;
+    padding-left: 0; }
 
 .control__items {
   -webkit-user-select: none;

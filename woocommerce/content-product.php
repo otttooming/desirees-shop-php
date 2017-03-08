@@ -22,7 +22,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 }
 
 ?>
-<li itemscope itemtype="http://schema.org/Product" class="col-xs-12 col-md-3 col-sm-6 products-listing__item">
+<li itemscope itemtype="http://schema.org/Product" class="<?php if ( !$is_slider ) : ?>col-xs-12 col-md-3 col-sm-6<?php else : ?> swiper-slide<?php endif; ?> products-listing__item">
 	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
 
 	<?php if( has_post_thumbnail() ) : ?>

@@ -64,20 +64,35 @@ Desirees.filterOrdering = {
 Desirees.slider = {
 	init: function() {
 		var productGallerySlider = new Swiper('.product__gallery-slider', {
-			direction: 'horizontal',
-			slidesPerView: '3',
+			slidesPerView: 3,
 
-			// Navigation arrows
 			nextButton: '.product__gallery-control .control__next',
 			prevButton: '.product__gallery-control .control__prev'
 		});
 
-		var productGallerySlider = new Swiper('.slider-promo', {
-			direction: 'horizontal',
-			slidesPerView: '1',
-			autoplay: '1500',
-			pagination: '.swiper-pagination',
-			paginationClickable: true
-		});
+		var relatedItems = document.querySelectorAll('.related .products-listing__item').length;
+
+		var relatedSlider = new Swiper('.related', {
+			slidesPerView: 5,
+			slideClass: 'products-listing__item',
+			centeredSlides: relatedItems > 3 ? false : true,
+			initialSlide: relatedItems > 3 ? 0 : 1,
+			loop: relatedItems > 5 ? true : false,
+
+			breakpoints: {
+				320: {
+					slidesPerView: 1
+				},
+				480: {
+					slidesPerView: 2
+				},
+				768: {
+					slidesPerView: 3
+				},
+				1024: {
+					slidesPerView: 4
+				}
+			}
+		});		
 	}
 };
