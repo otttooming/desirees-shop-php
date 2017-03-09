@@ -2002,7 +2002,11 @@ blockquote {
     margin-right: 5px; }
 
 .product-thumb__link {
-  display: block; }
+  display: block;
+  max-height: 100px;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 20px; }
 
 .related {
   overflow: hidden; }
