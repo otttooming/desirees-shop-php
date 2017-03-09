@@ -63,8 +63,13 @@ Desirees.filterOrdering = {
 
 Desirees.slider = {
 	init: function() {
+
+		var productGalleryItems = document.querySelectorAll('.product-thumb__link').length;
+
 		var productGallerySlider = new Swiper('.product__gallery-slider', {
-			slidesPerView: 3,
+			slidesPerView: productGalleryItems > 2 ? 3 : 2,
+			centeredSlides: productGalleryItems > 1 ? false : true,
+			initialSlide: productGalleryItems > 1 ? 0 : 1,
 
 			nextButton: '.product__gallery-control .control__next',
 			prevButton: '.product__gallery-control .control__prev'

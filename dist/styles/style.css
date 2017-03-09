@@ -1843,8 +1843,7 @@ blockquote {
 
 .product__image {
   box-sizing: border-box;
-  padding: 1px;
-  border-radius: 3px; }
+  padding: 1px; }
 
 .product__image-object {
   width: 75px;
