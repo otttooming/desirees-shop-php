@@ -3,8 +3,8 @@
 function desirees_woocommerce_breadcrumbs() {
     return array(
             'delimiter'   => '<span class="bc__delim">/</span>',
-            'wrap_before' => '<div class="col-xs-12"><nav class="bc" itemprop="breadcrumb">',
-            'wrap_after'  => '</nav></div>',
+            'wrap_before' => '<nav class="bc bg__common p1 mb1" itemprop="breadcrumb">',
+            'wrap_after'  => '</nav>',
             'before'      => '<span class="bc__item">',
             'after'       => '</span>',
             'home'        => _x( 'Home', 'breadcrumb', 'woocommerce' ),

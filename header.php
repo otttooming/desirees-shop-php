@@ -65,8 +65,4 @@
         </div>
     </div>
 
-    <div class="row">
-        <?php do_action('desirees_breadcrumbs'); ?>
-    </div>
-
 	</header>

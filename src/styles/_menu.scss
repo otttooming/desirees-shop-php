@@ -95,6 +95,10 @@
   text-transform: uppercase;
 
   font-size: $font-size-small;
+  border-radius: $border-radius-std;
+  background-color: $color-black;
+  box-shadow: $shadow-std;
+  padding: $spacing-medium;
 
   a {
     color: $color-warm;
