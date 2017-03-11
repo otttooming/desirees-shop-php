@@ -17,16 +17,6 @@
     flex: 1 0 310px;
   }
 
-  &__left {
-    width: 100%;
-    overflow: hidden;
-
-    border-radius: $border-radius-std;
-    box-shadow: $shadow-std;
-
-    background: #fff;
-  }
-
   &__left-wrap {
     height: 100%;
 
@@ -36,17 +26,16 @@
     }
   }
 
-  &__main-image-wrap {
-    width: 100%;
-    overflow: hidden;
-
-    border-radius: $border-radius-std;
-    background: $color-white;
-    margin: 0;
-  }
-
   &__main-image {
     display: block;
+    background-color: $color-bg-thumbnails;
+    border-top-left-radius: $border-radius-std;
+    border-top-right-radius: $border-radius-std;
+
+    img {
+      border-top-left-radius: $border-radius-std;
+      border-top-right-radius: $border-radius-std;
+    }
   }
 
   &__banner {
@@ -78,11 +67,6 @@
   &__image {
     box-sizing: border-box;
     padding: 1px;
-  }
-
-  &__image-object {
-    width: 75px;
-    margin: 0;
   }
 
   &__price-block {

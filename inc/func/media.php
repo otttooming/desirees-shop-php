@@ -13,7 +13,7 @@ function desirees_get_attachment_image_attributes($attr) {
   $attr['data-src'] = $attr['src'];
   $attr['data-srcset'] = $attr['srcset'];
 
-  $attr['class'] .= ' lazyload';
+  $attr['class'] .= ' lazyload aspect-ratio__img';
 
   unset($attr['src']);
   unset($attr['srcset']);
@@ -45,7 +45,7 @@ function desirees_get_attachment_image($attachment_id, $size = 'thumbnail', $ico
     list($src, $width, $height) = $image;
   }
 
-  $html = '<div class="aspect-ratio"><div class="aspect-ratio__placeholder" style="padding-bottom: ' . $height / $width * 100 . '%;"></div>' . $image_html . '</div>';
+  $html = '<figure class="aspect-ratio" style="padding-bottom: ' . $height / $width * 100 . '%;">' . $image_html . '</figure>';
 
   return $html;
 }
