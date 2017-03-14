@@ -1809,11 +1809,10 @@ blockquote {
 .product__main-image {
   display: block;
   background-color: #fff;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px; }
+  border-radius: 3px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
   .product__main-image img {
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px; }
+    border-radius: 3px; }
 
 .product__banner {
   margin-bottom: 20px;
@@ -1826,11 +1825,6 @@ blockquote {
 .product__gallery-control {
   display: none;
   margin: 20px 0 0; }
-
-.product__gallery-slider {
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
-  background: #fff; }
 
 .product .swiper-wrapper {
   -ms-flex-align: center;
@@ -1991,12 +1985,21 @@ blockquote {
   .product-sale__label {
     margin-right: 5px; }
 
+.product-thumb__gallery {
+  margin-top: 16px;
+  -webkit-column-count: 4;
+     -moz-column-count: 4;
+          column-count: 4;
+  -webkit-column-gap: 4px;
+     -moz-column-gap: 4px;
+          column-gap: 4px;
+  padding: 4px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
+
 .product-thumb__link {
-  display: block;
-  max-height: 100px;
-  overflow: hidden;
-  margin-top: 20px;
-  margin-bottom: 20px; }
+  width: 100%; }
 
 .related {
   overflow: hidden; }

@@ -29,12 +29,11 @@
   &__main-image {
     display: block;
     background-color: $color-bg-thumbnails;
-    border-top-left-radius: $border-radius-std;
-    border-top-right-radius: $border-radius-std;
+    border-radius: $border-radius-std;
+    box-shadow: $shadow-std;
 
     img {
-      border-top-left-radius: $border-radius-std;
-      border-top-right-radius: $border-radius-std;
+      border-radius: $border-radius-std;
     }
   }
 
@@ -52,12 +51,6 @@
     display: none;
 
     margin: 20px 0 0;
-  }
-
-  &__gallery-slider {
-    border-bottom-right-radius: $border-radius-std;
-    border-bottom-left-radius: $border-radius-std;
-    background: $color-white;
   }
 
   .swiper-wrapper {
@@ -292,13 +285,20 @@
 
 .product-thumb {
 
-  &__link {
-    display: block;
-    max-height: 100px;
-    overflow: hidden;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  &__gallery {
+    margin-top: $spacing-medium;
+    column-count: 4;
+    column-gap: 4px;
+    padding: 4px;
+    background-color: $color-bg-thumbnails;
+    border-radius: $border-radius-std;
+    box-shadow: $shadow-std;
   }
+
+  &__link {
+    width: 100%;
+  }
+
 }
 
 .related {
