@@ -30,12 +30,12 @@ global $post, $product;
     	// Availability
     	$availability = $product->get_availability();
 
-    	if ($availability['availability']) :
+    	if ($availability['availability'] && $product->is_in_stock()) :
     		echo apply_filters( 'woocommerce_stock_html', '<div class="product-stock ' . $availability['class'].'">' . '<span class="stock__header">' . __('Availability', 'woocommerce') . '</span>' . ' <span class="stock__number">'.$availability['availability'].'</span></div>', $availability['availability'] );
-      endif;
+      elseif (!$product->is_type( 'variable' )) :
+				echo '<p>', __( 'This product is currently out of stock and unavailable.', 'woocommerce' ), '</p>';
+			endif;
     ?>
 </div>
-
-<hr>
 
 <?php endif; ?>
