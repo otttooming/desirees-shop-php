@@ -108,9 +108,14 @@ gulp.task('deploy', function () {
     var globs = [
       '**/*',
       '*',
+      '!*.js',
+      '!*.json',
+      '!*.md',
       '!images/**',
       '!js/**',
+      '!src',
       '!src/**',
+      '!node_modules',
       '!node_modules/**'
     ];
 
@@ -138,9 +143,14 @@ gulp.task('push', function () {
   var globs = [
     '**/*',
     '*',
+    '!*.js',
+    '!*.json',
+    '!*.md',
     '!images/**',
     '!js/**',
+    '!src',
     '!src/**',
+    '!node_modules',
     '!node_modules/**'
   ];
 
