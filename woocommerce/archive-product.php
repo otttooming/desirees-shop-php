@@ -40,7 +40,7 @@ get_header('shop');
 
 				<?php do_action('woocommerce_before_main_content'); ?>
 
-        <?php if( !empty($cat->term_id) ) : ?>
+        <?php if( !empty($cat->term_id) && !empty($thumbnail_id) ) : ?>
           <div class="grid__slider">
 							<?php echo desirees_get_attachment_image( $thumbnail_id, 'full', false, ["class" => "grid__cat-banner lazyload", "itemprop" => "image", "alt" => $cat->name] ); ?>
           </div>
