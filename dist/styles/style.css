@@ -2083,50 +2083,29 @@ blockquote {
       flex-wrap: wrap; }
 
 .progress-bar {
-  position: relative;
-  display: inline-block;
-  padding: 0;
-  text-align: center; }
-  .progress-bar__inner {
-    display: inline-block;
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 4px;
+  background-color: rgba(52, 6, 68, 0.2);
+  border-radius: 3px; }
+  .progress-bar__title {
+    margin-bottom: 16px; }
+  .progress-bar__graph {
     position: relative;
-    text-align: center;
-    color: #fff;
-    font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
-    font-weight: 100;
-    margin: 1rem; }
-    .progress-bar__inner:before {
-      content: attr(data-name);
-      position: absolute;
-      width: 100%;
-      bottom: -1rem;
-      font-weight: 400; }
-    .progress-bar__inner:after {
-      content: attr(data-percent);
-      position: absolute;
-      width: 100%;
-      top: 3.7rem;
-      left: 0;
-      font-size: 1rem;
-      text-align: center; }
-  .progress-bar svg {
-    width: 128px;
-    height: 128px; }
-    .progress-bar svg path {
-      stroke-width: 10px; }
-    .progress-bar svg:nth-child(1) path {
-      stroke: #00b31a; }
-    .progress-bar svg:nth-child(2) {
-      position: absolute;
-      left: 0;
-      top: 0;
-      -webkit-transform: rotate(-90deg);
-              transform: rotate(-90deg); }
-    .progress-bar svg:nth-child(2) path {
-      fill: none;
-      stroke-dasharray: 629;
-      stroke-width: 15px;
-      stroke: #340644; }
+    background-color: rgba(52, 6, 68, 0.2);
+    border-radius: 15px; }
+  .progress-bar__percentage {
+    position: relative;
+    z-index: 1;
+    color: #000;
+    left: 16px;
+    text-shadow: none; }
+  .progress-bar__value {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: #ffc000;
+    border-radius: 15px; }
 
 .button {
   display: inline-block;
