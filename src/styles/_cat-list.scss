@@ -48,7 +48,7 @@
 
     transform: translateY(-50%);
 
-    border-radius: 3px;
+    border-radius: $border-radius-std;
     background: rgba(0,0,0,.5);
 
     font-size: .7em;
@@ -74,7 +74,7 @@
     right: -10px;
 
     svg {
-      border-radius: 50%;
+      border-radius: $border-radius-round;
     }
   }
 }
@@ -171,7 +171,7 @@
     right: -10px;
 
     svg {
-      border-radius: 50%;
+      border-radius: $border-radius-round;
     }
   }
 }

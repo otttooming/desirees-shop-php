@@ -604,7 +604,6 @@ input[type=number] {
   vertical-align: middle;
   color: inherit;
   border: none;
-  border-radius: 5px;
   border-radius: 15px;
   outline: none;
   background: transparent;
@@ -697,9 +696,9 @@ blockquote {
 
 .amount {
   display: inline-block;
-  padding: 5px 10px;
+  padding: 4px 8px;
   color: #fff;
-  border-radius: 5px;
+  border-radius: 3px;
   background: linear-gradient(to top right, #78239d, #ff5300);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
   font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
@@ -2429,7 +2428,7 @@ blockquote {
 .search__field, .search__select {
   box-sizing: border-box;
   height: 40px !important;
-  padding: 0 15px;
+  padding: 0 16px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
   line-height: 40px; }
 

@@ -229,12 +229,10 @@ input[type=number] {
 
   color: inherit;
   border: none;
-  border-radius: 5px;
   border-radius: $border-radius-medium;
   outline: none;
   background: $color-input-bg-normal;
   box-shadow: $shadow-std;
-  // text-shadow: $shadow-text;
 
   font-size: $font-size-button;
   line-height: 30px;
@@ -351,10 +349,10 @@ blockquote {
 .amount {
   display: inline-block;
 
-  padding: 5px 10px;
+  padding: $spacing-small $spacing-normal;
 
   color: $color-white;
-  border-radius: 5px;
+  border-radius: $border-radius-std;
   background: $color-buy-button-bg;
   box-shadow: $shadow-std;
 
