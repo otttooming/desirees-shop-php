@@ -3,8 +3,8 @@
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 2rem;
-  padding-left: 2rem;
+  padding-right: $spacing-medium;
+  padding-left: $spacing-medium;
 }
 
 .row {
@@ -12,8 +12,8 @@
   flex-direction: row;
 
   box-sizing: border-box;
-  margin-right: -10px;
-  margin-left: -10px;
+  margin-right: -1 * $spacing-normal;
+  margin-left: -1 * $spacing-normal;
 
   flex: 0 1 auto;
   flex-wrap: wrap;
@@ -59,8 +59,7 @@
 .col-xs-offset-10,
 .col-xs-offset-11,
 .col-xs-offset-12 {
-  box-sizing: border-box;
-  padding: 10px;
+  padding: $spacing-normal;
 
   flex: 0 0 auto;
 }
@@ -285,8 +284,7 @@
   .col-sm-offset-10,
   .col-sm-offset-11,
   .col-sm-offset-12 {
-    box-sizing: border-box;
-    padding: 10px;
+    padding: $spacing-normal;
 
     flex: 0 0 auto;
   }
@@ -492,8 +490,7 @@
   .col-md-offset-10,
   .col-md-offset-11,
   .col-md-offset-12 {
-    box-sizing: border-box;
-    padding: 10px;
+    padding: $spacing-normal;
 
     flex: 0 0 auto;
   }
@@ -704,8 +701,7 @@
   .col-lg-offset-10,
   .col-lg-offset-11,
   .col-lg-offset-12 {
-    box-sizing: border-box;
-    padding: 10px;
+    padding: $spacing-normal;
 
     flex: 0 0 auto;
   }
@@ -922,15 +918,15 @@
 }
 
 .m-10-0-10-0 {
-  margin: 10px 0 10px 0;
+  margin: $spacing-normal 0 $spacing-normal 0;
 }
 
 .m-0-0-20-0 {
-  margin: 0 0 20px 0;
+  margin: 0 0 $spacing-medium 0;
 }
 
 .m-20-0-20-0 {
-  margin: 20px 0 20px 0;
+  margin: $spacing-medium 0 $spacing-medium 0;
 }
 
 .col2-set {
@@ -940,8 +936,7 @@
 
   .col-1,
   .col-2 {
-    box-sizing: border-box;
-    padding: 20px;
+    padding: $spacing-medium;
 
     flex: 1 0 270px;
   }

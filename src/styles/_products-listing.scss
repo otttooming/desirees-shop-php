@@ -8,14 +8,13 @@
     border-radius: $border-radius-std;
     padding: 0;
 
-    margin-bottom: 20px;
+    margin-bottom: $spacing-medium;
     justify-content: center;
     align-items: center;
     border-right: 1px solid $color-black;
     background: $color-white;
     overflow: hidden;
     box-shadow: $shadow-std;
-    box-sizing: border-box;
   }
 
   &__link {
@@ -79,12 +78,12 @@
 
     &-big {
       .amount {
-        @include rem(font-size, 20px);
+        @include rem(font-size, $spacing-medium);
       }
     }
 
     + .button {
-      margin: 0 0 0 5px;
+      margin: 0 0 0 $spacing-small;
     }
   }
 }

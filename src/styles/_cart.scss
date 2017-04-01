@@ -9,7 +9,7 @@
 
   &__thumbnail {
     width: 55px;
-    margin-right: 10px;
+    margin-right: $spacing-normal;
   }
 
   &__product-name {
@@ -94,7 +94,7 @@
 
     .terms {
       margin: 0;
-      padding: 20px;
+      padding: $spacing-medium;
 
       border-radius: $border-radius-std;
       background-color: $color-grey;
@@ -112,13 +112,13 @@
 
   &__tab-content {
     box-sizing: border-box;
-    padding: 20px;
+    padding: $spacing-medium;
 
     background: rgba($color-black, .3);
 
     &.tap-order {
       @media (max-width: 767px) {
-        padding: 20px 5px;
+        padding: $spacing-medium $spacing-small;
       }
     }
   }
@@ -135,12 +135,12 @@
     display: flex;
     flex-direction: row-reverse;
 
-    margin: 0 0 20px;
+    margin: 0 0 $spacing-medium;
 
     label {
       display: flex;
 
-      margin-right: 20px;
+      margin-right: $spacing-medium;
 
       align-items: center;
     }
@@ -152,7 +152,7 @@
 }
 
 .coupon {
-  margin: 0 0 20px;
+  margin: 0 0 $spacing-medium;
 }
 
 .wc-terms-and-conditions,
@@ -161,7 +161,7 @@
   align-items: center;
   flex-wrap: wrap;
 
-  margin-bottom: 20px;
+  margin-bottom: $spacing-medium;
 
   img {
     width: 50px;

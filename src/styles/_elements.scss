@@ -5,6 +5,10 @@
 @include fontFace('Oswald', '../fonts/oswald-demibold', normal, 600);
 @include fontFace('Oswald', '../fonts/oswald-bold', normal, 700);
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: $font-size-normal;
 

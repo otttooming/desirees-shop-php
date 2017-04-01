@@ -1,14 +1,13 @@
 .product {
 
   &__title {
-    padding-bottom: 16px;
-    margin-bottom: 16px;
+    padding-bottom: $spacing-medium;
+    margin-bottom: $spacing-medium;
     border-bottom: 1px solid $color-grey;
   }
 
   &__mainblock {
-    box-sizing: border-box;
-    padding: 20px;
+    padding: $spacing-medium;
 
     border-radius: $border-radius-std;
     background: $color-bg;
@@ -38,8 +37,8 @@
   }
 
   &__banner {
-    margin-bottom: 20px;
-    padding: 20px;
+    margin-bottom: $spacing-medium;
+    padding: $spacing-medium;
 
     border-radius: $border-radius-std;
     background: $color-bg;
@@ -50,7 +49,7 @@
   &__gallery-control {
     display: none;
 
-    margin: 20px 0 0;
+    margin: $spacing-medium 0 0;
   }
 
   .swiper-wrapper {
@@ -66,7 +65,7 @@
     text-align: center;
 
     color: $color-white !important;
-    border-radius: 3px;
+    border-radius: $border-radius-std;
     background: $color-buy-button-bg;
     box-shadow: $shadow-std;
 
@@ -74,7 +73,7 @@
     line-height: normal;
 
     flex: 1;
-    @include rem(padding, 16px);
+    @include rem(padding, $spacing-medium);
 
     del,
     ins {
@@ -92,7 +91,7 @@
     }
 
     + .button {
-      margin: 0 0 0 5px;
+      margin: 0 0 0 $spacing-small;
     }
   }
 
@@ -107,7 +106,7 @@
   }
 
   &__details-wrap {
-    padding: 20px;
+    padding: $spacing-medium;
 
     border-radius: $border-radius-std;
     background: $color-bg;
@@ -121,7 +120,7 @@
   }
 
   &__details-block {
-    margin-bottom: 20px;
+    margin-bottom: $spacing-medium;
   }
 }
 
@@ -146,7 +145,7 @@
   display: flex;
 
   width: 100%;
-  width: calc(100% + 20px);
+  width: calc(100% + $spacing-medium);
   margin: 0 -10px;
 
   flex-wrap: wrap;
@@ -189,12 +188,12 @@
   }
 
   &__icon {
-    margin: 0 5px 0 0;
+    margin: 0 $spacing-small 0 0;
   }
 }
 
 .product-stock {
-  margin: 15px 0;
+  margin: $spacing-medium 0;
 }
 
 .product-meta {
@@ -202,13 +201,13 @@
     display: inline-block;
     display: inline-block;
 
-    margin: 0 10px 10px 0;
-    padding: 5px 20px;
+    margin: 0 $spacing-normal $spacing-normal 0;
+    padding: $spacing-small $spacing-medium;
 
     text-transform: uppercase;
 
     color: #333;
-    border-radius: 15px;
+    border-radius: $border-radius-medium;
     background: $color-warm;
     box-shadow: $shadow-std;
     text-shadow: none;
@@ -221,10 +220,10 @@
   &__wrap {
     display: flex;
 
-    margin: 10px;
-    padding: 0 10px;
+    margin: $spacing-normal;
+    padding: 0 $spacing-normal;
 
-    border-radius: 3px;
+    border-radius: $border-radius-std;
     background: $color-button-bg-normal;
     box-shadow: $shadow-std;
 
@@ -258,15 +257,15 @@
 
   display: flex;
 
-  padding: 5px 10px;
+  padding: $spacing-small $spacing-normal;
 
-  border-radius: 3px;
+  border-radius: $border-radius-std;
   background: $color-buy-button-bg;
 
   align-items: center;
 
   &__label {
-    margin-right: 5px;
+    margin-right: $spacing-small;
   }
 }
 
@@ -275,8 +274,8 @@
   &__gallery {
     margin-top: $spacing-medium;
     column-count: 4;
-    column-gap: 4px;
-    padding: 4px;
+    column-gap: $spacing-small;
+    padding: $spacing-small;
     background-color: $color-bg-thumbnails;
     border-radius: $border-radius-std;
     box-shadow: $shadow-std;
@@ -301,11 +300,11 @@
 
   &__attribute {
     display: inline-block;
-    margin: 0 10px 10px 0;
-    padding: 5px 20px;
+    margin: 0 $spacing-normal $spacing-normal 0;
+    padding: $spacing-small $spacing-medium;
     text-transform: uppercase;
     color: #333;
-    border-radius: 15px;
+    border-radius: $border-radius-medium;
     background: #ffc000;
     box-shadow: 0 0 15px rgba(0, 0, 0, .46);
     text-shadow: none;
@@ -318,10 +317,10 @@
 
   &__price {
     display: inline-block;
-    padding: 4px 16px;
+    padding: $spacing-small $spacing-medium;
     text-align: center;
     color: #fff;
-    border-radius: 3px;
+    border-radius: $border-radius-std;
     background: linear-gradient(to top right, #78239d, #ff5300);
     box-shadow: 0 0 15px rgba(0, 0, 0, .46);
     font-size: 12px;

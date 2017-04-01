@@ -5,7 +5,7 @@
   box-sizing: border-box;
   max-width: 100%;
   height: auto;
-  padding: 7px 10px;
+  padding: $spacing-small $spacing-normal;
   margin: $spacing-normal 0;
 
   cursor: pointer;
@@ -17,7 +17,7 @@
 
   color: $color-white;
   border: none;
-  border-radius: 3px;
+  border-radius: $border-radius-std;
   background: $color-button-bg;
   box-shadow: $shadow-std;
   text-shadow: $shadow-text;
@@ -37,17 +37,15 @@
   }
 
   &.medium {
-    padding: 15px 20px;
+    padding: $spacing-normal $spacing-medium;
 
     font-size: 14px;
   }
 
   &.alt,
   &.big {
-    padding: 20px;
-
     @include rem(font-size, 24px);
-    @include rem(padding, 20px);
+    @include rem(padding, $spacing-medium);
   }
 
   &__icon {

@@ -41,7 +41,6 @@
     position: absolute;
     top: 50%;
     right: 35px;
-    /* height: 35px; */
 
     display: inline-block;
 
@@ -58,7 +57,7 @@
   &__subcat {
     display: none;
 
-    padding: 0 0 0 25px;
+    padding: 0 0 0 $spacing-large;
 
     list-style: none;
 
@@ -91,8 +90,8 @@
     border-radius: $border-radius-std;
     background-color: $color-black;
     box-shadow: $shadow-std;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    margin-right: $spacing-medium;
+    margin-bottom: $spacing-medium;
   }
 
   &__title {
@@ -102,7 +101,7 @@
 
     height: 20px;
     margin: 0;
-    padding: 10px 70px 10px 20px;
+    padding: $spacing-normal 70px $spacing-normal $spacing-medium;
 
     text-align: left;
 
@@ -116,7 +115,7 @@
   &__name {
     display: block;
     overflow: hidden;
-    padding: 0 20px 0 0;
+    padding: 0 $spacing-medium 0 0;
 
     text-overflow: ellipsis;
   }
@@ -138,7 +137,6 @@
     position: absolute;
     top: 50%;
     right: 20px;
-    /* height: 35px; */
 
     display: inline-block;
 
@@ -146,7 +144,7 @@
 
     transform: translateY(-50%);
 
-    border-radius: 3px;
+    border-radius: $border-radius-std;
     background: rgba(0,0,0,.5);
 
     font-size: .7em;

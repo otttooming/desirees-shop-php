@@ -6,7 +6,7 @@
 
   &__col {
     box-sizing: border-box;
-    padding: 20px;
+    padding: $spacing-medium;
 
     background: rgba($color-grey, .5);
     box-shadow: $shadow-std;

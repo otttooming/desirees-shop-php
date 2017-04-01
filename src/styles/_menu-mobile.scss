@@ -9,7 +9,7 @@
 
   box-sizing: border-box;
   width: 320px;
-  padding: 20px;
+  padding: $spacing-medium;
 
   transition: transform 500ms linear;
   transform: translate3d(320px,0,0);
@@ -44,7 +44,7 @@
   &__primary,
   &__secondary,
   &__categories {
-    margin: 0 0 20px;
+    margin: 0 0 $spacing-medium;
   }
 }
 
