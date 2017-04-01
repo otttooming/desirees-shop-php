@@ -673,11 +673,18 @@ address {
 
 blockquote {
   position: relative;
-  font-size: 16px; }
+  font-size: 16px;
+  background-color: rgba(52, 6, 68, 0.2);
+  border-radius: 3px;
+  padding: 4px 16px;
+  margin: 16px 0;
+  padding-left: 48px; }
   blockquote:before {
-    content: "\"";
+    content: "\“";
     position: absolute;
-    left: -15px; }
+    left: 16px;
+    font-size: 40px;
+    top: 6px; }
 
 .required {
   color: #a30000; }
@@ -2089,7 +2096,7 @@ blockquote {
   background-color: rgba(52, 6, 68, 0.2);
   border-radius: 3px; }
   .progress-bar__title {
-    margin-bottom: 16px; }
+    margin-bottom: 8px; }
   .progress-bar__graph {
     position: relative;
     background-color: rgba(52, 6, 68, 0.2);

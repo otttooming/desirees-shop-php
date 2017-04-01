@@ -321,11 +321,18 @@ address {
 blockquote {
   position: relative;
   font-size: 16px;
+  background-color: $color-bg;
+  border-radius: $border-radius-std;
+  padding: $spacing-small $spacing-medium;
+  margin: $spacing-medium 0;
+  padding-left: 2 * $spacing-large;
 
   &:before {
-    content: "\"";
+    content: "\“";
     position: absolute;
-    left: -15px;
+    left: $spacing-medium;
+    font-size: 40px;
+    top: 6px;
   }
 }
 
