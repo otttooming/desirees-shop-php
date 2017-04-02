@@ -40,9 +40,7 @@
 			</div>
 
 			<div class="col-md-6 header__search hidden-md-down">
-        <div class="search__wrap">
-					<?php get_search_form(); ?>
-				</div>
+        <?php get_search_form(); ?>
 			</div>
 
 			<div class="col-sm-9 col-lg-3 header__cart hidden-sm-down align-self-center">
