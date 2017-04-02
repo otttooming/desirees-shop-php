@@ -250,22 +250,22 @@
   }
 }
 
-.product-sale {
+.sale {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 0;
+  right: 0;
 
   display: flex;
 
   padding: $spacing-small $spacing-normal;
 
-  border-radius: $border-radius-std;
+  border-radius: 0 0 0 $border-radius-std;
   background: $color-buy-button-bg;
 
   align-items: center;
 
   &__label {
-    margin-right: $spacing-small;
+    margin-right: $spacing-normal;
   }
 }
 

@@ -1965,19 +1965,19 @@ blockquote {
     box-shadow: none;
     font-size: 17px; }
 
-.product-sale {
+.sale {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 0;
+  right: 0;
   display: -ms-flexbox;
   display: flex;
   padding: 4px 8px;
-  border-radius: 3px;
+  border-radius: 0 0 0 3px;
   background: linear-gradient(to top right, #78239d, #ff5300);
   -ms-flex-align: center;
       align-items: center; }
-  .product-sale__label {
-    margin-right: 4px; }
+  .sale__label {
+    margin-right: 8px; }
 
 .product-thumb__gallery {
   margin-top: 16px;
