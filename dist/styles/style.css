@@ -699,7 +699,7 @@ blockquote {
   padding: 4px 8px;
   color: #fff;
   border-radius: 3px;
-  background: linear-gradient(to top right, #78239d, #ff5300);
+  background: linear-gradient(to left, #9f2af8, #f82a53);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
   font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
   line-height: normal; }
@@ -1769,7 +1769,7 @@ blockquote {
   text-align: center;
   color: #fff;
   border-radius: 3px 0 0 0;
-  background: linear-gradient(to top right, #78239d, #ff5300);
+  background: linear-gradient(to left, #9f2af8, #f82a53);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
   font-size: 12px;
   -ms-flex: 1;
@@ -1840,7 +1840,7 @@ blockquote {
   text-align: center;
   color: #fff !important;
   border-radius: 3px;
-  background: linear-gradient(to top right, #78239d, #ff5300);
+  background: linear-gradient(to left, #9f2af8, #f82a53);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
   font-size: 13px;
   line-height: normal;
@@ -1973,7 +1973,7 @@ blockquote {
   display: flex;
   padding: 4px 8px;
   border-radius: 0 0 0 3px;
-  background: linear-gradient(to top right, #78239d, #ff5300);
+  background: linear-gradient(to left, #9f2af8, #f82a53);
   -ms-flex-align: center;
       align-items: center; }
   .sale__label {
@@ -2023,7 +2023,7 @@ blockquote {
   text-align: center;
   color: #fff;
   border-radius: 3px;
-  background: linear-gradient(to top right, #78239d, #ff5300);
+  background: linear-gradient(to left, #9f2af8, #f82a53);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
   font-size: 12px; }
 
@@ -2129,7 +2129,7 @@ blockquote {
   color: #fff;
   border: none;
   border-radius: 3px;
-  background: linear-gradient(45deg, #93278f, #00a99d);
+  background: linear-gradient(45deg, #ff00f6, #00a99d);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
   text-shadow: 2px 2px 5px #340644;
   font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
@@ -2139,7 +2139,7 @@ blockquote {
   .button:hover {
     background: #00b31a; }
   .button.active {
-    background: linear-gradient(to top right, #78239d, #ff5300); }
+    background: linear-gradient(to left, #9f2af8, #f82a53); }
   .button.medium {
     padding: 8px 16px;
     font-size: 14px; }
@@ -2154,7 +2154,7 @@ blockquote {
     opacity: .5;
     cursor: not-allowed; }
     .button__disabled:hover {
-      background: linear-gradient(45deg, #93278f, #00a99d); }
+      background: linear-gradient(45deg, #ff00f6, #00a99d); }
 
 .menu {
   list-style: none;
@@ -2176,7 +2176,7 @@ blockquote {
     background: rgba(52, 6, 68, 0.5);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
     .menu > .menu-item:hover {
-      background: linear-gradient(45deg, #93278f, #00a99d); }
+      background: linear-gradient(45deg, #ff00f6, #00a99d); }
       .menu > .menu-item:hover .sub-menu {
         display: block; }
   .menu > .current_page_parent > a,
@@ -2185,7 +2185,7 @@ blockquote {
   .menu > .current-menu-item > a:hover {
     color: #fff;
     border-radius: 3px;
-    background: linear-gradient(45deg, #93278f, #00a99d);
+    background: linear-gradient(45deg, #ff00f6, #00a99d);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.46); }
 
 .sub-menu {
@@ -2242,7 +2242,7 @@ blockquote {
   .woocommerce-MyAccount-navigation a {
     padding: 4px 16px; }
   .woocommerce-MyAccount-navigation .is-active {
-    background: linear-gradient(45deg, #93278f, #00a99d); }
+    background: linear-gradient(45deg, #ff00f6, #00a99d); }
 
 .filters-menu__wrap {
   display: -ms-flexbox;
@@ -2450,7 +2450,7 @@ blockquote {
   height: 48px;
   padding: 0 10px 0 30px;
   border-radius: 0 3px 3px 0;
-  background: linear-gradient(45deg, #93278f, #00a99d);
+  background: linear-gradient(45deg, #ff00f6, #00a99d);
   -ms-flex: 1;
       flex: 1;
   position: relative; }
