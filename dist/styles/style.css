@@ -2427,10 +2427,10 @@ blockquote {
 
 .search__field, .search__select {
   box-sizing: border-box;
-  height: 40px !important;
+  height: 48px !important;
   padding: 0 16px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.46);
-  line-height: 40px; }
+  line-height: 48px; }
 
 .search__field {
   border-radius: 3px 0 0 3px !important;
@@ -2447,7 +2447,7 @@ blockquote {
   max-width: 130px; }
 
 .search__button {
-  height: 40px;
+  height: 48px;
   padding: 0 10px 0 30px;
   border-radius: 0 3px 3px 0;
   background: linear-gradient(45deg, #93278f, #00a99d);

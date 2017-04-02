@@ -7,12 +7,12 @@
   &__select {
     box-sizing: border-box;
     // !important exception for input[type="text"] specificity. Firefox needs height value to be set.
-    height: 40px !important;
+    height: 48px !important;
     padding: 0 $spacing-medium;
 
     box-shadow: $shadow-std;
 
-    line-height: 40px;
+    line-height: 48px;
   }
 
   &__field {
@@ -32,7 +32,7 @@
   }
 
   &__button {
-    height: 40px;
+    height: 48px;
     padding: 0 10px 0 30px;
 
     border-radius: 0 $border-radius-std $border-radius-std 0;

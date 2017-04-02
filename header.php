@@ -39,13 +39,13 @@
         <?php require get_template_directory() . '/inc/components/logo.php'; ?>
 			</div>
 
-			<div class="col-md-5 header__search hidden-md-down">
+			<div class="col-md-6 header__search hidden-md-down">
         <div class="search__wrap">
 					<?php get_search_form(); ?>
 				</div>
 			</div>
 
-			<div class="col-sm-9 col-lg-4 header__cart hidden-sm-down align-self-center">
+			<div class="col-sm-9 col-lg-3 header__cart hidden-sm-down align-self-center">
         <?php require get_template_directory() . '/inc/components/cart-links.php'; ?>
 
         <div class="menu-mobile__toggle button hidden-lg-up">
