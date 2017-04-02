@@ -2163,14 +2163,12 @@ blockquote {
     list-style: none; }
   .menu > li:last-child {
     margin-right: 0; }
-  .menu a {
-    box-sizing: border-box; }
   .menu img {
     width: 15px; }
   .menu > .menu-item {
     position: relative;
     display: inline-block;
-    margin-right: 4px;
+    margin-right: 8px;
     transition: background 500ms;
     border-radius: 3px;
     background: rgba(52, 6, 68, 0.5);
@@ -2203,7 +2201,7 @@ blockquote {
     padding: 8px 16px; }
 
 .menu > ul > li > a {
-  padding: 0 16px;
+  padding: 0 24px;
   line-height: 42px; }
 
 .menu-item {

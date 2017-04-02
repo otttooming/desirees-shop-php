@@ -13,10 +13,6 @@
     }
   }
 
-  a {
-    box-sizing: border-box;
-  }
-
   img {
     width: 15px;
   }
@@ -26,7 +22,7 @@
 
     display: inline-block;
 
-    margin-right: $spacing-small;
+    margin-right: $spacing-normal;
 
     transition: background $transition-normal;
 
@@ -75,7 +71,7 @@
 }
 
 .menu > ul > li > a {
-  padding: 0 $spacing-medium;
+  padding: 0 $spacing-large;
 
   line-height: 42px;
 }
