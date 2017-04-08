@@ -27,10 +27,10 @@ $color-buy-button-bg: linear-gradient(to left,#9f2af8 ,#f82a53);
 $color-attention: $color-red;
 $color-button-bg-normal: rgba(#340644, .5); // Rec: better choice ? #340644
 $color-go: #00b31a;
-$color-bg: rgba(#340644, .2);
+$color-bg: rgba(186, 0, 251, .15);
 $color-bg-light: rgba(255, 255, 255, 0.85);
 $color-bg-thumbnails: #fff;
-$color-input-bg-normal: transparent;
+$color-input-bg-normal: rgba(186, 0, 251, .15);
 
 // Text colors
 $color-text-light: #000;
@@ -49,12 +49,12 @@ $line-height-normal: 1.2;
 
 // $shadow-std: 2px 2px $color-black;
 
-$shadow-std: 0 0 15px rgba(0, 0, 0, .46);
+$shadow-std: none;
 // $shadow-std: 0 45px 100px rgba(0, 0, 0, 0.4);
 // $shadow-std: 0 25px 100px rgba(0, 0, 0, .4);
-$shadow-text: 2px 2px 5px $color-black;
+$shadow-text: none;
 $transition-normal: 500ms;
-$border-radius-std: 3px;
+$border-radius-std: 4px;
 $border-radius-medium: 15px;
 $border-radius-round: 50%;
 

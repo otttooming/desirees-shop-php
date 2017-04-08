@@ -903,7 +903,7 @@
   margin: 0 auto;
 
   background: rgba($color-charcoal, .4);
-  box-shadow: 0 1px 6px $color-black;
+  box-shadow: $shadow-std;
 }
 
 .container {
