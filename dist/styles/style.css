@@ -1720,18 +1720,10 @@ blockquote {
   background: #00b31a; }
 
 .products-listing__item {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
   position: relative;
   border-radius: 4px;
   padding: 0;
   margin-bottom: 16px;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
   border-right: 1px solid #340644;
   background: #fff;
   overflow: hidden;

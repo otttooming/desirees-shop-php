@@ -1,16 +1,12 @@
 .products-listing {
 
   &__item {
-    display: flex;
-    flex-direction: column;
     position: relative;
 
     border-radius: $border-radius-std;
     padding: 0;
 
     margin-bottom: $spacing-medium;
-    justify-content: center;
-    align-items: center;
     border-right: 1px solid $color-black;
     background: $color-white;
     overflow: hidden;
