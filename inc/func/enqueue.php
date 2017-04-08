@@ -20,4 +20,4 @@ function desirees_assets_cdn() {
 	wp_enqueue_style( 'desirees_google_typefaces', 'https://fonts.googleapis.com/css?family=Playfair+Display|Oranienbaum', false );
 
 }
-add_action( 'wp_enqueue_scripts', 'desirees_assets_cdn' );
+//add_action( 'wp_enqueue_scripts', 'desirees_assets_cdn' );
