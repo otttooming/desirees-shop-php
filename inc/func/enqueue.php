@@ -5,7 +5,7 @@
  */
 function desirees_assets() {
 
-	wp_enqueue_style( 'desirees-style', get_stylesheet_directory_uri() . '/dist/styles/style.min.css', array(), '2', 'all' );
+	wp_enqueue_style( 'desirees-style', get_stylesheet_directory_uri() . '/dist/styles/style.min.css', array(), '3', 'all' );
 
 	wp_enqueue_script( 'desirees-script', get_template_directory_uri() . '/dist/scripts/script.min.js', array(), '2', true );
 

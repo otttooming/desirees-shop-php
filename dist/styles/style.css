@@ -1633,6 +1633,9 @@ blockquote {
 .w100 {
   width: 100%; }
 
+.d__block {
+  display: block; }
+
 .d__flex {
   display: -ms-flexbox;
   display: flex;

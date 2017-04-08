@@ -11,7 +11,7 @@
  ?>
 
 <?php if ($custom_logo_id) : ?>
-    <?php echo desirees_get_attachment_image(  $custom_logo_id, 'medium_large', false, ["class" => "lazyload", "itemprop" => "image", "alt" => get_bloginfo('name')] ); ?>
+  <a class="d__block" href="<?php echo home_url(); ?>"><?php echo desirees_get_attachment_image(  $custom_logo_id, 'medium_large', false, ["class" => "lazyload", "itemprop" => "image", "alt" => get_bloginfo('name')] ); ?></a>
 <?php else : ?>
   <a href="<?php echo home_url(); ?>"><?php echo get_bloginfo('name'); ?></a>
 <?php endif; ?>
