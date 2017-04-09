@@ -145,8 +145,8 @@
   display: flex;
 
   width: 100%;
-  width: calc(100% + $spacing-medium);
-  margin: 0 -10px;
+  width: calc(100% + 2 * 8px);
+  margin: 0 -8px;
 
   flex-wrap: wrap;
   justify-content: space-between;
@@ -172,7 +172,7 @@
   .button {
     display: flex;
 
-    margin: 0 10px;
+    margin: 0 8px;
 
     align-items: center;
     flex: 1 0 150px;
