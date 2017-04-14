@@ -6,9 +6,9 @@
         </div>
     </div>
 
-    <?php wp_nav_menu(array('theme_location' => 'top', 'name' => 'top', 'container' => 'nav', 'container_class' => 'menu mb1')); ?>
+    <?php wp_nav_menu(array('theme_location' => 'top', 'name' => 'top', 'container' => 'nav', 'container_class' => 'menu mb1', 'walker' => new Walker_Main_Navigation())); ?>
 
-    <?php wp_nav_menu(array('theme_location' => 'top-right', 'name' => 'top-right', 'container' => 'nav', 'container_class' => 'menu mb1')); ?>
+    <?php wp_nav_menu(array('theme_location' => 'top-right', 'name' => 'top-right', 'container' => 'nav', 'container_class' => 'menu mb1', 'walker' => new Walker_Main_Navigation())); ?>
 
     <div class="sidebar_grid ">
   			<?php dynamic_sidebar( 'sidebar-widget-area' ); ?>

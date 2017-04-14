@@ -47,6 +47,31 @@ Desirees.navMobile = {
 	}
 }
 
+Desirees.navDropdown = {
+
+	init: function() {
+		var submenus = document.querySelectorAll('.menu .sub-menu');
+
+		for (var i = 0; i < submenus.length; i++) {
+			new Tippy(submenus[i].parentNode, {
+				html: '#' + submenus[i].getAttribute('id'),
+				arrow: true,
+				animation: 'fade',
+				interactive: true,
+				position: 'bottom',
+				hideOnClick: 'persistent',
+				popperOptions: {
+					modifiers: {
+						flip: {
+							behavior: ['bottom']
+						}
+					}
+				}
+			})
+		}
+	}
+}
+
 Desirees.filterOrdering = {
 	filterSubmit: function() {
 		this.submit();
@@ -87,6 +112,6 @@ Desirees.slider = {
 					slidesPerView: 4
 				}
 			}
-		});		
+		});
 	}
 };

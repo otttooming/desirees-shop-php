@@ -56,10 +56,10 @@
 
     <div class="row hidden-md-down">
         <div class="col-xs-8">
-            <?php wp_nav_menu(array('theme_location' => 'top', 'name' => 'top', 'container' => 'nav', 'container_class' => 'menu')); ?>
+            <?php wp_nav_menu(array('theme_location' => 'top', 'name' => 'top', 'container' => 'nav', 'container_class' => 'menu', 'walker' => new Walker_Main_Navigation())); ?>
         </div>
         <div class="col-xs-4 end-xs">
-            <?php wp_nav_menu(array('theme_location' => 'top-right', 'name' => 'top-right', 'container' => 'nav', 'container_class' => 'menu')); ?>
+            <?php wp_nav_menu(array('theme_location' => 'top-right', 'name' => 'top-right', 'container' => 'nav', 'container_class' => 'menu', 'walker' => new Walker_Main_Navigation())); ?>
         </div>
     </div>
 

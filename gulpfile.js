@@ -51,6 +51,8 @@ gulp.task('scripts', function() {
                    'node_modules/swiper/dist/js/swiper.min.js',
                    'node_modules/lazysizes/lazysizes.min.js',
                    'node_modules/js-cookie/src/js.cookie.js',
+                   'node_modules/popper.js/dist/popper.es5.min.js',
+                   'node_modules/tippy.js/dist/tippy.js',
                    'src/scripts/*.js' ],
                    {base: './'})
     .pipe(concat('script.js'))

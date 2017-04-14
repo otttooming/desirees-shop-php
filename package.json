@@ -37,6 +37,8 @@
     "js-cookie": "^2.1.3",
     "lazysizes": "^3.0.0-rc4",
     "photoswipe": "^4.1.1",
+    "popper.js": "^1.0.8",
+    "tippy.js": "^0.3.6",
     "swiper": "^3.4.1"
   }
 }
