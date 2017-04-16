@@ -322,7 +322,7 @@ address {
 
 blockquote {
   position: relative;
-  font-size: 16px;
+  font-size: $font-size-normal;
   background-color: $color-bg;
   border-radius: $border-radius-std;
   padding: $spacing-small $spacing-medium;

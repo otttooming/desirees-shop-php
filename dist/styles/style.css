@@ -450,13 +450,13 @@ button.swiper-pagination-bullet {
   box-sizing: border-box; }
 
 html {
-  font-size: 16px;
+  font-size: 1em;
   -webkit-text-size-adjust: none;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
   @media screen and (max-width: 767px) {
     html {
-      font-size: 12px; } }
+      font-size: 0.75em; } }
 
 body {
   overflow-x: hidden;
@@ -608,7 +608,7 @@ input[type=number] {
   outline: none;
   background: rgba(186, 0, 251, 0.15);
   box-shadow: none;
-  font-size: 14px;
+  font-size: 0.875em;
   line-height: 30px;
   height: 30px;
   -webkit-appearance: none;
@@ -675,7 +675,7 @@ address {
 
 blockquote {
   position: relative;
-  font-size: 16px;
+  font-size: 1em;
   background-color: rgba(186, 0, 251, 0.15);
   border-radius: 4px;
   padding: 4px 16px;
@@ -1528,7 +1528,7 @@ blockquote {
       align-items: center;
   -ms-flex-pack: center;
       justify-content: center;
-  font-size: 16px;
+  font-size: 1em;
   height: 42px;
   box-sizing: border-box; }
   .cart-links__title {
@@ -1749,7 +1749,7 @@ blockquote {
   overflow: hidden;
   text-transform: uppercase;
   text-overflow: ellipsis;
-  font-size: 12px;
+  font-size: 0.75em;
   font-weight: 300;
   text-shadow: none;
   margin: 0;
@@ -1766,7 +1766,7 @@ blockquote {
   border-radius: 4px 0 0 0;
   background: linear-gradient(to left, #9f2af8, #f82a53);
   box-shadow: none;
-  font-size: 12px;
+  font-size: 0.75em;
   -ms-flex: 1;
       flex: 1; }
   .products-listing__price-block del,
@@ -1776,7 +1776,7 @@ blockquote {
     padding: 0;
     color: #fff !important;
     box-shadow: none;
-    font-size: 12px; }
+    font-size: 0.75em; }
   .products-listing__price-block-big .amount {
     font-size: 1rem; }
   .products-listing__price-block + .button {
@@ -1847,7 +1847,7 @@ blockquote {
     display: block; }
   .product__price-block .amount {
     color: #fff !important;
-    font-size: 12px; }
+    font-size: 0.75em; }
   .product__price-block-big {
     font-size: 1.5rem; }
   .product__price-block + .button {
@@ -1934,7 +1934,7 @@ blockquote {
   background: #ffc000;
   box-shadow: none;
   text-shadow: none;
-  font-size: 12px; }
+  font-size: 0.75em; }
 
 .product-qty__wrap {
   display: -ms-flexbox;
@@ -2006,7 +2006,7 @@ blockquote {
   background: #ffc000;
   box-shadow: none;
   text-shadow: none;
-  font-size: 12px; }
+  font-size: 0.75em; }
 
 .product-variations__cart {
   display: -ms-flexbox;
@@ -2020,7 +2020,7 @@ blockquote {
   border-radius: 4px;
   background: linear-gradient(to left, #9f2af8, #f82a53);
   box-shadow: none;
-  font-size: 12px; }
+  font-size: 0.75em; }
 
 .control__items {
   -webkit-user-select: none;
@@ -2128,7 +2128,7 @@ blockquote {
   box-shadow: none;
   text-shadow: none;
   font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
-  font-size: 14px;
+  font-size: 0.875em;
   line-height: 1.5;
   -webkit-appearance: none; }
   .button:hover {
@@ -2137,7 +2137,7 @@ blockquote {
     background: linear-gradient(to left, #9f2af8, #f82a53); }
   .button.medium {
     padding: 8px 16px;
-    font-size: 14px; }
+    font-size: 0.875em; }
   .button.alt, .button.big {
     font-size: 1.5rem;
     padding: 1rem; }
@@ -2195,7 +2195,7 @@ blockquote {
   overflow: hidden;
   white-space: nowrap;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 0.75em;
   border-radius: 4px;
   box-shadow: none;
   padding: 16px; }
@@ -2251,7 +2251,7 @@ blockquote {
   text-transform: none;
   text-overflow: ellipsis;
   color: #fff;
-  font-size: 12px; }
+  font-size: 0.75em; }
 
 .cat-list__count {
   position: absolute;
@@ -2320,7 +2320,7 @@ blockquote {
   text-transform: none;
   text-overflow: ellipsis;
   color: #fff;
-  font-size: 12px; }
+  font-size: 0.75em; }
 
 .subcat__count {
   position: absolute;
@@ -2380,7 +2380,7 @@ blockquote {
     height: 42px;
     cursor: pointer;
     line-height: 1;
-    font-size: 16px;
+    font-size: 1em;
     margin-left: 10px; }
     .menu-mobile__toggle svg {
       margin-left: 10px;
