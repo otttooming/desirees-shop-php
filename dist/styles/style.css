@@ -3623,3 +3623,8 @@ a.pswp__share--download:hover {
   .tippy-popper {
     max-width: 96%;
     max-width: calc(100% - 20px); } }
+
+.desc-tooltip-theme {
+  text-align: left;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  max-width: 300px; }

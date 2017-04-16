@@ -68,6 +68,7 @@
     Desirees.nav.init();
     Desirees.navMobile.init();
     Desirees.navDropdown.init();
+    Desirees.descPopover.init();
     Desirees.filterOrdering.init();
     Desirees.slider.init();
 </script>

@@ -287,6 +287,31 @@ Desirees.navDropdown = {
 	}
 }
 
+Desirees.descPopover = {
+
+	init: function() {
+		var descriptions = document.querySelectorAll('.products-listing__item');
+
+		for (var i = 0; i < descriptions.length; i++) {
+			new Tippy(descriptions[i], {
+				arrow: true,
+				animation: 'fade',
+				position: 'left',
+				hideOnClick: 'persistent',
+				theme: 'desc-tooltip',
+				trigger: 'mouseenter',
+				popperOptions: {
+					modifiers: {
+						flip: {
+							behavior: ['left', 'right', 'bottom']
+						}
+					}
+				}
+			})
+		}
+	}
+}
+
 Desirees.filterOrdering = {
 	filterSubmit: function() {
 		this.submit();
