@@ -22,7 +22,12 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 }
 
 ?>
-<li itemscope itemtype="http://schema.org/Product" class="<?php if ( !isset($is_slider) || !$is_slider ) : ?>col-xs-12 col-md-3 col-sm-6<?php else : ?> swiper-slide<?php endif; ?> products-listing__item" title="<?php echo strip_tags( get_the_content() ); ?>">
+<li itemscope itemtype="http://schema.org/Product" class="<?php if ( !isset($is_slider) || !$is_slider ) : ?>col-xs-12 col-md-3 col-sm-6<?php else : ?> swiper-slide<?php endif; ?> products-listing__item">
+	<div id="product-<?php echo $product->id; ?>" class="products-listing__desc hidden-xs-up">
+		<h3><?php the_title(); ?></h3>
+		<?php the_content(); ?>
+	</div>
+
 	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
 
 	<?php if( has_post_thumbnail() ) : ?>

@@ -2167,7 +2167,6 @@ blockquote {
     border-radius: 4px;
     background: rgba(52, 6, 68, 0.5);
     box-shadow: none;
-    padding: 0 24px;
     line-height: 42px; }
     .menu__item:hover {
       background: linear-gradient(45deg, #ff00f6, #00a99d); }
@@ -2176,6 +2175,8 @@ blockquote {
       border-radius: 4px;
       background: linear-gradient(45deg, #ff00f6, #00a99d);
       box-shadow: none; }
+  .menu__link {
+    padding: 0 24px; }
 
 .sub-menu {
   display: none; }
@@ -3624,7 +3625,10 @@ a.pswp__share--download:hover {
     max-width: 96%;
     max-width: calc(100% - 20px); } }
 
-.desc-tooltip-theme {
+.desc-tooltip-theme .tippy-tooltip-content {
   text-align: left;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  max-width: 300px; }
+  max-width: 300px;
+  max-height: 50vh;
+  overflow-y: scroll;
+  font-size: 12px; }

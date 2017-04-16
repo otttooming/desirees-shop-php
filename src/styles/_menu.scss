@@ -27,7 +27,6 @@
     border-radius: $border-radius-std;
     background: $color-button-bg-normal;
     box-shadow: $shadow-std;
-    padding: 0 $spacing-large;
     line-height: 42px;
 
     &:hover {
@@ -40,6 +39,10 @@
       background: $color-button-bg;
       box-shadow: $shadow-std;
     }
+  }
+
+  &__link {
+    padding: 0 $spacing-large;
   }
 }
 

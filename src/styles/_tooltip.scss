@@ -1,5 +1,11 @@
 .desc-tooltip-theme {
-  text-align: left;
-  font-family: $typeface-secondary;
-  max-width: 300px;
+
+  .tippy-tooltip-content {
+    text-align: left;
+    font-family: $typeface-secondary;
+    max-width: 300px;
+    max-height: 50vh;
+    overflow-y: scroll;
+    font-size: 12px;
+  }
 }

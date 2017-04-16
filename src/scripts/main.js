@@ -80,11 +80,13 @@ Desirees.descPopover = {
 		for (var i = 0; i < descriptions.length; i++) {
 			new Tippy(descriptions[i], {
 				arrow: true,
+				html: '#' + descriptions[i].querySelector('.products-listing__desc').getAttribute('id'),
 				animation: 'fade',
 				position: 'left',
 				hideOnClick: 'persistent',
 				theme: 'desc-tooltip',
 				trigger: 'mouseenter',
+				interactive: true,
 				popperOptions: {
 					modifiers: {
 						flip: {
