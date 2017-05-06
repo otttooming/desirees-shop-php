@@ -313,7 +313,7 @@ function desirees_get_wc_categories_menu($title = 'Categories'){
 
 												</h2>
 
-												<?php $subcats = get_categories( array ('taxonomy' => 'product_cat', 'parent' => $categories->term_id )); ?>
+												<?php $subcats = wc_get_product_category_list( array ('taxonomy' => 'product_cat', 'parent' => $categories->term_id )); ?>
 												<ul class='cat-list__subcat'>
 														<?php foreach ( $subcats as $subcat ) { ?>
 																<li class="cat-list__title">
@@ -325,7 +325,7 @@ function desirees_get_wc_categories_menu($title = 'Categories'){
 																		</a>
 																</li>
 
-																<?php $subcats_lvl2 = get_categories( array ('taxonomy' => 'product_cat', 'parent' => $subcat->term_id )); ?>
+																<?php $subcats_lvl2 = wc_get_product_category_list( array ('taxonomy' => 'product_cat', 'parent' => $subcat->term_id )); ?>
 
 																<ul class='cat-list__subcat'>
 																		<?php foreach ( $subcats_lvl2 as $subcat_lvl2 ) { ?>

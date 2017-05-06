@@ -13,7 +13,7 @@
  * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     2.2.0
+ * @version     3.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -24,12 +24,12 @@ if ( $order ) : ?>
 
 	<?php if ( $order->has_status( 'failed' ) ) : ?>
 
-		<p class="woocommerce-thankyou-order-failed"><?php _e( 'Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction. Please attempt your purchase again.', 'woocommerce' ); ?></p>
+		<p class="woocommerce-notice woocommerce-notice--error woocommerce-thankyou-order-failed"><?php _e( 'Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction. Please attempt your purchase again.', 'woocommerce' ); ?></p>
 
 		<p class="woocommerce-thankyou-order-failed-actions">
 			<a href="<?php echo esc_url( $order->get_checkout_payment_url() ); ?>" class="button pay"><?php _e( 'Pay', 'woocommerce' ) ?></a>
 			<?php if ( is_user_logged_in() ) : ?>
-				<a href="<?php echo esc_url( wc_get_page_permalink( 'myaccount' ) ); ?>" class="button pay"><?php _e( 'My Account', 'woocommerce' ); ?></a>
+				<a href="<?php echo esc_url( wc_get_page_permalink( 'myaccount' ) ); ?>" class="button pay"><?php _e( 'My account', 'woocommerce' ); ?></a>
 			<?php endif; ?>
 		</p>
 
@@ -40,23 +40,28 @@ if ( $order ) : ?>
 			<h2><?php _e('Order', 'woocommerce') ?></h2>
 
 			<ul class="woocommerce-thankyou-order-details order_details list list-reset">
-				<li class="order">
-					<?php _e( 'Order Number:', 'woocommerce' ); ?>
+				<li class="woocommerce-order-overview__order order">
+					<?php _e( 'Order number:', 'woocommerce' ); ?>
 					<strong><?php echo $order->get_order_number(); ?></strong>
 				</li>
-				<li class="date">
+
+				<li class="woocommerce-order-overview__date date">
 					<?php _e( 'Date:', 'woocommerce' ); ?>
-					<strong><?php echo date_i18n( get_option( 'date_format' ), strtotime( $order->order_date ) ); ?></strong>
+					<strong><?php echo wc_format_datetime( $order->get_date_created() ); ?></strong>
 				</li>
-				<li class="total">
+
+				<li class="woocommerce-order-overview__total total">
 					<?php _e( 'Total:', 'woocommerce' ); ?>
 					<strong><?php echo $order->get_formatted_order_total(); ?></strong>
 				</li>
-				<?php if ( $order->payment_method_title ) : ?>
-				<li class="method">
-					<?php _e( 'Payment Method:', 'woocommerce' ); ?>
-					<strong><?php echo $order->payment_method_title; ?></strong>
+
+				<?php if ( $order->get_payment_method_title() ) : ?>
+
+				<li class="woocommerce-order-overview__payment-method method">
+					<?php _e( 'Payment method:', 'woocommerce' ); ?>
+					<strong><?php echo wp_kses_post( $order->get_payment_method_title() ); ?></strong>
 				</li>
+
 				<?php endif; ?>
 			</ul>
 		</div>
@@ -64,11 +69,11 @@ if ( $order ) : ?>
 	<?php endif; ?>
 
 	<div class="bg__common p1 mb1">
-		<?php do_action( 'woocommerce_thankyou_' . $order->payment_method, $order->id ); ?>
+		<?php do_action( 'woocommerce_thankyou_' . $order->get_payment_method(), $order->get_id() ); ?>
 	</div>
 
 	<div class="bg__common p1 mb1">
-		<?php do_action( 'woocommerce_thankyou', $order->id ); ?>
+		<?php do_action( 'woocommerce_thankyou', $order->get_id() ); ?>
 	</div>
 
 <?php else : ?>

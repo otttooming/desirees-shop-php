@@ -2,33 +2,42 @@
 /**
  * Cart Page
  *
- * @author 		WooThemes
- * @package 	WooCommerce/Templates
- * @version     2.3.8
+ * This template can be overridden by copying it to yourtheme/woocommerce/cart/cart.php.
+ *
+ * HOWEVER, on occasion WooCommerce will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
+ *
+ * @see     https://docs.woocommerce.com/document/template-structure/
+ * @author  WooThemes
+ * @package WooCommerce/Templates
+ * @version 3.0.3
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-
-global $woocommerce;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 wc_print_notices();
 
 do_action( 'woocommerce_before_cart' ); ?>
 
-<form action="<?php echo esc_url( $woocommerce->cart->get_cart_url() ); ?>" method="post" class="cart__form bg__common p1 mb1">
+<form class="cart__form bg__common p1 mb1" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 
 <h2><?php _e('Cart', 'woocommerce') ?></h2>
 
 <?php do_action( 'woocommerce_before_cart_table' ); ?>
-<table class="cart table checkout_cart" cellspacing="0" style="margin-bottom: 20px;">
+<table class="cart table checkout_cart mb1" cellspacing="0">
 	<thead class="cart__form-head">
 		<tr>
-			<th class="product-thumbnail cart_del_column visible-desktop">&nbsp;</th>
-			<th class="product-name"><?php _e('Product', 'woocommerce'); ?></th>
-			<th class="product-price cart_del_column"><?php _e('Price', 'woocommerce'); ?></th>
-			<th class="product-quantity"><?php _e('Qty', 'woocommerce'); ?></th>
-			<th class="product-subtotal"><?php _e('Total', 'woocommerce'); ?></th>
-			<th class="product-remove cart_del_column">&nbsp;</th>
+			<th class="product-thumbnail">&nbsp;</th>
+			<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
+			<th class="product-price"><?php _e( 'Price', 'woocommerce' ); ?></th>
+			<th class="product-quantity"><?php _e( 'Quantity', 'woocommerce' ); ?></th>
+			<th class="product-subtotal hidden-md-down"><?php _e( 'Total', 'woocommerce' ); ?></th>
+			<th class="product-remove">&nbsp;</th>
 		</tr>
 	</thead>
 	<tbody class="cart__form-body">
@@ -36,81 +45,75 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 
 	<?php
-	if ( sizeof( $woocommerce->cart->get_cart() ) > 0 ) {
-		foreach ( $woocommerce->cart->get_cart() as $cart_item_key => $values ) {
-			$_product = $values['data'];
-			if ( $_product->exists() && $values['quantity'] > 0 ) {
-				?>
-				<tr class = "<?php echo esc_attr( apply_filters('woocommerce_cart_table_item_class', 'cart_table_item', $values, $cart_item_key ) ); ?>">
+		foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+			$_product   = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
+			$product_id = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
 
-					<!-- The thumbnail -->
+			if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
+				$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
+				?>
+				<tr class="woocommerce-cart-form__cart-item <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
+
 					<td class="cart__thumbnail cart_del_column visible-desktop">
 						<?php
-							$thumbnail = apply_filters( 'woocommerce_in_cart_product_thumbnail', $_product->get_image(), $values, $cart_item_key );
-							printf('<a href="%s">%s</a>', esc_url( get_permalink( apply_filters('woocommerce_in_cart_product_id', $values['product_id'] ) ) ), $thumbnail );
+							$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
+							if ( ! $product_permalink ) {
+								echo $thumbnail;
+							} else {
+								printf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $thumbnail );
+							}
 						?>
 					</td>
 
-					<!-- Product Name -->
 					<td class="product-name">
 						<?php
-							if ( ! $_product->is_visible() || ( $_product instanceof WC_Product_Variation && ! $_product->parent_is_visible() ) )
-								echo apply_filters( 'woocommerce_in_cart_product_title', $_product->get_title(), $values, $cart_item_key );
-							else
-								printf('<a href="%s">%s</a>', esc_url( get_permalink( apply_filters('woocommerce_in_cart_product_id', $values['product_id'] ) ) ), apply_filters('woocommerce_in_cart_product_title', $_product->get_title(), $values, $cart_item_key ) );
-
-							// Meta data
-							echo $woocommerce->cart->get_item_data( $values );
-
-               				// Backorder notification
-               				if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $values['quantity'] ) )
-               					echo '<p class="backorder_notification">' . __('Available on backorder', 'desirees') . '</p>';
-						?>
-					</td>
-
-					<!-- Product price -->
-					<td class="product-price cart_del_column">
-						<?php
-							$product_price = get_option('woocommerce_display_cart_prices_excluding_tax') == 'yes' || $woocommerce->customer->is_vat_exempt() ? $_product->get_price_excluding_tax() : $_product->get_price();
-
-							echo apply_filters('woocommerce_cart_item_price_html', woocommerce_price( $product_price ), $values, $cart_item_key );
-						?>
-					</td>
-
-					<!-- Quantity inputs -->
-					<td class="product-quantity" id="cart-quantity">
-						<?php
-							if ( $_product->is_sold_individually() ) {
-								$product_quantity = '1';
+							if ( ! $product_permalink ) {
+								echo apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;';
 							} else {
-								$data_min = apply_filters( 'woocommerce_cart_item_data_min', '', $_product );
-								$data_max = ( $_product->backorders_allowed() ) ? '' : $_product->get_stock_quantity();
-								$data_max = apply_filters( 'woocommerce_cart_item_data_max', $data_max, $_product );
-
-								$product_quantity = sprintf( '<div class="qty-block quantity"><input name="cart[%s][qty]" type="number" data-min="%s" data-max="%s" value="%s" size="4" title="%s" class="input-text qty text" maxlength="12" /></div>', $cart_item_key, $data_min, $data_max, esc_attr( $values['quantity'] ), __('Qty', 'woocommerce') );
+								echo apply_filters( 'woocommerce_cart_item_name', sprintf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $_product->get_name() ), $cart_item, $cart_item_key );
 							}
-
-							echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key );
+							// Meta data
+							echo WC()->cart->get_item_data( $cart_item );
+							// Backorder notification
+							if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {
+								echo '<p class="backorder_notification">' . esc_html__( 'Available on backorder', 'woocommerce' ) . '</p>';
+							}
 						?>
 					</td>
 
-					<!-- Product subtotal -->
-					<td class="product-subtotal">
+					<td class="product-price">
 						<?php
-							echo apply_filters( 'woocommerce_cart_item_subtotal', $woocommerce->cart->get_product_subtotal( $_product, $values['quantity'] ), $values, $cart_item_key );
+							echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );
 						?>
 					</td>
-					<!-- Remove from cart link -->
-					<td class="product-remove cart_del_column">
+
+					<td class="product-quantity">
 						<?php
-							echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf('<a href="%s" class="delete-btn" title="%s"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 149.337 149.337"><path fill="currentColor" d="M149.337 143.96L80.044 74.668l69.292-69.292L143.96 0 74.668 69.292 5.378 0 0 5.376l69.292 69.292L0 143.96l5.376 5.376 69.292-69.292 69.293 69.292z"/></svg></a>', esc_url( $woocommerce->cart->get_remove_url( $cart_item_key ) ), __('Remove this item', 'woocommerce') ), $cart_item_key );
+							echo $_product->get_stock_quantity();
+						?>
+					</td>
+
+					<td class="product-subtotal hidden-md-down">
+						<?php
+							echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key );
+						?>
+					</td>
+
+					<td class="product-remove">
+						<?php
+							echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
+								'<a href="%s" class="remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',
+								esc_url( WC()->cart->get_remove_url( $cart_item_key ) ),
+								__( 'Remove this item', 'woocommerce' ),
+								esc_attr( $product_id ),
+								esc_attr( $_product->get_sku() )
+							), $cart_item_key );
 						?>
 					</td>
 				</tr>
 				<?php
 			}
 		}
-	}
 
 	do_action( 'woocommerce_cart_contents' );
 	?>

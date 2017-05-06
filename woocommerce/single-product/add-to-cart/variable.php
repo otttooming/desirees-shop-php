@@ -4,15 +4,16 @@
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/single-product/add-to-cart/variable.php.
  *
- * HOWEVER, on occasion WooCommerce will need to update template files and you (the theme developer).
- * will need to copy the new files to your theme to maintain compatibility. We try to do this.
- * as little as possible, but it does happen. When this occurs the version of the template file will.
- * be bumped and the readme will list any important changes.
+ * HOWEVER, on occasion WooCommerce will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
  *
- * @see 	http://docs.woothemes.com/document/template-structure/
+ * @see 	https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 2.5.0
+ * @version 3.0.0
  */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -58,8 +59,8 @@ $visible_active_variations = array_filter($available_variations, function ($v) {
                             <?php endforeach; ?>
                         <?php endif; ?>
                         <input type="hidden" name="variation_id" value="<?php echo $variation['variation_id']?>" />
-                        <input type="hidden" name="product_id" value="<?php echo esc_attr( $product->id ); ?>" />
-                        <input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->id ); ?>" />
+                        <input type="hidden" name="product_id" value="<?php echo esc_attr( $product->get_id() ); ?>" />
+                        <input type="hidden" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" />
                     </form>
                 <?php else: ?>
                     <p class="stock out-of-stock"><?php _e( 'This product is currently out of stock and unavailable.', 'woocommerce' ); ?></p>

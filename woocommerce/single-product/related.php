@@ -13,49 +13,30 @@
  * @see 	    https://docs.woocommerce.com/document/template-structure/
  * @author 		WooThemes
  * @package 	WooCommerce/Templates
- * @version     1.6.4
+ * @version     3.0.0
  */
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-global $product, $woocommerce_loop;
-
-if ( empty( $product ) || ! $product->exists() ) {
-	return;
-}
-
-if ( ! $related = $product->get_related( $posts_per_page ) ) {
-	return;
-}
-
 $is_slider = true;
 
-$args = apply_filters( 'woocommerce_related_products_args', array(
-	'post_type'            => 'product',
-	'ignore_sticky_posts'  => 1,
-	'no_found_rows'        => 1,
-	'posts_per_page'       => 16,
-	'orderby'              => $orderby,
-	'post__not_in'         => array( $product->id )
-) );
-
-$products                    = new WP_Query( $args );
-$woocommerce_loop['name']    = 'related';
-$woocommerce_loop['columns'] = apply_filters( 'woocommerce_related_products_columns', $columns );
-
-if ( $products->have_posts() ) : ?>
+if ( $related_products ) : ?>
 
 	<div class="row row--no-gutters bg__common m-10-0-0-0 related">
 		<h2 class="col-xs-12 px1 related__header"><?php _e( 'Related Products', 'woocommerce' ); ?></h2>
 
 		<ul class="col-xs-12 products-listing related__wrapper swiper-wrapper">
-			<?php while ( $products->have_posts() ) : $products->the_post(); ?>
 
-				<?php wc_get_template( 'content-product.php', array('is_slider' => $is_slider ) ); ?>
+			<?php foreach ( $related_products as $related_product ) : ?>
 
-			<?php endwhile; ?>
+				<?php
+					$post_object = get_post( $related_product->get_id() );
+					setup_postdata( $GLOBALS['post'] =& $post_object );
+					wc_get_template( 'content-product.php', array('is_slider' => $is_slider ) ); ?>
+
+			<?php endforeach; ?>
+
 		</ul>
 	</div>
 
