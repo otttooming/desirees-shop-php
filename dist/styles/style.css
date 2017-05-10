@@ -2022,6 +2022,34 @@ blockquote {
   box-shadow: none;
   font-size: 0.75em; }
 
+.comp {
+  display: -ms-flexbox;
+  display: flex; }
+
+.comp-item {
+  background: #333;
+  margin-bottom: 16px;
+  margin-right: 16px;
+  max-width: 300px;
+  overflow: hidden;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 300px;
+  -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse;
+  border-radius: 5px; }
+  .comp-item__title {
+    white-space: nowrap; }
+  .comp-item__visual-section {
+    position: absolute;
+    top: 0; }
+  .comp-item__meta-section {
+    padding: 16px;
+    position: relative;
+    z-index: 1;
+    background: rgba(51, 51, 51, 0.5); }
+
 .control__items {
   -webkit-user-select: none;
      -moz-user-select: none;

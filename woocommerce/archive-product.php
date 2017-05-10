@@ -62,6 +62,12 @@ get_header('shop');
 
     			<?php woocommerce_product_subcategories(array('before'=>'<ul class="subcat__grid cfx">', 'after' => '</ul>')); ?>
 
+					<section id="app">
+					  <div class="comp">
+					    <product-item v-for="product in products" v-bind:product="product"></product-item>
+					  </div>
+					</section>
+
           <main role="main">
 						<ul class="row row--no-gutters products-listing">
 							<?php while ( have_posts() ) : the_post(); ?>
