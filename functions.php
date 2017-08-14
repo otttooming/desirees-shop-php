@@ -55,6 +55,11 @@ require get_template_directory() . '/inc/func/price.php';
 */
 require get_template_directory() . '/inc/func/links.php';
 
+/**
+* Add shipping methods
+*/
+require get_template_directory() . '/inc/func/shipping-methods.php';
+
 function content($limit) {
   $content = explode(' ', get_the_content(), $limit);
   if (count($content)>=$limit) {
@@ -272,3 +277,5 @@ function hide_coupon_field_on_cart( $enabled ) {
 
 remove_action( 'woocommerce_checkout_order_review', 'woocommerce_order_review', 10 );
 add_action( 'woocommerce_checkout_before_order_review', 'woocommerce_order_review', 20 );
+
+
